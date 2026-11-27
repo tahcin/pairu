@@ -56,6 +56,7 @@ export interface AdviceCard {
   avoid: { text: string; source: { title: string; url: string } | null }[];
   do_first: DoFirst;
   first_action: { text: string; kind: string } | null;
+  safety_note: { text: string; sources: { title: string; url: string }[] } | null;
   avoid_mixtures: boolean;
   etl: { text: string; source: { title: string; url: string } | null } | null;
   banned_removed: number;
@@ -383,6 +384,14 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
     do_first: chooseFirst(d, bio, chem),
     first_action: d.first_action?.text ? { text: d.first_action.text, kind: d.first_action.kind || "practice" } : null,
     avoid_mixtures: Boolean(d.avoid_mixtures),
+    safety_note: d.safety_note?.text
+      ? {
+          text: d.safety_note.text,
+          sources: (d.safety_note.sources || [])
+            .map((x) => (typeof x === "number" ? d.sources[x] : x))
+            .filter(Boolean) as { title: string; url: string }[],
+        }
+      : null,
     etl: d.etl && d.etl.text
       ? {
           text: d.etl.text,

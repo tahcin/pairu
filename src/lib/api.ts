@@ -78,6 +78,7 @@ export interface Advice {
     | null;
   first_action?: { text: string; kind: string } | null;
   avoid_mixtures?: boolean;
+  safety_note?: { text: string; sources: { title: string; url: string }[] } | null;
   bio_products: Treatment[];
   chemicals: Treatment[];
   banned_removed: number;

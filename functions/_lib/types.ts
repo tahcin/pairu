@@ -40,8 +40,9 @@ export interface Disease {
   sources: Source[];
   avoid?: { text: string; source?: number | Source | null; active?: string; actives?: string[] }[];
   etl?: { text: string; source?: number | Source | null } | null;
-  first_action?: { text: string; kind?: string; source?: number | Source | null } | null;
+  first_action?: { text: string; kind?: string; source?: number | Source | null; texts?: Record<string, string> } | null;
   avoid_mixtures?: boolean;
+  safety_note?: { text: string; sources?: (number | Source)[] } | null;
   recommended_actives?: { active: string; source?: number | Source | null }[];
 }
 

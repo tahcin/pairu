@@ -309,8 +309,14 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             </div>
           )}
           {a.kind === "viral" && (a.bio_products.length > 0 || a.chemicals.length > 0) && <p className="notice">{L("virusNote")}</p>}
-          {a.bio_products.length > 0 && <Products lang={lang} mixtures={Boolean(a.avoid_mixtures)} title={L("bioProducts")} items={a.bio_products} />}
-          {a.chemicals.length > 0 && <Products lang={lang} mixtures={Boolean(a.avoid_mixtures)} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
+          {a.safety_note && (
+            <p className="flag danger safety-note" role="note">
+              <Warn size={18} />
+              <span>{pending ? <Bar w={85} /> : a.safety_note.text}</span>
+            </p>
+          )}
+          {a.bio_products.length > 0 && <Products lang={lang} safety={pending ? null : a.safety_note?.text || null} mixtures={Boolean(a.avoid_mixtures)} title={L("bioProducts")} items={a.bio_products} />}
+          {a.chemicals.length > 0 && <Products lang={lang} safety={pending ? null : a.safety_note?.text || null} mixtures={Boolean(a.avoid_mixtures)} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
           {a.bio_products.length === 0 && a.chemicals.length === 0 && <p className="notice">{L("noApproved")}</p>}
           {a.bio_products.length > 0 && a.chemicals.length === 0 && <p className="body">{L("noChemicals")}</p>}
           {a.avoid && a.avoid.length > 0 && (
@@ -491,7 +497,21 @@ function SrcLink({ href, text }: { href: string; text: string }) {
   );
 }
 
-function Products({ lang, title, note, items, mixtures = false }: { lang: Lang; title: string; note?: string; items: Treatment[]; mixtures?: boolean }) {
+function Products({
+  lang,
+  title,
+  note,
+  items,
+  mixtures = false,
+  safety = null,
+}: {
+  lang: Lang;
+  title: string;
+  note?: string;
+  items: Treatment[];
+  mixtures?: boolean;
+  safety?: string | null;
+}) {
   const L = (k: Key) => t(lang, k);
   const [all, setAll] = useState(false);
   // Products the KB says to avoid for this problem stay hidden unless the farmer asks for all.
@@ -523,7 +543,7 @@ function Products({ lang, title, note, items, mixtures = false }: { lang: Lang; 
               {p.highly_hazardous && (
                 <p className="flag danger">
                   <Warn size={18} />
-                  {L("hazardHigh")}
+                  {safety || L("hazardHigh")}
                 </p>
               )}
               {p.restricted && (

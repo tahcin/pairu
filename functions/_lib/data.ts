@@ -40,6 +40,7 @@ function registerKb(kb: KB, lang: string, doc: any) {
     en.forEach((e, i) => pairs.push([str(e), str(tr[i])]));
   };
   for (const d of kb.diseases) {
+    if (d.first_action?.text && d.first_action.texts?.[lang]) pairs.push([d.first_action.text, d.first_action.texts[lang]]);
     const t = ds[d.id];
     if (!t) continue;
     if (t.name) pairs.push([d.name_en, String(t.name)]);
@@ -51,6 +52,7 @@ function registerKb(kb: KB, lang: string, doc: any) {
     list(d.avoid, t.avoid);
     if (d.etl?.text && t.etl) pairs.push([d.etl.text, str(t.etl)]);
     if (d.first_action?.text && t.first_action) pairs.push([d.first_action.text, str(t.first_action)]);
+    if (d.safety_note?.text && t.safety_note) pairs.push([d.safety_note.text, str(t.safety_note)]);
     for (const q of d.discriminators || []) if (doc.questions?.[q.id]) pairs.push([q.question, String(doc.questions[q.id])]);
     // Second-look confirm question ("Do you see <cue>?", built in verify.ts from photo_cues[0]):
     // the translated template with the translated cue, so it is never sent in English.

@@ -135,6 +135,42 @@ function gaps(src, out, path = "") {
   return g;
 }
 
+// --fix-script: re-translate only the single strings that contain letters of another script.
+if (process.argv.includes("--fix-script")) {
+  for (const lang of process.argv.slice(2).filter((a) => !a.startsWith("--"))) {
+    CUR = lang;
+    const file = `data/kb_${lang}.json`;
+    const doc = JSON.parse(readFileSync(file, "utf8"));
+    const todo = {};
+    for (const d of kb.diseases) {
+      const t = doc.diseases[d.id];
+      if (!t) continue;
+      const src = sourceFor(kb.crops.find((c) => c.id === d.crop)).diseases[d.id];
+      for (const [k, v] of Object.entries(t)) {
+        if (typeof v === "string" && foreignScript(v)) todo[`${d.id}|${k}`] = src[k];
+        if (Array.isArray(v)) v.forEach((x, i) => typeof x === "string" && foreignScript(x) && (todo[`${d.id}|${k}|${i}`] = src[k][i]));
+      }
+    }
+    for (const [q, v] of Object.entries(doc.questions || {})) if (foreignScript(v)) for (const d of kb.diseases) for (const x of d.discriminators || []) if (x.id === q) todo[`q|${q}`] = x.question;
+    const n = Object.keys(todo).length;
+    if (!n) continue;
+    const out = await translate(todo, lang);
+    let fixed = 0;
+    for (const [key, val] of Object.entries(out)) {
+      if (!(key in todo) || typeof val !== "string" || !val.trim() || foreignScript(val)) continue;
+      const [id, field, idx] = key.split("|");
+      if (id === "q") doc.questions[field] = val;
+      else if (idx !== undefined) doc.diseases[id][field][Number(idx)] = val;
+      else doc.diseases[id][field] = val;
+      fixed++;
+    }
+    writeFileSync(file, JSON.stringify(doc, null, 1) + "\n");
+    console.log(`${lang}: fixed ${fixed} of ${n} strings  calls ${JSON.stringify(calls)}`);
+  }
+  console.log("done", JSON.stringify(calls));
+  process.exit(0);
+}
+
 const langs = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(LANGS);
 for (const lang of langs) {
   CUR = lang;

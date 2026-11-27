@@ -108,6 +108,13 @@ export function About() {
           (Sethy et al. 2020, Mendeley Data, doi 10.17632/fwcj7stb8r, CC BY 4.0: blast, brown spot). The images are unchanged.
         </p>
 
+        <h2>Photograph on the home page</h2>
+        <p>
+          Rice paddy at Dusipeta, Amadalavalasa mandal, Srikakulam district, by K.Venkataramana, from{" "}
+          <a href="https://commons.wikimedia.org/wiki/File:Rice_paddy_fields_at_Dusipeta,_Amadalavalasa_Mandal.Srikakulam_district.jpg">Wikimedia Commons</a>,
+          licensed <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>. It is shown cropped and converted to WebP.
+        </p>
+
         <h2>How well it works</h2>
         <p>
           We test Pairu on held-out labelled leaf photos and publish the result, with the size of the test set and its limits, on the{" "}

@@ -1,7 +1,7 @@
 // Pairu service worker: the app opens offline and on weak networks. The app shell, sample photos
 // and the crop list are cached; advice cards already seen are kept for offline reading. Diagnosis,
 // voice and weather always need the network.
-const VERSION = "pairu-v3";
+const VERSION = "pairu-v4";
 const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png", "/fonts/Geist-Variable.woff2"];
 
 self.addEventListener("install", (event) => {

@@ -1,0 +1,55 @@
+{
+ "pathogen": "Peronosclerospora sorghi, Scleropthora rayssiae var. zeae, Peronosclerospora hetropogoni",
+ "symptoms": [
+  "The plant may look yellow and stunted.",
+  "You might see white stripes on the leaves.",
+  "A white fuzzy growth can appear on the leaf surfaces.",
+  "The tassels may look like leaves instead of flowers.",
+  "The plant may have trouble setting seeds properly.",
+  "Leaves can show yellow stripes that later turn purple or red."
+ ],
+ "photo_cues": [
+  "white downy leaf growth",
+  "yellow leaf stripes",
+  "purple or red stripes",
+  "stunted plant growth",
+  "tassels turned into leaves"
+ ],
+ "favourable_conditions": "The disease is often linked to planting before the rainy season begins.",
+ "prevention": [
+  "Choose maize varieties that are known to be resistant to the disease.",
+  "Treat your seeds with recommended fungicides before planting.",
+  "Avoid planting maize next to sorghum fields to stop the disease from spreading.",
+  "Do not plant maize after sorghum in the same field."
+ ],
+ "practices": [
+  "Walk through your field and pull out any sick plants as soon as you see them.",
+  "Destroy the infected plants you remove to stop the spread.",
+  "Monitor your crop closely for early signs of the disease."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Metalaxyl",
+  "Mancozeb",
+  "Acylalanine",
+  "Apron 35 WP",
+  "Bleaching powder",
+  "Atrazine",
+  "Alachlor",
+  "2,4-D Ethyl Ester",
+  "Paraquat dichloride",
+  "Diuron",
+  "Zineb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "maize_disease_maize_1.txt",
+  "maize_disease_maize_2.txt",
+  "aesa:maize"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "pathogen": "Phomopsis vexans",
+ "symptoms": [
+  "Young seedlings may topple over and die because the stem is damaged near the soil.",
+  "Leaves show irregular brown or grayish spots and may turn yellow and fall off.",
+  "Stems develop dark brown sunken spots that can cause the plant to fall over.",
+  "Fruits show small pale sunken spots that grow to cover the whole fruit.",
+  "Infected fruits eventually turn into a soft watery mass or become black and mummified."
+ ],
+ "photo_cues": [
+  "Irregular brown leaf spots",
+  "Dark brown stem lesions",
+  "Pale sunken fruit spots",
+  "Black mummified fruit",
+  "Tiny black dots on spots"
+ ],
+ "favourable_conditions": "The disease thrives in temperatures around 29 degrees Celsius.",
+ "prevention": [
+  "Always get your seeds from healthy fruits.",
+  "Treat seeds with hot water at 50 degrees Celsius for 30 minutes before planting.",
+  "Rotate brinjal with other crops like paddy or gingelly instead of planting it in the same spot every year.",
+  "Plough your fields deeply during the summer to reduce the disease in the soil.",
+  "Use resistant varieties of brinjal."
+ ],
+ "practices": [
+  "Remove and destroy all parts of the plant that show signs of the disease.",
+  "Clear away all old plant debris from the field to stop the spread.",
+  "Monitor your plants regularly for any signs of spots or rot."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "difolatan",
+  "captan",
+  "Zineb",
+  "Bordeaux mixture",
+  "carbendazim"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "brinjal_phdiseases_2.txt",
+  "aesa:brinjal"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -120,6 +120,8 @@
     "maize_turcicum_blight",
     "maize_maydis_blight",
     "maize_grey_leaf_spot",
+    "maize_downy_mildew",
+    "maize_fall_armyworm",
     "maize_healthy"
    ]
   },
@@ -146,6 +148,29 @@
     "tomato_bacterial_spot",
     "tomato_fruit_borer",
     "tomato_healthy"
+   ]
+  },
+  {
+   "id": "brinjal",
+   "name_en": "Brinjal",
+   "names": {
+    "te": "వంకాయ",
+    "hi": "बैंगन",
+    "ta": "கத்தரி",
+    "kn": "ಬದನೆ",
+    "mr": "वांगी",
+    "bn": "বেগুন",
+    "or": "ବାଇଗଣ",
+    "gu": "રીંગણ",
+    "pa": "ਬੈਂਗਣ",
+    "ml": "വഴുതന"
+   },
+   "diseases": [
+    "brinjal_shoot_fruit_borer",
+    "brinjal_little_leaf",
+    "brinjal_phomopsis_blight",
+    "brinjal_bacterial_wilt",
+    "brinjal_healthy"
    ]
   },
   {
@@ -224,7 +249,9 @@
    "id": "paddy_blast",
    "crop": "paddy",
    "name_en": "Blast",
-   "names": {},
+   "names": {
+    "te": "అగ్గి తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Pyricularia (Magnaporthe) grisea, Pyricularia oryzae, Magnaporthe oryzae",
    "symptoms": [
@@ -334,6 +361,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
     }
    ]
   },
@@ -341,7 +372,9 @@
    "id": "paddy_brown_spot",
    "crop": "paddy",
    "name_en": "Brown spot",
-   "names": {},
+   "names": {
+    "te": "గోధుమ మచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Helminthosporium oryzae",
    "symptoms": [
@@ -414,6 +447,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ఎల్ నినో ప్రభావం వరి పంటలో పురుగులు తెగుళ్ల సమగ్ర యాజమాన్యం",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c2ac2ac4dc2ac41-c27c3ec28c4dc2fc3ec32c41/ఎల్-నినో-ప్రభావం-వరి-పంటలో-పురుగులు-తెగుళ్ల-సమగ్ర-యాజమాన్యం?lgn=te"
     }
    ]
   },
@@ -421,7 +458,9 @@
    "id": "paddy_blb",
    "crop": "paddy",
    "name_en": "Bacterial leaf blight",
-   "names": {},
+   "names": {
+    "te": "బ్యాక్టీరియా ఎండాకు తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Xanthomonas oryzae pv. Oryzae",
    "symptoms": [
@@ -490,6 +529,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వానాకాలం వరిలో తొలిదశ చీడపీడలు యాజమాన్య చర్యలు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te"
     }
    ]
   },
@@ -497,7 +540,9 @@
    "id": "paddy_sheath_blight",
    "crop": "paddy",
    "name_en": "Sheath blight",
-   "names": {},
+   "names": {
+    "te": "పాముపొడ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Rhizoctonia solani",
    "symptoms": [
@@ -558,6 +603,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వానాకాలం వరిలో తొలిదశ చీడపీడలు యాజమాన్య చర్యలు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te"
     }
    ]
   },
@@ -565,7 +614,9 @@
    "id": "paddy_bph",
    "crop": "paddy",
    "name_en": "Brown plant hopper",
-   "names": {},
+   "names": {
+    "te": "సుడిదోమ"
+   },
    "kind": "pest",
    "pathogen": "Nilaparvata lugens",
    "symptoms": [
@@ -657,6 +708,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
     }
    ]
   },
@@ -664,7 +719,9 @@
    "id": "paddy_stem_borer",
    "crop": "paddy",
    "name_en": "Yellow stem borer",
-   "names": {},
+   "names": {
+    "te": "కాండం తొలిచే పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Scirpophaga incertulas",
    "symptoms": [
@@ -735,6 +792,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
     }
    ]
   },
@@ -787,7 +848,9 @@
    "id": "cotton_bacterial_blight",
    "crop": "cotton",
    "name_en": "Bacterial blight (black arm)",
-   "names": {},
+   "names": {
+    "te": "నల్లమచ్చ తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Xanthomonas campestris p.v malvacearum, Xanthomonas axonopodis p.v. malvacearum",
    "symptoms": [
@@ -856,6 +919,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ప్రత్తి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/ప్రత్తి?lgn=te"
     }
    ]
   },
@@ -932,7 +999,9 @@
    "id": "cotton_grey_mildew",
    "crop": "cotton",
    "name_en": "Grey mildew",
-   "names": {},
+   "names": {
+    "te": "బూజు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Ramularia areola, Mycosphaerella areola",
    "symptoms": [
@@ -988,6 +1057,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ప్రత్తి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
    ]
   },
@@ -995,7 +1068,9 @@
    "id": "cotton_pink_bollworm",
    "crop": "cotton",
    "name_en": "Pink bollworm",
-   "names": {},
+   "names": {
+    "te": "గులాబి రంగు పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Pectinophora gossypiella",
    "symptoms": [
@@ -1061,6 +1136,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ప్రత్తి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
    ]
   },
@@ -1068,7 +1147,9 @@
    "id": "cotton_whitefly",
    "crop": "cotton",
    "name_en": "Whitefly",
-   "names": {},
+   "names": {
+    "te": "తెల్లదోమ"
+   },
    "kind": "pest",
    "pathogen": "Bemisia tabaci",
    "symptoms": [
@@ -1172,6 +1253,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ప్రత్తి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
    ]
   },
@@ -1179,7 +1264,9 @@
    "id": "cotton_jassid",
    "crop": "cotton",
    "name_en": "Leafhopper (jassid)",
-   "names": {},
+   "names": {
+    "te": "పచ్చదోమ"
+   },
    "kind": "pest",
    "pathogen": "Amrasca (Biguttula biguttula) devastans",
    "symptoms": [
@@ -1251,6 +1338,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: ప్రత్తి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
    ]
   },
@@ -1504,7 +1595,7 @@
     },
     {
      "id": "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot",
-     "question": "Are the spots small, dark and water-soaked or raised and scabby, without a pale centre?",
+     "question": "Are the spots small, dark brown to black and greasy, without a pale grey centre?",
      "yes": "chilli_bacterial_leaf_spot",
      "no": "chilli_cercospora_leaf_spot"
     }
@@ -1571,7 +1662,7 @@
     },
     {
      "id": "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot",
-     "question": "Are the spots small, dark and water-soaked or raised and scabby, without a pale centre?",
+     "question": "Are the spots small, dark brown to black and greasy, without a pale grey centre?",
      "yes": "chilli_bacterial_leaf_spot",
      "no": "chilli_cercospora_leaf_spot"
     }
@@ -1714,7 +1805,9 @@
    "id": "groundnut_early_leaf_spot",
    "crop": "groundnut",
    "name_en": "Early leaf spot (tikka)",
-   "names": {},
+   "names": {
+    "te": "టిక్కా ఆకుమచ్చ"
+   },
    "kind": "fungal",
    "pathogen": "Cercospora arachidicola",
    "symptoms": [
@@ -1778,6 +1871,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
      "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
    ]
   },
@@ -1785,7 +1882,9 @@
    "id": "groundnut_late_leaf_spot",
    "crop": "groundnut",
    "name_en": "Late leaf spot (tikka)",
-   "names": {},
+   "names": {
+    "te": "టిక్కా ఆకుమచ్చ"
+   },
    "kind": "fungal",
    "pathogen": "Phaeoisariopsis personatum",
    "symptoms": [
@@ -1854,6 +1953,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
      "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
    ]
   },
@@ -1861,7 +1964,9 @@
    "id": "groundnut_rust",
    "crop": "groundnut",
    "name_en": "Rust",
-   "names": {},
+   "names": {
+    "te": "తుప్పు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Puccinia arachidis",
    "symptoms": [
@@ -1909,6 +2014,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
      "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
    ]
   },
@@ -2325,6 +2434,153 @@
    ]
   },
   {
+   "id": "maize_downy_mildew",
+   "crop": "maize",
+   "name_en": "Downy mildew",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Peronosclerospora sorghi, Scleropthora rayssiae var. zeae, Peronosclerospora hetropogoni",
+   "symptoms": [
+    "The plant may look yellow and stunted.",
+    "You might see white stripes on the leaves.",
+    "A white fuzzy growth can appear on the leaf surfaces.",
+    "The tassels may look like leaves instead of flowers.",
+    "The plant may have trouble setting seeds properly.",
+    "Leaves can show yellow stripes that later turn purple or red."
+   ],
+   "photo_cues": [
+    "white downy leaf growth",
+    "yellow leaf stripes",
+    "purple or red stripes",
+    "stunted plant growth",
+    "tassels turned into leaves"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease is often linked to planting before the rainy season begins.",
+   "prevention": [
+    "Choose maize varieties that are known to be resistant to the disease.",
+    "Treat your seeds with recommended fungicides before planting.",
+    "Avoid planting maize next to sorghum fields to stop the disease from spreading.",
+    "Do not plant maize after sorghum in the same field."
+   ],
+   "practices": [
+    "Walk through your field and pull out any sick plants as soon as you see them.",
+    "Destroy the infected plants you remove to stop the spread.",
+    "Monitor your crop closely for early signs of the disease."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "downy mildew",
+    "sorghum downy mildew",
+    "browny stripe downy mildew",
+    "phillippine downy mildew",
+    "sugarcane downy mildew"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Maize, Sorghum downy mildew",
+     "url": "https://web.archive.org/web/20160730014137/http://agritech.tnau.ac.in/crop_protection/maize_disease/maize_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_1.html"
+    },
+    {
+     "title": "TNAU Agritech Portal: Maize, Brown stripe downy mildew",
+     "url": "https://web.archive.org/web/20160728134448/http://agritech.tnau.ac.in/crop_protection/maize_disease/maize_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
+     "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ]
+  },
+  {
+   "id": "maize_fall_armyworm",
+   "crop": "maize",
+   "name_en": "Fall armyworm",
+   "names": {
+    "te": "కత్తెర పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Spodoptera frugiperda",
+   "symptoms": [
+    "You may see long papery windows on the leaves of young plants.",
+    "The leaves develop ragged holes that get bigger as the pest grows.",
+    "Large areas of the leaves may be eaten away completely.",
+    "The pest may bore into the corn ears and damage them.",
+    "You might see a lot of waste matter left behind by the pests."
+   ],
+   "photo_cues": [
+    "elongated papery leaf windows",
+    "ragged edged leaf holes",
+    "reddish brown pupa",
+    "white inverted Y head mark",
+    "four black tail spots"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Plough your field deeply before planting to expose the pests to birds.",
+    "Plant your crops at the same time as your neighbors to avoid staggered growth.",
+    "Plant rows of pulse crops like pigeon pea or black gram between your maize.",
+    "Set up bird perches in the field to attract birds that eat the pests.",
+    "Plant trap crops like Napier grass around the edge of your field."
+   ],
+   "practices": [
+    "Walk through your field in a W pattern every week to check for damage.",
+    "Pick off egg masses and larvae by hand and crush them or drop them in water.",
+    "Put a mix of sand and lime or ash into the center of the plant whorl.",
+    "Use pheromone traps to catch and destroy the male moths.",
+    "Monitor your crop regularly from the time it sprouts."
+   ],
+   "organic_bio": [
+    {
+     "text": "5% Neem Seed Kernel emulsion (NSKE) or azadirachtin 1500ppm @ 5ml/l water",
+     "source": 0
+    },
+    {
+     "text": "Metarhizium anisopliae (1 x 10^8 cfu/g) @ 5g/l",
+     "source": 0
+    },
+    {
+     "text": "Nomuraea rileyi rice grain formulation (1 x 10^8 cfu/g) @ 3 g/l water",
+     "source": 0
+    },
+    {
+     "text": "Beauveria bassiana and Verticillium lecanii at 1 x 10^8 CFU/g @ 5 g/litre",
+     "source": 1
+    },
+    {
+     "text": "NPV formulation @ 2 g/l or 400 g/acre",
+     "source": 1
+    },
+    {
+     "text": "Trichogramma pretiosum and Telenomus remus @ 50000 per acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "fall armyworm",
+    "fall army worm",
+    "spodoptera frugiperda"
+   ],
+   "sources": [
+    {
+     "title": "Vikaspedia: Identification and management of fall armyworm",
+     "url": "https://en.vikaspedia.in/viewcontent/agriculture/crop-production/integrated-pest-managment/ipm-for-cerels/identification-and-management-of-fall-armyworm?lgn=en"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Advisory on fall armyworm on maize, July 2022",
+     "url": "https://ppqs.gov.in/sites/default/files/faw_advisory0001.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మొక్కజొన్నలో కత్తెర పురుగు నివారణ మరియు సమగ్ర యాజమాన్యం",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మొక్కజొన్నలో-కత్తెర-పురుగు-నివారణ-మరియు-సమగ్ర-యాజమాన్యం?lgn=te"
+    }
+   ]
+  },
+  {
    "id": "maize_healthy",
    "crop": "maize",
    "name_en": "Healthy",
@@ -2369,7 +2625,9 @@
    "id": "tomato_early_blight",
    "crop": "tomato",
    "name_en": "Early blight",
-   "names": {},
+   "names": {
+    "te": "ఆకుమాడు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Alternaria solani",
    "symptoms": [
@@ -2438,6 +2696,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: టమాట",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te"
     }
    ]
   },
@@ -2830,6 +3092,283 @@
    ]
   },
   {
+   "id": "brinjal_shoot_fruit_borer",
+   "crop": "brinjal",
+   "name_en": "Shoot and fruit borer",
+   "names": {
+    "te": "కొమ్మ మరియు కాయ తొలుచు పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Leucinodes orbonalis",
+   "symptoms": [
+    "You will see young shoots wilting and drying up.",
+    "Flower buds may fall off the plant.",
+    "Small holes appear on shoots and fruits.",
+    "The holes are often plugged with insect waste.",
+    "Inside the fruit, the insect creates tunnels filled with waste."
+   ],
+   "photo_cues": [
+    "wilted terminal shoots",
+    "holes on fruit surface",
+    "holes plugged with excreta",
+    "pink colored larva",
+    "grey boat shaped cocoon"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Do not grow brinjal in the same field year after year.",
+    "Choose varieties that have long and narrow fruits.",
+    "Install pheromone traps to catch the moths."
+   ],
+   "practices": [
+    "Regularly check your field for damaged fruits and shoots.",
+    "Cut off and destroy any shoots that have holes.",
+    "Pick and destroy all damaged fruits.",
+    "Count the number of moths caught in traps every week.",
+    "Remove and destroy trapped moths after you count them."
+   ],
+   "organic_bio": [
+    {
+     "text": "Neem seed kernel extract (NSKE) 5 %",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "shoot and fruit borer",
+    "fruit borer",
+    "shoot borer"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Brinjal, Shoot and fruit borer",
+     "url": "https://web.archive.org/web/20141128000002/http://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వంగ సాగులో కొమ్మ మరియు కాయ తొలుచు పురుగు యాజమాన్యం",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వంగ-సాగులో-కొమ్మ-మరియు-కాయ-తొలుచు-పురుగు-యాజమాన్యం?lgn=te"
+    }
+   ]
+  },
+  {
+   "id": "brinjal_little_leaf",
+   "crop": "brinjal",
+   "name_en": "Little leaf",
+   "names": {
+    "te": "వెర్రి తెగులు"
+   },
+   "kind": "bacterial",
+   "pathogen": "Phytoplasmas",
+   "symptoms": [
+    "New leaves grow much smaller than normal.",
+    "Leaf stalks become very short, making leaves look like they are stuck to the stem.",
+    "The plant looks bushy because many small buds grow together.",
+    "Flowers may turn into green leafy structures instead of normal blooms.",
+    "Fruits are rare, and if they grow, they stay hard and do not ripen properly."
+   ],
+   "photo_cues": [
+    "Small yellow leaves",
+    "Bushy plant appearance",
+    "Shortened stem sections",
+    "Green leafy flowers",
+    "Mummified young fruit"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Remove and destroy any plants that show signs of the disease early on.",
+    "Clear out weeds from the Solanaceae family that can carry the disease.",
+    "Choose plant varieties that are known to be tolerant to this disease."
+   ],
+   "practices": [
+    "Regularly check your field for plants showing signs of the disease.",
+    "Pull out and destroy any infected plants immediately to stop the spread.",
+    "Control the leaf hopper insects that carry the disease to healthy plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "jassids",
+    "leafhopper"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Brinjal, Brown leaf hopper",
+     "url": "https://web.archive.org/web/20141128000018/http://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_6.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_6.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
+    }
+   ]
+  },
+  {
+   "id": "brinjal_phomopsis_blight",
+   "crop": "brinjal",
+   "name_en": "Phomopsis blight and fruit rot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Phomopsis vexans",
+   "symptoms": [
+    "Young seedlings may topple over and die because the stem is damaged near the soil.",
+    "Leaves show irregular brown or grayish spots and may turn yellow and fall off.",
+    "Stems develop dark brown sunken spots that can cause the plant to fall over.",
+    "Fruits show small pale sunken spots that grow to cover the whole fruit.",
+    "Infected fruits eventually turn into a soft watery mass or become black and mummified."
+   ],
+   "photo_cues": [
+    "Irregular brown leaf spots",
+    "Dark brown stem lesions",
+    "Pale sunken fruit spots",
+    "Black mummified fruit",
+    "Tiny black dots on spots"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease thrives in temperatures around 29 degrees Celsius.",
+   "prevention": [
+    "Always get your seeds from healthy fruits.",
+    "Treat seeds with hot water at 50 degrees Celsius for 30 minutes before planting.",
+    "Rotate brinjal with other crops like paddy or gingelly instead of planting it in the same spot every year.",
+    "Plough your fields deeply during the summer to reduce the disease in the soil.",
+    "Use resistant varieties of brinjal."
+   ],
+   "practices": [
+    "Remove and destroy all parts of the plant that show signs of the disease.",
+    "Clear away all old plant debris from the field to stop the spread.",
+    "Monitor your plants regularly for any signs of spots or rot."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "fruit rot",
+    "blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Brinjal, Fruit rot",
+     "url": "https://web.archive.org/web/20170114161942/http://agritech.tnau.ac.in/crop_protection/brinjal_phdiseases_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/brinjal_phdiseases_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    }
+   ]
+  },
+  {
+   "id": "brinjal_bacterial_wilt",
+   "crop": "brinjal",
+   "name_en": "Bacterial wilt",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Pseudomonas solanacearum, Ralstonia solanacearum",
+   "symptoms": [
+    "The plant suddenly wilts and dies.",
+    "Older leaves droop down first.",
+    "The whole plant turns yellow and stops growing.",
+    "The plant may wilt at noon and recover at night before finally dying.",
+    "The inside of the stem and roots turns brown."
+   ],
+   "photo_cues": [
+    "yellowing foliage",
+    "drooping lower leaves",
+    "brown vascular tissue",
+    "whitish bacterial ooze"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "High soil moisture and moderate soil temperatures help the disease grow.",
+   "prevention": [
+    "Grow resistant varieties like Pant Samrat.",
+    "Rotate brinjal with crops like maize, soybean, wheat, rice, or cauliflower.",
+    "Use green manure crops like Brassica.",
+    "Keep the field clean and remove all old plant parts.",
+    "Control root knot nematodes in the soil."
+   ],
+   "practices": [
+    "Remove and burn all affected plant parts.",
+    "Keep the field clean.",
+    "Control root knot nematodes to stop the disease from spreading."
+   ],
+   "organic_bio": [
+    {
+     "text": "Mix 1 kg of Trichoderma viride 1% WP with 25 kg FYM and broadcast uniformly over an acre of land and irrigate the field immediately.",
+     "source": 1
+    },
+    {
+     "text": "Use neem cake.",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "bacterial wilt",
+    "wilt"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Brinjal, Bacterial Wilt",
+     "url": "https://web.archive.org/web/20151013021432/http://agritech.tnau.ac.in/crop_protection/brinjal_diseases_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/brinjal_diseases_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    }
+   ]
+  },
+  {
+   "id": "brinjal_healthy",
+   "crop": "brinjal",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    }
+   ]
+  },
+  {
    "id": "blackgram_leaf_crinkle",
    "crop": "blackgram",
    "name_en": "Leaf crinkle virus",
@@ -2878,7 +3417,9 @@
    "id": "blackgram_rust",
    "crop": "blackgram",
    "name_en": "Rust",
-   "names": {},
+   "names": {
+    "te": "తుప్పు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Uromyces phaseoli",
    "symptoms": [
@@ -2920,6 +3461,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
      "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మినుము",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
     }
    ]
   },
@@ -2927,7 +3472,9 @@
    "id": "blackgram_pod_borer",
    "crop": "blackgram",
    "name_en": "Spotted pod borer (Maruca)",
-   "names": {},
+   "names": {
+    "te": "మారుకా మచ్చల పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Maruca testulalis, Maruca vitrata",
    "symptoms": [
@@ -2981,6 +3528,10 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
      "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మినుము",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
     }
    ]
   },
@@ -3431,13 +3982,13 @@
     },
     {
      "id": "q_onion_stemphylium_blight_onion_purple_blotch",
-     "question": "Are the spots small, yellow to orange and long, mostly on one side of the leaf, without a purple centre?",
+     "question": "Are the spots yellow to orange and long like a spindle, with a pinkish edge rather than a purple centre?",
      "yes": "onion_stemphylium_blight",
      "no": "onion_purple_blotch"
     },
     {
      "id": "q_onion_downy_mildew_onion_purple_blotch",
-     "question": "Are there pale, oval patches with a violet or grey furry growth in the morning dew?",
+     "question": "Do the leaves turn pale green with a white cotton-like growth on them, without dark spots?",
      "yes": "onion_downy_mildew",
      "no": "onion_purple_blotch"
     }
@@ -3502,7 +4053,7 @@
     },
     {
      "id": "q_onion_stemphylium_blight_onion_purple_blotch",
-     "question": "Are the spots small, yellow to orange and long, mostly on one side of the leaf, without a purple centre?",
+     "question": "Are the spots yellow to orange and long like a spindle, with a pinkish edge rather than a purple centre?",
      "yes": "onion_stemphylium_blight",
      "no": "onion_purple_blotch"
     }
@@ -3559,7 +4110,7 @@
    "discriminators": [
     {
      "id": "q_onion_downy_mildew_onion_purple_blotch",
-     "question": "Are there pale, oval patches with a violet or grey furry growth in the morning dew?",
+     "question": "Do the leaves turn pale green with a white cotton-like growth on them, without dark spots?",
      "yes": "onion_downy_mildew",
      "no": "onion_purple_blotch"
     }

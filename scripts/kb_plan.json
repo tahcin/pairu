@@ -410,25 +410,6 @@
    ]
   },
   {
-   "id": "groundnut_stem_rot",
-   "crop": "groundnut",
-   "name_en": "Stem rot",
-   "kind": "fungal",
-   "tnau_files": [
-    "groundnut_diseases_groundnut_d4.txt"
-   ],
-   "text_files": [
-    "groundnut_diseases_groundnut_d4.txt",
-    "aesa:groundnut"
-   ],
-   "aesa": "groundnut",
-   "aesa_kw": "stem rot|Sclerotium|white mould",
-   "cibrc_targets": [
-    "stem rot",
-    "sclerotium rot"
-   ]
-  },
-  {
    "id": "groundnut_bud_necrosis",
    "crop": "groundnut",
    "name_en": "Bud necrosis virus",
@@ -771,25 +752,6 @@
    "cibrc_targets": [
     "bacterial wilt",
     "wilt"
-   ]
-  },
-  {
-   "id": "brinjal_cercospora_leaf_spot",
-   "crop": "brinjal",
-   "name_en": "Cercospora leaf spot",
-   "kind": "fungal",
-   "tnau_files": [
-    "brinjal_diseases_2.txt"
-   ],
-   "text_files": [
-    "brinjal_diseases_2.txt",
-    "aesa:brinjal"
-   ],
-   "aesa": "brinjal",
-   "aesa_kw": "cercospora",
-   "cibrc_targets": [
-    "leaf spot",
-    "cercospora sp"
    ]
   },
   {

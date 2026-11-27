@@ -10,6 +10,8 @@ import json, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEXT = os.path.join(HERE, "raw", "kb", "text")
 
+# brinjal cercospora leaf spot was dropped: neither source gives any non-chemical practice for it.
+# groundnut stem rot was dropped: the TNAU stem rot page repeats the rust symptoms and the AESA package has no description.
 # id, crop, name_en, kind, tnau file prefix regex, tnau heading regex, aesa file, aesa keyword regex, cibrc targets
 D = [
  # paddy
@@ -37,7 +39,6 @@ D = [
  ("groundnut_early_leaf_spot", "groundnut", "Early leaf spot (tikka)", "fungal", r"groundnut_diseases", r"^Early leaf spot", "groundnut", r"early leaf spot|tikka|leaf spot", ["early leaf spot", "tikka leaf spot", "tikka", "leaf spot"]),
  ("groundnut_late_leaf_spot", "groundnut", "Late leaf spot (tikka)", "fungal", r"groundnut_diseases", r"^Late leaf spot", "groundnut", r"late leaf spot|tikka|leaf spot", ["late leaf spot", "lateleafspot", "tikka leaf spot", "tikka", "leaf spot"]),
  ("groundnut_rust", "groundnut", "Rust", "fungal", r"groundnut_diseases", r"^Rust", "groundnut", r"\brust\b", ["rust"]),
- ("groundnut_stem_rot", "groundnut", "Stem rot", "fungal", r"groundnut_diseases", r"^Stem", "groundnut", r"stem rot|Sclerotium|white mould", ["stem rot", "sclerotium rot"]),
  ("groundnut_bud_necrosis", "groundnut", "Bud necrosis virus", "viral", r"groundnut_diseases", r"^Bud necrosis", "groundnut", r"bud necrosis|PBNV|thrips", ["thrips"]),
  ("groundnut_leaf_miner", "groundnut", "Leaf miner", "pest", r"groundnut_crop", r"leaf ?miner", "groundnut", r"leaf ?miner|Aproaerema", ["leaf miner", "leaf minor"]),
  # maize
@@ -59,7 +60,6 @@ D = [
  ("brinjal_little_leaf", "brinjal", "Little leaf", "bacterial", r"brinjal_brinjal", r"(?i)^brown leaf hopper", "brinjal", r"little leaf|phytoplasma", ["jassids", "leafhopper"]),
  ("brinjal_phomopsis_blight", "brinjal", "Phomopsis blight and fruit rot", "fungal", r"brinjal_phdiseases", r"Phomopsis", "brinjal", r"phomopsis", ["fruit rot", "blight"]),
  ("brinjal_bacterial_wilt", "brinjal", "Bacterial wilt", "bacterial", r"brinjal_diseases", r"^Bacterial Wilt", "brinjal", r"bacterial wilt|Ralstonia|solanacearum", ["bacterial wilt", "wilt"]),
- ("brinjal_cercospora_leaf_spot", "brinjal", "Cercospora leaf spot", "fungal", r"brinjal_diseases", r"^Cercospora", "brinjal", r"cercospora", ["leaf spot", "cercospora sp"]),
  ("brinjal_epilachna", "brinjal", "Epilachna beetle (hadda beetle)", "pest", r"brinjal_brinjal", r"^Hadda", "brinjal", r"epilachna|hadda|spotted beetle", ["epilachna grub", "beetles"]),
  # banana
  ("banana_panama_wilt", "banana", "Panama wilt (Fusarium wilt)", "fungal", r"banana_diseases", r"^Panama", "banana", r"panama|fusarium wilt", ["panama wilt"]),

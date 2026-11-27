@@ -1,0 +1,58 @@
+{
+ "pathogen": "Leucinodes orbonalis",
+ "symptoms": [
+  "You will see young shoots wilting and drying up.",
+  "Flower buds may fall off the plant.",
+  "Small holes appear on shoots and fruits.",
+  "The holes are often plugged with insect waste.",
+  "Inside the fruit, the insect creates tunnels filled with waste."
+ ],
+ "photo_cues": [
+  "wilted terminal shoots",
+  "holes on fruit surface",
+  "holes plugged with excreta",
+  "pink colored larva",
+  "grey boat shaped cocoon"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Do not grow brinjal in the same field year after year.",
+  "Choose varieties that have long and narrow fruits.",
+  "Install pheromone traps to catch the moths."
+ ],
+ "practices": [
+  "Regularly check your field for damaged fruits and shoots.",
+  "Cut off and destroy any shoots that have holes.",
+  "Pick and destroy all damaged fruits.",
+  "Count the number of moths caught in traps every week.",
+  "Remove and destroy trapped moths after you count them."
+ ],
+ "organic_bio": [
+  {
+   "text": "Neem seed kernel extract (NSKE) 5 %",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Azadirachtin",
+  "Chlorpyrifos",
+  "Dimethoate",
+  "Emamectin benzoate",
+  "Flubendiamide",
+  "Phosalone",
+  "Quinalphos",
+  "Thiodicarb",
+  "Thiometon",
+  "Trichlorofon",
+  "Triazophos"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "brinjal_brinjal_1.txt",
+  "aesa:brinjal"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

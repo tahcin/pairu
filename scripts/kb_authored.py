@@ -34,7 +34,7 @@ PAIRS = [
  ("cotton_whitefly", "cotton_jassid", "When you shake the plant, do tiny white flies rise from the underside of the leaves, and are the leaves sticky or black with soot?"),
  ("cotton_jassid", "cotton_whitefly", "Do the leaf edges turn yellow and then red or bronze and curl downwards, with small pale green wedge-shaped insects under the leaves?"),
  ("chilli_cercospora_leaf_spot", "chilli_bacterial_leaf_spot", "Are the spots round with a light grey or white centre and a dark brown ring, like a frog's eye?"),
- ("chilli_bacterial_leaf_spot", "chilli_cercospora_leaf_spot", "Are the spots small, dark and water-soaked or raised and scabby, without a pale centre?"),
+ ("chilli_bacterial_leaf_spot", "chilli_cercospora_leaf_spot", "Are the spots small, dark brown to black and greasy, without a pale grey centre?"),
  ("chilli_thrips", "chilli_leaf_curl", "Do the leaves crinkle and curl upwards, with tiny thin straw-yellow insects on the young leaves?"),
  ("chilli_leaf_curl", "chilli_thrips", "Are the leaves small and curled towards the middle vein, with the plant stunted and its stem joints close together?"),
  ("groundnut_early_leaf_spot", "groundnut_late_leaf_spot", "Are the spots brown on the upper side of the leaf, with only a light brown colour underneath?"),
@@ -61,8 +61,8 @@ PAIRS = [
  ("potato_black_scurf", "potato_common_scab", "Are there black specks or crusts on the tuber skin, rather than rough corky pits?"),
  ("potato_common_scab", "potato_black_scurf", "Are there rough, corky, raised or pitted patches on the tuber skin?"),
  ("onion_purple_blotch", "onion_stemphylium_blight", "Do the spots have a purple centre with a yellow edge?"),
- ("onion_stemphylium_blight", "onion_purple_blotch", "Are the spots small, yellow to orange and long, mostly on one side of the leaf, without a purple centre?"),
- ("onion_downy_mildew", "onion_purple_blotch", "Are there pale, oval patches with a violet or grey furry growth in the morning dew?"),
+ ("onion_stemphylium_blight", "onion_purple_blotch", "Are the spots yellow to orange and long like a spindle, with a pinkish edge rather than a purple centre?"),
+ ("onion_downy_mildew", "onion_purple_blotch", "Do the leaves turn pale green with a white cotton-like growth on them, without dark spots?"),
 ]
 
 # "Looks healthy" entries. Prevention and practices follow the "Principles of AESA based IPM"
@@ -130,8 +130,55 @@ FIXES = {
    "practices": ["Look at the lower leaves first, because the spots start there and move upwards.",
      "After harvest, plough in old maize residue and avoid planting maize again in the same field next season."],
    "organic_bio": [], "_used_pages": [0]}},
+ "maize_fall_armyworm": {"set": {"favourable_conditions": ""},
+   "drop_bio": ["Dipel"]},
  "paddy_blast": {"drop_bio": ["5-10 g/ha of seed"], "drop": [("practices", "crop rotation")]},
 }
 
-# Farmers' names for problems, only where a cited page gives them (filled from Vikaspedia Telugu pages).
-NAMES = {}
+# Farmers' Telugu names for problems, only where a Vikaspedia Telugu page uses the name for that
+# problem (page key -> scripts/raw/kb/vikaspedia_te/urls.txt). build_kb.py adds the page to sources.
+NAMES = {
+ "paddy_blast": ({"te": "అగ్గి తెగులు"}, "p24"),
+ "paddy_blb": ({"te": "బ్యాక్టీరియా ఎండాకు తెగులు"}, "p12"),
+ "paddy_sheath_blight": ({"te": "పాముపొడ తెగులు"}, "p12"),
+ "paddy_bph": ({"te": "సుడిదోమ"}, "p24"),
+ "paddy_stem_borer": ({"te": "కాండం తొలిచే పురుగు"}, "p24"),
+ "paddy_brown_spot": ({"te": "గోధుమ మచ్చ తెగులు"}, "p1"),
+ "cotton_bacterial_blight": ({"te": "నల్లమచ్చ తెగులు"}, "p31"),
+ "cotton_grey_mildew": ({"te": "బూజు తెగులు"}, "p19"),
+ "cotton_whitefly": ({"te": "తెల్లదోమ"}, "p19"),
+ "cotton_jassid": ({"te": "పచ్చదోమ"}, "p19"),
+ "cotton_pink_bollworm": ({"te": "గులాబి రంగు పురుగు"}, "p19"),
+ "groundnut_early_leaf_spot": ({"te": "టిక్కా ఆకుమచ్చ"}, "p15"),
+ "groundnut_late_leaf_spot": ({"te": "టిక్కా ఆకుమచ్చ"}, "p15"),
+ "groundnut_rust": ({"te": "తుప్పు తెగులు"}, "p15"),
+ "maize_fall_armyworm": ({"te": "కత్తెర పురుగు"}, "p3"),
+ "tomato_early_blight": ({"te": "ఆకుమాడు తెగులు"}, "p21"),
+ "brinjal_shoot_fruit_borer": ({"te": "కొమ్మ మరియు కాయ తొలుచు పురుగు"}, "p6"),
+ "brinjal_little_leaf": ({"te": "వెర్రి తెగులు"}, "p18"),
+ "brinjal_epilachna": ({"te": "అక్షింతల పురుగు"}, "p18"),
+ "mango_hopper": ({"te": "తేనెమంచు పురుగు"}, "p25"),
+ "blackgram_yellow_mosaic": ({"te": "పల్లాకు తెగులు"}, "p20"),
+ "blackgram_powdery_mildew": ({"te": "బూడిద తెగులు"}, "p20"),
+ "blackgram_rust": ({"te": "తుప్పు తెగులు"}, "p20"),
+ "blackgram_pod_borer": ({"te": "మారుకా మచ్చల పురుగు"}, "p20"),
+}
+
+# Vikaspedia Telugu pages read on 27 Nov 2026 (rendered in a browser; the site is a JavaScript app).
+TE_URLS = {'p1': 'https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c2ac2ac4dc2ac41-c27c3ec28c4dc2fc3ec32c41/ఎల్-నినో-ప్రభావం-వరి-పంటలో-పురుగులు-తెగుళ్ల-సమగ్ర-యాజమాన్యం?lgn=te',
+ 'p11': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వరి-సాగులో-చీడపీడల-నివారణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te',
+ 'p12': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te',
+ 'p24': 'https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te',
+ 'p32': 'https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/వరి?lgn=te',
+ 'p19': 'https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te',
+ 'p28': 'https://te.vikaspedia.in/viewcontent/agriculture/తరచుగా-అడుగు-ప్రశ్నలు/ప్రత్తి?lgn=te',
+ 'p31': 'https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/ప్రత్తి?lgn=te',
+ 'p20': 'https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te',
+ 'p18': 'https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te',
+ 'p6': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వంగ-సాగులో-కొమ్మ-మరియు-కాయ-తొలుచు-పురుగు-యాజమాన్యం?lgn=te',
+ 'p3': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మొక్కజొన్నలో-కత్తెర-పురుగు-నివారణ-మరియు-సమగ్ర-యాజమాన్యం?lgn=te',
+ 'p15': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te',
+ 'p22': 'https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/వేరుశనగ-ఆశించే-పురుగులు-మరియు-సస్యరక్షణ-చర్యలు?lgn=te',
+ 'p25': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మామిడిలో-దిగుబడిని-తగ్గించే-ప్రధానమైన-పురుగులు-వాటి-యాజమాన్యం?lgn=te',
+ 'p21': 'https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te',
+ 'p14': 'https://te.vikaspedia.in/viewcontent/agriculture/ముఖ్యమైన-అంశాలు/కూరగాయల-పంటల్లో-వైరస్-తెగుళ్లు-సమగ్ర-యాజమాన్య-పద్ధతులు?lgn=te'}

@@ -50,7 +50,16 @@ def source_for(f, crop_name):
     first = open(os.path.join(HERE, "raw", "kb", "text", f)).read().split("\n")[2].strip(" :")
     return {"title": f"TNAU Agritech Portal: {crop_name}, {first}", "url": m["archive"], "original": m["original"]}
 
+from kb_authored import TE_URLS as TE  # noqa: E402
+
+def te_source(key):
+    from urllib.parse import unquote
+    u = TE[key]
+    title = unquote(u.split("/")[-1].split("?")[0]).replace("-", " ")
+    return {"title": f"Vikaspedia Telugu: {title}", "url": u}
+
 def clean(s):
+    s = re.sub(r"1 x 108", "1 x 10^8", s)
     s = s.replace("—", ", ").replace("–", "-").replace(" ,", ",").strip()
     return re.sub(r"\s+", " ", s)
 
@@ -81,7 +90,8 @@ def main():
                 r[k] = r[k] + v
             if fx.get("set", {}).get("_used_pages") is not None:
                 r["_used_pages"] = fx["set"]["_used_pages"]
-            r["names"] = NAMES.get(i, {})
+            nm = NAMES.get(i)
+            r["names"] = nm[0] if nm else {}
             srcs = [source_for(f, cname) for f in d["text_files"]]
             used = sorted({o["page"] for o in r.get("organic_bio", [])} | set(r.get("_used_pages", range(len(srcs)))))
             # keep only sources the entry actually draws on, and renumber organic_bio refs
@@ -103,7 +113,7 @@ def main():
                 "practices": [clean(x) for x in r["practices"]],
                 "organic_bio": [{"text": clean(o["text"]), "source": remap[o["page"]]} for o in r.get("organic_bio", [])],
                 "cibrc_targets": d["cibrc_targets"],
-                "sources": [srcs[k] for k in used],
+                "sources": [srcs[k] for k in used] + ([te_source(nm[1])] if nm else []),
             })
         h = HEALTHY[cid]
         hid = f"{cid}_healthy"

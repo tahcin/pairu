@@ -1,0 +1,52 @@
+{
+ "pathogen": "Pseudomonas solanacearum, Ralstonia solanacearum",
+ "symptoms": [
+  "The plant suddenly wilts and dies.",
+  "Older leaves droop down first.",
+  "The whole plant turns yellow and stops growing.",
+  "The plant may wilt at noon and recover at night before finally dying.",
+  "The inside of the stem and roots turns brown."
+ ],
+ "photo_cues": [
+  "yellowing foliage",
+  "drooping lower leaves",
+  "brown vascular tissue",
+  "whitish bacterial ooze"
+ ],
+ "favourable_conditions": "High soil moisture and moderate soil temperatures help the disease grow.",
+ "prevention": [
+  "Grow resistant varieties like Pant Samrat.",
+  "Rotate brinjal with crops like maize, soybean, wheat, rice, or cauliflower.",
+  "Use green manure crops like Brassica.",
+  "Keep the field clean and remove all old plant parts.",
+  "Control root knot nematodes in the soil."
+ ],
+ "practices": [
+  "Remove and burn all affected plant parts.",
+  "Keep the field clean.",
+  "Control root knot nematodes to stop the disease from spreading."
+ ],
+ "organic_bio": [
+  {
+   "text": "Mix 1 kg of Trichoderma viride 1% WP with 25 kg FYM and broadcast uniformly over an acre of land and irrigate the field immediately.",
+   "page": 1
+  },
+  {
+   "text": "Use neem cake.",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Copper fungicides",
+  "Bordeaux mixture"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "brinjal_diseases_1.txt",
+  "aesa:brinjal"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

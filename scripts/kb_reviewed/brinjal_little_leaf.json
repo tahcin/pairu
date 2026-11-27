@@ -1,0 +1,44 @@
+{
+ "pathogen": "Phytoplasmas",
+ "symptoms": [
+  "New leaves grow much smaller than normal.",
+  "Leaf stalks become very short, making leaves look like they are stuck to the stem.",
+  "The plant looks bushy because many small buds grow together.",
+  "Flowers may turn into green leafy structures instead of normal blooms.",
+  "Fruits are rare, and if they grow, they stay hard and do not ripen properly."
+ ],
+ "photo_cues": [
+  "Small yellow leaves",
+  "Bushy plant appearance",
+  "Shortened stem sections",
+  "Green leafy flowers",
+  "Mummified young fruit"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Remove and destroy any plants that show signs of the disease early on.",
+  "Clear out weeds from the Solanaceae family that can carry the disease.",
+  "Choose plant varieties that are known to be tolerant to this disease."
+ ],
+ "practices": [
+  "Regularly check your field for plants showing signs of the disease.",
+  "Pull out and destroy any infected plants immediately to stop the spread.",
+  "Control the leaf hopper insects that carry the disease to healthy plants."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "carbofuran",
+  "methyl parathion",
+  "dimethoate",
+  "carbendazim"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "brinjal_brinjal_6.txt",
+  "aesa:brinjal"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

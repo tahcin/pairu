@@ -39,6 +39,8 @@ def main():
         if os.path.exists(out) and not force:
             continue
         r = json.load(open(os.path.join(EXT, fn)))
+        if i not in plan:
+            continue
         d = plan[i]
         pages = [page_text(f, d) for f in d["text_files"]]
         keep = []

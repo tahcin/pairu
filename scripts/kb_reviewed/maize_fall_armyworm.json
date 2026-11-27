@@ -1,0 +1,78 @@
+{
+ "pathogen": "Spodoptera frugiperda",
+ "symptoms": [
+  "You may see long papery windows on the leaves of young plants.",
+  "The leaves develop ragged holes that get bigger as the pest grows.",
+  "Large areas of the leaves may be eaten away completely.",
+  "The pest may bore into the corn ears and damage them.",
+  "You might see a lot of waste matter left behind by the pests."
+ ],
+ "photo_cues": [
+  "elongated papery leaf windows",
+  "ragged edged leaf holes",
+  "reddish brown pupa",
+  "white inverted Y head mark",
+  "four black tail spots"
+ ],
+ "favourable_conditions": "The pest thrives in tropical and sub-tropical regions where maize is available.",
+ "prevention": [
+  "Plough your field deeply before planting to expose the pests to birds.",
+  "Plant your crops at the same time as your neighbors to avoid staggered growth.",
+  "Plant rows of pulse crops like pigeon pea or black gram between your maize.",
+  "Set up bird perches in the field to attract birds that eat the pests.",
+  "Plant trap crops like Napier grass around the edge of your field."
+ ],
+ "practices": [
+  "Walk through your field in a W pattern every week to check for damage.",
+  "Pick off egg masses and larvae by hand and crush them or drop them in water.",
+  "Put a mix of sand and lime or ash into the center of the plant whorl.",
+  "Use pheromone traps to catch and destroy the male moths.",
+  "Monitor your crop regularly from the time it sprouts."
+ ],
+ "organic_bio": [
+  {
+   "text": "5% Neem Seed Kernel emulsion (NSKE) or azadirachtin 1500ppm @ 5ml/l water",
+   "page": 0
+  },
+  {
+   "text": "Bacillus thuringiensis variety kurstaki (Dipel 8L @ 2ml/l or Delfin 5WG @ 2g/l)",
+   "page": 0
+  },
+  {
+   "text": "Metarhizium anisopliae (1 x 108 cfu/g) @ 5g/l",
+   "page": 0
+  },
+  {
+   "text": "Nomuraea rileyi rice grain formulation (1 x 108 cfu/g) @ 3 g/l water",
+   "page": 0
+  },
+  {
+   "text": "Beauveria bassiana and Verticillium lecanii at 1 x 108 CFU/g @ 5 g/litre",
+   "page": 1
+  },
+  {
+   "text": "NPV formulation @ 2 g/l or 400 g/acre",
+   "page": 1
+  },
+  {
+   "text": "Trichogramma pretiosum and Telenomus remus @ 50000 per acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Emamectin benzoate",
+  "Spinosad",
+  "Chlorantraniliprole",
+  "Thiodicarb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "extra:vikaspedia_faw",
+  "extra:ppqs_faw",
+  "aesa:maize"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

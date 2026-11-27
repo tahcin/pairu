@@ -10,7 +10,7 @@ Built for Avishkaar Season 4 (Virtual Track, AITAM Tekkali), problem statement A
 
 ## What it does
 
-1. The farmer picks a language (Telugu first, then Hindi, Tamil, Kannada, Marathi, Bengali, Odia, Gujarati, Punjabi, Malayalam and English) and taps one of 12 crop tiles.
+1. The farmer picks a language (Telugu first, then Hindi, Tamil, Kannada, Marathi, Bengali, Odia, Gujarati, Punjabi, Malayalam and English) and taps one of 13 crop tiles.
 2. They photograph the leaf, or tap or speak the symptoms they see ("describe instead"). A "Try a sample photo" sheet holds six labelled photos that are not in the test set.
 3. Pairu takes a first look and, when it is not sure enough, a targeted second look at the same photo. When two diseases still look alike it asks one to three yes/no questions. When it is still unsure, or the photo is blurry or shows another crop, it says so and offers the Kisan Call Centre (1800-180-1551) or the nearest of 24 Andhra Pradesh KVKs.
 4. The advice card shows the local disease name, the symptoms, a "should I spray yet?" threshold (19 pests and diseases), organic and biological options first, then the top three chemicals ranked by the government IPM package for that problem, with a checked dose per acre, water, the waiting period before harvest, the CIB&RC page, and "avoid" warnings (for example no synthetic pyrethroids for brown plant hopper). When nothing is approved for that crop and problem, it says so plainly. Then prevention, this week's tasks, a spray-weather check by location or district, listen, share and the nearest KVK.
@@ -41,13 +41,13 @@ Every fact in `data/` traces to a public source; details, parsing rules and coun
 
 | File | Source | Counts |
 |---|---|---|
-| `registered_uses.json` | CIB&RC "Major Uses of Pesticides" lists as on 30.09.2026 | 4,454 records parsed, 2,804 for our 12 crops |
+| `registered_uses.json` | CIB&RC "Major Uses of Pesticides" lists as on 30.09.2026 | 4,454 records parsed, 2,806 for our 13 crops |
 | `banned.json` | CIB&RC banned, refused and restricted list (31.10.2026), plus draft order S.O. 5295(E) of 2021 on streptomycin + tetracycline | 96 entries |
 | `hazard.json` | WHO Recommended Classification of Pesticides by Hazard, 2019 | 160 actives classed |
-| `kb.json`, `kb_te.json` | TNAU Agritech Portal, NIPHM and DPPQS AESA based IPM packages, DPPQS advisories, ICAR-IIHR, Vikaspedia, Crop Protection Network | 12 crops, 71 diseases and pests plus 12 healthy entries, a Telugu name for each, thresholds for 19, IPM-recommended actives for 47 |
+| `kb.json`, `kb_te.json` | TNAU Agritech Portal, NIPHM and DPPQS AESA based IPM packages, DPPQS advisories, ICAR-IIHR, Vikaspedia, Crop Protection Network | 13 crops, 77 diseases and pests plus 13 healthy entries, a Telugu name for each, thresholds for 19, IPM-recommended actives for 47 |
 | `kvk_ap.json` | ANGRAU, Dr. YSR Horticultural University and ICAR KVK lists | 24 KVKs for the 26 AP districts |
 
-Crops: paddy, cotton, chilli, groundnut, maize, tomato, brinjal, banana, mango, black gram, potato and onion. The CIB&RC lists are, in their own words, "for guidance and not for legal purposes", so the app always tells farmers to follow the product label.
+Crops: paddy, cotton, chilli, groundnut, maize, tomato, brinjal, banana, mango, black gram, potato, onion and cashew (added last, from the AESA cashew package and TNAU). The CIB&RC lists are, in their own words, "for guidance and not for legal purposes", so the app always tells farmers to follow the product label.
 
 ## Evaluation
 
@@ -61,7 +61,17 @@ A frozen, reproducible test of 95 labelled leaf photos: 77 PlantVillage lab phot
 | Held-out half: said not sure | 4 | 0 |
 | Out of list (n=15): said not sure | 3 | 0 |
 
-Healthy leaves are left out of the headline because the bare model's prompt asks which disease the leaf has, which pushes it to name one on a healthy leaf; the 65 diseased photos include the half used to choose the 0.9 threshold, so the held-out half is shown too. A second test with PlantDoc field photos and a PlantVillage-trained CNN baseline is running, and its results will be added to `eval/results.json`.
+Healthy leaves are left out of the headline because the bare model's prompt asks which disease the leaf has, which pushes it to name one on a healthy leaf; the 65 diseased photos include the half used to choose the 0.9 threshold, so the held-out half is shown too. ### Lab vs field, with a PlantVillage CNN baseline
+
+Baseline: `neghani/plantvillage-mobilenetv2` v1.0 (Apache-2.0), run locally and limited to the true crop. Field set: 44 PlantDoc photos (Singh et al. 2020, CC BY 4.0), 4 per class Pairu holds for tomato, potato and maize, frozen before any run.
+
+| Photos | Pairu v2 right | PlantVillage CNN right |
+|---|---|---|
+| Lab, PlantVillage (n=65) | 46 (70.8%) | 64 (98.5%), but 52 of the 65 were in its training split |
+| **Field, PlantDoc (n=44)** | **31 (70.5%), wrong 8 (18.2%), refused 5** | **17 (38.6%), wrong 23 (52.3%)** |
+| Field, rice (n=15) | 12 (80.0%) | no rice classes |
+
+A model trained on lab photos scores 98% on lab photos and 39% on field photos; Pairu holds about 70% on both. Caveats: small n; PlantDoc labels are known to be noisy; farmer answers were scripted from the true label on 7 of the 44; the bare model was not run on PlantDoc. Details in [eval/README.md](eval/README.md).
 
 The first look alone at 0.9 or more was right on all 23 photos that reached it. Limits we state plainly: most photos are lab photos (one leaf, plain background) and may have been seen by the model in training; there are about five photos per class, so margins are wide; the farmer's answers were scripted from the true label, which is the best case; the second look was wrong on 12 of the 37 answers it confirmed, so those are shown as a best guess; and diseases outside the list are refused only 3 times in 15.
 

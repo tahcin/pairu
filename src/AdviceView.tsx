@@ -309,6 +309,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             </div>
           )}
           {a.kind === "viral" && (a.bio_products.length > 0 || a.chemicals.length > 0) && <p className="notice">{L("virusNote")}</p>}
+          {a.resistance_note && (
+            <p className="notice resistance-note" role="note">
+              {pending ? <Bar w={85} /> : a.resistance_note.text}
+            </p>
+          )}
           {a.safety_note && (
             <p className="flag danger safety-note" role="note">
               <Warn size={18} />

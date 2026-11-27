@@ -42,6 +42,7 @@ export interface Disease {
   etl?: { text: string; source?: number | Source | null } | null;
   first_action?: { text: string; kind?: string; source?: number | Source | null; texts?: Record<string, string> } | null;
   avoid_mixtures?: boolean;
+  resistance_note?: { text: string; source?: number | Source | null } | null;
   safety_note?: { text: string; sources?: (number | Source)[] } | null;
   recommended_actives?: { active: string; source?: number | Source | null }[];
 }

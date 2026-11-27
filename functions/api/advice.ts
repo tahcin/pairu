@@ -35,6 +35,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     prevention: list("prevention", card.prevention.length),
     practices: list("practices", card.practices.length),
     avoid: list("avoid", card.avoid.length),
+    resistance_note: typeof rv?.resistance_note === "string" ? rv.resistance_note : rv?.resistance_note && typeof rv.resistance_note === "object" && typeof rv.resistance_note.text === "string" ? rv.resistance_note.text : null,
     safety_note: typeof rv?.safety_note === "string" ? rv.safety_note : rv?.safety_note && typeof rv.safety_note === "object" && typeof rv.safety_note.text === "string" ? rv.safety_note.text : null,
     first_action: typeof rv?.first_action === "string" ? rv.first_action : rv?.first_action && typeof rv.first_action === "object" && typeof rv.first_action.text === "string" ? rv.first_action.text : null,
     etl: typeof rv?.etl === "string" ? rv.etl : rv?.etl && typeof rv.etl === "object" && typeof rv.etl.text === "string" ? rv.etl.text : null,
@@ -53,6 +54,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     card.etl ? need(card.etl.text, reviewed.etl) : "",
     card.first_action ? need(card.first_action.text, reviewed.first_action) : "",
     card.safety_note ? need(card.safety_note.text, reviewed.safety_note) : "",
+    card.resistance_note ? need(card.resistance_note.text, reviewed.resistance_note) : "",
   ];
   let tr: string[];
   try {
@@ -82,6 +84,8 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   if (card.first_action) out.first_action = { ...card.first_action, text: faText || card.first_action.text };
   const snText = pick(reviewed.safety_note);
   if (card.safety_note) out.safety_note = { ...card.safety_note, text: snText || card.safety_note.text };
+  const rnText = pick(reviewed.resistance_note);
+  if (card.resistance_note) out.resistance_note = { ...card.resistance_note, text: rnText || card.resistance_note.text };
   await kvPutJSON(env.PAIRU_CACHE, key, out, 30);
   return json({ ...out, translated: true, cached: false });
 };

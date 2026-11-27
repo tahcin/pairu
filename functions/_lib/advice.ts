@@ -57,6 +57,7 @@ export interface AdviceCard {
   do_first: DoFirst;
   first_action: { text: string; kind: string } | null;
   safety_note: { text: string; sources: { title: string; url: string }[] } | null;
+  resistance_note: { text: string; source: { title: string; url: string } | null } | null;
   avoid_mixtures: boolean;
   etl: { text: string; source: { title: string; url: string } | null } | null;
   banned_removed: number;
@@ -288,7 +289,9 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     const classes = actives.map((a) => hazard.get(norm(a))).filter(Boolean) as string[];
     const order = ["Ia", "Ib", "II", "III", "U"];
     const worst = classes.sort((a, b) => order.indexOf(a) - order.indexOf(b))[0] || null;
-    const water = /^[\d.\s\-to–]+$/i.test(u.water_l_ha || "") ? perAcre(`${u.water_l_ha} l`) : null;
+    // Water printed as "625/ha" or "500 l/ha" is still a plain spray volume.
+    const waterClean = (u.water_l_ha || "").replace(/\s*(l|lit|litre|litres|liter|liters)?\s*\/\s*ha\.?\s*$/i, "").trim();
+    const water = /^[\d.\s\-to–]+$/i.test(waterClean) ? perAcre(`${waterClean} l`) : null;
     const waterOk = Boolean(water);
     const dose = resolveDose(u);
     const t: Treatment = {
@@ -391,6 +394,12 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
     do_first: chooseFirst(d, bio, chem),
     first_action: d.first_action?.text ? { text: d.first_action.text, kind: d.first_action.kind || "practice" } : null,
     avoid_mixtures: Boolean(d.avoid_mixtures),
+    resistance_note: d.resistance_note?.text
+      ? {
+          text: d.resistance_note.text,
+          source: typeof d.resistance_note.source === "number" ? d.sources[d.resistance_note.source] || null : null,
+        }
+      : null,
     safety_note: d.safety_note?.text
       ? {
           text: d.safety_note.text,

@@ -2002,3 +2002,11 @@ h3 {
   margin-top: var(--s3);
   min-height: 56px;
 }
+
+/* Describe: room under the last sign so the pinned check button never covers it. */
+.describe .sym-list {
+  padding-bottom: 88px;
+}
+.describe {
+  scroll-padding-bottom: 96px;
+}

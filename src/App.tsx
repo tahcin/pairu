@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, type Advice, type CropInfo, type Diagnosis, type Question } from "./lib/api";
 import { compressImage } from "./lib/image";
-import { Recorder } from "./lib/audio";
+import { useVoice } from "./lib/useVoice";
 import { LANGUAGES, langName, t, type Key, type Lang } from "./i18n";
 import { CropIcon } from "./components/CropIcon";
 import { KvkHandoff } from "./components/Kvk";
@@ -485,8 +485,6 @@ function PhotoStep(props: {
   const cameraRef = useRef<HTMLInputElement>(null);
   const galleryRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
-  const recorder = useMemo(() => new Recorder(), []);
-  const [mic, setMic] = useState<"idle" | "rec" | "stt" | "denied" | "error">("idle");
   const [samples, setSamples] = useState(false);
   const online = useOnline();
 
@@ -512,31 +510,10 @@ function PhotoStep(props: {
     }
   };
 
-  const startRec = async () => {
-    if (mic === "rec" || mic === "stt") return;
-    try {
-      await recorder.start();
-      setMic("rec");
-    } catch {
-      setMic("denied");
-    }
-  };
-  const stopRec = async () => {
-    if (mic !== "rec") return;
-    const blob = await recorder.stop();
-    if (!blob) {
-      setMic("idle");
-      return;
-    }
-    setMic("stt");
-    try {
-      const r = await api.stt(blob, lang);
-      if (r.text) setNote(note ? `${note} ${r.text}` : r.text);
-      setMic("idle");
-    } catch {
-      setMic("error");
-    }
-  };
+  const voice = useVoice(lang, (text) => setNote(note ? `${note} ${text}` : text));
+  const mic = voice.state;
+  const startRec = voice.start;
+  const stopRec = voice.stop;
 
   return (
     <section className="photo">
@@ -579,7 +556,7 @@ function PhotoStep(props: {
             {L("retake")}
           </button>
 
-          <div className="speak">
+          {voice.supported && <div className="speak">
             <p className="muted">{L("speakOptional")}</p>
             <button
               className={`mic ${mic === "rec" ? "rec" : ""}`}
@@ -597,7 +574,7 @@ function PhotoStep(props: {
               <span>{mic === "rec" ? L("listening") : mic === "stt" ? L("transcribing") : L("holdToSpeak")}</span>
             </button>
             {mic === "denied" && <p className="notice">{L("micDenied")}</p>}
-            {mic === "error" && <p className="notice">{L("error")}</p>}
+            {mic === "error" && <p className="notice">{L("micUnsupported")}</p>}
             {note && (
               <div className="said">
                 <span className="muted small">{L("youSaid")}</span>
@@ -607,7 +584,7 @@ function PhotoStep(props: {
                 </button>
               </div>
             )}
-          </div>
+          </div>}
 
           {props.error && <ErrorBox text={props.error === "offline" ? L("offline") : props.error === "rate_limited" ? L("rateLimited") : L("error")} />}
           <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt" || !online}>
@@ -626,9 +603,9 @@ interface Sample {
 }
 // Real labelled photos that are not in the evaluation test set. Sources and licences are on /about.
 export const SAMPLES: Sample[] = [
-  { file: "tomato_early_blight.jpg", crop: "tomato", key: "s_tomato_early_blight" },
+  { file: "tomato_late_blight.jpg", crop: "tomato", key: "s_tomato_late_blight" },
   { file: "tomato_septoria.jpg", crop: "tomato", key: "s_tomato_septoria" },
-  { file: "tomato_healthy.jpg", crop: "tomato", key: "s_tomato_healthy" },
+  { file: "tomato_leaf_curl.jpg", crop: "tomato", key: "s_tomato_leaf_curl" },
   { file: "potato_early_blight.jpg", crop: "potato", key: "s_potato_early_blight" },
   { file: "rice_brownspot.jpg", crop: "paddy", key: "s_rice_brownspot" },
   // The blurry field photo goes last: it shows the honest "not sure" path.

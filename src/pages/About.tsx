@@ -69,7 +69,7 @@ export function About() {
           <li>Pairu only knows the 66 problems in its list. Anything else should come back as "not sure", and the vision model can still be wrong.</li>
           <li>Lab photos of single leaves are easier than photos taken in a field; the evidence page reports both where we have them.</li>
           <li>Some doses in the government lists are printed without a unit. Pairu then converts only the number and tells the farmer to check grams or millilitres on the label.</li>
-          <li>Disease text is machine translated with Sarvam except where the KB holds a local name (24 Telugu disease names come from Vikaspedia).</li>
+          <li>Telugu disease text was drafted by machine translation and then checked by an AI model (Claude) against a farming glossary; it has not yet been reviewed by an agronomist. The other languages are machine translated (Gemini) and not yet reviewed by a person.</li>
           <li>Pests are judged from the damage a leaf photo shows, which is weaker than seeing the insect.</li>
           <li>The CIB&amp;RC lists say they are for guidance and not for legal purposes, so Pairu always tells the farmer to follow the product label.</li>
         </ul>
@@ -101,8 +101,7 @@ export function About() {
         <h2>Sample photos</h2>
         <p>
           The "Try a sample photo" link on the photo screen opens six real labelled photos that are not part of the evaluation test set: four
-          single-leaf lab photos from PlantVillage (Mohanty et al. 2016, CC BY-SA 3.0, github.com/spMohanty/PlantVillage-Dataset: tomato early
-          blight, tomato Septoria leaf spot, healthy tomato, potato early blight) and two rice field photos from Rice Leaf Disease Image Samples
+          single-leaf lab photos from PlantVillage (Mohanty et al. 2016, CC BY-SA 3.0, github.com/spMohanty/PlantVillage-Dataset: tomato late blight, tomato Septoria leaf spot, tomato yellow leaf curl virus, potato early blight) and two rice field photos from Rice Leaf Disease Image Samples
           (Sethy et al. 2020, Mendeley Data, doi 10.17632/fwcj7stb8r, CC BY 4.0: blast, brown spot). The images are unchanged.
         </p>
 

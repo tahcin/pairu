@@ -15,6 +15,12 @@ if (existsSync("data/kb_te.json")) {
   copyFileSync("data/kb_te.json", "public/data/kb_te.json");
   console.log("kb_te.json <- data/kb_te.json");
 }
+for (const l of ["hi", "ta", "kn", "mr", "bn", "or", "gu", "pa", "ml"]) {
+  if (existsSync(`data/kb_${l}.json`)) {
+    copyFileSync(`data/kb_${l}.json`, `public/data/kb_${l}.json`);
+    console.log(`kb_${l}.json <- data/kb_${l}.json`);
+  }
+}
 if (existsSync("data/kvk_ap.json")) {
   copyFileSync("data/kvk_ap.json", "public/data/kvk_ap.json");
   console.log("kvk_ap.json <- data/kvk_ap.json");

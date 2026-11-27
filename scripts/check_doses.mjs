@@ -1,50 +1,97 @@
-// Runs the app's dose logic (functions/_lib/dose.ts) over every CIB&RC row for our crops and
-// reports how each dose would be shown. Run: node scripts/check_doses.mjs [--all]
-// Also checks that no row shown with a per-acre figure is more than 2x away from the dose the
-// active-ingredient column implies.
-import { readFileSync } from "node:fs";
-import { resolveDose, aiDose, percents, parseRate } from "../functions/_lib/dose.ts";
+// Runs the app's dose logic over every CIB&RC row for our crops and over every advice card, and
+// reports how each dose would be shown plus the safety invariants that must hold.
+// Run: node scripts/check_doses.mjs [--all]
+import { readFileSync, mkdtempSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
-const rows = JSON.parse(readFileSync("data/registered_uses.json", "utf8")).filter((r) => r.crop_id);
+// Bundle the app's own TypeScript (dose.ts and advice.ts) so this check runs the exact same code.
+const dir = mkdtempSync(join(tmpdir(), "pairu-doses-"));
+const out = join(dir, "advice.mjs");
+execFileSync("npx", ["esbuild", "functions/_lib/advice.ts", "--bundle", "--format=esm", "--platform=node", `--outfile=${out}`, "--log-level=error"]);
+const { treatmentsFor } = await import(out);
+const { resolveDose, aiDose, percents, formKind, isGranule } = await import(out.replace("advice.mjs", "advice.mjs")).then(async (m) => {
+  const d = join(dir, "dose.mjs");
+  execFileSync("npx", ["esbuild", "functions/_lib/dose.ts", "--bundle", "--format=esm", "--platform=node", `--outfile=${d}`, "--log-level=error"]);
+  return import(d);
+});
+
+const load = (f) => JSON.parse(readFileSync(f, "utf8"));
+const uses = load("data/registered_uses.json");
+const rows = uses.filter((r) => r.crop_id);
 const counts = {};
-const bad = [];
-const out = rows.map((r) => {
+const kinds = {};
+const violations = { per_acre_on_seed_soil: [], liquid_in_g_or_solid_in_ml: [], over_2x_from_ai: [], bio_bare_number_without_note: [], granule_per_litre: [] };
+const isBare = (s) => /^\s*\d+(?:\.\d+)?(?:\s*(?:-|to|–)\s*\d+(?:\.\d+)?)?\s*$/.test(s || "");
+
+const res = rows.map((r) => {
   const d = resolveDose(r);
   counts[d.status] = (counts[d.status] || 0) + 1;
-  if (d.per_ha) {
+  if (d.treatment) kinds[d.treatment] = (kinds[d.treatment] || 0) + 1;
+  if (d.status === "seed_soil" && (d.per_acre || d.per_ha || d.per_litre)) violations.per_acre_on_seed_soil.push(r);
+  const kind = formKind(r.product_label);
+  for (const v of [d.per_acre, d.per_ha, d.per_litre]) {
+    if (!v || !kind) continue;
+    const liquidUnit = v.unit === "ml" || v.unit === "l";
+    if ((kind === "liquid") !== liquidUnit) violations.liquid_in_g_or_solid_in_ml.push({ r, v });
+  }
+  if (d.per_litre && isGranule(r.product_label)) violations.granule_per_litre.push(r);
+  if (d.base_lo) {
     const ai = aiDose(r.dose_ai_g_ha);
     const p = percents(r.product_label);
-    const shown = d.base_lo;
     if (ai && p.length) {
       const options = [ai.first / (p[0] / 100), ai.sum / (p.reduce((a, b) => a + b, 0) / 100)].flatMap((e) => [e, e * 1000]);
-      const best = Math.min(...options.map((e) => Math.max(shown / e, e / shown)));
-      if (best > 2) bad.push({ r, d, best });
+      const best = Math.min(...options.map((e) => Math.max(d.base_lo / e, e / d.base_lo)));
+      if (best > 2) violations.over_2x_from_ai.push({ r, d, best });
     }
   }
+  // The app adds a "unit not printed, read the label" note to bio rows shown as a bare number.
+  if (d.status === "bio_as_printed" && isBare(r.dose_formulation_raw)) kinds.bio_bare_with_note = (kinds.bio_bare_with_note || 0) + 1;
   return { r, d };
 });
 
-console.log(`rows for our crops: ${rows.length}`);
-console.log(`inferred unit (checked against a.i.): ${counts.inferred || 0}`);
-console.log(`printed unit (agrees with a.i., or no a.i. to check): ${counts.printed || 0}`);
-console.log(`unreconciled (shown as printed, "check the label"): ${counts.unreconciled || 0}`);
-console.log(`per litre of spray water: ${counts.per_litre || 0}`);
-console.log(`per kg of seed (seed treatment, shown as printed): ${counts.per_kg_seed || 0}`);
-console.log(`biological products (shown as printed with instructions, no computed numbers): ${counts.bio_as_printed || 0}`);
-console.log(`other text, not a plain rate (shown as printed): ${counts.not_a_rate || 0}`);
-console.log(`shown more than 2x away from the a.i. calculation: ${bad.length}`);
-for (const b of bad.slice(0, 10)) console.log("  BAD", b.r.product_label, "|", b.r.dose_ai_g_ha, "|", b.r.dose_formulation_raw, "->", JSON.stringify(b.d.per_ha));
+// Card level: products merged because the same product had disagreeing doses on one card.
+const kb = load("data/kb.json");
+const banned = load("data/banned.json");
+const hazard = load("data/hazard.json");
+const data = { kb, uses, banned, hazard, diseaseById: new Map(kb.diseases.map((d) => [d.id, d])) };
+let merged = 0;
+let topThreeNotChecked = [];
+for (const dz of kb.diseases) {
+  const { bio, chem } = treatmentsFor(dz, data);
+  for (const t of [...bio, ...chem]) if (t.dose_conflict) merged++;
+  chem.slice(0, 3).forEach((t) => {
+    if (!["inferred", "printed", "per_litre", "seed_soil"].includes(t.dose_status)) topThreeNotChecked.push(`${dz.id}: ${t.product} (${t.dose_conflict ? "dose differs by use" : t.dose_status})`);
+  });
+}
 
-// 20 examples, seeded so reruns match.
+const n = (k) => counts[k] || 0;
+console.log(`rows for our crops: ${rows.length}`);
+console.log(`  per acre, unit inferred and checked against the a.i. dose: ${n("inferred")}`);
+console.log(`  per acre, printed unit agrees with the a.i. dose (or nothing to check): ${n("printed")}`);
+console.log(`  per litre of spray water: ${n("per_litre")}`);
+console.log(`  seed / tuber / soil / nursery treatment, as printed: ${n("seed_soil")} (${Object.entries(kinds).filter(([k]) => k !== "bio_bare_with_note").map(([k, v]) => `${k} ${v}`).join(", ")})`);
+console.log(`  spray under 100 L water per ha (not drone), as printed: ${n("low_water")}`);
+console.log(`  biological, as printed with its unit or with a read-the-label note: ${n("bio_as_printed")} (bare number with note: ${kinds.bio_bare_with_note || 0})`);
+console.log(`  other text, as printed: ${n("not_a_rate")}`);
+console.log(`  unreconciled, as printed with a read-the-label note: ${n("unreconciled")}`);
+console.log(`products merged on a card because their doses differ by use: ${merged}`);
+console.log("invariants (all must be 0):");
+for (const [k, v] of Object.entries(violations)) console.log(`  ${k}: ${v.length}`);
+for (const v of violations.liquid_in_g_or_solid_in_ml.slice(0, 5)) console.log("    ", v.r.product_label, JSON.stringify(v.v));
+for (const v of violations.over_2x_from_ai.slice(0, 5)) console.log("    ", v.r.product_label, v.r.dose_formulation_raw, v.best.toFixed(1));
+console.log(`top-three chemicals not on a checked path: ${topThreeNotChecked.length}`);
+for (const x of topThreeNotChecked.slice(0, 40)) console.log("   ", x);
+
 let seed = 20261127;
-const rand = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
+const rand = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 const picks = new Set();
-while (picks.size < 20) picks.add(Math.floor(rand() * out.length));
+while (picks.size < 20) picks.add(Math.floor(rand() * res.length));
 console.log("\n20 examples (label | a.i. | printed formulation -> status: per ha / per acre):");
 for (const i of picks) {
-  const { r, d } = out[i];
+  const { r, d } = res[i];
   const ha = d.per_ha ? `${d.per_ha.value} ${d.per_ha.unit}` : "-";
   const ac = d.per_acre ? `${d.per_acre.value} ${d.per_acre.unit}` : d.per_litre ? `${d.per_litre.value} ${d.per_litre.unit} per litre` : "-";
-  console.log(`  ${r.product_label.slice(0, 50)} | ${r.dose_ai_g_ha} | ${r.dose_formulation_raw} -> ${d.status}: ${ha} / ${ac}`);
+  console.log(`  ${r.product_label.slice(0, 50)} | ${r.dose_ai_g_ha} | ${r.dose_formulation_raw} -> ${d.status}${d.treatment ? ` (${d.treatment})` : ""}: ${ha} / ${ac}`);
 }
-if (process.argv.includes("--all")) for (const { r, d } of out) if (d.status === "unreconciled") console.log("U", r.product_label, "|", r.dose_ai_g_ha, "|", r.dose_formulation_raw, "|", d.reason);

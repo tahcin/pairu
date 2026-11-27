@@ -1,7 +1,7 @@
 // "Describe instead" (pick or speak symptoms) and "My checks" (history kept on this phone).
 import { useEffect, useMemo, useState } from "react";
 import { api } from "./lib/api";
-import { Recorder } from "./lib/audio";
+import { useVoice } from "./lib/useVoice";
 import { t, type Key, type Lang } from "./i18n";
 import { CropIcon } from "./components/CropIcon";
 import { Check, Mic } from "./components/Icons";
@@ -25,8 +25,6 @@ export function DescribeStep({
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [failed, setFailed] = useState(false);
   const [hint, setHint] = useState(false);
-  const recorder = useMemo(() => new Recorder(), []);
-  const [mic, setMic] = useState<"idle" | "rec" | "stt" | "denied" | "error">("idle");
 
   useEffect(() => {
     setItems(null);
@@ -46,29 +44,13 @@ export function DescribeStep({
     setHint(false);
   };
 
-  const start = async () => {
-    if (mic === "rec" || mic === "stt") return;
-    try {
-      await recorder.start();
-      setMic("rec");
-    } catch {
-      setMic("denied");
-    }
-  };
-  const stop = async () => {
-    if (mic !== "rec") return;
-    const blob = await recorder.stop();
-    if (!blob) return setMic("idle");
-    setMic("stt");
-    try {
-      const said = await api.stt(blob, lang);
-      const m = said.text ? await api.matchSpoken(crop, said.text, said.lang || lang) : { keys: [] };
-      setPicked((cur) => new Set([...cur, ...m.keys]));
-      setMic("idle");
-    } catch {
-      setMic("error");
-    }
-  };
+  const voice = useVoice(lang, async (text, spokenLang) => {
+    const m = await api.matchSpoken(crop, text, spokenLang);
+    setPicked((cur) => new Set([...cur, ...m.keys]));
+  });
+  const mic = voice.state;
+  const start = voice.start;
+  const stop = voice.stop;
 
   return (
     <section className="describe">
@@ -78,7 +60,8 @@ export function DescribeStep({
       </div>
       <h1 className="title">{L("describeTitle")}</h1>
       <p className="notice">{L("describeSub")}</p>
-      <button
+      {!voice.supported && <p className="muted small">{L("micUnsupported")}</p>}
+      {voice.supported && <button
         className={`mic ${mic === "rec" ? "rec" : ""}`}
         onPointerDown={(e) => {
           e.preventDefault();
@@ -92,9 +75,9 @@ export function DescribeStep({
       >
         <Mic />
         <span>{mic === "rec" ? L("listening") : mic === "stt" ? L("transcribing") : L("speakSigns")}</span>
-      </button>
+      </button>}
       {mic === "denied" && <p className="notice">{L("micDenied")}</p>}
-      {mic === "error" && <p className="notice">{L("error")}</p>}
+      {mic === "error" && <p className="notice">{L("micUnsupported")}</p>}
       {failed && <p className="notice">{L("error")}</p>}
       {!items && !failed && (
         <div className="sym-list">

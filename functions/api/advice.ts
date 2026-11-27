@@ -1,6 +1,6 @@
 import { buildCard, type AdviceCard } from "../_lib/advice";
 import { getData } from "../_lib/data";
-import { translateMany } from "../_lib/sarvam";
+import { staticSize, translateMany } from "../_lib/sarvam";
 import type { Env } from "../_lib/types";
 import { bad, isLang, json, kvGetJSON, kvPutJSON, sha256 } from "../_lib/util";
 
@@ -16,7 +16,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const card = buildCard(d, data, lang);
   if (lang === "en") return json({ ...card, translated: false });
 
-  const key = `adv:v2:${lang}:${data.kbTeTag}:${await sha256(JSON.stringify(card))}`;
+  const key = `adv:v3:${lang}:${data.kbTeTag}:${staticSize(lang)}:${await sha256(JSON.stringify(card))}`;
   const hit = await kvGetJSON<AdviceCard>(env.PAIRU_CACHE, key);
   if (hit) return json({ ...hit, translated: true, cached: true });
 

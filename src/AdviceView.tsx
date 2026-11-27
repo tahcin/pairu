@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, type Advice, type Treatment, type Weather } from "./lib/api";
-import { Player } from "./lib/audio";
+import { Player, speakWithBrowser, stopBrowserSpeech } from "./lib/audio";
 import { t, type Key, type Lang } from "./i18n";
 import { Check, Leaf, Share, Speaker, StopIcon, Warn } from "./components/Icons";
 import { KCC } from "./App";
@@ -29,6 +29,8 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
   const [weather, setWeather] = useState<Weather | null>(null);
   const [voice, setVoice] = useState<"idle" | "loading" | "playing">("idle");
   const player = useRef(new Player());
+  const stoppedRef = useRef(false);
+  const [voiceMsg, setVoiceMsg] = useState<string | null>(null);
   const pct = Math.round(confidence * 100);
   const pending = Boolean(a.pending);
   // A name from the KB for this language always wins over machine translation.
@@ -36,7 +38,13 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
   const title = kbName || (pending ? "" : a.name);
   const prefetched = useRef<{ text: string; audios: string[]; mime: string } | null>(null);
 
-  useEffect(() => () => player.current.stop(), []);
+  useEffect(
+    () => () => {
+      player.current.stop();
+      stopBrowserSpeech();
+    },
+    [],
+  );
   useEffect(() => {
     player.current.stop();
     setVoice("idle");
@@ -131,18 +139,32 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
 
   const listen = async () => {
     if (voice === "playing" || voice === "loading") {
+      stoppedRef.current = true;
       player.current.stop();
+      stopBrowserSpeech();
       setVoice("idle");
       return;
     }
     setVoice("loading");
+    setVoiceMsg(null);
+    stoppedRef.current = false;
+    let played = false;
     try {
       const r = prefetched.current?.text === speech ? prefetched.current : await api.tts(speech, lang);
-      setVoice("playing");
-      await player.current.play(r.audios, r.mime, () => setVoice("idle"));
+      if (r.audios?.length) {
+        setVoice("playing");
+        played = await player.current.play(r.audios, r.mime, () => setVoice("idle"));
+      }
     } catch {
-      setVoice("idle");
+      played = false;
     }
+    if (played || stoppedRef.current) return;
+    // The voice service is unavailable: use the phone's own voice, or say clearly that there is none.
+    setVoice("playing");
+    const res = await speakWithBrowser(speech, lang, () => stoppedRef.current);
+    setVoice("idle");
+    if (res === "no_voice") setVoiceMsg(L("noVoice"));
+    else if (res === "failed") setVoiceMsg(L("voiceFailed"));
   };
 
   const share = () => {
@@ -195,6 +217,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
           {L("share")}
         </button>
       </div>
+      {voiceMsg && (
+        <p className="notice" role="alert">
+          {voiceMsg}
+        </p>
+      )}
 
       {!a.healthy && a.symptoms.length > 0 && (
         <section className="card">
@@ -205,7 +232,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
                 <span className="dot">{seen.includes(i) ? <Check size={16} /> : null}</span>
                 <span>
                   {pending ? <Bar w={70 + ((i * 17) % 25)} /> : s}
-                  {seen.includes(i) && <span className="tag">{L("seenInPhoto")}</span>}
+                  {seen.includes(i) && <span className="tag">{by === "describe" ? L("youSaidSee") : L("seenInPhoto")}</span>}
                 </span>
               </li>
             ))}
@@ -367,6 +394,8 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
 
       <section className="card sources">
         <h2>{L("secSources")}</h2>
+        {lang === "te" && <p className="muted small">{L("aiReviewed")}</p>}
+        {lang !== "te" && lang !== "en" && <p className="muted small">{L("machineTranslated")}</p>}
         <ul>
           {a.sources.map((s, i) => (
             <li key={i}>
@@ -420,7 +449,7 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
         {shown.map((p, i) => (
           <li key={i} className="product">
             <div className="product-head">
-              <strong>{p.product}</strong>
+              <strong>{cleanLabel(p.product)}</strong>
               {p.highly_hazardous && <span className="badge danger">WHO {p.who_class}</span>}
             </div>
             {p.ipm_recommended && <p className="ipm">{L("ipmRecommended")}</p>}
@@ -466,9 +495,30 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
                   </dd>
                 </div>
               )}
-              {!p.dose_per_acre && !p.dose_per_litre && p.dose_raw && (
+              {p.dose_conflict && (
                 <div className="full">
-                  <dt>{p.dose_status === "per_kg_seed" ? L("seedDose") : p.dose_status === "per_litre" ? L("perLitre") : L("asPrinted")}</dt>
+                  <dt>{L("doseDiffers")}</dt>
+                  <dd>
+                    <ul className="variants">
+                      {p.dose_conflict.map((v, i) => (
+                        <li key={i}>
+                          {v.raw}
+                          {v.water ? ` · ${L("waterAsPrinted")}: ${v.water}` : ""}
+                        </li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
+              )}
+              {!p.dose_conflict && !p.dose_per_acre && !p.dose_per_litre && p.dose_raw && (
+                <div className="full">
+                  <dt>
+                    {p.dose_status === "seed_soil"
+                      ? L(TREAT_KEY[p.dose_treatment || "seed"] || "treatSeed")
+                      : p.dose_status === "per_litre"
+                        ? L("perLitre")
+                        : L("asPrinted")}
+                  </dt>
                   <dd>{p.dose_raw}</dd>
                 </div>
               )}
@@ -499,7 +549,10 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
                 </div>
               )}
             </dl>
-            {p.dose_status === "unreconciled" && <p className="restricted">{L("checkLabelDose")}</p>}
+            {(p.dose_status === "unreconciled" || p.dose_status === "low_water") && !p.dose_conflict && <p className="restricted">{L("checkLabelDose")}</p>}
+            {p.dose_status === "bio_as_printed" && /^\s*[\d.]+(\s*(-|to|–)\s*[\d.]+)?\s*$/.test(p.dose_raw) && (
+              <p className="restricted">{L("unitNotPrinted")}</p>
+            )}
             {p.note && <p className="muted small">{p.note}</p>}
             <p className="muted small">
               {L("source")}: CIB&RC{p.source.page ? `, ${L("page")} ${p.source.page}` : ""}
@@ -514,6 +567,19 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
       )}
     </>
   );
+}
+
+const TREAT_KEY: Record<string, Key> = { seed: "treatSeed", tuber: "treatTuber", soil: "treatSoil", nursery: "treatNursery" };
+
+// Product labels come from PDF text: repair obvious line-break artefacts for display only
+// (the register prints "Cartap Hydrofipronil ide 50 % + Buprofezin 10 %", which is Cartap
+// Hydrochloride 50% + Buprofezin 10%, with a word from the next line run into it).
+export function cleanLabel(s: string): string {
+  return s
+    .replace(/Hydrofipronil\s*ide/gi, "Hydrochloride")
+    .replace(/\b([A-Za-z]{3,})\s+(ide|ine|ate|ole|one|ium|ene)\b/g, (m, a: string, b: string) => (/(chlor|brom|fluor|sulph|sulf|oxy|hydr|mancozeb|azox|tebucon|difenocon|propicon)$/i.test(a) ? a + b : m))
+    .replace(/\s{2,}/g, " ")
+    .trim();
 }
 
 // Placeholder line shown while a sentence is being translated, so no English flashes up.

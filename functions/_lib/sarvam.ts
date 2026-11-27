@@ -46,12 +46,35 @@ export function chunkLines(lines: string[], limit: number): string[][] {
 // Translate many short strings with as few calls as possible: join them with newlines, translate
 // a chunk, split it back. If the line count comes back different, translate that chunk one string
 // at a time so nothing gets misaligned.
+// Static translations from data/kb_<lang>.json, registered by data.ts: English text -> translation.
+// These answer first, so no live translation is needed for any KB text in any language.
+const STATIC = new Map<string, Map<string, string>>();
+const normText = (t: string) => t.replace(/\s+/g, " ").trim();
+export function registerStatic(lang: string, pairs: [string, string][]) {
+  const m = STATIC.get(lang) || new Map<string, string>();
+  for (const [en, tr] of pairs) if (en && tr) m.set(normText(en), tr);
+  STATIC.set(lang, m);
+}
+export function staticSize(lang: string): number {
+  return STATIC.get(lang)?.size || 0;
+}
+export function staticTranslation(text: string, lang: string): string | undefined {
+  return STATIC.get(lang)?.get(normText(text));
+}
+
 export async function translateMany(env: Env, items: string[], lang: string): Promise<string[]> {
   if (lang === "en") return items;
   const out = new Array<string>(items.length);
+  const stat = STATIC.get(lang);
+  if (stat) items.forEach((text, i) => {
+    const hit = text && stat.get(normText(text));
+    if (hit) out[i] = hit;
+  });
+  if (out.filter((x) => x !== undefined).length === items.length) return out;
   const todo: { i: number; text: string }[] = [];
   await Promise.all(
     items.map(async (text, i) => {
+      if (out[i] !== undefined) return;
       const t = text.replace(/\s*\n\s*/g, " ").trim();
       if (!t) {
         out[i] = text;
@@ -72,6 +95,7 @@ export async function translateMany(env: Env, items: string[], lang: string): Pr
     k += group.length;
     jobs.push(
       (async () => {
+       try {
         let parts: string[] | null = null;
         if (group.join("\n").length <= TRANSLATE_LIMIT) {
           const joined = await translateOnce(env, group.join("\n"), lang);
@@ -86,6 +110,11 @@ export async function translateMany(env: Env, items: string[], lang: string): Pr
           out[slice[j].i] = parts[j];
           await kvPutJSON(env.PAIRU_CACHE, `tr:${lang}:${await sha256(slice[j].text)}`, parts[j], 90);
         }
+       } catch {
+        // Live translation unavailable (for example Sarvam out of credits): keep the English for
+        // these few strings rather than failing the whole card.
+        for (const t of slice) if (out[t.i] === undefined) out[t.i] = t.text;
+       }
       })(),
     );
   }

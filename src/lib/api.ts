@@ -34,7 +34,9 @@ export interface Treatment {
   bio: boolean;
   target: string;
   dose_raw: string;
-  dose_status: "inferred" | "printed" | "per_litre" | "per_kg_seed" | "bio_as_printed" | "unreconciled" | "not_a_rate";
+  dose_status: "inferred" | "printed" | "per_litre" | "per_kg_seed" | "seed_soil" | "bio_as_printed" | "low_water" | "unreconciled" | "not_a_rate";
+  dose_treatment?: string | null;
+  dose_conflict?: { raw: string; water: string; status: string }[] | null;
   dose_per_ha: { value: string; unit: string } | null;
   dose_per_acre: { value: string; unit: string } | null;
   dose_per_litre: { value: string; unit: string } | null;

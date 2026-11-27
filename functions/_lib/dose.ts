@@ -7,13 +7,28 @@
 // percentage in the product label. Only a scale that agrees within a factor of 1.5 is used. If
 // nothing agrees, the app shows the row as printed and tells the farmer to check the label.
 
-export type DoseStatus = "inferred" | "printed" | "per_litre" | "per_kg_seed" | "bio_as_printed" | "unreconciled" | "not_a_rate";
+export type DoseStatus =
+  | "inferred"
+  | "printed"
+  | "per_litre"
+  | "per_kg_seed"
+  | "seed_soil"
+  | "bio_as_printed"
+  | "low_water"
+  | "unreconciled"
+  | "not_a_rate";
+
+// For seed, tuber, soil and nursery rows: which treatment the register describes.
+export type TreatmentKind = "seed" | "tuber" | "soil" | "nursery";
 
 export interface DoseResult {
   status: DoseStatus;
   per_acre: { value: string; unit: string } | null;
   per_ha: { value: string; unit: string } | null;
   per_litre?: { value: string; unit: string } | null;
+  treatment?: TreatmentKind;
+  // Water per hectare is shown per acre only when it is a real spray volume (100 L/ha or more).
+  water_ok?: boolean;
   // Lowest per-hectare amount in g or ml, for checks.
   base_lo?: number;
   reason: string;
@@ -25,7 +40,9 @@ const TOLERANCE = 1.5;
 const MIN_PER_HA = 5;
 const MAX_PER_HA = 60000;
 
-const LIQUID = ["SC", "EC", "SL", "EW", "OD", "CS", "ME", "SE", "ZC", "FS", "DC", "SO", "UL", "LF", "L.F", "AS", "CL"];
+const LIQUID = ["SC", "EC", "SL", "EW", "OD", "CS", "ME", "SE", "ZC", "FS", "DC", "SO", "UL", "LF", "L.F", "AS", "CL", "L"];
+// Granules and dusts are broadcast: they are never mixed per litre of water.
+const GRANULE = ["GR", "CG", "G", "GB", "DP", "D"];
 const SOLID = ["WP", "WG", "WDG", "DF", "SG", "SP", "GR", "CG", "DP", "WS", "G", "DS", "GB", "TB", "WSG"];
 
 export function formKind(label: string): "liquid" | "solid" | null {
@@ -45,6 +62,11 @@ export function formKind(label: string): "liquid" | "solid" | null {
   if (/LIQUID|LIQ\b/.test(up)) return "liquid";
   if (/POWDER|GRANULE|TABLET/.test(up)) return "solid";
   return null;
+}
+
+export function isGranule(label: string): boolean {
+  const up = ` ${(label || "").toUpperCase().replace(/[()]/g, " ")} `;
+  return GRANULE.some((c) => new RegExp(`[\\s%\\d/]${c}(?=[\\s,.;)/])`).test(up)) || /GRANULE/.test(up);
 }
 
 export function percents(label: string): number[] {
@@ -114,6 +136,9 @@ export interface DoseRow {
   dose_formulation_raw: string;
   water_l_ha?: string;
   pesticide_type?: string;
+  waiting_period_raw?: string;
+  note_raw?: string;
+  target_raw?: string;
 }
 
 function within(got: number, expected: number) {
@@ -122,30 +147,54 @@ function within(got: number, expected: number) {
 }
 
 const PER_LITRE_TEXT = /(?:per|\/)\s*(?:l|lit|litre|liter|lt)\b|\bper\s+litre|\/\s*litre/i;
-const SEED_TEXT = /seed|\/\s*kg\b|per\s+kg\b/i;
+
+// Seed, tuber, sett, seedling-dip, soil and nursery treatments, detected from ANY cell of the row.
+export function treatmentKind(row: DoseRow): TreatmentKind | null {
+  const all = [row.product_label, row.dose_formulation_raw, row.dose_ai_g_ha, row.waiting_period_raw, row.water_l_ha, row.note_raw, row.target_raw]
+    .filter(Boolean)
+    .join(" | ")
+    .toLowerCase();
+  if (/\btuber|\bsett\b|\bsetts\b|seed piece|seed potato/.test(all)) return "tuber";
+  if (/nursery|seedling dip|root dip|seedling root/.test(all)) return "nursery";
+  if (/\bseed|\/\s*kg\b|per\s+kg\b/.test(all) || /\b(FS|WS|DS|ST)\b/.test(row.product_label || "")) return "seed";
+  if (/\bsoil\b|drench|furrow application|soil application/.test(all)) return "soil";
+  return null;
+}
 
 export function resolveDose(row: DoseRow): DoseResult {
   const raw = (row.dose_formulation_raw || "").trim();
-  const asPrinted = (status: DoseStatus, reason: string): DoseResult => ({ status, per_acre: null, per_ha: null, reason });
+  const asPrinted = (status: DoseStatus, reason: string, extra: Partial<DoseResult> = {}): DoseResult => ({ status, per_acre: null, per_ha: null, reason, ...extra });
+  const bio = (row.pesticide_type || "").startsWith("bio");
 
-  // Biological products: the list often mixes doses with instructions, so show them as printed.
-  if ((row.pesticide_type || "").startsWith("bio")) return asPrinted("bio_as_printed", "biological product, shown as printed");
+  // 1. Seed, tuber, soil and nursery treatments: never a field spray, never per acre.
+  const treat = treatmentKind(row);
+  if (treat) return asPrinted("seed_soil", `${treat} treatment, shown as printed`, { treatment: treat });
 
-  // Seed treatments are dosed per kg of seed, never per hectare.
-  if (SEED_TEXT.test(`${raw} ${row.dose_ai_g_ha}`) || /seed/i.test(row.product_label) || /\b(FS|WS|DS)\b/i.test(row.product_label))
-    return asPrinted("per_kg_seed", "seed treatment, dosed per kg of seed");
+  const granule = isGranule(row.product_label);
+  const kind = formKind(row.product_label) ?? (granule ? "solid" : null);
+  const water = parseRate(row.water_l_ha || "");
+  const drone = /drone/i.test(`${row.water_l_ha} ${row.note_raw}`);
+  const waterOk = Boolean(water && water.lo >= 100);
 
-  // Printed as a concentration in spray water ("1 ml/litre water", "0.1%").
-  if (PER_LITRE_TEXT.test(raw) || /%/.test(raw)) return asPrinted("per_litre", "printed per litre of water");
+  // 2. Printed as a concentration in spray water ("1 ml/litre water", "0.1%"). Not for granules.
+  if (!granule && (PER_LITRE_TEXT.test(raw) || /%/.test(raw))) return asPrinted("per_litre", "printed per litre of water");
+
+  // 3. A spray at under 100 L of water per hectare that is not a drone use is not a normal field
+  //    spray (often a soil or tuber use): show it as printed.
+  if (water && water.lo < 100 && !drone && !granule) return asPrinted("low_water", "water volume under 100 L/ha, shown as printed");
 
   const rate = parseRate(raw);
-  if (!rate) return asPrinted("not_a_rate", "not a plain rate");
-  const kind = formKind(row.product_label);
+  if (!rate) return asPrinted(bio ? "bio_as_printed" : "not_a_rate", "not a plain rate");
+  // Biological rows printed with a unit: shown with that unit, as printed.
+  if (bio && rate.unit) return asPrinted("bio_as_printed", "biological product with a printed unit");
+
   const ai = aiDose(row.dose_ai_g_ha);
   const pcts = percents(row.product_label);
   const fractions = pcts.length ? [pcts[0] / 100, pcts.reduce((a, b) => a + b, 0) / 100] : [];
   const aiValues = ai ? [ai.first, ai.sum] : [];
-  const water = parseRate(row.water_l_ha || "");
+
+  // The unit family must match the formulation: liquids in ml or l, solids in g or kg.
+  const familyOk = (u: Unit) => !kind || (kind === "liquid" ? u === "ml" || u === "l" : u === "g" || u === "kg");
 
   if (ai && fractions.length && kind) {
     const expectations: { e: number; note: string }[] = [];
@@ -161,6 +210,7 @@ export function resolveDose(row: DoseRow): DoseResult {
         per_ha: range(lo, hi, kind),
         per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind),
         base_lo: lo,
+        water_ok: waterOk,
         reason: note,
       };
     };
@@ -169,11 +219,9 @@ export function resolveDose(row: DoseRow): DoseResult {
       if (got < MIN_PER_HA || got > MAX_PER_HA) return null;
       return expectations.find((x) => within(got, x.e)) || null;
     };
-    // Per litre of spray water: the dose times the water volume should give the per-hectare amount.
     const matchLitre = (s: number) => {
-      if (!water) return null;
-      const vols = [water.lo, water.hi ?? water.lo];
-      for (const v of vols) {
+      if (!water || granule) return null;
+      for (const v of [water.lo, water.hi ?? water.lo]) {
         const got = rate.lo * s * v;
         const hit = expectations.find((x) => within(got, x.e));
         if (hit) return { ...hit, v };
@@ -181,42 +229,38 @@ export function resolveDose(row: DoseRow): DoseResult {
       return null;
     };
 
-    // 1. The printed unit, read per hectare.
-    if (rate.unit) {
+    if (rate.unit && familyOk(rate.unit)) {
       const s = SCALE[rate.unit];
       const hit = matchHa(s);
       if (hit) return perHa(s, "printed", `printed unit agrees with ${hit.note}`);
-      // 2. The printed unit, read per litre of water (e.g. "3 ml" with 1,000 l of water per ha).
       const lit = matchLitre(s);
       if (lit && rate.lo * s <= 50)
+        return { ...asPrinted("per_litre", `per litre: x ${lit.v} l water agrees with ${lit.note}`), per_litre: range(rate.lo * s, rate.hi !== null ? rate.hi * s : null, kind) };
+      if (s === 1 && rate.lo <= 10 && !granule)
         return {
-          status: "per_litre",
-          per_acre: null,
-          per_ha: null,
-          per_litre: range(rate.lo * s, rate.hi !== null ? rate.hi * s : null, kind),
-          reason: `per litre: x ${lit.v} l water agrees with ${lit.note}`,
-        };
-      // A few grams or millilitres cannot be a per-hectare dose; the list means per litre of water.
-      if (s === 1 && rate.lo <= 10)
-        return {
-          status: "per_litre",
-          per_acre: null,
-          per_ha: null,
+          ...asPrinted("per_litre", "printed in g or ml with a value too small for a hectare: read as per litre of water"),
           per_litre: range(rate.lo, rate.hi, kind),
-          reason: "printed in g or ml with a value too small for a hectare: read as per litre of water",
         };
     }
-    // 3. No usable printed unit: infer g/ml or kg/l only if it agrees with the a.i. dose.
-    for (const s of [1, 1000]) {
-      if (rate.unit && SCALE[rate.unit] === s) continue;
-      const hit = matchHa(s);
-      if (hit) return perHa(s, "inferred", `inferred unit agrees with ${hit.note}`);
+    // Infer the scale only from a number of 1 or more: values below 1 are usually concentrations.
+    if (rate.lo >= 1 && !bio) {
+      for (const s of [1, 1000]) {
+        if (rate.unit && SCALE[rate.unit] === s && familyOk(rate.unit)) continue;
+        const hit = matchHa(s);
+        if (hit) return perHa(s, "inferred", `inferred unit agrees with ${hit.note}`);
+      }
     }
-    return asPrinted("unreconciled", "printed number does not agree with the a.i. dose");
+    if (bio && rate.lo >= 1) {
+      for (const s of [1, 1000]) {
+        const hit = matchHa(s);
+        if (hit) return perHa(s, "inferred", `biological, unit inferred from ${hit.note}`);
+      }
+    }
+    return asPrinted(bio ? "bio_as_printed" : "unreconciled", "printed number does not agree with the a.i. dose");
   }
 
-  // Nothing to check against: trust only a printed unit, within the plausible range.
-  if (rate.unit) {
+  // Nothing to check against: trust only a printed unit of the right family, in the plausible range.
+  if (rate.unit && familyOk(rate.unit) && !bio) {
     const s = SCALE[rate.unit];
     const lo = rate.lo * s;
     const k = kind || (rate.unit === "ml" || rate.unit === "l" ? "liquid" : "solid");
@@ -227,9 +271,10 @@ export function resolveDose(row: DoseRow): DoseResult {
         per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, k),
         per_ha: range(lo, hi, k),
         base_lo: lo,
+        water_ok: waterOk,
         reason: "unit as printed; no a.i. dose to check against",
       };
     }
   }
-  return asPrinted("unreconciled", "no unit printed and nothing to check it against");
+  return asPrinted(bio ? "bio_as_printed" : "unreconciled", "no usable unit and nothing to check it against");
 }

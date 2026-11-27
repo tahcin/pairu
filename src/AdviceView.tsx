@@ -382,5 +382,5 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
 
 // Placeholder line shown while a sentence is being translated, so no English flashes up.
 function Bar({ w, tall }: { w: number; tall?: boolean }) {
-  return <span className={`bar ${tall ? "tall" : ""}`} style={{ width: `${w}%` }} aria-hidden="true" />;
+  return <span className={`ph ${tall ? "tall" : ""}`} style={{ width: `${w}%` }} aria-hidden="true" />;
 }

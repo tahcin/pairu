@@ -7,7 +7,7 @@ import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL, REC_FILE, FIXES_ADD_PRACTICES  # noqa: E402
+from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL, REC_FILE, FIXES_ADD_PRACTICES, FIRST, AVOID_MIXTURES, PRACTICES_ADD, SAFETY  # noqa: E402
 
 APP = os.path.dirname(HERE)
 REV = os.path.join(HERE, "kb_reviewed")
@@ -38,6 +38,7 @@ EXTRA = {
  "ppqs_thrips_parvispinus_core": ("DPPQS with ICAR and SAUs: Monitoring, diagnosis and management of South East Asian thrips, Thrips parvispinus, in chilli (June 2022)", "https://ppqs.gov.in/sites/default/files/south_east_asian_thrips_thrips_parvispinus-monitoring_and_management.pdf"),
  "ppqs_thrips_parvispinus_adhoc": ("DPPQS: Ad hoc management strategies on Thrips parvispinus", "https://ppqs.gov.in/sites/default/files/adhoc_management_strategies_on_thrips_parvispinus.pdf"),
  "cicr_2024": ("ICAR-CICR Nagpur: Strategies and advisory for cotton pest and disease management, 2024-25", "https://nsai.co.in/storage/app/media/uploaded-files/ICAR-CICR_Advisory%20Pest%20and%20Disease%20Management%202024.pdf"),
+ "frac_qoi": ("FRAC (Fungicide Resistance Action Committee): QoI fungicide guidelines, potato and tomato late blight (reviewed January 2024)", "https://www.frac.info/frac-teams/working-groups/qol-fungicides/recommendations-for-qoi"),
  "cpn_gls": ("Crop Protection Network (US land-grant universities): Gray leaf spot of corn", "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"),
 }
 
@@ -46,6 +47,8 @@ PRINCIPLES = {"cashewnut", "banana", "blackgram_greengram", "chillies_capsicum",
 TITLE_OVERRIDE = {"crop_prot_crop_insectpest_20_cereals_paddy.txt": "Pests of paddy (main page)"}
 
 def source_for(f, crop_name):
+    if f == "who":
+        return {"title": "WHO Recommended Classification of Pesticides by Hazard, 2019 edition (beta-cyfluthrin: class Ib)", "url": "https://iris.who.int/handle/10665/332193"}
     if f.startswith("aesa:"):
         k = f[5:]
         return {"title": f"NIPHM and DPPQS: AESA based IPM package, {AESA_NAME[k]}", "url": "https://ppqs.gov.in/sites/default/files/" + AESA[k]}
@@ -65,6 +68,8 @@ def te_source(key):
     title = unquote(u.split("/")[-1].split("?")[0]).replace("-", " ")
     return {"title": f"Vikaspedia Telugu: {title}", "url": u}
 
+FA_I18N = json.load(open(os.path.join(HERE, "kb_first_action_i18n.json"))) if os.path.exists(os.path.join(HERE, "kb_first_action_i18n.json")) else {}
+KB_TE = json.load(open(os.path.join(APP, "data", "kb_te.json")))["diseases"] if os.path.exists(os.path.join(APP, "data", "kb_te.json")) else {}
 REC = json.load(open(os.path.join(HERE, "kb_recommended.json"))) if os.path.exists(os.path.join(HERE, "kb_recommended.json")) else {}
 
 def clean(s):
@@ -153,6 +158,22 @@ def main():
             if i in FIXES_ADD_PRACTICES:
                 e["practices"] += [x for x in FIXES_ADD_PRACTICES[i] if x not in e["practices"]]
                 sidx(REC_FILE.get(i, d["text_files"][0]))
+            for txt, f in PRACTICES_ADD.get(i, []):
+                if txt not in e["practices"]:
+                    e["practices"].append(txt)
+                sidx(f)
+            t, kd, f = FIRST[i]
+            assert not re.search(r"\d+%\s*(EC|WP|SC|WG|SL|GR)", t)
+            e["first_action"] = {"text": t, "kind": kd, "source": sidx(f)}
+            tx = {l: v[i] for l, v in FA_I18N.items() if v.get(i)}
+            if KB_TE.get(i, {}).get("first_action"):
+                tx["te"] = KB_TE[i]["first_action"]
+            if tx:
+                e["first_action"]["texts"] = dict(sorted(tx.items()))
+            if i in AVOID_MIXTURES:
+                e["avoid_mixtures"] = True
+            if i in SAFETY:
+                e["safety_note"] = {"text": SAFETY[i][0], "sources": [sidx(x) for x in SAFETY[i][1]]}
             if i in ETL:
                 e["etl"] = {"text": ETL[i][0], "source": sidx(ETL[i][1])}
         h = HEALTHY[cid]

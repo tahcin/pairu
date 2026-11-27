@@ -1,5 +1,5 @@
 """Check data/kb.json against docs/CONTRACT.md. Prints problems; exits 1 if any."""
-import json, os, sys
+import json, os, re, sys
 
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CROP_IDS = "paddy cotton chilli groundnut maize tomato brinjal banana mango blackgram potato onion cashew".split()
@@ -43,6 +43,12 @@ def main():
         for r in d.get("recommended_actives", []):
             if not (0 <= r["source"] < n) or not r["active"]: errs.append(f"{i}: bad recommended_actives item")
         if "etl" in d and not (0 <= d["etl"]["source"] < n and d["etl"]["text"]): errs.append(f"{i}: bad etl")
+        if d["kind"] != "abiotic":
+            fa = d.get("first_action")
+            if not fa or fa.get("kind") not in ("cultural", "rogue", "bio", "chemical", "next_season") or not (0 <= fa.get("source", -1) < n):
+                errs.append(f"{i}: bad or missing first_action")
+            elif re.search(r"\b(EC|WP|SC|WG|SL|GR|WDG|SG)\b", fa["text"]):
+                errs.append(f"{i}: first_action names a product formulation")
         if not d["names"].get("te"): errs.append(f"{i}: no Telugu name")
         ns = d.get("names_source", {})
         if set(ns) - set(d["names"]) or any(v not in ("vikaspedia", "descriptive") for v in ns.values()):

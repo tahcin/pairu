@@ -15,7 +15,7 @@ DRAFT = os.path.join(RAW, "te_draft.json")
 REVDIR = os.path.join(RAW, "te_review")
 os.makedirs(REVDIR, exist_ok=True)
 FIELDS = ["symptoms", "prevention", "practices"]
-MAX_CLAUDE_CALLS = 20
+MAX_CLAUDE_CALLS = 21
 
 def env(k):
     for line in open(os.path.join(APP, ".dev.vars")):
@@ -42,6 +42,10 @@ def units(kb):
             out[f"{i}|avoid|{n}"] = a["text"]
         if d.get("etl"):
             out[f"{i}|etl|0"] = d["etl"]["text"]
+        if d.get("first_action"):
+            out[f"{i}|first_action|0"] = d["first_action"]["text"]
+        if d.get("safety_note"):
+            out[f"{i}|safety_note|0"] = d["safety_note"]["text"]
         for q in d["discriminators"]:
             qs[q["id"]] = (d["crop"], q["question"])
     for qid, (crop, q) in qs.items():
@@ -201,6 +205,43 @@ TE_OVERRIDES = {
  "paddy_bph|etl|0": "ఒక్కో కుదురుకు 5 నుండి 10 సుడిదోమలు కనిపించినప్పుడు మాత్రమే పిచికారీ చేయండి. ప్రతి సంవత్సరం సుడిదోమ వచ్చే ప్రాంతాల్లో కుదురుకు 2 దోమలు ఉన్నా పిచికారీ చేయండి.",
 }
 
+LANG_NAMES = {"hi": "Hindi (Devanagari)", "ta": "Tamil (Tamil script)", "kn": "Kannada (Kannada script)", "mr": "Marathi (Devanagari)",
+              "bn": "Bengali (Bengali script)", "or": "Odia (Odia script)", "gu": "Gujarati (Gujarati script)", "pa": "Punjabi (Gurmukhi)", "ml": "Malayalam (Malayalam script)"}
+I18N = os.path.join(HERE, "kb_first_action_i18n.json")
+
+def first_action_langs():
+    """Two Claude calls: the first_action lines in the nine other languages, strict JSON, right script."""
+    import anthropic
+    kb = load_kb()
+    items = {d["id"]: d["first_action"]["text"] for d in kb["diseases"] if d.get("first_action")}
+    out = json.load(open(I18N)) if os.path.exists(I18N) else {}
+    calls_file = os.path.join(REVDIR, "_calls.json")
+    calls = json.load(open(calls_file))
+    client = anthropic.Anthropic(api_key=env("ANTHROPIC_API_KEY"))
+    for group in (["hi", "ta", "kn", "mr", "bn"], ["or", "gu", "pa", "ml"]):
+        if all(l in out and len(out[l]) == len(items) for l in group):
+            continue
+        if len(calls) >= MAX_CLAUDE_CALLS:
+            print("call cap reached"); break
+        sysm = ("You translate short crop-protection advice for small farmers. Translate each English line into each requested language, "
+                "in plain spoken village language a farmer understands when read aloud, in the correct native script. Keep every number and unit. "
+                "Keep scientific and product names (for example Pseudomonas fluorescens, Oxalis, NSKE) in English letters. No em dashes. "
+                "Return only JSON: {\"<lang code>\": {\"<id>\": \"<translation>\", ...}, ...} with every id for every language.")
+        user = "Languages: " + ", ".join(f"{l} = {LANG_NAMES[l]}" for l in group) + "\n\nLines:\n" + json.dumps(items, ensure_ascii=False, indent=0)
+        t0 = time.time()
+        with client.beta.messages.stream(model="claude-sonnet-5-5", max_tokens=64000, system=sysm, output_config={"effort": "medium"},
+                                         betas=["server-side-fallback-2026-07-01"], fallbacks="default",
+                                         messages=[{"role": "user", "content": user}]) as stream:
+            msg = stream.get_final_message()
+        calls.append({"crop": "_first_action_" + "_".join(group), "in": msg.usage.input_tokens, "out": msg.usage.output_tokens, "stop": msg.stop_reason, "secs": round(time.time() - t0)})
+        json.dump(calls, open(calls_file, "w"), indent=1)
+        text = "".join(b.text for b in msg.content if b.type == "text")
+        res = json.loads(re.search(r"\{.*\}", text, re.S).group(0))
+        for l in group:
+            out[l] = res.get(l, {})
+            print(l, len(out[l]), "of", len(items))
+        json.dump(out, open(I18N, "w"), ensure_ascii=False, indent=1)
+
 def write():
     kb = load_kb()
     u = units(kb)
@@ -225,6 +266,10 @@ def write():
         e["avoid"] = [te(f"{i}|avoid|{n}") for n in range(len(d.get("avoid", [])))]
         if d.get("etl"):
             e["etl"] = te(f"{i}|etl|0")
+        if d.get("first_action"):
+            e["first_action"] = te(f"{i}|first_action|0")
+        if d.get("safety_note"):
+            e["safety_note"] = te(f"{i}|safety_note|0")
         out["diseases"][i] = e
     for k in u:
         if k.startswith("Q|"):
@@ -235,4 +280,4 @@ def write():
     print("kb_te.json:", len(u), "strings,", n_rev, "reviewed by Claude")
 
 if __name__ == "__main__":
-    {"draft": draft, "review": review, "leftovers": leftovers, "write": write}[sys.argv[1]]()
+    {"draft": draft, "review": review, "leftovers": leftovers, "langs": first_action_langs, "write": write}[sys.argv[1]]()

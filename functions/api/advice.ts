@@ -35,6 +35,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     prevention: list("prevention", card.prevention.length),
     practices: list("practices", card.practices.length),
     avoid: list("avoid", card.avoid.length),
+    etl: typeof rv?.etl === "string" ? rv.etl : rv?.etl && typeof rv.etl === "object" && typeof rv.etl.text === "string" ? rv.etl.text : null,
   };
 
   // Translate every remaining farmer-facing sentence in one batch; product names and doses stay as printed.
@@ -47,6 +48,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     ...card.prevention.map((x, j) => need(x, reviewed.prevention[j])),
     ...card.practices.map((x, j) => need(x, reviewed.practices[j])),
     ...card.avoid.map((x, j) => need(x.text, reviewed.avoid[j])),
+    card.etl ? need(card.etl.text, reviewed.etl) : "",
   ];
   let tr: string[];
   try {
@@ -70,6 +72,8 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     practices: card.practices.map((_, j) => pick(reviewed.practices[j])),
     avoid: card.avoid.map((x, j) => ({ ...x, text: pick(reviewed.avoid[j]) })),
   };
+  const etlText = pick(reviewed.etl);
+  if (card.etl) out.etl = { ...card.etl, text: etlText || card.etl.text };
   await kvPutJSON(env.PAIRU_CACHE, key, out, 30);
   return json({ ...out, translated: true, cached: false });
 };

@@ -39,6 +39,7 @@ export interface Disease {
   sources: Source[];
   avoid?: { text: string; source?: number | Source | null; active?: string; actives?: string[] }[];
   recommended_actives?: { active: string; source?: number | Source | null }[];
+  etl?: { text: string; source?: number | Source | null } | null;
 }
 
 export interface Crop {

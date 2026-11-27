@@ -47,6 +47,7 @@ export interface AdviceCard {
   bio_products: Treatment[];
   chemicals: Treatment[];
   avoid: { text: string; source: { title: string; url: string } | null }[];
+  etl: { text: string; source: { title: string; url: string } | null } | null;
   banned_removed: number;
   prevention: string[];
   practices: string[];
@@ -221,6 +222,12 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
       text: o.text,
       source: typeof o.source === "number" && d.sources[o.source] ? d.sources[o.source] : null,
     })),
+    etl: d.etl && d.etl.text
+      ? {
+          text: d.etl.text,
+          source: typeof d.etl.source === "number" ? d.sources[d.etl.source] || null : d.etl.source && typeof d.etl.source === "object" ? d.etl.source : null,
+        }
+      : null,
     avoid: (d.avoid || []).map((x) => ({
       text: x.text,
       source: typeof x.source === "number" ? d.sources[x.source] || null : x.source && typeof x.source === "object" ? x.source : null,

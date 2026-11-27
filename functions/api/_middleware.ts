@@ -9,6 +9,8 @@ const LIMITS: Record<string, { max: number; windowSec: number }> = {
   "/api/tts": { max: 40, windowSec: 600 },
   "/api/stt": { max: 40, windowSec: 600 },
   "/api/advice": { max: 150, windowSec: 600 },
+  "/api/symptoms": { max: 60, windowSec: 600 },
+  "/api/describe": { max: 60, windowSec: 600 },
 };
 
 export const onRequest: PagesFunction<Env> = async (ctx) => {

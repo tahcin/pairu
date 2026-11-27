@@ -71,7 +71,7 @@ def summarise(rows: list[dict], key_final: str, key_answered: str) -> dict:
 
 def main(run_file: Path):
     ts = {it["file"]: it for it in json.loads((HERE / "testset.json").read_text())["items"]}
-    pairu, base, meta, ends = {}, {}, None, []
+    pairu, base, meta, ends, calls = {}, {}, None, [], 0
     for line in run_file.read_text().splitlines():
         r = json.loads(line)
         k = r.get("kind")
@@ -83,6 +83,17 @@ def main(run_file: Path):
             meta = r
         elif k == "end":
             ends.append(r)
+        # Gemini calls, counted from the records the same way eval/run.py counts them on resume.
+        if k == "pairu":
+            b = r["diagnose"].get("body") if isinstance(r["diagnose"].get("body"), dict) else {}
+            if r["diagnose"].get("http") == 200 and not b.get("cached"):
+                calls += 2 if b.get("model") not in (None, "gemini-3.1-flash-lite") else 1
+        elif k == "pairu_error":
+            calls += 2 if r.get("http") == 502 else 1
+        elif k in ("baseline", "baseline_error"):
+            calls += 1
+        elif k == "uncounted_calls":
+            calls += r["n"]
 
     rows, unmatched = [], []
     for f, it in ts.items():
@@ -119,6 +130,14 @@ def main(run_file: Path):
         {"system": "Pairu (closed list, follow-up questions, refuses when unsure)", **summarise(inl, "p_final", "p_answered")},
         {"system": "Bare model, open question (gemini-3.1-flash-lite)", **summarise(inl, "b_id", "b_answered")},
     ]
+    sick = [r for r in inl if not r["true_id"].endswith("_healthy")]
+    res["diseased_leaves_only"] = {
+        "note": "The open question asks which disease the leaf has, so it nudges the bare model to name one even on a healthy leaf. These rows leave out the 15 healthy leaves to show the comparison without that effect.",
+        "rows": [
+            {"system": "Pairu", **summarise(sick, "p_final", "p_answered")},
+            {"system": "Bare model", **summarise(sick, "b_id", "b_answered")},
+        ],
+    }
     for setting in ("lab", "field"):
         sub = [r for r in inl if r["setting"] == setting]
         res[f"by_photo_type_{setting}"] = [
@@ -171,7 +190,8 @@ def main(run_file: Path):
         "test_set": "eval/testset.json, frozen before any model run (seed 20261127), images from PlantVillage (CC BY-SA 3.0, lab photos) and Sethy et al. rice leaf disease samples (CC BY 4.0, field photos)",
         "pairu": "POST /api/diagnose with the true crop and no spoken note, then /api/resolve for follow-up questions; Gemini only, the Claude fallback was disabled",
         "baseline": f"{meta['baseline_model'] if meta else 'gemini-3.1-flash-lite'}, same image, prompt: \"{meta['baseline_prompt'] if meta else ''}\", no crop and no list; the free text is mapped to a disease by eval/matcher.py, matching only diseases of the true crop (lenient to the baseline)",
-        "gemini_calls": sum(e.get("gemini_calls_this_invocation", 0) for e in ends),
+        "gemini_calls": calls,
+        "note_on_models": "When gemini-3.1-flash-lite failed or took longer than 12 seconds, the app fell back to gemini-3.5-flash-lite, as it does for farmers; answered_by_model under pairu_steps shows how often. The 12 second timeout was added to the app while the run was in progress (commit 16c196c); the prompt and decision thresholds did not change.",
         "stopped_early": [e["stopped"] for e in ends if e.get("stopped")],
         "images_scored": len(rows),
         "images_in_test_set": len(ts),
@@ -182,14 +202,16 @@ def main(run_file: Path):
         "Most images are PlantVillage lab photos of one leaf on a plain background, which are much easier than photos taken in a field; the rice images are real field photos and are reported separately.",
         f"The test set is small ({len(rows)} images, about five per disease), so each percentage has a wide margin of error; per-class numbers are counts, not rates.",
         "PlantVillage is public and widely used, so the model may have seen these images in training.",
+        "The open question asks for a disease, which nudges the bare model to name one on healthy leaves; diseased_leaves_only shows the comparison without the healthy leaves.",
         "Pairu was told the true crop (the farmer picks it from tiles); the baseline was not, but it was scored only on the disease, against the true crop's diseases.",
         "Follow-up questions were answered by a script from the true label, which is the best case for the questions; a real farmer can misread a leaf.",
     ]
-    res["rows"] = [{k: v for k, v in r.items() if k != "b_crop_named"} for r in rows]
+    res["rows"] = [{k: v for k, v in r.items() if k not in ("b_crop_named", "b_text")} for r in rows]  # full answers are in the run file
     (HERE / "results.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n")
     print(res["summary"])
     print(json.dumps(res["headline"], indent=1))
-    print(json.dumps(res["pairu_steps"], indent=1))
+    print(json.dumps(res["diseased_leaves_only"], indent=1))
+    print("calls", calls)
     print(json.dumps(res["out_of_list"], indent=1))
     print("unmatched:", len(unmatched))
 

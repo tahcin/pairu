@@ -1,0 +1,8 @@
+name = "pairu"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "PAIRU_CACHE"
+id = "b9f40fccfb9a412780be7b0e75c19d2d"

@@ -1,0 +1,39 @@
+{
+  "_fixture": true,
+  "crops": [
+    {"id": "tomato", "name_en": "Tomato", "names": {"te": "టమాటా", "hi": "टमाटर"}, "diseases": ["tomato_early_blight", "tomato_septoria", "tomato_healthy"]},
+    {"id": "paddy", "name_en": "Paddy", "names": {"te": "వరి", "hi": "धान"}, "diseases": ["paddy_blast", "paddy_brown_spot", "paddy_healthy"]}
+  ],
+  "diseases": [
+    {"id": "tomato_early_blight", "crop": "tomato", "name_en": "Early blight (FIXTURE)", "names": {}, "kind": "fungal", "pathogen": "Alternaria solani",
+     "symptoms": ["FIXTURE: dark brown spots with rings like a target on older leaves", "FIXTURE: yellowing around the spots"],
+     "photo_cues": ["concentric rings", "target-like brown spots", "yellow halo", "older lower leaves"],
+     "look_alikes": ["tomato_septoria"],
+     "discriminators": [{"id": "q1", "question": "Are the spots large with rings inside them, like a target?", "yes": "tomato_early_blight", "no": "tomato_septoria"}],
+     "favourable_conditions": "FIXTURE", "prevention": ["FIXTURE: remove infected lower leaves"], "practices": ["FIXTURE: avoid wetting leaves"],
+     "organic_bio": [{"text": "FIXTURE organic option", "source": 0}],
+     "cibrc_targets": ["early blight"],
+     "sources": [{"title": "FIXTURE source", "url": "https://example.org/"}]},
+    {"id": "tomato_septoria", "crop": "tomato", "name_en": "Septoria leaf spot (FIXTURE)", "names": {}, "kind": "fungal", "pathogen": "Septoria lycopersici",
+     "symptoms": ["FIXTURE: many small round spots with grey centres and dark edges"],
+     "photo_cues": ["many small circular spots", "grey or tan centre", "dark margin", "tiny black dots in centre"],
+     "look_alikes": ["tomato_early_blight"],
+     "discriminators": [{"id": "q1", "question": "Are there many small round spots, each smaller than a grain of rice?", "yes": "tomato_septoria", "no": "tomato_early_blight"}],
+     "favourable_conditions": "FIXTURE", "prevention": ["FIXTURE"], "practices": ["FIXTURE"], "organic_bio": [], "cibrc_targets": ["leaf spot"],
+     "sources": [{"title": "FIXTURE source", "url": "https://example.org/"}]},
+    {"id": "tomato_healthy", "crop": "tomato", "name_en": "Healthy", "names": {}, "kind": "abiotic", "symptoms": [], "photo_cues": ["uniform green leaf", "no spots"], "look_alikes": [], "discriminators": [], "prevention": [], "practices": ["FIXTURE"], "organic_bio": [], "cibrc_targets": [], "sources": []},
+    {"id": "paddy_blast", "crop": "paddy", "name_en": "Blast (FIXTURE)", "names": {"te": "అగ్గి తెగులు"}, "kind": "fungal", "pathogen": "Magnaporthe oryzae",
+     "symptoms": ["FIXTURE: spindle shaped spots with grey centre and brown edge"], "photo_cues": ["spindle-shaped lesions", "grey centre", "brown margin"],
+     "look_alikes": ["paddy_brown_spot"],
+     "discriminators": [{"id": "q1", "question": "Are the spots pointed at both ends like a spindle, with a grey centre?", "yes": "paddy_blast", "no": "paddy_brown_spot"}],
+     "favourable_conditions": "FIXTURE", "prevention": ["FIXTURE"], "practices": ["FIXTURE"], "organic_bio": [], "cibrc_targets": ["blast"],
+     "sources": [{"title": "FIXTURE source", "url": "https://example.org/"}]},
+    {"id": "paddy_brown_spot", "crop": "paddy", "name_en": "Brown spot (FIXTURE)", "names": {}, "kind": "fungal", "pathogen": "Bipolaris oryzae",
+     "symptoms": ["FIXTURE: oval brown spots like sesame seeds"], "photo_cues": ["oval brown spots", "sesame-seed sized", "yellow halo"],
+     "look_alikes": ["paddy_blast"],
+     "discriminators": [{"id": "q1", "question": "Are the spots small, oval and brown, like sesame seeds?", "yes": "paddy_brown_spot", "no": "paddy_blast"}],
+     "favourable_conditions": "FIXTURE", "prevention": ["FIXTURE"], "practices": ["FIXTURE"], "organic_bio": [], "cibrc_targets": ["brown spot"],
+     "sources": [{"title": "FIXTURE source", "url": "https://example.org/"}]},
+    {"id": "paddy_healthy", "crop": "paddy", "name_en": "Healthy", "names": {}, "kind": "abiotic", "symptoms": [], "photo_cues": ["uniform green leaf"], "look_alikes": [], "discriminators": [], "prevention": [], "practices": [], "organic_bio": [], "cibrc_targets": [], "sources": []}
+  ]
+}

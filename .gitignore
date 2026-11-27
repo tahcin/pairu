@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.dev.vars
+.env
+.wrangler/
+__pycache__/
+.venv/
+scripts/raw/
+.DS_Store
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
+public/data/

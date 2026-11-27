@@ -1,4 +1,73 @@
 {
+ "live_model_order_3_5_flash_lite_first": {
+  "summary": "With the live model order (gemini-3.5-flash-lite for both looks), on 37 held-out photos of diseases Pairu holds, Pairu was right on 25 (67.6%), answered wrongly on 7 (18.9%) and said it was not sure on 5; the farmer was asked on 6.",
+  "held_out_half_in_list": [
+   {
+    "system": "Pairu v2, live order (gemini-3.5-flash-lite for both looks)",
+    "n": 37,
+    "right": 25,
+    "right_pct": 67.6,
+    "answered_and_wrong": 7,
+    "answered_and_wrong_pct": 18.9,
+    "refused": 5,
+    "refused_pct": 13.5,
+    "farmer_had_to_answer": 6
+   },
+   {
+    "system": "Pairu v2, earlier run (first look mostly gemini-3.1-flash-lite, second look gemini-3.5-flash-lite)",
+    "n": 37,
+    "right": 28,
+    "right_pct": 75.7,
+    "answered_and_wrong": 5,
+    "answered_and_wrong_pct": 13.5,
+    "refused": 4,
+    "refused_pct": 10.8,
+    "farmer_had_to_answer": 6
+   },
+   {
+    "system": "Bare model, open question (gemini-3.1-flash-lite)",
+    "n": 37,
+    "right": 19,
+    "right_pct": 51.4,
+    "answered_and_wrong": 18,
+    "answered_and_wrong_pct": 48.6,
+    "refused": 0,
+    "refused_pct": 0.0,
+    "farmer_had_to_answer": "-"
+   }
+  ],
+  "held_out_half_diseased_only": [
+   {
+    "system": "Pairu v2, live order",
+    "n": 31,
+    "right": 19,
+    "right_pct": 61.3,
+    "answered_and_wrong": 7,
+    "answered_and_wrong_pct": 22.6,
+    "refused": 5,
+    "refused_pct": 16.1,
+    "farmer_had_to_answer": 6
+   }
+  ],
+  "out_of_list": {
+   "n": 1,
+   "refused": 0,
+   "named_a_wrong_disease": 1,
+   "note": "Pairu does not hold these diseases, so refusing is the right answer."
+  },
+  "steps": {
+   "first_look_alone": 2,
+   "second_look": 35,
+   "verified": 28
+  },
+  "method": {
+   "what": "Current code and knowledge base (commit 53dffdf, 90 entries, cashew added) through the local server, with the model list cut to gemini-3.5-flash-lite only for both looks: no fallback to 3.1, Gemma or Claude. Held-out odd half of the in-list set, then out-of-list images while the budget lasted. Farmer questions answered from the true label (best case).",
+   "gemini_calls": 74,
+   "stopped": "budget: 74 calls used, the next image could need 2",
+   "run_file": "live35-20261127-204743.jsonl",
+   "comparison_note": "The earlier rows are copied from the v2 block for comparison and were not re-run; they used a different first-look model."
+  }
+ },
  "v2": {
   "summary": "On the held-out half (37 photos of diseases Pairu holds), v2 was right on 28 and wrong while answering on 5, against 27 and 9 for v1 and 19 and 18 for the bare model. On all 80: v2 58 right and 12 wrong, v1 57 and 16, bare model 38 and 42.",
   "held_out_half_in_list": [

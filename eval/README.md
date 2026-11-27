@@ -102,6 +102,19 @@ Two other AG-03 entries use CNNs trained on PlantVillage, so we added one as a b
 
 What this shows. On lab photos the CNN is close to perfect, but it had seen almost all of them in training, so that number says little. On field photos the same CNN fell to 17 right out of 44 and was wrong while answering on 23; without the crop hint it was right on only 12 of 44. Pairu v2 held about the same level on field photos as on lab photos (31 of 44 right, 8 wrong; the farmer was asked on 7) and is the only one of the two that can handle paddy. The CNN does have classes Pairu does not hold (for example tomato leaf mould and target spot) and named all 12 of those lab photos correctly. Pairu's PlantDoc numbers include the second look's yes/no questions answered by the model and, where it asked, by a script from the true label (best case). With 44 photos, each percentage has a wide margin.
 
+## Live model order (3.5 Flash Lite first)
+
+The live app now tries gemini-3.5-flash-lite first, because gemini-3.1-flash-lite has almost no free quota left today. So that the published numbers match what a farmer gets, we ran Pairu v2 again with the current code and knowledge base (commit 53dffdf) using gemini-3.5-flash-lite only, for both looks, with no fallback to 3.1, Gemma or Claude (a throwaway local copy whose `models.ts` lists only that model; `run_live35.py`). It ran on the held-out odd half of the in-list set, the half the 0.9 threshold was not chosen on. The cap was 75 Gemini calls; it used 74 and stopped there, which left room for only one of the 15 out-of-list photos (Pairu named a listed disease for it). No quota errors came up. The earlier rows below are copied from the v2 run, not re-run.
+
+| Held-out half, photos of diseases Pairu holds (n=37) | Right | Answered and wrong | Refused | Farmer had to answer |
+|---|---|---|---|---|
+| Pairu v2, live order (3.5 Flash Lite for both looks) | 25 (67.6%) | 7 (18.9%) | 5 | 6 |
+| Pairu v2, earlier run (first look mostly 3.1 Flash Lite) | 28 (75.7%) | 5 (13.5%) | 4 | 6 |
+| Bare model, open question (3.1 Flash Lite) | 19 (51.4%) | 18 (48.6%) | 0 | not asked |
+| Pairu v2, live order, diseased leaves only (n=31) | 19 (61.3%) | 7 (22.6%) | 5 | 6 |
+
+With 3.5 Flash Lite doing the first look, the first look reached 0.9 on its own for only 2 of the 37 photos, so 35 went to the second look (28 of them confirmed there). The result is a little worse than the earlier run: three fewer right answers and two more wrong ones, which on 37 photos is within the noise but points the wrong way. It is still well ahead of the bare model on wrong answers. These are the numbers that describe the app as it runs now.
+
 ## Limits
 
 - Most images are PlantVillage lab photos of a single leaf on a plain background, which are far easier than a phone photo taken in a field. The rice images are real field photos and are reported separately.

@@ -115,5 +115,8 @@
   "s_potato_early_blight": "Potato, dark brown spots",
   "s_rice_brownspot": "Paddy, small brown spots",
   "s_rice_blast": "Paddy, blurry photo (shows the not-sure path)",
-  "rateLimited": "Too many checks from this phone in a short time. Please wait a few minutes and try again."
+  "rateLimited": "Too many checks from this phone in a short time. Please wait a few minutes and try again.",
+  "checkWeather": "Check spray weather for my area",
+  "useLocation": "Use my location",
+  "pickDistrict": "Or choose your district in Andhra Pradesh"
 }

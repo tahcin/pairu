@@ -4,6 +4,9 @@ import { Player } from "./lib/audio";
 import { t, type Key, type Lang } from "./i18n";
 import { Check, Leaf, Share, Speaker, StopIcon, Warn } from "./components/Icons";
 import { KCC, KccCard } from "./App";
+import districtData from "./data/ap_districts.json";
+
+const DISTRICTS = districtData.districts;
 
 const CIBRC_URL = "https://ppqs.gov.in/divisions/cib-rc/major-uses-of-pesticides";
 const WHO_URL = "https://iris.who.int/handle/10665/332193";
@@ -39,18 +42,34 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     setVoice("idle");
   }, [lang]);
 
-  // Spray-weather check. If the farmer refuses location, skip it quietly.
-  useEffect(() => {
-    if (a.healthy || !("geolocation" in navigator)) return;
+  // Spray-weather check from the phone's location. If location is refused or unavailable, a small
+  // button lets the farmer try again or pick their district instead.
+  const [weatherState, setWeatherState] = useState<"trying" | "needs_place" | "ok">("trying");
+  const [place, setPlace] = useState<string | null>(null);
+  const [picker, setPicker] = useState(false);
+  const loadWeather = (lat: number, lon: number, label: string | null) => {
+    setPlace(label);
+    api
+      .weather(lat, lon)
+      .then((w) => {
+        setWeather(w);
+        setWeatherState("ok");
+      })
+      .catch(() => setWeatherState("needs_place"));
+  };
+  const tryLocation = () => {
+    if (!("geolocation" in navigator)) {
+      setWeatherState("needs_place");
+      return;
+    }
     navigator.geolocation.getCurrentPosition(
-      (pos) =>
-        api
-          .weather(pos.coords.latitude, pos.coords.longitude)
-          .then(setWeather)
-          .catch(() => undefined),
-      () => undefined,
+      (pos) => loadWeather(pos.coords.latitude, pos.coords.longitude, null),
+      () => setWeatherState("needs_place"),
       { maximumAge: 30 * 60 * 1000, timeout: 15000 },
     );
+  };
+  useEffect(() => {
+    if (!a.healthy) tryLocation();
   }, [a.healthy]);
 
   const sureLine = by === "answers" ? L("sureAnswers") : confidence >= 0.75 ? L("sureHigh") : L("sureLow");
@@ -217,9 +236,54 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
         </section>
       )}
 
+      {!a.healthy && weatherState === "needs_place" && (
+        <section className="card">
+          <h2>{L("secWeather")}</h2>
+          <button className="btn ghost wide" onClick={() => setPicker(true)}>
+            {L("checkWeather")}
+          </button>
+        </section>
+      )}
+      {picker && (
+        <div className="sheet-backdrop" onClick={() => setPicker(false)}>
+          <div className="sheet" role="dialog" aria-modal="true" aria-label={L("checkWeather")} onClick={(e) => e.stopPropagation()}>
+            <div className="sheet-head">
+              <h2>{L("checkWeather")}</h2>
+              <button className="chip" onClick={() => setPicker(false)}>
+                {L("close")}
+              </button>
+            </div>
+            <button
+              className="btn primary wide"
+              onClick={() => {
+                setPicker(false);
+                tryLocation();
+              }}
+            >
+              {L("useLocation")}
+            </button>
+            <p className="muted small">{L("pickDistrict")}</p>
+            <div className="district-list">
+              {DISTRICTS.map((d) => (
+                <button
+                  key={d.name}
+                  className="district"
+                  onClick={() => {
+                    setPicker(false);
+                    loadWeather(d.lat, d.lon, lang === "te" ? d.te : d.name);
+                  }}
+                >
+                  {lang === "te" ? d.te : d.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       {weather && (
         <section className={`card weather ${weather.spray_ok ? "ok" : "no"}`}>
           <h2>{L("secWeather")}</h2>
+          {place && <p className="muted small">{place}</p>}
           <p className="body">{sprayLine}</p>
           <p className="muted small">
             {L("rainNext24")}: {weather.rain_24h_mm} mm · {L("wind")}: {weather.wind_kmh} km/h

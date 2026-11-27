@@ -55,8 +55,17 @@ export function registerStatic(lang: string, pairs: [string, string][]) {
   for (const [en, tr] of pairs) if (en && tr) m.set(normText(en), tr);
   STATIC.set(lang, m);
 }
-export function staticSize(lang: string): number {
-  return STATIC.get(lang)?.size || 0;
+// Changes whenever the static translations change, so cached advice cards are rebuilt.
+export function staticSize(lang: string): string {
+  const m = STATIC.get(lang);
+  if (!m) return "0";
+  let chars = 0;
+  let h = 0;
+  for (const v of m.values()) {
+    chars += v.length;
+    for (let i = 0; i < v.length; i += 7) h = (h * 31 + v.charCodeAt(i)) >>> 0;
+  }
+  return `${m.size}.${chars}.${h.toString(36)}`;
 }
 export function staticTranslation(text: string, lang: string): string | undefined {
   return STATIC.get(lang)?.get(normText(text));

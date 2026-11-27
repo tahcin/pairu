@@ -175,5 +175,6 @@
   "qOf": "{total} में से सवाल {n}",
   "waitShort": "कटाई से पहले रुकें",
   "daysN": "{n} दिन",
-  "retakeShort": "दोबारा लें"
+  "retakeShort": "दोबारा लें",
+  "confirmQ": "क्या आपको यह दिख रहा है: {cue}?"
 }

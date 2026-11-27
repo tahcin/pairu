@@ -51,6 +51,12 @@ function registerKb(kb: KB, lang: string, doc: any) {
     list(d.avoid, t.avoid);
     if (d.etl?.text && t.etl) pairs.push([d.etl.text, str(t.etl)]);
     for (const q of d.discriminators || []) if (doc.questions?.[q.id]) pairs.push([q.question, String(doc.questions[q.id])]);
+    // Second-look confirm question ("Do you see <cue>?", built in verify.ts from photo_cues[0]):
+    // the translated template with the translated cue, so it is never sent in English.
+    const cue = d.photo_cues?.[0];
+    const trCue = Array.isArray(t.photo_cues) ? t.photo_cues[0] : null;
+    if (cue && trCue && typeof doc.confirm_template === "string")
+      pairs.push([`Do you see ${cue.trim().replace(/\.$/, "")}?`, doc.confirm_template.replace("{cue}", String(trCue))]);
   }
   registerStatic(lang, pairs);
 }

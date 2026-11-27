@@ -175,5 +175,6 @@
   "qOf": "Question {n} of {total}",
   "waitShort": "Wait before harvest",
   "daysN": "{n} days",
-  "retakeShort": "Retake"
+  "retakeShort": "Retake",
+  "confirmQ": "Do you see: {cue}?"
 }

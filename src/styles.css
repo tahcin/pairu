@@ -952,3 +952,136 @@ td {
 .avoid h3 {
   color: var(--red);
 }
+
+/* Round 4: describe instead, my checks, KVK, threshold */
+.sym-list {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+.sym {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 56px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.sym.on {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+.sym.on .dot {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.sticky-cta {
+  position: sticky;
+  bottom: 0;
+  padding: 8px 0 12px;
+  background: var(--bg);
+}
+.history-entry {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+.due-banner {
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--ochre);
+  background: var(--ochre-soft);
+  color: #5a3a0e;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: grid;
+  gap: 10px;
+}
+.check {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+.check p {
+  margin: 8px 0 0;
+}
+.check-main {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  min-height: 64px;
+  cursor: pointer;
+  padding: 0;
+}
+.check-main img,
+.thumb-icon {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  border-radius: 10px;
+  object-fit: cover;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+}
+.due {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--ochre-soft);
+}
+.due p {
+  margin: 0 0 8px;
+  font-weight: 650;
+}
+.outcome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.outcome .btn {
+  padding: 0 6px;
+  font-size: 16px;
+}
+.handoff .kvk {
+  margin-bottom: 10px;
+}
+.handoff .tel {
+  margin-top: 8px;
+}
+.handoff .kcc {
+  margin-top: 12px;
+}
+.etl {
+  margin: 4px 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--ochre-soft);
+}
+.etl h3 {
+  margin: 0 0 4px;
+  color: #6b4210;
+}
+.etl p {
+  margin: 0;
+  font-weight: 600;
+}

@@ -65,6 +65,7 @@ export interface Advice {
   favourable_conditions: string;
   organic: { text: string; source: { title: string; url: string } | null }[];
   avoid?: { text: string; source: { title: string; url: string } | null }[];
+  etl?: { text: string; source: { title: string; url: string } | null } | null;
   bio_products: Treatment[];
   chemicals: Treatment[];
   banned_removed: number;
@@ -116,5 +117,8 @@ export const api = {
     form.append("lang", lang);
     return call<{ text: string; lang: string | null }>("/api/stt", { method: "POST", body: form });
   },
+  symptoms: (crop: string, lang: Lang) => call<{ items: { key: string; text: string }[]; lang: string }>(`/api/symptoms?crop=${crop}&lang=${lang}`),
+  matchSpoken: (crop: string, text: string) => call<{ keys: string[] }>("/api/symptoms", post({ crop, text })),
+  describe: (crop: string, keys: string[], lang: Lang) => call<Diagnosis>("/api/describe", post({ crop, keys, lang })),
   weather: (lat: number, lon: number) => call<Weather>(`/api/weather?lat=${lat.toFixed(3)}&lon=${lon.toFixed(3)}`),
 };

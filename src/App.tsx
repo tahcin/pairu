@@ -4,6 +4,9 @@ import { compressImage } from "./lib/image";
 import { Recorder } from "./lib/audio";
 import { LANGUAGES, langName, t, type Key, type Lang } from "./i18n";
 import { CropIcon } from "./components/CropIcon";
+import { KvkHandoff } from "./components/Kvk";
+import { DescribeStep, HistoryEntry, HistoryScreen } from "./Extra";
+import { addCheck, makeThumb, updateCheck, type CheckEntry } from "./lib/history";
 import { Back, Camera, Gallery, Globe, Mic, Phone } from "./components/Icons";
 import { AdviceView } from "./AdviceView";
 import { About } from "./pages/About";
@@ -12,7 +15,7 @@ import { Evidence } from "./pages/Evidence";
 export const KCC = "1800-180-1551";
 const CROP_ORDER = ["paddy", "chilli", "cotton", "groundnut", "maize", "blackgram", "tomato", "brinjal", "banana", "mango", "onion", "potato"];
 
-type Step = "lang" | "crop" | "photo" | "working" | "ask" | "unsure" | "advice";
+type Step = "lang" | "crop" | "photo" | "describe" | "working" | "ask" | "unsure" | "advice" | "history";
 
 function store(key: string, value?: string): string | null {
   try {
@@ -55,7 +58,9 @@ function Farmer() {
   const [dx, setDx] = useState<Diagnosis | null>(null);
   const [qIndex, setQIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
-  const [final, setFinal] = useState<{ id: string; by: "model" | "answers"; confidence: number; seen: number[]; verified: boolean } | null>(null);
+  const [final, setFinal] = useState<{ id: string; by: "model" | "answers" | "describe"; confidence: number; seen: number[]; verified: boolean } | null>(null);
+  const [entryId, setEntryId] = useState<string | null>(null);
+  const [described, setDescribed] = useState(false);
   const [advice, setAdvice] = useState<Advice | null>(null);
   const [error, setError] = useState<string | null>(null);
   const L = (k: Key) => t(lang, k);
@@ -83,6 +88,8 @@ function Farmer() {
   };
 
   const reset = () => {
+    setDescribed(false);
+    setEntryId(null);
     setCrop(null);
     setPhoto(null);
     setNote("");
@@ -95,10 +102,52 @@ function Farmer() {
     go("crop");
   };
 
-  const decideWith = async (id: string, by: "model" | "answers", d: Diagnosis) => {
+  const decideWith = async (id: string, by: "model" | "answers" | "describe", d: Diagnosis) => {
     const cand = d.candidates.find((c) => c.id === id);
-    setFinal({ id, by, confidence: cand?.confidence ?? 0, seen: cand?.seen_symptoms || [], verified: by === "model" && Boolean(d.verified) });
+    const how = described && by !== "model" ? "describe" : by;
+    setFinal({ id, by: how, confidence: cand?.confidence ?? 0, seen: cand?.seen_symptoms || [], verified: by === "model" && Boolean(d.verified) });
+    // Keep this check on the phone for "My checks".
+    const eid = String(Date.now());
+    setEntryId(eid);
+    const thumb = photo ? await makeThumb(photo.preview) : null;
+    addCheck({ id: eid, date: new Date().toISOString(), crop: d.crop || crop || "", disease: id, by: how, confidence: cand?.confidence ?? 0, thumb });
     go("advice");
+  };
+
+  // Remember the disease names once the card loads, so "My checks" can show them in any language.
+  useEffect(() => {
+    if (!advice || !entryId || advice.pending) return;
+    updateCheck(entryId, { names: { ...(advice.names || {}), en: advice.name_en, [lang]: advice.names?.[lang] || advice.name } });
+  }, [advice, entryId, lang]);
+
+  const reopen = (e: CheckEntry) => {
+    setCrop(e.crop);
+    setPhoto(e.thumb ? { base64: "", preview: e.thumb } : null);
+    setNote("");
+    setDescribed(e.by === "describe");
+    setEntryId(e.id);
+    setFinal({ id: e.disease, by: e.by, confidence: e.confidence, seen: [], verified: false });
+    go("advice");
+  };
+
+  const runDescribe = async (keys: string[]) => {
+    if (!crop) return;
+    setError(null);
+    setDescribed(true);
+    setPhoto(null);
+    go("working");
+    try {
+      const d = await api.describe(crop, keys, lang);
+      setDx(d);
+      setAnswers({});
+      setQIndex(0);
+      if (d.status === "decided") await decideWith(d.candidates[0].id, "describe", d);
+      else if (d.status === "ask") go("ask");
+      else go("unsure");
+    } catch (e) {
+      setError(String((e as Error).message || e));
+      go("describe");
+    }
   };
 
   // Advice follows the chosen language, so switching language re-fetches it.
@@ -169,7 +218,7 @@ function Farmer() {
     <div className="app">
       <header className="bar">
         {step !== "lang" && step !== "crop" ? (
-          <button className="icon-btn" onClick={() => (step === "advice" || step === "unsure" ? reset() : go(step === "photo" ? "crop" : "photo"))} aria-label={L("back")}>
+          <button className="icon-btn" onClick={() => (step === "advice" || step === "unsure" ? reset() : go(step === "photo" || step === "history" ? "crop" : "photo"))} aria-label={L("back")}>
             <Back />
           </button>
         ) : (
@@ -236,6 +285,7 @@ function Farmer() {
                 <span>{L("dontKnowCrop")}</span>
               </button>
             </div>
+            <HistoryEntry lang={lang} onOpen={() => go("history")} />
             <footer className="foot">
               <a href="/about" onClick={(e) => (e.preventDefault(), navigate("/about"))}>
                 About Pairu (English)
@@ -256,8 +306,15 @@ function Farmer() {
             onCheck={runDiagnosis}
             error={error}
             onSample={(cropId) => setCrop(cropId)}
+            onDescribe={() => go("describe")}
           />
         )}
+
+        {step === "describe" && crop && (
+          <DescribeStep lang={lang} crop={crop} cropName={cropName(crop)} onCheck={runDescribe} error={error} />
+        )}
+
+        {step === "history" && <HistoryScreen lang={lang} cropName={cropName} onOpen={reopen} />}
 
         {step === "working" && <Working lang={lang} photo={photo?.preview || null} />}
 
@@ -296,6 +353,7 @@ function Farmer() {
             {dx && dx.image_quality === "ok" && crop && dx.crop_detected && dx.crop_detected !== crop && !dx.crop_confident && (
               <p className="notice">{L("otherCrop")}</p>
             )}
+            {described && <p className="notice">{L("photoMoreReliable")}</p>}
             <p className="body">{L("unsureBody")}</p>
             <button
               className="btn primary wide"
@@ -308,7 +366,7 @@ function Farmer() {
               <Camera />
               {L("retake")}
             </button>
-            <KccCard lang={lang} />
+            <KvkHandoff lang={lang} />
           </section>
         )}
 
@@ -420,6 +478,7 @@ function PhotoStep(props: {
   onCheck: () => void;
   error: string | null;
   onSample: (crop: string) => void;
+  onDescribe: () => void;
 }) {
   const { lang, photo, setPhoto, note, setNote } = props;
   const L = (k: Key) => t(lang, k);
@@ -502,6 +561,11 @@ function PhotoStep(props: {
             <Gallery />
             {L("fromGallery")}
           </button>
+          {props.crop && (
+            <button className="text-link" onClick={props.onDescribe}>
+              {L("describeInstead")}
+            </button>
+          )}
           <button className="text-link" onClick={() => setSamples(true)}>
             {L("trySample")}
           </button>

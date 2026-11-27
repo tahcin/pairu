@@ -1,7 +1,7 @@
 // Pairu service worker: the app opens offline and on weak networks. The app shell, sample photos
 // and the crop list are cached; advice cards already seen are kept for offline reading. Diagnosis,
 // voice and weather always need the network.
-const VERSION = "pairu-v1";
+const VERSION = "pairu-v2";
 const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
 
 self.addEventListener("install", (event) => {
@@ -56,7 +56,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(cacheFirst(req));
     return;
   }
-  if (url.pathname === "/api/crops" || url.pathname === "/api/advice" || url.pathname === "/data/kb.json") {
+  if (url.pathname === "/api/crops" || url.pathname === "/api/advice" || url.pathname === "/data/kb.json" || url.pathname === "/data/kvk_ap.json") {
     event.respondWith(networkFirst(req));
   }
 });

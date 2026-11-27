@@ -3,10 +3,9 @@ import { api, type Advice, type Treatment, type Weather } from "./lib/api";
 import { Player } from "./lib/audio";
 import { t, type Key, type Lang } from "./i18n";
 import { Check, Leaf, Share, Speaker, StopIcon, Warn } from "./components/Icons";
-import { KCC, KccCard } from "./App";
-import districtData from "./data/ap_districts.json";
-
-const DISTRICTS = districtData.districts;
+import { KCC } from "./App";
+import { DISTRICTS, nearestDistrict, saveDistrict, savedDistrict } from "./lib/place";
+import { KvkHandoff } from "./components/Kvk";
 
 const CIBRC_URL = "https://ppqs.gov.in/divisions/cib-rc/major-uses-of-pesticides";
 const WHO_URL = "https://iris.who.int/handle/10665/332193";
@@ -17,7 +16,7 @@ interface Props {
   advice: Advice;
   photo: string | null;
   cropName: string;
-  by: "model" | "answers";
+  by: "model" | "answers" | "describe";
   confidence: number;
   verified?: boolean;
   seen: number[];
@@ -64,8 +63,20 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
       return;
     }
     navigator.geolocation.getCurrentPosition(
-      (pos) => loadWeather(pos.coords.latitude, pos.coords.longitude, null),
-      () => setWeatherState("needs_place"),
+      (pos) => {
+        const near = nearestDistrict(pos.coords.latitude, pos.coords.longitude);
+        if (near) {
+          saveDistrict(near);
+          window.dispatchEvent(new Event("pairu:district"));
+        }
+        loadWeather(pos.coords.latitude, pos.coords.longitude, null);
+      },
+      () => {
+        // Use the district the farmer picked before, if any.
+        const d = DISTRICTS.find((x) => x.name === savedDistrict());
+        if (d) loadWeather(d.lat, d.lon, lang === "te" ? d.te : d.name);
+        else setWeatherState("needs_place");
+      },
       { maximumAge: 30 * 60 * 1000, timeout: 15000 },
     );
   };
@@ -74,8 +85,8 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
   }, [a.healthy]);
 
   // A second look that confirmed the answer counts as sure, whatever the first look's number was.
-  const sure = by === "answers" || verified || confidence >= 0.9;
-  const sureLine = by === "answers" ? L("sureAnswers") : sure ? L("sureHigh") : L("sureLow");
+  const sure = by !== "describe" && (by === "answers" || verified || confidence >= 0.9);
+  const sureLine = by === "describe" ? L("fromDescription") : by === "answers" ? L("sureAnswers") : sure ? L("sureHigh") : L("sureLow");
   const sprayLine = weather ? (weather.reason === "rain" ? L("sprayRain") : weather.reason === "wind" ? L("sprayWind") : L("sprayOk")) : "";
 
   const speech = useMemo(() => {
@@ -168,6 +179,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             </span>
           )}
           {usedNote && <span className="muted small">{L("fromWords")}</span>}
+          {by === "describe" && <span className="muted small">{L("photoMoreReliable")}</span>}
         </div>
         {a.healthy && <p className="body">{L("healthyBody")}</p>}
       </section>
@@ -209,6 +221,17 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
       {!a.healthy && (
         <section className="card">
           <h2>{L("secDo")}</h2>
+          {a.etl && (
+            <div className="etl">
+              <h3>{L("sprayYet")}</h3>
+              {pending ? <Bar w={85} /> : <p>{a.etl.text}</p>}
+              {a.etl.source && (
+                <a className="src-link" href={a.etl.source.url} target="_blank" rel="noopener">
+                  {L("source")}: {a.etl.source.title}
+                </a>
+              )}
+            </div>
+          )}
           {a.organic.length > 0 && (
             <>
               <h3>
@@ -294,6 +317,8 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
                   className="district"
                   onClick={() => {
                     setPicker(false);
+                    saveDistrict(d.name);
+                    window.dispatchEvent(new Event("pairu:district"));
                     loadWeather(d.lat, d.lon, lang === "te" ? d.te : d.name);
                   }}
                 >
@@ -337,7 +362,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
         </section>
       )}
 
-      {!a.healthy && <KccCard lang={lang} />}
+      <KvkHandoff lang={lang} />
 
       <section className="card sources">
         <h2>{L("secSources")}</h2>

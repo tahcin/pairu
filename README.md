@@ -2,7 +2,7 @@
 
 Pairu helps a farmer photograph a sick leaf and hear, in their own language, what the disease is, how sure we are, and what to do about it, using only treatments that the Government of India has approved for that crop and that pest. Pairu is Telugu for a standing crop.
 
-**Live app:** https://pairu.pages.dev &nbsp;|&nbsp; **Evidence page:** https://pairu.pages.dev/evidence
+**Live app:** https://pairu.tahcin.tech &nbsp;|&nbsp; **Evidence page:** https://pairu.tahcin.tech/evidence
 
 Built for Avishkaar Season 4 (Virtual Track, AITAM Tekkali), problem statement AG-03: "Develop an intelligent multilingual recommendation system that provides reliable crop-specific disease-management guidance, including disease symptoms, treatment options, preventive measures, and recommended farming practices in farmers' native languages."
 

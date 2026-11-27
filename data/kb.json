@@ -1369,9 +1369,9 @@
     }
    ],
    "first_action": {
-    "text": "Count first: act at 10% silver shoots. Drain the field for 5 to 7 days.",
+    "text": "Count first: act at 10% silver shoots. Drain the field for 5 to 7 days, which brings the gall midge down sharply.",
     "kind": "cultural",
-    "source": 0,
+    "source": 1,
     "texts": {
      "bn": "আগে গুনে দেখুন: 10% রুপালি কুশি থাকলে ব্যবস্থা নিন। জমির জল 5 থেকে 7 দিন বের করে দিন।",
      "gu": "પહેલા ગણતરી કરો: 10% ચાંદી જેવા ડૂંખ હોય તો પગલાં લો. ખેતરનું પાણી 5 થી 7 દિવસ કાઢી નાખો.",
@@ -1382,7 +1382,7 @@
      "or": "ପ୍ରଥମେ ଗଣନା କରନ୍ତୁ: 10% ରୁପା ରଙ୍ଗର ଡଙ୍ଗା ଥିଲେ ପ୍ରତିକାର କରନ୍ତୁ। ଜମିରୁ 5 ରୁ 7 ଦିନ ପାଣି ବାହାର କରିଦିଅନ୍ତୁ।",
      "pa": "ਪਹਿਲਾਂ ਗਿਣਤੀ ਕਰੋ: 10% ਚਾਂਦੀ ਰੰਗੀਆਂ ਗੋਭਾਂ ਹੋਣ ਤਾਂ ਇਲਾਜ ਕਰੋ। ਖੇਤ ਦਾ ਪਾਣੀ 5 ਤੋਂ 7 ਦਿਨ ਕੱਢ ਦਿਓ।",
      "ta": "முதலில் எண்ணுங்கள்: 10% வெள்ளி நிற குருத்துகள் இருந்தால் நடவடிக்கை எடுங்கள். வயலில் 5 முதல் 7 நாட்கள் தண்ணீரை வடித்து விடுங்கள்.",
-     "te": "ముందు లెక్కపెట్టండి: 10% వెండి రంగు గొట్టాలు (సిల్వర్ షూట్స్) ఉంటే చర్య తీసుకోండి. పొలంలో నీరు తీసేయండి, 5 నుంచి 7 రోజులు అలాగే ఉంచండి."
+     "te": "ముందు లెక్కపెట్టండి: 10% ఉల్లికాడలు ఉంటే చర్య తీసుకోండి. పొలంలో నీటిని 5 నుండి 7 రోజులు తీసేయండి, దీనివల్ల ఉల్లికోడు బాగా తగ్గుతుంది."
     }
    },
    "etl": {
@@ -1518,6 +1518,10 @@
      "ta": "அறுவடைக்கு முன் பூஞ்சை மண்ணில் விழாதபடி, நோய்ப் பந்துகள் உள்ள செடிகளை அகற்றி அழியுங்கள். அடுத்த பருவத்தில் சீக்கிரம் நட்டு, சுத்தமான விதையைப் பயன்படுத்துங்கள்.",
      "te": "కోతకు ముందు తెగులు బంతులు ఉన్న మొక్కలను తీసి నాశనం చేయండి. అప్పుడు శిలీంధ్రం (బూజు) నేలలో పడదు. వచ్చే సీజన్‌లో ముందుగా నాటండి, శుభ్రమైన విత్తనం వాడండి."
     }
+   },
+   "etl": {
+    "text": "Fungicide sprays help only as protection, at the boot leaf stage (before the panicles come out) and again at the milky stage. Grains that already show smut balls cannot be saved by spraying.",
+    "source": 0
    }
   },
   {
@@ -4621,12 +4625,24 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
      "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    },
+    {
+     "title": "Molecules (2024): Research progress on benzimidazole fungicides, a review (carbendazim is ineffective against oomycetes)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10975326/"
     }
    ],
    "names_source": {
     "te": "descriptive"
    },
-   "avoid": [],
+   "avoid": [
+    {
+     "text": "Do not use carbendazim, or mixtures that contain it, for this disease: carbendazim does not work on water moulds (oomycetes) such as the downy mildew and late blight pathogens.",
+     "actives": [
+      "carbendazim"
+     ],
+     "source": 3
+    }
+   ],
    "recommended_actives": [
     {
      "active": "mancozeb",
@@ -5030,6 +5046,10 @@
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
     },
     {
+     "title": "Molecules (2024): Research progress on benzimidazole fungicides, a review (carbendazim is ineffective against oomycetes)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10975326/"
+    },
+    {
      "title": "FRAC (Fungicide Resistance Action Committee): QoI fungicide guidelines, potato and tomato late blight (reviewed January 2024)",
      "url": "https://www.frac.info/frac-teams/working-groups/qol-fungicides/recommendations-for-qoi"
     }
@@ -5037,7 +5057,15 @@
    "names_source": {
     "te": "descriptive"
    },
-   "avoid": [],
+   "avoid": [
+    {
+     "text": "Do not use carbendazim, or mixtures that contain it, for this disease: carbendazim does not work on water moulds (oomycetes) such as the downy mildew and late blight pathogens.",
+     "actives": [
+      "carbendazim"
+     ],
+     "source": 2
+    }
+   ],
    "recommended_actives": [
     {
      "active": "azoxystrobin",
@@ -5076,6 +5104,10 @@
      "ta": "நோய் பாதித்த இலைகளையும் பழங்களையும் உடனே அகற்றி அழியுங்கள், காற்றோட்டத்திற்காக செடிகளுக்குக் குச்சி கட்டுங்கள், இலைகளின் மேல் தண்ணீர் ஊற்றாதீர்கள்.",
      "te": "తెగులు సోకిన ఆకులను, కాయలను వెంటనే తీసి నాశనం చేయండి. గాలి తగిలేలా మొక్కలకు కర్రలు కట్టండి. ఆకులపై నీరు పోయవద్దు."
     }
+   },
+   "resistance_note": {
+    "text": "Do not use the same type of fungicide again and again. For strobilurin (QoI) fungicides such as azoxystrobin used alone, use no more than 1 spray in 3, at most 3 per crop and never more than 2 in a row; switch to a fungicide of a different group in between.",
+    "source": 3
    }
   },
   {
@@ -7848,6 +7880,10 @@
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
     },
     {
+     "title": "Molecules (2024): Research progress on benzimidazole fungicides, a review (carbendazim is ineffective against oomycetes)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10975326/"
+    },
+    {
      "title": "FRAC (Fungicide Resistance Action Committee): QoI fungicide guidelines, potato and tomato late blight (reviewed January 2024)",
      "url": "https://www.frac.info/frac-teams/working-groups/qol-fungicides/recommendations-for-qoi"
     }
@@ -7855,7 +7891,15 @@
    "names_source": {
     "te": "descriptive"
    },
-   "avoid": [],
+   "avoid": [
+    {
+     "text": "Do not use carbendazim, or mixtures that contain it, for this disease: carbendazim does not work on water moulds (oomycetes) such as the downy mildew and late blight pathogens.",
+     "actives": [
+      "carbendazim"
+     ],
+     "source": 3
+    }
+   ],
    "recommended_actives": [
     {
      "active": "mancozeb",
@@ -7882,6 +7926,10 @@
      "ta": "நோய் பாதித்த செடிகளையும் கிழங்குகளையும் உடனே அகற்றி அழியுங்கள், வயலில் தண்ணீர் தேங்காமல் பார்த்துக்கொள்ளுங்கள்.",
      "te": "తెగులు సోకిన మొక్కలను, దుంపలను వెంటనే తీసి నాశనం చేయండి. పొలంలో నీరు నిలవకుండా చూడండి."
     }
+   },
+   "resistance_note": {
+    "text": "Do not use the same type of fungicide again and again. For strobilurin (QoI) fungicides such as azoxystrobin used alone, use no more than 1 spray in 3, at most 3 per crop and never more than 2 in a row; switch to a fungicide of a different group in between.",
+    "source": 4
    }
   },
   {
@@ -9017,12 +9065,24 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    },
+    {
+     "title": "Molecules (2024): Research progress on benzimidazole fungicides, a review (carbendazim is ineffective against oomycetes)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10975326/"
     }
    ],
    "names_source": {
     "te": "descriptive"
    },
-   "avoid": [],
+   "avoid": [
+    {
+     "text": "Do not use carbendazim, or mixtures that contain it, for this disease: carbendazim does not work on water moulds (oomycetes) such as the downy mildew and late blight pathogens.",
+     "actives": [
+      "carbendazim"
+     ],
+     "source": 2
+    }
+   ],
    "recommended_actives": [
     {
      "active": "mancozeb",

@@ -46,6 +46,8 @@ def units(kb):
             out[f"{i}|first_action|0"] = d["first_action"]["text"]
         if d.get("safety_note"):
             out[f"{i}|safety_note|0"] = d["safety_note"]["text"]
+        if d.get("resistance_note"):
+            out[f"{i}|resistance_note|0"] = d["resistance_note"]["text"]
         for q in d["discriminators"]:
             qs[q["id"]] = (d["crop"], q["question"])
     for qid, (crop, q) in qs.items():
@@ -194,6 +196,14 @@ def leftovers():
 
 # Hand fixes after reading the reviewed text (key -> Telugu).
 TE_OVERRIDES = {
+ "maize_downy_mildew|avoid|0": "Carbendazim లేదా అది కలిసి ఉన్న మిశ్రమ మందులు ఈ తెగులుకు వాడకండి. డౌనీ బూజు, ఆకుమాడు లాంటి నీటి బూజు (ఊమైసీట్) తెగుళ్ల మీద carbendazim పనిచేయదు.",
+ "potato_late_blight|avoid|0": "Carbendazim లేదా అది కలిసి ఉన్న మిశ్రమ మందులు ఈ తెగులుకు వాడకండి. డౌనీ బూజు, ఆకుమాడు లాంటి నీటి బూజు (ఊమైసీట్) తెగుళ్ల మీద carbendazim పనిచేయదు.",
+ "tomato_late_blight|avoid|0": "Carbendazim లేదా అది కలిసి ఉన్న మిశ్రమ మందులు ఈ తెగులుకు వాడకండి. డౌనీ బూజు, ఆకుమాడు లాంటి నీటి బూజు (ఊమైసీట్) తెగుళ్ల మీద carbendazim పనిచేయదు.",
+ "onion_downy_mildew|avoid|0": "Carbendazim లేదా అది కలిసి ఉన్న మిశ్రమ మందులు ఈ తెగులుకు వాడకండి. డౌనీ బూజు, ఆకుమాడు లాంటి నీటి బూజు (ఊమైసీట్) తెగుళ్ల మీద carbendazim పనిచేయదు.",
+ "tomato_late_blight|resistance_note|0": "ఒకే రకం శిలీంధ్ర నాశక మందును మళ్ళీ మళ్ళీ వాడవద్దు. Azoxystrobin లాంటి strobilurin (QoI) మందులను ఒక్కటిగా వాడితే, 3 పిచికారీలలో 1 కంటే ఎక్కువ వాడవద్దు. పంటకు గరిష్ఠంగా 3 మాత్రమే వాడండి, వరుసగా 2 కంటే ఎక్కువ ఎప్పుడూ వాడవద్దు. మధ్యలో వేరే గ్రూపు మందు వాడండి.",
+ "potato_late_blight|resistance_note|0": "ఒకే రకం శిలీంధ్ర నాశక మందును మళ్ళీ మళ్ళీ వాడవద్దు. Azoxystrobin లాంటి strobilurin (QoI) మందులను ఒక్కటిగా వాడితే, 3 పిచికారీలలో 1 కంటే ఎక్కువ వాడవద్దు. పంటకు గరిష్ఠంగా 3 మాత్రమే వాడండి, వరుసగా 2 కంటే ఎక్కువ ఎప్పుడూ వాడవద్దు. మధ్యలో వేరే గ్రూపు మందు వాడండి.",
+ "paddy_false_smut|etl|0": "పొట్ట దశలో (వెన్ను బయటకు రాకముందు), మళ్ళీ పాలు పోసుకునే దశలో రక్షణగా కొట్టిన మందు మాత్రమే పనిచేస్తుంది. గింజలపై కాటుక ముద్దలు కనిపించాక పిచికారీ చేసినా ఆ గింజలు బాగుపడవు.",
+ "paddy_gall_midge|first_action|0": "ముందు లెక్కపెట్టండి: 10% ఉల్లికాడలు ఉంటే చర్య తీసుకోండి. పొలంలో నీటిని 5 నుండి 7 రోజులు తీసేయండి, దీనివల్ల ఉల్లికోడు బాగా తగ్గుతుంది.",
  "Q|paddy|q_paddy_gall_midge_paddy_stem_borer": "మధ్య మొవ్వు ఉల్లికాడలా, అంటే ఉల్లి ఆకు లాంటి తెల్లని బోలు గొట్టంగా మారిందా?",
  "paddy_gall_midge|symptoms|1": "ఉల్లికాడ: కొత్త ఆకు బదులు మొవ్వు నుండి ఉల్లి ఆకు లాంటి తెల్లని, బోలు గొట్టం బయటకు వస్తుంది.",
  "paddy_gall_midge|practices|3": "ఉల్లికాడల కోసం పొలాన్ని తరచూ గమనించండి. 10 శాతం పిలకల్లో ఉల్లికాడ కనిపిస్తే చర్య తీసుకోండి.",
@@ -270,6 +280,8 @@ def write():
             e["first_action"] = te(f"{i}|first_action|0")
         if d.get("safety_note"):
             e["safety_note"] = te(f"{i}|safety_note|0")
+        if d.get("resistance_note"):
+            e["resistance_note"] = te(f"{i}|resistance_note|0")
         out["diseases"][i] = e
     for k in u:
         if k.startswith("Q|"):

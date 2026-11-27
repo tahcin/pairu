@@ -474,3 +474,13 @@ SAFETY = {
  "cashew_tea_mosquito_bug": ("Only one product is registered for cashew in India, and it contains beta-cyfluthrin, which WHO classes as Ib (highly hazardous). If you use it, wear gloves, a face mask, a cap and full protective clothing, never spray without them, and take advice from your nearest KVK before spraying.", ["who", "aesa:cashewnut"]),
  "cashew_thrips": ("Only one product is registered for cashew in India, and it contains beta-cyfluthrin, which WHO classes as Ib (highly hazardous). If you use it, wear gloves, a face mask, a cap and full protective clothing, never spray without them, and take advice from your nearest KVK before spraying.", ["who", "aesa:cashewnut"]),
 }
+
+# Round 5 (judge2-agri-r4).
+_CARB = {"text": "Do not use carbendazim, or mixtures that contain it, for this disease: carbendazim does not work on water moulds (oomycetes) such as the downy mildew and late blight pathogens.",
+         "file": "extra:pmc_benz", "actives": ["carbendazim"]}
+for _i in ("maize_downy_mildew", "potato_late_blight", "tomato_late_blight", "onion_downy_mildew"):
+    AVOID[_i] = AVOID.get(_i, []) + [_CARB]
+ETL["paddy_false_smut"] = ("Fungicide sprays help only as protection, at the boot leaf stage (before the panicles come out) and again at the milky stage. Grains that already show smut balls cannot be saved by spraying.", "rice_diseases_rice_7.txt")
+FIRST["paddy_gall_midge"] = ("Count first: act at 10% silver shoots. Drain the field for 5 to 7 days, which brings the gall midge down sharply.", "cultural", "extra:ppqs_paddy_gall_midge")
+_QOI = "Do not use the same type of fungicide again and again. For strobilurin (QoI) fungicides such as azoxystrobin used alone, use no more than 1 spray in 3, at most 3 per crop and never more than 2 in a row; switch to a fungicide of a different group in between."
+RESISTANCE = {"tomato_late_blight": (_QOI, "extra:frac_qoi"), "potato_late_blight": (_QOI, "extra:frac_qoi")}

@@ -7,7 +7,7 @@ import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL, REC_FILE, FIXES_ADD_PRACTICES, FIRST, AVOID_MIXTURES, PRACTICES_ADD, SAFETY  # noqa: E402
+from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL, REC_FILE, FIXES_ADD_PRACTICES, FIRST, AVOID_MIXTURES, PRACTICES_ADD, SAFETY, RESISTANCE  # noqa: E402
 
 APP = os.path.dirname(HERE)
 REV = os.path.join(HERE, "kb_reviewed")
@@ -39,6 +39,7 @@ EXTRA = {
  "ppqs_thrips_parvispinus_adhoc": ("DPPQS: Ad hoc management strategies on Thrips parvispinus", "https://ppqs.gov.in/sites/default/files/adhoc_management_strategies_on_thrips_parvispinus.pdf"),
  "cicr_2024": ("ICAR-CICR Nagpur: Strategies and advisory for cotton pest and disease management, 2024-25", "https://nsai.co.in/storage/app/media/uploaded-files/ICAR-CICR_Advisory%20Pest%20and%20Disease%20Management%202024.pdf"),
  "frac_qoi": ("FRAC (Fungicide Resistance Action Committee): QoI fungicide guidelines, potato and tomato late blight (reviewed January 2024)", "https://www.frac.info/frac-teams/working-groups/qol-fungicides/recommendations-for-qoi"),
+ "pmc_benz": ("Molecules (2024): Research progress on benzimidazole fungicides, a review (carbendazim is ineffective against oomycetes)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10975326/"),
  "cpn_gls": ("Crop Protection Network (US land-grant universities): Gray leaf spot of corn", "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"),
 }
 
@@ -172,6 +173,8 @@ def main():
                 e["first_action"]["texts"] = dict(sorted(tx.items()))
             if i in AVOID_MIXTURES:
                 e["avoid_mixtures"] = True
+            if i in RESISTANCE:
+                e["resistance_note"] = {"text": RESISTANCE[i][0], "source": sidx(RESISTANCE[i][1])}
             if i in SAFETY:
                 e["safety_note"] = {"text": SAFETY[i][0], "sources": [sidx(x) for x in SAFETY[i][1]]}
             if i in ETL:

@@ -106,10 +106,19 @@ function Farmer() {
     if (!final) return;
     setAdvice(null);
     setError(null);
-    api
-      .advice(final.id, lang)
-      .then(setAdvice)
-      .catch((e) => setError(String(e.message || e)));
+    let live = true;
+    // The untranslated card comes back at once and shows the products, doses and the KB's own
+    // local name; the translated sentences replace the placeholders when Sarvam is done.
+    const base = api.advice(final.id, "en");
+    base
+      .then((a) => live && lang !== "en" && setAdvice((cur) => cur ?? { ...a, pending: true }))
+      .catch(() => undefined);
+    (lang === "en" ? base : api.advice(final.id, lang))
+      .then((a) => live && setAdvice(a))
+      .catch((e) => live && setError(String(e.message || e)));
+    return () => {
+      live = false;
+    };
   }, [final, lang]);
 
   const runDiagnosis = async () => {
@@ -237,17 +246,11 @@ function Farmer() {
             setNote={setNote}
             onCheck={runDiagnosis}
             error={error}
+            onSample={(cropId) => setCrop(cropId)}
           />
         )}
 
-        {step === "working" && (
-          <section className="working">
-            {photo && <img className="preview scanning" src={photo.preview} alt="" />}
-            <div className="scanbar" aria-hidden="true" />
-            <h1 className="title center">{L("working")}</h1>
-            <p className="muted center">{L("workingSub")}</p>
-          </section>
-        )}
+        {step === "working" && <Working lang={lang} photo={photo?.preview || null} />}
 
         {step === "ask" && dx && dx.questions[qIndex] && (
           <section className="ask">
@@ -312,8 +315,9 @@ function Farmer() {
             )}
             {!advice && !error && (
               <section className="working">
+                {photo && <img className="preview small" src={photo.preview} alt="" />}
                 <div className="scanbar" aria-hidden="true" />
-                <p className="muted center">{L("workingSub")}</p>
+                <h1 className="title center">{L("checkingMedicines")}</h1>
               </section>
             )}
             {advice && final && (
@@ -334,6 +338,37 @@ function Farmer() {
       </main>
     </div>
   );
+}
+
+// Calm progress while the vision model works: the message changes once if it takes a while.
+function Working({ lang, photo }: { lang: Lang; photo: string | null }) {
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setSlow(true), 6000);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <section className="working" aria-live="polite">
+      {photo && <img className="preview" src={photo} alt="" />}
+      <div className="scanbar" aria-hidden="true" />
+      <h1 className="title center">{slow ? t(lang, "stillLooking") : t(lang, "working")}</h1>
+      {!slow && <p className="muted center">{t(lang, "workingSub")}</p>}
+    </section>
+  );
+}
+
+function useOnline() {
+  const [online, setOnline] = useState(typeof navigator === "undefined" ? true : navigator.onLine);
+  useEffect(() => {
+    const on = () => setOnline(navigator.onLine);
+    window.addEventListener("online", on);
+    window.addEventListener("offline", on);
+    return () => {
+      window.removeEventListener("online", on);
+      window.removeEventListener("offline", on);
+    };
+  }, []);
+  return online;
 }
 
 function idx(id: string) {
@@ -374,6 +409,7 @@ function PhotoStep(props: {
   setNote: (s: string) => void;
   onCheck: () => void;
   error: string | null;
+  onSample: (crop: string) => void;
 }) {
   const { lang, photo, setPhoto, note, setNote } = props;
   const L = (k: Key) => t(lang, k);
@@ -382,6 +418,20 @@ function PhotoStep(props: {
   const [busy, setBusy] = useState(false);
   const recorder = useMemo(() => new Recorder(), []);
   const [mic, setMic] = useState<"idle" | "rec" | "stt" | "denied" | "error">("idle");
+  const [samples, setSamples] = useState(false);
+  const online = useOnline();
+
+  const pickSample = async (s: Sample) => {
+    setSamples(false);
+    setBusy(true);
+    try {
+      const blob = await (await fetch(`/samples/${s.file}`)).blob();
+      props.onSample(s.crop);
+      setPhoto(await compressImage(new File([blob], s.file, { type: "image/jpeg" })));
+    } finally {
+      setBusy(false);
+    }
+  };
 
   const onFile = async (f: File | undefined) => {
     if (!f) return;
@@ -428,6 +478,7 @@ function PhotoStep(props: {
       <input ref={cameraRef} type="file" accept="image/*" capture="environment" hidden onChange={(e) => onFile(e.target.files?.[0])} />
       <input ref={galleryRef} type="file" accept="image/*" hidden onChange={(e) => onFile(e.target.files?.[0])} />
 
+      {!online && <p className="notice">{L("offlineCheck")}</p>}
       {!photo ? (
         <>
           <button className="camera-hero" onClick={() => cameraRef.current?.click()} disabled={busy}>
@@ -441,6 +492,10 @@ function PhotoStep(props: {
             <Gallery />
             {L("fromGallery")}
           </button>
+          <button className="text-link" onClick={() => setSamples(true)}>
+            {L("trySample")}
+          </button>
+          {samples && <SampleSheet lang={lang} onPick={pickSample} onClose={() => setSamples(false)} />}
         </>
       ) : (
         <>
@@ -481,11 +536,49 @@ function PhotoStep(props: {
           </div>
 
           {props.error && <ErrorBox text={props.error === "offline" ? L("offline") : L("error")} />}
-          <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt"}>
+          <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt" || !online}>
             {L("check")}
           </button>
         </>
       )}
     </section>
+  );
+}
+
+interface Sample {
+  file: string;
+  crop: string;
+}
+// Real labelled photos that are not in the evaluation test set. Sources and licences are on /about.
+export const SAMPLES: Sample[] = [
+  { file: "tomato_early_blight.jpg", crop: "tomato" },
+  { file: "tomato_septoria.jpg", crop: "tomato" },
+  { file: "tomato_healthy.jpg", crop: "tomato" },
+  { file: "potato_early_blight.jpg", crop: "potato" },
+  { file: "rice_blast.jpg", crop: "paddy" },
+  { file: "rice_brownspot.jpg", crop: "paddy" },
+];
+
+function SampleSheet({ lang, onPick, onClose }: { lang: Lang; onPick: (s: Sample) => void; onClose: () => void }) {
+  return (
+    <div className="sheet-backdrop" onClick={onClose}>
+      <div className="sheet" role="dialog" aria-modal="true" aria-label={t(lang, "sampleTitle")} onClick={(e) => e.stopPropagation()}>
+        <div className="sheet-head">
+          <h2>{t(lang, "sampleTitle")}</h2>
+          <button className="chip" onClick={onClose}>
+            {t(lang, "close")}
+          </button>
+        </div>
+        <p className="muted small">{t(lang, "sampleNote")}</p>
+        <div className="sample-grid">
+          {SAMPLES.map((s) => (
+            <button key={s.file} className="sample" onClick={() => onPick(s)}>
+              <img src={`/samples/${s.file}`} alt="" loading="lazy" />
+              <span>{t(lang, `crop_${s.crop}` as Key)}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

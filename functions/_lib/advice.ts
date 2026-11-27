@@ -31,6 +31,7 @@ export interface AdviceCard {
   lang: string;
   name: string;
   name_en: string;
+  names: Record<string, string>;
   kind: string;
   pathogen: string;
   healthy: boolean;
@@ -176,6 +177,7 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
     lang,
     name: d.names?.[lang] || d.name_en,
     name_en: d.name_en,
+    names: d.names || {},
     kind: d.kind,
     pathogen: d.pathogen || "",
     healthy: d.id.endsWith("_healthy"),

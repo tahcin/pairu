@@ -49,6 +49,7 @@ export interface Advice {
   lang: string;
   name: string;
   name_en: string;
+  names?: Record<string, string>;
   kind: string;
   pathogen: string;
   healthy: boolean;
@@ -63,6 +64,7 @@ export interface Advice {
   sources: { title: string; url: string }[];
   fixture: boolean;
   translated: boolean;
+  pending?: boolean;
 }
 export interface Weather {
   rain_24h_mm: number;

@@ -27,6 +27,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
   const [voice, setVoice] = useState<"idle" | "loading" | "playing">("idle");
   const player = useRef(new Player());
   const pct = Math.round(confidence * 100);
+  const pending = Boolean(a.pending);
+  // A name from the KB for this language always wins over machine translation.
+  const kbName = a.names?.[lang];
+  const title = kbName || (pending ? "" : a.name);
+  const prefetched = useRef<{ text: string; audios: string[]; mime: string } | null>(null);
 
   useEffect(() => () => player.current.stop(), []);
   useEffect(() => {
@@ -56,7 +61,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     if (a.healthy) {
       parts.push(L("healthyTitle"), L("healthyBody"));
     } else {
-      parts.push(`${cropName}: ${a.name}.`, `${sureLine}.`);
+      parts.push(`${cropName}: ${title}.`, `${sureLine}.`);
       if (a.symptoms.length) parts.push(`${L("secSymptoms")}.`, ...a.symptoms);
       parts.push(`${L("secDo")}.`);
       for (const o of a.organic) parts.push(o.text);
@@ -75,7 +80,20 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
       .filter(Boolean)
       .map((p) => (/[.!?।|]$/.test(p) ? p : `${p}.`))
       .join(" ");
-  }, [a, lang, sureLine, sprayLine, cropName]);
+  }, [a, lang, sureLine, sprayLine, cropName, title]);
+
+  // Prepare the voice in the background once the translated card is in, so Listen starts quickly.
+  useEffect(() => {
+    if (pending) return;
+    const text = speech;
+    const id = setTimeout(() => {
+      api
+        .tts(text, lang)
+        .then((r) => (prefetched.current = { text, ...r }))
+        .catch(() => undefined);
+    }, 1200);
+    return () => clearTimeout(id);
+  }, [pending, speech, lang]);
 
   const listen = async () => {
     if (voice === "playing" || voice === "loading") {
@@ -85,7 +103,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     }
     setVoice("loading");
     try {
-      const r = await api.tts(speech, lang);
+      const r = prefetched.current?.text === speech ? prefetched.current : await api.tts(speech, lang);
       setVoice("playing");
       await player.current.play(r.audios, r.mime, () => setVoice("idle"));
     } catch {
@@ -97,7 +115,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     const first = a.organic[0]?.text || a.bio_products[0]?.product || a.chemicals[0]?.product || "";
     const lines = a.healthy
       ? [`${cropName}: ${L("healthyTitle")}`]
-      : [`${cropName}: ${a.name}`, `${sureLine}${by === "model" ? ` (${pct} / 100)` : ""}`, first ? `${L("secDo")}: ${first}` : ""];
+      : [`${cropName}: ${title}`, `${sureLine}${by === "model" ? ` (${pct} / 100)` : ""}`, first ? `${L("secDo")}: ${first}` : ""];
     lines.push(`${L("callKcc")}: ${KCC}`, location.origin);
     window.open(`https://wa.me/?text=${encodeURIComponent(lines.filter(Boolean).join("\n"))}`, "_blank", "noopener");
   };
@@ -110,8 +128,13 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
         {photo && <img className="thumb" src={photo} alt="" />}
         <div>
           <p className="muted small">{cropName}</p>
-          <h1 className="title">{a.healthy ? L("healthyTitle") : a.name}</h1>
-          {!a.healthy && a.name !== a.name_en && <p className="muted small">{a.name_en}{a.pathogen ? ` · ${a.pathogen}` : ""}</p>}
+          <h1 className="title">{a.healthy ? L("healthyTitle") : title || <Bar w={60} tall />}</h1>
+          {!a.healthy && (
+            <p className="muted small">
+              {a.name_en}
+              {a.pathogen ? ` · ${a.pathogen}` : ""}
+            </p>
+          )}
         </div>
         <div className={`sure ${by === "answers" || confidence >= 0.75 ? "high" : "low"}`}>
           <span>{sureLine}</span>
@@ -127,7 +150,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
       </section>
 
       <div className="actions">
-        <button className={`btn primary ${voice !== "idle" ? "active" : ""}`} onClick={listen}>
+        <button className={`btn primary ${voice !== "idle" ? "active" : ""}`} onClick={listen} disabled={pending}>
           {voice === "idle" ? <Speaker /> : <StopIcon />}
           {voice === "loading" ? L("loadingAudio") : voice === "playing" ? L("stop") : L("listen")}
         </button>
@@ -145,13 +168,13 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
               <li key={i} className={seen.includes(i) ? "seen" : ""}>
                 <span className="dot">{seen.includes(i) ? <Check size={16} /> : null}</span>
                 <span>
-                  {s}
+                  {pending ? <Bar w={70 + ((i * 17) % 25)} /> : s}
                   {seen.includes(i) && <span className="tag">{L("seenInPhoto")}</span>}
                 </span>
               </li>
             ))}
           </ul>
-          {a.favourable_conditions && (
+          {a.favourable_conditions && !pending && (
             <p className="body small-gap">
               <strong>{L("spreadsWhen")}: </strong>
               {a.favourable_conditions}
@@ -172,18 +195,22 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
               <ul className="list plain">
                 {a.organic.map((o, i) => (
                   <li key={i}>
-                    <span>{o.text}</span>
+                    {pending ? <Bar w={80} /> : <span>{o.text}</span>}
+                    {o.source && (
+                      <a className="src-link" href={o.source.url} target="_blank" rel="noopener">
+                        {L("source")}: {o.source.title}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
             </>
           )}
+          {a.kind === "viral" && (a.bio_products.length > 0 || a.chemicals.length > 0) && <p className="notice">{L("virusNote")}</p>}
           {a.bio_products.length > 0 && <Products lang={lang} title={L("bioProducts")} items={a.bio_products} />}
-          {a.chemicals.length > 0 ? (
-            <Products lang={lang} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />
-          ) : (
-            <p className="body">{L("noChemicals")}</p>
-          )}
+          {a.chemicals.length > 0 && <Products lang={lang} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
+          {a.bio_products.length === 0 && a.chemicals.length === 0 && <p className="notice">{L("noApproved")}</p>}
+          {a.bio_products.length > 0 && a.chemicals.length === 0 && <p className="body">{L("noChemicals")}</p>}
           <p className="muted small">
             {L("bannedLeftOut")} {L("legalNote")}
           </p>
@@ -205,7 +232,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
           <h2>{L("secPrevent")}</h2>
           <ul className="list plain">
             {a.prevention.map((p, i) => (
-              <li key={i}>{p}</li>
+              <li key={i}>{pending ? <Bar w={75} /> : p}</li>
             ))}
           </ul>
         </section>
@@ -216,7 +243,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
           <h2>{L("secPractice")}</h2>
           <ul className="list plain">
             {a.practices.map((p, i) => (
-              <li key={i}>{p}</li>
+              <li key={i}>{pending ? <Bar w={75} /> : p}</li>
             ))}
           </ul>
         </section>
@@ -351,4 +378,9 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
       )}
     </>
   );
+}
+
+// Placeholder line shown while a sentence is being translated, so no English flashes up.
+function Bar({ w, tall }: { w: number; tall?: boolean }) {
+  return <span className={`bar ${tall ? "tall" : ""}`} style={{ width: `${w}%` }} aria-hidden="true" />;
 }

@@ -95,5 +95,14 @@
   "asPrinted": "As printed in the government list",
   "source": "Source",
   "page": "page",
-  "fromWords": "Our answer comes from your words too"
+  "fromWords": "Our answer comes from your words too",
+  "noApproved": "No pesticide is approved in India for this problem on this crop. Use the practices below.",
+  "virusNote": "There is no medicine that cures a virus. The approved sprays below control the insect that spreads it.",
+  "trySample": "No sick leaf nearby? Try a sample photo",
+  "sampleTitle": "Sample photos",
+  "sampleNote": "Real labelled leaf photos from public datasets, for trying Pairu.",
+  "checkingMedicines": "Checking the medicines approved for this crop",
+  "stillLooking": "Still looking closely, a few more seconds",
+  "offlineCheck": "You are offline. Pairu opens without internet, but checking a leaf needs a connection.",
+  "close": "Close"
 }

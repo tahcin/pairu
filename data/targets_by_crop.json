@@ -1,0 +1,1774 @@
+{
+ "banana": [
+  {
+   "target_norm": "aphids",
+   "rows": 2
+  },
+  {
+   "target_norm": "blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "burrowing nematode: radopholus similis",
+   "rows": 1
+  },
+  {
+   "target_norm": "cigar end rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 2
+  },
+  {
+   "target_norm": "meloidogyne incognita",
+   "rows": 1
+  },
+  {
+   "target_norm": "nematode",
+   "rows": 1
+  },
+  {
+   "target_norm": "panama wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "rhizome weevil",
+   "rows": 1
+  },
+  {
+   "target_norm": "sigatoka",
+   "rows": 2
+  },
+  {
+   "target_norm": "sigatoka leaf spot",
+   "rows": 7
+  },
+  {
+   "target_norm": "tingid bug",
+   "rows": 2
+  },
+  {
+   "target_norm": "tip rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "yellow sigatoka",
+   "rows": 1
+  }
+ ],
+ "blackgram": [
+  {
+   "target_norm": "anthracnose",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphids",
+   "rows": 1
+  },
+  {
+   "target_norm": "bihar hairy caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "black gram pod borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "cercospora leaf spot",
+   "rows": 2
+  },
+  {
+   "target_norm": "collar rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 6
+  },
+  {
+   "target_norm": "maruca spp",
+   "rows": 1
+  },
+  {
+   "target_norm": "maruca vitrata",
+   "rows": 1
+  },
+  {
+   "target_norm": "pod borer",
+   "rows": 5
+  },
+  {
+   "target_norm": "powdery mildew",
+   "rows": 9
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 4
+  },
+  {
+   "target_norm": "rust",
+   "rows": 3
+  },
+  {
+   "target_norm": "spodoptera litura",
+   "rows": 1
+  },
+  {
+   "target_norm": "spotted pod borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "web blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 1
+  }
+ ],
+ "brinjal": [
+  {
+   "target_norm": "aphids",
+   "rows": 11
+  },
+  {
+   "target_norm": "bacterial wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "beetles",
+   "rows": 1
+  },
+  {
+   "target_norm": "blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "cercospora sp",
+   "rows": 1
+  },
+  {
+   "target_norm": "damping off",
+   "rows": 5
+  },
+  {
+   "target_norm": "epilachna grub",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "fruit rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 18
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 2
+  },
+  {
+   "target_norm": "leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "leafhopper – amrasca biguttula biguttula thrips – thrips palmi shoot and fruit borer –leucinodes orbonalis red spider mites –tetranychus urticae whitefly – bemisia tabaci",
+   "rows": 1
+  },
+  {
+   "target_norm": "mites",
+   "rows": 8
+  },
+  {
+   "target_norm": "red spider mites",
+   "rows": 10
+  },
+  {
+   "target_norm": "reni form nematode",
+   "rows": 1
+  },
+  {
+   "target_norm": "root knot nematode",
+   "rows": 7
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 4
+  },
+  {
+   "target_norm": "shoot and fruit borer",
+   "rows": 40
+  },
+  {
+   "target_norm": "shoot and fruit borer jassids",
+   "rows": 1
+  },
+  {
+   "target_norm": "shoot borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 8
+  },
+  {
+   "target_norm": "two spotted spider mites",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 18
+  },
+  {
+   "target_norm": "whitefly in brinjal",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly interval depending on the level of pest intensity",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly- bemisia tabaci shoot and fruit borer –leucinodes orbonalis aphids-aphis gossypii thrips- thrips tabaci",
+   "rows": 1
+  },
+  {
+   "target_norm": "wilt",
+   "rows": 6
+  }
+ ],
+ "chilli": [
+  {
+   "target_norm": "alternaria leaf spot",
+   "rows": 2
+  },
+  {
+   "target_norm": "anthracnose",
+   "rows": 34
+  },
+  {
+   "target_norm": "anthracnose fruit rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "anthracnose leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "anthracnose powdery mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphids",
+   "rows": 30
+  },
+  {
+   "target_norm": "bacterial leaf spot",
+   "rows": 3
+  },
+  {
+   "target_norm": "black thrips",
+   "rows": 3
+  },
+  {
+   "target_norm": "cercospora leaf spot",
+   "rows": 5
+  },
+  {
+   "target_norm": "chenophora blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "choanephora blight",
+   "rows": 2
+  },
+  {
+   "target_norm": "damping off",
+   "rows": 10
+  },
+  {
+   "target_norm": "dieback",
+   "rows": 16
+  },
+  {
+   "target_norm": "early blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit borer",
+   "rows": 61
+  },
+  {
+   "target_norm": "fruit borer tobacco caterpillar beet armyworm",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit borer-helicovepra armigera",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit rot",
+   "rows": 37
+  },
+  {
+   "target_norm": "gram pod borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "helicoverpa armigera",
+   "rows": 4
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 9
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 17
+  },
+  {
+   "target_norm": "mites",
+   "rows": 28
+  },
+  {
+   "target_norm": "pod borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "powdery mildew",
+   "rows": 60
+  },
+  {
+   "target_norm": "powdery mildew anthracnose choanephora blight anthracnose choanephora blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "powdery mildew leaf spot fruit rot dieback",
+   "rows": 1
+  },
+  {
+   "target_norm": "ripe rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "root knot nematode",
+   "rows": 1
+  },
+  {
+   "target_norm": "root wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "shoot and fruit borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera litura",
+   "rows": 6
+  },
+  {
+   "target_norm": "spots",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 72
+  },
+  {
+   "target_norm": "thrips fruit borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips mites",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips mites fruit borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips- scirtothrips dorsalis",
+   "rows": 1
+  },
+  {
+   "target_norm": "tobacco caterpillar",
+   "rows": 15
+  },
+  {
+   "target_norm": "tobacco caterpillar - spodoptera litura",
+   "rows": 1
+  },
+  {
+   "target_norm": "tobacco caterpillar-spodoptera litura. yellow mites –polyphagotarsonemus latus",
+   "rows": 1
+  },
+  {
+   "target_norm": "twig blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "wet rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "white aphids",
+   "rows": 1
+  },
+  {
+   "target_norm": "white mites",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 16
+  },
+  {
+   "target_norm": "whitefly thrips",
+   "rows": 1
+  },
+  {
+   "target_norm": "yellow",
+   "rows": 1
+  },
+  {
+   "target_norm": "yellow mites",
+   "rows": 14
+  },
+  {
+   "target_norm": "yellow mites aphids",
+   "rows": 1
+  }
+ ],
+ "cotton": [
+  {
+   "target_norm": "alternaria leaf",
+   "rows": 1
+  },
+  {
+   "target_norm": "alternaria leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "alternaria leaf spot",
+   "rows": 7
+  },
+  {
+   "target_norm": "alternaria leaf spot grey mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "american boll worm",
+   "rows": 3
+  },
+  {
+   "target_norm": "american boll worm tobacco caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "american bollworm",
+   "rows": 17
+  },
+  {
+   "target_norm": "angular leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "angular leaf spot or black arm",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphids",
+   "rows": 63
+  },
+  {
+   "target_norm": "aphids jassids whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphis",
+   "rows": 1
+  },
+  {
+   "target_norm": "bacterial blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "bacterial leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "ball worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "boll rot",
+   "rows": 2
+  },
+  {
+   "target_norm": "boll worm",
+   "rows": 2
+  },
+  {
+   "target_norm": "boll worms",
+   "rows": 5
+  },
+  {
+   "target_norm": "bollworm",
+   "rows": 48
+  },
+  {
+   "target_norm": "charcoal rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "cut worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "earias vitella",
+   "rows": 2
+  },
+  {
+   "target_norm": "egyptian boll worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "fungal wilt",
+   "rows": 2
+  },
+  {
+   "target_norm": "fusarium wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "grey mildew",
+   "rows": 9
+  },
+  {
+   "target_norm": "grey weevil",
+   "rows": 2
+  },
+  {
+   "target_norm": "helicoverpa armigera",
+   "rows": 4
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 78
+  },
+  {
+   "target_norm": "jassids s",
+   "rows": 1
+  },
+  {
+   "target_norm": "jassids whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 7
+  },
+  {
+   "target_norm": "leafhopper",
+   "rows": 8
+  },
+  {
+   "target_norm": "mealy bug",
+   "rows": 5
+  },
+  {
+   "target_norm": "mealy bugs",
+   "rows": 1
+  },
+  {
+   "target_norm": "mealy bugs , jassids , aphids , whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "mites",
+   "rows": 5
+  },
+  {
+   "target_norm": "pectinophora gossypiella",
+   "rows": 1
+  },
+  {
+   "target_norm": "pink american",
+   "rows": 1
+  },
+  {
+   "target_norm": "pink boll worm",
+   "rows": 4
+  },
+  {
+   "target_norm": "pink boll worm: pectinophora gossypiella leaf worm: spodoptera litura american bollworm: helicoverpa armigera thrips: thrips tabaci",
+   "rows": 1
+  },
+  {
+   "target_norm": "pink bollworm",
+   "rows": 16
+  },
+  {
+   "target_norm": "red cotton bug",
+   "rows": 1
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 5
+  },
+  {
+   "target_norm": "seed born",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "spiny",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera",
+   "rows": 2
+  },
+  {
+   "target_norm": "spodoptera litura",
+   "rows": 2
+  },
+  {
+   "target_norm": "spotted",
+   "rows": 1
+  },
+  {
+   "target_norm": "spotted boll worm",
+   "rows": 2
+  },
+  {
+   "target_norm": "spotted bollworm",
+   "rows": 10
+  },
+  {
+   "target_norm": "sucking",
+   "rows": 1
+  },
+  {
+   "target_norm": "sucking insects",
+   "rows": 2
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 72
+  },
+  {
+   "target_norm": "thrips whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips. aphids",
+   "rows": 1
+  },
+  {
+   "target_norm": "tobacco caterpillar",
+   "rows": 3
+  },
+  {
+   "target_norm": "tobacco caterpillar spotted boll worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "tobacco leaf eating caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 72
+  },
+  {
+   "target_norm": "whitefly aphids",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly- bemisia tabaci aphids- aphis gossypii thrips- thrips tabaci tobacco caterpillar- spodoptera litura bollworm- helicoverpa armigera",
+   "rows": 1
+  }
+ ],
+ "groundnut": [
+  {
+   "target_norm": "american bollworm",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphids",
+   "rows": 7
+  },
+  {
+   "target_norm": "collar rot",
+   "rows": 19
+  },
+  {
+   "target_norm": "damping off",
+   "rows": 1
+  },
+  {
+   "target_norm": "dry root rot",
+   "rows": 4
+  },
+  {
+   "target_norm": "early leaf spot",
+   "rows": 3
+  },
+  {
+   "target_norm": "field rat",
+   "rows": 2
+  },
+  {
+   "target_norm": "helicoverpa armigera",
+   "rows": 1
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 6
+  },
+  {
+   "target_norm": "large bandicota",
+   "rows": 2
+  },
+  {
+   "target_norm": "late leaf spot",
+   "rows": 4
+  },
+  {
+   "target_norm": "lateleafspot",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf eating caterpillar",
+   "rows": 2
+  },
+  {
+   "target_norm": "leaf feeder",
+   "rows": 2
+  },
+  {
+   "target_norm": "leaf miner",
+   "rows": 6
+  },
+  {
+   "target_norm": "leaf minor",
+   "rows": 2
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 5
+  },
+  {
+   "target_norm": "leaf webber",
+   "rows": 1
+  },
+  {
+   "target_norm": "leafhopper",
+   "rows": 3
+  },
+  {
+   "target_norm": "pod borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "red hairy caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "root grub",
+   "rows": 1
+  },
+  {
+   "target_norm": "root grubs",
+   "rows": 1
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 6
+  },
+  {
+   "target_norm": "rust",
+   "rows": 22
+  },
+  {
+   "target_norm": "rust ikka leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "sclerotium rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "seed",
+   "rows": 1
+  },
+  {
+   "target_norm": "seed rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera litura",
+   "rows": 3
+  },
+  {
+   "target_norm": "stem rot",
+   "rows": 11
+  },
+  {
+   "target_norm": "termite",
+   "rows": 4
+  },
+  {
+   "target_norm": "termites",
+   "rows": 3
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 9
+  },
+  {
+   "target_norm": "tikka",
+   "rows": 10
+  },
+  {
+   "target_norm": "tikka leaf spot",
+   "rows": 28
+  },
+  {
+   "target_norm": "tobacco caterpillar",
+   "rows": 2
+  },
+  {
+   "target_norm": "tobacco caterpillar groundnut leaf miner",
+   "rows": 1
+  },
+  {
+   "target_norm": "white grub",
+   "rows": 6
+  },
+  {
+   "target_norm": "white grubs",
+   "rows": 2
+  },
+  {
+   "target_norm": "whitegrub",
+   "rows": 1
+  },
+  {
+   "target_norm": "wilt",
+   "rows": 1
+  }
+ ],
+ "maize": [
+  {
+   "target_norm": "aphids",
+   "rows": 5
+  },
+  {
+   "target_norm": "banded leaf",
+   "rows": 1
+  },
+  {
+   "target_norm": "blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "browny stripe downy mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "common rust",
+   "rows": 1
+  },
+  {
+   "target_norm": "cut worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "cut worms",
+   "rows": 1
+  },
+  {
+   "target_norm": "downy mildew",
+   "rows": 6
+  },
+  {
+   "target_norm": "fall army worm",
+   "rows": 10
+  },
+  {
+   "target_norm": "fall army worm: spodoptera frugiperda stem borer: chilo partellus",
+   "rows": 1
+  },
+  {
+   "target_norm": "fall armyworm",
+   "rows": 11
+  },
+  {
+   "target_norm": "fall armyworm stem borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "fall armyworm stem borer pink stem borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "fusarium stalk rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "fusarium wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf blight",
+   "rows": 5
+  },
+  {
+   "target_norm": "maydis leaf blight",
+   "rows": 2
+  },
+  {
+   "target_norm": "n s orthern leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "northern corn leaf blight southern corn leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "phillippine downy mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "pink stem borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "rust",
+   "rows": 2
+  },
+  {
+   "target_norm": "seed rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling blight",
+   "rows": 5
+  },
+  {
+   "target_norm": "seedling rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "seedling wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "sesamia inferans",
+   "rows": 1
+  },
+  {
+   "target_norm": "sheath blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "shoofly",
+   "rows": 1
+  },
+  {
+   "target_norm": "shoot fly",
+   "rows": 8
+  },
+  {
+   "target_norm": "sorghum downy mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera frugiperda",
+   "rows": 1
+  },
+  {
+   "target_norm": "spotted stem borer",
+   "rows": 2
+  },
+  {
+   "target_norm": "stem borer",
+   "rows": 13
+  },
+  {
+   "target_norm": "stem borer fall armyworm",
+   "rows": 1
+  },
+  {
+   "target_norm": "stem fly",
+   "rows": 1
+  },
+  {
+   "target_norm": "sugarcane downy mildew",
+   "rows": 1
+  },
+  {
+   "target_norm": "tercicum leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 1
+  },
+  {
+   "target_norm": "turcicum blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "turcicum leaf blight",
+   "rows": 3
+  }
+ ],
+ "mango": [
+  {
+   "target_norm": "anthracnose",
+   "rows": 11
+  },
+  {
+   "target_norm": "botryosphaeria spp diplodia spp colletotrichum gloeosporiodes",
+   "rows": 1
+  },
+  {
+   "target_norm": "hopper",
+   "rows": 11
+  },
+  {
+   "target_norm": "i. nitidulus",
+   "rows": 1
+  },
+  {
+   "target_norm": "i. niveosparsus",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "mealy bug",
+   "rows": 1
+  },
+  {
+   "target_norm": "post-harvest",
+   "rows": 1
+  },
+  {
+   "target_norm": "powdery mildew",
+   "rows": 22
+  },
+  {
+   "target_norm": "soft rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 2
+  }
+ ],
+ "onion": [
+  {
+   "target_norm": "blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "damping off",
+   "rows": 1
+  },
+  {
+   "target_norm": "downy mildew",
+   "rows": 6
+  },
+  {
+   "target_norm": "downy mildew purple blotch",
+   "rows": 1
+  },
+  {
+   "target_norm": "neck rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "post-harvest",
+   "rows": 1
+  },
+  {
+   "target_norm": "purple blotch",
+   "rows": 18
+  },
+  {
+   "target_norm": "root grub",
+   "rows": 1
+  },
+  {
+   "target_norm": "stemphylium",
+   "rows": 1
+  },
+  {
+   "target_norm": "stemphylium blight",
+   "rows": 3
+  },
+  {
+   "target_norm": "stemphylium leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "stemphylum blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 8
+  }
+ ],
+ "paddy": [
+  {
+   "target_norm": "aerial phase",
+   "rows": 1
+  },
+  {
+   "target_norm": "african snails",
+   "rows": 1
+  },
+  {
+   "target_norm": "almond moth",
+   "rows": 1
+  },
+  {
+   "target_norm": "bacterial leaf blight",
+   "rows": 11
+  },
+  {
+   "target_norm": "bakanae",
+   "rows": 4
+  },
+  {
+   "target_norm": "bandicota bengalensis",
+   "rows": 1
+  },
+  {
+   "target_norm": "blast",
+   "rows": 66
+  },
+  {
+   "target_norm": "blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "blue beetle",
+   "rows": 1
+  },
+  {
+   "target_norm": "blue leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "brown leaf spot",
+   "rows": 13
+  },
+  {
+   "target_norm": "brown plant hopper",
+   "rows": 92
+  },
+  {
+   "target_norm": "brown plant hopper gall midge",
+   "rows": 1
+  },
+  {
+   "target_norm": "brown plant hopper green leaf folder stem borer leaf folder",
+   "rows": 1
+  },
+  {
+   "target_norm": "brown spot",
+   "rows": 18
+  },
+  {
+   "target_norm": "case worm",
+   "rows": 1
+  },
+  {
+   "target_norm": "dirty panicle",
+   "rows": 13
+  },
+  {
+   "target_norm": "dirty panicle-grain discoloration",
+   "rows": 1
+  },
+  {
+   "target_norm": "diseases viz",
+   "rows": 1
+  },
+  {
+   "target_norm": "ear head bug",
+   "rows": 1
+  },
+  {
+   "target_norm": "early blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "false",
+   "rows": 1
+  },
+  {
+   "target_norm": "false smut",
+   "rows": 14
+  },
+  {
+   "target_norm": "field rat",
+   "rows": 2
+  },
+  {
+   "target_norm": "gall midge",
+   "rows": 13
+  },
+  {
+   "target_norm": "giant",
+   "rows": 1
+  },
+  {
+   "target_norm": "glume discoloration",
+   "rows": 2
+  },
+  {
+   "target_norm": "grain discoloration",
+   "rows": 14
+  },
+  {
+   "target_norm": "grass hopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "green leafhopper",
+   "rows": 44
+  },
+  {
+   "target_norm": "green leafhopper rice leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "green semilooper",
+   "rows": 1
+  },
+  {
+   "target_norm": "gundhi bug",
+   "rows": 1
+  },
+  {
+   "target_norm": "hispa",
+   "rows": 12
+  },
+  {
+   "target_norm": "indian field mouse",
+   "rows": 1
+  },
+  {
+   "target_norm": "indian house rat",
+   "rows": 1
+  },
+  {
+   "target_norm": "khapra beetle",
+   "rows": 1
+  },
+  {
+   "target_norm": "large bandicota",
+   "rows": 1
+  },
+  {
+   "target_norm": "large bandicota indian house rat",
+   "rows": 1
+  },
+  {
+   "target_norm": "late blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf",
+   "rows": 2
+  },
+  {
+   "target_norm": "leaf blast",
+   "rows": 20
+  },
+  {
+   "target_norm": "leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf discoloration",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf folder",
+   "rows": 104
+  },
+  {
+   "target_norm": "leaf folder brown plant hopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf folder diseases: sheath blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf roller",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 3
+  },
+  {
+   "target_norm": "leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaser grain borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "moth",
+   "rows": 1
+  },
+  {
+   "target_norm": "mus musculus",
+   "rows": 1
+  },
+  {
+   "target_norm": "narrow leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "neck",
+   "rows": 1
+  },
+  {
+   "target_norm": "neck blast",
+   "rows": 13
+  },
+  {
+   "target_norm": "nematode",
+   "rows": 1
+  },
+  {
+   "target_norm": "nilaparvata lugens white backed plant hopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "panicle blast",
+   "rows": 1
+  },
+  {
+   "target_norm": "plant hopper",
+   "rows": 3
+  },
+  {
+   "target_norm": "rattus rattus",
+   "rows": 1
+  },
+  {
+   "target_norm": "red flour beetle",
+   "rows": 1
+  },
+  {
+   "target_norm": "saw toothed grain beetle",
+   "rows": 1
+  },
+  {
+   "target_norm": "seed born",
+   "rows": 1
+  },
+  {
+   "target_norm": "sheath blight",
+   "rows": 97
+  },
+  {
+   "target_norm": "sheath blight leaf blast",
+   "rows": 1
+  },
+  {
+   "target_norm": "sheath blight leaf blast brown spot green leafhopper thrips whorl maggot",
+   "rows": 1
+  },
+  {
+   "target_norm": "sheath blight leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "sheath rot",
+   "rows": 5
+  },
+  {
+   "target_norm": "slugs",
+   "rows": 1
+  },
+  {
+   "target_norm": "snails",
+   "rows": 1
+  },
+  {
+   "target_norm": "sogatella furcifera",
+   "rows": 1
+  },
+  {
+   "target_norm": "stem borer",
+   "rows": 82
+  },
+  {
+   "target_norm": "stem borer leaf folder",
+   "rows": 1
+  },
+  {
+   "target_norm": "stem borer whorl maggot",
+   "rows": 1
+  },
+  {
+   "target_norm": "stem fly",
+   "rows": 1
+  },
+  {
+   "target_norm": "stem rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "tatera indica",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 8
+  },
+  {
+   "target_norm": "weevil",
+   "rows": 1
+  },
+  {
+   "target_norm": "white backed plant hopper",
+   "rows": 43
+  },
+  {
+   "target_norm": "white backed plant hopper leaf folder",
+   "rows": 1
+  },
+  {
+   "target_norm": "white leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "whorl maggot",
+   "rows": 10
+  },
+  {
+   "target_norm": "yellow stem borer",
+   "rows": 34
+  },
+  {
+   "target_norm": "yellow stem borer leaf folder",
+   "rows": 3
+  }
+ ],
+ "potato": [
+  {
+   "target_norm": "aphids",
+   "rows": 7
+  },
+  {
+   "target_norm": "aphids: foliar application soil drench",
+   "rows": 1
+  },
+  {
+   "target_norm": "bacterial brown wilt or ring or the bangle disease of potato",
+   "rows": 2
+  },
+  {
+   "target_norm": "black scruf",
+   "rows": 1
+  },
+  {
+   "target_norm": "black scruff",
+   "rows": 1
+  },
+  {
+   "target_norm": "black scurf",
+   "rows": 10
+  },
+  {
+   "target_norm": "blackleg",
+   "rows": 2
+  },
+  {
+   "target_norm": "early blight",
+   "rows": 31
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 3
+  },
+  {
+   "target_norm": "late blight",
+   "rows": 57
+  },
+  {
+   "target_norm": "leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "mites",
+   "rows": 1
+  },
+  {
+   "target_norm": "scab",
+   "rows": 1
+  },
+  {
+   "target_norm": "soft rot",
+   "rows": 2
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 2
+  },
+  {
+   "target_norm": "white grub",
+   "rows": 1
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 3
+  }
+ ],
+ "tomato": [
+  {
+   "target_norm": "alternaria blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "alternaria leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "anthracnose",
+   "rows": 1
+  },
+  {
+   "target_norm": "aphids",
+   "rows": 8
+  },
+  {
+   "target_norm": "aphids leafhopper",
+   "rows": 1
+  },
+  {
+   "target_norm": "bacterial leaf spot",
+   "rows": 3
+  },
+  {
+   "target_norm": "bacterial wilt",
+   "rows": 1
+  },
+  {
+   "target_norm": "buck eye rot",
+   "rows": 1
+  },
+  {
+   "target_norm": "buckeye rot",
+   "rows": 2
+  },
+  {
+   "target_norm": "damping off",
+   "rows": 8
+  },
+  {
+   "target_norm": "damping off late blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "early",
+   "rows": 1
+  },
+  {
+   "target_norm": "early blight",
+   "rows": 52
+  },
+  {
+   "target_norm": "fruit borer",
+   "rows": 43
+  },
+  {
+   "target_norm": "fruit borer leaf eating caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit borer: helicoverpa armigera leaf miner: liriomyza trifolii thrips: thrips tabaci",
+   "rows": 1
+  },
+  {
+   "target_norm": "fruit rot",
+   "rows": 2
+  },
+  {
+   "target_norm": "fruit spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "grey leaf mould",
+   "rows": 1
+  },
+  {
+   "target_norm": "helicoverpa armigera",
+   "rows": 3
+  },
+  {
+   "target_norm": "jassids",
+   "rows": 4
+  },
+  {
+   "target_norm": "late blight",
+   "rows": 41
+  },
+  {
+   "target_norm": "leaf eating caterpillar",
+   "rows": 1
+  },
+  {
+   "target_norm": "leaf miner",
+   "rows": 12
+  },
+  {
+   "target_norm": "leaf spot",
+   "rows": 5
+  },
+  {
+   "target_norm": "light blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "mites",
+   "rows": 3
+  },
+  {
+   "target_norm": "pinworm",
+   "rows": 1
+  },
+  {
+   "target_norm": "pod borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "powdery mildew",
+   "rows": 6
+  },
+  {
+   "target_norm": "red spider mites",
+   "rows": 3
+  },
+  {
+   "target_norm": "red spider mites whitefly",
+   "rows": 1
+  },
+  {
+   "target_norm": "ring rot",
+   "rows": 3
+  },
+  {
+   "target_norm": "root knot nematode",
+   "rows": 11
+  },
+  {
+   "target_norm": "root rot",
+   "rows": 2
+  },
+  {
+   "target_norm": "seedling wilt",
+   "rows": 2
+  },
+  {
+   "target_norm": "septoria leaf blight",
+   "rows": 1
+  },
+  {
+   "target_norm": "septoria leaf spot",
+   "rows": 4
+  },
+  {
+   "target_norm": "spodoptera litura",
+   "rows": 1
+  },
+  {
+   "target_norm": "spodoptera litura helicoverpa armigera early blight leaf spot",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 12
+  },
+  {
+   "target_norm": "tobacco caterpillar",
+   "rows": 5
+  },
+  {
+   "target_norm": "tobacco caterpillar fruit borer",
+   "rows": 1
+  },
+  {
+   "target_norm": "two spotted spider mites",
+   "rows": 2
+  },
+  {
+   "target_norm": "whitefly",
+   "rows": 24
+  },
+  {
+   "target_norm": "wilt",
+   "rows": 10
+  }
+ ]
+}

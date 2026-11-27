@@ -1,0 +1,1602 @@
+{
+ "abamectin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 23,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "abamectin"
+ },
+ "acephate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 27,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "acephate"
+ },
+ "acetamiprid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 27,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "acetamiprid"
+ },
+ "alpha-cypermethrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "alpha-cypermethrin"
+ },
+ "ametoctradin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "ametoctradin"
+ },
+ "amisulbrom": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 49,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "amisulbrom"
+ },
+ "azoxystrobin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 49,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "azoxystrobin"
+ },
+ "bacillus thuringiensis serovar kurstaki": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bacillus thuringiensis (bt)"
+ },
+ "bacillus thuringiensis var. galleriae": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bacillus thuringiensis (bt)"
+ },
+ "bacillus thuringiensis var. kurstaki": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bacillus thuringiensis (bt)"
+ },
+ "bacillus thuringiensis var. kurstaki serotype": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bacillus thuringiensis (bt)"
+ },
+ "bacillus thuringiensis var. kurstaki strain hd": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bacillus thuringiensis (bt)"
+ },
+ "benalaxyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "benalaxyl"
+ },
+ "benfuracarb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 27,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "benfuracarb"
+ },
+ "beta-cyfluthrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 23,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "beta-cyfluthrin"
+ },
+ "bifenazate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 49,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "bifenazate"
+ },
+ "bifenthrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 27,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "bifenthrin"
+ },
+ "bitertanol": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 49,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "bitertanol"
+ },
+ "boscalid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 49,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "boscalid"
+ },
+ "brodifacoum": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 21,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ia",
+  "who_name": "brodifacoum"
+ },
+ "bromadiolone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 21,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ia",
+  "who_name": "bromadiolone"
+ },
+ "bupirimate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "bupirimate"
+ },
+ "buprofezin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "buprofezin"
+ },
+ "captan": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "captan"
+ },
+ "carbendazim": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "carbendazim"
+ },
+ "carbofuran": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 23,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "carbofuran"
+ },
+ "carbosulfan": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 28,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "carbosulfan"
+ },
+ "carboxin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 41,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "carboxin"
+ },
+ "carpropamid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "carpropamid"
+ },
+ "cartap hydrochloride": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 28,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "cartap"
+ },
+ "chlorantraniliprole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "chlorantraniliprole"
+ },
+ "chlorfenapyr": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 28,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "chlorfenapyr"
+ },
+ "chlorfluazuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "chlorfluazuron"
+ },
+ "chlorothalonil": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "chlorothalonil"
+ },
+ "chlorpyrifos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "chlorpyrifos"
+ },
+ "clothianidin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "clothianidin"
+ },
+ "copper hydroxide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "copper hydroxide"
+ },
+ "copper oxychloride": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "copper oxychloride"
+ },
+ "copper sulfate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "copper sulfate"
+ },
+ "copper sulfate pentahydrate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "copper sulfate"
+ },
+ "coumatetralyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 23,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "coumatetralyl"
+ },
+ "cyantraniliprole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 50,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "cyantraniliprole"
+ },
+ "cyazofamid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 51,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "cyazofamid"
+ },
+ "cyclaniliprole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 42,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "cyclaniliprole"
+ },
+ "cyflumetofen": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 42,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "cyflumetofen"
+ },
+ "cymoxanil": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "cymoxanil"
+ },
+ "cypermethrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "cypermethrin"
+ },
+ "cyproconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 30,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "cyproconazole"
+ },
+ "dazomet": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 30,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "dazomet"
+ },
+ "deltamethrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 30,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "deltamethrin"
+ },
+ "diafenthiuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 42,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "diafenthiuron"
+ },
+ "difenoconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 30,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "difenoconazole"
+ },
+ "diflubenzuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 42,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "diflubenzuron"
+ },
+ "dimethoate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "dimethoate"
+ },
+ "dimethomorph": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 43,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "dimethomorph"
+ },
+ "dinocap": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "dinocap"
+ },
+ "dinotefuran": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 43,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "dinotefuran"
+ },
+ "dithianon": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "dithianon"
+ },
+ "dodine": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "dodine"
+ },
+ "ediphenphos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 24,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "edifenphos"
+ },
+ "emamectin benzoate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "emamectin benzoate"
+ },
+ "ethion": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "ethion"
+ },
+ "ethiprole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 51,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "ethiprole"
+ },
+ "ethofenoprox": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 52,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "etofenprox"
+ },
+ "etoxazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 43,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "etoxazole"
+ },
+ "famoxadone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 52,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "famoxadone"
+ },
+ "fenamidone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 43,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "fenamidone"
+ },
+ "fenazaquin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 31,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fenazaquin"
+ },
+ "fenobucarb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fenobucarb"
+ },
+ "fenpropathrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fenpropathrin"
+ },
+ "fenpyroximate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fenpyroximate"
+ },
+ "fenvalerate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fenvalerate"
+ },
+ "fipronil": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fipronil"
+ },
+ "flocoumafen": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 21,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ia",
+  "who_name": "flocoumafen"
+ },
+ "flonicamid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "flonicamid"
+ },
+ "flubendiamide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "flubendiamide"
+ },
+ "fludioxonil": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 52,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "fludioxonil"
+ },
+ "fluensulfone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fluensulfone"
+ },
+ "flufenoxuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "flufenoxuron"
+ },
+ "fluopicolide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 52,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "fluopicolide"
+ },
+ "fluopyram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "fluopyram"
+ },
+ "flupyradifurone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "flupyradifurone"
+ },
+ "flusilazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 32,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "flusilazole"
+ },
+ "flutriafol": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 33,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "flutriafol"
+ },
+ "fluvalinate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 33,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "fluvalinate"
+ },
+ "fluxapyroxad": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "fluxapyroxad"
+ },
+ "fosetyl-al": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 53,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "fosetyl-aluminium"
+ },
+ "hexaconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "hexaconazole"
+ },
+ "hexythiazox": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 53,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "hexythiazox"
+ },
+ "imidacloprid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 33,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "imidacloprid"
+ },
+ "indoxacarb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 33,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "indoxacarb"
+ },
+ "iprobenfos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "iprobenfos"
+ },
+ "iprodione": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 44,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "iprodione"
+ },
+ "iprovalicarb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 53,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "iprovalicarb"
+ },
+ "isoprothiolane": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "isoprothiolane"
+ },
+ "isopyrazam": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "isopyrazam"
+ },
+ "kasugamycin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 53,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "kasugamycin"
+ },
+ "kresoxim-methyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 45,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "kresoxim-methyl"
+ },
+ "lambda-cyhalothrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 29,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "lambda-cyhalothrin"
+ },
+ "lufenuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 45,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "lufenuron"
+ },
+ "malathion": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 45,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "malathion"
+ },
+ "mancozeb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 54,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "mancozeb"
+ },
+ "mandipropamid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 54,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "mandipropamid"
+ },
+ "mepiquat chloride": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "mepiquat"
+ },
+ "metaflumizone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 54,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "metaflumizone"
+ },
+ "metalaxyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "metalaxyl"
+ },
+ "metaldehyde": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 34,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "metaldehyde"
+ },
+ "metiram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 54,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "metiram"
+ },
+ "metrafenone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 54,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "metrafenone"
+ },
+ "monocrotophos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 25,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "monocrotophos"
+ },
+ "myclobutanil": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 35,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "myclobutanil"
+ },
+ "nitenpyram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 35,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "nitenpyram"
+ },
+ "novaluron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 55,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "novaluron"
+ },
+ "oxydemeton-methyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 25,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "oxydemeton-methyl"
+ },
+ "penconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 46,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "penconazole"
+ },
+ "pencycuron": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 55,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "pencycuron"
+ },
+ "permethrin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "permethrin"
+ },
+ "phenthoate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "phenthoate"
+ },
+ "phosalone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "phosalone"
+ },
+ "phosmet": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "phosmet"
+ },
+ "picoxystrobin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 46,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "picoxystrobin"
+ },
+ "prochloraz": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "prochloraz"
+ },
+ "profenofos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "profenofos"
+ },
+ "propamocarb hydrochloride": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "propamocarb"
+ },
+ "propargite": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 46,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "propargite"
+ },
+ "propiconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 36,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "propiconazole"
+ },
+ "propineb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "propineb"
+ },
+ "pydiflumetofen": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "pydiflumetofen"
+ },
+ "pymetrozine": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 46,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "pymetrozine"
+ },
+ "pyridaben": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 37,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "pyridaben"
+ },
+ "pyriofenone": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 46,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "pyriofenone"
+ },
+ "pyriproxyfen": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "pyriproxyfen"
+ },
+ "quinalphos": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 37,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "quinalphos"
+ },
+ "sedaxane": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "sedaxane"
+ },
+ "spinetoram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 56,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "spinetoram"
+ },
+ "spinosad": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 47,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "spinosad"
+ },
+ "spirotetramat": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 47,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "spirotetramat"
+ },
+ "sulfoxaflor": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "sulfoxaflor"
+ },
+ "sulfur": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 47,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "sulphur"
+ },
+ "tebuconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "tebuconazole"
+ },
+ "tebufenpyrad": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "tebufenpyrad"
+ },
+ "tetraconazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "tetraconazole"
+ },
+ "thiacloprid": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "thiacloprid"
+ },
+ "thiamethoxam": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "thiamethoxam"
+ },
+ "thifluzamide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 57,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "thifluzamide"
+ },
+ "thiocyclam hydrogen oxalate": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "thiocyclam"
+ },
+ "thiodicarb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "thiodicarb"
+ },
+ "thiophanate-methyl": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 57,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "thiophanate-methyl"
+ },
+ "thiram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "thiram"
+ },
+ "triadimefon": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 38,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "triadimefon"
+ },
+ "tricyclazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 39,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "tricyclazole"
+ },
+ "trifloxystrobin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 57,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "trifloxystrobin"
+ },
+ "triflumezopyrim": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 47,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "triflumezopyrim"
+ },
+ "triflumizole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 39,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "triflumizole"
+ },
+ "triticonazole": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 47,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "III",
+  "who_name": "triticonazole"
+ },
+ "validamycin": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 58,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "validamycin"
+ },
+ "zinc phosphide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 25,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "Ib",
+  "who_name": "zinc phosphide"
+ },
+ "zineb": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 58,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "zineb"
+ },
+ "ziram": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 39,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "II",
+  "who_name": "ziram"
+ },
+ "zoxamide": {
+  "source": {
+   "edition": "2019",
+   "file": "9789240005662-eng.pdf",
+   "table_page": 58,
+   "url": "https://iris.who.int/handle/10665/332193"
+  },
+  "who_class": "U",
+  "who_name": "zoxamide"
+ }
+}

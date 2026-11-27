@@ -16,3 +16,6 @@ public/data/
 # eval: downloaded images and archives (manifest eval/testset.json is committed)
 eval/images/
 eval/raw/
+eval/.venv/
+eval/models/
+eval/images_field/

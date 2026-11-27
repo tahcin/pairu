@@ -291,3 +291,28 @@ TE = {
  "onion_purple_blotch": ("ఊదా మచ్చ తెగులు", "descriptive"), "onion_stemphylium_blight": ("ఆకు ఎండు తెగులు (స్టెంఫీలియం)", "descriptive"),
  "onion_downy_mildew": ("బూజు తెగులు", "descriptive"), "onion_thrips": ("తామర పురుగు", "p22"), "onion_basal_rot": ("అడుగు కుళ్ళు తెగులు", "descriptive"),
 }
+
+# "Should I spray yet?": the Economic Threshold Level as the cited page states it, in plain words.
+# AESA and DPPQS first; the TNAU page for that pest where neither gives one. Left out when no page gives one.
+ETL = {
+ "paddy_bph": ("Spray only when you count 5 to 10 hoppers per hill, or 2 per hill where brown plant hopper comes every year.", "extra:ppqs_rice_bph"),
+ "paddy_stem_borer": ("In the nursery, 1 egg mass per square metre. From tillering, 2 egg masses per square metre, or 10% dead hearts, or 1 moth per square metre, or 25 moths per trap in a week.", "aesa:rice"),
+ "paddy_leaf_folder": ("2 fully damaged leaves with a caterpillar inside per hill.", "aesa:rice"),
+ "paddy_gall_midge": ("1 gall per square metre, or 10% silver shoots.", "aesa:rice"),
+ "paddy_blast": ("Leaf blast: 3 to 5 spots per leaf. Neck blast: 2 to 5 plants with infected necks per square metre.", "aesa:rice"),
+ "paddy_brown_spot": ("2 to 3 spots per leaf and 2 to 3 infected plants per square metre.", "aesa:rice"),
+ "paddy_sheath_blight": ("Spots 5 to 6 mm long and 2 to 3 infected plants per square metre.", "aesa:rice"),
+ "paddy_blb": ("2 to 3 infected leaves per square metre (in the nursery, 2 to 3 wilting plants per square metre).", "aesa:rice"),
+ "cotton_jassid": ("More than 2 leafhoppers per leaf, with a few lower leaves crinkled and curled and their edges turning yellow.", "aesa:cotton"),
+ "cotton_whitefly": ("6 adult whiteflies per leaf in the upper part of the plant before 10 in the morning, or more than 10 in the middle of the plant on more than half the plants. A smoky cloud of flies rises when you shake the plant gently.", "extra:ppqs_cotton_whitefly"),
+ "cotton_pink_bollworm": ("10% damaged (rosette) flowers, or 10% damaged green bolls (2 out of 20 bolls with white or pink larvae or exit holes), or 8 moths per pheromone trap per night for 3 nights in a row.", "extra:ppqs_cotton_pbw"),
+ "groundnut_leaf_miner": ("2 to 3 caterpillars per plant.", "aesa:groundnut"),
+ "groundnut_bud_necrosis": ("For the thrips that spread this virus: 5 adult thrips per terminal bud.", "aesa:groundnut"),
+ "maize_fall_armyworm": ("From seedling to mid-whorl stage, act when about 10% of plants are damaged (for example 2 out of 20 plants checked on a W-shaped walk). After mid-whorl, the same level does not call for a spray.", "extra:vikaspedia_faw"),
+ "maize_downy_mildew": ("10% of plants affected.", "aesa:maize"),
+ "maize_turcicum_blight": ("10% of plants affected by leaf blight.", "aesa:maize"),
+ "maize_maydis_blight": ("10% of plants affected by leaf blight.", "aesa:maize"),
+ "tomato_fruit_borer": ("10% fruit damage.", "tomato_tomato_1.txt"),
+ "blackgram_pod_borer": ("3 caterpillars per plant.", "greenblack_crop_prot_crop_insect_pul_bla_and_20green_2.txt"),
+}
+REC_SET["maize_fall_armyworm"] = ["emamectin benzoate", "spinosad", "chlorantraniliprole"]

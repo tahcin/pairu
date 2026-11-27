@@ -42,6 +42,7 @@ def main():
             if not (0 <= a["source"] < n) or not a["text"]: errs.append(f"{i}: bad avoid item")
         for r in d.get("recommended_actives", []):
             if not (0 <= r["source"] < n) or not r["active"]: errs.append(f"{i}: bad recommended_actives item")
+        if "etl" in d and not (0 <= d["etl"]["source"] < n and d["etl"]["text"]): errs.append(f"{i}: bad etl")
         if not d["names"].get("te"): errs.append(f"{i}: no Telugu name")
         ns = d.get("names_source", {})
         if set(ns) - set(d["names"]) or any(v not in ("vikaspedia", "descriptive") for v in ns.values()):

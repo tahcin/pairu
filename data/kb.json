@@ -497,7 +497,11 @@
      "active": "zineb",
      "source": 1
     }
-   ]
+   ],
+   "etl": {
+    "text": "Leaf blast: 3 to 5 spots per leaf. Neck blast: 2 to 5 plants with infected necks per square metre.",
+    "source": 2
+   }
   },
   {
    "id": "paddy_brown_spot",
@@ -601,7 +605,11 @@
      "active": "tricyclazole",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "2 to 3 spots per leaf and 2 to 3 infected plants per square metre.",
+    "source": 1
+   }
   },
   {
    "id": "paddy_blb",
@@ -688,7 +696,11 @@
     "te": "vikaspedia"
    },
    "avoid": [],
-   "recommended_actives": []
+   "recommended_actives": [],
+   "etl": {
+    "text": "2 to 3 infected leaves per square metre (in the nursery, 2 to 3 wilting plants per square metre).",
+    "source": 1
+   }
   },
   {
    "id": "paddy_sheath_blight",
@@ -792,7 +804,11 @@
      "active": "validamycin",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "Spots 5 to 6 mm long and 2 to 3 infected plants per square metre.",
+    "source": 1
+   }
   },
   {
    "id": "paddy_bph",
@@ -980,7 +996,11 @@
      "active": "buprofezin",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "Spray only when you count 5 to 10 hoppers per hill, or 2 per hill where brown plant hopper comes every year.",
+    "source": 1
+   }
   },
   {
    "id": "paddy_leaf_folder",
@@ -1097,7 +1117,11 @@
      "active": "thiamethoxam",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "2 fully damaged leaves with a caterpillar inside per hill.",
+    "source": 1
+   }
   },
   {
    "id": "paddy_gall_midge",
@@ -1216,7 +1240,11 @@
      "active": "thiamethoxam",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "1 gall per square metre, or 10% silver shoots.",
+    "source": 2
+   }
   },
   {
    "id": "paddy_false_smut",
@@ -1438,7 +1466,11 @@
      "active": "imidacloprid",
      "source": 1
     }
-   ]
+   ],
+   "etl": {
+    "text": "In the nursery, 1 egg mass per square metre. From tillering, 2 egg masses per square metre, or 10% dead hearts, or 1 moth per square metre, or 25 moths per trap in a week.",
+    "source": 1
+   }
   },
   {
    "id": "paddy_healthy",
@@ -1827,7 +1859,11 @@
      "active": "chlorpyrifos",
      "source": 1
     }
-   ]
+   ],
+   "etl": {
+    "text": "10% damaged (rosette) flowers, or 10% damaged green bolls (2 out of 20 bolls with white or pink larvae or exit holes), or 8 moths per pheromone trap per night for 3 nights in a row.",
+    "source": 1
+   }
   },
   {
    "id": "cotton_whitefly",
@@ -2031,7 +2067,11 @@
      "active": "thiamethoxam",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "6 adult whiteflies per leaf in the upper part of the plant before 10 in the morning, or more than 10 in the middle of the plant on more than half the plants. A smoky cloud of flies rises when you shake the plant gently.",
+    "source": 1
+   }
   },
   {
    "id": "cotton_jassid",
@@ -2197,7 +2237,11 @@
      "active": "thiamethoxam",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "More than 2 leafhoppers per leaf, with a few lower leaves crinkled and curled and their edges turning yellow.",
+    "source": 1
+   }
   },
   {
    "id": "cotton_healthy",
@@ -3470,7 +3514,11 @@
     "te": "descriptive"
    },
    "avoid": [],
-   "recommended_actives": []
+   "recommended_actives": [],
+   "etl": {
+    "text": "For the thrips that spread this virus: 5 adult thrips per terminal bud.",
+    "source": 1
+   }
   },
   {
    "id": "groundnut_leaf_miner",
@@ -3527,7 +3575,11 @@
     "te": "descriptive"
    },
    "avoid": [],
-   "recommended_actives": []
+   "recommended_actives": [],
+   "etl": {
+    "text": "2 to 3 caterpillars per plant.",
+    "source": 1
+   }
   },
   {
    "id": "groundnut_healthy",
@@ -3739,7 +3791,11 @@
      "active": "zineb",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "10% of plants affected by leaf blight.",
+    "source": 1
+   }
   },
   {
    "id": "maize_maydis_blight",
@@ -3832,7 +3888,11 @@
      "active": "metalaxyl",
      "source": 1
     }
-   ]
+   ],
+   "etl": {
+    "text": "10% of plants affected by leaf blight.",
+    "source": 2
+   }
   },
   {
    "id": "maize_grey_leaf_spot",
@@ -3966,7 +4026,11 @@
      "active": "metalaxyl",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "10% of plants affected.",
+    "source": 2
+   }
   },
   {
    "id": "maize_fall_armyworm",
@@ -4057,7 +4121,24 @@
     "te": "vikaspedia"
    },
    "avoid": [],
-   "recommended_actives": []
+   "recommended_actives": [
+    {
+     "active": "emamectin benzoate",
+     "source": 0
+    },
+    {
+     "active": "spinosad",
+     "source": 0
+    },
+    {
+     "active": "chlorantraniliprole",
+     "source": 0
+    }
+   ],
+   "etl": {
+    "text": "From seedling to mid-whorl stage, act when about 10% of plants are damaged (for example 2 out of 20 plants checked on a W-shaped walk). After mid-whorl, the same level does not call for a spray.",
+    "source": 0
+   }
   },
   {
    "id": "maize_healthy",
@@ -4654,7 +4735,11 @@
      "active": "quinalphos",
      "source": 0
     }
-   ]
+   ],
+   "etl": {
+    "text": "10% fruit damage.",
+    "source": 0
+   }
   },
   {
    "id": "tomato_healthy",
@@ -6416,7 +6501,11 @@
     "te": "vikaspedia"
    },
    "avoid": [],
-   "recommended_actives": []
+   "recommended_actives": [],
+   "etl": {
+    "text": "3 caterpillars per plant.",
+    "source": 0
+   }
   },
   {
    "id": "blackgram_healthy",

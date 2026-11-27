@@ -7,7 +7,7 @@ import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES  # noqa: E402
+from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL  # noqa: E402
 
 APP = os.path.dirname(HERE)
 REV = os.path.join(HERE, "kb_reviewed")
@@ -146,9 +146,11 @@ def main():
                 if rr["active"] in REC_DROP.get(i, []) or rr["active"] in BIO_ACTIVES:
                     continue
                 pg = rr["page"]
-                f = d["text_files"][pg] if pg is not None else next(x for x in d["text_files"] if x.startswith("extra:ppqs_"))
+                f = d["text_files"][pg] if pg is not None else next(x for x in d["text_files"] if x.startswith("extra:"))
                 ra.append({"active": rr["active"], "source": sidx(f)})
             e["recommended_actives"] = ra
+            if i in ETL:
+                e["etl"] = {"text": ETL[i][0], "source": sidx(ETL[i][1])}
         h = HEALTHY[cid]
         hid = f"{cid}_healthy"
         diseases.append({"id": hid, "crop": cid, "name_en": "Healthy", "names": {"te": "ఆరోగ్యంగా ఉంది"}, "names_source": {"te": "descriptive"}, "kind": "abiotic", "pathogen": "",

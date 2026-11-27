@@ -184,5 +184,6 @@
   "tryPhoto": "Try a photo of the leaf",
   "mixtureBadge": "mixture",
   "sprayWaterPrinted": "Spray water, as printed",
-  "unitFromType": "The list prints no unit here; the unit comes from the product type (ml for liquids, g for powders). Check the label."
+  "unitFromType": "The list prints no unit here; the unit comes from the product type (ml for liquids, g for powders). Check the label.",
+  "footWhat": "What is Pairu?"
 }

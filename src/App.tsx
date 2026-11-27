@@ -498,6 +498,9 @@ export function SiteFooter({ lang }: { lang: Lang }) {
   };
   return (
     <footer className="foot">
+      <a href="/home" onClick={go("/home")}>
+        {t(lang, "footWhat")}
+      </a>
       <a href="/about" onClick={go("/about")}>
         {t(lang, "footAbout")}
       </a>

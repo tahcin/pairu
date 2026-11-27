@@ -6,7 +6,7 @@ The desktop film (900 px and up) lives in `src/pages/landing/` and is owned by t
 
 | What | Where | Notes |
 |---|---|---|
-| Register data for the particles | `public/landing/register.json` (served at `/landing/register.json`) | `{ total, crops[{id,en,te,count}], types[], brownSpot{te,en,uses,shown,top[{product,dose,wait,ipm,who}]}, u[[cropIndex, typeIndex, flag]] }`. `flag`: 0 other, 1 brown spot use on the card, 2 brown spot use not shown, 3 to 5 the card's first three rows. 2,806 entries. |
+| Register data for the particles | `public/landing/register.json` (served at `/landing/register.json`) | `{ total, crops[{id,en,te,count}], types[], brownSpot{te,en,names{hi,ta,kn,bn,or},uses,shown,top[{product,dose,wait,ipm,who}]}, u[[cropIndex, typeIndex, flag]] }`. `brownSpot.names` holds the disease's name exactly as in `data/kb_<lang>.json`, for the language beat after the Telugu name (languages without an entry are left out). `flag`: 0 other, 1 brown spot use on the card, 2 brown spot use not shown, 3 to 5 the card's first three rows. 2,806 entries. |
 | Its builder | `scripts/build-landing-data.mjs` | Reads `data/` and the live English advice card (read-only, no model call). Re-run only if `data/` changes; do not change its output format without telling the desktop workstream. |
 | Scene timing and chapters | `src/pages/landing/timing.ts` | `T` (progress points) and `CHAPTERS`. Import if useful; copy if you need different values. |
 | Static story, dot grids, claims and results copy | `src/pages/landing/Film.tsx` exports `Story` and `Dots`; the `CLAIMS` and `RESULTS` text is in the same file | Text is copied from `submission/contrast.md` and `eval/results.json`; keep the wording and numbers identical. |

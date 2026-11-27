@@ -167,7 +167,7 @@ html.film-page::-webkit-scrollbar {
   display: inline-flex;
   gap: 10px;
   min-width: 150px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -227,7 +227,7 @@ html.film-page::-webkit-scrollbar {
   left: 50%;
   transform: translate(-50%, 4px);
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   opacity: 0;
   pointer-events: none;
@@ -424,6 +424,27 @@ html.film-page::-webkit-scrollbar {
 .f-te-name .g {
   display: inline-block;
 }
+.f-name-stack {
+  display: grid;
+  justify-items: center;
+}
+.f-name-stack > * {
+  grid-area: 1 / 1;
+}
+.n-alt {
+  font-family: var(--font);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.n-en {
+  font-family: var(--font);
+  letter-spacing: -0.04em;
+}
+.f-langs {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--ink-3);
+}
 .f-en-name,
 .f-tag {
   margin: 0;
@@ -469,7 +490,7 @@ html.film-page::-webkit-scrollbar {
   justify-items: center;
   text-align: center;
   gap: 2px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--ink-3);
   line-height: 1.3;
 }
@@ -1035,4 +1056,8 @@ html.app-open .f-bar {
 .f-expander {
   position: fixed;
   z-index: 200;
+}
+.f-name-stack .n-alt {
+  font-size: clamp(48px, 5vw, 96px);
+  align-self: center;
 }

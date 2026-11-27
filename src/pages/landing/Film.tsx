@@ -52,6 +52,13 @@ const RESULTS = [
   },
 ];
 
+// The disease's name in the other scripts, exactly as in the data; languages without one are skipped.
+const CYCLE = ["hi", "ta", "kn", "bn", "or"];
+function cycleNames(reg: Register | null) {
+  const names = reg?.brownSpot.names || {};
+  return [...CYCLE.filter((l) => names[l]).map((l) => ({ lang: l, name: names[l] })), { lang: "en", name: reg?.brownSpot.en || "Brown spot" }];
+}
+
 function useRegister() {
   const [reg, setReg] = useState<Register | null>(null);
   useEffect(() => {
@@ -229,9 +236,23 @@ export function Film() {
       tl.to(q(".c-open"), { autoAlpha: 0, duration: 0.025, ease: "power2.in" }, 0.06);
       show(".c-desc", 0.09, 0.185);
       show(".c-scan", 0.2, 0.265);
-      show(".c-name", 0.272, 0.35);
-      tl.fromTo(q(".c-name .g"), { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.02, stagger: 0.001 }, 0.274);
-      tl.fromTo(q(".c-name .sub"), { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.012, stagger: 0.008 }, 0.3);
+      show(".c-name", 0.272, 0.362);
+      tl.fromTo(q(".c-name .g"), { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.018, stagger: 0.0009 }, 0.274);
+      tl.fromTo(q(".c-name .f-en-name"), { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.01 }, 0.288);
+      // The same name in the other scripts, one after another, then Telugu again.
+      const alts = q(".c-name .n-alt");
+      const step = 0.0055;
+      gsap.set(alts, { autoAlpha: 0 });
+      tl.to(q(".c-name .n-te"), { autoAlpha: 0, y: -14, duration: 0.003, ease: "power2.in" }, 0.302);
+      alts.forEach((el, i) => {
+        const at = 0.304 + i * step;
+        tl.fromTo(el, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.0025 }, at);
+        tl.to(el, { autoAlpha: 0, y: -14, duration: 0.0022, ease: "power2.in" }, at + step - 0.0022);
+      });
+      const back = 0.304 + alts.length * step;
+      tl.fromTo(q(".c-name .n-te"), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.004, immediateRender: false }, back);
+      tl.fromTo(q(".c-name .f-langs"), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.008 }, back + 0.002);
+      tl.fromTo(q(".c-name .f-tag"), { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.01 }, back + 0.008);
       show(".c-every", 0.39, 0.428);
       show(".c-crops", 0.447, 0.488);
       tl.fromTo(q(".c-crops .lab"), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.01, stagger: 0.0012 }, 0.452);
@@ -252,12 +273,7 @@ export function Film() {
       tl.fromTo(q(".c-ev2 .f-dots i"), { autoAlpha: 0, scale: 0.2 }, { autoAlpha: 1, scale: 1, duration: 0.012, stagger: 0.00022 }, 0.906);
       tl.set({}, {}, 1);
 
-      const st = ScrollTrigger.create({
-        trigger: track.current,
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (self) => {
-          const p = self.progress;
+      const sync = (p: number) => {
           film.setProgress(p);
           tl.time(p);
           CLAIMS.forEach((_, i) => {
@@ -267,8 +283,28 @@ export function Film() {
           setProgress(p);
           film.setRunning(p < 0.995 && !document.hidden);
           document.documentElement.classList.toggle("film-done", p >= 0.995);
-        },
+      };
+      const st = ScrollTrigger.create({
+        trigger: track.current,
+        start: "top top",
+        end: "bottom bottom",
+        onUpdate: (self) => sync(self.progress),
       });
+      // A resize changes the track's height in pixels; keep the reader at the same moment of the film.
+      let held = 0;
+      const onInit = () => {
+        held = st.progress;
+      };
+      const onRefresh = () => {
+        if (held > 0 && held < 1) {
+          const y = st.start + (st.end - st.start) * held;
+          lenis.scrollTo(y, { immediate: true, force: true });
+          window.scrollTo(0, y);
+        }
+        sync(held || st.progress);
+      };
+      ScrollTrigger.addEventListener("refreshInit", onInit);
+      ScrollTrigger.addEventListener("refresh", onRefresh);
       const onVis = () => film.setRunning(!document.hidden && st.progress < 0.995);
       document.addEventListener("visibilitychange", onVis);
 
@@ -297,6 +333,8 @@ export function Film() {
       setTimeout(() => alive && setReady(true), 80);
       cleanup = () => {
         window.removeEventListener("keydown", onKey);
+        ScrollTrigger.removeEventListener("refreshInit", onInit);
+        ScrollTrigger.removeEventListener("refresh", onRefresh);
         document.removeEventListener("visibilitychange", onVis);
         document.documentElement.classList.remove("film-done", "film-page", "app-open");
         st.kill();
@@ -316,6 +354,7 @@ export function Film() {
   const bs = reg?.brownSpot;
   const paddy = reg?.crops.find((c) => c.id === "paddy");
   const chilli = reg?.crops.find((c) => c.id === "chilli");
+  const cycle = cycleNames(reg);
   const onField = progress < T.dissolve[0] + 0.01;
   let chapter = 0;
   CHAPTERS.forEach((c, i) => progress >= c.at && (chapter = i));
@@ -399,8 +438,16 @@ export function Film() {
           <p className="cap c-scan f-mega">Pairu looks closely.</p>
 
           <div className="cap c-name">
-            <Graphemes text={bs?.te || NAME_TE} className="f-te-name" />
+            <div className="f-name-stack">
+              <Graphemes text={bs?.te || NAME_TE} className="f-te-name n-te" />
+              {cycle.map((c) => (
+                <span key={c.lang} className={`f-te-name n-alt n-${c.lang}`} lang={c.lang}>
+                  {c.name}
+                </span>
+              ))}
+            </div>
             <p className="sub f-en-name">Brown spot of paddy</p>
+            <p className="f-langs">Telugu first, eleven languages</p>
             <p className="sub f-tag">Crop advice limited to what the Government of India has approved for your crop</p>
           </div>
 

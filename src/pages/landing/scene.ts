@@ -9,7 +9,7 @@ export interface Register {
   total: number;
   crops: { id: string; en: string; te: string; count: number }[];
   types: string[];
-  brownSpot: { te: string; en: string; uses: number; shown: number; top: { product: string; dose: string; wait: number; ipm: boolean; who: string | null }[] };
+  brownSpot: { te: string; en: string; names?: Record<string, string>; uses: number; shown: number; top: { product: string; dose: string; wait: number; ipm: boolean; who: string | null }[] };
   u: [number, number, number][];
 }
 

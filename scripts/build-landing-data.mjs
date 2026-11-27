@@ -31,6 +31,19 @@ const out = {
   brownSpot: {
     te: bs.names?.te || "",
     en: bs.name_en,
+    // The same disease's name in other languages, exactly as in data/kb_<lang>.json (skipped if absent).
+    names: Object.fromEntries(
+      ["hi", "ta", "kn", "bn", "or"]
+        .map((l) => {
+          try {
+            const t = JSON.parse(readFileSync(`data/kb_${l}.json`, "utf8"));
+            return [l, t.diseases?.paddy_brown_spot?.name || ""];
+          } catch {
+            return [l, ""];
+          }
+        })
+        .filter(([, n]) => n),
+    ),
     uses: uses.filter(isBs).length,
     shown: shown.length,
     top: top.map((p) => ({

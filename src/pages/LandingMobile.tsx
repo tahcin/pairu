@@ -441,7 +441,7 @@ function Film({ onWeak }: { onWeak: () => void }) {
                 </span>
               </p>
               {labels?.crops.map((l) => (
-                <span key={l.crop.id} className="lab" style={{ top: l.y, height: l.h, left: labels.box.gutter, width: labels.stripX - labels.box.gutter - 8 }}>
+                <span key={l.crop.id} className="lab" style={{ top: l.y, height: l.h, left: l.x, width: l.w }}>
                   <span className="cn">{l.crop.en}</span>
                   <span className="mono">{fmt(l.crop.count)}</span>
                 </span>
@@ -502,7 +502,7 @@ function Film({ onWeak }: { onWeak: () => void }) {
               )}
               {labels &&
                 CLAIMS.map((c, i) => (
-                  <div key={i} className={`claim claim-${i}`} style={{ top: labels.claims[i].y }}>
+                  <div key={i} className={`claim claim-${i}`} style={{ top: labels.claims[i].y, left: labels.claims[i].x + 26 }}>
                     <span className="cl-said">{c.said}</span>
                     <span className="cl-why">{c.why}</span>
                   </div>

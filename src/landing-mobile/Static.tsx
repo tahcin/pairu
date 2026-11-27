@@ -58,7 +58,7 @@ function Strips({ reg, width }: { reg: Register; width: number }) {
     <div className="ms-strips" style={{ height: H }}>
       <canvas ref={cv} aria-label={`${fmt(reg.total)} approved uses across 13 crops`} role="img" />
       {s.labels.map((l) => (
-        <span key={l.crop.id} className="lab" style={{ top: l.y, height: l.h, width: s.labelW }}>
+        <span key={l.crop.id} className="lab" style={{ top: l.y, height: l.h, left: l.x, width: l.w }}>
           <span className="cn">{l.crop.en}</span>
           <span className="mono">{fmt(l.crop.count)}</span>
         </span>

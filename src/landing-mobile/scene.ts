@@ -405,7 +405,7 @@ export function createMobileFilm(canvas: HTMLCanvasElement, reg: Register, opts:
 
   // Camera: above the crop, looking into the sun so the sky holds the title; then down into the
   // crop to the leaf.
-  const camStart = { pos: new THREE.Vector3(0.3, 1.62, 12.2), look: new THREE.Vector3(-0.8, 4.6, -30) };
+  const camStart = { pos: new THREE.Vector3(-0.85, 1.62, 12.2), look: new THREE.Vector3(-1.6, 4.6, -30) };
   const camEnd = { pos: new THREE.Vector3(0.18, 1.66, 1.95), look: new THREE.Vector3(0, 1.62, 0) };
   const look = new THREE.Vector3();
 

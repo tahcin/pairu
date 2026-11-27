@@ -2,6 +2,9 @@
 import { navigate } from "../App";
 import { DEMO, PHOTO, REPO, RESULTS } from "./data";
 
+// The six sample photos in the app (src/App.tsx), in the same order.
+const SAMPLES = ["tomato_late_blight.jpg", "tomato_septoria.jpg", "tomato_leaf_curl.jpg", "potato_early_blight.jpg", "rice_brownspot.jpg", "rice_blast.jpg"];
+
 export const go = (path: string) => (e: React.MouseEvent) => {
   e.preventDefault();
   navigate(path);
@@ -103,6 +106,11 @@ export function Finale({ onReplay, photo }: { onReplay?: () => void; photo?: boo
     <section className="mf-finale">
       <h2>Try it on a sample leaf.</h2>
       <p>Tap a crop, then &ldquo;Try a sample photo&rdquo;. One of the six is blurry, to show how Pairu says it is not sure.</p>
+      <div className="mf-samples" aria-hidden="true">
+        {SAMPLES.map((f) => (
+          <img key={f} src={`/samples/${f}`} alt="" width={300} height={300} loading="lazy" decoding="async" />
+        ))}
+      </div>
       <div className="mf-actions">
         <a className="mf-btn primary" href="/app" onClick={openApp}>
           Open the app

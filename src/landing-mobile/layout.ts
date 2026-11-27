@@ -25,6 +25,8 @@ export interface Box {
 }
 
 export interface CropLabel {
+  x: number;
+  w: number;
   y: number;
   h: number;
   crop: Register["crops"][number];
@@ -38,7 +40,7 @@ export interface MobileLabels {
   brown: { x: number; y: number; w: number; h: number };
   rows: { x: number; y: number }[];
   chilli: { x: number; y: number; w: number; h: number };
-  claims: { y: number }[];
+  claims: { x: number; y: number }[];
 }
 
 const clampN = (x: number, a: number, b: number) => Math.min(b, Math.max(a, x));
@@ -48,34 +50,56 @@ const landscape = (b: Box) => b.W > b.H * 1.1;
 // sits in a column on the left; the dot pitch is the largest that fits the screen.
 export function cropStrips(reg: Register, b: Box, topFrac = 0.2) {
   const g = b.gutter;
-  const labelW = Math.min(118, b.W * 0.33);
-  const x0 = g + labelW + 8;
-  const stripW = b.W - g - x0;
+  const wide = landscape(b);
+  // Portrait: one column of strips. Landscape: two columns, split where the dots fit largest.
+  const ncol = wide ? 2 : 1;
+  const colGap = 32;
+  const colW = (b.W - g * 2 - colGap * (ncol - 1)) / ncol;
+  const labelW = Math.min(118, colW * 0.33);
+  const stripW = colW - labelW - 8;
   const top = Math.max(b.top + 112, b.H * topFrac);
   const avail = b.H - b.bottom - 20 - top;
-  const gap = landscape(b) ? 2 : 6;
-  const minH = landscape(b) ? 14 : 20;
-  let pitch = 10;
-  let perRow = 1;
-  const height = (p: number) => {
-    perRow = Math.max(1, Math.floor(stripW / p));
-    return reg.crops.reduce((s, c) => s + Math.max(Math.ceil(c.count / perRow) * p, minH) + gap, -gap);
+  const gap = wide ? 4 : 6;
+  const minH = wide ? 16 : 20;
+  const fit = (crops: Register["crops"]) => {
+    let p = 12;
+    const h = (q: number) => {
+      const per = Math.max(1, Math.floor(stripW / q));
+      return crops.reduce((s, c) => s + Math.max(Math.ceil(c.count / per) * q, minH) + gap, -gap);
+    };
+    while (p > 3 && h(p) > avail) p -= 0.1;
+    return p;
   };
-  while (pitch > 3 && height(pitch) > avail) pitch -= 0.1;
-  height(pitch);
+  let split = reg.crops.length;
+  let pitch = fit(reg.crops);
+  if (ncol === 2) {
+    pitch = 0;
+    for (let k = 1; k < reg.crops.length; k++) {
+      const q = Math.min(fit(reg.crops.slice(0, k)), fit(reg.crops.slice(k)));
+      if (q > pitch) {
+        pitch = q;
+        split = k;
+      }
+    }
+  }
+  const perRow = Math.max(1, Math.floor(stripW / pitch));
   const labels: CropLabel[] = [];
   const rowsOf: { x: number; y: number }[][] = [];
   let y = top;
-  reg.crops.forEach((c) => {
+  reg.crops.forEach((c, i) => {
+    const col = i < split ? 0 : 1;
+    if (i === split) y = top;
+    const lx = g + col * (colW + colGap);
+    const x0 = lx + labelW + 8;
     const rows = Math.ceil(c.count / perRow);
     const h = Math.max(rows * pitch, minH);
-    labels.push({ y, h, crop: c });
+    labels.push({ x: lx, y, h, w: labelW, crop: c });
     const slots: { x: number; y: number }[] = [];
     for (let j = 0; j < c.count; j++) slots.push({ x: x0 + (j % perRow) * pitch + pitch / 2, y: y + Math.floor(j / perRow) * pitch + pitch / 2 });
     rowsOf.push(slots);
     y += h + gap;
   });
-  return { pitch, perRow, x0, top, labels, rowsOf, labelW };
+  return { pitch, perRow, x0: g + labelW + 8, top, labels, rowsOf, labelW };
 }
 
 export function registerFrames(reg: Register, b: Box, N: number, CLAIMS: number) {
@@ -187,11 +211,11 @@ export function registerFrames(reg: Register, b: Box, N: number, CLAIMS: number)
   // 5. Chilli: its 475 uses as a block near the top, four claims from a general AI below.
   const chilli = byCrop[reg.crops.findIndex((c) => c.id === "chilli")];
   const sChilli = copyFrame(sRows);
-  const cTop = Math.max(b.top + 172, H * 0.27);
+  const cTop = wide ? b.top + 150 : Math.max(b.top + 172, H * 0.27);
   // The four claims need about 100 px each on a narrow phone; the chilli block takes what is left.
   const claimNeed = (W < 420 ? 100 : 84) * CLAIMS;
-  const cH = clampN(H - b.bottom - 16 - claimNeed - 26 - cTop, 40, H * 0.13);
-  const cW = W - g * 2;
+  const cH = wide ? H - b.bottom - 16 - cTop : clampN(H - b.bottom - 16 - claimNeed - 26 - cTop, 40, H * 0.13);
+  const cW = wide ? W * 0.44 - g * 2 : W - g * 2;
   let cp = 14;
   let cRow = 1;
   while (cp > 4) {
@@ -208,12 +232,13 @@ export function registerFrames(reg: Register, b: Box, N: number, CLAIMS: number)
     sChilli.alpha[i] = 1;
   });
   const chH = Math.ceil(chilli.length / cRow) * cp;
-  const clTop = cTop + chH + 26;
+  const clTop = wide ? b.top + 24 : cTop + chH + 26;
   const clStep = (H - b.bottom - 16 - clTop) / CLAIMS;
-  const claims = [0, 1, 2, 3].map((c) => ({ y: clTop + c * clStep }));
+  const clX = wide ? W * 0.44 : g;
+  const claims = [0, 1, 2, 3].map((c) => ({ x: clX, y: clTop + c * clStep }));
   for (let c = 0; c < CLAIMS; c++) {
     const i = U + c;
-    sChilli.x[i] = g + 7;
+    sChilli.x[i] = clX + 7;
     sChilli.y[i] = claims[c].y + 11;
     sChilli.col[i] = C.TURMERIC;
     sChilli.size[i] = 13;

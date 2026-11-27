@@ -490,7 +490,6 @@ html.mf-page body {
 }
 .c-chilli .claim {
   position: absolute;
-  left: calc(var(--g) + 26px);
   right: var(--g);
 }
 .mf .cl-said {
@@ -634,6 +633,21 @@ html.mf-page body {
   line-height: 1.5;
   color: var(--ink-2);
   max-width: 32ch;
+}
+.mf-samples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 24px;
+}
+.mf-samples img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  background: var(--paper-sunk);
 }
 .mf-actions {
   display: flex;
@@ -864,7 +878,21 @@ html.mf-page body {
     width: calc((100vw - 2 * var(--g)) / 3 - 40px);
   }
   .mf-ev {
-    max-width: 640px;
+    max-width: 440px;
+    margin-top: 12px;
+  }
+  .mf-dots {
+    gap: 2px;
+  }
+  .c-ev .mf-note {
+    margin-top: 10px;
+  }
+  .c-chilli .mf-h,
+  .c-chilli .mf-src {
+    max-width: calc(50vw - 2 * var(--g));
+  }
+  .mf .row .fig b {
+    font-size: 24px;
   }
   .mf-who {
     min-height: 0;

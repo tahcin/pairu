@@ -726,7 +726,14 @@ const Finale = forwardRef<HTMLElement, { opener: Opener; onReplay: () => void }>
     if (!el) return;
     const io = new IntersectionObserver((e) => e.some((x) => x.isIntersecting) && opener.setPhoneOn(true), { rootMargin: "100% 0px" });
     io.observe(el);
-    return () => io.disconnect();
+    // The phone is sized to the window, so the whole finale (phone, hint and footer) fits on one screen.
+    const fit = () => el.style.setProperty("--ps", String(Math.max(0.55, Math.min(0.82, (window.innerHeight - 310) / 844))));
+    fit();
+    window.addEventListener("resize", fit);
+    return () => {
+      io.disconnect();
+      window.removeEventListener("resize", fit);
+    };
   }, [opener]);
   return (
     <section

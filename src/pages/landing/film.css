@@ -732,14 +732,17 @@ html.film-page::-webkit-scrollbar {
 
 /* Finale */
 .f-finale {
+  --ps: 0.82;
   position: relative;
   z-index: 10;
   background: var(--paper);
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: 1fr auto;
   align-items: center;
-  gap: 64px;
-  padding: 16vh var(--edge) 0;
+  column-gap: 64px;
+  min-height: 100vh;
+  padding: 104px var(--edge) 0;
   margin: 0 auto;
 }
 .f-finale h2 {
@@ -805,15 +808,15 @@ html.film-page::-webkit-scrollbar {
   gap: 14px;
 }
 .f-phone {
-  width: calc(390px * 0.82 + 22px);
-  height: calc(844px * 0.82 + 22px);
+  width: calc(390px * var(--ps) + 22px);
+  height: calc(844px * var(--ps) + 22px);
   padding: 11px;
   border-radius: 54px;
   background: #1a2216;
 }
 .f-screen {
-  width: calc(390px * 0.82);
-  height: calc(844px * 0.82);
+  width: calc(390px * var(--ps));
+  height: calc(844px * var(--ps));
   border-radius: 43px;
   overflow: hidden;
   position: relative;
@@ -826,7 +829,7 @@ html.film-page::-webkit-scrollbar {
   border: 0;
   width: 390px;
   height: 844px;
-  transform: scale(0.82);
+  transform: scale(var(--ps));
   transform-origin: 0 0;
   background: var(--paper);
 }
@@ -867,7 +870,7 @@ html.film-page::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
-  margin-top: 12vh;
+  margin-top: 28px;
   padding: 22px 0 40px;
   border-top: 1px solid var(--line);
   font-size: 14px;

@@ -28,7 +28,7 @@ D = [
  ("cotton_bacterial_blight", "cotton", "Bacterial blight (black arm)", "bacterial", r"cotton_diseases", r"^Bacterial blight", "cotton", r"bacterial blight|black ?arm|angular leaf spot", ["bacterial blight", "bacterial leaf blight", "angular leaf spot", "angular leaf spot or black arm"]),
  ("cotton_alternaria_leaf_spot", "cotton", "Alternaria leaf spot", "fungal", r"cotton_diseases", r"^Alterneria", "cotton", r"alternaria", ["alternaria leaf spot", "alternaria leaf blight", "alternaria leaf", "leaf spot"]),
  ("cotton_grey_mildew", "cotton", "Grey mildew", "fungal", r"cotton_diseases", r"^Grey", "cotton", r"grey mildew|areolate", ["grey mildew"]),
- ("cotton_pink_bollworm", "cotton", "Pink bollworm", "pest", r"cotton_crop", r"^Pink bollworm", "cotton", r"pink boll ?worm|Pectinophora", ["pink bollworm", "pink boll worm", "pectinophora gossypiella"]),
+ ("cotton_pink_bollworm", "cotton", "Pink bollworm", "pest", r"cotton_crop", r"^Pink bollworm", "cotton", r"pink boll ?worm|Pectinophora", ["pink bollworm", "pink boll worm", "pectinophora gossypiella", "boll worms", "bollworm", "boll worm"]),
  ("cotton_whitefly", "cotton", "Whitefly", "pest", r"cotton_crop", r"^Whitefly", "cotton", r"white ?fly|Bemisia", ["whitefly"]),
  ("cotton_jassid", "cotton", "Leafhopper (jassid)", "pest", r"cotton_crop", r"(?i)^leaf ?hopper", "cotton", r"leaf ?hopper|jassid|Amrasca", ["jassids", "leafhopper"]),
  # chilli

@@ -164,11 +164,12 @@ export async function stt(env: Env, file: File, lang: string | null): Promise<{ 
 }
 
 // Farmer's words (any supported language) to English, for matching against KB symptoms.
-export async function toEnglish(env: Env, text: string): Promise<string> {
+export async function toEnglish(env: Env, text: string, lang: string): Promise<string> {
+  if (lang === "en") return text;
   const res = await fetch(`${BASE}/translate`, {
     method: "POST",
     headers: { "content-type": "application/json", "api-subscription-key": env.SARVAM_API_KEY },
-    body: JSON.stringify({ input: text.slice(0, 1800), source_language_code: "auto", target_language_code: "en-IN", model: TRANSLATE_MODEL }),
+    body: JSON.stringify({ input: text.slice(0, 1800), source_language_code: sarvamCode(lang), target_language_code: "en-IN", model: TRANSLATE_MODEL }),
   });
   if (!res.ok) throw new Error(`translate ${res.status}`);
   return ((await res.json()) as { translated_text: string }).translated_text;

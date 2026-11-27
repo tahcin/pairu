@@ -118,7 +118,7 @@ export const api = {
     return call<{ text: string; lang: string | null }>("/api/stt", { method: "POST", body: form });
   },
   symptoms: (crop: string, lang: Lang) => call<{ items: { key: string; text: string }[]; lang: string }>(`/api/symptoms?crop=${crop}&lang=${lang}`),
-  matchSpoken: (crop: string, text: string) => call<{ keys: string[] }>("/api/symptoms", post({ crop, text })),
+  matchSpoken: (crop: string, text: string, lang: string) => call<{ keys: string[] }>("/api/symptoms", post({ crop, text, lang })),
   describe: (crop: string, keys: string[], lang: Lang) => call<Diagnosis>("/api/describe", post({ crop, keys, lang })),
   weather: (lat: number, lon: number) => call<Weather>(`/api/weather?lat=${lat.toFixed(3)}&lon=${lon.toFixed(3)}`),
 };

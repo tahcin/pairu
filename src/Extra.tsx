@@ -60,7 +60,7 @@ export function DescribeStep({
     setMic("stt");
     try {
       const said = await api.stt(blob, lang);
-      const m = said.text ? await api.matchSpoken(crop, said.text) : { keys: [] };
+      const m = said.text ? await api.matchSpoken(crop, said.text, said.lang || lang) : { keys: [] };
       setPicked(new Set([...picked, ...m.keys]));
       setMic("idle");
     } catch {

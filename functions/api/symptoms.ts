@@ -33,7 +33,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
 
 // POST /api/symptoms {crop, text}: which statements the farmer's spoken words match.
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  let body: { crop?: string; text?: string };
+  let body: { crop?: string; text?: string; lang?: string };
   try {
     body = await request.json();
   } catch {
@@ -45,7 +45,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!text) return json({ keys: [] });
   let english = text;
   try {
-    english = await toEnglish(env, text);
+    english = await toEnglish(env, text, isLang(body.lang) ? body.lang : "en");
   } catch {
     // Use the words as given.
   }

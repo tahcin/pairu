@@ -20,18 +20,18 @@ Built for Avishkaar Season 4 (Virtual Track, AITAM Tekkali), problem statement A
 
 **The model proposes, code decides.** No model is trained by us: a general vision model only ranks diseases from a closed list and answers yes/no questions, and every decision and every dose comes from code.
 
-- **First look** (`functions/api/diagnose.ts`, `functions/_lib/vision.ts`): the photo (at most 1024 px) and the closed list of diseases we hold for that crop go to Gemini 3.1 Flash Lite, with a JSON schema whose id field can only be one of those ids, `<crop>_healthy` or `unknown`. Gemini 3.5 Flash Lite is the fallback, and Claude Haiku 5.5 (a paid API) runs only if both Gemini calls fail. Each call has a 12-second timeout.
+- **First look** (`functions/api/diagnose.ts`, `functions/_lib/vision.ts`): the photo (at most 1024 px) and the closed list of diseases we hold for that crop go to Gemini 3.1 Flash Lite, with a JSON schema whose id field can only be one of those ids, `<crop>_healthy` or `unknown`. Gemini 3.5 Flash Lite is the fallback, and Claude Haiku 5.5 (a paid API) runs only if both Gemini calls fail, capped at 40 calls a day. Each call has a 12-second timeout.
 - **Decide** (`functions/_lib/verify.ts`, `decide.ts`): at a top confidence of 0.9 or more, answer (this threshold was chosen on half of the test set only). Between 0.4 and 0.9, a **second look**: the model sees the photo again and answers yes, no or cannot tell to our knowledge-base questions that tell the candidates apart and to one "do you see this sign?" question per candidate; code keeps a disease only if its sign is seen and nothing rules it out. One survivor is shown as "checked twice" but worded as a best guess; signs the photo cannot settle become one to three questions for the farmer, where a tie stays unsure. Below 0.4, a blurry photo, another crop or nothing left means a refusal.
 - **Treatments** (`functions/_lib/advice.ts`, `dose.ts`): rows from the CIB&RC register for that crop and pest; a product is dropped if any one of its actives is banned or withdrawn (streptomycin + tetracycline, proposed for a ban by a 2021 draft order, is dropped as a precaution); WHO class Ia and Ib products are flagged and placed last; the top three follow the IPM packages and skip the "avoid" list.
-- **Dose check**: a printed unit is never trusted. Each formulation dose is reconciled with the active-ingredient column and the label percentages; only a scale that agrees within 1.5 times is converted to per acre. Per-litre rows show per litre of water, seed treatments per kg of seed, bio products as printed, and rows that do not reconcile say "check the label". `node scripts/check_doses.mjs` reports 0 rows shown more than 2 times away from the active-ingredient calculation.
-- **Language and voice**: reviewed Telugu for every disease name and every farmer-facing line of the knowledge base (`data/kb_te.json`), Sarvam translate for the other languages, Saarika speech to text and Bulbul text to speech. Open-Meteo gives the spray-weather check. Results and translations are cached in Workers KV, and per-IP rate limits protect the model and voice endpoints.
+- **Dose check**: a printed unit is never trusted. Each formulation dose is reconciled with the active-ingredient column and the label percentages; only a scale that agrees within 1.5 times is converted to per acre. Per-litre rows show per litre of water, seed treatments per kg of seed, bio products as printed, and rows that do not reconcile say "check the label". Every shown per-acre dose is consistent with the register's own active-ingredient column (`node scripts/check_doses.mjs` finds 0 rows more than 2 times away); that shows consistency with the register, not that the register has no misprints.
+- **Language and voice**: Telugu for every disease name and every farmer-facing line of the knowledge base (`data/kb_te.json`), drafted by Sarvam and reviewed by an AI model against a glossary (`data/glossary_te.json`), not yet by a human agronomist. Sarvam powers translation for the other languages, speech to text (Saarika) and voice (Bulbul) when credits are available, with free fallbacks being added: stored Gemma or Gemini translations and the phone's own text-to-speech voice. Open-Meteo gives the spray-weather check. Results and translations are cached in Workers KV, and per-IP rate limits protect the model and voice endpoints.
 
 | Layer | Tools |
 |---|---|
 | Front end | React 18, Vite, TypeScript, PWA, on Cloudflare Pages |
 | API | Cloudflare Pages Functions (TypeScript), Workers KV, Cache API rate limits |
-| Vision | Gemini 3.1 Flash Lite, Gemini 3.5 Flash Lite; Claude Haiku 5.5 as a paid last resort |
-| Language and voice | Sarvam AI translate, speech to text, text to speech |
+| Vision | Gemini 3.1 Flash Lite, Gemini 3.5 Flash Lite; Claude Haiku 5.5 as a paid last resort (max 40 a day) |
+| Language and voice | Sarvam AI translate, speech to text, text to speech; free fallbacks (stored translations, the phone's voice) |
 | Weather | Open-Meteo |
 | Data pipeline | Python, pdfplumber, poppler, Node |
 
@@ -55,11 +55,13 @@ A frozen, reproducible test of 95 labelled leaf photos: 77 PlantVillage lab phot
 
 | Photos of diseases Pairu holds | Pairu v2 (live) | Bare model |
 |---|---|---|
-| Held-out half (n=37): right | 28 (75.7%) | 19 (51.4%) |
-| Held-out half: answered and wrong | 5 (13.5%) | 18 (48.6%) |
+| **Diseased leaves (n=65): answered and wrong** | **12 (18.5%)** | **27 (41.5%)** |
+| Diseased leaves: right | 44 (67.7%) | 38 (58.5%) |
+| Held-out half incl. healthy (n=37): right / answered and wrong | 28 (75.7%) / 5 (13.5%) | 19 (51.4%) / 18 (48.6%) |
 | Held-out half: said not sure | 4 | 0 |
-| All 80: right / answered and wrong | 58 (72.5%) / 12 (15.0%) | 38 (47.5%) / 42 (52.5%) |
-| Out of list (n=15): refused | 3 | 0 |
+| Out of list (n=15): said not sure | 3 | 0 |
+
+Healthy leaves are left out of the headline because the bare model's prompt asks which disease the leaf has, which pushes it to name one on a healthy leaf; the 65 diseased photos include the half used to choose the 0.9 threshold, so the held-out half is shown too. A second test with PlantDoc field photos and a PlantVillage-trained CNN baseline is running, and its results will be added to `eval/results.json`.
 
 The first look alone at 0.9 or more was right on all 23 photos that reached it. Limits we state plainly: most photos are lab photos (one leaf, plain background) and may have been seen by the model in training; there are about five photos per class, so margins are wide; the farmer's answers were scripted from the true label, which is the best case; the second look was wrong on 12 of the 37 answers it confirmed, so those are shown as a best guess; and diseases outside the list are refused only 3 times in 15.
 

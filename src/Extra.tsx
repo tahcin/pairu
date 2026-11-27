@@ -37,10 +37,12 @@ export function DescribeStep({
   }, [crop, lang]);
 
   const toggle = (k: string) => {
-    const next = new Set(picked);
-    if (next.has(k)) next.delete(k);
-    else next.add(k);
-    setPicked(next);
+    setPicked((cur) => {
+      const next = new Set(cur);
+      if (next.has(k)) next.delete(k);
+      else next.add(k);
+      return next;
+    });
     setHint(false);
   };
 
@@ -61,7 +63,7 @@ export function DescribeStep({
     try {
       const said = await api.stt(blob, lang);
       const m = said.text ? await api.matchSpoken(crop, said.text, said.lang || lang) : { keys: [] };
-      setPicked(new Set([...picked, ...m.keys]));
+      setPicked((cur) => new Set([...cur, ...m.keys]));
       setMic("idle");
     } catch {
       setMic("error");

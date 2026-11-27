@@ -115,7 +115,7 @@ export function splitForSpeech(text: string, limit = TTS_LIMIT): string[] {
 }
 
 export async function tts(env: Env, text: string, lang: string): Promise<{ audios: string[]; mime: string; cached: boolean }> {
-  const key = `tts:${TTS_MODEL}:${TTS_SPEAKER}:${lang}:${await sha256(text)}`;
+  const key = `tts:${TTS_MODEL}:${TTS_SPEAKER}:16k:${lang}:${await sha256(text)}`;
   const hit = await kvGetJSON<{ audios: string[]; mime: string }>(env.PAIRU_CACHE, key);
   if (hit) return { ...hit, cached: true };
   const parts = splitForSpeech(text);
@@ -130,7 +130,7 @@ export async function tts(env: Env, text: string, lang: string): Promise<{ audio
           speaker: TTS_SPEAKER,
           model: TTS_MODEL,
           output_audio_codec: "mp3",
-          speech_sample_rate: 24000,
+          speech_sample_rate: 16000,
           pace: 0.95,
         }),
       });

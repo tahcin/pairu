@@ -145,8 +145,11 @@ export async function tts(env: Env, text: string, lang: string): Promise<{ audio
 }
 
 export async function stt(env: Env, file: File, lang: string | null): Promise<{ text: string; lang: string | null }> {
+  // Browsers label recordings like "audio/webm;codecs=opus", which Sarvam rejects; send the bare type.
+  const type = (file.type || "audio/webm").split(";")[0].trim() || "application/octet-stream";
+  const clean = new File([await file.arrayBuffer()], file.name || "audio.webm", { type });
   const form = new FormData();
-  form.append("file", file, file.name || "audio.webm");
+  form.append("file", clean, clean.name);
   form.append("model", "saarika:v2.5");
   form.append("language_code", lang ? sarvamCode(lang) : "unknown");
   const res = await fetch(`${BASE}/speech-to-text`, {

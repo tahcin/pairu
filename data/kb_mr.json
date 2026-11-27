@@ -924,7 +924,7 @@
    "favourable_conditions": "योग्य परिस्थितीत कणीस निघण्याच्या स्टेजला संसर्ग झाल्यास हा रोग मोठे नुकसान करतो.",
    "organic_bio": [],
    "avoid": [],
-   "etl": "10% of plants affected by leaf blight."
+   "etl": "१०% झाडांवर पानांचा करपा दिसल्यास."
   },
   "maize_maydis_blight": {
    "name": "सर्दर्न लीफ ब्लाइट (मेडीस करपा)",
@@ -947,7 +947,7 @@
    "favourable_conditions": "",
    "organic_bio": [],
    "avoid": [],
-   "etl": "10% of plants affected by leaf blight."
+   "etl": "१०% झाडांवर पानांचा करपा दिसल्यास."
   },
   "maize_grey_leaf_spot": {
    "name": "ग्रे लीफ स्पॉट्स (राखाडी डाग)",
@@ -995,7 +995,7 @@
    "favourable_conditions": "पावसाळा सुरू होण्यापूर्वी लागवड करण्याशी हा रोग जोडलेला असतो.",
    "organic_bio": [],
    "avoid": [],
-   "etl": "10% of plants affected."
+   "etl": "१०% झाडांवर प्रादुर्भाव दिसल्यास."
   },
   "maize_fall_armyworm": {
    "name": "फॉल आर्मीवर्म (लष्करी अळी)",
@@ -1030,7 +1030,7 @@
     "Trichogramma pretiosum and Telenomus remus @ 50000 per acre"
    ],
    "avoid": [],
-   "etl": "From seedling to mid-whorl stage, act when about 10% of plants are damaged (for example 2 out of 20 plants checked on a W-shaped walk). After mid-whorl, the same level does not call for a spray."
+   "etl": "रोपावस्थेपासून ते पोंग्यापर्यंत, १०% झाडांचे नुकसान झाल्यास फवारणी करा (उदा. शेतात W आकारात फिरताना २० पैकी २ झाडांवर कीड दिसल्यास). पोंग्यानंतरच्या अवस्थेत इतक्या नुकसानीवर फवारणीची गरज नसते."
   },
   "maize_healthy": {
    "name": "निरोगी",
@@ -1056,7 +1056,7 @@
    "etl": ""
   },
   "tomato_early_blight": {
-   "name": "Early blight",
+   "name": "करपा",
    "symptoms": [
     "तुम्हाला सुरुवातीला जुन्या पानांवर छोटे काळे डाग दिसतील.",
     "हे डाग मोठे होतात आणि त्यांच्या मध्यभागी गोलाकार वलये दिसतात.",
@@ -1082,7 +1082,7 @@
    "etl": ""
   },
   "tomato_late_blight": {
-   "name": "Late blight",
+   "name": "पिवळा करपा",
    "symptoms": [
     "तुम्हाला पानांवर छोटे, अनियमित, पाण्याचे डाग दिसतील.",
     "हे डाग गडद तपकिरी होतात आणि त्यांच्या खाली पांढरे भुसभुशीत आवरण असू शकते.",
@@ -1110,7 +1110,7 @@
    "etl": ""
   },
   "tomato_leaf_curl": {
-   "name": "Leaf curl virus",
+   "name": "पाने आकसणारा विषाणू",
    "symptoms": [
     "झाडाची नवीन वाढ आखूड खोडांसह बुटकी दिसते.",
     "नवीन पाने लहान, सुरकुटलेली आणि नसांच्या मधोमध पिवळी असतात.",
@@ -1140,7 +1140,7 @@
    "etl": ""
   },
   "tomato_septoria_leaf_spot": {
-   "name": "Septoria leaf spot",
+   "name": "सेप्टोरिया ठिपके",
    "symptoms": [
     "तुम्हाला पानांवर अनेक छोटे राखाडी डाग दिसतील.",
     "हे डाग गोल असतात आणि त्यांना गडद कडा असते.",
@@ -1165,7 +1165,7 @@
    "etl": ""
   },
   "tomato_bacterial_spot": {
-   "name": "Bacterial spot",
+   "name": "जिवाणूजन्य ठिपके",
    "symptoms": [
     "पानांवर पिवळ्या वलयाचे छोटे तपकिरी डाग दिसतात.",
     "जुन्या पानांवर डाग पडून ती गळून पडू शकतात.",
@@ -1189,7 +1189,7 @@
    "etl": ""
   },
   "tomato_fruit_borer": {
-   "name": "Fruit borer",
+   "name": "फळ पोखरणारी अळी",
    "symptoms": [
     "लहान अळ्या झाडाची कोवळी पाने खातात.",
     "जुन्या अळ्या फळामध्ये गोल छिद्रे पाडतात.",
@@ -1221,10 +1221,10 @@
     "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
    ],
    "avoid": [],
-   "etl": "10% fruit damage."
+   "etl": "१०% फळांचे नुकसान झाल्यास."
   },
   "tomato_healthy": {
-   "name": "Healthy",
+   "name": "निरोगी",
    "symptoms": [
     "पाने वाणाप्रमाणे समान हिरवी आहेत, त्यावर कोणतेही डाग, पट्टे, वर्तुळे किंवा पांढरा थर नाही.",
     "पानांच्या कडा आणि टोके मुरगळलेली, पिवळी पडलेली, सुकलेली किंवा जळालेली नाहीत.",

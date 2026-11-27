@@ -333,7 +333,7 @@
    "etl": ""
   },
   "cotton_bacterial_blight": {
-   "name": "Bacterial blight (black arm)",
+   "name": "ಬ್ಯಾಕ್ಟೀರಿಯಲ್ ಬ್ಲೈಟ್ (ಬ್ಲ್ಯಾಕ್ ಆರ್ಮ್)",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲೆ ನೀರು ಸೋಕಿದಂತೆ ಸಣ್ಣ ಕಪ್ಪು-ಹಸಿರು ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
     "ಈ ಚುಕ್ಕೆಗಳು ಬೆಳೆದು ಎಲೆಗಳ ನರಗಳ ನಡುವೆ ಕೋನಗಳ ಆಕಾರದಲ್ಲಿ ಹರಡುತ್ತವೆ.",
@@ -358,7 +358,7 @@
    "etl": ""
   },
   "cotton_alternaria_leaf_spot": {
-   "name": "Alternaria leaf spot",
+   "name": "ಆಲ್ಟರ್ನೇರಿಯಾ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ ದುಂಡಗಿನ ಅಥವಾ ಅಸಮ ಚುಕ್ಕೆಗಳನ್ನು ನೀವು ಕಾಣುತ್ತೀರಿ.",
     "ಪ್ರತಿ ಚುಕ್ಕೆಯ ಮಧ್ಯದಲ್ಲಿ ಉಂಗುರದಂತಹ ಗುರುತುಗಳಿರುತ್ತವೆ.",
@@ -383,7 +383,7 @@
    "etl": ""
   },
   "cotton_grey_mildew": {
-   "name": "Grey mildew",
+   "name": "ಬೂದಿ ರೋಗ",
    "symptoms": [
     "ಹಳೆಯ ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ತಿಳಿಯಾದ, ಕಾಣುವಂತಹ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
     "ಚುಕ್ಕೆಗಳು ಚೌಕಾಕಾರದಲ್ಲಿ ಅಥವಾ ಕೋನಾಕಾರದಲ್ಲಿರುತ್ತವೆ ಮತ್ತು ಎಲೆಗಳ ನರಗಳಿಂದ ತಡೆಯಲ್ಪಡುತ್ತವೆ.",
@@ -411,7 +411,7 @@
    "etl": ""
   },
   "cotton_pink_bollworm": {
-   "name": "Pink bollworm",
+   "name": "ಗುಲಾಬಿ ಕಾಯಿ ಕೊರಕ",
    "symptoms": [
     "ಗಿಡದಿಂದ ಹೂವಿನ ಮೊಗ್ಗುಗಳು ಉದುರಿಹೋಗಬಹುದು.",
     "ಹೂವುಗಳು ಸರಿಯಾಗಿ ತೆರೆದುಕೊಳ್ಳುವುದಿಲ್ಲ ಮತ್ತು ಗುಲಾಬಿಯಂತೆ (rosette) ಕಾಣುತ್ತವೆ.",
@@ -447,7 +447,7 @@
    "etl": "10% ಹಾನಿಗೊಳಗಾದ (rosette) ಹೂವುಗಳು, ಅಥವಾ 10% ಹಾನಿಗೊಳಗಾದ ಹಸಿರು ಕಾಯಿಗಳು (20 ಕಾಯಿಗಳಲ್ಲಿ 2 ಕಾಯಿಗಳು ಬಿಳಿ ಅಥವಾ ಗುಲಾಬಿ ಬಣ್ಣದ ಮರಿಹುಳುಗಳನ್ನು ಅಥವಾ ಹೊರಹೋಗುವ ರಂಧ್ರಗಳನ್ನು ಹೊಂದಿದ್ದರೆ), ಅಥವಾ ಸತತ 3 ರಾತ್ರಿಗಳವರೆಗೆ ಪ್ರತಿ pheromone trap ಗೆ 8 ಪತಂಗಗಳು."
   },
   "cotton_whitefly": {
-   "name": "Whitefly",
+   "name": "ಬಿಳಿ ನೊಣ",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲೆ ದೊಡ್ಡದಾಗುವ ಹಳದಿ ಚುಕ್ಕೆಗಳನ್ನು ನೀವು ಕಾಣುತ್ತೀರಿ.",
     "ಎಲೆಗಳು ನರಗಳಿಂದ ಅಂಚಿನವರೆಗೆ ಹಳದಿಯಾಗಿ ತಿರುಗುತ್ತವೆ.",
@@ -488,7 +488,7 @@
    "etl": "ಬೆಳಿಗ್ಗೆ 10 ಗಂಟೆಗೆ ಮುಂಚಿತವಾಗಿ ಗಿಡದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಪ್ರತಿ ಎಲೆಗೆ 6 ಪ್ರೌಢ ಬಿಳಿ ನೊಣಗಳು, ಅಥವಾ ಅರ್ಧಕ್ಕೂ ಹೆಚ್ಚು ಗಿಡಗಳಲ್ಲಿ ಗಿಡದ ಮಧ್ಯಭಾಗದಲ್ಲಿ 10 ಕ್ಕಿಂತ ಹೆಚ್ಚು. ಗಿಡವನ್ನು ಮೆಲ್ಲನೆ ಅಲ್ಲಾಡಿಸಿದಾಗ ನೊಣಗಳ ಹೊಗೆಯಂತಹ ಗುಂಪು ಮೇಲೇಳುತ್ತದೆ."
   },
   "cotton_jassid": {
-   "name": "Leafhopper (jassid)",
+   "name": "ಜಾಸಿಡ್ (ಸಸಿ ನೊಣ)",
    "symptoms": [
     "ಎಳೆಯ ಎಲೆಗಳು ಹಳದಿಯಾಗುತ್ತವೆ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಕೆಳಮುಖವಾಗಿ ಸುರುಳಿಯಾಗಲು ಮತ್ತು ಕೆಂಪಾಗಲು ಪ್ರಾರಂಭಿಸುತ್ತವೆ.",
@@ -518,7 +518,7 @@
    "etl": "ಪ್ರತಿ ಎಲೆಗೆ 2 ಕ್ಕಿಂತ ಹೆಚ್ಚು leafhopper ಗಳು, ಕೆಲವು ಕೆಳಗಿನ ಎಲೆಗಳು ಸುಕ್ಕುಗಟ್ಟಿ ಮತ್ತು ಅಂಚುಗಳು ಹಳದಿಯಾಗಿ ತಿರುಗುತ್ತಿದ್ದರೆ."
   },
   "cotton_healthy": {
-   "name": "Healthy",
+   "name": "ಆರೋಗ್ಯಕರ",
    "symptoms": [
     "ಎಲೆಗಳು ತಳಿಗೆ ತಕ್ಕಂತೆ ಸಮವಾಗಿ ಹಸಿರಾಗಿರುತ್ತವೆ, ಯಾವುದೇ ಚುಕ್ಕೆಗಳು, ಗೆರೆಗಳು, ಉಂಗುರಗಳು ಅಥವಾ ಪುಡಿಯಂತಹ ಲೇಪನವಿರುವುದಿಲ್ಲ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಮತ್ತು ತುದಿಗಳು ಸುರುಳಿಯಾಗುತ್ತಿಲ್ಲ, ಹಳದಿಯಾಗುತ್ತಿಲ್ಲ, ಒಣಗುತ್ತಿಲ್ಲ ಅಥವಾ ಸುಟ್ಟಿಲ್ಲ.",
@@ -666,7 +666,7 @@
    "etl": ""
   },
   "chilli_black_thrips": {
-   "name": "Black thrips (Thrips parvispinus)",
+   "name": "ಕಪ್ಪು ಥ್ರಿಪ್ಸ್ (Thrips parvispinus)",
    "symptoms": [
     "ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಆಳವಾದ ಗೀರುಗಳು ಮತ್ತು ರಂಧ್ರಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು.",
     "ಎಲೆಯ ಮೇಲ್ಭಾಗವು ಹಳದಿ ಮತ್ತು ಮಚ್ಚೆ ಮಚ್ಚೆಯಾಗಿ ಕಾಣಿಸಿಕೊಂಡರೆ, ಕೆಳಭಾಗವು ಕೆಂಪು ಮಿಶ್ರಿತ ಕಂದು ಬಣ್ಣಕ್ಕೆ ತಿರುಗುತ್ತದೆ.",
@@ -728,7 +728,7 @@
    "etl": ""
   },
   "chilli_thrips": {
-   "name": "Thrips",
+   "name": "ಥ್ರಿಪ್ಸ್",
    "symptoms": [
     "ಎಲೆಗಳು ಸುಕ್ಕುಗಟ್ಟುತ್ತವೆ ಮತ್ತು ಮೇಲ್ಮುಖವಾಗಿ ಮುರುಟಿಕೊಳ್ಳುತ್ತವೆ.",
     "ಎಲೆಯ ತೊಟ್ಟುಗಳು ಉದ್ದವಾಗುತ್ತವೆ.",
@@ -776,22 +776,22 @@
    "etl": ""
   },
   "groundnut_early_leaf_spot": {
-   "name": "Early leaf spot (tikka)",
+   "name": "ಆರಂಭಿಕ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ (ಟಿಕಾ)",
    "symptoms": [
-    "Beesalu haaki ondu tingala aamele ee roga shuru agutte.",
-    "Eleman mele chinna chinna Chukkehaalu kanisuttave.",
-    "Ee chukkehaalu doddaagi kaalu athava kappu rangige badalaguttave.",
-    "Eleyu mele chukkehaalu gundagive.",
-    "Eleya kelabhaga bilupu baavili rangalli kanisutte.",
-    "Kaddi mattu danthalagalu melenu chukkehaalu barabahudu."
+    "ಬೀಜ ಬಿತ್ತಿದ ಸುಮಾರು ಒಂದು ತಿಂಗಳ ನಂತರ ರೋಗ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ.",
+    "ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
+    "ಈ ಚುಕ್ಕೆಗಳು ಕಾಲಕ್ರಮೇಣ ದೊಡ್ಡದಾಗಿ ಕಂದು ಅಥವಾ ಕಪ್ಪು ಬಣ್ಣಕ್ಕೆ ತಿರುಗುತ್ತವೆ.",
+    "ಎಲೆಯ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಚುಕ್ಕೆಗಳು ದುಂಡಾಗಿರುತ್ತವೆ.",
+    "ಎಲೆಯ ಕೆಳಭಾಗವು ತಿಳಿ ಕಂದು ಬಣ್ಣದಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.",
+    "ಕಾಂಡ ಮತ್ತು ಎಲೆಯ ತೊಟ್ಟುಗಳ ಮೇಲೂ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು."
    ],
    "prevention": [
-    "Mannu nallagiralu godhi, hatti, jola, eerulli athava bella/bellulli jote bele badalisi beni haaki.",
-    "Ele chukke rogakke tattukolluva beeja vargagalannu aaydukolli."
+    "ಮಣ್ಣಿನ ಆರೋಗ್ಯ ಕಾಪಾಡಲು ಗೋಧಿ, ಹತ್ತಿ, ಜೋಳ, ಈರುಳ್ಳಿ ಅಥವಾ ಬೆಳ್ಳುಳ್ಳಿಯೊಂದಿಗೆ ಬೆಳೆ ಬದಲಾವಣೆ ಮಾಡಿ.",
+    "ಎಲೆ ಚುಕ್ಕೆ ರೋಗವನ್ನು ತಡೆದುಕೊಳ್ಳುವ ತಳಿಗಳನ್ನು ಆರಿಸಿ."
    ],
    "practices": [
-    "Roga haraduthidye enu nodalu varadige nimma gaddelannu parishilisi.",
-    "Rogada elegalannu keduysi kaddi haaki roga haraduvudannu thadi."
+    "ರೋಗ ಹರಡುತ್ತಿದೆಯೇ ಎಂದು ನೋಡಲು ವಾರಕ್ಕೊಮ್ಮೆ ನಿಮ್ಮ ಹೊಲವನ್ನು ಪರೀಕ್ಷಿಸಿ.",
+    "ರೋಗ ಹರಡುವುದನ್ನು ತಡೆಯಲು ರೋಗಗ್ರಸ್ತ ಸಸ್ಯದ ಭಾಗಗಳನ್ನು ತೆಗೆದು ನಾಶಪಡಿಸಿ."
    ],
    "favourable_conditions": "",
    "organic_bio": [
@@ -801,24 +801,24 @@
    "etl": ""
   },
   "groundnut_late_leaf_spot": {
-   "name": "Late leaf spot (tikka)",
+   "name": "ತಡವಾದ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ (ಟಿಕಾ)",
    "symptoms": [
-    "Eleya kelabhagada mele kappu chukkehaalu kanisuttave.",
-    "Chukkehaalu saadharna gundagive.",
-    "Chukkehaalu muttidaga kasaragi iruttave.",
-    "Ondu ele mele bahala chukkehaalu serabahudu.",
-    "Eleyu halee rangige thirugi bega beelabahudu."
+    "ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಕಪ್ಪು ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
+    "ಚುಕ್ಕೆಗಳು ಬಹುತೇಕ ದುಂಡಗಿನ ಆಕಾರದಲ್ಲಿರುತ್ತವೆ.",
+    "ಚುಕ್ಕೆಗಳನ್ನು ಮುಟ್ಟಿದರೆ ಒರಟಾಗಿರುತ್ತವೆ.",
+    "ಎಲೆಯ ಮೇಲೆ ಅನೇಕ ಚುಕ್ಕೆಗಳು ಒಂದಕ್ಕೊಂದು ಸೇರಿಕೊಳ್ಳಬಹುದು.",
+    "ಎಲೆಗಳು ಹಳದಿ ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿ ಬೇಗನೆ ಉದುರಬಹುದು."
    ],
    "prevention": [
-    "Prati 3 shurukalu/kadala salege 1 sale sajje athava jola beleya beliyiri.",
-    "Bere bele jagadalli dhanya bele jote kadala bele badalisi beni haaki.",
-    "Hale bele avashesagalannu mannalalli sariyaagi mucchalu aazhaagi thogi.",
-    "Taanagi beluvaru kadala sasigalanu haledu horathagi haaki."
+    "ಪ್ರತಿ 3 ಸಾಲು ಶೇಂಗಾಕ್ಕೆ 1 ಸಾಲು ಸಜ್ಜೆ ಅಥವಾ ಜೋಳವನ್ನು ಬೆಳೆಯಿರಿ.",
+    "ಇತರ ಬೆಳೆಗಳ ಬದಲಿಗೆ ಧಾನ್ಯದ ಬೆಳೆಗಳೊಂದಿಗೆ ಶೇಂಗಾವನ್ನು ಬೆಳೆ ಬದಲಾವಣೆ ಮಾಡಿ.",
+    "ಹಳೆಯ ಬೆಳೆಯ ಉಳಿಕೆಗಳನ್ನು ಮಣ್ಣಿನಲ್ಲಿ ಹೂಳಲು ಆಳವಾಗಿ ಉಳಿಮೆ ಮಾಡಿ.",
+    "ತಾನಾಗಿಯೇ ಬೆಳೆಯುವ ಶೇಂಗಾ ಗಿಡಗಳನ್ನು ಕಿತ್ತು ತೆಗೆಯಿರಿ."
    ],
    "practices": [
-    "Rogada lakshana iruva yellaru sasi bhaagagalannu keduysi haaki.",
-    "Taanagi beluvaru kadala sasigalanu tegedu gaddelannu suddha vagi idi.",
-    "Roga haraduvudannu thaduvige bele avashesagalannu aazhaagi mannali hachi."
+    "ರೋಗದ ಲಕ್ಷಣಗಳು ಕಂಡುಬರುವ ಸಸ್ಯದ ಭಾಗಗಳನ್ನು ತೆಗೆದು ನಾಶಪಡಿಸಿ.",
+    "ತಾನಾಗಿಯೇ ಬೆಳೆಯುವ ಶೇಂಗಾ ಗಿಡಗಳನ್ನು ತೆಗೆದು ಹೊಲವನ್ನು ಸ್ವಚ್ಛವಾಗಿಡಿ.",
+    "ರೋಗ ಹರಡುವುದನ್ನು ತಡೆಯಲು ಬೆಳೆಯ ಉಳಿಕೆಗಳನ್ನು ಮಣ್ಣಿನಲ್ಲಿ ಆಳವಾಗಿ ಹೂಳಿ."
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -826,20 +826,20 @@
    "etl": ""
   },
   "groundnut_rust": {
-   "name": "Rust",
+   "name": "ತುಕ್ಕು ರೋಗ",
    "symptoms": [
-    "Eleya kelabhagada mele pustules ennuva chinna guntuhaalu kanisuttave.",
-    "Ee guntuhaalu eleya melabhagada melenu kanisabahudu.",
-    "Hoovu mattu kaalu horathupadisi sasi ella bhaagadallu ee guntuhalu barabahudu.",
-    "Kettda sthitiyalli, elehaalu sattu, oki, aadare sasiyalle hithikondiruttave."
+    "ಎಲೆಗಳ ಕೆಳಭಾಗದಲ್ಲಿ ಸಣ್ಣ ಗುಳ್ಳೆಗಳು (ಪಸ್ಟ್ಯೂಲ್ಸ್) ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
+    "ಈ ಗುಳ್ಳೆಗಳು ಎಲೆಗಳ ಮೇಲ್ಭಾಗದಲ್ಲೂ ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು.",
+    "ಹೂವು ಮತ್ತು ಕಾಯಿ ಕಟ್ಟುವ ಭಾಗಗಳನ್ನು ಹೊರತುಪಡಿಸಿ ಸಸ್ಯದ ಎಲ್ಲಾ ಭಾಗಗಳ ಮೇಲೆ ಗುಳ್ಳೆಗಳು ಉಂಟಾಗಬಹುದು.",
+    "ತೀವ್ರವಾದ ಸಂದರ್ಭಗಳಲ್ಲಿ, ಎಲೆಗಳು ಸತ್ತು ಒಣಗುತ್ತವೆ ಆದರೆ ಸಸ್ಯಕ್ಕೆ ಅಂಟಿಕೊಂಡಿರುತ್ತವೆ."
    ],
    "prevention": [
-    "Rust rogakke tattukolluva sasi vargagalannu aaydukolli.",
-    "Mannu nallagiralu godhi, hatti, jola, eerulli athava bellulli jote bele badalisi beni haaki."
+    "ತುಕ್ಕು ರೋಗವನ್ನು ತಡೆದುಕೊಳ್ಳುವ ಸಸ್ಯ ತಳಿಗಳನ್ನು ಆರಿಸಿ.",
+    "ಮಣ್ಣಿನ ಆರೋಗ್ಯ ಕಾಪಾಡಲು ಗೋಧಿ, ಹತ್ತಿ, ಜೋಳ, ಈರುಳ್ಳಿ ಅಥವಾ ಬೆಳ್ಳುಳ್ಳಿಯೊಂದಿಗೆ ಬೆಳೆ ಬದಲಾವಣೆ ಮಾಡಿ."
    ],
    "practices": [
-    "Rust roga haraduthidye enu nodalu prati vaara nimma gaddelannu parishilisi.",
-    "Pichkari maaduvudu avashyaka iddare, modalaneya ondu aamele 15 dina bittu eradeneya saribeku."
+    "ತುಕ್ಕು ರೋಗ ಹರಡುತ್ತಿದೆಯೇ ಎಂದು ನೋಡಲು ಪ್ರತಿ ವಾರ ನಿಮ್ಮ ಹೊಲವನ್ನು ಪರೀಕ್ಷಿಸಿ.",
+    "ಸಿಂಪರಣೆ ಅಗತ್ಯವಿದ್ದರೆ, ಮೊದಲ ಸಿಂಪರಣೆಯ 15 ದಿನಗಳ ನಂತರ ಎರಡನೇ ಬಾರಿ ಸಿಂಪರಣೆ ಮಾಡಬಹುದು."
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -847,72 +847,72 @@
    "etl": ""
   },
   "groundnut_bud_necrosis": {
-   "name": "Bud necrosis virus",
+   "name": "ಬಡ್ ನೆಕ್ರೋಸಿಸ್ ವೈರಸ್",
    "symptoms": [
-    "Chinna elegalu mele baavili chukkehaalu kanisuttave.",
-    "Eleyu mele sethruvu hage roopa mattu rekhagalu beliyuttave.",
-    "Bisi kaala iddare sasiya agra mottu sattu hogabahudu.",
-    "Sasi doddagadanthe adu sannaagi kundi hogutte.",
-    "Sasiyali hecchina pakkada rekhagalu beliyabahudu."
+    "ಎಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ತಿಳಿ ಬಣ್ಣದ ಚುಕ್ಕೆಗಳನ್ನು ನೀವು ನೋಡುತ್ತೀರಿ.",
+    "ಎಲೆಗಳ ಮೇಲೆ ಸತ್ತಂತೆ ಕಾಣುವ ಉಂಗುರಗಳು ಮತ್ತು ಗೆರೆಗಳು ಮೂಡುತ್ತವೆ.",
+    "ಹವಾಮಾನ ಬಿಸಿಯಾಗಿದ್ದಾಗ ಸಸ್ಯದ ಮೇಲಿನ ಮೊಗ್ಗು ಸಾಯಬಹುದು.",
+    "ಸಸ್ಯವು ಬೆಳೆದಂತೆ ಚಿಕ್ಕದಾಗಿ ಮತ್ತು ಕುಂಠಿತವಾಗಿ ಉಳಿಯುತ್ತದೆ.",
+    "ಸಸ್ಯವು ಅನೇಕ ಹೆಚ್ಚುವರಿ ಪಕ್ಕದ ರೆಂಬೆಗಳನ್ನು ಬೆಳೆಯಬಹುದು."
    ],
    "prevention": [
-    "Beejagalanu 15 cm antara nalli hatra hatra haaki.",
-    "Ee rogakke tattukolluva vargagalannu balasi.",
-    "Modalaneya male banda bega bele beliyiri.",
-    "Nukshana thaggisalu ghanavagi sasi haaki.",
-    "Kadala beleya jote jola athava maize jote bele badalisi beni haaki."
+    "ಬೀಜಗಳನ್ನು 15 cm ಅಂತರದಲ್ಲಿ ಹತ್ತಿರ ಹತ್ತಿರ ಬಿತ್ತಿ.",
+    "ಈ ರೋಗವನ್ನು ತಡೆದುಕೊಳ್ಳುವ ತಳಿಗಳನ್ನು ಬಳಸಿ.",
+    "ಮೊದಲ ಮಳೆ ಬಂದಾಗ ನಿಮ್ಮ ಬೆಳೆಯನ್ನು ಬೇಗ ಬಿತ್ತಿ.",
+    "ಹಾನಿಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ದಟ್ಟವಾಗಿ ಬಿತ್ತನೆ ಮಾಡಿ.",
+    "ನಿಮ್ಮ ಶೇಂಗಾ ಬೆಳೆಯನ್ನು ಜೋಳ ಅಥವಾ ಮೆಕ್ಕೆಜೋಳದಂತಹ ಇತರ ಬೆಳೆಗಳೊಂದಿಗೆ ಬೆಳೆ ಬದಲಾವಣೆ ಮಾಡಿ."
    ],
    "practices": [
-    "Virus lakshanagala elligide enu nimma gaddelannu niyamitavagi parishilisi.",
-    "Bele haakida 6 tingala vargu rogiruva sasigalanu keduysi haaki.",
-    "Rogada sasigalanu kanda tshanavale gaddelinda tegedu haaki.",
-    "Prati 3inda 6 kadala salege ondu castor sale beliyiri, idu virus haraduva thrips thaggisalu sahaya madutte."
+    "ವೈರಸ್ ಲಕ್ಷಣಗಳಿಗಾಗಿ ನಿಮ್ಮ ಹೊಲವನ್ನು ನಿಯಮಿತವಾಗಿ ಪರೀಕ್ಷಿಸಿ.",
+    "ಬಿತ್ತನೆಯಾದ 6 ವಾರಗಳವರೆಗೆ ರೋಗಗ್ರಸ್ತವಾಗಿ ಕಾಣುವ ಯಾವುದೇ ಸಸ್ಯಗಳನ್ನು ಕಿತ್ತು ನಾಶಪಡಿಸಿ.",
+    "ರೋಗಗ್ರಸ್ತ ಸಸ್ಯಗಳನ್ನು ಕಂಡ ತಕ್ಷಣ ಹೊಲದಿಂದ ತೆಗೆದುಹಾಕಿ.",
+    "ಪ್ರತಿ 3 ರಿಂದ 6 ಸಾಲು ಶೇಂಗಾಕ್ಕೆ 1 ಸಾಲು ಹರಳು ಬೆಳೆಯಿರಿ, ಇದು ವೈರಸ್ ಹರಡುವ ಥ್ರಿಪ್ಸ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ."
    ],
-   "favourable_conditions": "Taapamanavu svalpa jasti iddaga ee roga baruvadu hecchu.",
+   "favourable_conditions": "ತಾಪಮಾನ ತುಲನಾತ್ಮಕವಾಗಿ ಹೆಚ್ಚಿದ್ದಾಗ ಈ ರೋಗ ಬರುವ ಸಾಧ್ಯತೆ ಹೆಚ್ಚು.",
    "organic_bio": [],
    "avoid": [],
-   "etl": "Idu virus haraduva thrips ge: prati agra mottige 5 adult thrips."
+   "etl": "ಈ ವೈರಸ್ ಹರಡುವ ಥ್ರಿಪ್ಸ್ ಗಾಗಿ: ಪ್ರತಿ ಮೊಗ್ಗು ತುದಿಗೆ 5 ವಯಸ್ಕ ಥ್ರಿಪ್ಸ್."
   },
   "groundnut_leaf_miner": {
-   "name": "Leaf miner",
+   "name": "ಎಲೆ ಸುರಂಗ ಹುಳು",
    "symptoms": [
-    "Sanna larva elegalu olage hoki olagina bhagavannu thinnuttave.",
-    "Elemele chinna kappe chukkehaalu kanisuttave.",
-    "Aamele larva elegalu madachi olage adugolluttave.",
-    "Dura ninda nodidaga mothha gaddelu sudida hage kanisutte."
+    "ಚಿಕ್ಕ ಹುಳುಗಳು ಎಲೆಗಳ ಒಳಗೆ ನುಗ್ಗಿ ತಿನ್ನುತ್ತವೆ.",
+    "ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ ಕಂದು ಬಣ್ಣದ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
+    "ನಂತರ ಹುಳುಗಳು ಎಲೆಗಳನ್ನು ಮಡಚಿ ಒಳಗೆ ಅಡಗಿಕೊಳ್ಳುತ್ತವೆ.",
+    "ದೂರದಿಂದ ನೋಡಿದಾಗ ಇಡೀ ಹೊಲವೇ ಸುಟ್ಟುಹೋದಂತೆ ಕಾಣುತ್ತದೆ."
    ],
    "prevention": [
-    "Nimma beleya hatra cowpea athava soybean bitti atirige balasi.",
-    "Koyilu mugida mele ee atir sasisgalannu keduysi haaki."
+    "ಬೆಳೆಯ ಸುತ್ತಲೂ ಅಲಸಂದೆ ಅಥವಾ ಸೋಯಾಬೀನ್ ಅನ್ನು ಬಲೆ ಬೆಳೆಯಾಗಿ ಬೆಳೆಯಿರಿ.",
+    "ಕೊಯ್ಲು ಮುಗಿದ ನಂತರ ಈ ಬಲೆ ಬೆಳೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ."
    ],
    "practices": [
-    "Larva ideye enu nimma gaddelannu niyamitavagi parishilisi.",
-    "Haluhaagalanu hidiyalu light traps itti.",
-    "Moth sankhye parishilisalu pheromone traps balasi.",
-    "Prati dina traps ninda hidida mothgalannu tegedu haaki."
+    "ನಿಮ್ಮ ಹೊಲದಲ್ಲಿ ಹುಳುಗಳಿವೆಯೇ ಎಂದು ಆಗಾಗ ಗಮನಿಸುತ್ತಿರಿ.",
+    "ಪತಂಗಗಳನ್ನು ಹಿಡಿಯಲು ಬೆಳಕಿನ ಬಲೆಗಳನ್ನು ಇರಿಸಿ.",
+    "ಪತಂಗಗಳ ಸಂಖ್ಯೆಯನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಫೆರೋಮೋನ್ ಬಲೆಗಳನ್ನು ಬಳಸಿ.",
+    "ಬಲೆಗಳಲ್ಲಿ ಸಿಕ್ಕಿದ ಪತಂಗಗಳನ್ನು ಪ್ರತಿದಿನ ತೆಗೆದುಹಾಕಿ."
    ],
    "favourable_conditions": "",
    "organic_bio": [],
    "avoid": [],
-   "etl": "Prati sasiyali 2 inda 3 kirthugalu."
+   "etl": "ಪ್ರತಿ ಗಿಡಕ್ಕೆ 2 ರಿಂದ 3 ಹುಳುಗಳು."
   },
   "groundnut_healthy": {
-   "name": "Healthy",
+   "name": "ಆರೋಗ್ಯಕರ",
    "symptoms": [
-    "Elegalu vargakke thakkante onte hachchasee agive, chukke, rekhagalu, gundu athava pudi lepanavilla.",
-    "Eleya thudi mattu moolagalu kuddikolluvudu, halee aguvudu, odaruvudu athava sudidanti illa.",
-    "Elegalu, kaalugalu athava kaayigala mele keetakagalu, mutta, baale, thootu athava kuriyu gurthugalilla."
+    "ಎಲೆಗಳು ಆ ತಳಿಯ ಸಹಜ ಹಸಿರು ಬಣ್ಣದಲ್ಲಿರುತ್ತವೆ, ಯಾವುದೇ ಚುಕ್ಕೆಗಳು, ಗೆರೆಗಳು, ಉಂಗುರದ ಗುರುತುಗಳು ಅಥವಾ ಬಿಳಿ ಪುಡಿಯಂತಹ ಲೇಪನ ಇರುವುದಿಲ್ಲ.",
+    "ಎಲೆಗಳ ಅಂಚುಗಳು ಮತ್ತು ತುದಿಗಳು ಸುರುಟಿಕೊಳ್ಳುವುದಿಲ್ಲ, ಹಳದಿ ಬಣ್ಣಕ್ಕೆ ತಿರುಗುವುದಿಲ್ಲ, ಒಣಗುವುದಿಲ್ಲ ಅಥವಾ ಸುಟ್ಟಂತೆ ಇರುವುದಿಲ್ಲ.",
+    "ಎಲೆಗಳು, ಕಾಂಡಗಳು ಅಥವಾ ಕಾಯಿಗಳ ಮೇಲೆ ಯಾವುದೇ ಕೀಟಗಳು, ಮೊಟ್ಟೆಗಳು, ಜೇಡದ ಬಲೆಗಳು, ರಂಧ್ರಗಳು ಅಥವಾ ಕೊರೆದ ಗುರುತುಗಳು ಇರುವುದಿಲ್ಲ."
    ],
    "prevention": [
-    "Mukhyavaida keeta mattu rogagalanu thaduyuva varga aaydukolli, mattu nallida beeja bali.",
-    "Vithanakke munche beeja athava sasi samagriyannu, sadhyaviddare bio-pesticide ninda shuddi madi.",
-    "Sariyaada antara bidi, mannu parikshe maadi organic manure mattu urvaraka kodi, hecchu nitrogen basabedi, adu sasiya mriduvagi maadi keeta rogakke sulabhavaagi madutte.",
-    "Sasiyannu sariyaagi neeru kodi mattu rthu kaledante bele badalisi."
+    "ಮುಖ್ಯ ಕೀಟ ಮತ್ತು ರೋಗಗಳನ್ನು ತಡೆದುಕೊಳ್ಳುವ ತಳಿಯನ್ನು ಆರಿಸಿ ಮತ್ತು ಆರೋಗ್ಯಕರ ಬೀಜ ಅಥವಾ ನಾಟಿ ಸಾಮಗ್ರಿಗಳನ್ನು ಬಳಸಿ.",
+    "ಬಿತ್ತುವ ಮೊದಲು ಬೀಜ ಅಥವಾ ನಾಟಿ ಸಾಮಗ್ರಿಗಳಿಗೆ, ಆದ್ಯತೆಯಾಗಿ Pseudomonas fluorescens ನಂತಹ ಜೈವಿಕ ಕೀಟನಾಶಕದಿಂದ ಬೀಜೋಪಚಾರ ಮಾಡಿ.",
+    "ಸರಿಯಾದ ಅಂತರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ, ಮಣ್ಣಿನ ಪರೀಕ್ಷೆಯ ಆಧಾರದ ಮೇಲೆ ಸಾವಯವ ಗೊಬ್ಬರ ಮತ್ತು ರಸಗೊಬ್ಬರಗಳನ್ನು ನೀಡಿ. ಸಾರಜನಕವನ್ನು ಅತಿಯಾಗಿ ಬಳಸಬೇಡಿ, ಇದು ಬೆಳೆಯನ್ನು ಮೃದುವಾಗಿಸಿ ಕೀಟ ಮತ್ತು ರೋಗಗಳು ಸುಲಭವಾಗಿ ದಾಳಿ ಮಾಡಲು ಕಾರಣವಾಗುತ್ತದೆ.",
+    "ಬೆಳೆಗೆ ಸರಿಯಾಗಿ ನೀರುಣಿಸಿ ಮತ್ತು ಪ್ರತಿ ಹಂಗಾಮಿಗೆ ಬೆಳೆ ಬದಲಾವಣೆ ಮಾಡಿ."
    ],
    "practices": [
-    "Vara ondu baridaroo gaddeli nadedukondu mannu, neerru, sasi, keeta mattu keeta thinnuva sneehita keetagalanu nodi.",
-    "Broad-spectrum chemical spray madade sneehita keetagalu mattu silubegalanu rakshisi.",
-    "Tantra kanda bega karyaprasararagi, udaharaneyage mutta guttehaalu haakuva athava rogi sasigalanu tegeyuvudu."
+    "ವಾರಕ್ಕೊಮ್ಮೆಯಾದರೂ ಹೊಲದಲ್ಲಿ ನಡೆದು ಮಣ್ಣು, ನೀರು, ಗಿಡಗಳು, ಕೀಟಗಳು ಮತ್ತು ಕೀಟಗಳನ್ನು ತಿನ್ನುವ ಮಿತ್ರ ಕೀಟಗಳನ್ನು ಗಮನಿಸಿ.",
+    "ಅತಿಯಾದ ರಾಸಾಯನಿಕ ಸಿಂಪಡಣೆಯನ್ನು ತಪ್ಪಿಸುವ ಮೂಲಕ ಮಿತ್ರ ಕೀಟಗಳು ಮತ್ತು ಜೇಡಗಳನ್ನು ರಕ್ಷಿಸಿ.",
+    "ಸಮಸ್ಯೆ ಕಂಡುಬಂದ ತಕ್ಷಣ ಕ್ರಮ ಕೈಗೊಳ್ಳಿ, ಉದಾಹರಣೆಗೆ ಮೊಟ್ಟೆಯ ಗುಂಪುಗಳನ್ನು ಸಂಗ್ರಹಿಸಿ ಅಥವಾ ರೋಗಗ್ರಸ್ತ ಗಿಡಗಳನ್ನು ತೆಗೆದುಹಾಕಿ."
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -920,7 +920,7 @@
    "etl": ""
   },
   "maize_common_rust": {
-   "name": "Common rust",
+   "name": "ಸಾಮಾನ್ಯ ತುಕ್ಕು ರೋಗ",
    "symptoms": [
     "ಮೆಕ್ಕೆಜೋಳದ ಎಲೆಗಳ ಎರಡು ಕಡೆಗಳಲ್ಲಿ ಕಂದು ಬಣ್ಣದ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
     "ಈ ಚುಕ್ಕೆಗಳು ಅಕ್ಷರಶಃ ಸಣ್ಣ ಗುಳ್ಳೆಗಳಂತಿರುತ್ತವೆ, ಇವನ್ನು ಪಸ್ಟಲ್ಸ್ ಎನ್ನುತ್ತಾರೆ.",
@@ -944,7 +944,7 @@
    "etl": ""
   },
   "maize_turcicum_blight": {
-   "name": "Northern leaf blight (turcicum)",
+   "name": "ಉತ್ತರ ಎಲೆ ಸುಡುವ ರೋಗ (turcicum)",
    "symptoms": [
     "ಮೊದಲು ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣದಾದ, ಸ್ವಲ್ಪ ಅಂಡಾಕಾರದ, ನೀರು ಹಿಡಿದುಕೊಂಡಂತಹ ಚುಕ್ಕೆಗಳು ಮೂಡುತ್ತವೆ.",
     "ಈ ಚುಕ್ಕೆಗಳು ಬೆಳೆದು ಉದ್ದನೆಯ, ದೋಣಿಯ ಆಕಾರದ ಒಣಗಿದ ಜಾಗಗಳಾಗುತ್ತವೆ.",
@@ -965,7 +965,7 @@
    "etl": "ಎಲೆ ಸುಡುವ ರೋಗದಿಂದ 10% ರಷ್ಟು ಗಿಡಗಳು ಹಾನಿಗೊಳಗಾಗಿವೆ."
   },
   "maize_maydis_blight": {
-   "name": "Southern leaf blight (maydis)",
+   "name": "ದಕ್ಷಿಣ ಎಲೆ ಸುಡುವ ರೋಗ (maydis)",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲಿನ ಹೊಸ ಚುಕ್ಕೆಗಳು ಸಣ್ಣದಾಗಿ ಮತ್ತು ವಜ್ರದ ಆಕಾರದಲ್ಲಿರುತ್ತವೆ.",
     "ಚುಕ್ಕೆಗಳು ಹಳೆಯದಾದಂತೆ, ಉದ್ದವಾಗಿ ಹಬ್ಬಿಕೊಳ್ಳುತ್ತವೆ.",
@@ -988,7 +988,7 @@
    "etl": "ಎಲೆ ಸುಡುವ ರೋಗದಿಂದ 10% ರಷ್ಟು ಗಿಡಗಳು ಹಾನಿಗೊಳಗಾಗಿವೆ."
   },
   "maize_grey_leaf_spot": {
-   "name": "Grey leaf spot",
+   "name": "ಬೂದು ಬಣ್ಣದ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
    "symptoms": [
     "ತೆನೆ ಬರುವುದಕ್ಕೆ ಎರಡು ಮೂರು ವಾರಗಳ ಮುಂಚೆ, ಕೆಳಗಿನ ಎಲೆಗಳ ಮೇಲೆ ಮೊದಲು ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
     "ಚುಕ್ಕೆಗಳು ಉದ್ದವಾಗಿ ಮತ್ತು ಕಿರಿದಾಗಿ, ಸುಮಾರು 5 cm ವರೆಗೆ, ಆಯತಾಕಾರದಲ್ಲಿ ತಿಳಿ ಕಂದು ಬಣ್ಣದಲ್ಲಿರುತ್ತವೆ.",
@@ -1010,7 +1010,7 @@
    "etl": ""
   },
   "maize_downy_mildew": {
-   "name": "Downy mildew",
+   "name": "ಡೌನಿ ಮಿಲ್ಡ್ಯೂ",
    "symptoms": [
     "ಗಿಡವು ಹಳದಿ ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿ ಕುಂಠಿತಗೊಳ್ಳಬಹುದು.",
     "ಎಲೆಗಳ ಮೇಲೆ ಬಿಳಿ ಗೆರೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು.",
@@ -1036,7 +1036,7 @@
    "etl": "10% ರಷ್ಟು ಗಿಡಗಳಿಗೆ ರೋಗ ತಗುಲಿದೆ."
   },
   "maize_fall_armyworm": {
-   "name": "Fall armyworm",
+   "name": "ಫಾಲ್ ಆರ್ಮಿವರ್ಮ್",
    "symptoms": [
     "ಚಿಕ್ಕ ಗಿಡಗಳ ಎಲೆಗಳ ಮೇಲೆ ಕಾಗದದಂತಹ ಉದ್ದನೆಯ ತೆಳುವಾದ ಜಾಗಗಳು ಕಾಣಿಸಬಹುದು.",
     "ಕೀಟ ಬೆಳೆದಂತೆಲ್ಲಾ ಎಲೆಗಳಲ್ಲಿ ದೊಡ್ಡ ದೊಡ್ಡ ಅನಿಯಮಿತ ರಂಧ್ರಗಳು ಉಂಟಾಗುತ್ತವೆ.",
@@ -1071,7 +1071,7 @@
    "etl": "ಸಸಿ ಹಂತದಿಂದ ಸುಳಿಯ ಮಧ್ಯದ ಹಂತದವರೆಗೆ, ಸುಮಾರು 10% ರಷ್ಟು ಗಿಡಗಳು ಹಾನಿಗೊಳಗಾದಾಗ ಕ್ರಮ ಕೈಗೊಳ್ಳಿ (ಉದಾಹರಣೆಗೆ W ಆಕಾರದಲ್ಲಿ ನಡೆಯುವಾಗ ಪರೀಕ್ಷಿಸಿದ 20 ಗಿಡಗಳಲ್ಲಿ 2 ಗಿಡಗಳು). ಸುಳಿಯ ಮಧ್ಯದ ಹಂತದ ನಂತರ, ಅದೇ ಪ್ರಮಾಣಕ್ಕೆ ಸಿಂಪಡಿಸುವ ಅಗತ್ಯವಿಲ್ಲ."
   },
   "maize_healthy": {
-   "name": "Healthy",
+   "name": "ಆರೋಗ್ಯಕರ",
    "symptoms": [
     "ಎಲೆಗಳು ಆ ತಳಿಗೆ ತಕ್ಕಂತೆ ಒಂದೇ ಸಮನೆ ಹಸಿರಾಗಿರುತ್ತವೆ, ಯಾವುದೇ ಚುಕ್ಕೆಗಳು, ಗೆರೆಗಳು, ಉಂಗುರಗಳು ಅಥವಾ ಪುಡಿಯಂತಹ ಲೇಪನವಿರುವುದಿಲ್ಲ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಮತ್ತು ತುದಿಗಳು ಸುರುಳಿಕೊಳ್ಳುವುದು, ಹಳದಿ ಬರುವುದು, ಒಣಗುವುದು ಅಥವಾ ಸುಟ್ಟುಹೋಗುವುದು ಆಗಿರುವುದಿಲ್ಲ.",
@@ -1094,7 +1094,7 @@
    "etl": ""
   },
   "tomato_early_blight": {
-   "name": "Early blight",
+   "name": "ಮುಂಚಿನ ಎಲೆ ಸುಡುವ ರೋಗ",
    "symptoms": [
     "ಮೊದಲು ಹಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ ಕಪ್ಪು ಕಲೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
     "ಈ ಕಲೆಗಳು ದೊಡ್ಡದಾಗಿ ಮಧ್ಯದಲ್ಲಿ ಗುರಿಯಂತೆ ವರ್ತುಳಗಳ ಗುರುತು ಮೂಡುತ್ತವೆ.",
@@ -1120,7 +1120,7 @@
    "etl": ""
   },
   "tomato_late_blight": {
-   "name": "Late blight",
+   "name": "ತಡವಾದ ಎಲೆ ಸುಡುವ ರೋಗ",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ, ಅನಿಯಮಿತವಾದ, ನೀರಿನಿಂದ ನೆನೆದಂತಹ ಕಲೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
     "ಈ ಕಲೆಗಳು ಗಾಢ ಕಂದು ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿ ಅಡಿಯಲ್ಲಿ ಬಿಳಿ ನಶ್ಯದಂತೆ ಇರಬಹುದು.",
@@ -1148,7 +1148,7 @@
    "etl": ""
   },
   "tomato_leaf_curl": {
-   "name": "Leaf curl virus",
+   "name": "ಎಲೆ ಸುರುಟುವ ವೈರಸ್",
    "symptoms": [
     "ಗಿಡದ ಹೊಸ ಬೆಳವಣಿಗೆ ಕುಂಠಿತಗೊಂಡು ಕಾಂಡಗಳು ಗಿಡ್ಡವಾಗಿರುತ್ತವೆ.",
     "ಹೊಸ ಎಲೆಗಳು ಸಣ್ಣಗಾಗಿ, ಸುಕ್ಕುಗಟ್ಟಿ, ನರಗಳ ಮಧ್ಯೆ ಹಳದಿ ಬಣ್ಣದಲ್ಲಿರುತ್ತವೆ.",
@@ -1178,7 +1178,7 @@
    "etl": ""
   },
   "tomato_septoria_leaf_spot": {
-   "name": "Septoria leaf spot",
+   "name": "ಸೆಪ್ಟೋರಿಯಾ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
    "symptoms": [
     "ಎಲೆಗಳ ಮೇಲೆ ಅನೇಕ ಸಣ್ಣ ಬೂದು ಬಣ್ಣದ ಕಲೆಗಳು ಕಾಣಿಸುತ್ತವೆ.",
     "ಈ ಕಲೆಗಳು ದುಂಡಾಗಿ ಗಾಢವಾದ ಅಂಚನ್ನು ಹೊಂದಿರುತ್ತವೆ.",
@@ -1203,7 +1203,7 @@
    "etl": ""
   },
   "tomato_bacterial_spot": {
-   "name": "Bacterial spot",
+   "name": "ಬ್ಯಾಕ್ಟೀರಿಯಾ ಚುಕ್ಕೆ ರೋಗ",
    "symptoms": [
     "ಹಳದಿ ಬಣ್ಣದ ವೃತ್ತವಿರುವ ಸಣ್ಣ ಕಂದು ಬಣ್ಣದ ಕಲೆಗಳು ಎಲೆಗಳ ಮೇಲೆ ಮೂಡುತ್ತವೆ.",
     "ಹಳೆಯ ಎಲೆಗಳು ಗಿಡದಿಂದ ಉದುರಿಹೋಗಬಹುದು.",
@@ -1227,7 +1227,7 @@
    "etl": ""
   },
   "tomato_fruit_borer": {
-   "name": "Fruit borer",
+   "name": "ಕಾಯಿ ಕೊರೆಯುವ ಹುಳು",
    "symptoms": [
     "ಚಿಕ್ಕ ಹುಳುಗಳು ಗಿಡದ ಎಳೆಯ ಎಲೆಗಳನ್ನು ತಿನ್ನುತ್ತವೆ.",
     "ದೊಡ್ಡ ಹುಳುಗಳು ಕಾಯಿಯೊಳಗೆ ದುಂಡಾದ ರಂಧ್ರಗಳನ್ನು ಕೊರೆಯುತ್ತವೆ.",
@@ -1259,10 +1259,10 @@
     "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
    ],
    "avoid": [],
-   "etl": "10% fruit damage."
+   "etl": "10% ಕಾಯಿ ಹಾನಿ."
   },
   "tomato_healthy": {
-   "name": "Healthy",
+   "name": "ಆರೋಗ್ಯಕರ",
    "symptoms": [
     "ಎಲೆಗಳು ತಳಿಗೆ ತಕ್ಕಂತೆ ಸಮವಾಗಿ ಹಸಿರಾಗಿರುತ್ತವೆ, ಯಾವುದೇ ಕಲೆಗಳು, ಗೆರೆಗಳು, ವರ್ತುಳಗಳು ಅಥವಾ ಪುಡಿಯಂತಹ ಲೇಪನವಿರುವುದಿಲ್ಲ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಮತ್ತು ತುದಿಗಳು ಸುರುಳಿಯಾಗುವುದು, ಹಳದಿಯಾಗುವುದು, ಒಣಗುವುದು ಅಥವಾ ಸುಡುವುದಿಲ್ಲ.",
@@ -1532,7 +1532,7 @@
     "ಹಣ್ಣಿನ ಸಿಪ್ಪೆ ಕಪ್ಪಾಗಿ ಸುಕ್ಕುಗಟ್ಟುತ್ತದೆ.",
     "ಕೊಳೆಯುತ್ತಿರುವ ಹಣ್ಣಿನ ಮೇಲೆ ಗುಲಾಬಿ ಬಣ್ಣದ ಬೀಜಕಗಳ ಪದರ ಆವರಿಸಿಕೊಳ್ಳುತ್ತದೆ.",
     "ಹಣ್ಣಿನ ತೊಟ್ಟಿನ ಮೇಲೆ ಕಪ್ಪು ಹುಣ್ಣುಗಳು ಬಂದು ಹಣ್ಣುಗಳು ಉದುರಿಹೋಗುತ್ತವೆ.",
-    "Entire bunch can turn black and rot."
+    "ಇಡೀ ಗೊನೆ ಕಪ್ಪಾಗಿ ಕೊಳೆಯಬಹುದು."
    ],
    "prevention": [
     "ತೋಟವನ್ನು ಸ್ವಚ್ಛವಾಗಿ ಮತ್ತು ಕಳೆಗಳಿಲ್ಲದೆ ಇಡಿ.",
@@ -1764,7 +1764,7 @@
    "etl": ""
   },
   "blackgram_yellow_mosaic": {
-   "name": "Yellow mosaic virus",
+   "name": "ಹಳದಿ ಮೊಸಾಯಿಕ್ ವೈರಸ್",
    "symptoms": [
     "ಮೊದಲು ಎಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ಸಣ್ಣ ಹಳದಿ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
     "ಹೊಸ ಎಲೆಗಳಲ್ಲಿ ಹಳದಿ ಮತ್ತು ಹಸಿರು ಬಣ್ಣದ ಕಲೆಗಳು ಮಿಶ್ರಣವಾಗಿ ಕಾಣಿಸುತ್ತವೆ.",
@@ -1796,7 +1796,7 @@
    "etl": ""
   },
   "blackgram_powdery_mildew": {
-   "name": "Powdery mildew",
+   "name": "ಬೂದಿ ರೋಗ",
    "symptoms": [
     "ಎಲೆಗಳು ಮತ್ತು ಹಸಿರು ಭಾಗಗಳ ಮೇಲೆ ಬಿಳಿ ಬಣ್ಣದ ಪುಡಿಯಂತಹ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.",
     "ಈ ಚುಕ್ಕೆಗಳು ದೊಡ್ಡದಾಗಿ ವೃತ್ತಗಳಾಗಿ ಬದಲಾಗುತ್ತವೆ.",
@@ -1823,7 +1823,7 @@
    "etl": ""
   },
   "blackgram_cercospora_leaf_spot": {
-   "name": "Cercospora leaf spot",
+   "name": "ಸೆರ್ಕೊಸ್ಪೊರಾ ಎಲೆ ಚುಕ್ಕೆ ರೋಗ",
    "symptoms": [
     "ನೀವು ಎಲೆಗಳ ಮೇಲೆ ಅನೇಕ ಸಣ್ಣ ಚುಕ್ಕೆಗಳನ್ನು ನೋಡುತ್ತೀರಿ.",
     "ಚುಕ್ಕೆಗಳು ತಿಳಿ ಕಂದು ಬಣ್ಣದ ಕೇಂದ್ರವನ್ನು ಮತ್ತು ಕೆಂಪು-ಕಂದು ಬಣ್ಣದ ಅಂಚನ್ನು ಹೊಂದಿರುತ್ತವೆ.",
@@ -1847,7 +1847,7 @@
    "etl": ""
   },
   "blackgram_leaf_crinkle": {
-   "name": "Leaf crinkle virus",
+   "name": "ಎಲೆ ಸುಕ್ಕುಗಟ್ಟುವ ವೈರಸ್",
    "symptoms": [
     "ಎಳೆಯ ಎಲೆಗಳು ಪಕ್ಕದ ನರಗಳ ಸುತ್ತಲೂ ಮತ್ತು ಅಂಚಿನ ಬಳಿ ಹಳದಿ ಬಣ್ಣಕ್ಕೆ ತಿರುಗುತ್ತವೆ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಕೆಳಮುಖವಾಗಿ ಸುರುಳಿಕೊಳ್ಳುತ್ತವೆ.",
@@ -1869,7 +1869,7 @@
    "etl": ""
   },
   "blackgram_rust": {
-   "name": "Rust",
+   "name": "ತುಕ್ಕು ರೋಗ",
    "symptoms": [
     "ಕೊಂಬೆಗಳು ಮತ್ತು ಕಾಯಿಗಳ ಮೇಲೂ ಚುಕ್ಕೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು.",
     "ಕೆಟ್ಟ ಸಂದರ್ಭಗಳಲ್ಲಿ, ಎಲೆಗಳು ಸುಕ್ಕುಗಟ್ಟಿ ಗಿಡದಿಂದ ಉದುರಿಹೋಗುತ್ತವೆ.",
@@ -1890,7 +1890,7 @@
    "etl": ""
   },
   "blackgram_pod_borer": {
-   "name": "Spotted pod borer (Maruca)",
+   "name": "ಕಾಯಿ ಕೊರೆಯುವ ಹುಳು (Maruca)",
    "symptoms": [
     "ಆರಂಭಿಕ ಹಂತಗಳಲ್ಲಿ ಎಲೆಗಳು ತಿನ್ನುಲ್ಪಟ್ಟಿರುವುದನ್ನು ನೀವು ನೋಡುತ್ತೀರಿ.",
     "ಹುಳವು ಸಾಮಾನ್ಯವಾಗಿ ತನ್ನ ತಲೆಯನ್ನು ಕಾಯಿಯ ಒಳಗೆ ಇಟ್ಟುಕೊಂಡು ದೇಹವನ್ನು ಹೊರಗೆ ನೇತುಹಾಕಿಕೊಂಡಿರುತ್ತದೆ.",
@@ -1918,7 +1918,7 @@
    "etl": "ಪ್ರತಿ ಗಿಡಕ್ಕೆ 3 ಕಂಬಳಿಹುಳುಗಳು (3 caterpillars per plant)."
   },
   "blackgram_healthy": {
-   "name": "Healthy",
+   "name": "ಆರೋಗ್ಯಕರ",
    "symptoms": [
     "ತಳಿಗೆ ತಕ್ಕಂತೆ ಎಲೆಗಳು ಸಮವಾಗಿ ಹಸಿರಾಗಿರುತ್ತವೆ, ಯಾವುದೇ ಚುಕ್ಕೆಗಳು, ಗೆರೆಗಳು, ಉಂಗುರಗಳು ಅಥವಾ ಪುಡಿಯಂತಹ ಪದರು ಇರುವುದಿಲ್ಲ.",
     "ಎಲೆಯ ಅಂಚುಗಳು ಮತ್ತು ತುದಿಗಳು ಸುರುಳಿಕೊಳ್ಳುತ್ತಿಲ್ಲ, ಹಳದಿಯಾಗುತ್ತಿಲ್ಲ, ಒಣಗುತ್ತಿಲ್ಲ ಅಥವಾ ಕಂದಿಲ್ಲ.",
@@ -2096,7 +2096,7 @@
    "etl": ""
   },
   "cashew_tea_mosquito_bug": {
-   "name": "Tea mosquito bug",
+   "name": "ಟೀ ಮಸ್ಕಿಟೋ ಬಗ್",
    "symptoms": [
     "ಚಿಕ್ಕ ಮತ್ತು ದೊಡ್ಡ ಕೀಟಗಳು ಎಳೆ ಎಲೆಗಳು, ಚಿಗುರುಗಳು, ಹೂಗೊಂಚಲುಗಳು, ಎಳೆ ಗೋಡಂಬಿ ಕಾಯಿಗಳು ಮತ್ತು ಹಣ್ಣುಗಳಿಂದ ರಸವನ್ನು ಹೀರುತ್ತವೆ.",
     "ಕಚ್ಚಿದ ಜಾಗದಿಂದ ಅಂಟಿನಂತಹ ದ್ರವ ಬರುತ್ತದೆ.",
@@ -2438,9 +2438,9 @@
   "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot": "ಕಲೆಗಳು ಸಣ್ಣದಾಗಿದ್ದು, ಗಾಢ ಕಂದುಯಿಂದ ಕಪ್ಪು ಬಣ್ಣದಲ್ಲಿ ಎಣ್ಣೆಯಂತೆ ಇದ್ದು, ತಿಳಿ ಬೂದು ಬಣ್ಣದ ಕೇಂದ್ರ ಭಾಗವಿಲ್ಲದೆ ಇವೆಯೇ?",
   "q_chilli_black_thrips_chilli_thrips": "ದಳಗಳ ಮೇಲೆ ಕಂದು ಬಣ್ಣದ ಗೆರೆಗಳು ಮೂಡಿ ಹೂವುಗಳು ಉದುರುತ್ತವೆಯಾ, ಹೂವುಗಳು ಹಾನಿಗೊಳಗಾಗಿದ್ದವೆಯಾ, ಮತ್ತು ಎಲೆಗಳ ಕೆಳಭಾಗವು ಕೆಂಪು ಮಿಶ್ರಿತ ಕಂದು ಬಣ್ಣದಲ್ಲಿದೆಯಾ?",
   "q_chilli_yellow_mite_chilli_thrips": "ತಲೆಕೆಳಗಾದ ದೋಣಿಯಂತೆ ಎಲೆಗಳು ಕೆಳಮುಖವಾಗಿ ಮುರುಟಿಕೊಂಡು, ಅಂಚುಗಳು ಕೆಳಗೆ ಉರುಳಿ ಎಲೆಯ ತೊಟ್ಟುಗಳು ಉದ್ದವಾಗಿವೆಯೇ?",
-  "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot": "Eleya melabhaga kappe chukkehaalu aagideya, mattu kelabhaga matra bilupu baavili ranga ideya?",
-  "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot": "Eleya kelabhagada mele chukkehaalu daada kappu athava kaalu mattu kasaragi iveya?",
-  "q_groundnut_rust_groundnut_late_leaf_spot": "Sapatu chukkehaalu biddige, eleya kelabhagada mele chinna guntuhaalu (pustules) iveya?",
+  "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot": "ಎಲೆಯ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಕಂದು ಬಣ್ಣದ ಚುಕ್ಕೆಗಳಿದ್ದು, ಕೆಳಭಾಗದಲ್ಲಿ ತಿಳಿ ಕಂದು ಬಣ್ಣವಿದೆಯೇ?",
+  "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot": "ಎಲೆಯ ಕೆಳಭಾಗದಲ್ಲಿ ಚುಕ್ಕೆಗಳು ಗಾಢ ಕಂದು ಬಣ್ಣದಿಂದ ಕಪ್ಪಾಗಿ ಮತ್ತು ಒರಟಾಗಿವೆಯೇ?",
+  "q_groundnut_rust_groundnut_late_leaf_spot": "ಎಲೆಯ ಕೆಳಭಾಗದಲ್ಲಿ ಚಪ್ಪಟೆಯಾದ ಚುಕ್ಕೆಗಳ ಬದಲಿಗೆ ಸಣ್ಣದಾದ ಉಬ್ಬಿದ ಗುಳ್ಳೆಗಳಿವೆಯೇ?",
   "q_maize_common_rust_maize_turcicum_blight": "ಎಲೆಯ ಎರಡೂ ಬಡೆಗಳಲ್ಲಿ ಸಣ್ಣದಾದ ಎದ್ದುಕಾಣುವ ಕಂದು ಬಣ್ಣದ ಗುಳ್ಳೆಗಳು (ಪಸ್ಟಲ್ಸ್) ಇವೆಯೇ?",
   "q_maize_turcicum_blight_maize_maydis_blight": "ಚುಕ್ಕೆಗಳು ಉದ್ದವಾಗಿ ದೋಣಿ ಅಥವಾ ಚುಟ್ಟಾದ ಆಕಾರದಲ್ಲಿ, ಬೂದು ಮಿಶ್ರಿತ ಹಸಿರಿನಿಂದ ಕಂದು ಬಣ್ಣದಲ್ಲಿದ್ದು, ಕೆಳಗಿನ ಎಲೆಗಳಿಂದ ಶುರುವಾಗುತ್ತವೆಯೇ?",
   "q_maize_maydis_blight_maize_turcicum_blight": "ಚುಕ್ಕೆಗಳು ಮೊದಲು ಸಣ್ಣದಾಗಿ ವಜ್ರದ ಆಕಾರದಲ್ಲಿದ್ದು, ನಂತರ ಸ್ವಲ್ಪ ಉದ್ದವಾಗಿ, ತಿಳಿ ಕಂದು ಬಣ್ಣದಿಂದ ಕಂದು ಅಂಚನ್ನು ಹೊಂದಿವೆಯೇ?",

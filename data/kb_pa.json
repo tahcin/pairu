@@ -19,29 +19,29 @@
  },
  "diseases": {
   "paddy_blast": {
-   "name": "Jhul Jhul",
+   "name": "ਬਲਾਸਟ",
    "symptoms": [
-    "Patte te chitte ton sitti-hare rang de nishan jinha de kinare bhure hunde han, dikhange.",
-    "Eh nishan vadh ke takle ya heere varge aakar de ban jande han jinha da vichala hissa rakh varga hunda hai.",
-    "Baali da mudhla hissa gura-bhura ya kala ho janda hai ate sadh sakda hai.",
-    "Rogi tana tut sakda hai, jis karke baali thale gir jandi hai.",
-    "Bhari halat vich saari fasal sadi ya sali hoe lagdi hai.",
-    "Is bimari karke chitte rang diyan baaliyan nikal diyan han jinha vich dane nahi hunde ya ghat vadiya dane hunde han."
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਚਿੱਟੇ ਤੋਂ ਸਲੇਟੀ-ਹਰੇ ਰੰਗ ਦੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਭੂਰੇ ਹੋਣਗੇ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਕੇ ਤੱਕਲੇ ਜਾਂ ਹੀਰੇ ਵਰਗੇ ਆਕਾਰ ਦੇ ਹੋ ਜਾਂਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦਾ ਵਿਚਕਾਰਲਾ ਹਿੱਸਾ ਸੁਆਹ ਵਰਗਾ ਹੁੰਦਾ ਹੈ।",
+    "ਸਿੱਟੇ ਦਾ ਹੇਠਲਾ ਹਿੱਸਾ ਗੂੜ੍ਹਾ ਭੂਰਾ ਜਾਂ ਕਾਲਾ ਹੋ ਜਾਂਦਾ ਹੈ ਅਤੇ ਗਲ ਸਕਦਾ ਹੈ।",
+    "ਬਿਮਾਰ ਤਣੇ ਟੁੱਟ ਸਕਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਸਿੱਟਾ ਡਿੱਗ ਜਾਂਦਾ ਹੈ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਹਮਲੇ ਕਾਰਨ ਪੂਰੀ ਫਸਲ ਸੜੀ ਹੋਈ ਜਾਂ ਸੁੱਕੀ ਹੋਈ ਲੱਗਦੀ ਹੈ।",
+    "ਇਸ ਬਿਮਾਰੀ ਕਾਰਨ ਚਿੱਟੇ ਸਿੱਟੇ ਨਿਕਲਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਦਾਣੇ ਨਹੀਂ ਹੁੰਦੇ ਜਾਂ ਬਹੁਤ ਘਟੀਆ ਕੁਆਲਿਟੀ ਦੇ ਹੁੰਦੇ ਹਨ।"
    ],
    "prevention": [
-    "Ajehi kism bijo jo is bimari di rotham kar sake.",
-    "Bijaai bahut late na karo ate sukki nursari da prayog na karo.",
-    "Nitrogen khad ikathi paun di bajae tin hisse karke pao.",
-    "Khet de banhan nu nshin-ghas hata ke saf rakhho.",
-    "Kataai to baad, parali ate naalan nu khet vichon hata do ya mitti vich vaho, sado mat."
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਬੀਜੋ ਜੋ ਬਲਾਸਟ ਰੋਗ ਨੂੰ ਸਹਿਣ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਰੱਖਦੀਆਂ ਹੋਣ।",
+    "ਬਹੁਤ ਦੇਰ ਨਾਲ ਬਿਜਾਈ ਨਾ ਕਰੋ ਅਤੇ ਸੁੱਕੀ ਨਰਸਰੀ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ।",
+    "ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਨੂੰ ਇੱਕੋ ਵਾਰ ਪਾਉਣ ਦੀ ਬਜਾਏ ਤਿੰਨ ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਪਾਓ।",
+    "ਖੇਤ ਦੀਆਂ ਵੱਟਾਂ ਨੂੰ ਨਦੀਨਾਂ ਅਤੇ ਘਾਹ-ਫੂਸ ਤੋਂ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਕਟਾਈ ਤੋਂ ਬਾਅਦ, ਪਰਾਲੀ ਅਤੇ ਨਾੜ ਨੂੰ ਖੇਤ ਵਿੱਚੋਂ ਬਾਹਰ ਕੱਢ ਦਿਓ ਜਾਂ ਸਾੜਨ ਦੀ ਬਜਾਏ ਮਿੱਟੀ ਵਿੱਚ ਵਾਹ ਦਿਓ।"
    ],
    "practices": [
-    "Apne khet nu lagataar check karo ke koi bimari da lakshan ta nahi hai.",
-    "Jinna paudheyan te bimari hove ohna nu kad ke saal do.",
-    "Khet vich pani da level sahi rakho.",
-    "Je bimari dikhe ta nitrogen khad hor pauni rok do."
+    "ਆਪਣੇ ਖੇਤਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਦੀ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਜਾਂਚ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਵਾਲੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਸਾੜ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਪੱਧਰ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਡੂੰਘਾਈ 'ਤੇ ਰੱਖੋ।",
+    "ਜੇਕਰ ਬਿਮਾਰੀ ਦਿਖਾਈ ਦੇਵੇ, ਤਾਂ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਪਾਉਣ ਵਿੱਚ ਦੇਰੀ ਕਰੋ।"
    ],
-   "favourable_conditions": "Thande mausam, zyada nami, os, ate nitrogen khad da hadon vad prayog hon te eh bimari tezi nal pildi hai.",
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਠੰਡੇ ਮੌਸਮ, ਜ਼ਿਆਦਾ ਨਮੀ, ਤਰੇਲ ਅਤੇ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਦੀ ਜ਼ਿਆਦਾ ਵਰਤੋਂ ਨਾਲ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
    "organic_bio": [
     "Pseudomonas fluorescens talc formulation @ 10g/kg bij sowee lai sukke bij di sod lai",
     "Pseudomonas fluorescens (talc) @ 2.5 kg khode pani vich paudheyan diyan jadon nu dubon lai",
@@ -53,122 +53,122 @@
     "Neem cake @ 150 kg/ha"
    ],
    "avoid": [],
-   "etl": "Patte da blast: har patte te 3 ton 5 nishan. Gadan da blast: 2 ton 5 paudhe pratvarg meter rogi gadan vale."
+   "etl": "ਪੱਤਿਆਂ ਦਾ ਬਲਾਸਟ: ਪ੍ਰਤੀ ਪੱਤਾ 3 ਤੋਂ 5 ਦਾਗ। ਗਰਦਨ ਦਾ ਬਲਾਸਟ: ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ 2 ਤੋਂ 5 ਪੌਦੇ ਜਿਨ੍ਹਾਂ ਦੀ ਗਰਦਨ ਪ੍ਰਭਾਵਿਤ ਹੋਵੇ।"
   },
   "paddy_brown_spot": {
-   "name": "Bhoora dhabba rog",
+   "name": "ਬਰਾਊਨ ਸਪੌਟ",
    "symptoms": [
-    "Bimari di shuruat patte te chhote-chhote bhure bindiya nal hundi hai.",
-    "Eh nishan vadh ke andakar ya gol ho jande han jo til de dane varge lagde han.",
-    "Bahut saare nishan ikathe ho ke vade dhabbe ban jande han jisse patta suk janda hai.",
-    "Tuhanu dane de sirhe te ate paudhe di gadan te bhure dhabbe dikh sakde han.",
-    "Rogi dane te kale ya bhure rang de makhmali fafund di parat dikh sakdi hai."
+    "ਬਿਮਾਰੀ ਦੀ ਸ਼ੁਰੂਆਤ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਭੂਰੇ ਬਿੰਦੂਆਂ ਨਾਲ ਹੁੰਦੀ ਹੈ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਕੇ ਅੰਡਾਕਾਰ ਜਾਂ ਗੋਲ ਹੋ ਜਾਂਦੇ ਹਨ ਜੋ ਤਿਲ ਦੇ ਦਾਣਿਆਂ ਵਰਗੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਬਹੁਤ ਸਾਰੇ ਦਾਗ ਮਿਲ ਕੇ ਵੱਡੇ ਧੱਬੇ ਬਣਾ ਲੈਂਦੇ ਹਨ ਜਿਸ ਨਾਲ ਪੱਤਾ ਸੁੱਕ ਜਾਂਦਾ ਹੈ।",
+    "ਤੁਸੀਂ ਦਾਣਿਆਂ ਦੇ ਸਿੱਟਿਆਂ ਅਤੇ ਪੌਦੇ ਦੀ ਗਰਦਨ ਉੱਤੇ ਭੂਰੇ ਦਾਗ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਪ੍ਰਭਾਵਿਤ ਬੀਜਾਂ ਉੱਤੇ ਕਾਲੇ ਜਾਂ ਭੂਰੇ ਦਾਗ ਹੋ ਸਕਦੇ ਹਨ ਜੋ ਮਖਮਲੀ ਉੱਲੀ ਨਾਲ ਢਕੇ ਹੁੰਦੇ ਹਨ।"
    ],
    "prevention": [
-    "Hamesha bimari-mukt bij da prayog karo.",
-    "Ajehi chano jo bimari rokh sake.",
-    "Nshin ate hor paudhe jo fafund nu pala sakde han, hata do.",
-    "Sahi tatva pa ke mitti nu upjau rakho ate pani di kami na aun do.",
-    "Bijaai ton pehlan bij nu 53-54°C garam pani vich 10 ton 12 minat lai sodho."
+    "ਹਮੇਸ਼ਾ ਬਿਮਾਰੀ ਰਹਿਤ ਬੀਜਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਝੋਨੇ ਦੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਬੀਜਣ ਦੀ ਚੋਣ ਕਰੋ।",
+    "ਨਦੀਨਾਂ ਅਤੇ ਹੋਰ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾਓ ਜੋ ਉੱਲੀ ਨੂੰ ਪਨਾਹ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਸਹੀ ਪੌਸ਼ਟਿਕ ਤੱਤਾਂ ਨਾਲ ਮਿੱਟੀ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖੋ ਅਤੇ ਪਾਣੀ ਦੀ ਕਮੀ ਨਾ ਹੋਣ ਦਿਓ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜਾਂ ਨੂੰ 53-54°C ਗਰਮ ਪਾਣੀ ਵਿੱਚ 10 ਤੋਂ 12 ਮਿੰਟ ਲਈ ਸੋਧੋ।"
    ],
    "practices": [
-    "Apne khet vich rogi paudheyan nu dekho.",
-    "Paudhe nu pani di kami na ave, is lai khet nu changi tarah sincho.",
-    "Rogi paudhe ya ohna de hisse kad ke nasht kar do."
+    "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦੀ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਨੂੰ ਚੰਗੀ ਤਰ੍ਹਾਂ ਸਿੰਜਿਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਪਾਣੀ ਦੀ ਕਮੀ ਨਾ ਹੋਵੇ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਪੌਦਿਆਂ ਜਾਂ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
    ],
-   "favourable_conditions": "Jad tapman 25-30°C hove, nami 80 pratishat ton utte hove, ate patte 8 ton 24 ghante gile rehn, ta eh bimari pildi hai.",
+   "favourable_conditions": "ਬਿਮਾਰੀ ਉਦੋਂ ਫੈਲਦੀ ਹੈ ਜਦੋਂ ਤਾਪਮਾਨ 25-30°C ਹੋਵੇ, ਨਮੀ 80 ਪ੍ਰਤੀਸ਼ਤ ਤੋਂ ਵੱਧ ਹੋਵੇ, ਅਤੇ ਪੱਤੇ 8 ਤੋਂ 24 ਘੰਟਿਆਂ ਤੱਕ ਗਿੱਲੇ ਰਹਿਣ।",
    "organic_bio": [
     "Pseudomonas fluorescens @ 10g/kg bij nal sod karke baad vich paudhe dip karan lai 2.5 kg ya product/ha 100 lit pani vich ghol ke"
    ],
    "avoid": [],
-   "etl": "Prat patte te 2 ton 3 dhabbe ate prat varg meter 2 ton 3 rogi paudhe."
+   "etl": "ਪ੍ਰਤੀ ਪੱਤਾ 2 ਤੋਂ 3 ਦਾਗ ਅਤੇ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ 2 ਤੋਂ 3 ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ।"
   },
   "paddy_blb": {
-   "name": "Patte da galan rog",
+   "name": "ਬੈਕਟੀਰੀਅਲ ਲੀਫ ਬਲਾਈਟ",
    "symptoms": [
-    "Patte te pani varge ya pile rang de lariye dikhange.",
-    "Patte de kinare pile ya sone varge ho ke sukn lagde han.",
-    "Patte sirhe ton mud ke suk sakde han jadki vichali rekh hari rehndi hai.",
-    "Saver vele, naye nishana te dudhiya ya gadha pani jeha boond varga dikh sakda hai.",
-    "Bahut zyada rogi patte jaldi hi suk jande han."
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੀਆਂ ਜਾਂ ਪੀਲੀਆਂ ਧਾਰੀਆਂ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਪੀਲੇ ਜਾਂ ਸੁਨਹਿਰੀ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੁੱਕਣ ਲੱਗਦੇ ਹਨ।",
+    "ਪੱਤੇ ਮੁੜ ਸਕਦੇ ਹਨ ਅਤੇ ਸਿਰੇ ਤੋਂ ਸੁੱਕ ਸਕਦੇ ਹਨ ਜਦੋਂ ਕਿ ਵਿਚਕਾਰਲੀ ਨਾੜ ਹਰੀ ਰਹਿੰਦੀ ਹੈ।",
+    "ਸਵੇਰੇ ਜਲਦੀ, ਤੁਸੀਂ ਨੌਜਵਾਨ ਦਾਗਾਂ ਉੱਤੇ ਬੈਕਟੀਰੀਆ ਦਾ ਦੁੱਧ ਵਰਗਾ ਜਾਂ ਧੁੰਦਲਾ ਤੁਪਕਾ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਬਹੁਤ ਜਲਦੀ ਸੁੱਕ ਜਾਣਗੇ।"
    ],
    "prevention": [
-    "Ajehi kism chuno jo is bimari nu seh sake.",
-    "Hamesha swasth ate bimari-mukt bij da prayog karo.",
-    "Apni nursari alag unche ilake vich ughao.",
-    "Khet nu nshin ate purane naalan nu hata ke saf rakhho.",
-    "Santulit khad varto ate nitrogen hadon vad na pao."
+    "ਆਪਣੀ ਬਿਜਾਈ ਲਈ ਸਹਿਣਸ਼ੀਲ ਝੋਨੇ ਦੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਹਮੇਸ਼ਾ ਸਿਹਤਮੰਦ, ਬਿਮਾਰੀ-ਰਹਿਤ ਬੀਜਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਆਪਣੇ ਪੌਦਿਆਂ ਨੂੰ ਵੱਖਰੇ ਉੱਚੇ ਇਲਾਕਿਆਂ ਵਿੱਚ ਉਗਾਓ।",
+    "ਨਦੀਨਾਂ ਅਤੇ ਪੁਰਾਣੇ ਝੋਨੇ ਦੇ ਨਾੜ ਨੂੰ ਹਟਾ ਕੇ ਆਪਣੇ ਖੇਤਾਂ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਸੰਤੁਲਿਤ ਖਾਦ ਦੀ ਵਰਤੋਂ ਕਰੋ ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਪਾਉਣ ਤੋਂ ਬਚੋ।"
    ],
    "practices": [
-    "Khet vichon pani kad do, par phullan de same pani khara rakho.",
-    "Rogi paudhe ya ohna de hisse kad ke saal do.",
-    "Rogi khet da pani swasth khet vich na jaen do.",
-    "Paudhe laun vele ohna de sirhe na kato.",
-    "Apne khet nu lagataar check karo."
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚੋਂ ਪਾਣੀ ਕੱਢ ਦਿਓ, ਪਰ ਫੁੱਲ ਆਉਣ ਦੇ ਸਮੇਂ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਰੱਖੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੌਦੇ ਜਾਂ ਹਿੱਸੇ ਨੂੰ ਹਟਾ ਕੇ ਸਾੜ ਦਿਓ।",
+    "ਪ੍ਰਭਾਵਿਤ ਖੇਤ ਦਾ ਪਾਣੀ ਤੰਦਰੁਸਤ ਖੇਤ ਵਿੱਚ ਜਾਣ ਤੋਂ ਰੋਕੋ।",
+    "ਪਨੀਰੀ ਲਗਾਉਣ ਵੇਲੇ ਪੌਦਿਆਂ ਦੇ ਸਿਰੇ ਨਾ ਕੱਟੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਕਿਸੇ ਵੀ ਲੱਛਣ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਨਿਗਰਾਨੀ ਕਰੋ।"
    ],
-   "favourable_conditions": "Garam tapman 25 ton 30 degree Celsius, zyada nami, varakhha, danga pani, ate tez hawan jo chot paudiyan han, is bimari nu vadhaundiyan han.",
+   "favourable_conditions": "25 ਤੋਂ 30 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਦੇ ਵਿਚਕਾਰ ਗਰਮ ਤਾਪਮਾਨ, ਉੱਚ ਨਮੀ, ਮੀਂਹ, ਡੂੰਘਾ ਪਾਣੀ, ਅਤੇ ਤੇਜ਼ ਹਵਾਵਾਂ ਜੋ ਜ਼ਖ਼ਮ ਪੈਦਾ ਕਰਦੀਆਂ ਹਨ, ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦੀਆਂ ਹਨ।",
    "organic_bio": [
     "Neem oil 3% da chhidka",
     "NSKE 5% da chhidka",
     "Taaze gobar da ras (20 gram gobar ik litre pani vich) da chhidka"
    ],
    "avoid": [],
-   "etl": "Prat varg meter 2 ton 3 rogi patte (nursari vich, prat varg meter 2 ton 3 murjhhonde paudhe)."
+   "etl": "ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ 2 ਤੋਂ 3 ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ (ਨਰਸਰੀ ਵਿੱਚ, ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ 2 ਤੋਂ 3 ਮੁਰਝਾਏ ਹੋਏ ਪੌਦੇ)।"
   },
   "paddy_sheath_blight": {
-   "name": "Ghol da sarna",
+   "name": "ਸ਼ੀਥ ਬਲਾਈਟ",
    "symptoms": [
-    "Pani de level de kol patte de ghol te dhabbe dikhange.",
-    "Dhabbe hare-slaye rang de shuru hunde han ate gol ya tedhe-medhe hunde han.",
-    "Jyon hi oh vadhde han, vichala hissa slate-chittaate kinara bhura ho janda hai.",
-    "Dhabbe vadh ke saare tanner nu gher lainde han.",
-    "Patte mar sakde han ate saara paudha suk sakda hai.",
-    "Rogi paudhe vich dane theek tarah nahi bharde."
+    "ਤੁਹਾਨੂੰ ਪਾਣੀ ਦੇ ਪੱਧਰ ਦੇ ਨੇੜੇ ਪੱਤਿਆਂ ਦੇ ਮਿਆਨਾਂ ਉੱਤੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਦਾਗ ਹਰੇ-ਸਲੇਟੀ ਰੰਗ ਦੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਅੰਡਾਕਾਰ ਜਾਂ ਅਨਿਯਮਿਤ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਜਿਵੇਂ-ਜਿਵੇਂ ਉਹ ਵੱਡੇ ਹੁੰਦੇ ਹਨ, ਵਿਚਕਾਰਲਾ ਹਿੱਸਾ ਗੂੜ੍ਹੇ ਕਿਨਾਰੇ ਦੇ ਨਾਲ ਸਲੇਟੀ-ਚਿੱਟਾ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "ਦਾਗ ਫੈਲ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪੂਰੇ ਬੂਟੇ ਨੂੰ ਕਵਰ ਕਰ ਲੈਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਮਰ ਸਕਦੇ ਹਨ ਅਤੇ ਪੂਰਾ ਪੌਦਾ ਸੁੱਕ ਸਕਦਾ ਹੈ।",
+    "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਵਿੱਚ ਦਾਣੇ ਚੰਗੀ ਤਰ੍ਹਾਂ ਨਹੀਂ ਭਰਦੇ।"
    ],
    "prevention": [
-    "Lod mutabik khad varto ate nitrogen hadon vad na pao.",
-    "Paudheyan vich sahi fasla rakho.",
-    "Khet vichon nshin hatao.",
-    "Garmi vich dahi vaho ate naal ya naadnu hata do ya mitti vich rala do.",
-    "Rogi khet da pani swasth khet vich na paen do."
+    "ਸਹੀ ਮਾਤਰਾ ਵਿੱਚ ਖਾਦ ਦੀ ਵਰਤੋਂ ਕਰੋ ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ।",
+    "ਬੂਟਿਆਂ ਵਿਚਕਾਰ ਸਹੀ ਦੂਰੀ ਰੱਖੋ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਨਦੀਨਾਂ ਨੂੰ ਸਾਫ਼ ਕਰੋ।",
+    "ਗਰਮੀਆਂ ਵਿੱਚ ਡੂੰਘੀ ਵਾਹੀ ਕਰੋ ਅਤੇ ਨਾੜ ਨੂੰ ਬਾਹਰ ਕੱਢ ਦਿਓ ਜਾਂ ਖੇਤ ਵਿੱਚ ਵਾਹ ਦਿਓ।",
+    "ਬਿਮਾਰ ਖੇਤ ਦਾ ਪਾਣੀ ਤੰਦਰੁਸਤ ਖੇਤ ਵਿੱਚ ਨਾ ਜਾਣ ਦਿਓ।"
    ],
    "practices": [
-    "Patte de ghol te dhabbe dekhan lai khet nu check karo.",
-    "Khel vich pani khara na rehn do, varo-varo pani sukhao ate bharo.",
-    "Hawa di chal theek karan lai khet vich 30 cm chaude raste banao.",
-    "Rogi paudhe de hisse kad ke nasht kar do."
+    "ਪੱਤਿਆਂ ਦੀਆਂ ਮਿਆਨਾਂ ਉੱਤੇ ਦਾਗਾਂ ਦੀ ਜਾਂਚ ਲਈ ਖੇਤ ਦਾ ਨਿਰੀਖਣ ਕਰੋ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਨਾ ਹੋਣ ਦਿਓ, ਇਸ ਲਈ ਪਾਣੀ ਲਾਉਣ ਅਤੇ ਸੁਕਾਉਣ ਦਾ ਤਰੀਕਾ ਅਪਣਾਓ।",
+    "ਹਵਾ ਦੇ ਗੇੜ ਲਈ ਖੇਤ ਵਿੱਚ 30 cm ਚੌੜੀਆਂ ਨਾਲੀਆਂ ਬਣਾਓ।",
+    "ਬਿਮਾਰ ਬੂਟਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
    ],
-   "favourable_conditions": "Eh bimari garam mausam vich 28 ton 32 degree Celsius tapman, zyada nami, ate paudheyan di ghani fasla karke tezi nal pildi hai.",
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ 28 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ, ਜ਼ਿਆਦਾ ਨਮੀ ਅਤੇ ਬੂਟਿਆਂ ਦੀ ਸੰਘਣੀ ਬਿਜਾਈ ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
    "organic_bio": [
     "Virodhi mikroroganu nu vadhon lai FYM 12.5 t/ha ya hari khaad 6.25 t/ha pao"
    ],
    "avoid": [],
-   "etl": "5 ton 6 mm lamme dhabbe ate prat varg meter 2 ton 3 rogi paudhe."
+   "etl": "5 ਤੋਂ 6 mm ਲੰਬੇ ਦਾਗ ਅਤੇ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ 2 ਤੋਂ 3 ਬਿਮਾਰ ਬੂਟੇ।"
   },
   "paddy_bph": {
-   "name": "Bhoora tela",
+   "name": "ਭੂਰਾ ਟਿੱਡਾ",
    "symptoms": [
-    "Chhote kire pani de kol paudhe de adhar te ikathe ho jande han.",
-    "Paudhe sukn lagde han ate sali varge lagde han.",
-    "Khet vich gol dayre ban jande han jithe paudhe suk ke thale gir rhe han.",
-    "Kire paudhe da ras chusde han jisse dane theek tarah nahi bharde.",
-    "Paudhe te viral bimariyan de lakshan dikh sakde han."
+    "ਛੋਟੇ ਕੀੜੇ ਬੂਟੇ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨੇੜੇ ਇਕੱਠੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਬੂਟੇ ਸੁੱਕਣ ਲੱਗਦੇ ਹਨ ਅਤੇ ਸੜੇ ਹੋਏ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਤੁਸੀਂ ਖੇਤ ਵਿੱਚ ਗੋਲ ਦਾਇਰੇ ਦੇਖੋਗੇ ਜਿੱਥੇ ਬੂਟੇ ਸੁੱਕ ਕੇ ਡਿੱਗ ਰਹੇ ਹਨ।",
+    "ਕੀੜੇ ਬੂਟੇ ਦਾ ਰਸ ਚੂਸਦੇ ਹਨ ਜਿਸ ਨਾਲ ਦਾਣੇ ਚੰਗੀ ਤਰ੍ਹਾਂ ਨਹੀਂ ਭਰਦੇ।",
+    "ਬੂਟਿਆਂ ਵਿੱਚ ਵਾਇਰਸ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਜਿਵੇਂ ਕਿ grassy stunt ਜਾਂ ragged stunt ਦੇ ਲੱਛਣ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
    ],
    "prevention": [
-    "Har saal ikko hi ajehi kism na bijo jo bimari jaldi fadi hove.",
-    "Apne sube lai dasiyan gaiyan rothak kismyan varto.",
-    "Nitrogen khad da hadon vad prayog na karo.",
-    "Apne ilake vich sare khet ikko samay bijo ate khet nu nshin-mukt rakho.",
-    "Hawa de langhan lai har 8 ton 10 kataran to baad kujh thawan chhado."
+    "ਹਰ ਸਾਲ ਇੱਕੋ ਇਲਾਕੇ ਵਿੱਚ ਇੱਕੋ ਕਿਸਮ ਦੀ ਝੋਨੇ ਦੀ ਬਿਜਾਈ ਨਾ ਕਰੋ।",
+    "ਆਪਣੇ ਰਾਜ ਲਈ ਸਿਫਾਰਸ਼ ਕੀਤੀਆਂ ਰੋਧਕ ਜਾਂ ਸਹਿਣਸ਼ੀਲ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਬਚੋ।",
+    "ਆਪਣੇ ਇਲਾਕੇ ਦੇ ਸਾਰੇ ਖੇਤਾਂ ਵਿੱਚ ਇੱਕੋ ਸਮੇਂ ਬਿਜਾਈ ਕਰੋ ਅਤੇ ਖੇਤਾਂ ਨੂੰ ਨਦੀਨ-ਮੁਕਤ ਰੱਖੋ।",
+    "ਹਵਾ ਦੇ ਗੇੜ ਲਈ ਹਰ 8 ਤੋਂ 10 ਕਤਾਰਾਂ ਬਾਅਦ ਕੁਝ ਕਤਾਰਾਂ ਦਾ ਖਾਲੀ ਥਾਂ ਛੱਡੋ।"
    ],
    "practices": [
-    "Har 3 ton 5 dina bad khet nu check karo, paudhe nu hohla jeha hila ke dekho ke kire pani vich digde han ki nahi.",
-    "Je zyada tela hove ta 3 ton 4 din lai khet vichon pani kad do.",
-    "Kire fadan lai rat nu light trap ya din nu peele pan trap varto.",
-    "Chhidka hamesha paudhe de adhar te karo jithe kire rehnde han.",
-    "Je khet vich makdi vargi mitr kire hon ta rasanik dawai da chhidka na karo."
+    "ਹਰ 3 ਤੋਂ 5 ਦਿਨਾਂ ਬਾਅਦ ਖੇਤ ਦੀ ਜਾਂਚ ਕਰੋ, ਬੂਟਿਆਂ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਨੂੰ ਹੌਲੀ-ਹੌਲੀ ਹਿਲਾ ਕੇ ਦੇਖੋ ਕਿ ਕੀ ਕੀੜੇ ਪਾਣੀ ਵਿੱਚ ਡਿੱਗਦੇ ਹਨ।",
+    "ਜੇਕਰ ਕੀੜਿਆਂ ਦਾ ਹਮਲਾ ਜ਼ਿਆਦਾ ਹੋਵੇ ਤਾਂ 3 ਤੋਂ 4 ਦਿਨਾਂ ਲਈ ਖੇਤ ਵਿੱਚੋਂ ਪਾਣੀ ਕੱਢ ਦਿਓ।",
+    "ਕੀੜਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਅਤੇ ਫੜਨ ਲਈ ਰਾਤ ਨੂੰ ਲਾਈਟ ਟ੍ਰੈਪ ਜਾਂ ਦਿਨ ਵੇਲੇ ਪੀਲੇ ਪੈਨ ਟ੍ਰੈਪ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਕੋਈ ਵੀ ਸਪਰੇਅ ਬੂਟਿਆਂ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵੱਲ ਕਰੋ ਜਿੱਥੇ ਕੀੜੇ ਰਹਿੰਦੇ ਹਨ।",
+    "ਜੇਕਰ ਖੇਤ ਵਿੱਚ ਮੱਕੜੀਆਂ ਵਰਗੇ ਕੁਦਰਤੀ ਦੁਸ਼ਮਣ ਜ਼ਿਆਦਾ ਦਿਖਾਈ ਦੇਣ ਤਾਂ ਰਸਾਇਣਕ ਕੀਟਨਾਸ਼ਕਾਂ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ।"
    ],
-   "favourable_conditions": "Eh kida nami vale mausam, lagataar jhone di kheti, zyada chhanve sthan, ate khet vich khare pani vich khub pilda hai.",
+   "favourable_conditions": "ਇਹ ਕੀੜਾ ਨਮੀ ਵਾਲੇ ਮੌਸਮ, ਲਗਾਤਾਰ ਝੋਨੇ ਦੀ ਕਾਸ਼ਤ, ਜ਼ਿਆਦਾ ਛਾਂ ਅਤੇ ਖੇਤ ਵਿੱਚ ਖੜ੍ਹੇ ਪਾਣੀ ਵਿੱਚ ਵਧਦਾ ਹੈ।",
    "organic_bio": [
     "Neem oil 3% 15 lit/ha",
     "Neem oil 5 ml/L nal 2 ml liquid detergent",
@@ -182,60 +182,60 @@
     "Ik tanki vich do ki nashak na ralao, ate ikko ki nashak bar-bar na varto.",
     "Rogi fasal nu sado mat: is nal tela naal de kheta vich chala janda hai."
    ],
-   "etl": "Chhidka tabhi karo jad prat hill 5 ton 10 tela hove, ya jithe har saal tela anda hove othe prat hill 2 tela hove."
+   "etl": "ਸਪਰੇਅ ਉਦੋਂ ਹੀ ਕਰੋ ਜਦੋਂ ਪ੍ਰਤੀ ਬੂਟਾ 5 ਤੋਂ 10 ਕੀੜੇ ਹੋਣ, ਜਾਂ ਜਿੱਥੇ ਹਰ ਸਾਲ Brown plant hopper ਆਉਂਦਾ ਹੈ ਉੱਥੇ 2 ਕੀੜੇ ਪ੍ਰਤੀ ਬੂਟਾ ਹੋਣ।"
   },
   "paddy_leaf_folder": {
-   "name": "Patte lapetn vala kida",
+   "name": "ਪੱਤਾ ਲਪੇਟ ਸੁੰਡੀ",
    "symptoms": [
-    "Patte lamai vich mud jande han ate sunde andar rehndi hai.",
-    "Sunde patte da hara hissa khurak dindi hai.",
-    "Khrab patte chitte ho jande han ate suk jande han.",
-    "Buri halat vich saara khet sali lagda hai."
+    "ਪੱਤੇ ਲੰਬਾਈ ਵਿੱਚ ਮੁੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੁੰਡੀਆਂ ਅੰਦਰ ਰਹਿੰਦੀਆਂ ਹਨ।",
+    "ਸੁੰਡੀਆਂ ਪੱਤਿਆਂ ਦੇ ਹਰੇ ਹਿੱਸੇ ਨੂੰ ਖੁਰਚ ਕੇ ਖਾਂਦੀਆਂ ਹਨ।",
+    "ਨੁਕਸਾਨੇ ਗਏ ਪੱਤੇ ਚਿੱਟੇ ਹੋ ਕੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਨੁਕਸਾਨ ਹੋਣ 'ਤੇ ਪੂਰਾ ਖੇਤ ਸੜਿਆ ਹੋਇਆ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।"
    ],
    "prevention": [
-    "Zyada nuksan to bachn lai fasal cheti bijo.",
-    "Paudheyan vich fasla thodi zyada rakho.",
-    "Nitrogen khad hadon vad na pao.",
-    "Khet de banhan nu saf rakhho.",
-    "Khet vich chhanv karan vali cheeza hatao."
+    "ਜ਼ਿਆਦਾ ਨੁਕਸਾਨ ਤੋਂ ਬਚਣ ਲਈ ਆਪਣੀ ਫਸਲ ਦੀ ਬਿਜਾਈ ਜਲਦੀ ਕਰੋ।",
+    "ਬੂਟਿਆਂ ਵਿਚਕਾਰ ਜ਼ਿਆਦਾ ਦੂਰੀ ਰੱਖੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਬਚੋ।",
+    "ਖੇਤ ਦੀਆਂ ਵੱਟਾਂ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਖੇਤ ਵਿੱਚ ਛਾਂ ਕਰਨ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਹਟਾ ਦਿਓ।"
    ],
    "practices": [
-    "Khet nu lagataar nuksan lai check karo.",
-    "Parwane fadan lai light trap lagao.",
-    "Khet vich makdi ate dragonfly vargi mitr kire nu bacha ke rakho.",
-    "Kire de chhuppan de sthan khatam karan lai banhan nu saf rakhho."
+    "ਨੁਕਸਾਨ ਲਈ ਖੇਤ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਪਤੰਗਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਲਾਈਟ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਖੇਤ ਵਿੱਚ ਮੱਕੜੀਆਂ ਅਤੇ ਡਰੈਗਨਫਲਾਈ ਵਰਗੇ ਕੁਦਰਤੀ ਦੁਸ਼ਮਣਾਂ ਨੂੰ ਬਚਾਓ।",
+    "ਕੀੜਿਆਂ ਦੇ ਲੁਕਣ ਵਾਲੀਆਂ ਥਾਵਾਂ ਨੂੰ ਖਤਮ ਕਰਨ ਲਈ ਖੇਤ ਦੀਆਂ ਵੱਟਾਂ ਸਾਫ਼ ਰੱਖੋ।"
    ],
-   "favourable_conditions": "Zyada nuksan chhanve sthana te ate zyada nitrogen khad vale kheta vich hunda hai.",
+   "favourable_conditions": "ਜ਼ਿਆਦਾ ਨੁਕਸਾਨ ਛਾਂ ਵਾਲੇ ਇਲਾਕਿਆਂ ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਵਾਲੇ ਖੇਤਾਂ ਵਿੱਚ ਹੁੰਦਾ ਹੈ।",
    "organic_bio": [
     "Trichogramma chilonis @ 5 cc (1,00,000/ha) tin vaari 37, 44 ate 51 dina te",
     "NSKE 5 %"
    ],
    "avoid": [],
-   "etl": "Prat hill 2 pure khrab patte jinha vich sunde hove."
+   "etl": "ਪ੍ਰਤੀ ਬੂਟਾ 2 ਪੂਰੀ ਤਰ੍ਹਾਂ ਨੁਕਸਾਨੇ ਗਏ ਪੱਤੇ ਜਿਨ੍ਹਾਂ ਦੇ ਅੰਦਰ ਸੁੰਡੀ ਹੋਵੇ।"
   },
   "paddy_gall_midge": {
-   "name": "Gall midge",
+   "name": "ਗਾਲ ਮਿਜ",
    "symptoms": [
-    "Paudhe te pyaz de patte vargi khokhli nali ug jandi hai.",
-    "Nave patte di bajae, tanner da vichala hissa pyaz de patte varga chitta khokhla nal varga (silver shoot) nikalda hai.",
-    "Rogi tanner naye patte kaddhna band kar dinda hai.",
-    "Paudhe te koi baali nahi andi.",
-    "Patte vikrit, murjhhaye ya mude hoye lag sakde han."
+    "ਬੂਟਾ ਇੱਕ ਖੋਖਲੀ ਨਲੀ ਬਣਾਉਂਦਾ ਹੈ ਜੋ ਪਿਆਜ਼ ਦੇ ਪੱਤੇ ਵਰਗੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।",
+    "ਨਵੇਂ ਪੱਤੇ ਦੀ ਬਜਾਏ, ਕੱਲੇ ਦੇ ਕੇਂਦਰ ਵਿੱਚੋਂ ਇੱਕ ਫਿੱਕੀ, ਖੋਖਲੀ ਨਲੀ ਨਿਕਲਦੀ ਹੈ ਜੋ ਪਿਆਜ਼ ਦੇ ਪੱਤੇ ਵਰਗੀ ਹੁੰਦੀ ਹੈ (silver shoot)।",
+    "ਪ੍ਰਭਾਵਿਤ ਕੱਲਾ ਨਵੇਂ ਪੱਤੇ ਬਣਾਉਣੇ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ।",
+    "ਬੂਟੇ ਨੂੰ ਕੋਈ ਸਿੱਟਾ ਨਹੀਂ ਲੱਗਦਾ।",
+    "ਪੱਤੇ ਵਿਗੜੇ ਹੋਏ, ਮੁਰਝਾਏ ਜਾਂ ਮੁੜੇ ਹੋਏ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
    ],
    "prevention": [
-    "Mausam di shuruat vich fasal cheti bijo.",
-    "Ajehi kism chuno jo is kire nu seh sake.",
-    "Khet de banhan nu saf ate nshin-mukt rakhho.",
-    "Sare kheta vich alag-alag samay te bijaai na karo.",
-    "Potash khad sifarsi dar te pao."
+    "ਸੀਜ਼ਨ ਵਿੱਚ ਆਪਣੀ ਫਸਲ ਦੀ ਬਿਜਾਈ ਜਲਦੀ ਕਰੋ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਕੀੜੇ ਪ੍ਰਤੀ ਰੋਧਕ ਜਾਂ ਸਹਿਣਸ਼ੀਲ ਹੋਣ।",
+    "ਖੇਤ ਦੀਆਂ ਵੱਟਾਂ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨ-ਮੁਕਤ ਰੱਖੋ।",
+    "ਪੂਰੇ ਇਲਾਕੇ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਸਮੇਂ 'ਤੇ ਬਿਜਾਈ ਕਰਨ ਤੋਂ ਬਚੋ।",
+    "ਸਿਫਾਰਸ਼ ਕੀਤੀ ਮਾਤਰਾ ਵਿੱਚ ਪੋਟਾਸ਼ ਖਾਦ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
    ],
    "practices": [
-    "Khet vichon 5 ton 7 din lai pani kad do.",
-    "Nuksan vale paudhe ikathe karke saal do.",
-    "Vadde kire fadan lai sham nu light trap lagao.",
-    "Silver shoot lai khet nu check karo ate je 10 pratishat tanner prabhavit hon ta kadam chakko."
+    "ਆਪਣੇ ਖੇਤਾਂ ਵਿੱਚੋਂ 5 ਤੋਂ 7 ਦਿਨਾਂ ਲਈ ਪਾਣੀ ਕੱਢ ਦਿਓ।",
+    "ਨੁਕਸਾਨ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਬੂਟੇ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਾਲਗ ਮੱਖੀਆਂ ਨੂੰ ਫੜਨ ਲਈ ਸ਼ਾਮ ਨੂੰ ਲਾਈਟ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਖੇਤ ਵਿੱਚ silver shoot ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਜੇਕਰ 10 ਪ੍ਰਤੀਸ਼ਤ ਕੱਲੇ ਪ੍ਰਭਾਵਿਤ ਹੋਣ ਤਾਂ ਕਾਰਵਾਈ ਕਰੋ।"
    ],
-   "favourable_conditions": "Badalvahi ya varsha de mausam vich is kire di ginti tezi nal vadhdi hai.",
+   "favourable_conditions": "ਇਸ ਕੀੜੇ ਦੀ ਗਿਣਤੀ ਬੱਦਲਵਾਈ ਜਾਂ ਬਰਸਾਤ ਦੇ ਮੌਸਮ ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਵਧਦੀ ਹੈ।",
    "organic_bio": [
     "Akhri vhai vele Neem cake @ 100 kg",
     "10% Neem patte da ras",
@@ -244,31 +244,31 @@
     "3% Jadi-booti da ras"
    ],
    "avoid": [],
-   "etl": "Prat varg meter 1 gall, ya 10% silver shoots."
+   "etl": "1 ਗਾਲ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ, ਜਾਂ 10% ਸਿਲਵਰ ਸ਼ੂਟਸ।"
   },
   "paddy_false_smut": {
-   "name": "Jhutha smut",
+   "name": "ਫਾਲਸ ਸਮੱਟ",
    "symptoms": [
-    "Ikkle-ikkle dane peele rang de fafund vich badal jande han.",
-    "Makhmali spore de gole ughde han ate dane de phull vale hisse nu gher lainde han.",
-    "Spore de gole chhote shuru hunde han ate 1 cm tak vadh jande han.",
-    "Aam tor par baali vich kade-kade dane rogi hunde han baki thik rehnde han.",
-    "Jyon hi fafund vadhdi hai, gole fat jande han ate narangi ton peele-hare ya hare-kale ho jande han."
+    "ਝੋਨੇ ਦੇ ਦਾਣੇ ਪੀਲੇ ਰੰਗ ਦੇ ਫਲਦਾਰ ਪੁੰਜ ਵਿੱਚ ਬਦਲ ਜਾਂਦੇ ਹਨ।",
+    "ਮਖਮਲੀ ਬੀਜਾਂ ਦੇ ਗੋਲੇ ਬਣ ਜਾਂਦੇ ਹਨ ਜੋ ਦਾਣੇ ਦੇ ਫੁੱਲਾਂ ਵਾਲੇ ਹਿੱਸੇ ਨੂੰ ਢੱਕ ਲੈਂਦੇ ਹਨ।",
+    "ਇਹ ਗੋਲੇ ਛੋਟੇ ਹੁੰਦੇ ਹਨ ਅਤੇ 1 cm ਤੱਕ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਆਮ ਤੌਰ 'ਤੇ ਸਿੱਟੇ ਦੇ ਕੁਝ ਦਾਣੇ ਹੀ ਪ੍ਰਭਾਵਿਤ ਹੁੰਦੇ ਹਨ ਅਤੇ ਬਾਕੀ ਠੀਕ ਰਹਿੰਦੇ ਹਨ।",
+    "ਜਿਵੇਂ ਉੱਲੀ ਵਧਦੀ ਹੈ, ਗੋਲੇ ਫਟ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੰਤਰੀ ਤੋਂ ਪੀਲੇ-ਹਰੇ ਜਾਂ ਹਰੇ-ਕਾਲੇ ਰੰਗ ਦੇ ਹੋ ਜਾਂਦੇ ਹਨ।"
    ],
    "prevention": [
-    "Vadiya kism de bimari-mukt bij varto.",
-    "Smut gole ghat karan lai fasal cheti bijo.",
-    "Apne jhone nal ajehi fasal badal ke bijo jo is fafund nu na palawe.",
-    "Nshin hataun lai banhan ate khalan nu saf rakhho.",
-    "Nitrogen khad hadon vad na pao ate karke hisse vich pao."
+    "ਵਧੀਆ ਕੁਆਲਿਟੀ ਦੇ ਬਿਮਾਰੀ-ਰਹਿਤ ਬੀਜ ਵਰਤੋ।",
+    "ਸਮੱਟ ਦੇ ਗੋਲਿਆਂ ਨੂੰ ਘਟਾਉਣ ਲਈ ਫਸਲ ਦੀ ਬਿਜਾਈ ਜਲਦੀ ਕਰੋ।",
+    "ਝੋਨੇ ਦੇ ਨਾਲ ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ ਜੋ ਇਸ ਉੱਲੀ ਦਾ ਸ਼ਿਕਾਰ ਨਾ ਹੋਣ।",
+    "ਨਦੀਨਾਂ ਨੂੰ ਹਟਾਉਣ ਲਈ ਖੇਤ ਦੀਆਂ ਵੱਟਾਂ ਅਤੇ ਪਾਣੀ ਦੀਆਂ ਨਾਲੀਆਂ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਪਾਉਣ ਤੋਂ ਬਚੋ ਅਤੇ ਇਸਨੂੰ ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਪਾਓ।"
    ],
    "practices": [
-    "Bimari de lakshan lai apne khet nu lagataar check karo.",
-    "Kataai vele rogi paudhe kad ke saal do ta jo fafund mitti vich na digge.",
-    "Jad paudhe gile hon ta khet vich kam na karo.",
-    "Khet nu khara rahan den di bajae nami ghat karan lai vich-vich pani kad do."
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਿਤ ਜਾਂਚ ਕਰੋ।",
+    "ਵਢਾਈ ਵੇਲੇ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਤਾਂ ਜੋ ਉੱਲੀ ਮਿੱਟੀ ਵਿੱਚ ਨਾ ਡਿੱਗੇ।",
+    "ਜਦੋਂ ਪੌਦੇ ਗਿੱਲੇ ਹੋਣ ਤਾਂ ਖੇਤ ਵਿੱਚ ਕੰਮ ਕਰਨ ਤੋਂ ਬਚੋ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਰੱਖਣ ਦੀ ਬਜਾਏ ਨਮੀ ਘਟਾਉਣ ਲਈ ਸਮੇਂ-ਸਮੇਂ 'ਤੇ ਪਾਣੀ ਸੁਕਾਓ।"
    ],
-   "favourable_conditions": "Eh bimari unna ilakian vich pildi hai jithe nami zyada hove, tapman 25 ton 35 degree Celsius hove, ate phullan de same madyam varsha hove.",
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਉੱਚ ਨਮੀ, 25 ਤੋਂ 35 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ, ਅਤੇ ਫੁੱਲ ਆਉਣ ਵੇਲੇ ਦਰਮਿਆਨੀ ਬਾਰਿਸ਼ ਵਾਲੇ ਇਲਾਕਿਆਂ ਵਿੱਚ ਫੈਲਦੀ ਹੈ।",
    "organic_bio": [
     "Pseudomonas fluorescence 10g/lit pani vich 30 minat lai (bij sod)",
     "Trichoderma viridae @ 5-10 g/kg bij",
@@ -280,26 +280,26 @@
    "etl": ""
   },
   "paddy_stem_borer": {
-   "name": "Tana chhedak",
+   "name": "ਯੈਲੋ ਸਟੈਮ ਬੋਰਰ",
    "symptoms": [
-    "Tuhanu patte de sirhe de kol bhure ande dikh sakde han.",
-    "Sunde tanner ate shoot de vichale hisse vich chhed kar dindi hai.",
-    "Vichala shoot suk janda hai jinu dead heart kiha janda hai.",
-    "Vadde paudhe vich, saari baali suk jandi hai ate chitti ho jandi hai, jinu white ear kiha janda hai.",
-    "Rogi paudhe hath nal aasani nal zameen vichon kaddhe ja sakde han."
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਦੇ ਸਿਰਿਆਂ ਨੇੜੇ ਭੂਰੇ ਰੰਗ ਦੇ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਸੁੰਡੀ ਤਣੇ ਦੇ ਵਿਚਕਾਰ ਅਤੇ ਕੱਲੇ ਵਿੱਚ ਮੋਰੀ ਕਰ ਦਿੰਦੀ ਹੈ।",
+    "ਵਿਚਕਾਰਲਾ ਤਣਾ ਸੁੱਕ ਜਾਂਦਾ ਹੈ ਜਿਸਨੂੰ ਡੈੱਡ ਹਾਰਟ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+    "ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਵਿੱਚ, ਪੂਰਾ ਸਿੱਟਾ ਸੁੱਕ ਕੇ ਚਿੱਟਾ ਹੋ ਜਾਂਦਾ ਹੈ, ਜਿਸਨੂੰ ਵ੍ਹਾਈਟ ਈਅਰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+    "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹੱਥ ਨਾਲ ਆਸਾਨੀ ਨਾਲ ਖਿੱਚ ਕੇ ਬਾਹਰ ਕੱਢਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
    ],
    "prevention": [
-    "Ande hataun lai bijaai to pehlan paudhe de sirhe kato.",
-    "Ajehi jhone di kism chuno jo is kire nu seh sake.",
-    "Kataai to baad, mitti vaho ate khet vich pani bharo ta jo naalan vich luki sunde mar sakan.",
-    "Parwane aun de mukh samay ton bachn lai bijaai late karo.",
-    "Parwane fadan lai nursari nu trap fasal varto."
+    "ਪਨੀਰੀ ਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਆਂਡਿਆਂ ਨੂੰ ਹਟਾਉਣ ਲਈ ਪੱਤਿਆਂ ਦੇ ਸਿਰੇ ਕੱਟ ਦਿਓ।",
+    "ਝੋਨੇ ਦੀਆਂ ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਬੋਰਰ ਪ੍ਰਤੀ ਰੋਧਕ ਜਾਂ ਦਰਮਿਆਨੀ ਰੋਧਕ ਹੋਣ।",
+    "ਵਢਾਈ ਤੋਂ ਬਾਅਦ, ਮਿੱਟੀ ਨੂੰ ਵਾਹ ਦਿਓ ਅਤੇ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਭਰ ਦਿਓ ਤਾਂ ਜੋ ਨਾੜ ਵਿੱਚ ਲੁਕੀਆਂ ਸੁੰਡੀਆਂ ਨਸ਼ਟ ਹੋ ਜਾਣ।",
+    "ਪਤੰਗਿਆਂ ਦੇ ਜ਼ਿਆਦਾ ਨਿਕਲਣ ਦੇ ਸਮੇਂ ਤੋਂ ਬਚਣ ਲਈ ਬਿਜਾਈ ਵਿੱਚ ਦੇਰੀ ਕਰੋ।",
+    "ਪਤੰਗਿਆਂ ਨੂੰ ਫਸਾਉਣ ਲਈ ਸੀਡਬੈੱਡ ਨੂੰ ਟ੍ਰੈਪ ਕ੍ਰੌਪ ਵਜੋਂ ਵਰਤੋ।"
    ],
    "practices": [
-    "Mukh khet vichon ande ikathe karke saal do.",
-    "Khet vich parwana di ginti check karan lai pheromone trap varto.",
-    "Kire dekhan lai sham nu light trap varto.",
-    "Kire ate ohna de mitr kire di ginti check karan lai sweep net varto."
+    "ਮੁੱਖ ਖੇਤ ਵਿੱਚ ਮਿਲਣ ਵਾਲੇ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਪਤੰਗਿਆਂ ਦੀ ਗਿਣਤੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਲਈ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਵਰਤੋ।",
+    "ਕੀੜਿਆਂ ਨੂੰ ਦੇਖਣ ਲਈ ਸ਼ਾਮ ਨੂੰ ਲਾਈਟ ਟ੍ਰੈਪ ਵਰਤੋ।",
+    "ਕੀੜਿਆਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਕੁਦਰਤੀ ਦੁਸ਼ਮਣਾਂ ਦੀ ਗਿਣਤੀ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਸਵੀਪ ਨੈੱਟ ਵਰਤੋ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [
@@ -307,25 +307,25 @@
     "Neem seed kernel extract"
    ],
    "avoid": [],
-   "etl": "Nursari vich, prat varg meter 1 ande da guchha. Tanner avastha to, prat varg meter 2 ande de guchhe, ya 10% dead hearts, ya prat varg meter 1 parwana, ya ik hafte vich prat trap 25 parwane."
+   "etl": "ਨਰਸਰੀ ਵਿੱਚ, 1 ਆਂਡਿਆਂ ਦਾ ਸਮੂਹ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ। ਕੱਲੇ ਨਿਕਲਣ ਤੋਂ ਬਾਅਦ, 2 ਆਂਡਿਆਂ ਦੇ ਸਮੂਹ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ, ਜਾਂ 10% ਡੈੱਡ ਹਾਰਟ, ਜਾਂ 1 ਪਤੰਗਾ ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ, ਜਾਂ ਇੱਕ ਹਫ਼ਤੇ ਵਿੱਚ 25 ਪਤੰਗੇ ਪ੍ਰਤੀ ਟ੍ਰੈਪ।"
   },
   "paddy_healthy": {
-   "name": "Tandrust",
+   "name": "ਤੰਦਰੁਸਤ",
    "symptoms": [
-    "Patte kism mutabik barabar hare han, koi dhabba, lakeer, ring ya powder nahi hai.",
-    "Patte de kinare ate sirhe mud, pile, suk ya sali nahi rhe.",
-    "Patte, tanner ya fala te koi kida, ande, jala, chhed ya nishan nahi hai."
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹਨ, ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਗੋਲੇ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜ ਨਹੀਂ ਰਹੇ, ਪੀਲੇ ਨਹੀਂ ਪੈ ਰਹੇ, ਸੁੱਕ ਨਹੀਂ ਰਹੇ ਜਾਂ ਸੜ ਨਹੀਂ ਰਹੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
    ],
    "prevention": [
-    "Ajehi kism chuno jo mukh bimari ate kire nu rokh sake, ate swasth bij varto.",
-    "Bijaai to pehlan bij ya paudhe nu bio-pesticide nal sodho.",
-    "Sahi fasla rakho, mitti di jach karva ke khad pao, ate nitrogen hadon vad na pao jisse fasal naram ho jave ate kire jaldi hamla karan.",
-    "Fasal nu theek pani do ate fasal badal ke bijo."
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਵਰਤੋ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਸਮੱਗਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਬਾਇਓ-ਪੈਸਟੀਸਾਈਡ ਨਾਲ।",
+    "ਸਹੀ ਫਾਸਲਾ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਦੇ ਹਮਲੇ ਨੂੰ ਸੌਖਾ ਕਰਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਅਨੁਸਾਰ ਫਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ।"
    ],
    "practices": [
-    "Hafte vich ghoton ik baar khet vich gehre maro ate mitti, pani, paudhe, kire ate mitr kire nu dekho.",
-    "Rasanik chhidka na karke mitr kire ate makdiya di raksha karo.",
-    "Jad samasya dikhe ta cheti kadam chakko, jive ande ya rogi paudhe hata ke."
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਕੀੜਿਆਂ ਨੂੰ ਖਾਣ ਵਾਲੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ।",
+    "ਬ੍ਰੌਡ-ਸਪੈਕਟ੍ਰਮ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ।",
+    "ਜਦੋਂ ਮੁਸੀਬਤ ਦਿਖੇ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹ ਇਕੱਠੇ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -776,22 +776,22 @@
    "etl": ""
   },
   "groundnut_early_leaf_spot": {
-   "name": "tikka rog",
+   "name": "ਅਰਲੀ ਲੀਫ ਸਪਾਟ (ਟਿੱਕਾ)",
    "symptoms": [
-    "beej bajan ton lagbhag ik mahine baad rog shuru hunda hai.",
-    "pattiyan uthe chote daag ban jande han.",
-    "eh daag waddhe ho jande han te samay nal bhure ya kale ho jande han.",
-    "patti de uthle passe daag gol hunde han.",
-    "patti de thale passe halke bhure rang de daag dikhde han.",
-    "daag dane te pattiyan de danth uthe vi aa sakde han."
+    "ਬਿਮਾਰੀ ਬੀਜ ਬੀਜਣ ਤੋਂ ਲਗਭਗ ਇੱਕ ਮਹੀਨੇ ਬਾਅਦ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।",
+    "ਪੱਤਿਆਂ 'ਤੇ ਛੋਟੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਦਾਗ ਸਮੇਂ ਦੇ ਨਾਲ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਭੂਰੇ ਜਾਂ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਦੇ ਉੱਪਰਲੇ ਪਾਸੇ ਦਾਗ ਗੋਲ ਹੁੰਦੇ ਹਨ।",
+    "ਪੱਤੇ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਹਲਕਾ ਭੂਰਾ ਰੰਗ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।",
+    "ਦਾਗ ਤਣਿਆਂ ਅਤੇ ਪੱਤਿਆਂ ਦੇ ਡੰਡਿਆਂ 'ਤੇ ਵੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
    ],
    "prevention": [
-    "mitti nu swasth rakhn layi kank, kapah, makki, pyaz ya lahsun nal fasal badal ke bjo.",
-    "ajehi kism chuno jehri is rog nu sehn kar sake."
+    "ਮਿੱਟੀ ਨੂੰ ਤੰਦਰੁਸਤ ਰੱਖਣ ਲਈ ਕਣਕ, ਕਪਾਹ, ਮੱਕੀ, ਪਿਆਜ਼ ਜਾਂ ਲਸਣ ਨਾਲ ਫਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਲੀਫ ਸਪਾਟ ਪ੍ਰਤੀ ਸਹਿਣਸ਼ੀਲ ਹੋਣ।"
    ],
    "practices": [
-    "haftewar apne khet nu vekho ke rog taan nahi phail reha.",
-    "rogi paudhe de hisse nu bahar kad ke nshat kar deo taan jo rog na phailay."
+    "ਇਹ ਦੇਖਣ ਲਈ ਕਿ ਕੀ ਬਿਮਾਰੀ ਫੈਲ ਰਹੀ ਹੈ, ਹਰ ਹਫ਼ਤੇ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਫੈਲਾਅ ਨੂੰ ਰੋਕਣ ਲਈ ਪੌਦੇ ਦੇ ਬਿਮਾਰ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [
@@ -801,24 +801,24 @@
    "etl": ""
   },
   "groundnut_late_leaf_spot": {
-   "name": "pichli tikka rog",
+   "name": "ਲੇਟ ਲੀਫ ਸਪਾਟ (ਟਿੱਕਾ)",
    "symptoms": [
-    "pattiyan de thale passe kale daag dikhde han.",
-    "eh daag lagbhag gol hunde han.",
-    "eh daag hath laun te khrurdre lagde han.",
-    "kafi sare daag patti uthe ikatthe ho sakde han.",
-    "pattiyan peeliyan ho ke paudhe ton jald hi gir sakdiyan han."
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਕਾਲੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਦਾਗ ਲਗਭਗ ਗੋਲ ਆਕਾਰ ਦੇ ਹੁੰਦੇ ਹਨ।",
+    "ਦਾਗ ਛੂਹਣ ਵਿੱਚ ਖੁਰਦਰੇ ਮਹਿਸੂਸ ਹੁੰਦੇ ਹਨ।",
+    "ਪੱਤੇ 'ਤੇ ਕਈ ਦਾਗ ਆਪਸ ਵਿੱਚ ਜੁੜ ਸਕਦੇ ਹਨ।",
+    "ਪੱਤੇ ਪੀਲੇ ਪੈ ਕੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਡਿੱਗ ਸਕਦੇ ਹਨ।"
    ],
    "prevention": [
-    "mungfali de har 3 ranga piche bajra ya jowar di 1 rang bjo.",
-    "mungfali de nal dujiyan faslan di bajaye anaaj wali fasal badal ke bjo.",
-    "purane fasal de avsesh nu mitti vich changi tara dabn layi doonghi wahai kro.",
-    "apne aap ugge mungfali de paudhe nu pat ke bahar kad deo."
+    "ਮੂੰਗਫਲੀ ਦੀਆਂ ਹਰ 3 ਕਤਾਰਾਂ ਪਿੱਛੇ ਬਾਜਰੇ ਜਾਂ ਜਵਾਰ ਦੀ 1 ਕਤਾਰ ਲਗਾਓ।",
+    "ਮੂੰਗਫਲੀ ਤੋਂ ਬਾਅਦ ਦੂਜੀਆਂ ਫਸਲਾਂ ਦੀ ਬਜਾਏ ਅਨਾਜ ਵਾਲੀਆਂ ਫਸਲਾਂ ਬੀਜੋ।",
+    "ਪੁਰਾਣੀ ਫਸਲ ਦੇ ਬਚੇ-ਖੁਚੇ ਹਿੱਸਿਆਂ ਨੂੰ ਮਿੱਟੀ ਵਿੱਚ ਡੂੰਘਾ ਦੱਬ ਦਿਓ।",
+    "ਆਪਣੇ ਆਪ ਉੱਗ ਆਉਣ ਵਾਲੇ ਮੂੰਗਫਲੀ ਦੇ ਬੂਟਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਬਾਹਰ ਕੱਢ ਦਿਓ।"
    ],
    "practices": [
-    "jis paudhe vich rog de lakshan hon use kad ke nshat kar deo.",
-    "apne aap ugge paudhe nu khet vichon hata ke khet saaf rakho.",
-    "rog nu phailan ton rokn layi fasal de avsesh nu mitti vich doongha dab deo."
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਤੋੜ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਫਾਲਤੂ ਉੱਗੇ ਮੂੰਗਫਲੀ ਦੇ ਬੂਟਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਖੇਤ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਫਸਲ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਮਿੱਟੀ ਵਿੱਚ ਡੂੰਘਾ ਦੱਬ ਦਿਓ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -826,20 +826,20 @@
    "etl": ""
   },
   "groundnut_rust": {
-   "name": "rast rog",
+   "name": "ਰਸਟ (ਜੰਗਾਲ)",
    "symptoms": [
-    "pattiyan de thale passe chote chote fode jahe ubhaar ban jande han.",
-    "eh ubhaar pattiyan de uthle passe vi aa sakde han.",
-    "eh ubhaar phul te sui (peg) nu chad ke paudhe de har hisse te ban sakde han.",
-    "bure halaatan vich pattiyan mar jandiyan han te sukk jandiyan han par paudhe nal hi jhuri rehndiyan han."
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਛੋਟੇ-ਛੋਟੇ ਉਭਾਰ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ pustules ਕਹਿੰਦੇ ਹਨ।",
+    "ਇਹ ਉਭਾਰ ਪੱਤਿਆਂ ਦੇ ਉੱਪਰਲੇ ਪਾਸੇ ਵੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਇਹ ਉਭਾਰ ਫੁੱਲਾਂ ਅਤੇ pegs ਨੂੰ ਛੱਡ ਕੇ ਪੌਦੇ ਦੇ ਸਾਰੇ ਹਿੱਸਿਆਂ 'ਤੇ ਬਣ ਸਕਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲਾ ਹੋਣ 'ਤੇ, ਪੱਤੇ ਸੁੱਕ ਕੇ ਮਰ ਜਾਂਦੇ ਹਨ ਪਰ ਪੌਦੇ ਨਾਲ ਹੀ ਚਿਪਕੇ ਰਹਿੰਦੇ ਹਨ।"
    ],
    "prevention": [
-    "ajehi kism chuno jehri rast rog nu sehn kar sake.",
-    "mitti nu swasth rakhn layi kank, kapah, makki, pyaz ya lahsun nal fasal badal ke bjo."
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ Rust ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਣ।",
+    "ਮਿੱਟੀ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖਣ ਲਈ ਕਣਕ, ਕਪਾਹ, ਮੱਕੀ, ਪਿਆਜ਼ ਜਾਂ ਲਸਣ ਨਾਲ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।"
    ],
    "practices": [
-    "har hafte khet nu vekho ke rast rog taan nahi phail reha.",
-    "je spray karn di lod hove, tan pehli spray ton 15 din baad duji spray kiti ja sakdi hai."
+    "ਹਰ ਹਫ਼ਤੇ ਆਪਣੇ ਖੇਤ ਦਾ ਨਿਰੀਖਣ ਕਰੋ ਕਿ Rust ਫੈਲ ਤਾਂ ਨਹੀਂ ਰਹੀ।",
+    "ਜੇ ਸਪਰੇਅ ਦੀ ਲੋੜ ਹੋਵੇ, ਤਾਂ ਪਹਿਲੀ ਸਪਰੇਅ ਤੋਂ 15 ਦਿਨਾਂ ਬਾਅਦ ਦੂਜੀ ਸਪਰੇਅ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -847,72 +847,72 @@
    "etl": ""
   },
   "groundnut_bud_necrosis": {
-   "name": "bud necrosis virus",
+   "name": "ਬਡ ਨੈਕਰੋਸਿਸ ਵਾਇਰਸ",
    "symptoms": [
-    "tuhanu nvi pattiyan uthe fike daag dikhnge.",
-    "pattiyan uthe gol ghere te lakaran ban jandiyan han jo mariyan lagdiyan han.",
-    "garmi de mausam vich paudhe da uthla bud mar sakda hai.",
-    "jive jive paudha wadda hunda hai eh chota te bonha reh janda hai.",
-    "paudhe de kai faltu passe wale tana nikal sakde han."
+    "ਤੁਹਾਨੂੰ ਨਵੇਂ ਪੱਤਿਆਂ 'ਤੇ ਫਿੱਕੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਪੱਤਿਆਂ 'ਤੇ ਗੋਲ ਨਿਸ਼ਾਨ ਅਤੇ ਲਕੀਰਾਂ ਬਣ ਜਾਂਦੀਆਂ ਹਨ ਜੋ ਮੁਰਝਾਈਆਂ ਲੱਗਦੀਆਂ ਹਨ।",
+    "ਗਰਮੀ ਦੇ ਮੌਸਮ ਵਿੱਚ ਪੌਦੇ ਦਾ ਉੱਪਰਲਾ ਬੂਡ (bud) ਮਰ ਸਕਦਾ ਹੈ।",
+    "ਜਿਵੇਂ-ਜਿਵੇਂ ਪੌਦਾ ਵੱਡਾ ਹੁੰਦਾ ਹੈ, ਇਹ ਛੋਟਾ ਅਤੇ ਬੌਣਾ ਹੀ ਰਹਿ ਜਾਂਦਾ ਹੈ।",
+    "ਪੌਦੇ 'ਤੇ ਬਹੁਤ ਸਾਰੀਆਂ ਵਾਧੂ ਟਾਹਣੀਆਂ ਨਿਕਲ ਸਕਦੀਆਂ ਹਨ।"
    ],
    "prevention": [
-    "apne beej 15 cm di doori te nede nede bjo.",
-    "ajehi kism varto jehri is rog nu sehn kar sake.",
-    "jadon pehliyan barshaat hove taan apni fasal jald hi bjo.",
-    "nuksan ghat karn layi ghaat fasal bjo.",
-    "mungfali di fasal nu jowar ya makki wargi duji fasal nal badal ke bjo."
+    "ਬੀਜਾਂ ਨੂੰ 15 cm ਦੀ ਦੂਰੀ 'ਤੇ ਨੇੜੇ-ਨੇੜੇ ਬੀਜੋ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਵਰਤੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਰੱਖਦੀਆਂ ਹੋਣ।",
+    "ਪਹਿਲੀ ਬਰਸਾਤ ਹੁੰਦੇ ਹੀ ਫਸਲ ਦੀ ਬਿਜਾਈ ਜਲਦੀ ਕਰੋ।",
+    "ਨੁਕਸਾਨ ਘਟਾਉਣ ਲਈ ਸੰਘਣੀ ਬਿਜਾਈ ਕਰੋ।",
+    "ਮੂੰਗਫਲੀ ਦੀ ਫਸਲ ਨੂੰ ਜਵਾਰ ਜਾਂ ਮੱਕੀ ਵਰਗੀਆਂ ਫਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ ਬੀਜੋ।"
    ],
    "practices": [
-    "virus de lakshan layi apne khet di niyamit janch kro.",
-    "bajan ton 6 hafte tak bimar paudhe nu pat ke nshat kar deo.",
-    "jive hi rogi paudha dikhe use khet vichon bahar kadd deo.",
-    "mungfali de har 3 ton 6 ranga piche arand (castor) di ik rang bjo, jehri thrips nu rokn vich sahayak hundi hai jo virus phailaunde han."
+    "ਵਾਇਰਸ ਦੇ ਲੱਛਣਾਂ ਲਈ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਆਪਣੇ ਖੇਤ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਬਿਜਾਈ ਤੋਂ 6 ਹਫ਼ਤਿਆਂ ਤੱਕ ਬਿਮਾਰ ਦਿਖਣ ਵਾਲੇ ਪੌਦਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਜਿਵੇਂ ਹੀ ਤੁਹਾਨੂੰ ਕੋਈ ਪ੍ਰਭਾਵਿਤ ਪੌਦਾ ਦਿਖੇ, ਉਸਨੂੰ ਖੇਤ ਵਿੱਚੋਂ ਹਟਾ ਦਿਓ।",
+    "ਮੂੰਗਫਲੀ ਦੀਆਂ ਹਰ 3 ਤੋਂ 6 ਕਤਾਰਾਂ ਪਿੱਛੇ ਅਰੰਡ (castor) ਦੀ ਇੱਕ ਕਤਾਰ ਲਗਾਓ, ਜੋ ਵਾਇਰਸ ਫੈਲਾਉਣ ਵਾਲੇ thrips ਨੂੰ ਘਟਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।"
    ],
-   "favourable_conditions": "jadon tapman kafi wadda hunda hai taan is rog de hon di sambhavna wadh hundi hai.",
+   "favourable_conditions": "ਜਦੋਂ ਤਾਪਮਾਨ ਮੁਕਾਬਲਤਨ ਜ਼ਿਆਦਾ ਹੁੰਦਾ ਹੈ ਤਾਂ ਇਹ ਬਿਮਾਰੀ ਹੋਣ ਦੀ ਸੰਭਾਵਨਾ ਵੱਧ ਜਾਂਦੀ ਹੈ।",
    "organic_bio": [],
    "avoid": [],
-   "etl": "is virus nu phailan wale thrips layi: prati terminal bud 5 balak thrips."
+   "etl": "ਇਸ ਵਾਇਰਸ ਨੂੰ ਫੈਲਾਉਣ ਵਾਲੇ thrips ਲਈ: 5 ਬਾਲਗ thrips ਪ੍ਰਤੀ terminal bud।"
   },
   "groundnut_leaf_miner": {
-   "name": "leaf miner",
+   "name": "ਪੱਤਾ ਸੁਰੰਗਕ ਸੁੰਡੀ",
    "symptoms": [
-    "chote sondi pattiyan de andar wadhde han te andarle hisse nu khande han.",
-    "pattiyan uthe chote bhure daag dikhde han.",
-    "baad vich sondi pattiyan nu mor ke andar luk jandiyan han.",
-    "dooron vekhiye taan sara khet sadya hoya lagda hai."
+    "ਛੋਟੀਆਂ ਸੁੰਡੀਆਂ ਪੱਤਿਆਂ ਦੇ ਅੰਦਰ ਵੜ ਕੇ ਅੰਦਰਲਾ ਹਿੱਸਾ ਖਾ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਪੱਤਿਆਂ 'ਤੇ ਛੋਟੇ ਭੂਰੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਬਾਅਦ ਵਿੱਚ ਸੁੰਡੀਆਂ ਪੱਤਿਆਂ ਨੂੰ ਮੋੜ ਕੇ ਅੰਦਰ ਲੁਕ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਦੂਰੋਂ ਦੇਖਣ 'ਤੇ ਪੂਰਾ ਖੇਤ ਸੜਿਆ ਹੋਇਆ ਲੱਗਦਾ ਹੈ।"
    ],
    "prevention": [
-    "fasal de kol cowpea ya soybean bjo jehri trap da kam kare.",
-    "katai hon to baad ehna trap paudhe nu hata deo."
+    "ਫਸਲ ਦੇ ਨੇੜੇ ਰਵਾਂਹ (cowpea) ਜਾਂ ਸੋਇਆਬੀਨ ਲਗਾਓ ਜੋ ਫਾਹੇ ਵਜੋਂ ਕੰਮ ਕਰਨ।",
+    "ਫਸਲ ਦੀ ਕਟਾਈ ਤੋਂ ਬਾਅਦ ਇਹਨਾਂ ਫਾਹੇ ਵਾਲੇ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਦਿਓ।"
    ],
    "practices": [
-    "sondi layi apne khet di niyamit janch kro.",
-    "mothen nu farn layi light trap lagao.",
-    "moth di ginti di nigrani layi pheromone trap varto.",
-    "har roz trap vichon fariye moth nu bahar kadd deo."
+    "ਸੁੰਡੀਆਂ ਲਈ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਆਪਣੇ ਖੇਤ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਪਤੰਗਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਰੋਸ਼ਨੀ ਵਾਲੇ ਫਾਹੇ (light traps) ਲਗਾਓ।",
+    "ਪਤੰਗਿਆਂ ਦੀ ਗਿਣਤੀ 'ਤੇ ਨਜ਼ਰ ਰੱਖਣ ਲਈ pheromone traps ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਫਾਹਿਆਂ ਵਿੱਚ ਫਸੇ ਪਤੰਗਿਆਂ ਨੂੰ ਹਰ ਰੋਜ਼ ਬਾਹਰ ਕੱਢੋ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [],
    "avoid": [],
-   "etl": "prati paudha 2 ton 3 sondi."
+   "etl": "2 ਤੋਂ 3 ਸੁੰਡੀਆਂ ਪ੍ਰਤੀ ਪੌਦਾ।"
   },
   "groundnut_healthy": {
-   "name": "swasth",
+   "name": "ਤੰਦਰੁਸਤ",
    "symptoms": [
-    "pattiyan kism de hisab nal barabar hariyan han, koi daag, lakaran, ghere ya powdery parat nahi hai.",
-    "pattiyan de kinare te sire murhde, peele, sukk ya sadya hoya nahi hai.",
-    "pattiyan, tana ya falaan uthe koi keede, ande, jaal, chhed ya bor ke nishane nahi han."
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ 'ਤੇ ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਗੋਲ ਨਿਸ਼ਾਨ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਸੁਰਾਖ ਨਹੀਂ ਹੁੰਦੇ।"
    ],
    "prevention": [
-    "ajehi kism chuno jehri mukh keedan te rogan te kabu pave ya sehn kare, te swasth beej ya bijai samagri varto.",
-    "bajan ton pehlan beej ya bijai samagri da upchar kro, ho sake taan bio-pesticide nal.",
-    "sahi fasla rakho, mitti di janch karwa ke organic khad te fertilizer deo, te vadh nitrogen na varto jisse fasal narm ho jave te keedan te rogan da hamla asaan ho jave.",
-    "fasal nu lohde hisab nal pani deo te har ritu vich fasal badal ke bjo."
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਵਰਤੋ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜਾਂ ਨੂੰ ਸੋਧੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ bio-pesticide ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ-ਬਿਮਾਰੀਆਂ ਲਈ ਹਮਲਾ ਕਰਨਾ ਆਸਾਨ ਬਣਾਉਂਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਪਾਣੀ ਦਿਓ ਅਤੇ ਹਰ ਸੀਜ਼ਨ ਵਿੱਚ ਫਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ।"
    ],
    "practices": [
-    "hafthe vich ghatton-ghatt ik var khet vich giro te mitti, pani, paudhe, keede te mitra keede jo keedan nu khande han, unna nu vekho.",
-    "wadh-spectrum chemical spray na kar ke mitra keedan te makriyan di sambhal kro.",
-    "musibat dikhn te jald kadam chakho, jive ke ande ikathe karke ya rogi paudhe nu hata ke."
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਕੀੜਿਆਂ ਨੂੰ ਖਾਣ ਵਾਲੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਅਸਰ ਵਾਲੇ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਸੰਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਕੋਈ ਸਮੱਸਿਆ ਦਿਖੇ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -1172,7 +1172,7 @@
     "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
    ],
    "avoid": [],
-   "etl": "10% fruit damage."
+   "etl": "10% ਫਲਾਂ ਦਾ ਨੁਕਸਾਨ।"
   },
   "tomato_healthy": {
    "name": "ਤੰਦਰੁਸਤ",
@@ -1607,7 +1607,7 @@
    "etl": ""
   },
   "mango_powdery_mildew": {
-   "name": "Powdery mildew",
+   "name": "ਚਿੱਟਾ ਉੱਲੀ ਰੋਗ",
    "symptoms": [
     "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ, ਫੁੱਲਾਂ ਅਤੇ ਛੋਟੇ ਫਲਾਂ ਉੱਤੇ ਚਿੱਟੇ ਰੰਗ ਦੀ ਉੱਲੀ ਦਿਖਾਈ ਦੇਵੇਗੀ।",
     "ਛੋਟੇ ਪੱਤਿਆਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਪੈ ਸਕਦੇ ਹਨ ਜੋ ਬਾਅਦ ਵਿੱਚ ਜਾਮਨੀ-ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
@@ -1629,7 +1629,7 @@
    "etl": ""
   },
   "mango_anthracnose": {
-   "name": "Anthracnose",
+   "name": "ਐਂਥਰਾਕਨੋਜ਼",
    "symptoms": [
     "ਪੱਤਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਛੋਟੇ ਛਾਲੇ ਵਰਗੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
     "ਛੋਟੇ ਪੱਤੇ ਮੁਰਝਾ ਕੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
@@ -1658,7 +1658,7 @@
    "etl": ""
   },
   "mango_hopper": {
-   "name": "Mango hopper",
+   "name": "ਅੰਬ ਦਾ ਹੌਪਰ",
    "symptoms": [
     "ਕੀੜੇ ਫੁੱਲਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
     "ਫੁੱਲਾਂ ਦੀਆਂ ਡੋਡੀਆਂ ਅਤੇ ਫੁੱਲ ਰੁੱਖ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
@@ -1689,7 +1689,7 @@
    "etl": ""
   },
   "mango_fruit_fly": {
-   "name": "Fruit fly",
+   "name": "ਫਲ ਦੀ ਮੱਖੀ",
    "symptoms": [
     "ਤੁਹਾਨੂੰ ਫਲ ਉੱਤੇ ਭੂਰੇ ਰੰਗ ਦੇ ਗਲੇ ਹੋਏ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
     "ਕੁਝ ਫਲਾਂ ਵਿੱਚੋਂ ਪਾਣੀ ਨਿਕਲ ਸਕਦਾ ਹੈ।",
@@ -1717,7 +1717,7 @@
    "etl": ""
   },
   "mango_sooty_mould": {
-   "name": "Sooty mould",
+   "name": "ਕਾਲੀ ਉੱਲੀ",
    "symptoms": [
     "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਦੀ ਸਤ੍ਹਾ ਉੱਤੇ ਕਾਲੀ ਮਖਮਲੀ ਪਰਤ ਦਿਖਾਈ ਦੇਵੇਗੀ।",
     "ਬਹੁਤ ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ, ਪੂਰਾ ਰੁੱਖ ਕਾਲਾ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ ਟਾਹਣੀਆਂ ਅਤੇ ਪੱਤੇ ਵੀ ਸ਼ਾਮਲ ਹਨ।",
@@ -1741,7 +1741,7 @@
    "etl": ""
   },
   "mango_healthy": {
-   "name": "Healthy",
+   "name": "ਤੰਦਰੁਸਤ",
    "symptoms": [
     "ਪੱਤੇ ਆਪਣੀ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੈ।",
     "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹਨ।",
@@ -2096,7 +2096,7 @@
    "etl": ""
   },
   "cashew_tea_mosquito_bug": {
-   "name": "Tea mosquito bug",
+   "name": "ਟੀ ਮੋਸਕੀਟੋ ਬੱਗ",
    "symptoms": [
     "ਛੋਟੇ ਅਤੇ ਵੱਡੇ ਕੀੜੇ ਨਰਮ ਪੱਤਿਆਂ, ਨਵੀਆਂ ਟਾਹਣੀਆਂ, ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ, ਛੋਟੇ ਫਲਾਂ ਅਤੇ ਕਾਜੂ ਦੇ ਸੇਬਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
     "ਕੀੜਿਆਂ ਦੇ ਡੰਗ ਮਾਰਨ ਵਾਲੀਆਂ ਥਾਵਾਂ ਤੋਂ ਗੂੰਦ ਵਰਗਾ ਚਿਪਚਿਪਾ ਪਦਾਰਥ ਨਿਕਲਦਾ ਹੈ।",
@@ -2120,7 +2120,7 @@
    "etl": ""
   },
   "cashew_stem_root_borer": {
-   "name": "Stem and root borer",
+   "name": "ਤਣੇ ਅਤੇ ਜੜ੍ਹ ਦਾ ਸੁੰਡੀ (ਬੋਰਰ)",
    "symptoms": [
     "ਤੁਸੀਂ ਦੇਖੋਗੇ ਕਿ ਤਣੇ ਦੀ ਛਿੱਲ ਵਿੱਚੋਂ ਗੂੰਦ ਨਿਕਲ ਰਹੀ ਹੈ ਜੋ ਬਾਅਦ ਵਿੱਚ ਸਖ਼ਤ ਹੋ ਜਾਂਦੀ ਹੈ।",
     "ਪੱਤੇ ਪੀਲੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਡਿੱਗਣ ਲੱਗਦੇ ਹਨ।",
@@ -2145,7 +2145,7 @@
    "etl": ""
   },
   "cashew_thrips": {
-   "name": "Thrips (flower and foliage)",
+   "name": "ਥਰਿਪਸ (ਫੁੱਲਾਂ ਅਤੇ ਪੱਤਿਆਂ ਵਾਲੇ)",
    "symptoms": [
     "ਛੋਟੇ ਅਤੇ ਵੱਡੇ ਥ੍ਰਿਪਸ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਸਮੂਹਾਂ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ, ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ, ਸੇਬਾਂ ਅਤੇ ਫਲਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
     "ਪੱਤੇ ਫਿੱਕੇ ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੁੰਗੜ ਜਾਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਉਪਰਲੀ ਸਤ੍ਹਾ ਖੁਰਦਰੀ ਹੋ ਜਾਂਦੀ ਹੈ।",
@@ -2169,7 +2169,7 @@
    "etl": ""
   },
   "cashew_anthracnose": {
-   "name": "Anthracnose",
+   "name": "ਐਂਥਰਾਕਨੋਜ਼",
    "symptoms": [
     "ਇਹ ਉੱਲੀ ਨਰਮ ਪੱਤਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਹਮਲਾ ਕਰਦੀ ਹੈ।",
     "ਤੁਹਾਨੂੰ ਲਾਲ-ਭੂਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਦਿਖਾਈ ਦੇਣਗੇ ਜੋ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਲੱਗਦੇ ਹਨ।",
@@ -2194,7 +2194,7 @@
    "etl": ""
   },
   "cashew_inflorescence_blight": {
-   "name": "Inflorescence blight",
+   "name": "ਮੰਜਰੀ ਦਾ ਝੁਲਸ ਰੋਗ",
    "symptoms": [
     "ਫੁੱਲਾਂ ਵਾਲੀਆਂ ਟਾਹਣੀਆਂ ਸੁੱਕਣ ਲੱਗਦੀਆਂ ਹਨ।",
     "ਮੁੱਖ ਅਤੇ ਪਾਸੇ ਵਾਲੀਆਂ ਫੁੱਲਾਂ ਦੀਆਂ ਡੰਡੀਆਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਛੋਟੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
@@ -2219,7 +2219,7 @@
    "etl": ""
   },
   "cashew_dieback": {
-   "name": "Die-back (pink disease)",
+   "name": "ਡਾਈ-ਬੈਕ (ਪਿੰਕ ਡਿਜ਼ੀਜ਼)",
    "symptoms": [
     "ਤੁਸੀਂ ਟਾਹਣੀਆਂ ਉੱਤੇ ਚਿੱਟੇ ਜਾਂ ਗੁਲਾਬੀ ਰੰਗ ਦਾ ਵਾਧਾ ਦੇਖ ਸਕਦੇ ਹੋ।",
     "ਟਾਹਣੀਆਂ ਦੇ ਸਿਰੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਇਹ ਸੁਕਾਅ ਹੇਠਾਂ ਵੱਲ ਫੈਲਦਾ ਹੈ।",
@@ -2247,7 +2247,7 @@
    "etl": ""
   },
   "cashew_healthy": {
-   "name": "Healthy",
+   "name": "ਤੰਦਰੁਸਤ",
    "symptoms": [
     "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਧੱਬੇ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
     "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
@@ -2419,13 +2419,13 @@
   }
  },
  "questions": {
-  "q_paddy_blast_paddy_brown_spot": "Ki dhabbe takle ya akh varge han, dono pase to tikhe, ate vichale rakh varga rang hai?",
-  "q_paddy_brown_spot_paddy_blast": "Ki dhabbe chhote ate gol ya andakar han, til varge bhure, na ki lamme ate tikhe?",
-  "q_paddy_sheath_blight_paddy_blast": "Ki pani de level de kol patte de ghol te dhabbe, andakar ate hare-slate rang de bhure kinare vale han?",
-  "q_paddy_blb_paddy_brown_spot": "Ki pilapan patte de sirhe to shuru hunda hai ate lari vich patte de kinare chalda hai, bina kisi alag dhabbe de?",
-  "q_paddy_bph_paddy_stem_borer": "Jad tusi adhar to paudhe nu hilae ta ki pani de kol bahut saare chhote bhure kire dikhde han?",
-  "q_paddy_stem_borer_paddy_bph": "Ki sukkha vichala shoot ya chitti khali baali khichan nal aasani nal nikal jandi hai?",
-  "q_paddy_gall_midge_paddy_stem_borer": "Ki vichala shoot pyaz de patte vargi khokhli, chitti-chandi vargi nali vich badal gaya hai?",
+  "q_paddy_blast_paddy_brown_spot": "ਕੀ ਦਾਗ ਅੱਖ ਜਾਂ ਤੱਕਲੇ ਵਰਗੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਦੋਵੇਂ ਸਿਰੇ ਤਿੱਖੇ ਹਨ ਅਤੇ ਵਿਚਕਾਰੋਂ ਸਲੇਟੀ ਰੰਗ ਦੇ ਹਨ?",
+  "q_paddy_brown_spot_paddy_blast": "ਕੀ ਦਾਗ ਛੋਟੇ ਅਤੇ ਗੋਲ ਜਾਂ ਅੰਡਾਕਾਰ ਹਨ, ਜੋ ਤਿਲ ਦੇ ਦਾਣਿਆਂ ਵਾਂਗ ਭੂਰੇ ਹਨ, ਨਾ ਕਿ ਲੰਬੇ ਅਤੇ ਤਿੱਖੇ?",
+  "q_paddy_sheath_blight_paddy_blast": "ਕੀ ਪਾਣੀ ਦੇ ਨੇੜੇ ਪੱਤਿਆਂ ਦੇ ਮੁੱਢ ਉੱਤੇ ਦਾਗ ਅੰਡਾਕਾਰ ਅਤੇ ਹਰੇ-ਸਲੇਟੀ ਰੰਗ ਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਭੂਰੇ ਹਨ?",
+  "q_paddy_blb_paddy_brown_spot": "ਕੀ ਪੱਤੇ ਦੇ ਸਿਰੇ ਤੋਂ ਪੀਲਾਪਣ ਸ਼ੁਰੂ ਹੋ ਕੇ ਕਿਨਾਰਿਆਂ ਵੱਲ ਲਹਿਰਦਾਰ ਪੱਟੀ ਵਾਂਗ ਜਾਂਦਾ ਹੈ, ਬਿਨਾਂ ਕਿਸੇ ਵੱਖਰੇ ਦਾਗ ਦੇ?",
+  "q_paddy_bph_paddy_stem_borer": "ਜਦੋਂ ਤੁਸੀਂ ਬੂਟਿਆਂ ਨੂੰ ਹੇਠਾਂ ਤੋਂ ਹਟਾਉਂਦੇ ਹੋ, ਕੀ ਤੁਹਾਨੂੰ ਪਾਣੀ ਦੇ ਨੇੜੇ ਬਹੁਤ ਸਾਰੇ ਛੋਟੇ ਭੂਰੇ ਕੀੜੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ?",
+  "q_paddy_stem_borer_paddy_bph": "ਕੀ ਸੁੱਕਾ ਵਿਚਕਾਰਲਾ ਤਣਾ ਜਾਂ ਚਿੱਟੀ ਖਾਲੀ ਬੱਲੀ ਖਿੱਚਣ 'ਤੇ ਆਸਾਨੀ ਨਾਲ ਬਾਹਰ ਆ ਜਾਂਦੀ ਹੈ?",
+  "q_paddy_gall_midge_paddy_stem_borer": "ਕੀ ਵਿਚਕਾਰਲਾ ਤਣਾ ਪਿਆਜ਼ ਦੇ ਪੱਤੇ ਵਾਂਗ ਖੋਖਲੀ, ਚਾਂਦੀ ਵਰਗੀ ਚਿੱਟੀ ਨਲੀ ਵਿੱਚ ਬਦਲ ਗਿਆ ਹੈ?",
   "q_cotton_bacterial_blight_cotton_alternaria_leaf_spot": "ਕੀ ਦਾਣੇ ਕੋਨੇਦਾਰ ਹਨ, ਪੱਤਿਆਂ ਦੀਆਂ ਰਗਾਂ ਵਿੱਚ ਘਿਰੇ ਹੋਏ ਹਨ, ਪਹਿਲਾਂ ਪਾਣੀ ਨਾਲ ਭਰੇ ਹੋਏ ਹਨ ਅਤੇ ਫਿਰ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ?",
   "q_cotton_alternaria_leaf_spot_cotton_bacterial_blight": "ਕੀ ਦਾਣੇ ਗੋਲ ਅਤੇ ਭੂਰੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅੰਦਰ ਛੱਲੇ ਹਨ, ਨਿਸ਼ਾਨੇ ਵਾਂਗ?",
   "q_cotton_grey_mildew_cotton_bacterial_blight": "ਕੀ ਦਾਣਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਸਫੇਦ ਜਾਂ ਸਲੇਟੀ ਪਾਊਡਰ ਵਰਗਾ ਵਾਧਾ ਹੈ?",
@@ -2438,9 +2438,9 @@
   "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot": "ਕੀ ਦਾਗ ਛੋਟੇ, ਗੂੜ੍ਹੇ ਭੂਰੇ ਤੋਂ ਕਾਲੇ ਅਤੇ ਤੇਲ ਵਰਗੇ ਹੁੰਦੇ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਹਲਕੇ ਸਲੇਟੀ ਕੇਂਦਰ ਦੇ?",
   "q_chilli_black_thrips_chilli_thrips": "ਕੀ ਫੁੱਲ ਖਰਾਬ ਹੋਏ ਹਨ, ਪੱਤੀਆਂ ਉੱਤੇ ਭੂਰੀਆਂ ਲਕੀਰਾਂ ਹਨ ਅਤੇ ਫੁੱਲ ਝੜ ਰਹੇ ਹਨ, ਅਤੇ ਕੀ ਪੱਤਿਆਂ ਦਾ ਹੇਠਲਾ ਪਾਸਾ ਲਾਲ ਭੂਰਾ ਹੈ?",
   "q_chilli_yellow_mite_chilli_thrips": "ਕੀ ਪੱਤੇ ਉਲਟੀ ਹੋਈ ਕਿਸ਼ਤੀ ਵਾਂਗ ਹੇਠਾਂ ਵੱਲ ਮੁੜਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਰੋਲ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ ਦੇ ਡੰਠਲ ਲੰਬੇ ਹੁੰਦੇ ਹਨ?",
-  "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot": "ki patti de uthle passe daag bhure han, te thale val kewal halka bhura rang hai?",
-  "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot": "ki patti de thale passe daag gutte bhure ton kale te khurdre han?",
-  "q_groundnut_rust_groundnut_late_leaf_spot": "ki pattiyan de thale passe sapat daag di bajaye chote ubhraye fode (pustules) han?",
+  "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot": "ਕੀ ਪੱਤੇ ਦੇ ਉੱਪਰਲੇ ਪਾਸੇ ਦਾਗ ਭੂਰੇ ਹਨ, ਅਤੇ ਹੇਠਲੇ ਪਾਸੇ ਸਿਰਫ ਹਲਕੇ ਭੂਰੇ ਰੰਗ ਦੇ ਹਨ?",
+  "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot": "ਕੀ ਪੱਤੇ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਦਾਗ ਗੂੜ੍ਹੇ ਭੂਰੇ ਤੋਂ ਕਾਲੇ ਅਤੇ ਖੁਰਦਰੇ ਹਨ?",
+  "q_groundnut_rust_groundnut_late_leaf_spot": "ਕੀ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਜ਼ਿਆਦਾਤਰ ਛੋਟੇ ਉਭਰੇ ਹੋਏ ਦਾਣੇ (ਪਸਚੂਲ) ਹਨ, ਨਾ ਕਿ ਚਪਟੇ ਦਾਗ?",
   "q_maize_common_rust_maize_turcicum_blight": "ਕੀ ਪੱਤੇ ਦੇ ਦੋਵਾਂ ਪਾਸਿਆਂ 'ਤੇ ਛੋਟੇ ਉਭਰੇ ਹੋਏ ਭੂਰੇ ਦਾਗ (ਪਸਚੂਲਸ) ਹਨ?",
   "q_maize_turcicum_blight_maize_maydis_blight": "ਕੀ ਦਾਗ ਲੰਬੇ ਅਤੇ ਤੁਰਲੀ ਜਾਂ ਸਿਗਾਰ ਦੇ ਆਕਾਰ ਦੇ, ਸਲੇਟੀ-ਹਰੇ ਤੋਂ ਭੂਰੇ ਰੰਗ ਦੇ ਹਨ, ਜੋ ਹੇਠਲੇ ਪੱਤਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ?",
   "q_maize_maydis_blight_maize_turcicum_blight": "ਕੀ ਦਾਗ ਪਹਿਲਾਂ ਛੋਟੇ ਅਤੇ ਹੀਰੇ ਦੇ ਆਕਾਰ ਦੇ ਹੁੰਦੇ ਹਨ, ਫਿਰ ਥੋੜੇ ਲੰਬੇ, ਭੂਰੇ ਰੰਗ ਦੇ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਹਲਕੇ ਭੂਰੇ ਹੁੰਦੇ ਹਨ?",

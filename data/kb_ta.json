@@ -1259,7 +1259,7 @@
     "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
    ],
    "avoid": [],
-   "etl": "10% fruit damage."
+   "etl": "10% பழங்கள் சேதமடைந்தால்."
   },
   "tomato_healthy": {
    "name": "ஆரோக்கியமான செடி",
@@ -1607,50 +1607,50 @@
    "etl": ""
   },
   "mango_powdery_mildew": {
-   "name": "Powdery mildew (Saambal rogam)",
+   "name": "சாம்பல் நோய்",
    "symptoms": [
-    "Ilai, poo, matrum siriya kaaygal meedhu vellai poondu poandru maavu padalam irukkum.",
-    "Siriya ilaikalil oodha-pachchai niramai pulligal theriyum.",
-    "Nooi thaakkiya pookkalum kaaygalum pidippadharku munne marathilirundhu vizhundhuvidum.",
-    "Kaaygal kaaykkavumathu thadukkum."
+    "இலைகள், பூக்கள் மற்றும் பிஞ்சுகள் மீது வெள்ளை நிறத்தில் பூஞ்சை படர்ந்திருக்கும்.",
+    "இளம் இலைகளில் ஊதா கலந்த பழுப்பு நிறத் திட்டுகள் காணப்படும்.",
+    "பாதிக்கப்பட்ட பூக்களும் பிஞ்சுகளும் வளருவதற்கு முன்பே கொட்டிவிடும்.",
+    "இந்த நோயால் மரத்தில் காய்கள் பிடிப்பது குறையும்."
    ],
    "prevention": [
-    "Vilaiyatchiyil nooi ethaatha ragangalaga thirntherukkungal.",
-    "Thottathukku thevaiyana neerpaatchi matrum vadiyanamai amaikkavum.",
-    "Poo viriyum samayathil mazhai allathu pani irundhal nooi vegamaaga paravum, enave marangalai nandraga kavanikkavum."
+    "முடிந்தவரை நோய் எதிர்ப்புத் திறன் கொண்ட ரகங்களை நடவும்.",
+    "AESA மா சாகுபடி முறையின்படி, தோட்டத்தில் சரியான நீர்ப்பாசனம் மற்றும் வடிகால் வசதியைச் செய்யவும்.",
+    "பூக்கும் காலத்தில் மரங்களை கவனமாகப் பார்க்கவும், ஏனெனில் மழை அல்லது பனி மற்றும் குளிர்ந்த இரவுகள் நோயைப் பரப்பும்."
    ],
    "practices": [
-    "Nooi thaakkiya kihaikalai vetri erikkavum.",
-    "Nooi muthalil therinthathum udane kavanithu kuraikkavum."
+    "நோய் தாக்கிய செடியின் பாகங்களை அகற்றி அழித்துவிடவும்.",
+    "நோயை ஆரம்பத்திலேயே கண்டறிய மரங்களை அடிக்கடி கண்காணிக்கவும்."
    ],
-   "favourable_conditions": "Poo varum samayathil mazhai, pani matrum kulirana iravu irundhal nooi vegamaaga paravum.",
+   "favourable_conditions": "பூக்கும் காலத்தில் மழை அல்லது பனி மற்றும் குளிர்ந்த இரவுகள் இருந்தால் நோய் வேகமாகப் பரவும்.",
    "organic_bio": [],
    "avoid": [],
    "etl": ""
   },
   "mango_anthracnose": {
-   "name": "Anthracnose (Karuntharai rogam)",
+   "name": "இலை கருகல் நோய்",
    "symptoms": [
-    "Ilaigal matrum kombugal meedhu siriya kuththu pulligal varum.",
-    "Siriya ilaikal vaadi ulaindhu pogum.",
-    "Kombugal nuchchi poi marathil kuraikkum.",
-    "Pookkal matrum kaaygal meedhu karuppu pulligal varum.",
-    "Nooi thaakkiya pazham kathinamagi, vedithu, azhugi vidum.",
-    "Siriya kaaygal surungipp poi marathilirundhu vizhum."
+    "இலைகள் மற்றும் கிளைகளில் சிறிய கொப்புளம் போன்ற புள்ளிகள் தோன்றும்.",
+    "இளம் இலைகள் வாடி காய்ந்துவிடும்.",
+    "மென்மையான கிளைகள் கருகி, மரத்தின் கிளைகள் காய்ந்து போகலாம்.",
+    "பூக்கள் மற்றும் பழங்களில் கருப்புப் புள்ளிகள் உருவாகும்.",
+    "பாதிக்கப்பட்ட பழத்தின் சதைப்பகுதி கடினமாகி, வெடித்து அழுகிவிடும்.",
+    "பாதிக்கப்பட்ட பிஞ்சுகள் சுருங்கி மரத்திலிருந்து கொட்டிவிடும்."
    ],
    "prevention": [
-    "Nooi thaakkiya ilaikal, kombugal matrum kaaygalai serthu erikkavum.",
-    "Kaidha pai kondu kaaygalai 15 natkalukku munbu moodi vaikkavum.",
-    "Nooi ethirkum ragangalai nadavum.",
-    "Pazham thinnai eekkali kattuppaduthal moolam nooi paravuvathai thadukkalam."
+    "நோய் தாக்கிய இலைகள், கிளைகள் மற்றும் பழங்களைச் சேகரித்து எரித்துவிடவும்.",
+    "அறுவடைக்கு 15 நாட்களுக்கு முன்பு மரத்திலுள்ள பழங்களை காகிதப் பைகளால் மூடவும்.",
+    "நோய் எதிர்ப்புத் திறன் கொண்ட ரகங்களைப் பயன்படுத்தவும்.",
+    "பழ ஈக்களைக் கட்டுப்படுத்தினால், பழங்கள் கொட்டுவதையும் நோய் பரவுவதையும் தடுக்கலாம்."
    ],
    "practices": [
-    "Thottathai adikkadi parisuvanthamaga kavanikkavum.",
-    "Nooi thaakkiya pakkangalai vetri neekkavum.",
-    "Setha kombugal matrum kathaikalai aindhu thottathai suthamaga vaikkavum.",
-    "Nooi entha alavu paraviyullathu enru kavanithu theermanikkavum."
+    "தோட்டத்தில் நோய் அறிகுறிகள் உள்ளதா என்று அடிக்கடி பார்க்கவும்.",
+    "நோய் தாக்கிய செடியின் பாகங்களை அகற்றி அழித்துவிடவும்.",
+    "காய்ந்த கிளைகள் மற்றும் குப்பைகளை அகற்றி தோட்டத்தைச் சுத்தமாக வைத்திருக்கவும்.",
+    "எப்போது கட்டுப்பாடு தேவை என்பதை முடிவு செய்யத் தோட்டத்தைக் கண்காணிக்கவும்."
    ],
-   "favourable_conditions": "Athigamana eppam, adikkadi peiyum mazhai, matrum 24 muthal 32 putchi varai veeranam irundhal nooi vegamaaga valarum.",
+   "favourable_conditions": "அதிக ஈரப்பதம், அடிக்கடி பெய்யும் மழை மற்றும் 24 முதல் 32 டிகிரி Celsius வெப்பநிலை இருந்தால் நோய் வளரும்.",
    "organic_bio": [
     "P. fluorescens (FP 7) at 5g/litre"
    ],
@@ -1658,26 +1658,26 @@
    "etl": ""
   },
   "mango_hopper": {
-   "name": "Mango hopper (Aali poochi / Thullali)",
+   "name": "தத்துப் பூச்சி",
    "symptoms": [
-    "Poochigal pookkalilirundhu saaruthai urinjum.",
-    "Poo mottukkalum pookkalum marathilirundhu vizhum.",
-    "Keezh ilaikal meedhu picchikkum theen suvaiyulla thulikal theriyum.",
-    "Ilaigal meedhu karuppu maasu padalam valarum.",
-    "Sila ilaikal surungip poi vaadi vidum.",
-    "Siriya kaaygal marathilirundhu vizhum."
+    "இந்த பூச்சிகள் பூக்களிலிருந்து சாற்றை உறிஞ்சும்.",
+    "பூ மொட்டுகளும் பூக்களும் மரத்திலிருந்து கொட்டிவிடும்.",
+    "கீழ் இலைகளில் ஒட்டும் தன்மையுள்ள தேன் போன்ற திரவம் காணப்படும்.",
+    "இலைகளில் கருப்பு நிறத்தில் சூட்டி அச்சு (sooty mould) வளரும்.",
+    "செடியின் சில பாகங்கள் சுருண்டு காய்ந்து போகலாம்.",
+    "பிஞ்சுகள் மரத்திலிருந்து கொட்டிவிடலாம்."
    ],
    "prevention": [
-    "Marangalai romba aruge nadakkavendam.",
-    "Kalai chedigalai neekki thottathai suthamaga vaikkavum.",
-    "Disambar mathathil adarntha kombugalai katti vidavum."
+    "மரங்களை மிக நெருக்கமாக நட வேண்டாம்.",
+    "களைகளை அகற்றி தோட்டத்தைச் சுத்தமாக வைத்திருக்கவும்.",
+    "டிசம்பர் மாதத்தில் அடர்த்தியான கிளைகளைக் கத்தரித்து விடவும்."
    ],
    "practices": [
-    "Marathinuchiyil manjal ottum panigalai vaikkavum.",
-    "Natthorum panigalai kavanikkavum.",
-    "Malai 6 mani muthal iravu 10 mani varai vilakku porunthiyula kanikkarippanai payanpaduthavum."
+    "மரத்தின் உச்சிக்கு மேல் மஞ்சள் நிற ஒட்டும் பொறிகளை வைக்கவும்.",
+    "ஒவ்வொரு நாளும் பொறிகளைச் சரிபார்க்கவும்.",
+    "மாலை 6 மணி முதல் இரவு 10 மணி வரை ஒளிப் பொறிகளைப் பயன்படுத்தவும்."
    ],
-   "favourable_conditions": "Marangal poo pookkum samayam February mathathil indha poochigal varum.",
+   "favourable_conditions": "பிப்ரவரி மாதத்தில் மரங்கள் பூக்கத் தொடங்கும் போது இந்தப் பூச்சிகள் வரும்.",
    "organic_bio": [
     "Neem oil 5 ml/lit of water",
     "3 per cent neem oil",
@@ -1689,27 +1689,27 @@
    "etl": ""
   },
   "mango_fruit_fly": {
-   "name": "Fruit fly (Pazha eechu)",
+   "name": "பழ ஈ",
    "symptoms": [
-    "Pazham meedhu karuppu azhugiya pulligal theriyum.",
-    "Sila pazhangalilneer ooriyirukkum.",
-    "Pazham seekkiram marathilirundhu vizhum.",
-    "Pazham pazhakkum podhu siriya puzhukkal athukkuL thulaiyidum.",
-    "Pazham azhugi thodangum."
+    "பழத்தில் பழுப்பு நிறத்தில் அழுகிய திட்டுகள் காணப்படும்.",
+    "சில பழங்களிலிருந்து திரவம் கசியலாம்.",
+    "பழங்கள் முன்கூட்டியே மரத்திலிருந்து கீழே விழலாம்.",
+    "பழம் பழுக்கும்போது சிறிய புழுக்கள் பழத்திற்குள் துளையிடும்.",
+    "பழம் அழுகத் தொடங்கும்."
    ],
    "prevention": [
-    "Novambar matrum Disambar mathathil mannukkul ulavuthal seyyavum.",
-    "Ithu eechin muttaigalai veyyilil kaatti alikkum.",
-    "Mannil pazhaya thavarugalai allathu chedigalai moodi vaikkavum.",
-    "Uram allathu saanam mannil serkkavum."
+    "நவம்பர் மற்றும் டிசம்பர் மாதங்களில் நிலத்தை உழவும்.",
+    "இப்படிச் செய்வதால் கூட்டுப்புழுக்கள் வெயிலில் பட்டு இறந்துவிடும்.",
+    "மண்ணை செடிகள் அல்லது பழைய பயிர் பாகங்களால் மூடி வைக்கவும்.",
+    "மண்ணில் மட்கிய உரம் அல்லது தொழு உரம் சேர்க்கவும்."
    ],
    "practices": [
-    "Vizhuntha pazhangalai serthu oru kuliyil poda vendum.",
-    "Akkareikku 4 muthal 5 pheromone traps vaikkavum.",
-    "2 muthal 3 varathukku oru murai lures-ai marravum.",
-    "Muthirntha eechigalai pidithu alikkavum."
+    "கீழே விழுந்த பழங்களைச் சேகரித்து ஒரு குழியில் போட்டு மூடவும்.",
+    "ஒரு ஏக்கருக்கு 4 முதல் 5 வீதம் இனக்கவர்ச்சி பொறிகளை வைக்கவும்.",
+    "2 முதல் 3 வாரங்களுக்கு ஒருமுறை கவர்ச்சிப் பொருளை மாற்றவும்.",
+    "வளர்ந்த ஈக்களைப் பிடித்து அழிக்கவும்."
    ],
-   "favourable_conditions": "Pazhangal meedhu muttaidal eechigalukku romba pidikkum.",
+   "favourable_conditions": "பழுத்த பழங்களில் முட்டையிட ஈக்கள் விரும்பும்.",
    "organic_bio": [
     "Pheromone traps @ 4-5/acre"
    ],
@@ -1717,46 +1717,46 @@
    "etl": ""
   },
   "mango_sooty_mould": {
-   "name": "Sooty mould (Karuppu poondu rogam)",
+   "name": "சூட்டி மோல்டு",
    "symptoms": [
-    "Ilaigal meedhu karuppu velvet panju poandru padalam irukkum.",
-    "Mikuntha thaakkuthalil maram muzhuvathum kombu matrum ilaikalodu karuppaga theriyum.",
-    "Poochigal vittu sellaakkum theen suvaiyulla thulikalil poondu valarum.",
-    "Indha karuppu padalam ilai veyyil adaiyavithu thaduthu, marathai paathikkum."
+    "இலைகளின் மேற்பரப்பில் கருப்பு நிறத்தில் வெல்வெட் போன்ற படலம் காணப்படும்.",
+    "அதிக பாதிப்பு ஏற்பட்டால், கிளைகள் மற்றும் இலைகள் உட்பட முழு மரமும் கருப்பாகத் தெரியும்.",
+    "பூச்சிகள் வெளியேற்றும் இனிப்பு திரவத்தின் மீது இந்த பூஞ்சை வளர்கிறது.",
+    "இந்த கருப்பு அடுக்கு இலைகளில் சூரிய ஒளி படுவதைத் தடுப்பதால் செடி பாதிப்படைகிறது."
    ],
    "prevention": [
-    "Thottathai suthamagavum aarogiyamagavum vaikkavum.",
-    "Thaakkiya kombugalai vetri erithu paravuvathai thadukkavum.",
-    "Theen thuli vidum hopper, aphid matrum scale poochigalai kattuppaduthavum."
+    "உங்கள் தோப்பை சுத்தமாகவும் ஆரோக்கியமாகவும் வைத்திருங்கள்.",
+    "பாதிக்கப்பட்ட கிளைகளை வெட்டி உடனே அழித்துவிடுங்கள், இது நோய் பரவுவதைத் தடுக்கும்.",
+    "செடியில் இனிப்பு திரவத்தை விடும் hoppers, aphids மற்றும் scale insects போன்ற பூச்சிகளைக் கட்டுப்படுத்துங்கள்."
    ],
    "practices": [
-    "Poochigalai matrum poondhu rogamum ore nerathil kattuppaduthavum.",
-    "Poondu thaakkiya marathin pakkangalai vetri neekkavum.",
-    "Nooi paravathu irukka vetriya kombugalai erikkavum.",
-    "Poondu urinthu povatharku ilaikal meedhu starriyal kavanangalai thelikkavum."
+    "பூச்சிகளையும் பூஞ்சையையும் ஒரே நேரத்தில் கட்டுப்படுத்துங்கள்.",
+    "பூஞ்சை படர்ந்த மரத்தின் பாகங்களை வெட்டி அகற்றுங்கள்.",
+    "நோய் பரவாமல் இருக்க வெட்டிய கிளைகளை எரித்துவிடுங்கள்.",
+    "பூஞ்சையை உரித்து எடுக்க இலைகளின் மீது starch கரைசலைத் தெளிக்கவும்."
    ],
-   "favourable_conditions": "Athigamana eppam matrum eera iruppaana vanilai nooi valarvatharku uthavum.",
+   "favourable_conditions": "அதிக ஈரப்பதம் மற்றும் மழையுள்ள வானிலை இந்த நோய் வளர உதவுகிறது.",
    "organic_bio": [],
    "avoid": [],
    "etl": ""
   },
   "mango_healthy": {
-   "name": "Healthy (Aarogiyamana maram)",
+   "name": "ஆரோக்கியமானது",
    "symptoms": [
-    "Ilaigal nalla pachchaithanmaiyudan, pulligal, varigal, vaalai allathu maavu padalam illamal irukkum.",
-    "Ilaigalin munaiyum oaramum curru, manjal, ularnthu allathu karunthu pogamal irukkum.",
-    "Ilaigal, thandugal allathu kaaygal meedhu poochigal, muttaigal, valai, thulai allathu arigal illamal irukkum."
+    "இலைகள் அந்த ரகத்திற்கு உரிய பச்சை நிறத்தில் இருக்கும், புள்ளிகள், கோடுகள், வளையங்கள் அல்லது மாவு போன்ற பூச்சு இருக்காது.",
+    "இலை ஓரங்கள் மற்றும் நுனிகள் சுருண்டு போதல், மஞ்சள் நிறமாதல், காய்ந்து போதல் அல்லது கருகி போதல் இருக்காது.",
+    "இலைகள், தண்டுகள் அல்லது பழங்களில் பூச்சிகள், முட்டைகள், வலைகள், துளைகள் அல்லது தழும்புகள் இருக்காது."
    ],
    "prevention": [
-    "Nooi ethirkkum allathu thaangum ragathai thirntherukkungal, matrum nalla vidhaikkalai payanpaduthavum.",
-    "Vidhaikkalai naduvatharku munbu uyir-poondu kollum marunthu kondu kattuppaduthavum.",
-    "Sariyaana edaiveli viduvum, uram poduvum, athigamana nitrogen urangalai thavirppathum nooi varuvathai thadukkum.",
-    "Sariyaana neerpaatchi matrum payir maatrathai kavanikkavum."
+    "முக்கியமான பூச்சிகள் மற்றும் நோய்களை எதிர்க்கும் ரகங்களைத் தேர்ந்தெடுங்கள், ஆரோக்கியமான விதை அல்லது நடவுப் பொருட்களைப் பயன்படுத்துங்கள்.",
+    "விதை அல்லது நடவுப் பொருட்களை விதைக்கும் முன், முடிந்தவரை bio-pesticide கொண்டு சுத்திகரியுங்கள்.",
+    "சரியான இடைவெளி விடுங்கள், மண் பரிசோதனை செய்து இயற்கை உரம் மற்றும் உரங்களை இடுங்கள், அதிகப்படியான nitrogen உரத்தைத் தவிர்க்கவும், இது பயிரை மென்மையாக்கி பூச்சிகள் தாக்க எளிதாக்கும்.",
+    "பயிருக்குச் சரியான முறையில் தண்ணீர் பாய்ச்சுங்கள் மற்றும் பருவத்திற்குப் பருவம் பயிர் சுழற்சி செய்யுங்கள்."
    ],
    "practices": [
-    "Varanuku oru murai thottathai nadanthu paarthu, mann, neer, chedigal, poochigal matrum nanbaana poochigalai kavanikkavum.",
-    "Nanbaana poochigal matrum silandigalai paathukaakkavum.",
-    "Nooi therinthathu udane muttaigalai serppathu allathu thaakkiya chedigalai neekkavum."
+    "வாரத்திற்கு ஒருமுறை வயலில் நடந்து சென்று மண், தண்ணீர், செடிகள், பூச்சிகள் மற்றும் பூச்சிகளை உண்ணும் நண்பன் பூச்சிகளைக் கவனியுங்கள்.",
+    "அனைத்து பூச்சிகளையும் கொல்லும் chemical sprays-ஐத் தவிர்த்து, நண்பன் பூச்சிகள் மற்றும் சிலந்திகளைப் பாதுகாக்கவும்.",
+    "பிரச்சினையைக் கண்டவுடன் உடனே செயல்படுங்கள், உதாரணமாக முட்டைக் கூட்டுகளைச் சேகரிப்பது அல்லது பாதிக்கப்பட்ட செடிகளை அகற்றுவது."
    ],
    "favourable_conditions": "",
    "organic_bio": [],
@@ -2451,8 +2451,8 @@
   "q_tomato_bacterial_spot_tomato_septoria_leaf_spot": "புள்ளிகள் சிறியதாகவும் பழுப்பு நிறமாகவும் அவற்றைச் சுற்றி மஞ்சள் வளையமும் உள்ளனவா, மேலும் பச்சை நிறப் பழங்களில் மேடான சொரசொரப்பான புள்ளிகள் உள்ளனவா?",
   "q_banana_panama_wilt_banana_bunchy_top": "பழைய இலைகள் ஓரங்களில் மஞ்சள் நிறமாக மாறி தண்டைச் சுற்றி தொங்குகிறதா, மற்றும் வெட்டும்போது தண்டின் உள்ளே சிவப்பு கலந்த பழுப்பு நிறத்தில் இருக்கிறதா?",
   "q_banana_bunchy_top_banana_panama_wilt": "புதிய இலைகள் குறுகலாகவும், கடினமாகவும், உச்சியில் கொத்தாகவும், நரம்புகள் வழியாக அடர் பச்சை நிற கோடுகளுடன் இருக்கிறதா?",
-  "q_mango_powdery_mildew_mango_sooty_mould": "Pookkal, siriya kaaygal matrum siriya ilaikal meedhu vellai maavu poandru irukkarathu?",
-  "q_mango_sooty_mould_mango_powdery_mildew": "Padalam karuppu kari poandru irukkarathu, thearkkum podhu ilaiyil irundu urunthu varuthu?",
+  "q_mango_powdery_mildew_mango_sooty_mould": "பூக்கள், இளம் பழங்கள் மற்றும் இளம் இலைகளின் மீது மாவு போன்ற வெள்ளை நிறப் பூச்சு உள்ளதா?",
+  "q_mango_sooty_mould_mango_powdery_mildew": "பூச்சு கரியைப் போல கருப்பாக உள்ளதா, மேலும் இலையைத் தேய்த்தால் அது உதிர்ந்து வருகிறதா?",
   "q_blackgram_yellow_mosaic_blackgram_leaf_crinkle": "இலைகளில் பிரகாசமான மஞ்சளும் பச்சையும் கலந்த திட்டுகள் கலந்துள்ளதா?",
   "q_blackgram_leaf_crinkle_blackgram_yellow_mosaic": "மஞ்சள் திட்டுகள் இல்லாமல், வழக்கத்தை விட இலைகள் பெரிதாக, தடிமனாக, சுருண்டு, கொப்பளித்து இருக்கிறதா?",
   "q_blackgram_cercospora_leaf_spot_blackgram_rust": "புள்ளிகள் தட்டையாக, நடுவில் வெளிச்சமான பழுப்பு நிறமும், விளிம்பில் சிவப்பு கலந்த பழுப்பு நிறமும் கொண்டு, மேடான கொப்புளங்கள் இல்லாமல் இருக்கிறதா?",

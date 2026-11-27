@@ -119,6 +119,18 @@ function foreignScript(text) {
   return false;
 }
 
+// True when a farmer-facing sentence came back with no letters of the target script at all
+// (left in English, or romanised). Product lines (organic_bio, avoid) may legitimately stay English.
+function noTargetScript(text) {
+  const [lo, hi] = SCRIPT[CUR] || [0, 0];
+  for (const ch of text) {
+    const c = ch.codePointAt(0);
+    if (c >= lo && c <= hi) return false;
+  }
+  return true;
+}
+const MUST_TRANSLATE = ["name", "favourable_conditions", "etl", "symptoms", "prevention", "practices"];
+
 // Check shape: every key present, lists the same length, every string non-empty and in the right script.
 function gaps(src, out, path = "") {
   const g = [];
@@ -147,17 +159,26 @@ if (process.argv.includes("--fix-script")) {
       if (!t) continue;
       const src = sourceFor(kb.crops.find((c) => c.id === d.crop)).diseases[d.id];
       for (const [k, v] of Object.entries(t)) {
-        if (typeof v === "string" && foreignScript(v)) todo[`${d.id}|${k}`] = src[k];
-        if (Array.isArray(v)) v.forEach((x, i) => typeof x === "string" && foreignScript(x) && (todo[`${d.id}|${k}|${i}`] = src[k][i]));
+        const bad = (x) => typeof x === "string" && x.trim() && (foreignScript(x) || (MUST_TRANSLATE.includes(k) && noTargetScript(x)));
+        if (typeof v === "string" && bad(v)) todo[`${d.id}|${k}`] = src[k];
+        if (Array.isArray(v)) v.forEach((x, i) => bad(x) && (todo[`${d.id}|${k}|${i}`] = src[k][i]));
       }
     }
-    for (const [q, v] of Object.entries(doc.questions || {})) if (foreignScript(v)) for (const d of kb.diseases) for (const x of d.discriminators || []) if (x.id === q) todo[`q|${q}`] = x.question;
+    for (const [q, v] of Object.entries(doc.questions || {})) if (foreignScript(v) || noTargetScript(v)) for (const d of kb.diseases) for (const x of d.discriminators || []) if (x.id === q) todo[`q|${q}`] = x.question;
     const n = Object.keys(todo).length;
     if (!n) continue;
-    const out = await translate(todo, lang);
+    const out = {};
+    const keys = Object.keys(todo);
+    for (let i = 0; i < keys.length; i += 60) {
+      try {
+        Object.assign(out, await translate(Object.fromEntries(keys.slice(i, i + 60).map((k) => [k, todo[k]])), lang));
+      } catch (e) {
+        console.error(lang, String(e));
+      }
+    }
     let fixed = 0;
     for (const [key, val] of Object.entries(out)) {
-      if (!(key in todo) || typeof val !== "string" || !val.trim() || foreignScript(val)) continue;
+      if (!(key in todo) || typeof val !== "string" || !val.trim() || foreignScript(val) || noTargetScript(val)) continue;
       const [id, field, idx] = key.split("|");
       if (id === "q") doc.questions[field] = val;
       else if (idx !== undefined) doc.diseases[id][field][Number(idx)] = val;

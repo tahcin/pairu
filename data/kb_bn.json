@@ -19,7 +19,7 @@
  },
  "diseases": {
   "paddy_blast": {
-   "name": "Blast",
+   "name": "ব্লাস্ট রোগ",
    "symptoms": [
     "পাতার মধ্যে বাদামী ধারওয়ালা সাদা থেকে ছাই-সবুজ দাগ দেখতে পাবেন।",
     "এই দাগগুলো লম্বালম্বি বা ডায়মন্ড শেপের হয় এবং মাঝখানটা ছাই রঙের হয়ে যায়।",
@@ -53,10 +53,10 @@
     "Neem cake @ 150 kg/ha"
    ],
    "avoid": [],
-   "etl": "Leaf blast: 3 to 5 spots per leaf. Neck blast: 2 to 5 plants with infected necks per square metre."
+   "etl": "পাতার ব্লাস্ট: প্রতি পাতায় ৩ থেকে ৫টি দাগ। নেক ব্লাস্ট: প্রতি বর্গমিটারে ২ থেকে ৫টি গাছে নেক ব্লাস্টের লক্ষণ দেখা দিলে।"
   },
   "paddy_brown_spot": {
-   "name": "Brown spot",
+   "name": "বাদামী দাগ রোগ",
    "symptoms": [
     "পাতার উপর ছোট ছোট বাদামী ফোঁটা দিয়ে এই রোগ শুরু হয়।",
     "এই দাগগুলো বেড়ে ডিম্বাকার বা গোল হয় এবং তিলের দানার মতো দেখায়।",
@@ -81,10 +81,10 @@
     "Pseudomonas fluorescens @ 10g/kg of seed followed by seedling dip @ of 2.5 kg or products/ha dissolved in 100 litres"
    ],
    "avoid": [],
-   "etl": "2 to 3 spots per leaf and 2 to 3 infected plants per square metre."
+   "etl": "প্রতি পাতায় ২ থেকে ৩টি দাগ এবং প্রতি বর্গমিটারে ২ থেকে ৩টি আক্রান্ত গাছ থাকলে।"
   },
   "paddy_blb": {
-   "name": "Bacterial leaf blight",
+   "name": "পাতার ব্যাকটেরিয়াজনিত ঝলসানো রোগ",
    "symptoms": [
     "পাতার ওপর জল বসা বা হলদে রঙের লম্বা দাগ দেখতে পাবেন।",
     "পাতার ধারগুলো হলুদ বা সোনালী রঙের হয়ে শুকিয়ে যেতে শুরু করে।",
@@ -113,10 +113,10 @@
     "Spray fresh cowdung extract (20 g cowdung in one litre of water)"
    ],
    "avoid": [],
-   "etl": "2 to 3 infected leaves per square metre (in the nursery, 2 to 3 wilting plants per square metre)."
+   "etl": "প্রতি বর্গমিটারে ২ থেকে ৩টি আক্রান্ত পাতা (বীজতলায় প্রতি বর্গমিটারে ২ থেকে ৩টি গাছ নেতিয়ে পড়লে)।"
   },
   "paddy_sheath_blight": {
-   "name": "Sheath blight",
+   "name": "শীথ ব্লাইট",
    "symptoms": [
     "জলের কাছাকাছি পাতার খোলে দাগ দেখতে পাবেন।",
     "দাগগুলো প্রথমে সবুজ-ছাই রঙের এবং ডিম্বাকার বা গোল ছাড়া হয়।",
@@ -143,10 +143,10 @@
     "Apply FYM 12.5 t/ha or green manure 6.25 t/ha to promote antagonistic microflora"
    ],
    "avoid": [],
-   "etl": "Spots 5 to 6 mm long and 2 to 3 infected plants per square metre."
+   "etl": "দাগ ৫ থেকে ৬ mm লম্বা হলে এবং প্রতি বর্গমিটারে ২ থেকে ৩টি গাছ আক্রান্ত হলে।"
   },
   "paddy_bph": {
-   "name": "Brown plant hopper",
+   "name": "বাদামী গাছ ফড়িং",
    "symptoms": [
     "ছোট ছোট পোকা জলের কাছাকাছি গাছের গোড়ায় এসে জমে।",
     "গাছগুলো শুকোতে শুরু করে এবং দেখলে পোড়া পোড়া লাগে।",
@@ -182,10 +182,10 @@
     "Do not mix two insecticides in one tank, and do not use the same insecticide again and again.",
     "Do not burn an infested crop: it drives the hoppers into nearby fields."
    ],
-   "etl": "Spray only when you count 5 to 10 hoppers per hill, or 2 per hill where brown plant hopper comes every year."
+   "etl": "প্রতি গোছায় ৫ থেকে ১০টি ফড়িং থাকলে ওষুধ দিন, আর যেখানে প্রতি বছর এই পোকা আসে সেখানে প্রতি গোছায় ২টির বেশি ফড়িং থাকলেই ওষুধ দিন।"
   },
   "paddy_leaf_folder": {
-   "name": "Leaf folder",
+   "name": "পাতা মোড়ানো পোকা",
    "symptoms": [
     "পাতা লম্বালম্বি মুড়ে যায় এবং পোকার লার্ভা তার ভেতরে থাকে।",
     "লার্ভাগুলো পাতার সবুজ অংশ চেঁচে খায়।",
@@ -211,10 +211,10 @@
     "NSKE 5 %"
    ],
    "avoid": [],
-   "etl": "2 fully damaged leaves with a caterpillar inside per hill."
+   "etl": "প্রতি গোছায় ২টি পাতা সম্পূর্ণ নষ্ট হলে এবং ভেতরে পোকা থাকলে।"
   },
   "paddy_gall_midge": {
-   "name": "Gall midge",
+   "name": "গল মাছি",
    "symptoms": [
     "গাছে পেঁয়াজ পাতার মতো একটি ফাঁপা নল গজায়।",
     "নতুন পাতার বদলে কুশির মাঝখান থেকে পেঁয়াজ পাতার মতো ফ্যাকাশে ফাঁপা নল বের হয়।",
@@ -244,10 +244,10 @@
     "3% Herbal plant extracts"
    ],
    "avoid": [],
-   "etl": "1 gall per square metre, or 10% silver shoots."
+   "etl": "প্রতি বর্গমিটারে ১টি গল বা ১০% সিলভার শ্যুট দেখা দিলে।"
   },
   "paddy_false_smut": {
-   "name": "False smut",
+   "name": "ফলস স্মাট",
    "symptoms": [
     "ধানের দানাগুলো হলুদ রঙের গুঁড়োর মতো পিণ্ডে পরিণত হয়।",
     "ভেলভেটের মতো রেনুর বল তৈরি হয় এবং ধানের ফুলগুলো ঢেকে যায়।",
@@ -280,7 +280,7 @@
    "etl": ""
   },
   "paddy_stem_borer": {
-   "name": "Yellow stem borer",
+   "name": "হলুদ মাজরা পোকা",
    "symptoms": [
     "পাতার ডগার কাছে বাদামী রঙের ডিমের গোছা দেখতে পাবেন।",
     "শুঁয়োপোকা কুশি ও কাণ্ডের ভেতরে ঢুকে খায়।",
@@ -307,10 +307,10 @@
     "Neem seed kernel extract"
    ],
    "avoid": [],
-   "etl": "In the nursery, 1 egg mass per square metre. From tillering, 2 egg masses per square metre, or 10% dead hearts, or 1 moth per square metre, or 25 moths per trap in a week."
+   "etl": "বীজতলায় প্রতি বর্গমিটারে ১টি ডিমের গাদা। কুশি ছাড়ার সময় প্রতি বর্গমিটারে ২টি ডিমের গাদা, অথবা ১০% মরা ডগা, অথবা প্রতি বর্গমিটারে ১টি মথ, অথবা সপ্তাহে প্রতি ফাঁদে ২৫টি মথ পাওয়া গেলে।"
   },
   "paddy_healthy": {
-   "name": "Healthy",
+   "name": "সুস্থ গাছ",
    "symptoms": [
     "জাত অনুযায়ী পাতাগুলো সমান সবুজ থাকে, কোনো দাগ, লাইন, রিং বা গুঁড়ো আস্তরণ থাকে না।",
     "পাতার ধার ও ডগা মোচড়ায় না, হলুদ হয় না, শুকায় না বা পুড়ে যায় না।",
@@ -333,7 +333,7 @@
    "etl": ""
   },
   "cotton_bacterial_blight": {
-   "name": "Bacterial blight (black arm)",
+   "name": "ব্যাকটেরিয়াজনিত ঝলসানো রোগ (ব্ল্যাক আর্ম)",
    "symptoms": [
     "পাতার উপর ছোট, জলসাট বা ভেজা ছোট কালো দাগ দেখা যায়।",
     "এই দাগগুলো বড় হয়ে পাতার শিরার মাঝে কোণাকোণি আকার নেয়।",
@@ -358,7 +358,7 @@
    "etl": ""
   },
   "cotton_alternaria_leaf_spot": {
-   "name": "Alternaria leaf spot",
+   "name": "অল্টারনেরিয়া পাতার দাগ",
    "symptoms": [
     "আপনি পাতায় ছোট গোল বা ছড়ানো দাগ দেখতে পাবেন।",
     "প্রতিটি দাগের মাঝে গোল বলয়ের মতো রিং থাকে।",
@@ -383,7 +383,7 @@
    "etl": ""
   },
   "cotton_grey_mildew": {
-   "name": "Grey mildew",
+   "name": "গ্রে মিলডিউ",
    "symptoms": [
     "পুরোনো পাতার নিচের দিকে হালকা রঙের, স্বচ্ছ দাগ দেখতে পাবেন।",
     "দাগগুলো চৌকো বা কোণাকোণি আকারের হয় এবং পাতার শিরা দ্বারা সীমাবদ্ধ থাকে।",
@@ -411,7 +411,7 @@
    "etl": ""
   },
   "cotton_pink_bollworm": {
-   "name": "Pink bollworm",
+   "name": "গোলাপি বলওয়ার্ম",
    "symptoms": [
     "গাছ থেকে ফুলের কুঁড়ি ঝরে পড়তে পারে।",
     "ফুলগুলো ঠিকমতো খোলে না এবং দেখতে গোলাপ ফুলের মতো (rosette) দেখায়।",
@@ -447,7 +447,7 @@
    "etl": "১০% ক্ষতিগ্রস্ত (গোলাপ ফুলের মতো) ফুল, অথবা ১০% ক্ষতিগ্রস্ত সবুজ বল (২০টির মধ্যে ২টি বলে সাদা বা গোলাপি লার্ভা বা বের হওয়ার ছিদ্র থাকে), অথবা পরপর ৩ রাত ধরে প্রতি ফেরোমন ট্র্যাপে প্রতি রাতে ৮টি মথ।"
   },
   "cotton_whitefly": {
-   "name": "Whitefly",
+   "name": "সাদা মাছি",
    "symptoms": [
     "পাতার ওপর হলুদ দাগ দেখতে পাবেন যা পরে বড় হয়।",
     "পাতার শিরা থেকে শুরু করে চারপাশ পর্যন্ত হলুদ হয়ে যায়।",
@@ -488,7 +488,7 @@
    "etl": "সকাল ১০টার আগে গাছের ওপরের পাতার প্রতিটিতে ৬টি পূর্ণবয়স্ক সাদা মাছি, অথবা অর্ধেকের বেশি গাছের মাঝের অংশে ১০টির বেশি সাদা মাছি। গাছ হালকা ঝাঁকালে যখন মাছির মেঘের মতো উড়ে যায়।"
   },
   "cotton_jassid": {
-   "name": "Leafhopper (jassid)",
+   "name": "জ্যাসিড পোকা",
    "symptoms": [
     "কচি পাতা হলুদ হয়ে যায়।",
     "পাতার কিনারা নিচের দিকে কুঁকড়াতে শুরু করে এবং লাল হয়ে যায়।",
@@ -518,7 +518,7 @@
    "etl": "প্রতি পাতায় ২টির বেশি লিফহপার (jassid), সঙ্গে কিছু নিচের পাতা কুঁকড়ানো এবং কিনারা হলুদ হয়ে যাওয়া।"
   },
   "cotton_healthy": {
-   "name": "Healthy",
+   "name": "সুস্থ গাছ",
    "symptoms": [
     "জাত অনুযায়ী পাতাগুলো সমানভাবে সবুজ থাকে, কোনো দাগ, লম্বা রেখা, বলয় বা পাউডারের মতো আস্তরণ থাকে না।",
     "পাতার কিনারা ও ডগা কুঁকড়ে যায় না, হলুদ হয় না, শুকায় না বা পোড়ে না।",
@@ -776,7 +776,7 @@
    "etl": ""
   },
   "groundnut_early_leaf_spot": {
-   "name": "Early leaf spot (tikka)",
+   "name": "প্রাথমিক পাতার দাগ (টিকা)",
    "symptoms": [
     "বীজ বোনার প্রায় এক মাস পর রোগ শুরু হয়।",
     "পাতায় ছোট ছোট দাগ দেখা যায়।",
@@ -801,7 +801,7 @@
    "etl": ""
   },
   "groundnut_late_leaf_spot": {
-   "name": "Late leaf spot (tikka)",
+   "name": "দেরিতে হওয়া পাতার দাগ (টিকা)",
    "symptoms": [
     "পাতার নিচের দিকে কালো দাগ দেখা যায়।",
     "দাগগুলো প্রায় গোল আকৃতির হয়।",
@@ -826,7 +826,7 @@
    "etl": ""
   },
   "groundnut_rust": {
-   "name": "Rust",
+   "name": "মরিচা রোগ",
    "symptoms": [
     "পাতার নিচের দিকে ছোট ফোস্কা বা পুশ্টিউল দেখা যায়।",
     "এই ফোস্কাগুলো পাতার ওপরের দিকেও হতে পারে।",
@@ -847,7 +847,7 @@
    "etl": ""
   },
   "groundnut_bud_necrosis": {
-   "name": "Bud necrosis virus",
+   "name": "বাড নেক্রোসিস ভাইরাস",
    "symptoms": [
     "কচি পাতায় হালকা রঙের দাগ দেখতে পাবেন।",
     "পাতায় গোল রিং ও মৃত রেখার মতো দাগ দেখা দেয়।",
@@ -871,10 +871,10 @@
    "favourable_conditions": "তাপমাত্রা কিছুটা বেশি থাকলে এই রোগ হওয়ার সম্ভাবনা বেশি থাকে।",
    "organic_bio": [],
    "avoid": [],
-   "etl": "For the thrips that spread this virus: 5 adult thrips per terminal bud."
+   "etl": "যে থ্রিপস পোকা এই ভাইরাস ছড়ায়: প্রতি ডগার কুঁড়িতে ৫টি পূর্ণবয়স্ক থ্রিপস থাকলে।"
   },
   "groundnut_leaf_miner": {
-   "name": "Leaf miner",
+   "name": "লিফ মাইনার",
    "symptoms": [
     "কচি শুঁয়োপোকা পাতার ভেতরে ঢুকে ভেতরের অংশ খায়।",
     "পাতায় ছোট বাদামী রঙের দাগ দেখা যায়।",
@@ -894,10 +894,10 @@
    "favourable_conditions": "",
    "organic_bio": [],
    "avoid": [],
-   "etl": "2 to 3 caterpillars per plant."
+   "etl": "প্রতি গাছে ২ থেকে ৩টি শুঁয়োপোকা থাকলে।"
   },
   "groundnut_healthy": {
-   "name": "Healthy",
+   "name": "সুস্থ গাছ",
    "symptoms": [
     "জাত অনুযায়ী পাতাগুলো সমানভাবে সবুজ থাকে, কোনো দাগ, রেখা, রিং বা গুঁড়ো আস্তরণ থাকে না।",
     "পাতার কিনারা ও ডগা কুঁকড়ে যায় না, হলুদ হয় না, শুকায় না বা পোড়ে না।",
@@ -1259,7 +1259,7 @@
     "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
    ],
    "avoid": [],
-   "etl": "10% fruit damage."
+   "etl": "১০% ফল নষ্ট হলে।"
   },
   "tomato_healthy": {
    "name": "সুস্থ গাছ",

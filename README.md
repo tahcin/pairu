@@ -1,6 +1,6 @@
 # Pairu (పైరు)
 
-Pairu helps a farmer photograph a sick leaf and hear, in their own language, what the disease is, how sure we are, and what to do about it, using only treatments that the Government of India has approved for that crop. *Pairu* is Telugu for a standing crop.
+Pairu helps a farmer photograph a sick leaf and hear, in their own language, what the disease is, how sure we are, and what to do about it, using only treatments that the Government of India has approved for that crop. Pairu is Telugu for a standing crop.
 
 **Live app:** https://pairu.pages.dev
 

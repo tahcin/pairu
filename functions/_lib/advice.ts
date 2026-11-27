@@ -1,7 +1,7 @@
 // Builds the advice card for one disease: KB text plus the CIB&RC registered uses for that crop
 // and target, with banned actives removed and WHO class Ia/Ib flagged.
 import type { Data } from "./data";
-import type { Disease, RegisteredUse } from "./types";
+import type { Banned, Disease, RegisteredUse } from "./types";
 
 const HA_PER_ACRE = 0.404686; // 1 acre = 0.404686 hectare
 
@@ -21,6 +21,7 @@ export interface Treatment {
   who_class: string | null;
   highly_hazardous: boolean;
   restricted: string | null;
+  note: string;
   source: RegisteredUse["source"];
 }
 
@@ -76,9 +77,45 @@ export function perAcre(raw: string): { value: string; unit: string | null } | n
   return { value: `${lv} ${lu} to ${hv}`, unit: hu };
 }
 
+// Crops whose produce is eaten as a fruit or vegetable (for the dimethoate rule).
+const FRUIT_VEG = new Set(["chilli", "tomato", "brinjal", "banana", "mango", "potato", "onion"]);
+// Restriction scopes that mean "not for field use on our crops" at all.
+const SCOPE_DROP = new Set(["agriculture", "all crops except wheat"]);
+
+// Applies banned.json at join time. Banned or withdrawn actives are dropped; restrictions drop the
+// row when they name this crop or rule out field use, and otherwise travel with it as a note.
+export function checkBan(
+  actives: string[],
+  u: RegisteredUse,
+  crop: string,
+  banned: Map<string, Banned>,
+): { drop: boolean; flag: string | null } {
+  let flag: string | null = null;
+  for (const a of actives) {
+    const b = banned.get(norm(a));
+    if (!b) continue;
+    if (b.status === "banned" || b.status === "withdrawn") return { drop: true, flag: null };
+    if (b.banned_on_crops?.includes(crop)) return { drop: true, flag: null };
+    const scope = b.restricted_scope || "";
+    if (SCOPE_DROP.has(scope)) return { drop: true, flag: null };
+    if (norm(b.active) === "carbofuran" && !/3\s*%\s*CG/i.test(u.product_label)) return { drop: true, flag: null };
+    if (scope === "vegetables" && FRUIT_VEG.has(crop)) return { drop: true, flag: null };
+    if (scope === "fruits and vegetables eaten raw") {
+      if (FRUIT_VEG.has(crop)) flag = b.note || scope;
+      continue;
+    }
+    if (scope) flag = b.note || scope;
+  }
+  return { drop: false, flag };
+}
+
 export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem: Treatment[]; bannedRemoved: number } {
   const targets = new Set((d.cibrc_targets || []).map((t) => t.toLowerCase().trim()));
-  const banned = new Map(data.banned.map((b) => [norm(b.active), b]));
+  const banned = new Map<string, Banned>();
+  for (const b of data.banned) {
+    banned.set(norm(b.active), b);
+    for (const a of b.aka || []) banned.set(norm(a), b);
+  }
   const hazard = new Map(Object.entries(data.hazard).map(([k, v]) => [norm(k), v.who_class]));
   const bio: Treatment[] = [];
   const chem: Treatment[] = [];
@@ -87,13 +124,13 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
   for (const u of data.uses) {
     if (u.crop_id !== d.crop || !targets.has((u.target_norm || "").toLowerCase().trim())) continue;
     const actives = u.active_ingredients || [];
-    const ban = actives.map((a) => banned.get(norm(a))).find((b) => b && b.status !== "restricted");
-    if (ban) {
+    const verdict = checkBan(actives, u, d.crop, banned);
+    if (verdict.drop) {
       bannedRemoved++;
       continue;
     }
-    const restricted = actives.map((a) => banned.get(norm(a))).find((b) => b && b.status === "restricted");
-    const key = `${norm(u.product_label)}|${u.dose_formulation_raw}`;
+    const restricted = verdict.flag;
+    const key = `${norm(u.product_label)}|${u.crop_id}|${u.dose_formulation_raw}`;
     if (seen.has(key)) continue;
     seen.add(key);
     const classes = actives.map((a) => hazard.get(norm(a))).filter(Boolean) as string[];
@@ -111,12 +148,13 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
       dose_per_acre: perAcre(u.dose_formulation_raw),
       water_per_ha: waterOk ? u.water_l_ha : "",
       water_per_acre: water ? `${water.value} ${water.unit}` : null,
-      water_note: waterOk ? "" : (u.water_l_ha || "").slice(0, 300),
+      water_note: waterOk ? "" : u.water_l_ha || "",
       waiting_days: u.waiting_period_days,
       waiting_raw: u.waiting_period_raw || "",
       who_class: worst,
       highly_hazardous: worst === "Ia" || worst === "Ib",
-      restricted: restricted ? restricted.note || "restricted" : null,
+      restricted,
+      note: u.note_raw || "",
       source: u.source,
     };
     (t.bio ? bio : chem).push(t);

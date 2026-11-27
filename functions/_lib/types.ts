@@ -65,6 +65,7 @@ export interface RegisteredUse {
   water_l_ha: string;
   waiting_period_days: number | null;
   waiting_period_raw: string;
+  note_raw?: string;
   source: { file?: string; page?: number; url?: string };
 }
 
@@ -72,6 +73,10 @@ export interface Banned {
   active: string;
   status: string;
   note?: string;
+  aka?: string[];
+  printed_name?: string;
+  banned_on_crops?: string[];
+  restricted_scope?: string;
 }
 
 export type Hazard = Record<string, { who_class: string }>;

@@ -88,7 +88,7 @@ def main():
             else:
                 t = open(os.path.join(TEXT, f)).read()
                 t = re.sub(r"Content Validator.*", "", t, flags=re.S)
-            pages += f"\n=== PAGE {i} ===\n{t[:9000]}\n"
+            pages += f"\n=== PAGE {i} ===\n{t[:18000 if f.startswith('extra:') else 9000]}\n"
         prompt = PROMPT.format(crop=d["crop"], name=d["name_en"], pages=pages)
         res, used = None, None
         for attempt in range(int(os.environ.get('GEMMA_TRIES', '2'))):

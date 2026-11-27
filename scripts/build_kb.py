@@ -7,7 +7,7 @@ import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, NAMES  # noqa: E402
+from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES  # noqa: E402
 
 APP = os.path.dirname(HERE)
 REV = os.path.join(HERE, "kb_reviewed")
@@ -33,10 +33,16 @@ EXTRA = {
  "ppqs_faw": ("DPPQS (Ministry of Agriculture): Advisory on fall armyworm on maize, July 2022", "https://ppqs.gov.in/sites/default/files/faw_advisory0001.pdf"),
  "vikaspedia_faw": ("Vikaspedia: Identification and management of fall armyworm", "https://en.vikaspedia.in/viewcontent/agriculture/crop-production/integrated-pest-managment/ipm-for-cerels/identification-and-management-of-fall-armyworm?lgn=en"),
  "iihr_tomato_lb": ("ICAR-IIHR, Indian Horticulture: Late blight disease of tomato, a serious problem for Indian tomato farmers", "https://epubs.icar.org.in/index.php/IndHort/article/view/164935"),
+ "ppqs_paddy_gall_midge": ("DPPQS (Ministry of Agriculture): IPM package of practices for management of paddy gall midge", "https://ppqs.gov.in/sites/default/files/ipm_pop_for_manganement_of_paddy_gall_midge._doc.pdf"),
+ "ppqs_paddy_false_smut": ("DPPQS (Ministry of Agriculture): Package of practices for management of false smut of paddy", "https://ppqs.gov.in/sites/default/files/pop_for_management_of_false_smut_of_paddy.pdf"),
+ "ppqs_thrips_parvispinus_core": ("DPPQS with ICAR and SAUs: Monitoring, diagnosis and management of South East Asian thrips, Thrips parvispinus, in chilli (June 2022)", "https://ppqs.gov.in/sites/default/files/south_east_asian_thrips_thrips_parvispinus-monitoring_and_management.pdf"),
+ "ppqs_thrips_parvispinus_adhoc": ("DPPQS: Ad hoc management strategies on Thrips parvispinus", "https://ppqs.gov.in/sites/default/files/adhoc_management_strategies_on_thrips_parvispinus.pdf"),
  "cpn_gls": ("Crop Protection Network (US land-grant universities): Gray leaf spot of corn", "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"),
 }
 
 PRINCIPLES = {"banana", "blackgram_greengram", "chillies_capsicum", "brinjal", "maize", "potato", "mango", "onion", "tomato"}
+
+TITLE_OVERRIDE = {"crop_prot_crop_insectpest_20_cereals_paddy.txt": "Pests of paddy (main page)"}
 
 def source_for(f, crop_name):
     if f.startswith("aesa:"):
@@ -47,7 +53,7 @@ def source_for(f, crop_name):
         return {"title": t, "url": u}
     html = f[:-4] + ".html"
     m = TN[html]
-    first = open(os.path.join(HERE, "raw", "kb", "text", f)).read().split("\n")[2].strip(" :")
+    first = TITLE_OVERRIDE.get(f) or open(os.path.join(HERE, "raw", "kb", "text", f)).read().split("\n")[2].strip(" :")
     return {"title": f"TNAU Agritech Portal: {crop_name}, {first}", "url": m["archive"], "original": m["original"]}
 
 from kb_authored import TE_URLS as TE  # noqa: E402
@@ -58,7 +64,10 @@ def te_source(key):
     title = unquote(u.split("/")[-1].split("?")[0]).replace("-", " ")
     return {"title": f"Vikaspedia Telugu: {title}", "url": u}
 
+REC = json.load(open(os.path.join(HERE, "kb_recommended.json"))) if os.path.exists(os.path.join(HERE, "kb_recommended.json")) else {}
+
 def clean(s):
+    s = REWRITE.get(s.strip(), s)
     s = re.sub(r"(\d) ?x ?108\b", r"\1 x 10^8", s)
     s = re.sub(r"@ ?108 cfu", "@ 10^8 cfu", s)
     s = s.replace("—", ", ").replace("–", "-").replace(" ,", ",").strip()
@@ -91,8 +100,8 @@ def main():
                 r[k] = r[k] + v
             if fx.get("set", {}).get("_used_pages") is not None:
                 r["_used_pages"] = fx["set"]["_used_pages"]
-            nm = NAMES.get(i)
-            r["names"] = nm[0] if nm else {}
+            nm = TE_NAMES.get(i)
+            r["names"] = {"te": nm[0]} if nm else {}
             srcs = [source_for(f, cname) for f in d["text_files"]]
             used = sorted({o["page"] for o in r.get("organic_bio", [])} | set(r.get("_used_pages", range(len(srcs)))))
             # keep only sources the entry actually draws on, and renumber organic_bio refs
@@ -114,14 +123,38 @@ def main():
                 "practices": [clean(x) for x in r["practices"]],
                 "organic_bio": [{"text": clean(o["text"]), "source": remap[o["page"]]} for o in r.get("organic_bio", [])],
                 "cibrc_targets": d["cibrc_targets"],
-                "sources": [srcs[k] for k in used] + ([te_source(nm[1])] if nm else []),
+                "sources": [srcs[k] for k in used],
             })
+            e = diseases[-1]
+            keys = [d["text_files"][k] for k in used]
+
+            def sidx(f):
+                if f not in keys:
+                    keys.append(f)
+                    e["sources"].append(source_for(f, cname))
+                return keys.index(f)
+            if nm:
+                e["names_source"] = {"te": "descriptive" if nm[1] == "descriptive" else "vikaspedia"}
+                if nm[1] != "descriptive":
+                    e["sources"].append(te_source(nm[1])); keys.append("te:" + nm[1])
+            e["avoid"] = [{"text": clean(a["text"]), "actives": list(dict.fromkeys(a["actives"])), "source": sidx(a["file"])} for a in AVOID.get(i, [])]
+            recs = REC.get(i, [])
+            if i in REC_SET:
+                recs = [{"active": x, "page": next((rr["page"] for rr in recs if rr["active"] == x), None)} for x in REC_SET[i]]
+            ra = []
+            for rr in recs:
+                if rr["active"] in REC_DROP.get(i, []) or rr["active"] in BIO_ACTIVES:
+                    continue
+                pg = rr["page"]
+                f = d["text_files"][pg] if pg is not None else next(x for x in d["text_files"] if x.startswith("extra:ppqs_"))
+                ra.append({"active": rr["active"], "source": sidx(f)})
+            e["recommended_actives"] = ra
         h = HEALTHY[cid]
         hid = f"{cid}_healthy"
-        diseases.append({"id": hid, "crop": cid, "name_en": "Healthy", "names": {}, "kind": "abiotic", "pathogen": "",
+        diseases.append({"id": hid, "crop": cid, "name_en": "Healthy", "names": {"te": "ఆరోగ్యంగా ఉంది"}, "names_source": {"te": "descriptive"}, "kind": "abiotic", "pathogen": "",
             "symptoms": h["symptoms"], "photo_cues": h["photo_cues"], "look_alikes": [], "discriminators": [],
             "favourable_conditions": "", "prevention": h["prevention"], "practices": h["practices"], "organic_bio": [],
-            "cibrc_targets": [], "sources": [source_for(f"aesa:{h['aesa']}", cname)] + ([] if h["aesa"] in PRINCIPLES else [source_for("aesa:tomato", cname)])})
+            "cibrc_targets": [], "avoid": [], "recommended_actives": [], "sources": [source_for(f"aesa:{h['aesa']}", cname)] + ([] if h["aesa"] in PRINCIPLES else [source_for("aesa:tomato", cname)])})
         crops.append({"id": cid, "name_en": cname, "names": cnames, "diseases": ids + [hid]})
     out = {"version": 1, "crops": crops, "diseases": diseases}
     json.dump(out, open(os.path.join(APP, "data", "kb.json"), "w"), indent=1, ensure_ascii=False)

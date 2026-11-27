@@ -1,0 +1,61 @@
+{
+ "pathogen": "Polyphagotarsonemus latus",
+ "symptoms": [
+  "The leaves curl downwards and look crinkled.",
+  "The leaf edges roll down and the leaf stalks become long.",
+  "Affected leaves may turn dark green.",
+  "Young leaves at the branch tips grow in tight clusters.",
+  "The plant growth becomes stunted."
+ ],
+ "photo_cues": [
+  "downward curling leaves",
+  "inverted boat shaped leaves",
+  "elongated leaf stalks",
+  "clustered young leaves",
+  "white oval eggs"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Plant two rows of maize around the chilli crop as a barrier.",
+  "Encourage the activity of predatory mites."
+ ],
+ "practices": [
+  "Monitor the field regularly for signs of mites.",
+  "If the infestation is low, use neem seed powder extract."
+ ],
+ "organic_bio": [
+  {
+   "text": "neem seed powder extract 4%",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "phorate",
+  "buprofezin",
+  "chlorfenapyr",
+  "diafenthiuron",
+  "dimethoate",
+  "ethion",
+  "fenazaquin",
+  "fenpyroximate",
+  "hexythiazox",
+  "milbemectin",
+  "oxydemeton-methyl",
+  "phosalone",
+  "propargite",
+  "quinalphos",
+  "spiromesifen",
+  "emamectin benzoate",
+  "fenpropathrin",
+  "lambda-cyhalothrin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_insect-veg_chillies_pest_disease.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

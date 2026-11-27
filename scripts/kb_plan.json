@@ -98,6 +98,63 @@
    ]
   },
   {
+   "id": "paddy_leaf_folder",
+   "crop": "paddy",
+   "name_en": "Leaf folder",
+   "kind": "pest",
+   "tnau_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_m5.txt"
+   ],
+   "text_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_m5.txt",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "leaf ?folder|Cnaphalocrocis",
+   "cibrc_targets": [
+    "leaf folder",
+    "leaf roller"
+   ]
+  },
+  {
+   "id": "paddy_gall_midge",
+   "crop": "paddy",
+   "name_en": "Gall midge",
+   "kind": "pest",
+   "tnau_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_m2.txt"
+   ],
+   "text_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_m2.txt",
+    "extra:ppqs_paddy_gall_midge",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "gall midge|Orseolia|silver shoot",
+   "cibrc_targets": [
+    "gall midge"
+   ]
+  },
+  {
+   "id": "paddy_false_smut",
+   "crop": "paddy",
+   "name_en": "False smut",
+   "kind": "fungal",
+   "tnau_files": [
+    "rice_diseases_rice_7.txt"
+   ],
+   "text_files": [
+    "rice_diseases_rice_7.txt",
+    "extra:ppqs_paddy_false_smut",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "false smut|Ustilaginoidea",
+   "cibrc_targets": [
+    "false smut"
+   ]
+  },
+  {
    "id": "paddy_stem_borer",
    "crop": "paddy",
    "name_en": "Yellow stem borer",
@@ -330,6 +387,44 @@
    ]
   },
   {
+   "id": "chilli_black_thrips",
+   "crop": "chilli",
+   "name_en": "Black thrips (Thrips parvispinus)",
+   "kind": "pest",
+   "tnau_files": [],
+   "text_files": [
+    "extra:ppqs_thrips_parvispinus_core",
+    "extra:ppqs_thrips_parvispinus_adhoc",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "parvispinus",
+   "cibrc_targets": [
+    "thrips",
+    "black thrips"
+   ]
+  },
+  {
+   "id": "chilli_yellow_mite",
+   "crop": "chilli",
+   "name_en": "Yellow mite (broad mite)",
+   "kind": "pest",
+   "tnau_files": [
+    "crop_prot_crop_insect-veg_chillies_pest_disease.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_insect-veg_chillies_pest_disease.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "yellow ?mite|broad ?mite|chilli mite|Polyphagotarsonemus",
+   "cibrc_targets": [
+    "yellow mites",
+    "mites",
+    "white mites"
+   ]
+  },
+  {
    "id": "chilli_thrips",
    "crop": "chilli",
    "name_en": "Thrips",
@@ -344,8 +439,7 @@
    "aesa": "chillies_capsicum",
    "aesa_kw": "thrips|Scirtothrips",
    "cibrc_targets": [
-    "thrips",
-    "black thrips"
+    "thrips"
    ]
   },
   {
@@ -750,8 +844,7 @@
    "aesa": "brinjal",
    "aesa_kw": "bacterial wilt|Ralstonia|solanacearum",
    "cibrc_targets": [
-    "bacterial wilt",
-    "wilt"
+    "bacterial wilt"
    ]
   },
   {

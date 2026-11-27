@@ -1,0 +1,67 @@
+{
+ "pathogen": "Cnaphalocrocis medinalis / Marasmia patnalis",
+ "symptoms": [
+  "The leaves fold lengthwise and the larvae stay inside.",
+  "The larvae scrape the green parts of the leaves.",
+  "Damaged leaves turn white and dry out.",
+  "In bad cases the whole field looks scorched."
+ ],
+ "photo_cues": [
+  "longitudinally folded leaves",
+  "white and dried leaves",
+  "greenish translucent larva",
+  "brownish moth with wavy lines"
+ ],
+ "favourable_conditions": "Higher damage happens in shaded areas and in plots with too much nitrogen fertilizer.",
+ "prevention": [
+  "Plant your crop early to avoid heavy damage.",
+  "Use wider spacing between plants.",
+  "Avoid using too much nitrogen fertilizer.",
+  "Keep the field bunds clean.",
+  "Remove things that cause shade in the field."
+ ],
+ "practices": [
+  "Check the field for damage regularly.",
+  "Set up light traps to catch the moths.",
+  "Conserve natural enemies like spiders and dragonflies in the field.",
+  "Keep field bunds clean to remove hiding spots for pests."
+ ],
+ "organic_bio": [
+  {
+   "text": "Trichogramma chilonis @ 5 cc (1,00,000/ha) thrice at 37, 44 and 51 days",
+   "page": 0
+  },
+  {
+   "text": "NSKE 5 %",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "carbaryl",
+  "chlorpyriphos",
+  "Phosalone",
+  "Acephate",
+  "Azadirachtin",
+  "Carbosulfan",
+  "CartapHydrochloride",
+  "Chlorantraniliprole",
+  "Dichlorvos",
+  "Fipronil",
+  "Flubendiamide",
+  "Triazophos",
+  "Phosphamidon",
+  "Thiamethoxam",
+  "monocrotophos",
+  "carbofuran",
+  "quinalphos"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_crop_prot_crop_insectpest_20_cereals_paddy_m5.txt",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -20,6 +20,9 @@ D = [
  ("paddy_blb", "paddy", "Bacterial leaf blight", "bacterial", r"rice_diseases", r"^Bacterial leaf blight", "rice", r"bacterial (leaf )?blight|\bBLB\b", ["bacterial leaf blight"]),
  ("paddy_sheath_blight", "paddy", "Sheath blight", "fungal", r"rice_diseases", r"^Sheath Blight", "rice", r"sheath blight", ["sheath blight"]),
  ("paddy_bph", "paddy", "Brown plant hopper", "pest", r"rice_crop", r"(?i)brown plant ?(leaf)?hopper", "rice", r"brown plant ?hopper|\bBPH\b|hopper ?burn", ["brown plant hopper", "plant hopper"]),
+ ("paddy_leaf_folder", "paddy", "Leaf folder", "pest", r"rice_crop", r"(?i)^leaf folder", "rice", r"leaf ?folder|Cnaphalocrocis", ["leaf folder", "leaf roller"]),
+ ("paddy_gall_midge", "paddy", "Gall midge", "pest", r"rice_crop", r"(?i)^gall midge", "rice", r"gall midge|Orseolia|silver shoot", ["gall midge"]),
+ ("paddy_false_smut", "paddy", "False smut", "fungal", r"rice_diseases", r"(?i)^fl?a?se smut", "rice", r"false smut|Ustilaginoidea", ["false smut"]),
  ("paddy_stem_borer", "paddy", "Yellow stem borer", "pest", r"rice_crop", r"stem ?borer", "rice", r"stem borer|dead ?heart|white ?ear", ["stem borer", "yellow stem borer"]),
  # cotton
  ("cotton_bacterial_blight", "cotton", "Bacterial blight (black arm)", "bacterial", r"cotton_diseases", r"^Bacterial blight", "cotton", r"bacterial blight|black ?arm|angular leaf spot", ["bacterial blight", "bacterial leaf blight", "angular leaf spot", "angular leaf spot or black arm"]),
@@ -34,7 +37,9 @@ D = [
  ("chilli_leaf_curl", "chilli", "Leaf curl virus", "viral", r"chilli_diseases", r"^Viral diseases", "chillies_capsicum", r"leaf curl|mosaic complex", ["whitefly"]),
  ("chilli_cercospora_leaf_spot", "chilli", "Cercospora leaf spot", "fungal", r"chilli_diseases", r"^Cercospora", "chillies_capsicum", r"cercospora", ["cercospora leaf spot", "leaf spot"]),
  ("chilli_bacterial_leaf_spot", "chilli", "Bacterial leaf spot", "bacterial", r"chilli_diseases", r"^Bacterial leaf spot", "chillies_capsicum", r"bacterial leaf spot", ["bacterial leaf spot"]),
- ("chilli_thrips", "chilli", "Thrips", "pest", r"crop_prot_crop_insect-veg_chillies_pest|chilli_chilli", r"thrips", "chillies_capsicum", r"thrips|Scirtothrips", ["thrips", "black thrips"]),
+ ("chilli_black_thrips", "chilli", "Black thrips (Thrips parvispinus)", "pest", r"^$", r"^$", "chillies_capsicum", r"parvispinus", ["thrips", "black thrips"]),
+ ("chilli_yellow_mite", "chilli", "Yellow mite (broad mite)", "pest", r"crop_prot_crop_insect-veg_chillies_pest", r"(?i)thrips", "chillies_capsicum", r"yellow ?mite|broad ?mite|chilli mite|Polyphagotarsonemus", ["yellow mites", "mites", "white mites"]),
+ ("chilli_thrips", "chilli", "Thrips", "pest", r"crop_prot_crop_insect-veg_chillies_pest|chilli_chilli", r"thrips", "chillies_capsicum", r"thrips|Scirtothrips", ["thrips"]),
  # groundnut
  ("groundnut_early_leaf_spot", "groundnut", "Early leaf spot (tikka)", "fungal", r"groundnut_diseases", r"^Early leaf spot", "groundnut", r"early leaf spot|tikka|leaf spot", ["early leaf spot", "tikka leaf spot", "tikka", "leaf spot"]),
  ("groundnut_late_leaf_spot", "groundnut", "Late leaf spot (tikka)", "fungal", r"groundnut_diseases", r"^Late leaf spot", "groundnut", r"late leaf spot|tikka|leaf spot", ["late leaf spot", "lateleafspot", "tikka leaf spot", "tikka", "leaf spot"]),
@@ -59,7 +64,7 @@ D = [
  ("brinjal_shoot_fruit_borer", "brinjal", "Shoot and fruit borer", "pest", r"brinjal_brinjal", r"^Shoot and fruit borer", "brinjal", r"shoot and fruit borer|Leucinodes", ["shoot and fruit borer", "fruit borer", "shoot borer"]),
  ("brinjal_little_leaf", "brinjal", "Little leaf", "bacterial", r"brinjal_brinjal", r"(?i)^brown leaf hopper", "brinjal", r"little leaf|phytoplasma", ["jassids", "leafhopper"]),
  ("brinjal_phomopsis_blight", "brinjal", "Phomopsis blight and fruit rot", "fungal", r"brinjal_phdiseases", r"Phomopsis", "brinjal", r"phomopsis", ["fruit rot", "blight"]),
- ("brinjal_bacterial_wilt", "brinjal", "Bacterial wilt", "bacterial", r"brinjal_diseases", r"^Bacterial Wilt", "brinjal", r"bacterial wilt|Ralstonia|solanacearum", ["bacterial wilt", "wilt"]),
+ ("brinjal_bacterial_wilt", "brinjal", "Bacterial wilt", "bacterial", r"brinjal_diseases", r"^Bacterial Wilt", "brinjal", r"bacterial wilt|Ralstonia|solanacearum", ["bacterial wilt"]),
  ("brinjal_epilachna", "brinjal", "Epilachna beetle (hadda beetle)", "pest", r"brinjal_brinjal", r"^Hadda", "brinjal", r"epilachna|hadda|spotted beetle", ["epilachna grub", "beetles"]),
  # banana
  ("banana_panama_wilt", "banana", "Panama wilt (Fusarium wilt)", "fungal", r"banana_diseases", r"^Panama", "banana", r"panama|fusarium wilt", ["panama wilt"]),
@@ -103,6 +108,9 @@ EXTRA = {
  "maize_grey_leaf_spot": ["extra:cpn_gls"],
  "maize_fall_armyworm": ["extra:vikaspedia_faw", "extra:ppqs_faw"],
  "tomato_late_blight": ["extra:iihr_tomato_lb"],
+ "paddy_gall_midge": ["extra:ppqs_paddy_gall_midge"],
+ "paddy_false_smut": ["extra:ppqs_paddy_false_smut"],
+ "chilli_black_thrips": ["extra:ppqs_thrips_parvispinus_core", "extra:ppqs_thrips_parvispinus_adhoc"],
 }
 
 def heading(path):

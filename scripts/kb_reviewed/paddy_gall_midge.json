@@ -1,0 +1,80 @@
+{
+ "pathogen": "Orseolia oryzae",
+ "symptoms": [
+  "The plant grows a hollow tube that looks like an onion leaf.",
+  "You may see a silvery white tube called a silver shoot.",
+  "The infested tiller stops growing new leaves.",
+  "The plant fails to produce any grain heads.",
+  "Leaves may look deformed, wilted, or rolled."
+ ],
+ "photo_cues": [
+  "silvery white hollow tube",
+  "onion leaf shape",
+  "stunted plant growth",
+  "deformed rolled leaves",
+  "reddish tubular eggs"
+ ],
+ "favourable_conditions": "The pest population grows quickly during cloudy or rainy weather.",
+ "prevention": [
+  "Plant your crop early in the season.",
+  "Choose varieties that are resistant or tolerant to this pest.",
+  "Keep field bunds clean and free of weeds.",
+  "Avoid planting the whole area at different times.",
+  "Use potash fertilizer at the recommended rate."
+ ],
+ "practices": [
+  "Drain the water from your fields for 5 to 7 days.",
+  "Collect and destroy any plants that show signs of damage.",
+  "Set up light traps in the evening to catch adult flies.",
+  "Monitor the field for silver shoots and take action if 10 percent of tillers are affected."
+ ],
+ "organic_bio": [
+  {
+   "text": "Neem cake @ 100 kg during the time of last ploughing",
+   "page": 1
+  },
+  {
+   "text": "10% Neem leaf extract",
+   "page": 1
+  },
+  {
+   "text": "5% NSKE",
+   "page": 1
+  },
+  {
+   "text": "1% Neem oil",
+   "page": 1
+  },
+  {
+   "text": "3% Herbal plant extracts",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Phosalone",
+  "Carbosulfan",
+  "Chlorpyriphos",
+  "Fipronil",
+  "Thiamethoxam",
+  "Carbofuran",
+  "Cartap hydrochloride",
+  "Monocrotophos",
+  "Imidacloprid",
+  "Ethofenoprox",
+  "Acephate",
+  "Buprofezin",
+  "Quinalphos",
+  "Carbaryl"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_crop_prot_crop_insectpest_20_cereals_paddy_m2.txt",
+  "extra:ppqs_paddy_gall_midge",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

@@ -1,0 +1,1083 @@
+{
+ "paddy_blast": [
+  {
+   "active": "azoxystrobin",
+   "page": 1
+  },
+  {
+   "active": "carbendazim",
+   "page": 0
+  },
+  {
+   "active": "carpropamid",
+   "page": 1
+  },
+  {
+   "active": "difenoconazole",
+   "page": 1
+  },
+  {
+   "active": "ediphenphos",
+   "page": 1
+  },
+  {
+   "active": "hexaconazole",
+   "page": 1
+  },
+  {
+   "active": "iprodione",
+   "page": 1
+  },
+  {
+   "active": "kasugamycin",
+   "page": 1
+  },
+  {
+   "active": "kresoxim-methyl",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 1
+  },
+  {
+   "active": "propiconazole",
+   "page": 2
+  },
+  {
+   "active": "pseudomonas fluorescens",
+   "page": 0
+  },
+  {
+   "active": "pyraclostrobin",
+   "page": 1
+  },
+  {
+   "active": "tebuconazole",
+   "page": 1
+  },
+  {
+   "active": "tricyclazole",
+   "page": 0
+  },
+  {
+   "active": "trifloxystrobin",
+   "page": 1
+  },
+  {
+   "active": "validamycin",
+   "page": 1
+  },
+  {
+   "active": "zineb",
+   "page": 1
+  }
+ ],
+ "paddy_brown_spot": [
+  {
+   "active": "aureofungin",
+   "page": 0
+  },
+  {
+   "active": "carbendazim",
+   "page": 0
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "tricyclazole",
+   "page": 0
+  }
+ ],
+ "paddy_blb": [],
+ "paddy_sheath_blight": [
+  {
+   "active": "carbendazim",
+   "page": 0
+  },
+  {
+   "active": "hexaconazole",
+   "page": 1
+  },
+  {
+   "active": "iprodione",
+   "page": 0
+  },
+  {
+   "active": "propiconazole",
+   "page": 0
+  },
+  {
+   "active": "tricyclazole",
+   "page": 1
+  },
+  {
+   "active": "validamycin",
+   "page": 0
+  }
+ ],
+ "paddy_bph": [
+  {
+   "active": "acephate",
+   "page": 0
+  },
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "buprofezin",
+   "page": 0
+  },
+  {
+   "active": "carbosulfan",
+   "page": 0
+  },
+  {
+   "active": "chlorantraniliprole",
+   "page": 0
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 0
+  },
+  {
+   "active": "clothianidin",
+   "page": 1
+  },
+  {
+   "active": "dinotefuran",
+   "page": 1
+  },
+  {
+   "active": "ethiprole",
+   "page": 1
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "flonicamid",
+   "page": 1
+  },
+  {
+   "active": "imidacloprid",
+   "page": 0
+  },
+  {
+   "active": "metarhizium anisopliae",
+   "page": 1
+  },
+  {
+   "active": "pymetrozine",
+   "page": 1
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 1
+  },
+  {
+   "active": "triflumezopyrim",
+   "page": 1
+  }
+ ],
+ "paddy_leaf_folder": [
+  {
+   "active": "acephate",
+   "page": 0
+  },
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "buprofezin",
+   "page": 1
+  },
+  {
+   "active": "carbosulfan",
+   "page": 0
+  },
+  {
+   "active": "cartap hydrochloride",
+   "page": 1
+  },
+  {
+   "active": "chlorantraniliprole",
+   "page": 0
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 0
+  },
+  {
+   "active": "ethofenoprox",
+   "page": 1
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "flubendiamide",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 0
+  }
+ ],
+ "paddy_gall_midge": [
+  {
+   "active": "carbosulfan",
+   "page": 0
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 0
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "quinalphos",
+   "page": 2
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 0
+  }
+ ],
+ "paddy_false_smut": [
+  {
+   "active": "copper hydroxide",
+   "page": 1
+  },
+  {
+   "active": "fluopyram",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "picoxystrobin",
+   "page": 1
+  },
+  {
+   "active": "propiconazole",
+   "page": 0
+  },
+  {
+   "active": "tebuconazole",
+   "page": 1
+  }
+ ],
+ "paddy_stem_borer": [
+  {
+   "active": "carbofuran",
+   "page": 1
+  },
+  {
+   "active": "cartap hydrochloride",
+   "page": 1
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 1
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  }
+ ],
+ "cotton_bacterial_blight": [
+  {
+   "active": "carboxin",
+   "page": 0
+  },
+  {
+   "active": "thiram",
+   "page": 1
+  }
+ ],
+ "cotton_alternaria_leaf_spot": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "cotton_grey_mildew": [
+  {
+   "active": "carbendazim",
+   "page": 0
+  }
+ ],
+ "cotton_pink_bollworm": [
+  {
+   "active": "chlorpyrifos",
+   "page": 1
+  },
+  {
+   "active": "cypermethrin",
+   "page": 1
+  }
+ ],
+ "cotton_whitefly": [
+  {
+   "active": "acephate",
+   "page": 1
+  },
+  {
+   "active": "acetamiprid",
+   "page": 0
+  },
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "buprofezin",
+   "page": 0
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 0
+  },
+  {
+   "active": "clothianidin",
+   "page": 0
+  },
+  {
+   "active": "cypermethrin",
+   "page": 0
+  },
+  {
+   "active": "diafenthiuron",
+   "page": 0
+  },
+  {
+   "active": "dinotefuran",
+   "page": 1
+  },
+  {
+   "active": "ethion",
+   "page": 1
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "flonicamid",
+   "page": 1
+  },
+  {
+   "active": "imidacloprid",
+   "page": 0
+  },
+  {
+   "active": "profenofos",
+   "page": 0
+  },
+  {
+   "active": "pyriproxyfen",
+   "page": 1
+  },
+  {
+   "active": "spiromesifen",
+   "page": 1
+  },
+  {
+   "active": "thiacloprid",
+   "page": 0
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 0
+  },
+  {
+   "active": "verticillium lecanii",
+   "page": 1
+  }
+ ],
+ "cotton_jassid": [
+  {
+   "active": "acephate",
+   "page": 1
+  },
+  {
+   "active": "acetamiprid",
+   "page": 0
+  },
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "buprofezin",
+   "page": 0
+  },
+  {
+   "active": "clothianidin",
+   "page": 0
+  },
+  {
+   "active": "diafenthiuron",
+   "page": 0
+  },
+  {
+   "active": "dimethoate",
+   "page": 0
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 0
+  },
+  {
+   "active": "monocrotophos",
+   "page": 1
+  },
+  {
+   "active": "oxydemeton-methyl",
+   "page": 1
+  },
+  {
+   "active": "profenofos",
+   "page": 0
+  },
+  {
+   "active": "thiacloprid",
+   "page": 0
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 0
+  }
+ ],
+ "chilli_fruit_rot_dieback": [
+  {
+   "active": "captan",
+   "page": 0
+  },
+  {
+   "active": "copper oxychloride",
+   "page": 0
+  },
+  {
+   "active": "difenoconazole",
+   "page": 1
+  },
+  {
+   "active": "hexaconazole",
+   "page": 1
+  },
+  {
+   "active": "propineb",
+   "page": 1
+  },
+  {
+   "active": "tebuconazole",
+   "page": 1
+  },
+  {
+   "active": "zineb",
+   "page": 0
+  }
+ ],
+ "chilli_powdery_mildew": [
+  {
+   "active": "azoxystrobin",
+   "page": 1
+  },
+  {
+   "active": "flusilazole",
+   "page": 1
+  }
+ ],
+ "chilli_leaf_curl": [],
+ "chilli_cercospora_leaf_spot": [
+  {
+   "active": "chlorothalonil",
+   "page": 0
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "zineb",
+   "page": 1
+  }
+ ],
+ "chilli_bacterial_leaf_spot": [],
+ "chilli_black_thrips": [
+  {
+   "active": "acephate",
+   "page": 0
+  },
+  {
+   "active": "acetamiprid",
+   "page": 0
+  },
+  {
+   "active": "bifenthrin",
+   "page": 1
+  },
+  {
+   "active": "carbofuran",
+   "page": 0
+  },
+  {
+   "active": "cyantraniliprole",
+   "page": 0
+  },
+  {
+   "active": "diafenthiuron",
+   "page": 1
+  },
+  {
+   "active": "emamectin benzoate",
+   "page": 0
+  },
+  {
+   "active": "ethion",
+   "page": 0
+  },
+  {
+   "active": "fenpropathrin",
+   "page": 0
+  },
+  {
+   "active": "fenpyroximate",
+   "page": 1
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "flubendiamide",
+   "page": 1
+  },
+  {
+   "active": "hexythiazox",
+   "page": 1
+  },
+  {
+   "active": "imidacloprid",
+   "page": 0
+  },
+  {
+   "active": "indoxacarb",
+   "page": 1
+  },
+  {
+   "active": "lufenuron",
+   "page": 1
+  },
+  {
+   "active": "profenofos",
+   "page": 1
+  },
+  {
+   "active": "spinosad",
+   "page": 0
+  },
+  {
+   "active": "thiacloprid",
+   "page": 0
+  },
+  {
+   "active": "thiamethoxam",
+   "page": 1
+  },
+  {
+   "active": "tolfenpyrad",
+   "page": 1
+  }
+ ],
+ "chilli_yellow_mite": [
+  {
+   "active": "buprofezin",
+   "page": 0
+  },
+  {
+   "active": "chlorfenapyr",
+   "page": 0
+  },
+  {
+   "active": "diafenthiuron",
+   "page": 0
+  },
+  {
+   "active": "emamectin benzoate",
+   "page": 0
+  },
+  {
+   "active": "ethion",
+   "page": 0
+  },
+  {
+   "active": "fenazaquin",
+   "page": 0
+  },
+  {
+   "active": "fenpyroximate",
+   "page": 0
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "hexythiazox",
+   "page": 0
+  },
+  {
+   "active": "milbemectin",
+   "page": 0
+  },
+  {
+   "active": "oxydemeton-methyl",
+   "page": 0
+  },
+  {
+   "active": "propargite",
+   "page": 0
+  },
+  {
+   "active": "quinalphos",
+   "page": 0
+  },
+  {
+   "active": "spiromesifen",
+   "page": 0
+  }
+ ],
+ "chilli_thrips": [
+  {
+   "active": "buprofezin",
+   "page": 0
+  },
+  {
+   "active": "carbofuran",
+   "page": 0
+  },
+  {
+   "active": "chlorfenapyr",
+   "page": 0
+  },
+  {
+   "active": "diafenthiuron",
+   "page": 0
+  },
+  {
+   "active": "emamectin benzoate",
+   "page": 0
+  },
+  {
+   "active": "ethion",
+   "page": 0
+  },
+  {
+   "active": "fenpyroximate",
+   "page": 0
+  },
+  {
+   "active": "fipronil",
+   "page": 0
+  },
+  {
+   "active": "flubendiamide",
+   "page": 0
+  },
+  {
+   "active": "hexythiazox",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 0
+  },
+  {
+   "active": "indoxacarb",
+   "page": 0
+  },
+  {
+   "active": "oxydemeton-methyl",
+   "page": 0
+  },
+  {
+   "active": "propargite",
+   "page": 0
+  },
+  {
+   "active": "spinosad",
+   "page": 0
+  },
+  {
+   "active": "thiacloprid",
+   "page": 0
+  }
+ ],
+ "groundnut_early_leaf_spot": [
+  {
+   "active": "carbendazim",
+   "page": 0
+  },
+  {
+   "active": "chlorothalonil",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "groundnut_late_leaf_spot": [
+  {
+   "active": "carbendazim",
+   "page": 0
+  },
+  {
+   "active": "chlorothalonil",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "groundnut_rust": [
+  {
+   "active": "chlorothalonil",
+   "page": 0
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "groundnut_bud_necrosis": [],
+ "groundnut_leaf_miner": [],
+ "maize_common_rust": [],
+ "maize_turcicum_blight": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "zineb",
+   "page": 0
+  }
+ ],
+ "maize_maydis_blight": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "metalaxyl",
+   "page": 1
+  }
+ ],
+ "maize_grey_leaf_spot": [],
+ "maize_downy_mildew": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "metalaxyl",
+   "page": 0
+  }
+ ],
+ "maize_fall_armyworm": [],
+ "tomato_early_blight": [
+  {
+   "active": "azoxystrobin",
+   "page": 1
+  },
+  {
+   "active": "captan",
+   "page": 1
+  },
+  {
+   "active": "cymoxanil",
+   "page": 1
+  },
+  {
+   "active": "famoxadone",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "zineb",
+   "page": 1
+  }
+ ],
+ "tomato_late_blight": [
+  {
+   "active": "azoxystrobin",
+   "page": 1
+  },
+  {
+   "active": "cymoxanil",
+   "page": 1
+  },
+  {
+   "active": "famoxadone",
+   "page": 1
+  },
+  {
+   "active": "mancozeb",
+   "page": 1
+  },
+  {
+   "active": "zineb",
+   "page": 1
+  }
+ ],
+ "tomato_leaf_curl": [
+  {
+   "active": "azadirachtin",
+   "page": 1
+  },
+  {
+   "active": "imidacloprid",
+   "page": 1
+  }
+ ],
+ "tomato_septoria_leaf_spot": [],
+ "tomato_bacterial_spot": [],
+ "tomato_fruit_borer": [
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "flubendiamide",
+   "page": 0
+  },
+  {
+   "active": "indoxacarb",
+   "page": 0
+  },
+  {
+   "active": "novaluron",
+   "page": 0
+  },
+  {
+   "active": "phosalone",
+   "page": 0
+  },
+  {
+   "active": "quinalphos",
+   "page": 0
+  }
+ ],
+ "brinjal_shoot_fruit_borer": [
+  {
+   "active": "azadirachtin",
+   "page": 0
+  },
+  {
+   "active": "chlorpyrifos",
+   "page": 0
+  },
+  {
+   "active": "dimethoate",
+   "page": 0
+  },
+  {
+   "active": "emamectin benzoate",
+   "page": 0
+  },
+  {
+   "active": "flubendiamide",
+   "page": 0
+  },
+  {
+   "active": "phosalone",
+   "page": 0
+  },
+  {
+   "active": "quinalphos",
+   "page": 0
+  },
+  {
+   "active": "thiodicarb",
+   "page": 0
+  }
+ ],
+ "brinjal_little_leaf": [
+  {
+   "active": "dimethoate",
+   "page": 0
+  }
+ ],
+ "brinjal_phomopsis_blight": [
+  {
+   "active": "zineb",
+   "page": 0
+  }
+ ],
+ "brinjal_bacterial_wilt": [],
+ "brinjal_epilachna": [],
+ "banana_panama_wilt": [],
+ "banana_sigatoka": [
+  {
+   "active": "copper oxychloride",
+   "page": 0
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "banana_bunchy_top": [
+  {
+   "active": "carbofuran",
+   "page": 1
+  },
+  {
+   "active": "oxydemeton-methyl",
+   "page": 1
+  }
+ ],
+ "banana_anthracnose": [],
+ "banana_rhizome_weevil": [
+  {
+   "active": "carbofuran",
+   "page": 0
+  }
+ ],
+ "mango_powdery_mildew": [
+  {
+   "active": "carbendazim",
+   "page": 0
+  }
+ ],
+ "mango_anthracnose": [],
+ "mango_hopper": [],
+ "mango_fruit_fly": [],
+ "mango_sooty_mould": [],
+ "blackgram_yellow_mosaic": [],
+ "blackgram_powdery_mildew": [
+  {
+   "active": "penconazole",
+   "page": 1
+  },
+  {
+   "active": "propiconazole",
+   "page": 0
+  }
+ ],
+ "blackgram_cercospora_leaf_spot": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "blackgram_leaf_crinkle": [],
+ "blackgram_rust": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "blackgram_pod_borer": [],
+ "potato_early_blight": [
+  {
+   "active": "aureofungin",
+   "page": 1
+  },
+  {
+   "active": "captan",
+   "page": 0
+  },
+  {
+   "active": "chlorothalonil",
+   "page": 1
+  },
+  {
+   "active": "zineb",
+   "page": 0
+  }
+ ],
+ "potato_late_blight": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  },
+  {
+   "active": "zineb",
+   "page": 0
+  }
+ ],
+ "potato_black_scurf": [],
+ "potato_bacterial_wilt": [],
+ "potato_common_scab": [],
+ "onion_purple_blotch": [
+  {
+   "active": "chlorothalonil",
+   "page": 0
+  },
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "onion_stemphylium_blight": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "onion_downy_mildew": [
+  {
+   "active": "mancozeb",
+   "page": 0
+  }
+ ],
+ "onion_thrips": [
+  {
+   "active": "oxydemeton-methyl",
+   "page": 2
+  },
+  {
+   "active": "profenofos",
+   "page": 0
+  }
+ ],
+ "onion_basal_rot": []
+}

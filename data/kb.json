@@ -22,6 +22,9 @@
     "paddy_blb",
     "paddy_sheath_blight",
     "paddy_bph",
+    "paddy_leaf_folder",
+    "paddy_gall_midge",
+    "paddy_false_smut",
     "paddy_stem_borer",
     "paddy_healthy"
    ]
@@ -72,6 +75,8 @@
     "chilli_leaf_curl",
     "chilli_cercospora_leaf_spot",
     "chilli_bacterial_leaf_spot",
+    "chilli_black_thrips",
+    "chilli_yellow_mite",
     "chilli_thrips",
     "chilli_healthy"
    ]
@@ -352,7 +357,7 @@
     "Avoid planting too late and do not use dry nurseries.",
     "Apply nitrogen fertilizer in three split doses instead of all at once.",
     "Keep field bunds clean by removing weeds and grasses.",
-    "Burn straw and stubble after harvest to remove the pathogen."
+    "After harvest, remove the straw and stubble from the field or plough them into the soil, instead of burning them."
    ],
    "practices": [
     "Check your fields regularly for signs of the disease.",
@@ -418,6 +423,80 @@
      "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "azoxystrobin",
+     "source": 1
+    },
+    {
+     "active": "carbendazim",
+     "source": 0
+    },
+    {
+     "active": "carpropamid",
+     "source": 1
+    },
+    {
+     "active": "difenoconazole",
+     "source": 1
+    },
+    {
+     "active": "ediphenphos",
+     "source": 1
+    },
+    {
+     "active": "hexaconazole",
+     "source": 1
+    },
+    {
+     "active": "iprodione",
+     "source": 1
+    },
+    {
+     "active": "kasugamycin",
+     "source": 1
+    },
+    {
+     "active": "kresoxim-methyl",
+     "source": 1
+    },
+    {
+     "active": "mancozeb",
+     "source": 1
+    },
+    {
+     "active": "propiconazole",
+     "source": 2
+    },
+    {
+     "active": "pyraclostrobin",
+     "source": 1
+    },
+    {
+     "active": "tebuconazole",
+     "source": 1
+    },
+    {
+     "active": "tricyclazole",
+     "source": 0
+    },
+    {
+     "active": "trifloxystrobin",
+     "source": 1
+    },
+    {
+     "active": "validamycin",
+     "source": 1
+    },
+    {
+     "active": "zineb",
+     "source": 1
+    }
    ]
   },
   {
@@ -425,10 +504,10 @@
    "crop": "paddy",
    "name_en": "Brown spot",
    "names": {
-    "te": "గోధుమ మచ్చ తెగులు"
+    "te": "గోధుమ రంగు ఆకుమచ్చ తెగులు"
    },
    "kind": "fungal",
-   "pathogen": "Helminthosporium oryzae",
+   "pathogen": "Bipolaris oryzae (Cochliobolus miyabeanus); older name Helminthosporium oryzae",
    "symptoms": [
     "The disease starts as tiny brown dots on the leaves.",
     "These spots grow into oval or round shapes that look like sesame seeds.",
@@ -499,10 +578,28 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "aureofungin",
+     "source": 0
     },
     {
-     "title": "Vikaspedia Telugu: ఎల్ నినో ప్రభావం వరి పంటలో పురుగులు తెగుళ్ల సమగ్ర యాజమాన్యం",
-     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c2ac2ac4dc2ac41-c27c3ec28c4dc2fc3ec32c41/ఎల్-నినో-ప్రభావం-వరి-పంటలో-పురుగులు-తెగుళ్ల-సమగ్ర-యాజమాన్యం?lgn=te"
+     "active": "carbendazim",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "tricyclazole",
+     "source": 0
     }
    ]
   },
@@ -586,7 +683,12 @@
      "title": "Vikaspedia Telugu: వానాకాలం వరిలో తొలిదశ చీడపీడలు యాజమాన్య చర్యలు",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "paddy_sheath_blight",
@@ -628,7 +730,7 @@
     "Use the right amount of fertilizer and avoid too much nitrogen.",
     "Keep the correct spacing between plants.",
     "Remove weeds from the field.",
-    "Deep plough the field in summer and burn the stubble.",
+    "Plough deep in summer and remove the stubble or plough it in.",
     "Do not let water flow from an infected field into a healthy one."
    ],
    "practices": [
@@ -659,6 +761,36 @@
     {
      "title": "Vikaspedia Telugu: వానాకాలం వరిలో తొలిదశ చీడపీడలు యాజమాన్య చర్యలు",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbendazim",
+     "source": 0
+    },
+    {
+     "active": "hexaconazole",
+     "source": 1
+    },
+    {
+     "active": "iprodione",
+     "source": 0
+    },
+    {
+     "active": "propiconazole",
+     "source": 0
+    },
+    {
+     "active": "tricyclazole",
+     "source": 1
+    },
+    {
+     "active": "validamycin",
+     "source": 0
     }
    ]
   },
@@ -764,6 +896,434 @@
     {
      "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
+    },
+    {
+     "title": "TNAU Agritech Portal: Paddy, Pests of paddy (main page)",
+     "url": "https://web.archive.org/web/20091204022208/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insectpest%20_cereals_paddy.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insectpest%20_cereals_paddy.html"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [
+    {
+     "text": "Do not spray synthetic pyrethroids, methyl parathion, fenthion or quinalphos for hoppers: they make the hoppers come back in bigger numbers.",
+     "actives": [
+      "cypermethrin",
+      "alpha-cypermethrin",
+      "beta-cypermethrin",
+      "zeta-cypermethrin",
+      "deltamethrin",
+      "fenvalerate",
+      "esfenvalerate",
+      "lambda-cyhalothrin",
+      "gamma-cyhalothrin",
+      "bifenthrin",
+      "fenpropathrin",
+      "permethrin",
+      "cyfluthrin",
+      "beta-cyfluthrin",
+      "fluvalinate",
+      "tau-fluvalinate",
+      "methyl parathion",
+      "fenthion",
+      "quinalphos"
+     ],
+     "source": 4
+    },
+    {
+     "text": "Do not mix two insecticides in one tank, and do not use the same insecticide again and again.",
+     "actives": [],
+     "source": 1
+    },
+    {
+     "text": "Do not burn an infested crop: it drives the hoppers into nearby fields.",
+     "actives": [],
+     "source": 1
+    }
+   ],
+   "recommended_actives": [
+    {
+     "active": "ethiprole",
+     "source": 1
+    },
+    {
+     "active": "imidacloprid",
+     "source": 0
+    },
+    {
+     "active": "clothianidin",
+     "source": 1
+    },
+    {
+     "active": "dinotefuran",
+     "source": 1
+    },
+    {
+     "active": "flonicamid",
+     "source": 1
+    },
+    {
+     "active": "pymetrozine",
+     "source": 1
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 1
+    },
+    {
+     "active": "triflumezopyrim",
+     "source": 1
+    },
+    {
+     "active": "buprofezin",
+     "source": 0
+    }
+   ]
+  },
+  {
+   "id": "paddy_leaf_folder",
+   "crop": "paddy",
+   "name_en": "Leaf folder",
+   "names": {
+    "te": "ఆకుముడత పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Cnaphalocrocis medinalis / Marasmia patnalis",
+   "symptoms": [
+    "The leaves fold lengthwise and the larvae stay inside.",
+    "The larvae scrape the green parts of the leaves.",
+    "Damaged leaves turn white and dry out.",
+    "In bad cases the whole field looks scorched."
+   ],
+   "photo_cues": [
+    "longitudinally folded leaves",
+    "white and dried leaves",
+    "greenish translucent larva",
+    "brownish moth with wavy lines"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Higher damage happens in shaded areas and in plots with too much nitrogen fertilizer.",
+   "prevention": [
+    "Plant your crop early to avoid heavy damage.",
+    "Use wider spacing between plants.",
+    "Avoid using too much nitrogen fertilizer.",
+    "Keep the field bunds clean.",
+    "Remove things that cause shade in the field."
+   ],
+   "practices": [
+    "Check the field for damage regularly.",
+    "Set up light traps to catch the moths.",
+    "Conserve natural enemies like spiders and dragonflies in the field.",
+    "Keep field bunds clean to remove hiding spots for pests."
+   ],
+   "organic_bio": [
+    {
+     "text": "Trichogramma chilonis @ 5 cc (1,00,000/ha) thrice at 37, 44 and 51 days",
+     "source": 0
+    },
+    {
+     "text": "NSKE 5 %",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "leaf folder",
+    "leaf roller"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Crop Protection :: Pest of paddy",
+     "url": "https://web.archive.org/web/20141210185247/http://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m5.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరి సాగులో చీడపీడల నివారణ మరియు యాజమాన్య పద్ధతులు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వరి-సాగులో-చీడపీడల-నివారణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "acephate",
+     "source": 0
+    },
+    {
+     "active": "buprofezin",
+     "source": 1
+    },
+    {
+     "active": "carbosulfan",
+     "source": 0
+    },
+    {
+     "active": "cartap hydrochloride",
+     "source": 1
+    },
+    {
+     "active": "chlorantraniliprole",
+     "source": 0
+    },
+    {
+     "active": "chlorpyrifos",
+     "source": 0
+    },
+    {
+     "active": "ethofenoprox",
+     "source": 1
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "flubendiamide",
+     "source": 0
+    },
+    {
+     "active": "imidacloprid",
+     "source": 1
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 0
+    }
+   ]
+  },
+  {
+   "id": "paddy_gall_midge",
+   "crop": "paddy",
+   "name_en": "Gall midge",
+   "names": {
+    "te": "ఉల్లికోడు"
+   },
+   "kind": "pest",
+   "pathogen": "Orseolia oryzae",
+   "symptoms": [
+    "The plant grows a hollow tube that looks like an onion leaf.",
+    "You may see a silvery white tube called a silver shoot.",
+    "The infested tiller stops growing new leaves.",
+    "The plant fails to produce any grain heads.",
+    "Leaves may look deformed, wilted, or rolled."
+   ],
+   "photo_cues": [
+    "silvery white hollow tube",
+    "onion leaf shape",
+    "stunted plant growth",
+    "deformed rolled leaves",
+    "reddish tubular eggs"
+   ],
+   "look_alikes": [
+    "paddy_stem_borer"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_gall_midge_paddy_stem_borer",
+     "question": "Is the central shoot turned into a hollow, silvery white tube like an onion leaf?",
+     "yes": "paddy_gall_midge",
+     "no": "paddy_stem_borer"
+    }
+   ],
+   "favourable_conditions": "The pest population grows quickly during cloudy or rainy weather.",
+   "prevention": [
+    "Plant your crop early in the season.",
+    "Choose varieties that are resistant or tolerant to this pest.",
+    "Keep field bunds clean and free of weeds.",
+    "Avoid planting the whole area at different times.",
+    "Use potash fertilizer at the recommended rate."
+   ],
+   "practices": [
+    "Drain the water from your fields for 5 to 7 days.",
+    "Collect and destroy any plants that show signs of damage.",
+    "Set up light traps in the evening to catch adult flies.",
+    "Monitor the field for silver shoots and take action if 10 percent of tillers are affected."
+   ],
+   "organic_bio": [
+    {
+     "text": "Neem cake @ 100 kg during the time of last ploughing",
+     "source": 1
+    },
+    {
+     "text": "10% Neem leaf extract",
+     "source": 1
+    },
+    {
+     "text": "5% NSKE",
+     "source": 1
+    },
+    {
+     "text": "1% Neem oil",
+     "source": 1
+    },
+    {
+     "text": "3% Herbal plant extracts",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "gall midge"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Crop Protection : Pest of paddy",
+     "url": "https://web.archive.org/web/20141210185232/http://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m2.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): IPM package of practices for management of paddy gall midge",
+     "url": "https://ppqs.gov.in/sites/default/files/ipm_pop_for_manganement_of_paddy_gall_midge._doc.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbosulfan",
+     "source": 0
+    },
+    {
+     "active": "chlorpyrifos",
+     "source": 0
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "quinalphos",
+     "source": 2
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 0
+    }
+   ]
+  },
+  {
+   "id": "paddy_false_smut",
+   "crop": "paddy",
+   "name_en": "False smut",
+   "names": {
+    "te": "కాటుక తెగులు"
+   },
+   "kind": "fungal",
+   "pathogen": "Ustilaginoidea virens",
+   "symptoms": [
+    "Individual rice grains turn into a mass of yellow fruiting bodies.",
+    "Velvety spore balls grow and cover the floral parts of the grain.",
+    "The spore balls start small and grow up to 1 cm in size.",
+    "Usually only a few grains in a panicle are infected while the rest stay healthy.",
+    "As the fungus grows, the balls burst and turn from orange to yellowish-green or greenish-black."
+   ],
+   "photo_cues": [
+    "Yellow velvety spore balls",
+    "Greenish black grain clusters",
+    "Orange coloured spore balls",
+    "Velvety texture on grains"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease spreads in areas with high humidity, temperatures between 25 and 35 degrees Celsius, and moderate rainfall during the flowering stage.",
+   "prevention": [
+    "Use high quality disease-free seeds.",
+    "Plant your crop early to reduce the number of smut balls.",
+    "Rotate your paddy with crops that do not host this fungus.",
+    "Keep field bunds and irrigation channels clean to remove weeds.",
+    "Avoid using too much nitrogen fertilizer and use split applications instead."
+   ],
+   "practices": [
+    "Regularly monitor your fields for signs of the disease.",
+    "Remove and destroy infected plants at harvest time so the fungus does not fall into the soil.",
+    "Avoid working in the field when the plants are wet.",
+    "Drain the field periodically to reduce humidity instead of keeping it flooded."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pseudomonas fluorescence 10g/lit of water for 30 minutes (seed treatment)",
+     "source": 1
+    },
+    {
+     "text": "Trichoderma viridae @5-10 g/kg of seeds",
+     "source": 1
+    },
+    {
+     "text": "Pseudomonas fluorescence 5g/lit of water for 20 minutes (seedling dip)",
+     "source": 1
+    },
+    {
+     "text": "Neem cake @150 kg/ha",
+     "source": 1
+    },
+    {
+     "text": "Pseudomonas fluorescence 5g/lit of water (foliar spray)",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "false smut"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Flase smut",
+     "url": "https://web.archive.org/web/20160131050528/http://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_7.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Package of practices for management of false smut of paddy",
+     "url": "https://ppqs.gov.in/sites/default/files/pop_for_management_of_false_smut_of_paddy.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "copper hydroxide",
+     "source": 1
+    },
+    {
+     "active": "fluopyram",
+     "source": 1
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "picoxystrobin",
+     "source": 1
+    },
+    {
+     "active": "propiconazole",
+     "source": 0
+    },
+    {
+     "active": "tebuconazole",
+     "source": 1
     }
    ]
   },
@@ -791,7 +1351,8 @@
     "dark brown head"
    ],
    "look_alikes": [
-    "paddy_bph"
+    "paddy_bph",
+    "paddy_gall_midge"
    ],
    "discriminators": [
     {
@@ -805,6 +1366,12 @@
      "question": "Does the dried central shoot or white empty earhead pull out easily when you tug it?",
      "yes": "paddy_stem_borer",
      "no": "paddy_bph"
+    },
+    {
+     "id": "q_paddy_gall_midge_paddy_stem_borer",
+     "question": "Is the central shoot turned into a hollow, silvery white tube like an onion leaf?",
+     "yes": "paddy_gall_midge",
+     "no": "paddy_stem_borer"
     }
    ],
    "favourable_conditions": "",
@@ -849,13 +1416,40 @@
      "title": "Vikaspedia Telugu: వరిలో చీడపీడల నివారణ",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbofuran",
+     "source": 1
+    },
+    {
+     "active": "cartap hydrochloride",
+     "source": 1
+    },
+    {
+     "active": "chlorpyrifos",
+     "source": 1
+    },
+    {
+     "active": "imidacloprid",
+     "source": 1
+    }
    ]
   },
   {
    "id": "paddy_healthy",
    "crop": "paddy",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -885,6 +1479,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
@@ -947,7 +1543,7 @@
    "prevention": [
     "Use acid-delinted seeds to stop the disease from starting.",
     "Avoid planting your cotton too close together.",
-    "Remove and burn all weeds and old plant parts from the field.",
+    "Remove all weeds and old plant parts from the field.",
     "Pull out any volunteer cotton plants that grow on their own."
    ],
    "practices": [
@@ -976,13 +1572,29 @@
      "title": "Vikaspedia Telugu: ప్రత్తి",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/ప్రత్తి?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carboxin",
+     "source": 0
+    },
+    {
+     "active": "thiram",
+     "source": 1
+    }
    ]
   },
   {
    "id": "cotton_alternaria_leaf_spot",
    "crop": "cotton",
    "name_en": "Alternaria leaf spot",
-   "names": {},
+   "names": {
+    "te": "ఆల్టర్నేరియా ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Alternaria macrospora, A. alternata",
    "symptoms": [
@@ -1045,6 +1657,16 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
@@ -1052,7 +1674,7 @@
    "crop": "cotton",
    "name_en": "Grey mildew",
    "names": {
-    "te": "బూజు తెగులు"
+    "te": "బూడిద రంగు బూజు తెగులు"
    },
    "kind": "fungal",
    "pathogen": "Ramularia areola, Mycosphaerella areola",
@@ -1088,7 +1710,7 @@
     "Rotate your cotton crops with cereal crops.",
     "Avoid using too much nitrogen fertilizer.",
     "Use the correct spacing between plants based on your soil type.",
-    "Remove and burn all leftover plant parts from the field after harvest."
+    "After harvest, remove all leftover plant parts from the field or plough them in deep."
    ],
    "practices": [
     "Check your fields regularly for signs of the disease.",
@@ -1109,10 +1731,16 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
-    },
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
     {
-     "title": "Vikaspedia Telugu: ప్రత్తి",
-     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
+     "active": "carbendazim",
+     "source": 0
     }
    ]
   },
@@ -1121,7 +1749,7 @@
    "crop": "cotton",
    "name_en": "Pink bollworm",
    "names": {
-    "te": "గులాబి రంగు పురుగు"
+    "te": "గులాబీ రంగు కాయతొలుచు పురుగు"
    },
    "kind": "pest",
    "pathogen": "Pectinophora gossypiella",
@@ -1188,10 +1816,16 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
-    },
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
     {
-     "title": "Vikaspedia Telugu: ప్రత్తి",
-     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
+     "active": "chlorpyrifos",
+     "source": 1
     }
    ]
   },
@@ -1310,6 +1944,93 @@
      "title": "Vikaspedia Telugu: ప్రత్తి",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [
+    {
+     "text": "Avoid synthetic pyrethroids such as cypermethrin, deltamethrin and fenvalerate, and also acephate and acetamiprid, because they make whitefly come back worse.",
+     "actives": [
+      "cypermethrin",
+      "alpha-cypermethrin",
+      "beta-cypermethrin",
+      "zeta-cypermethrin",
+      "deltamethrin",
+      "fenvalerate",
+      "esfenvalerate",
+      "lambda-cyhalothrin",
+      "gamma-cyhalothrin",
+      "bifenthrin",
+      "fenpropathrin",
+      "permethrin",
+      "cyfluthrin",
+      "beta-cyfluthrin",
+      "fluvalinate",
+      "tau-fluvalinate",
+      "acephate",
+      "acetamiprid"
+     ],
+     "source": 1
+    }
+   ],
+   "recommended_actives": [
+    {
+     "active": "buprofezin",
+     "source": 0
+    },
+    {
+     "active": "chlorpyrifos",
+     "source": 0
+    },
+    {
+     "active": "clothianidin",
+     "source": 0
+    },
+    {
+     "active": "diafenthiuron",
+     "source": 0
+    },
+    {
+     "active": "dinotefuran",
+     "source": 1
+    },
+    {
+     "active": "ethion",
+     "source": 1
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "flonicamid",
+     "source": 1
+    },
+    {
+     "active": "imidacloprid",
+     "source": 0
+    },
+    {
+     "active": "profenofos",
+     "source": 0
+    },
+    {
+     "active": "pyriproxyfen",
+     "source": 1
+    },
+    {
+     "active": "spiromesifen",
+     "source": 1
+    },
+    {
+     "active": "thiacloprid",
+     "source": 0
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 0
+    }
    ]
   },
   {
@@ -1395,13 +2116,99 @@
      "title": "Vikaspedia Telugu: ప్రత్తి",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/ప్రత్తి?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [
+    {
+     "text": "Avoid pyrethroids against sucking pests: they lead to a resurgence of these pests.",
+     "actives": [
+      "cypermethrin",
+      "alpha-cypermethrin",
+      "beta-cypermethrin",
+      "zeta-cypermethrin",
+      "deltamethrin",
+      "fenvalerate",
+      "esfenvalerate",
+      "lambda-cyhalothrin",
+      "gamma-cyhalothrin",
+      "bifenthrin",
+      "fenpropathrin",
+      "permethrin",
+      "cyfluthrin",
+      "beta-cyfluthrin",
+      "fluvalinate",
+      "tau-fluvalinate"
+     ],
+     "source": 1
+    }
+   ],
+   "recommended_actives": [
+    {
+     "active": "acephate",
+     "source": 1
+    },
+    {
+     "active": "acetamiprid",
+     "source": 0
+    },
+    {
+     "active": "buprofezin",
+     "source": 0
+    },
+    {
+     "active": "clothianidin",
+     "source": 0
+    },
+    {
+     "active": "diafenthiuron",
+     "source": 0
+    },
+    {
+     "active": "dimethoate",
+     "source": 0
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "imidacloprid",
+     "source": 0
+    },
+    {
+     "active": "monocrotophos",
+     "source": 1
+    },
+    {
+     "active": "oxydemeton-methyl",
+     "source": 1
+    },
+    {
+     "active": "profenofos",
+     "source": 0
+    },
+    {
+     "active": "thiacloprid",
+     "source": 0
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 0
+    }
    ]
   },
   {
    "id": "cotton_healthy",
    "crop": "cotton",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -1431,6 +2238,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
@@ -1446,7 +2255,9 @@
    "id": "chilli_fruit_rot_dieback",
    "crop": "chilli",
    "name_en": "Fruit rot and dieback (anthracnose)",
-   "names": {},
+   "names": {
+    "te": "కాయకుళ్ళు, కొమ్మ ఎండు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Colletotrichum capsici",
    "symptoms": [
@@ -1495,13 +2306,49 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "captan",
+     "source": 0
+    },
+    {
+     "active": "copper oxychloride",
+     "source": 0
+    },
+    {
+     "active": "difenoconazole",
+     "source": 1
+    },
+    {
+     "active": "hexaconazole",
+     "source": 1
+    },
+    {
+     "active": "propineb",
+     "source": 1
+    },
+    {
+     "active": "tebuconazole",
+     "source": 1
+    },
+    {
+     "active": "zineb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "chilli_powdery_mildew",
    "crop": "chilli",
    "name_en": "Powdery mildew",
-   "names": {},
+   "names": {
+    "te": "బూడిద తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Leveillula taurica",
    "symptoms": [
@@ -1544,6 +2391,24 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మినుము",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "azoxystrobin",
+     "source": 1
+    },
+    {
+     "active": "flusilazole",
+     "source": 1
     }
    ]
   },
@@ -1551,7 +2416,9 @@
    "id": "chilli_leaf_curl",
    "crop": "chilli",
    "name_en": "Leaf curl virus",
-   "names": {},
+   "names": {
+    "te": "ఆకుముడత (జెమిని వైరస్) తెగులు"
+   },
    "kind": "viral",
    "pathogen": "Leaf curl virus",
    "symptoms": [
@@ -1569,7 +2436,8 @@
     "small flower buds"
    ],
    "look_alikes": [
-    "chilli_thrips"
+    "chilli_thrips",
+    "chilli_yellow_mite"
    ],
    "discriminators": [
     {
@@ -1583,12 +2451,17 @@
      "question": "Are the leaves small and curled towards the middle vein, with the plant stunted and its stem joints close together?",
      "yes": "chilli_leaf_curl",
      "no": "chilli_thrips"
+    },
+    {
+     "id": "q_chilli_yellow_mite_chilli_leaf_curl",
+     "question": "Do the leaves curl downwards with the edges rolled down, rather than small leaves bunched on a stunted plant?",
+     "yes": "chilli_yellow_mite",
+     "no": "chilli_leaf_curl"
     }
    ],
    "favourable_conditions": "",
    "prevention": [
     "Choose healthy seeds that are free from disease.",
-    "Soak seeds in a solution of 150 grams of trisodium orthophosphate per litre of water for 30 minutes before planting.",
     "Cover nursery beds with nylon nets or straw to keep insects away.",
     "Plant 2 to 3 rows of maize or sorghum around your field to block insects.",
     "Avoid planting only chilli in your field."
@@ -1612,13 +2485,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "chilli_cercospora_leaf_spot",
    "crop": "chilli",
    "name_en": "Cercospora leaf spot",
-   "names": {},
+   "names": {
+    "te": "కప్పకన్ను ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Cercospora capsici",
    "symptoms": [
@@ -1678,13 +2558,33 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "chlorothalonil",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "zineb",
+     "source": 1
+    }
    ]
   },
   {
    "id": "chilli_bacterial_leaf_spot",
    "crop": "chilli",
    "name_en": "Bacterial leaf spot",
-   "names": {},
+   "names": {
+    "te": "బాక్టీరియా ఆకుమచ్చ తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Xanthomonas campestris pv. vesicatoria",
    "symptoms": [
@@ -1744,13 +2644,344 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "chilli_black_thrips",
+   "crop": "chilli",
+   "name_en": "Black thrips (Thrips parvispinus)",
+   "names": {
+    "te": "నల్ల తామర పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Thrips parvispinus",
+   "symptoms": [
+    "You will see deep scratches and holes on the underside of leaves.",
+    "The underside of the leaf turns reddish brown while the top looks yellow and blotchy.",
+    "Leaves may become twisted and show yellow streaks.",
+    "Flowers develop brown streaks on the petals.",
+    "Flowers may dry up, wither, and drop off the plant.",
+    "The plant stops growing well and produces fewer fruits."
+   ],
+   "photo_cues": [
+    "reddish brown leaf underside",
+    "yellow blotchy leaf top",
+    "twisted leaf shape",
+    "brown streaks on petals",
+    "yellow streaks on leaves"
+   ],
+   "look_alikes": [
+    "chilli_thrips"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_black_thrips_chilli_thrips",
+     "question": "Are the flowers damaged, with brown streaks on the petals and flowers dropping, and is the underside of the leaves reddish brown?",
+     "yes": "chilli_black_thrips",
+     "no": "chilli_thrips"
+    }
+   ],
+   "favourable_conditions": "Heavy rainfall during the monsoon season encourages the spread of this pest.",
+   "prevention": [
+    "Choose plant varieties that are resistant or tolerant to thrips.",
+    "Use healthy seedlings and treat seeds with recommended products before planting.",
+    "Keep your fields and bunds free of weeds that can host the pest.",
+    "Use proper spacing between plants to avoid overcrowding.",
+    "Plant tall crops like maize or sorghum around the edge of your field to act as a barrier."
+   ],
+   "practices": [
+    "Regularly check your plants and nearby weeds for signs of thrips.",
+    "Pull out and burn or bury plants that are heavily infested.",
+    "Use blue or yellow sticky traps to catch the insects.",
+    "Use a sprinkler system to wash the insects off the plants with a strong jet of water.",
+    "Rake or turn the soil frequently to kill the pupae hiding in the ground."
+   ],
+   "organic_bio": [
+    {
+     "text": "Beauveria bassiana at 4.00 g or ml/L",
+     "source": 0
+    },
+    {
+     "text": "Pseudomonas fluorescence at 20g/L",
+     "source": 0
+    },
+    {
+     "text": "Bacillus albus at 20 g/L",
+     "source": 0
+    },
+    {
+     "text": "Neem Seed Kernel Extract or 5% Neem Seed Powder Extract",
+     "source": 0
+    },
+    {
+     "text": "0.50% Neem oil (5 ml/L)",
+     "source": 0
+    },
+    {
+     "text": "5% Vitex negundo extract (50 ml/L)",
+     "source": 0
+    },
+    {
+     "text": "Azadirachtin 3000 PPM at 2 ml/L",
+     "source": 0
+    },
+    {
+     "text": "2% Fish Oil Rosin Soap (20 ml/L)",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "thrips",
+    "black thrips"
+   ],
+   "sources": [
+    {
+     "title": "DPPQS with ICAR and SAUs: Monitoring, diagnosis and management of South East Asian thrips, Thrips parvispinus, in chilli (June 2022)",
+     "url": "https://ppqs.gov.in/sites/default/files/south_east_asian_thrips_thrips_parvispinus-monitoring_and_management.pdf"
+    },
+    {
+     "title": "DPPQS: Ad hoc management strategies on Thrips parvispinus",
+     "url": "https://ppqs.gov.in/sites/default/files/adhoc_management_strategies_on_thrips_parvispinus.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "acephate",
+     "source": 0
+    },
+    {
+     "active": "acetamiprid",
+     "source": 0
+    },
+    {
+     "active": "bifenthrin",
+     "source": 1
+    },
+    {
+     "active": "carbofuran",
+     "source": 0
+    },
+    {
+     "active": "cyantraniliprole",
+     "source": 0
+    },
+    {
+     "active": "diafenthiuron",
+     "source": 1
+    },
+    {
+     "active": "emamectin benzoate",
+     "source": 0
+    },
+    {
+     "active": "ethion",
+     "source": 0
+    },
+    {
+     "active": "fenpropathrin",
+     "source": 0
+    },
+    {
+     "active": "fenpyroximate",
+     "source": 1
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "flubendiamide",
+     "source": 1
+    },
+    {
+     "active": "hexythiazox",
+     "source": 1
+    },
+    {
+     "active": "imidacloprid",
+     "source": 0
+    },
+    {
+     "active": "indoxacarb",
+     "source": 1
+    },
+    {
+     "active": "lufenuron",
+     "source": 1
+    },
+    {
+     "active": "profenofos",
+     "source": 1
+    },
+    {
+     "active": "spinosad",
+     "source": 0
+    },
+    {
+     "active": "thiacloprid",
+     "source": 0
+    },
+    {
+     "active": "thiamethoxam",
+     "source": 1
+    },
+    {
+     "active": "tolfenpyrad",
+     "source": 1
+    }
+   ]
+  },
+  {
+   "id": "chilli_yellow_mite",
+   "crop": "chilli",
+   "name_en": "Yellow mite (broad mite)",
+   "names": {
+    "te": "పసుపు నల్లి (కింది ముడత)"
+   },
+   "kind": "pest",
+   "pathogen": "Polyphagotarsonemus latus",
+   "symptoms": [
+    "The leaves curl downwards and look crinkled.",
+    "The leaf edges roll down and the leaf stalks become long.",
+    "Affected leaves may turn dark green.",
+    "Young leaves at the branch tips grow in tight clusters.",
+    "The plant growth becomes stunted."
+   ],
+   "photo_cues": [
+    "downward curling leaves",
+    "inverted boat shaped leaves",
+    "elongated leaf stalks",
+    "clustered young leaves",
+    "white oval eggs"
+   ],
+   "look_alikes": [
+    "chilli_thrips",
+    "chilli_leaf_curl"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_yellow_mite_chilli_thrips",
+     "question": "Do the leaves curl downwards like an upturned boat, with the edges rolled down and long leaf stalks?",
+     "yes": "chilli_yellow_mite",
+     "no": "chilli_thrips"
+    },
+    {
+     "id": "q_chilli_yellow_mite_chilli_leaf_curl",
+     "question": "Do the leaves curl downwards with the edges rolled down, rather than small leaves bunched on a stunted plant?",
+     "yes": "chilli_yellow_mite",
+     "no": "chilli_leaf_curl"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Plant two rows of maize around the chilli crop as a barrier.",
+    "Encourage the activity of predatory mites."
+   ],
+   "practices": [
+    "Monitor the field regularly for signs of mites.",
+    "If the infestation is low, use neem seed powder extract."
+   ],
+   "organic_bio": [
+    {
+     "text": "neem seed powder extract 4%",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "yellow mites",
+    "mites",
+    "white mites"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, TNAU Agritech Portal :: Crop Protection",
+     "url": "https://web.archive.org/web/20140306010744/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "buprofezin",
+     "source": 0
+    },
+    {
+     "active": "chlorfenapyr",
+     "source": 0
+    },
+    {
+     "active": "diafenthiuron",
+     "source": 0
+    },
+    {
+     "active": "emamectin benzoate",
+     "source": 0
+    },
+    {
+     "active": "ethion",
+     "source": 0
+    },
+    {
+     "active": "fenazaquin",
+     "source": 0
+    },
+    {
+     "active": "fenpyroximate",
+     "source": 0
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "hexythiazox",
+     "source": 0
+    },
+    {
+     "active": "milbemectin",
+     "source": 0
+    },
+    {
+     "active": "oxydemeton-methyl",
+     "source": 0
+    },
+    {
+     "active": "propargite",
+     "source": 0
+    },
+    {
+     "active": "quinalphos",
+     "source": 0
+    },
+    {
+     "active": "spiromesifen",
+     "source": 0
+    }
    ]
   },
   {
    "id": "chilli_thrips",
    "crop": "chilli",
    "name_en": "Thrips",
-   "names": {},
+   "names": {
+    "te": "తామర పురుగు (పై ముడత)"
+   },
    "kind": "pest",
    "pathogen": "Scirtothrips dorsalis",
    "symptoms": [
@@ -1767,7 +2998,9 @@
     "stunted plant growth"
    ],
    "look_alikes": [
-    "chilli_leaf_curl"
+    "chilli_leaf_curl",
+    "chilli_yellow_mite",
+    "chilli_black_thrips"
    ],
    "discriminators": [
     {
@@ -1780,6 +3013,18 @@
      "id": "q_chilli_leaf_curl_chilli_thrips",
      "question": "Are the leaves small and curled towards the middle vein, with the plant stunted and its stem joints close together?",
      "yes": "chilli_leaf_curl",
+     "no": "chilli_thrips"
+    },
+    {
+     "id": "q_chilli_yellow_mite_chilli_thrips",
+     "question": "Do the leaves curl downwards like an upturned boat, with the edges rolled down and long leaf stalks?",
+     "yes": "chilli_yellow_mite",
+     "no": "chilli_thrips"
+    },
+    {
+     "id": "q_chilli_black_thrips_chilli_thrips",
+     "question": "Are the flowers damaged, with brown streaks on the petals and flowers dropping, and is the underside of the leaves reddish brown?",
+     "yes": "chilli_black_thrips",
      "no": "chilli_thrips"
     }
    ],
@@ -1797,8 +3042,7 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [
-    "thrips",
-    "black thrips"
+    "thrips"
    ],
    "sources": [
     {
@@ -1810,13 +3054,56 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
      "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "buprofezin",
+     "source": 0
+    },
+    {
+     "active": "diafenthiuron",
+     "source": 0
+    },
+    {
+     "active": "emamectin benzoate",
+     "source": 0
+    },
+    {
+     "active": "fipronil",
+     "source": 0
+    },
+    {
+     "active": "imidacloprid",
+     "source": 0
+    },
+    {
+     "active": "oxydemeton-methyl",
+     "source": 0
+    },
+    {
+     "active": "spinosad",
+     "source": 0
+    },
+    {
+     "active": "thiacloprid",
+     "source": 0
+    }
    ]
   },
   {
    "id": "chilli_healthy",
    "crop": "chilli",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -1846,6 +3133,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
@@ -1858,7 +3147,7 @@
    "crop": "groundnut",
    "name_en": "Early leaf spot (tikka)",
    "names": {
-    "te": "టిక్కా ఆకుమచ్చ"
+    "te": "టిక్కా ఆకుమచ్చ (ముందు వచ్చే)"
    },
    "kind": "fungal",
    "pathogen": "Cercospora arachidicola",
@@ -1928,6 +3217,24 @@
      "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbendazim",
+     "source": 0
+    },
+    {
+     "active": "chlorothalonil",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
@@ -1935,7 +3242,7 @@
    "crop": "groundnut",
    "name_en": "Late leaf spot (tikka)",
    "names": {
-    "te": "టిక్కా ఆకుమచ్చ"
+    "te": "టిక్కా ఆకుమచ్చ (ఆలస్యంగా వచ్చే)"
    },
    "kind": "fungal",
    "pathogen": "Phaeoisariopsis personatum",
@@ -2010,6 +3317,24 @@
      "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbendazim",
+     "source": 0
+    },
+    {
+     "active": "chlorothalonil",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
@@ -2071,13 +3396,29 @@
      "title": "Vikaspedia Telugu: వేరుశనగ సాగులో సమగ్ర సస్యరక్షణ మరియు యాజమాన్య పద్ధతులు",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వేరుశనగ-సాగులో-సమగ్ర-సస్యరక్షణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "chlorothalonil",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "groundnut_bud_necrosis",
    "crop": "groundnut",
    "name_en": "Bud necrosis virus",
-   "names": {},
+   "names": {
+    "te": "మొవ్వు కుళ్ళు తెగులు"
+   },
    "kind": "viral",
    "pathogen": "Peanut bud necrosis virus (PBNV)",
    "symptoms": [
@@ -2108,7 +3449,7 @@
     "Check your field regularly for signs of the virus.",
     "Pull out and destroy any plants that look sick up to 6 weeks after planting.",
     "Remove any infected plants from the field as soon as you see them.",
-    "Intercrop groundnut with castor in a 3 to 6 to 1 ratio to help manage the insects that spread the virus."
+    "Grow one row of castor for every 3 to 6 rows of groundnut, which helps reduce the thrips that spread the virus."
    ],
    "organic_bio": [],
    "cibrc_targets": [
@@ -2124,13 +3465,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
      "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "groundnut_leaf_miner",
    "crop": "groundnut",
    "name_en": "Leaf miner",
-   "names": {},
+   "names": {
+    "te": "ఆకుముడత పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Aproaerema modicella",
    "symptoms": [
@@ -2174,13 +3522,23 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
      "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "groundnut_healthy",
    "crop": "groundnut",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -2210,6 +3568,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
@@ -2225,7 +3585,9 @@
    "id": "maize_common_rust",
    "crop": "maize",
    "name_en": "Common rust",
-   "names": {},
+   "names": {
+    "te": "తుప్పు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Puccinia sorghi",
    "symptoms": [
@@ -2283,13 +3645,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
      "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "maize_turcicum_blight",
    "crop": "maize",
    "name_en": "Northern leaf blight (turcicum)",
-   "names": {},
+   "names": {
+    "te": "ఆకు ఎండు తెగులు (టర్సికం)"
+   },
    "kind": "fungal",
    "pathogen": "Exserohilum turcicum",
    "symptoms": [
@@ -2356,13 +3725,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
      "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "zineb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "maize_maydis_blight",
    "crop": "maize",
    "name_en": "Southern leaf blight (maydis)",
-   "names": {},
+   "names": {
+    "te": "ఆకు ఎండు తెగులు (మేడిస్)"
+   },
    "kind": "fungal",
    "pathogen": "Bipolaris maydis, Drechslera maydis, H. maydis",
    "symptoms": [
@@ -2433,13 +3818,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
      "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "metalaxyl",
+     "source": 1
+    }
    ]
   },
   {
    "id": "maize_grey_leaf_spot",
    "crop": "maize",
    "name_en": "Grey leaf spot",
-   "names": {},
+   "names": {
+    "te": "బూడిద రంగు ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Cercospora zeae-maydis",
    "symptoms": [
@@ -2483,13 +3884,20 @@
      "title": "Crop Protection Network (US land-grant universities): Gray leaf spot of corn",
      "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "maize_downy_mildew",
    "crop": "maize",
    "name_en": "Downy mildew",
-   "names": {},
+   "names": {
+    "te": "బూజు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Peronosclerospora sorghi, Scleropthora rayssiae var. zeae, Peronosclerospora hetropogoni",
    "symptoms": [
@@ -2543,6 +3951,20 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
      "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "metalaxyl",
+     "source": 0
     }
    ]
   },
@@ -2630,13 +4052,23 @@
      "title": "Vikaspedia Telugu: మొక్కజొన్నలో కత్తెర పురుగు నివారణ మరియు సమగ్ర యాజమాన్యం",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మొక్కజొన్నలో-కత్తెర-పురుగు-నివారణ-మరియు-సమగ్ర-యాజమాన్యం?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "maize_healthy",
    "crop": "maize",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -2666,6 +4098,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
@@ -2753,13 +4187,45 @@
      "title": "Vikaspedia Telugu: టమాట",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "azoxystrobin",
+     "source": 1
+    },
+    {
+     "active": "captan",
+     "source": 1
+    },
+    {
+     "active": "cymoxanil",
+     "source": 1
+    },
+    {
+     "active": "famoxadone",
+     "source": 1
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "zineb",
+     "source": 1
+    }
    ]
   },
   {
    "id": "tomato_late_blight",
    "crop": "tomato",
    "name_en": "Late blight",
-   "names": {},
+   "names": {
+    "te": "ఆలస్యపు ఆకుమాడు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Phytophthora infestans",
    "symptoms": [
@@ -2820,13 +4286,41 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "azoxystrobin",
+     "source": 1
+    },
+    {
+     "active": "cymoxanil",
+     "source": 1
+    },
+    {
+     "active": "famoxadone",
+     "source": 1
+    },
+    {
+     "active": "mancozeb",
+     "source": 1
+    },
+    {
+     "active": "zineb",
+     "source": 1
+    }
    ]
   },
   {
    "id": "tomato_leaf_curl",
    "crop": "tomato",
    "name_en": "Leaf curl virus",
-   "names": {},
+   "names": {
+    "te": "ఆకుముడత తెగులు"
+   },
    "kind": "viral",
    "pathogen": "Tomato leaf curl virus (ToLCV)",
    "symptoms": [
@@ -2881,6 +4375,20 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: కూరగాయల పంటల్లో వైరస్ తెగుళ్లు సమగ్ర యాజమాన్య పద్ధతులు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/ముఖ్యమైన-అంశాలు/కూరగాయల-పంటల్లో-వైరస్-తెగుళ్లు-సమగ్ర-యాజమాన్య-పద్ధతులు?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "imidacloprid",
+     "source": 1
     }
    ]
   },
@@ -2888,7 +4396,9 @@
    "id": "tomato_septoria_leaf_spot",
    "crop": "tomato",
    "name_en": "Septoria leaf spot",
-   "names": {},
+   "names": {
+    "te": "సెప్టోరియా ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Septoria lycopersici",
    "symptoms": [
@@ -2950,13 +4460,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "tomato_bacterial_spot",
    "crop": "tomato",
    "name_en": "Bacterial spot",
-   "names": {},
+   "names": {
+    "te": "బాక్టీరియా ఆకుమచ్చ తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Xanthomonas campestris pv. vesicatoria",
    "symptoms": [
@@ -3008,13 +4525,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "tomato_fruit_borer",
    "crop": "tomato",
    "name_en": "Fruit borer",
-   "names": {},
+   "names": {
+    "te": "శనగ పచ్చ పురుగు (కాయ తొలుచు పురుగు)"
+   },
    "kind": "pest",
    "pathogen": "Helicoverpa armigera",
    "symptoms": [
@@ -3099,6 +4623,36 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
      "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: టమాట",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "flubendiamide",
+     "source": 0
+    },
+    {
+     "active": "indoxacarb",
+     "source": 0
+    },
+    {
+     "active": "novaluron",
+     "source": 0
+    },
+    {
+     "active": "phosalone",
+     "source": 0
+    },
+    {
+     "active": "quinalphos",
+     "source": 0
     }
    ]
   },
@@ -3106,7 +4660,12 @@
    "id": "tomato_healthy",
    "crop": "tomato",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -3136,6 +4695,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
@@ -3206,6 +4767,40 @@
      "title": "Vikaspedia Telugu: వంగ సాగులో కొమ్మ మరియు కాయ తొలుచు పురుగు యాజమాన్యం",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వంగ-సాగులో-కొమ్మ-మరియు-కాయ-తొలుచు-పురుగు-యాజమాన్యం?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "chlorpyrifos",
+     "source": 0
+    },
+    {
+     "active": "dimethoate",
+     "source": 0
+    },
+    {
+     "active": "emamectin benzoate",
+     "source": 0
+    },
+    {
+     "active": "flubendiamide",
+     "source": 0
+    },
+    {
+     "active": "phosalone",
+     "source": 0
+    },
+    {
+     "active": "quinalphos",
+     "source": 0
+    },
+    {
+     "active": "thiodicarb",
+     "source": 0
+    }
    ]
   },
   {
@@ -3263,13 +4858,25 @@
      "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "dimethoate",
+     "source": 0
+    }
    ]
   },
   {
    "id": "brinjal_phomopsis_blight",
    "crop": "brinjal",
    "name_en": "Phomopsis blight and fruit rot",
-   "names": {},
+   "names": {
+    "te": "కాయకుళ్ళు తెగులు (ఫోమోప్సిస్)"
+   },
    "kind": "fungal",
    "pathogen": "Phomopsis vexans",
    "symptoms": [
@@ -3316,13 +4923,25 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
      "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "zineb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "brinjal_bacterial_wilt",
    "crop": "brinjal",
    "name_en": "Bacterial wilt",
-   "names": {},
+   "names": {
+    "te": "బాక్టీరియా ఎండు తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Pseudomonas solanacearum, Ralstonia solanacearum",
    "symptoms": [
@@ -3355,17 +4974,12 @@
    ],
    "organic_bio": [
     {
-     "text": "Mix 1 kg of Trichoderma viride 1% WP with 25 kg FYM and broadcast uniformly over an acre of land and irrigate the field immediately.",
-     "source": 1
-    },
-    {
      "text": "Use neem cake.",
      "source": 1
     }
    ],
    "cibrc_targets": [
-    "bacterial wilt",
-    "wilt"
+    "bacterial wilt"
    ],
    "sources": [
     {
@@ -3376,8 +4990,17 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
      "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "brinjal_epilachna",
@@ -3438,13 +5061,23 @@
      "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "brinjal_healthy",
    "crop": "brinjal",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -3474,6 +5107,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
@@ -3485,7 +5120,9 @@
    "id": "banana_panama_wilt",
    "crop": "banana",
    "name_en": "Panama wilt (Fusarium wilt)",
-   "names": {},
+   "names": {
+    "te": "పనామా ఎండు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Fusarium oxysporum f.sp. cubense",
    "symptoms": [
@@ -3565,13 +5202,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
      "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "banana_sigatoka",
    "crop": "banana",
    "name_en": "Sigatoka leaf spot",
-   "names": {},
+   "names": {
+    "te": "సిగటోకా ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Mycospharella musicola",
    "symptoms": [
@@ -3623,13 +5267,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
      "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "copper oxychloride",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "banana_bunchy_top",
    "crop": "banana",
    "name_en": "Bunchy top virus",
-   "names": {},
+   "names": {
+    "te": "కుచ్చు తెగులు (బంచీ టాప్)"
+   },
    "kind": "viral",
    "pathogen": "Banana bunchy top virus",
    "symptoms": [
@@ -3689,13 +5349,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
      "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbofuran",
+     "source": 1
+    },
+    {
+     "active": "oxydemeton-methyl",
+     "source": 1
+    }
    ]
   },
   {
    "id": "banana_anthracnose",
    "crop": "banana",
    "name_en": "Anthracnose",
-   "names": {},
+   "names": {
+    "te": "కాయ కుళ్ళు (ఆంత్రాక్నోస్)"
+   },
    "kind": "fungal",
    "pathogen": "Gloeosporium musarum, Colletrotrichum musae",
    "symptoms": [
@@ -3744,13 +5420,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
      "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "banana_rhizome_weevil",
    "crop": "banana",
    "name_en": "Rhizome weevil",
-   "names": {},
+   "names": {
+    "te": "దుంప ముక్కు పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Cosmopolites sordidus",
    "symptoms": [
@@ -3806,13 +5489,28 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
      "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbofuran",
+     "source": 0
+    }
    ]
   },
   {
    "id": "banana_healthy",
    "crop": "banana",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -3842,6 +5540,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
@@ -3853,7 +5553,9 @@
    "id": "mango_powdery_mildew",
    "crop": "mango",
    "name_en": "Powdery mildew",
-   "names": {},
+   "names": {
+    "te": "బూడిద తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Oidium mangiferae / Acrosporum mangiferae",
    "symptoms": [
@@ -3909,13 +5611,25 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
      "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "carbendazim",
+     "source": 0
+    }
    ]
   },
   {
    "id": "mango_anthracnose",
    "crop": "mango",
    "name_en": "Anthracnose",
-   "names": {},
+   "names": {
+    "te": "ఆంత్రాక్నోస్ (నల్ల మచ్చ తెగులు)"
+   },
    "kind": "fungal",
    "pathogen": "Colletotrichum gloeosporioides",
    "symptoms": [
@@ -3967,7 +5681,12 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
      "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "mango_hopper",
@@ -3999,8 +5718,7 @@
    "prevention": [
     "Do not plant trees too close together.",
     "Keep the orchard clean by pulling weeds.",
-    "Prune dense branches in December.",
-    "Burn crop waste in the evening to smoke the orchard."
+    "Prune dense branches in December."
    ],
    "practices": [
     "Put up yellow sticky traps above the tree top.",
@@ -4046,13 +5764,20 @@
      "title": "Vikaspedia Telugu: మామిడిలో దిగుబడిని తగ్గించే ప్రధానమైన పురుగులు వాటి యాజమాన్యం",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మామిడిలో-దిగుబడిని-తగ్గించే-ప్రధానమైన-పురుగులు-వాటి-యాజమాన్యం?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "mango_fruit_fly",
    "crop": "mango",
    "name_en": "Fruit fly",
-   "names": {},
+   "names": {
+    "te": "పండు ఈగ"
+   },
    "kind": "pest",
    "pathogen": "Bactrocera (Dacus) dorsalis, Bactrocera dorsalis, B. correcta Bezzi, B. zonata Saunders",
    "symptoms": [
@@ -4101,13 +5826,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
      "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "mango_sooty_mould",
    "crop": "mango",
    "name_en": "Sooty mould",
-   "names": {},
+   "names": {
+    "te": "మసి తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Capnodium mangiferae, Meliola mangiferae",
    "symptoms": [
@@ -4162,14 +5894,28 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
      "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: పత్తిలో రసంపీల్చే పురుగుల యాజమాన్యం గుర్తింపు నివారణ చర్యలు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/పత్తిలో-రసంపీల్చే-పురుగుల-యాజమాన్యం-గుర్తింపు-నివారణ-చర్యలు?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "mango_healthy",
    "crop": "mango",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -4199,6 +5945,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
@@ -4259,19 +6007,16 @@
     "Regularly monitor your field for signs of the disease.",
     "Practice good field sanitation by removing and destroying affected plant parts.",
     "Keep the field clean and free of weeds.",
-    "Follow general cultural practices to keep the crop healthy."
+    "Follow general cultural practices to keep the crop healthy.",
+    "Pull out plants that show yellow patches early and destroy them, so whiteflies cannot carry the virus from them."
    ],
    "organic_bio": [
     {
-     "text": "Trichoderma viride 1% WP @ 4g per Kg seeds",
+     "text": "Yellow sticky traps at 4 to 5 per acre, 15 cm above the crop, to watch and catch the whiteflies that spread the virus",
      "source": 1
     },
     {
-     "text": "Trichoderma spp. (8-10 g/Kg seed)",
-     "source": 1
-    },
-    {
-     "text": "Trichoderma viride/harzianum and Pseudomonas fluorescens as seed/seedling/planting material treatment",
+     "text": "Neem oil at 5 ml per litre of water against the whitefly",
      "source": 1
     }
    ],
@@ -4292,7 +6037,12 @@
      "title": "Vikaspedia Telugu: మినుము",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "blackgram_powdery_mildew",
@@ -4359,13 +6109,29 @@
      "title": "Vikaspedia Telugu: మినుము",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
     }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "penconazole",
+     "source": 1
+    },
+    {
+     "active": "propiconazole",
+     "source": 0
+    }
    ]
   },
   {
    "id": "blackgram_cercospora_leaf_spot",
    "crop": "blackgram",
    "name_en": "Cercospora leaf spot",
-   "names": {},
+   "names": {
+    "te": "సెర్కోస్పోరా ఆకుమచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Cercospora canescens",
    "symptoms": [
@@ -4425,13 +6191,25 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
      "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "blackgram_leaf_crinkle",
    "crop": "blackgram",
    "name_en": "Leaf crinkle virus",
-   "names": {},
+   "names": {
+    "te": "ఆకు ముడత తెగులు"
+   },
    "kind": "viral",
    "pathogen": "Leaf crinkle virus",
    "symptoms": [
@@ -4485,7 +6263,12 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
      "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "blackgram_rust",
@@ -4550,6 +6333,16 @@
     {
      "title": "Vikaspedia Telugu: మినుము",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
     }
    ]
   },
@@ -4618,13 +6411,23 @@
      "title": "Vikaspedia Telugu: మినుము",
      "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "blackgram_healthy",
    "crop": "blackgram",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -4654,6 +6457,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
@@ -4665,7 +6470,9 @@
    "id": "potato_early_blight",
    "crop": "potato",
    "name_en": "Early blight",
-   "names": {},
+   "names": {
+    "te": "ఆకుమాడు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Alternaria solani",
    "symptoms": [
@@ -4722,6 +6529,32 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: టమాట",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "aureofungin",
+     "source": 1
+    },
+    {
+     "active": "captan",
+     "source": 0
+    },
+    {
+     "active": "chlorothalonil",
+     "source": 1
+    },
+    {
+     "active": "zineb",
+     "source": 0
     }
    ]
   },
@@ -4729,7 +6562,9 @@
    "id": "potato_late_blight",
    "crop": "potato",
    "name_en": "Late blight",
-   "names": {},
+   "names": {
+    "te": "ఆలస్యపు ఆకుమాడు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Phytopthora infestans",
    "symptoms": [
@@ -4797,13 +6632,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    },
+    {
+     "active": "zineb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "potato_black_scurf",
    "crop": "potato",
    "name_en": "Black scurf",
-   "names": {},
+   "names": {
+    "te": "నల్ల మచ్చ తెగులు (బ్లాక్ స్కర్ఫ్)"
+   },
    "kind": "fungal",
    "pathogen": "Rhizoctonia solani",
    "symptoms": [
@@ -4864,13 +6715,20 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "potato_bacterial_wilt",
    "crop": "potato",
    "name_en": "Bacterial wilt (brown rot)",
-   "names": {},
+   "names": {
+    "te": "బాక్టీరియా ఎండు తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Ralstonia solanacearum",
    "symptoms": [
@@ -4922,14 +6780,25 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "potato_common_scab",
    "crop": "potato",
    "name_en": "Common scab",
-   "names": {},
+   "names": {
+    "te": "గజ్జి తెగులు"
+   },
    "kind": "bacterial",
    "pathogen": "Streptomyces scabies",
    "symptoms": [
@@ -4989,13 +6858,23 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "potato_healthy",
    "crop": "potato",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -5025,6 +6904,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
@@ -5036,7 +6917,9 @@
    "id": "onion_purple_blotch",
    "crop": "onion",
    "name_en": "Purple blotch",
-   "names": {},
+   "names": {
+    "te": "ఊదా మచ్చ తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Alternaria porri",
    "symptoms": [
@@ -5106,13 +6989,29 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "chlorothalonil",
+     "source": 0
+    },
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "onion_stemphylium_blight",
    "crop": "onion",
    "name_en": "Stemphylium leaf blight",
-   "names": {},
+   "names": {
+    "te": "ఆకు ఎండు తెగులు (స్టెంఫీలియం)"
+   },
    "kind": "fungal",
    "pathogen": "Stemphylium cesicarium/ vesicarium [(Wallr.) E.G. Simmons]",
    "symptoms": [
@@ -5151,7 +7050,7 @@
     "Keep the field well drained and do not plant too close together."
    ],
    "practices": [
-    "Collect and burn all old crop parts left in the field.",
+    "Collect old crop parts left in the field and take them away or bury them.",
     "Make sure the field has good drainage.",
     "Reduce the number of plants in the field to lower density."
    ],
@@ -5167,13 +7066,25 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "onion_downy_mildew",
    "crop": "onion",
    "name_en": "Downy mildew",
-   "names": {},
+   "names": {
+    "te": "బూజు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Peronospora destructor",
    "symptoms": [
@@ -5229,13 +7140,25 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
     }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "mancozeb",
+     "source": 0
+    }
    ]
   },
   {
    "id": "onion_thrips",
    "crop": "onion",
    "name_en": "Onion thrips",
-   "names": {},
+   "names": {
+    "te": "తామర పురుగు"
+   },
    "kind": "pest",
    "pathogen": "Thrips tabaci",
    "symptoms": [
@@ -5278,6 +7201,24 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వేరుశనగ ఆశించే పురుగులు మరియు సస్యరక్షణ చర్యలు",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/వేరుశనగ-ఆశించే-పురుగులు-మరియు-సస్యరక్షణ-చర్యలు?lgn=te"
+    }
+   ],
+   "names_source": {
+    "te": "vikaspedia"
+   },
+   "avoid": [],
+   "recommended_actives": [
+    {
+     "active": "oxydemeton-methyl",
+     "source": 2
+    },
+    {
+     "active": "profenofos",
+     "source": 0
     }
    ]
   },
@@ -5285,7 +7226,9 @@
    "id": "onion_basal_rot",
    "crop": "onion",
    "name_en": "Basal rot",
-   "names": {},
+   "names": {
+    "te": "అడుగు కుళ్ళు తెగులు"
+   },
    "kind": "fungal",
    "pathogen": "Fusarium oxysporum f. sp. cepae Schlecht",
    "symptoms": [
@@ -5324,13 +7267,23 @@
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
      "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
     }
-   ]
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
   },
   {
    "id": "onion_healthy",
    "crop": "onion",
    "name_en": "Healthy",
-   "names": {},
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
    "kind": "abiotic",
    "pathogen": "",
    "symptoms": [
@@ -5360,6 +7313,8 @@
    ],
    "organic_bio": [],
    "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
    "sources": [
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Onion",

@@ -44,6 +44,10 @@ PAIRS = [
  ("maize_maydis_blight", "maize_turcicum_blight", "Are the spots small and diamond shaped at first, then a little longer, tan with a buff to brown border?"),
  ("maize_grey_leaf_spot", "maize_maydis_blight", "Are the spots narrow and rectangular, stopped by the veins on both sides, tan turning grey?"),
  ("maize_common_rust", "maize_turcicum_blight", "Are there small raised brown bumps (pustules) on both sides of the leaf?"),
+ ("paddy_gall_midge", "paddy_stem_borer", "Is the central shoot turned into a hollow, silvery white tube like an onion leaf?"),
+ ("chilli_yellow_mite", "chilli_thrips", "Do the leaves curl downwards like an upturned boat, with the edges rolled down and long leaf stalks?"),
+ ("chilli_yellow_mite", "chilli_leaf_curl", "Do the leaves curl downwards with the edges rolled down, rather than small leaves bunched on a stunted plant?"),
+ ("chilli_black_thrips", "chilli_thrips", "Are the flowers damaged, with brown streaks on the petals and flowers dropping, and is the underside of the leaves reddish brown?"),
  ("tomato_early_blight", "tomato_late_blight", "Do the brown spots have rings inside them like a target, mostly on the older lower leaves?"),
  ("tomato_late_blight", "tomato_early_blight", "Are there dark water-soaked patches that spread fast, with white fuzz on the underside in damp weather?"),
  ("tomato_septoria_leaf_spot", "tomato_early_blight", "Are there many small round spots with a grey centre and dark edge, without rings inside?"),
@@ -140,7 +144,18 @@ FIXES = {
    ("photo_cues", "pale brown spot centers"), ("photo_cues", "reddish brown spot margins")]},
  "blackgram_cercospora_leaf_spot": {"drop": [("prevention", "bower")]},
  "blackgram_powdery_mildew": {"drop": [("prevention", "bower")], "drop_bio": ["Trichoderma"]},
+ "brinjal_bacterial_wilt": {"drop_bio": ["Trichoderma"]},
+ "blackgram_yellow_mosaic": {"drop_bio": ["Trichoderma"],
+   "add": {"organic_bio": [{"text": "Yellow sticky traps at 4 to 5 per acre, 15 cm above the crop, to watch and catch the whiteflies that spread the virus", "page": 1},
+                           {"text": "Neem oil at 5 ml per litre of water against the whitefly", "page": 1}],
+           "practices": ["Pull out plants that show yellow patches early and destroy them, so whiteflies cannot carry the virus from them."]}},
+ "chilli_leaf_curl": {"drop": [("prevention", "trisodium")]},
+ "chilli_black_thrips": {"drop_bio": ["Sea weed"]},
  "paddy_blast": {"drop_bio": ["5-10 g/ha of seed"], "drop": [("practices", "crop rotation")]},
+ "paddy_brown_spot": {"set": {"pathogen": "Bipolaris oryzae (Cochliobolus miyabeanus); older name Helminthosporium oryzae"}},
+ "mango_hopper": {"drop": [("prevention", "smoke")]},
+ "groundnut_bud_necrosis": {"drop": [("practices", "castor in a 3 to 6")],
+   "add": {"practices": ["Grow one row of castor for every 3 to 6 rows of groundnut, which helps reduce the thrips that spread the virus."]}},
 }
 
 # Farmers' Telugu names for problems, only where a Vikaspedia Telugu page uses the name for that
@@ -173,7 +188,8 @@ NAMES = {
 }
 
 # Vikaspedia Telugu pages read on 27 Nov 2026 (rendered in a browser; the site is a JavaScript app).
-TE_URLS = {'p1': 'https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c2ac2ac4dc2ac41-c27c3ec28c4dc2fc3ec32c41/ఎల్-నినో-ప్రభావం-వరి-పంటలో-పురుగులు-తెగుళ్ల-సమగ్ర-యాజమాన్యం?lgn=te',
+TE_URLS = {'p7': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/పత్తిలో-రసంపీల్చే-పురుగుల-యాజమాన్యం-గుర్తింపు-నివారణ-చర్యలు?lgn=te',
+ 'p1': 'https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c2ac2ac4dc2ac41-c27c3ec28c4dc2fc3ec32c41/ఎల్-నినో-ప్రభావం-వరి-పంటలో-పురుగులు-తెగుళ్ల-సమగ్ర-యాజమాన్యం?lgn=te',
  'p11': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వరి-సాగులో-చీడపీడల-నివారణ-మరియు-యాజమాన్య-పద్ధతులు?lgn=te',
  'p12': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/వానాకాలం-వరిలో-తొలిదశ-చీడపీడలు-యాజమాన్య-చర్యలు?lgn=te',
  'p24': 'https://te.vikaspedia.in/viewcontent/agriculture/crop-production/c35c30c3f-c35c30c3f-c32c4b-c30c3ec15c3ec32c41/వరిలో-చీడపీడల-నివారణ?lgn=te',
@@ -190,3 +206,88 @@ TE_URLS = {'p1': 'https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c
  'p25': 'https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మామిడిలో-దిగుబడిని-తగ్గించే-ప్రధానమైన-పురుగులు-వాటి-యాజమాన్యం?lgn=te',
  'p21': 'https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c09c26c4dc2fc3ec28-c35c3ec28-c2ac02c1fc32c41/టమాట?lgn=te',
  'p14': 'https://te.vikaspedia.in/viewcontent/agriculture/ముఖ్యమైన-అంశాలు/కూరగాయల-పంటల్లో-వైరస్-తెగుళ్లు-సమగ్ర-యాజమాన్య-పద్ధతులు?lgn=te'}
+
+# Exact sentences rewritten wherever they appear. Burning straw, stubble or crop waste in the field is
+# what TNAU wrote years ago; current advice is to remove it or plough it in (see SOURCES.md).
+REWRITE = {
+ "Burn straw and stubble after harvest to remove the pathogen.": "After harvest, remove the straw and stubble from the field or plough them into the soil, instead of burning them.",
+ "Deep plough the field in summer and burn the stubble.": "Plough deep in summer and remove the stubble or plough it in.",
+ "Remove and burn all leftover plant parts from the field after harvest.": "After harvest, remove all leftover plant parts from the field or plough them in deep.",
+ "Remove and burn all weeds and old plant parts from the field.": "Remove all weeds and old plant parts from the field.",
+ "Collect and burn all old crop parts left in the field.": "Collect old crop parts left in the field and take them away or bury them.",
+}
+
+# Products or practices a cited page says to avoid. "actives" lets the app flag matching products.
+PYRETHROIDS = ["cypermethrin", "alpha-cypermethrin", "beta-cypermethrin", "zeta-cypermethrin", "deltamethrin", "fenvalerate", "esfenvalerate",
+               "lambda-cyhalothrin", "gamma-cyhalothrin", "bifenthrin", "fenpropathrin", "permethrin", "cyfluthrin", "beta-cyfluthrin",
+               "fluvalinate", "tau-fluvalinate", "fluvalinate"]
+AVOID = {
+ "paddy_bph": [
+   {"text": "Do not spray synthetic pyrethroids, methyl parathion, fenthion or quinalphos for hoppers: they make the hoppers come back in bigger numbers.",
+    "file": "crop_prot_crop_insectpest_20_cereals_paddy.txt", "actives": PYRETHROIDS + ["methyl parathion", "fenthion", "quinalphos"]},
+   {"text": "Do not mix two insecticides in one tank, and do not use the same insecticide again and again.", "file": "extra:ppqs_rice_bph", "actives": []},
+   {"text": "Do not burn an infested crop: it drives the hoppers into nearby fields.", "file": "extra:ppqs_rice_bph", "actives": []}],
+ "cotton_whitefly": [
+   {"text": "Avoid synthetic pyrethroids such as cypermethrin, deltamethrin and fenvalerate, and also acephate and acetamiprid, because they make whitefly come back worse.",
+    "file": "extra:ppqs_cotton_whitefly", "actives": PYRETHROIDS + ["acephate", "acetamiprid"]}],
+ "cotton_jassid": [
+   {"text": "Avoid pyrethroids against sucking pests: they lead to a resurgence of these pests.", "file": "aesa:cotton", "actives": PYRETHROIDS}],
+}
+
+# recommended_actives overrides after reading the package text (kb_recommended.py output is noisy).
+REC_SET = {
+ "paddy_bph": ["ethiprole", "imidacloprid", "clothianidin", "dinotefuran", "flonicamid", "pymetrozine", "thiamethoxam", "triflumezopyrim", "buprofezin"],
+}
+REC_DROP = {
+ "cotton_whitefly": ["acephate", "acetamiprid", "cypermethrin"],
+ "cotton_jassid": [],
+ "groundnut_early_leaf_spot": ["imidacloprid"], "groundnut_late_leaf_spot": ["imidacloprid"], "groundnut_rust": ["imidacloprid"],
+ "chilli_thrips": ["hexythiazox", "propargite", "fenpyroximate", "chlorfenapyr", "spiromesifen", "carbofuran", "indoxacarb", "flubendiamide", "ethion"],
+ "paddy_blast": ["pseudomonas fluorescens"],
+ "cotton_pink_bollworm": ["cypermethrin"],
+ "mango_hopper": ["deltamethrin"],
+}
+BIO_ACTIVES = {"pseudomonas fluorescens", "metarhizium anisopliae", "verticillium lecanii", "beauveria bassiana", "trichoderma viride",
+               "trichoderma harzianum", "bacillus thuringiensis", "azadirachtin"}
+
+# Telugu farmer names. "src" is a Vikaspedia page key (TE_URLS) or "descriptive" when no page we read
+# gives the name: then it is the plain descriptive name a coastal Andhra farmer would use, mostly as
+# suggested by the agriculture reviewer (judge2-agri.md), and marked names_source "descriptive".
+TE = {
+ "paddy_blast": ("అగ్గి తెగులు", "p24"), "paddy_brown_spot": ("గోధుమ రంగు ఆకుమచ్చ తెగులు", "descriptive"),
+ "paddy_blb": ("బ్యాక్టీరియా ఎండాకు తెగులు", "p12"), "paddy_sheath_blight": ("పాముపొడ తెగులు", "p12"),
+ "paddy_bph": ("సుడిదోమ", "p24"), "paddy_stem_borer": ("కాండం తొలిచే పురుగు", "p24"),
+ "paddy_leaf_folder": ("ఆకుముడత పురుగు", "p11"), "paddy_gall_midge": ("ఉల్లికోడు", "p24"), "paddy_false_smut": ("కాటుక తెగులు", "descriptive"),
+ "cotton_bacterial_blight": ("నల్లమచ్చ తెగులు", "p31"), "cotton_alternaria_leaf_spot": ("ఆల్టర్నేరియా ఆకుమచ్చ తెగులు", "descriptive"),
+ "cotton_grey_mildew": ("బూడిద రంగు బూజు తెగులు", "descriptive"), "cotton_pink_bollworm": ("గులాబీ రంగు కాయతొలుచు పురుగు", "descriptive"),
+ "cotton_whitefly": ("తెల్లదోమ", "p19"), "cotton_jassid": ("పచ్చదోమ", "p19"),
+ "chilli_fruit_rot_dieback": ("కాయకుళ్ళు, కొమ్మ ఎండు తెగులు", "descriptive"), "chilli_powdery_mildew": ("బూడిద తెగులు", "p20"),
+ "chilli_leaf_curl": ("ఆకుముడత (జెమిని వైరస్) తెగులు", "descriptive"), "chilli_cercospora_leaf_spot": ("కప్పకన్ను ఆకుమచ్చ తెగులు", "descriptive"),
+ "chilli_bacterial_leaf_spot": ("బాక్టీరియా ఆకుమచ్చ తెగులు", "descriptive"), "chilli_thrips": ("తామర పురుగు (పై ముడత)", "descriptive"),
+ "chilli_black_thrips": ("నల్ల తామర పురుగు", "descriptive"), "chilli_yellow_mite": ("పసుపు నల్లి (కింది ముడత)", "descriptive"),
+ "groundnut_early_leaf_spot": ("టిక్కా ఆకుమచ్చ (ముందు వచ్చే)", "p15"), "groundnut_late_leaf_spot": ("టిక్కా ఆకుమచ్చ (ఆలస్యంగా వచ్చే)", "p15"),
+ "groundnut_rust": ("తుప్పు తెగులు", "p15"), "groundnut_bud_necrosis": ("మొవ్వు కుళ్ళు తెగులు", "descriptive"),
+ "groundnut_leaf_miner": ("ఆకుముడత పురుగు", "descriptive"),
+ "maize_common_rust": ("తుప్పు తెగులు", "descriptive"), "maize_turcicum_blight": ("ఆకు ఎండు తెగులు (టర్సికం)", "descriptive"),
+ "maize_maydis_blight": ("ఆకు ఎండు తెగులు (మేడిస్)", "descriptive"), "maize_grey_leaf_spot": ("బూడిద రంగు ఆకుమచ్చ తెగులు", "descriptive"),
+ "maize_downy_mildew": ("బూజు తెగులు", "descriptive"), "maize_fall_armyworm": ("కత్తెర పురుగు", "p3"),
+ "tomato_early_blight": ("ఆకుమాడు తెగులు", "p21"), "tomato_late_blight": ("ఆలస్యపు ఆకుమాడు తెగులు", "descriptive"),
+ "tomato_leaf_curl": ("ఆకుముడత తెగులు", "p14"), "tomato_septoria_leaf_spot": ("సెప్టోరియా ఆకుమచ్చ తెగులు", "descriptive"),
+ "tomato_bacterial_spot": ("బాక్టీరియా ఆకుమచ్చ తెగులు", "descriptive"), "tomato_fruit_borer": ("శనగ పచ్చ పురుగు (కాయ తొలుచు పురుగు)", "p21"),
+ "brinjal_shoot_fruit_borer": ("కొమ్మ మరియు కాయ తొలుచు పురుగు", "p6"), "brinjal_little_leaf": ("వెర్రి తెగులు", "p18"),
+ "brinjal_phomopsis_blight": ("కాయకుళ్ళు తెగులు (ఫోమోప్సిస్)", "descriptive"), "brinjal_bacterial_wilt": ("బాక్టీరియా ఎండు తెగులు", "p18"),
+ "brinjal_epilachna": ("అక్షింతల పురుగు", "p18"),
+ "banana_panama_wilt": ("పనామా ఎండు తెగులు", "descriptive"), "banana_sigatoka": ("సిగటోకా ఆకుమచ్చ తెగులు", "descriptive"),
+ "banana_bunchy_top": ("కుచ్చు తెగులు (బంచీ టాప్)", "descriptive"), "banana_anthracnose": ("కాయ కుళ్ళు (ఆంత్రాక్నోస్)", "descriptive"),
+ "banana_rhizome_weevil": ("దుంప ముక్కు పురుగు", "descriptive"),
+ "mango_powdery_mildew": ("బూడిద తెగులు", "descriptive"), "mango_anthracnose": ("ఆంత్రాక్నోస్ (నల్ల మచ్చ తెగులు)", "descriptive"),
+ "mango_hopper": ("తేనెమంచు పురుగు", "p25"), "mango_fruit_fly": ("పండు ఈగ", "descriptive"), "mango_sooty_mould": ("మసి తెగులు", "p7"),
+ "blackgram_yellow_mosaic": ("పల్లాకు తెగులు", "p20"), "blackgram_powdery_mildew": ("బూడిద తెగులు", "p20"),
+ "blackgram_cercospora_leaf_spot": ("సెర్కోస్పోరా ఆకుమచ్చ తెగులు", "descriptive"), "blackgram_leaf_crinkle": ("ఆకు ముడత తెగులు", "descriptive"),
+ "blackgram_rust": ("తుప్పు తెగులు", "p20"), "blackgram_pod_borer": ("మారుకా మచ్చల పురుగు", "p20"),
+ "potato_early_blight": ("ఆకుమాడు తెగులు", "p21"), "potato_late_blight": ("ఆలస్యపు ఆకుమాడు తెగులు", "descriptive"),
+ "potato_black_scurf": ("నల్ల మచ్చ తెగులు (బ్లాక్ స్కర్ఫ్)", "descriptive"), "potato_bacterial_wilt": ("బాక్టీరియా ఎండు తెగులు", "p18"),
+ "potato_common_scab": ("గజ్జి తెగులు", "descriptive"),
+ "onion_purple_blotch": ("ఊదా మచ్చ తెగులు", "descriptive"), "onion_stemphylium_blight": ("ఆకు ఎండు తెగులు (స్టెంఫీలియం)", "descriptive"),
+ "onion_downy_mildew": ("బూజు తెగులు", "descriptive"), "onion_thrips": ("తామర పురుగు", "p22"), "onion_basal_rot": ("అడుగు కుళ్ళు తెగులు", "descriptive"),
+}

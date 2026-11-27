@@ -1,0 +1,109 @@
+{
+ "pathogen": "Thrips parvispinus",
+ "symptoms": [
+  "You will see deep scratches and holes on the underside of leaves.",
+  "The underside of the leaf turns reddish brown while the top looks yellow and blotchy.",
+  "Leaves may become twisted and show yellow streaks.",
+  "Flowers develop brown streaks on the petals.",
+  "Flowers may dry up, wither, and drop off the plant.",
+  "The plant stops growing well and produces fewer fruits."
+ ],
+ "photo_cues": [
+  "reddish brown leaf underside",
+  "yellow blotchy leaf top",
+  "twisted leaf shape",
+  "brown streaks on petals",
+  "yellow streaks on leaves"
+ ],
+ "favourable_conditions": "Heavy rainfall during the monsoon season encourages the spread of this pest.",
+ "prevention": [
+  "Choose plant varieties that are resistant or tolerant to thrips.",
+  "Use healthy seedlings and treat seeds with recommended products before planting.",
+  "Keep your fields and bunds free of weeds that can host the pest.",
+  "Use proper spacing between plants to avoid overcrowding.",
+  "Plant tall crops like maize or sorghum around the edge of your field to act as a barrier."
+ ],
+ "practices": [
+  "Regularly check your plants and nearby weeds for signs of thrips.",
+  "Pull out and burn or bury plants that are heavily infested.",
+  "Use blue or yellow sticky traps to catch the insects.",
+  "Use a sprinkler system to wash the insects off the plants with a strong jet of water.",
+  "Rake or turn the soil frequently to kill the pupae hiding in the ground."
+ ],
+ "organic_bio": [
+  {
+   "text": "Beauveria bassiana at 4.00 g or ml/L",
+   "page": 0
+  },
+  {
+   "text": "Pseudomonas fluorescence at 20g/L",
+   "page": 0
+  },
+  {
+   "text": "Bacillus albus at 20 g/L",
+   "page": 0
+  },
+  {
+   "text": "Neem Seed Kernel Extract or 5% Neem Seed Powder Extract",
+   "page": 0
+  },
+  {
+   "text": "0.50% Neem oil (5 ml/L)",
+   "page": 0
+  },
+  {
+   "text": "5% Vitex negundo extract (50 ml/L)",
+   "page": 0
+  },
+  {
+   "text": "Azadirachtin 3000 PPM at 2 ml/L",
+   "page": 0
+  },
+  {
+   "text": "2% Fish Oil Rosin Soap (20 ml/L)",
+   "page": 0
+  },
+  {
+   "text": "Sea weed extract at 2 ml/L",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Imidacloprid",
+  "Acephate",
+  "Acetamiprid",
+  "Carbofuran",
+  "Cyantraniliprole",
+  "Dimethoate",
+  "Emamectin benzoate",
+  "Ethion",
+  "Fenpropathrin",
+  "Fipronil",
+  "Lambdacyhalothrin",
+  "Methomyl",
+  "Oxydemeton-methyl",
+  "Spinosad",
+  "Spirotetramat",
+  "Thiacloprid",
+  "Thiamethoxam",
+  "Tolfenpyrad",
+  "Diafenthiuron",
+  "Bifenthrin",
+  "Lufenuron",
+  "Flubendiamide",
+  "Hexythiazox",
+  "Indoxacarb",
+  "Profenofos",
+  "Fenpyroximate"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "extra:ppqs_thrips_parvispinus_core",
+  "extra:ppqs_thrips_parvispinus_adhoc",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

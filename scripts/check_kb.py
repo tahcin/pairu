@@ -37,6 +37,15 @@ def main():
             if not (0 <= o["source"] < len(d["sources"])): errs.append(f"{i}: organic_bio source index out of range")
         for s in d["sources"]:
             if not s.get("url", "").startswith("http"): errs.append(f"{i}: bad source url")
+        n = len(d["sources"])
+        for a in d.get("avoid", []):
+            if not (0 <= a["source"] < n) or not a["text"]: errs.append(f"{i}: bad avoid item")
+        for r in d.get("recommended_actives", []):
+            if not (0 <= r["source"] < n) or not r["active"]: errs.append(f"{i}: bad recommended_actives item")
+        if not d["names"].get("te"): errs.append(f"{i}: no Telugu name")
+        ns = d.get("names_source", {})
+        if set(ns) - set(d["names"]) or any(v not in ("vikaspedia", "descriptive") for v in ns.values()):
+            errs.append(f"{i}: bad names_source")
         for la in d["look_alikes"]:
             if la not in byid: errs.append(f"{i}: look-alike {la} missing")
             elif not any({q["yes"], q["no"]} == {i, la} for q in d["discriminators"]):
@@ -47,7 +56,22 @@ def main():
             bad = [t for t in d["cibrc_targets"] if t not in targets.get(d["crop"], set())]
             if bad: errs.append(f"{i}: cibrc targets not in targets_by_crop: {bad}")
             if not d["cibrc_targets"]: no_match.append(i)
-    for e in errs: print("ERROR", e)
+    te_path = os.path.join(APP, "data", "kb_te.json")
+    if os.path.exists(te_path):
+        te = json.load(open(te_path))
+        miss = 0
+        for d in kb["diseases"]:
+            t = te.get("diseases", {}).get(d["id"], {})
+            for k in ("symptoms", "prevention", "practices"):
+                if len(t.get(k, [])) != len(d[k]): miss += 1; errs.append(f"{d['id']}: kb_te {k} has {len(t.get(k, []))} of {len(d[k])}")
+            if len(t.get("organic_bio", [])) != len(d["organic_bio"]): errs.append(f"{d['id']}: kb_te organic_bio count")
+            if len(t.get("avoid", [])) != len(d.get("avoid", [])): errs.append(f"{d['id']}: kb_te avoid count")
+            if d["favourable_conditions"] and not t.get("favourable_conditions"): errs.append(f"{d['id']}: kb_te favourable_conditions missing")
+        for d in kb["diseases"]:
+            for q in d["discriminators"]:
+                if q["id"] not in te.get("questions", {}): errs.append(f"kb_te: question {q['id']} missing")
+        if "\u2014" in json.dumps(te, ensure_ascii=False): errs.append("em dash in kb_te.json")
+    for e in sorted(set(errs)): print("ERROR", e)
     print(f"{len(kb['crops'])} crops, {len(ids)} entries, {sum(1 for d in kb['diseases'] if d['kind']!='abiotic')} problems")
     print("no CIB&RC match:", ", ".join(no_match) or "none")
     sys.exit(1 if errs else 0)

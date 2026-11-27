@@ -1,0 +1,79 @@
+{
+ "pathogen": "Ustilaginoidea virens",
+ "symptoms": [
+  "Individual rice grains turn into a mass of yellow fruiting bodies.",
+  "Velvety spore balls grow and cover the floral parts of the grain.",
+  "The spore balls start small and grow up to 1 cm in size.",
+  "Usually only a few grains in a panicle are infected while the rest stay healthy.",
+  "As the fungus grows, the balls burst and turn from orange to yellowish-green or greenish-black."
+ ],
+ "photo_cues": [
+  "Yellow velvety spore balls",
+  "Greenish black grain clusters",
+  "Orange coloured spore balls",
+  "Velvety texture on grains"
+ ],
+ "favourable_conditions": "The disease spreads in areas with high humidity, temperatures between 25 and 35 degrees Celsius, and moderate rainfall during the flowering stage.",
+ "prevention": [
+  "Use high quality disease-free seeds.",
+  "Plant your crop early to reduce the number of smut balls.",
+  "Rotate your paddy with crops that do not host this fungus.",
+  "Keep field bunds and irrigation channels clean to remove weeds.",
+  "Avoid using too much nitrogen fertilizer and use split applications instead."
+ ],
+ "practices": [
+  "Regularly monitor your fields for signs of the disease.",
+  "Remove and destroy infected plants at harvest time so the fungus does not fall into the soil.",
+  "Avoid working in the field when the plants are wet.",
+  "Drain the field periodically to reduce humidity instead of keeping it flooded."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pseudomonas fluorescence 10g/lit of water for 30 minutes (seed treatment)",
+   "page": 1
+  },
+  {
+   "text": "Trichoderma viridae @5-10 g/kg of seeds",
+   "page": 1
+  },
+  {
+   "text": "Pseudomonas fluorescence 5g/lit of water for 20 minutes (seedling dip)",
+   "page": 1
+  },
+  {
+   "text": "Neem cake @150 kg/ha",
+   "page": 1
+  },
+  {
+   "text": "Pseudomonas fluorescence 5g/lit of water (foliar spray)",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "carbendazim",
+  "copper oxychloride",
+  "Propiconazole",
+  "Hexaconazole",
+  "Chlorothalonil",
+  "captan",
+  "captafol",
+  "fentin hydroxide",
+  "mancozeb",
+  "Copper Hydroxide",
+  "Fluopyram",
+  "Tebuconazole",
+  "Picoxystrobin",
+  "Trifloxystrobin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_diseases_rice_7.txt",
+  "extra:ppqs_paddy_false_smut",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

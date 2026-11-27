@@ -1,0 +1,4 @@
+GEMINI_API_KEY=
+SARVAM_API_KEY=
+# Optional: used only when both Gemini models fail
+ANTHROPIC_API_KEY=

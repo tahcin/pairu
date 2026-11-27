@@ -56,6 +56,7 @@ CROP_RULES = [
     ("blackgram", r"\bblack\s*gram\b|\burd\s*bean\b|\burdbean\b|\burd\b|\burad\b"),
     ("potato", r"(?<!sweet )\bpotato(es)?\b"),
     ("onion", r"\bonions?\b"),
+    ("cashew", r"\bcashew(\s*nuts?)?\b"),
 ]
 
 
@@ -217,7 +218,7 @@ TARGET_FIXES = [
     (r"\btikka\s+leaf\s*spot\b", "tikka leaf spot"),
     (r"\bdirty\s+panicles\b", "dirty panicle"),
 ]
-CROP_WORDS = r"(rice|paddy|tomato|chilli|chillies|mango|brinjal|cotton|groundnut|maize|potato|onion|banana)"
+CROP_WORDS = r"(rice|paddy|tomato|chilli|chillies|mango|brinjal|cotton|groundnut|maize|potato|onion|banana|cashew)"
 MODIFIERS = {"early", "late", "leaf", "neck", "panicle", "node", "collar", "root", "stem", "pod", "fruit",
              "white", "green", "black", "yellow", "red", "downy", "powdery", "brown", "sheath", "foot"}
 

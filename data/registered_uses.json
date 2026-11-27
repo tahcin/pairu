@@ -68503,7 +68503,7 @@
   }
  },
  {
-  "crop_id": null,
+  "crop_id": "cashew",
   "crop_raw": "Cashew",
   "target_raw": "Tea mosquito bug and Thrips",
   "target_norm": "tea mosquito bug",
@@ -68524,7 +68524,7 @@
   }
  },
  {
-  "crop_id": null,
+  "crop_id": "cashew",
   "crop_raw": "Cashew",
   "target_raw": "Tea mosquito bug and Thrips",
   "target_norm": "thrips",

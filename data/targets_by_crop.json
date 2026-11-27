@@ -253,6 +253,16 @@
    "rows": 6
   }
  ],
+ "cashew": [
+  {
+   "target_norm": "tea mosquito bug",
+   "rows": 1
+  },
+  {
+   "target_norm": "thrips",
+   "rows": 1
+  }
+ ],
  "chilli": [
   {
    "target_norm": "alternaria leaf spot",

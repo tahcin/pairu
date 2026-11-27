@@ -232,9 +232,9 @@ export function Film() {
       show(".c-name", 0.272, 0.35);
       tl.fromTo(q(".c-name .g"), { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.02, stagger: 0.001 }, 0.274);
       tl.fromTo(q(".c-name .sub"), { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.012, stagger: 0.008 }, 0.3);
-      show(".c-every", 0.39, 0.432);
-      show(".c-crops", 0.44, 0.488);
-      tl.fromTo(q(".c-crops .lab"), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.01, stagger: 0.0012 }, 0.446);
+      show(".c-every", 0.39, 0.428);
+      show(".c-crops", 0.447, 0.488);
+      tl.fromTo(q(".c-crops .lab"), { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.01, stagger: 0.0012 }, 0.452);
       show(".c-paddy", 0.498, 0.54);
       show(".c-brown", 0.553, 0.596);
       show(".c-rows", 0.606, 0.643);

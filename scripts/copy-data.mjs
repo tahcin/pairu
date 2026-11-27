@@ -21,6 +21,10 @@ for (const l of ["hi", "ta", "kn", "mr", "bn", "or", "gu", "pa", "ml"]) {
     console.log(`kb_${l}.json <- data/kb_${l}.json`);
   }
 }
+if (existsSync("data/confirm_questions.json")) {
+  copyFileSync("data/confirm_questions.json", "public/data/confirm_questions.json");
+  console.log("confirm_questions.json <- data/confirm_questions.json");
+}
 if (existsSync("data/kvk_ap.json")) {
   copyFileSync("data/kvk_ap.json", "public/data/kvk_ap.json");
   console.log("kvk_ap.json <- data/kvk_ap.json");

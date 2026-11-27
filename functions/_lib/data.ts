@@ -65,6 +65,22 @@ function registerKb(kb: KB, lang: string, doc: any) {
   registerStatic(lang, pairs);
 }
 
+// Second-look confirm questions ("Do you see <cue>?", built in verify.ts) in every language, from
+// data/confirm_questions.json. Applied at response time, so cached diagnoses are translated too.
+function registerConfirm(kb: KB, doc: any) {
+  if (!doc || typeof doc !== "object") return;
+  for (const [lang, v] of Object.entries(doc as Record<string, any>)) {
+    if (!v || typeof v !== "object" || typeof v.template !== "string" || !v.cues) continue;
+    const pairs: [string, string][] = [];
+    for (const d of kb.diseases) {
+      const cue = d.photo_cues?.[0];
+      const tr = v.cues[d.id];
+      if (cue && typeof tr === "string") pairs.push([`Do you see ${cue.trim().replace(/\.$/, "")}?`, v.template.replace("{cue}", tr)]);
+    }
+    registerStatic(lang, pairs);
+  }
+}
+
 export function getData(env: Env, request: Request): Promise<Data> {
   if (!cached) {
     const origin = new URL(request.url).origin;
@@ -79,8 +95,10 @@ export function getData(env: Env, request: Request): Promise<Data> {
       // Static KB translations for every language (kb_te.json and kb_<lang>.json), registered as
       // English -> translation pairs so no live translation is needed.
       const others = await Promise.all(STATIC_LANGS.map((l) => load<any>(env, origin, `kb_${l}.json`, null)));
+      const confirmQs = await load<any>(env, origin, "confirm_questions.json", null);
       registerKb(kb, "te", te);
       STATIC_LANGS.forEach((l, i) => registerKb(kb, l, others[i]));
+      registerConfirm(kb, confirmQs);
       const diseaseById = new Map(kb.diseases.map((d) => [d.id, d]));
       // Accept {diseases: [{id, ...}]}, {diseases: {id: {...}}} or a plain {id: {...}} map.
       const kbTe = new Map<string, Record<string, any>>();

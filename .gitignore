@@ -12,3 +12,7 @@ scripts/raw/
 !.dev.vars.example
 !.env.example
 public/data/
+
+# eval: downloaded images and archives (manifest eval/testset.json is committed)
+eval/images/
+eval/raw/

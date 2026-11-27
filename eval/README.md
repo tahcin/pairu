@@ -80,6 +80,28 @@ What this shows, honestly. v2 gives about the same number of right answers as v1
 
 Reproduce: start `eval/serve_local.sh`, then `python3 -I eval/run_v2.py`, then `python3 -I eval/score.py eval/runs/20261127-173944.jsonl && python3 -I eval/score_v2.py eval/runs/v2-20261127-183716.jsonl`. `results.json` keeps the v1 numbers and adds a `v2` block.
 
+## Lab vs field, with a PlantVillage CNN baseline
+
+Two other AG-03 entries use CNNs trained on PlantVillage, so we added one as a baseline and built a second, harder test set of real field photos.
+
+**The CNN.** `neghani/plantvillage-mobilenetv2` at tag v1.0 (commit 3841549, Apache-2.0), a MobileNetV2 fine-tuned on PlantVillage colour images only, 38 classes, run locally on CPU with no model API calls (`run_cnn.py`). Later tags of the same model are also trained on PlantDoc, so we did not use them. It got the same help as Pairu: its scores were limited to the true crop's classes, and it says not sure below 0.5, as its model card recommends. Its `splits.json` lists the exact photos it was trained on, which matters here: 52 of our 65 in-list lab photos were in its training split and 8 in its validation split; on the 5 that were in its held-out test split it was right on 4.
+
+**The field set.** `fieldset.json` holds 44 photos from PlantDoc (Singh et al. 2020, [CC BY 4.0](https://github.com/pratikkayal/PlantDoc-Dataset)), 4 for each of the 11 classes Pairu holds for tomato, potato and maize, drawn from PlantDoc's test split with seed 20261127 and frozen before any model run (`build_fieldset.py`). They are real field and web photos with several leaves, hands, soil and stock-photo marks, and some PlantDoc labels are known to be noisy. Pairu v2 ran on them through the local server with the app's own code (`run_field.py`), 88 Gemini calls and no Claude; the first look came from gemini-3.1-flash-lite on 31 photos and from its fallback gemini-3.5-flash-lite on 13. The bare model was not run on PlantDoc, to stay within the Gemini budget.
+
+| Photos | System | n | Right | Answered and wrong | Refused |
+|---|---|---|---|---|---|
+| Lab: PlantVillage (tomato, potato, maize) | Pairu v2 | 65 | 46 (70.8%) | 10 (15.4%) | 9 |
+| | PlantVillage CNN | 65 | 64 (98.5%) | 1 (1.5%) | 0 |
+| | Bare model | 65 | 29 (44.6%) | 36 (55.4%) | 0 |
+| Field: rice (Sethy et al.) | Pairu v2 | 15 | 12 (80.0%) | 2 (13.3%) | 1 |
+| | PlantVillage CNN | 15 | cannot answer: no rice classes | | |
+| | Bare model | 15 | 9 (60.0%) | 6 (40.0%) | 0 |
+| Field: PlantDoc (tomato, potato, maize) | Pairu v2 | 44 | 31 (70.5%) | 8 (18.2%) | 5 |
+| | PlantVillage CNN | 44 | 17 (38.6%) | 23 (52.3%) | 4 |
+| | Bare model | 44 | not run | | |
+
+What this shows. On lab photos the CNN is close to perfect, but it had seen almost all of them in training, so that number says little. On field photos the same CNN fell to 17 right out of 44 and was wrong while answering on 23; without the crop hint it was right on only 12 of 44. Pairu v2 held about the same level on field photos as on lab photos (31 of 44 right, 8 wrong; the farmer was asked on 7) and is the only one of the two that can handle paddy. The CNN does have classes Pairu does not hold (for example tomato leaf mould and target spot) and named all 12 of those lab photos correctly. Pairu's PlantDoc numbers include the second look's yes/no questions answered by the model and, where it asked, by a script from the true label (best case). With 44 photos, each percentage has a wide margin.
+
 ## Limits
 
 - Most images are PlantVillage lab photos of a single leaf on a plain background, which are far easier than a phone photo taken in a field. The rice images are real field photos and are reported separately.

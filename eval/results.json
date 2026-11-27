@@ -1383,6 +1383,123 @@
    }
   ]
  },
+ "lab_vs_field": {
+  "summary": "On lab photos the PlantVillage CNN was right on 64 of 65, but it had been trained on most of those exact photos. On 44 PlantDoc field photos it was right on 17 and wrong on 23; Pairu v2 was right on 31 of 44 and wrong on 8. The CNN has no rice classes at all.",
+  "table": [
+   {
+    "photos": "Lab: PlantVillage, tomato, potato, maize",
+    "system": "Pairu v2",
+    "n": 65,
+    "right": "46 (70.8%)",
+    "answered_and_wrong": "10 (15.4%)",
+    "refused": 9,
+    "note": ""
+   },
+   {
+    "photos": "Lab: PlantVillage, tomato, potato, maize",
+    "system": "PlantVillage CNN",
+    "n": 65,
+    "right": "64 (98.5%)",
+    "answered_and_wrong": "1 (1.5%)",
+    "refused": 0,
+    "note": "the CNN was trained on most of these exact photos (see cnn.lab_photos_in_cnn_training)"
+   },
+   {
+    "photos": "Lab: PlantVillage, tomato, potato, maize",
+    "system": "Bare model",
+    "n": 65,
+    "right": "29 (44.6%)",
+    "answered_and_wrong": "36 (55.4%)",
+    "refused": 0,
+    "note": ""
+   },
+   {
+    "photos": "Field: rice, Sethy et al.",
+    "system": "Pairu v2",
+    "n": 15,
+    "right": "12 (80.0%)",
+    "answered_and_wrong": "2 (13.3%)",
+    "refused": 1,
+    "note": ""
+   },
+   {
+    "photos": "Field: rice, Sethy et al.",
+    "system": "PlantVillage CNN",
+    "n": "-",
+    "right": "-",
+    "answered_and_wrong": "-",
+    "refused": "-",
+    "note": "no rice classes in PlantVillage, so it cannot answer"
+   },
+   {
+    "photos": "Field: rice, Sethy et al.",
+    "system": "Bare model",
+    "n": 15,
+    "right": "9 (60.0%)",
+    "answered_and_wrong": "6 (40.0%)",
+    "refused": 0,
+    "note": ""
+   },
+   {
+    "photos": "Field: PlantDoc, tomato, potato, maize",
+    "system": "Pairu v2",
+    "n": 44,
+    "right": "31 (70.5%)",
+    "answered_and_wrong": "8 (18.2%)",
+    "refused": 5,
+    "note": "farmer asked on 7"
+   },
+   {
+    "photos": "Field: PlantDoc, tomato, potato, maize",
+    "system": "PlantVillage CNN",
+    "n": 44,
+    "right": "17 (38.6%)",
+    "answered_and_wrong": "23 (52.3%)",
+    "refused": 4,
+    "note": ""
+   },
+   {
+    "photos": "Field: PlantDoc, tomato, potato, maize",
+    "system": "Bare model",
+    "n": "-",
+    "right": "-",
+    "answered_and_wrong": "-",
+    "refused": "-",
+    "note": "not run, to stay within the Gemini budget"
+   }
+  ],
+  "method": {
+   "field_set": "eval/fieldset.json: 44 PlantDoc photos (Singh et al. 2020, CC BY 4.0), 4 for each of 11 classes Pairu holds, from PlantDoc's test split, seed 20261127, frozen before any model run. PlantDoc photos are real field and web photos, and some of its labels are known to be noisy.",
+   "pairu_v2": "The same code as the live app through the local server, Gemini only (first look gemini-3.1-flash-lite, second look gemini-3.5-flash-lite, each with the other as fallback), 88 Gemini calls. Questions left for the farmer were answered from the true label (best case).",
+   "cnn": "neghani/plantvillage-mobilenetv2@v1.0 (3841549854f08c2a944f6baa44cdd8b3d62d469d), Apache-2.0, MobileNetV2 fine-tuned on PlantVillage only, run on CPU. Its scores were limited to the true crop's classes (the farmer picks the crop in Pairu too) and it says not sure below 0.5, as its model card recommends.",
+   "bare_model": "gemini-3.1-flash-lite with an open question, from the v1 run; not run on PlantDoc."
+  }
+ },
+ "cnn": {
+  "model": "neghani/plantvillage-mobilenetv2@v1.0 (3841549854f08c2a944f6baa44cdd8b3d62d469d)",
+  "lab_photos_in_cnn_training": {
+   "test": {
+    "n": 5,
+    "right": 4
+   },
+   "train": {
+    "n": 52,
+    "right": 52
+   },
+   "validation": {
+    "n": 8,
+    "right": 8
+   }
+  },
+  "lab_out_of_list_named_true_disease": "12 of 12 (PlantVillage has these classes; Pairu's list does not)",
+  "plantdoc_without_crop_hint_right": "12 of 44",
+  "plantdoc_same_photos_pairu_ran": {
+   "n": 44,
+   "right": 17,
+   "wrong": 23
+  },
+  "run_file": "cnn-20261127-191418.jsonl"
+ },
  "summary": "On 80 held-out labelled leaf photos of diseases Pairu holds, Pairu named the right disease 71.2% of the time and was confidently wrong 20.0% of the time. The same model asked an open question was right 47.5% of the time and confidently wrong 52.5% of the time.",
  "headline": [
   {
@@ -3558,5 +3675,404 @@
    "b_how": "bold:bacterial leaf blight",
    "b_answered": true
   }
- ]
+ ],
+ "pairu_v2_plantdoc_rows": [
+  {
+   "file": "pd_tomato_000.jpg",
+   "true_id": "tomato_early_blight",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": null
+  },
+  {
+   "file": "pd_tomato_001.jpg",
+   "true_id": "tomato_early_blight",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_002.jpg",
+   "true_id": "tomato_early_blight",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": true,
+   "cnn": "tomato_early_blight"
+  },
+  {
+   "file": "pd_tomato_003.jpg",
+   "true_id": "tomato_early_blight",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_early_blight"
+  },
+  {
+   "file": "pd_tomato_004.jpg",
+   "true_id": "tomato_late_blight",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_005.jpg",
+   "true_id": "tomato_late_blight",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_006.jpg",
+   "true_id": "tomato_late_blight",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_007.jpg",
+   "true_id": "tomato_late_blight",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 1,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_008.jpg",
+   "true_id": "tomato_septoria_leaf_spot",
+   "status": "decided",
+   "final": "tomato_septoria_leaf_spot",
+   "stage": 2,
+   "asked": true,
+   "cnn": "tomato_bacterial_spot"
+  },
+  {
+   "file": "pd_tomato_009.jpg",
+   "true_id": "tomato_septoria_leaf_spot",
+   "status": "decided",
+   "final": "tomato_septoria_leaf_spot",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_early_blight"
+  },
+  {
+   "file": "pd_tomato_010.jpg",
+   "true_id": "tomato_septoria_leaf_spot",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_septoria_leaf_spot"
+  },
+  {
+   "file": "pd_tomato_011.jpg",
+   "true_id": "tomato_septoria_leaf_spot",
+   "status": "decided",
+   "final": "tomato_septoria_leaf_spot",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_bacterial_spot"
+  },
+  {
+   "file": "pd_tomato_012.jpg",
+   "true_id": "tomato_bacterial_spot",
+   "status": "unsure",
+   "final": null,
+   "stage": 1,
+   "asked": false,
+   "cnn": null
+  },
+  {
+   "file": "pd_tomato_013.jpg",
+   "true_id": "tomato_bacterial_spot",
+   "status": "decided",
+   "final": "tomato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_early_blight"
+  },
+  {
+   "file": "pd_tomato_014.jpg",
+   "true_id": "tomato_bacterial_spot",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_bacterial_spot"
+  },
+  {
+   "file": "pd_tomato_015.jpg",
+   "true_id": "tomato_bacterial_spot",
+   "status": "decided",
+   "final": "tomato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_016.jpg",
+   "true_id": "tomato_leaf_curl",
+   "status": "decided",
+   "final": "tomato_leaf_curl",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_leaf_curl"
+  },
+  {
+   "file": "pd_tomato_017.jpg",
+   "true_id": "tomato_leaf_curl",
+   "status": "decided",
+   "final": "tomato_leaf_curl",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_early_blight"
+  },
+  {
+   "file": "pd_tomato_018.jpg",
+   "true_id": "tomato_leaf_curl",
+   "status": "decided",
+   "final": "tomato_leaf_curl",
+   "stage": 1,
+   "asked": false,
+   "cnn": null
+  },
+  {
+   "file": "pd_tomato_019.jpg",
+   "true_id": "tomato_leaf_curl",
+   "status": "unsure",
+   "final": null,
+   "stage": 2,
+   "asked": false,
+   "cnn": null
+  },
+  {
+   "file": "pd_tomato_020.jpg",
+   "true_id": "tomato_healthy",
+   "status": "decided",
+   "final": "tomato_healthy",
+   "stage": 1,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_021.jpg",
+   "true_id": "tomato_healthy",
+   "status": "decided",
+   "final": "tomato_healthy",
+   "stage": 1,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_022.jpg",
+   "true_id": "tomato_healthy",
+   "status": "decided",
+   "final": "tomato_healthy",
+   "stage": 2,
+   "asked": false,
+   "cnn": "tomato_late_blight"
+  },
+  {
+   "file": "pd_tomato_023.jpg",
+   "true_id": "tomato_healthy",
+   "status": "decided",
+   "final": "tomato_healthy",
+   "stage": 1,
+   "asked": false,
+   "cnn": "tomato_septoria_leaf_spot"
+  },
+  {
+   "file": "pd_potato_024.jpg",
+   "true_id": "potato_early_blight",
+   "status": "decided",
+   "final": "potato_early_blight",
+   "stage": 1,
+   "asked": false,
+   "cnn": "potato_late_blight"
+  },
+  {
+   "file": "pd_potato_025.jpg",
+   "true_id": "potato_early_blight",
+   "status": "decided",
+   "final": "potato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "potato_early_blight"
+  },
+  {
+   "file": "pd_potato_026.jpg",
+   "true_id": "potato_early_blight",
+   "status": "decided",
+   "final": "potato_early_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "potato_late_blight"
+  },
+  {
+   "file": "pd_potato_027.jpg",
+   "true_id": "potato_early_blight",
+   "status": "decided",
+   "final": "potato_late_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "potato_early_blight"
+  },
+  {
+   "file": "pd_potato_028.jpg",
+   "true_id": "potato_late_blight",
+   "status": "decided",
+   "final": "potato_late_blight",
+   "stage": 1,
+   "asked": false,
+   "cnn": "potato_early_blight"
+  },
+  {
+   "file": "pd_potato_029.jpg",
+   "true_id": "potato_late_blight",
+   "status": "unsure",
+   "final": null,
+   "stage": 1,
+   "asked": false,
+   "cnn": "potato_late_blight"
+  },
+  {
+   "file": "pd_potato_030.jpg",
+   "true_id": "potato_late_blight",
+   "status": "decided",
+   "final": "potato_late_blight",
+   "stage": 2,
+   "asked": true,
+   "cnn": "potato_late_blight"
+  },
+  {
+   "file": "pd_potato_031.jpg",
+   "true_id": "potato_late_blight",
+   "status": "decided",
+   "final": "potato_late_blight",
+   "stage": 1,
+   "asked": false,
+   "cnn": "potato_early_blight"
+  },
+  {
+   "file": "pd_maize_032.jpg",
+   "true_id": "maize_common_rust",
+   "status": "decided",
+   "final": "maize_maydis_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_033.jpg",
+   "true_id": "maize_common_rust",
+   "status": "decided",
+   "final": "maize_common_rust",
+   "stage": 1,
+   "asked": false,
+   "cnn": "maize_grey_leaf_spot"
+  },
+  {
+   "file": "pd_maize_034.jpg",
+   "true_id": "maize_common_rust",
+   "status": "decided",
+   "final": "maize_maydis_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_035.jpg",
+   "true_id": "maize_common_rust",
+   "status": "decided",
+   "final": "maize_common_rust",
+   "stage": 1,
+   "asked": false,
+   "cnn": "maize_grey_leaf_spot"
+  },
+  {
+   "file": "pd_maize_036.jpg",
+   "true_id": "maize_turcicum_blight",
+   "status": "decided",
+   "final": "maize_grey_leaf_spot",
+   "stage": 2,
+   "asked": false,
+   "cnn": "maize_grey_leaf_spot"
+  },
+  {
+   "file": "pd_maize_037.jpg",
+   "true_id": "maize_turcicum_blight",
+   "status": "decided",
+   "final": "maize_turcicum_blight",
+   "stage": 2,
+   "asked": false,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_038.jpg",
+   "true_id": "maize_turcicum_blight",
+   "status": "decided",
+   "final": "maize_turcicum_blight",
+   "stage": 1,
+   "asked": false,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_039.jpg",
+   "true_id": "maize_turcicum_blight",
+   "status": "decided",
+   "final": "maize_turcicum_blight",
+   "stage": 2,
+   "asked": true,
+   "cnn": "maize_grey_leaf_spot"
+  },
+  {
+   "file": "pd_maize_040.jpg",
+   "true_id": "maize_grey_leaf_spot",
+   "status": "unsure",
+   "final": null,
+   "stage": 2,
+   "asked": true,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_041.jpg",
+   "true_id": "maize_grey_leaf_spot",
+   "status": "decided",
+   "final": "maize_grey_leaf_spot",
+   "stage": 2,
+   "asked": false,
+   "cnn": "maize_grey_leaf_spot"
+  },
+  {
+   "file": "pd_maize_042.jpg",
+   "true_id": "maize_grey_leaf_spot",
+   "status": "unsure",
+   "final": null,
+   "stage": 2,
+   "asked": true,
+   "cnn": "maize_turcicum_blight"
+  },
+  {
+   "file": "pd_maize_043.jpg",
+   "true_id": "maize_grey_leaf_spot",
+   "status": "decided",
+   "final": "maize_grey_leaf_spot",
+   "stage": 2,
+   "asked": true,
+   "cnn": "maize_grey_leaf_spot"
+  }
+ ],
+ "field_run_file": "field-20261127-191506.jsonl"
 }

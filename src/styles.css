@@ -1996,3 +1996,9 @@ h3 {
     display: none;
   }
 }
+
+/* "Other or not sure" sits under the crop grid as a quiet secondary row */
+.other-crop-row {
+  margin-top: var(--s3);
+  min-height: 56px;
+}

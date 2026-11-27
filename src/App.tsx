@@ -303,19 +303,22 @@ function Farmer() {
                     <span className="crop-name">{cropName(c.id)}</span>
                   </button>
                 ))}
-                <button
-                  className="crop-tile other"
-                  onClick={() => {
-                    setCrop(null);
-                    go("photo");
-                  }}
-                >
-                  <span className="crop-art">
-                    <CropIcon id="unknown" size={44} />
-                  </span>
-                  <span className="crop-name">{L("dontKnowCrop")}</span>
-                </button>
               </div>
+            )}
+            {crops.length > 0 && (
+              <button
+                className="row-btn other-crop-row"
+                onClick={() => {
+                  setCrop(null);
+                  go("photo");
+                }}
+              >
+                <span className="row-icon">
+                  <CropIcon id="unknown" size={26} />
+                </span>
+                <span className="row-label">{L("dontKnowCrop")}</span>
+                <ChevronRight />
+              </button>
             )}
             <HistoryEntry lang={lang} onOpen={() => go("history")} />
             <SiteFooter />

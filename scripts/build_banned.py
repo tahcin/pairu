@@ -180,7 +180,7 @@ def main():
             "source": {"file": FILE, "url": URL, "page": e["page"], "section": e["sec"][4]},
         }
         if extra:
-            rec["aka"] = extra.lower()
+            rec["aka"] = [extra.lower()]  # a list, as types.ts expects
         if formulation:
             rec["formulation"] = formulation
         seen[active] = rec
@@ -200,6 +200,23 @@ def main():
             # e.g. captafol is both banned (80% powder) and restricted; keep both rows
             pass
         out.append(rec)
+
+    # Orders that are not in the consolidated DPPQS list, added by hand (see data/SOURCES.md).
+    for active, aka in (("streptomycin sulfate", ["streptomycin", "streptomycin sulphate", "streptocycline"]),
+                        ("tetracycline hydrochloride", ["tetracycline", "tetracyclin hydrochloride"])):
+        out.append({
+            "active": active,
+            "aka": aka,
+            "status": "banned",
+            "note": ("Streptomycin + Tetracycline for agriculture: draft order S.O. 5295(E) of 17.12.2021 "
+                     "(Prohibition of Streptomycin + Tetracycline in agriculture Order, 2021) proposes no import, "
+                     "manufacture or formulation for agricultural use from 01.02.2022 and a complete ban on use in "
+                     "agriculture from 01.01.2024. We found no final notification, and the DPPQS consolidated list "
+                     "of 31.10.2026 does not list it; Pairu treats it as banned as a precaution, because the "
+                     "Registration Committee approved the phase-out in August 2021."),
+            "source": {"file": "egazette 231955.pdf", "url": "https://egazette.nic.in/WriteReadData/2021/231955.pdf",
+                       "page": 2, "section": "S.O. 5295(E), draft order, 17.12.2021"},
+        })
 
     for r in out:
         for k in ("note",):

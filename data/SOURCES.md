@@ -50,6 +50,10 @@ The document carries the CIB&RC disclaimer that it "has been compiled on the bas
 - Extra fields: `printed_name` (as printed), `aka` (the name in brackets, for example dbcp), `formulation` when a ban covers one formulation only (Captafol 80% powder), `banned_on_crops` (our crop ids that a restriction names) and `restricted_scope` (a short phrase when the restriction is not crop-specific).
 - 94 entries: 70 banned, 8 withdrawn, 16 restricted.
 
+### Antibiotics added by hand (27 Nov 2026)
+
+`banned.json` also holds streptomycin sulfate and tetracycline hydrochloride (the streptocycline mix), with status `banned`. The source is the Gazette of India draft order S.O. 5295(E), 17 December 2021, "Prohibition of Streptomycin + Tetracycline in agriculture Order, 2021" (`https://egazette.nic.in/WriteReadData/2021/231955.pdf`). It proposes no import, manufacture or formulation for agricultural use from 1 February 2022 and a complete ban on use in agriculture from 1 January 2024. A reviewer pointed us to it through Down To Earth (21 Dec 2021). We read the gazette itself: it is a draft that comes into force on final publication, we could not find a final notification, and the DPPQS consolidated list of 31.10.2026 does not include it. We still remove these rows from every card as a precaution, since the Registration Committee approved the phase-out in August 2021 and a farmer is better served by copper products and the bio options. The `aka` field in banned.json is now a list, as `functions/_lib/types.ts` expects (it was a string, so the join was matching single letters).
+
 ## hazard.json
 
 **Source:** World Health Organization, "The WHO Recommended Classification of Pesticides by Hazard and Guidelines to Classification, 2019 edition" (published 2020; the latest edition on WHO IRIS on 27 Nov 2026), ISBN 978-92-4-000566-2, https://iris.who.int/handle/10665/332193, file 9789240005662-eng.pdf. Licence CC BY-NC-SA 3.0 IGO.

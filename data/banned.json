@@ -154,7 +154,9 @@
    "page": 1,
    "section": "I.A"
   },
-  "aka": "dbcp"
+  "aka": [
+   "dbcp"
+  ]
  },
  {
   "active": "dichlorvos",
@@ -263,7 +265,9 @@
    "page": 1,
    "section": "I.A"
   },
-  "aka": "edb"
+  "aka": [
+   "edb"
+  ]
  },
  {
   "active": "fenarimol",
@@ -312,7 +316,9 @@
    "page": 1,
    "section": "I.A"
   },
-  "aka": "gamma-hch"
+  "aka": [
+   "gamma-hch"
+  ]
  },
  {
   "active": "linuron",
@@ -433,7 +439,9 @@
    "page": 2,
    "section": "I.A"
   },
-  "aka": "pcnb"
+  "aka": [
+   "pcnb"
+  ]
  },
  {
   "active": "pentachlorophenol",
@@ -542,7 +550,9 @@
    "page": 2,
    "section": "I.A"
   },
-  "aka": "camphechlor"
+  "aka": [
+   "camphechlor"
+  ]
  },
  {
   "active": "triazophos",
@@ -579,7 +589,9 @@
    "page": 2,
    "section": "I.A"
   },
-  "aka": "tca"
+  "aka": [
+   "tca"
+  ]
  },
  {
   "active": "trichlorfon",
@@ -689,7 +701,9 @@
    "page": 2,
    "section": "I.C"
   },
-  "aka": "pdcb"
+  "aka": [
+   "pdcb"
+  ]
  },
  {
   "active": "simazine",
@@ -822,7 +836,9 @@
    "page": 3,
    "section": "II"
   },
-  "aka": "morestan"
+  "aka": [
+   "morestan"
+  ]
  },
  {
   "active": "dicrotophos",
@@ -895,7 +911,9 @@
    "page": 3,
    "section": "II"
   },
-  "aka": "phosvel"
+  "aka": [
+   "phosvel"
+  ]
  },
  {
   "active": "mephosfolan",
@@ -920,7 +938,9 @@
    "page": 3,
    "section": "II"
   },
-  "aka": "phosdrin"
+  "aka": [
+   "phosdrin"
+  ]
  },
  {
   "active": "disulfoton",
@@ -1157,5 +1177,36 @@
   },
   "banned_on_crops": [],
   "restricted_scope": "all crops except wheat"
+ },
+ {
+  "active": "streptomycin sulfate",
+  "aka": [
+   "streptomycin",
+   "streptomycin sulphate",
+   "streptocycline"
+  ],
+  "status": "banned",
+  "note": "Streptomycin + Tetracycline for agriculture: draft order S.O. 5295(E) of 17.12.2021 (Prohibition of Streptomycin + Tetracycline in agriculture Order, 2021) proposes no import, manufacture or formulation for agricultural use from 01.02.2022 and a complete ban on use in agriculture from 01.01.2024. We found no final notification, and the DPPQS consolidated list of 31.10.2026 does not list it; Pairu treats it as banned as a precaution, because the Registration Committee approved the phase-out in August 2021.",
+  "source": {
+   "file": "egazette 231955.pdf",
+   "url": "https://egazette.nic.in/WriteReadData/2021/231955.pdf",
+   "page": 2,
+   "section": "S.O. 5295(E), draft order, 17.12.2021"
+  }
+ },
+ {
+  "active": "tetracycline hydrochloride",
+  "aka": [
+   "tetracycline",
+   "tetracyclin hydrochloride"
+  ],
+  "status": "banned",
+  "note": "Streptomycin + Tetracycline for agriculture: draft order S.O. 5295(E) of 17.12.2021 (Prohibition of Streptomycin + Tetracycline in agriculture Order, 2021) proposes no import, manufacture or formulation for agricultural use from 01.02.2022 and a complete ban on use in agriculture from 01.01.2024. We found no final notification, and the DPPQS consolidated list of 31.10.2026 does not list it; Pairu treats it as banned as a precaution, because the Registration Committee approved the phase-out in August 2021.",
+  "source": {
+   "file": "egazette 231955.pdf",
+   "url": "https://egazette.nic.in/WriteReadData/2021/231955.pdf",
+   "page": 2,
+   "section": "S.O. 5295(E), draft order, 17.12.2021"
+  }
  }
 ]

@@ -1,8 +1,8 @@
 // Pairu service worker: the app opens offline and on weak networks. The app shell, sample photos
 // and the crop list are cached; advice cards already seen are kept for offline reading. Diagnosis,
 // voice and weather always need the network.
-const VERSION = "pairu-v2";
-const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
+const VERSION = "pairu-v3";
+const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png", "/fonts/Geist-Variable.woff2"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -44,15 +44,15 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) {
-    // The Geist font from jsDelivr.
-    if (url.hostname === "cdn.jsdelivr.net") event.respondWith(cacheFirst(req));
+    // Noto Sans for the Indian scripts (stylesheet and font files) from Google Fonts.
+    if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") event.respondWith(cacheFirst(req));
     return;
   }
   if (req.mode === "navigate") {
     event.respondWith(networkFirst(req, "/index.html"));
     return;
   }
-  if (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/samples/") || SHELL.includes(url.pathname)) {
+  if (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/samples/") || url.pathname.startsWith("/fonts/") || SHELL.includes(url.pathname)) {
     event.respondWith(cacheFirst(req));
     return;
   }

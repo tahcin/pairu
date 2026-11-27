@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#2e5a33" />
+    <meta name="theme-color" content="#f6f1e7" />
     <meta name="description" content="Photograph a sick leaf and hear, in your own language, what the disease is, how sure we are, and what to do." />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Noto Sans for each Indian script. Google serves it in unicode-range slices, so a phone only
+         downloads the script on screen; it loads after first paint and swaps in. -->
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400..700&family=Noto+Sans+Devanagari:wght@400..700&family=Noto+Sans+Gujarati:wght@400..700&family=Noto+Sans+Gurmukhi:wght@400..700&family=Noto+Sans+Kannada:wght@400..700&family=Noto+Sans+Malayalam:wght@400..700&family=Noto+Sans+Oriya:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&display=swap"
+    />
     <title>Pairu</title>
+    <style>
+      html,body{margin:0;background:#f6f1e7}
+    </style>
   </head>
   <body>
     <div id="root"></div>

@@ -49,10 +49,11 @@ h3 {
   padding: 0 var(--gutter) var(--s8);
 }
 
-/* Screen entrance: a short fade and lift, so each step feels like the next page, not a jump. */
+/* Screen entrance: a short fade, so each step feels like the next page, not a jump. Opacity only:
+   a transform here would trap the fixed action bar and the sheets inside the screen. */
 .screen,
 .advice {
-  animation: enter var(--t-slow) var(--ease) both;
+  animation: fade var(--t-slow) var(--ease) both;
 }
 @keyframes enter {
   from {
@@ -558,9 +559,9 @@ h3 {
 .leaf-guide {
   position: absolute;
   left: 50%;
-  top: 44%;
-  width: 44%;
-  max-width: 190px;
+  top: 38%;
+  height: 46%;
+  max-width: 60%;
   transform: translate(-50%, -50%);
   fill: none;
   stroke: rgba(255, 255, 255, 0.32);
@@ -612,15 +613,15 @@ h3 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 30px;
+  bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--s2);
 }
 .shutter-ring {
-  width: 84px;
-  height: 84px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background: var(--surface);
   color: var(--leaf-deep);
@@ -1087,7 +1088,8 @@ h3 {
   color: var(--leaf);
 }
 .kcc-num {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
+  white-space: nowrap;
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   font-variant-numeric: tabular-nums;
@@ -1515,7 +1517,7 @@ h3 {
   line-height: 1.3;
 }
 .stat-value {
-  font-size: var(--fs-lg);
+  font-size: 20px;
   font-weight: var(--fw-bold);
   line-height: 1.25;
   font-variant-numeric: tabular-nums;

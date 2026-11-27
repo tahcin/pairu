@@ -1,31 +1,35 @@
-// Simple drawn crop icons, one per crop id. Flat shapes, readable at 56px.
-const LEAF = "#4E7D3A";
-const LEAF_DARK = "#355C27";
-const STEM = "#6B8F3E";
+// Drawn crop icons, one per crop id, in one style: flat filled shapes, no outlines, a base tone
+// and one shade, on a 64 px grid with the object filling about 44 px. Readable at 48 px.
+const LEAF = "#5C9443";
+const LEAF_DARK = "#3D7231";
+const STEM = "#4E7F36";
 
 const icons: Record<string, JSX.Element> = {
   paddy: (
-    <g fill="none" strokeLinecap="round">
-      <path d="M32 58 C32 42 30 28 24 14" stroke={STEM} strokeWidth="3" />
-      <path d="M32 58 C33 42 36 30 42 18" stroke={STEM} strokeWidth="3" />
-      <path d="M32 58 C30 46 22 38 12 34" stroke={LEAF} strokeWidth="3" />
-      <path d="M32 58 C35 46 44 40 54 38" stroke={LEAF} strokeWidth="3" />
+    <g>
+      <path d="M32 58 C31.5 46 30 34 25 22" stroke={STEM} strokeWidth="3" fill="none" strokeLinecap="round" />
+      <path d="M32 58 C32.5 46 35 36 40 26" stroke={STEM} strokeWidth="3" fill="none" strokeLinecap="round" />
+      <path d="M32 58 C28 48 20 43 9 42 C18 38 27 42 32 52 Z" fill={LEAF} />
+      <path d="M32 58 C36 48 44 43 55 41 C46 37 37 41 32 52 Z" fill={LEAF_DARK} />
       {[0, 1, 2, 3, 4].map((i) => (
-        <ellipse key={`a${i}`} cx={24 + i * 0.4 - 3} cy={14 + i * 5} rx="2.6" ry="4" fill="#D9A93B" transform={`rotate(-30 ${21 + i * 0.4} ${14 + i * 5})`} />
+        <ellipse key={`a${i}`} cx={23.5 - i * 0.9} cy={21 - i * 3.6} rx="2.4" ry="3.6" fill={i % 2 ? "#D29A2C" : "#E3B444"} transform={`rotate(-28 ${23.5 - i * 0.9} ${21 - i * 3.6})`} />
       ))}
       {[0, 1, 2, 3, 4].map((i) => (
-        <ellipse key={`b${i}`} cx={44 - i * 0.6} cy={18 + i * 5} rx="2.6" ry="4" fill="#D9A93B" transform={`rotate(30 ${44 - i * 0.6} ${18 + i * 5})`} />
+        <ellipse key={`b${i}`} cx={41 + i * 1.1} cy={25 - i * 3.6} rx="2.4" ry="3.6" fill={i % 2 ? "#E3B444" : "#D29A2C"} transform={`rotate(26 ${41 + i * 1.1} ${25 - i * 3.6})`} />
       ))}
     </g>
   ),
   cotton: (
     <g>
-      <path d="M32 60 V44" stroke={STEM} strokeWidth="3" strokeLinecap="round" />
-      <path d="M20 46 L32 40 L44 46 L40 52 L32 48 L24 52 Z" fill="#8A5A2B" />
-      <circle cx="24" cy="30" r="10" fill="#FFFFFF" stroke="#D8D0C2" strokeWidth="1.5" />
-      <circle cx="40" cy="30" r="10" fill="#FFFFFF" stroke="#D8D0C2" strokeWidth="1.5" />
-      <circle cx="32" cy="20" r="11" fill="#FFFFFF" stroke="#D8D0C2" strokeWidth="1.5" />
-      <circle cx="32" cy="34" r="9" fill="#FFFFFF" stroke="#D8D0C2" strokeWidth="1.5" />
+      <path d="M32 58 V44" stroke={STEM} strokeWidth="3" strokeLinecap="round" />
+      <circle cx="23" cy="31" r="10.5" fill="#E7DFD1" />
+      <circle cx="41" cy="31" r="10.5" fill="#E7DFD1" />
+      <circle cx="32" cy="36" r="10" fill="#E7DFD1" />
+      <circle cx="22" cy="29" r="9.5" fill="#FFFFFF" />
+      <circle cx="42" cy="29" r="9.5" fill="#FFFFFF" />
+      <circle cx="32" cy="20" r="10.5" fill="#FFFFFF" />
+      <circle cx="32" cy="33" r="8.5" fill="#FFFFFF" />
+      <path d="M18 44 L26 39 L32 44 L38 39 L46 44 L40 49 L32 46 L24 49 Z" fill="#8A5A2B" />
     </g>
   ),
   chilli: (
@@ -38,15 +42,11 @@ const icons: Record<string, JSX.Element> = {
   ),
   groundnut: (
     <g>
-      <path
-        d="M22 10 C30 8 36 14 35 22 C34 27 31 29 32 34 C33 40 38 44 37 51 C36 58 28 60 22 57 C15 54 14 46 18 40 C21 35 21 32 18 27 C14 20 15 12 22 10 Z"
-        fill="#C99A5B"
-        stroke="#9C7340"
-        strokeWidth="2"
-      />
-      <path d="M20 18 L30 20 M18 46 L32 48 M22 52 L33 53 M19 24 L31 26" stroke="#9C7340" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M44 30 C50 22 56 22 58 26 C54 30 50 32 44 30 Z" fill={LEAF} />
-      <path d="M44 38 C52 36 56 40 56 44 C50 44 46 42 44 38 Z" fill={LEAF_DARK} />
+      <path d="M24 9 C32 7 38 13 37 21 C36.5 26 33 29 34 34 C35 40 40 44 39 51 C38 58 30 61 23 58 C16 55 15 46 19 40 C22 35 22 32 19 27 C15 20 16 11 24 9 Z" fill="#CFA066" />
+      <path d="M24 9 C32 7 38 13 37 21 C36.5 26 33 29 34 34 C35 40 40 44 39 51 C38 58 30 61 23 58 C30 56 33 50 30 43 C28 37 28 32 31 26 C33 19 30 12 24 9 Z" fill="#B5864E" />
+      <path d="M21 18 L31 20 M20 25 L31 27 M20 46 L33 48 M23 52 L33 53" stroke="#A97B45" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M44 30 C50 21 57 21 59 25 C55 30 50 32 44 30 Z" fill={LEAF} />
+      <path d="M44 38 C52 35 57 39 57 44 C50 44 46 42 44 38 Z" fill={LEAF_DARK} />
     </g>
   ),
   maize: (
@@ -77,10 +77,10 @@ const icons: Record<string, JSX.Element> = {
   ),
   banana: (
     <g>
-      <path d="M30 10 L34 10 L34 18 L30 18 Z" fill="#6B5A2E" />
-      <path d="M32 18 C20 22 12 36 16 52 C20 50 22 40 32 30 Z" fill="#E8C33A" stroke="#B8962A" strokeWidth="1.5" />
-      <path d="M32 18 C30 30 30 44 34 56 C38 54 38 40 36 26 Z" fill="#F0CF4A" stroke="#B8962A" strokeWidth="1.5" />
-      <path d="M32 18 C44 22 52 36 48 52 C44 50 42 40 34 28 Z" fill="#E8C33A" stroke="#B8962A" strokeWidth="1.5" />
+      <path d="M29.5 8 h5 v10 h-5 Z" fill="#7A6A3A" />
+      <path d="M32 17 C19 21 11 36 15 53 C20 51 23 40 32 29 Z" fill="#E9C23C" />
+      <path d="M32 17 C44 21 53 36 49 53 C44 51 41 40 32 29 Z" fill="#D6A92C" />
+      <path d="M32 17 C29 30 29 45 33 57 C38 55 38 40 35 25 Z" fill="#F3D35A" />
     </g>
   ),
   mango: (
@@ -112,14 +112,15 @@ const icons: Record<string, JSX.Element> = {
   ),
   potato: (
     <g>
-      <path d="M14 34 C12 24 22 16 34 16 C46 16 54 24 52 36 C50 48 40 52 30 52 C20 52 15 44 14 34 Z" fill="#C79A63" stroke="#9C7340" strokeWidth="2" />
+      <path d="M13 35 C11 24 21 15 34 15 C47 15 55 24 53 36 C51 49 41 53 30 53 C19 53 14 45 13 35 Z" fill="#CFA066" />
+      <path d="M53 36 C51 49 41 53 30 53 C21 53 16 48 14 41 C22 47 36 48 44 42 C50 37 52 30 51 24 C53 27 54 31 53 36 Z" fill="#B5864E" />
       {[
-        [24, 28],
-        [38, 26],
-        [44, 38],
-        [28, 42],
+        [24, 27],
+        [38, 25],
+        [44, 36],
+        [28, 40],
       ].map(([x, y]) => (
-        <circle key={`${x}-${y}`} cx={x} cy={y} r="1.8" fill="#8A6236" />
+        <circle key={`${x}-${y}`} cx={x} cy={y} r="1.9" fill="#94683A" />
       ))}
     </g>
   ),
@@ -133,11 +134,11 @@ const icons: Record<string, JSX.Element> = {
   ),
   cashew: (
     <g>
-      <path d="M30 8 C30 12 31 14 32 16" stroke="#6B5A2E" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <path d="M30 7 C30 11 31 13 32 15" stroke="#6B5A2E" strokeWidth="3" fill="none" strokeLinecap="round" />
       <path d="M32 10 C38 4 48 6 50 10 C44 14 38 14 32 10 Z" fill={LEAF} />
-      <path d="M20 22 C20 16 26 14 32 14 C40 14 46 18 45 26 C44 34 40 40 32 41 C24 41 20 34 20 22 Z" fill="#E4572E" />
-      <path d="M26 20 C26 18 28 17 30 17" stroke="#F28C6B" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-      <path d="M36 40 C44 40 48 46 46 52 C44 58 36 60 30 56 C26 53 28 49 32 48 C35 47 34 44 33 41 Z" fill="#9C8A6A" stroke="#6E5F45" strokeWidth="1.5" />
+      <path d="M19 23 C19 16 25 14 32 14 C40 14 46 18 45 26 C44 34 40 41 32 42 C24 42 19 35 19 23 Z" fill="#E4572E" />
+      <path d="M45 26 C44 34 40 41 32 42 C27 42 23 39 21 34 C27 38 35 37 40 31 C43 27 44 22 43 18 C45 20 45.5 23 45 26 Z" fill="#C9431F" />
+      <path d="M36 41 C44 41 49 46 47 53 C45 59 36 61 30 57 C26 54 28 49 32 48 C35 47 34 44 33 42 Z" fill="#A8946F" />
     </g>
   ),
   unknown: (

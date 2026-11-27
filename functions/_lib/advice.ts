@@ -160,7 +160,11 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     (t.bio ? bio : chem).push(t);
   }
   // Safer products first among chemicals: unflagged before flagged.
-  chem.sort((a, b) => Number(a.highly_hazardous) - Number(b.highly_hazardous));
+  // Order: not highly hazardous first, then rows with a known waiting period, then rows whose
+  // dose converts cleanly to per acre. This only changes which three show before "show more".
+  const rank = (t: Treatment) => Number(t.highly_hazardous) * 4 + Number(t.restricted !== null) * 4 + Number(t.waiting_days == null) * 2 + Number(!t.dose_per_acre?.unit);
+  chem.sort((a, b) => rank(a) - rank(b));
+  bio.sort((a, b) => Number(!a.dose_per_acre) - Number(!b.dose_per_acre));
   return { bio, chem, bannedRemoved };
 }
 

@@ -30,8 +30,11 @@ export interface Treatment {
   type: string;
   bio: boolean;
   target: string;
-  dose_per_ha: string;
-  dose_per_acre: { value: string; unit: string | null } | null;
+  dose_raw: string;
+  dose_status: "inferred" | "printed" | "per_litre" | "per_kg_seed" | "bio_as_printed" | "unreconciled" | "not_a_rate";
+  dose_per_ha: { value: string; unit: string } | null;
+  dose_per_acre: { value: string; unit: string } | null;
+  dose_per_litre: { value: string; unit: string } | null;
   water_per_ha: string;
   water_per_acre: string | null;
   water_note: string;

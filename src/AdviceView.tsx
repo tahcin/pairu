@@ -320,21 +320,38 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
               </p>
             )}
             <dl className="facts">
-              {p.dose_per_acre && (
+              {p.dose_per_acre && p.dose_per_ha && (
                 <div>
                   <dt>{L("perAcre")}</dt>
                   <dd>
                     <b>
-                      {p.dose_per_acre.value} {p.dose_per_acre.unit || ""}
+                      {p.dose_per_acre.value} {p.dose_per_acre.unit}
                     </b>
-                    {!p.dose_per_acre.unit && <span className="muted small block">{L("unitUnknown")}</span>}
                   </dd>
                 </div>
               )}
-              {p.dose_per_ha && (
+              {p.dose_per_acre && p.dose_per_ha && (
                 <div>
-                  <dt>{p.dose_per_acre ? L("perHectare") : L("asPrinted")}</dt>
-                  <dd>{p.dose_per_ha}</dd>
+                  <dt>{L("perHectareShort")}</dt>
+                  <dd>
+                    {p.dose_per_ha.value} {p.dose_per_ha.unit}
+                  </dd>
+                </div>
+              )}
+              {p.dose_per_litre && (
+                <div className="full">
+                  <dt>{L("perLitre")}</dt>
+                  <dd>
+                    <b>
+                      {p.dose_per_litre.value} {p.dose_per_litre.unit}
+                    </b>
+                  </dd>
+                </div>
+              )}
+              {!p.dose_per_acre && !p.dose_per_litre && p.dose_raw && (
+                <div className="full">
+                  <dt>{p.dose_status === "per_kg_seed" ? L("seedDose") : p.dose_status === "per_litre" ? L("perLitre") : L("asPrinted")}</dt>
+                  <dd>{p.dose_raw}</dd>
                 </div>
               )}
               {p.water_per_acre && (
@@ -364,6 +381,7 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
                 </div>
               )}
             </dl>
+            {p.dose_status === "unreconciled" && <p className="restricted">{L("checkLabelDose")}</p>}
             {p.note && <p className="muted small">{p.note}</p>}
             <p className="muted small">
               {L("source")}: CIB&RC{p.source.page ? `, ${L("page")} ${p.source.page}` : ""}

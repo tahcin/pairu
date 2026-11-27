@@ -104,5 +104,9 @@
   "checkingMedicines": "Checking the medicines approved for this crop",
   "stillLooking": "Still looking closely, a few more seconds",
   "offlineCheck": "You are offline. Pairu opens without internet, but checking a leaf needs a connection.",
-  "close": "Close"
+  "close": "Close",
+  "perHectareShort": "Per hectare",
+  "perLitre": "Per litre of spray water",
+  "seedDose": "For seed treatment, as printed",
+  "checkLabelDose": "We could not check this dose against the government data. Read the dose on the product label before use."
 }

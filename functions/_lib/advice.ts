@@ -2,6 +2,7 @@
 // and target, with banned actives removed and WHO class Ia/Ib flagged.
 import type { Data } from "./data";
 import type { Banned, Disease, RegisteredUse } from "./types";
+import { resolveDose, type DoseStatus } from "./dose";
 
 const HA_PER_ACRE = 0.404686; // 1 acre = 0.404686 hectare
 
@@ -11,8 +12,11 @@ export interface Treatment {
   type: string;
   bio: boolean;
   target: string;
-  dose_per_ha: string;
-  dose_per_acre: { value: string; unit: string | null } | null;
+  dose_raw: string;
+  dose_status: DoseStatus;
+  dose_per_ha: { value: string; unit: string } | null;
+  dose_per_acre: { value: string; unit: string } | null;
+  dose_per_litre: { value: string; unit: string } | null;
   water_per_ha: string;
   water_per_acre: string | null;
   water_note: string;
@@ -139,16 +143,21 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     const worst = classes.sort((a, b) => order.indexOf(a) - order.indexOf(b))[0] || null;
     const water = /^[\d.\s\-to–]+$/i.test(u.water_l_ha || "") ? perAcre(`${u.water_l_ha} l`) : null;
     const waterOk = Boolean(water);
+    const dose = resolveDose(u);
     const t: Treatment = {
       product: u.product_label,
       actives,
       type: u.pesticide_type,
       bio: u.pesticide_type.startsWith("bio"),
       target: u.target_raw,
-      dose_per_ha: u.dose_formulation_raw || "",
-      dose_per_acre: perAcre(u.dose_formulation_raw),
+      dose_raw: u.dose_formulation_raw || "",
+      dose_status: dose.status,
+      dose_per_ha: dose.per_ha,
+      dose_per_acre: dose.per_acre,
+      dose_per_litre: dose.per_litre || null,
+      // Water volume is only worked out per acre next to a checked per-hectare dose.
       water_per_ha: waterOk ? u.water_l_ha : "",
-      water_per_acre: water ? `${water.value} ${water.unit}` : null,
+      water_per_acre: water && dose.per_acre ? `${water.value} ${water.unit}` : null,
       water_note: waterOk ? "" : u.water_l_ha || "",
       waiting_days: u.waiting_period_days,
       waiting_raw: u.waiting_period_raw || "",
@@ -160,12 +169,24 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     };
     (t.bio ? bio : chem).push(t);
   }
-  // Safer products first among chemicals: unflagged before flagged.
-  // Order: not highly hazardous first, then rows with a known waiting period, then rows whose
-  // dose converts cleanly to per acre. This only changes which three show before "show more".
-  const rank = (t: Treatment) => Number(t.highly_hazardous) * 4 + Number(t.restricted !== null) * 4 + Number(t.waiting_days == null) * 2 + Number(!t.dose_per_acre?.unit);
-  chem.sort((a, b) => rank(a) - rank(b));
-  bio.sort((a, b) => Number(!a.dose_per_acre) - Number(!b.dose_per_acre));
+  // Order for chemicals, which decides the three shown before "show more": not hazardous or
+  // restricted first, then a checked per-acre dose, then lower WHO class, then a known waiting period.
+  const WHO_ORDER: Record<string, number> = { U: 0, III: 1, II: 2, Ib: 4, Ia: 5 };
+  // A missing WHO class is unknown, not safe, so it sorts after class II.
+  const who = (t: Treatment) => (t.who_class ? WHO_ORDER[t.who_class] ?? 3 : 3);
+  const key = (t: Treatment) => [
+    Number(t.highly_hazardous || t.restricted !== null),
+    Number(!t.dose_per_acre),
+    who(t),
+    Number(t.waiting_days == null),
+  ];
+  const cmp = (a: Treatment, b: Treatment) => {
+    const ka = key(a);
+    const kb = key(b);
+    for (let i = 0; i < ka.length; i++) if (ka[i] !== kb[i]) return ka[i] - kb[i];
+    return 0;
+  };
+  chem.sort(cmp);
   return { bio, chem, bannedRemoved };
 }
 

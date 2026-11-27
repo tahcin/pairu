@@ -1,0 +1,55 @@
+{
+ "pathogen": "Phytophthora infestans",
+ "symptoms": [
+  "You will see small, irregular, water-soaked spots on the leaves.",
+  "These spots turn dark brown and may have white fuzz underneath.",
+  "The stems develop dark, greasy-looking patches that can kill the plant.",
+  "Fruits show sunken brown spots that may develop white mold.",
+  "Dark, greasy spots can also appear on the fruit.",
+  "Brown streaks may appear on the stems and leaf stalks."
+ ],
+ "photo_cues": [
+  "dark brown leaf spots",
+  "white fuzz on leaves",
+  "greasy looking stem patches",
+  "sunken brown fruit lesions",
+  "dark olivaceous fruit spots",
+  "concentric rings on fruit"
+ ],
+ "favourable_conditions": "The disease spreads quickly in cool, humid weather with temperatures between 15 and 18 degrees Celsius and high humidity.",
+ "prevention": [
+  "Choose resistant tomato varieties like Arka Abhed F1.",
+  "Rotate your crops so you do not plant tomatoes in the same field every year.",
+  "Ensure there is enough space between plants to allow for good airflow.",
+  "Use black plastic mulch to keep the soil dry and stop the disease from spreading.",
+  "Avoid overhead watering and improve your field drainage."
+ ],
+ "practices": [
+  "Check your plants regularly for any signs of the disease.",
+  "Remove and destroy any plant parts that look infected.",
+  "Use stakes to keep plants off the ground and improve airflow.",
+  "Monitor weather forecasts to adjust your planting time."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "copper oxychloride",
+  "copper hydroxide",
+  "mancozeb",
+  "zineb",
+  "famoxadone",
+  "cymoxanil",
+  "azoxystrobin",
+  "captan",
+  "cyazafamid",
+  "metriam"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "extra:iihr_tomato_lb",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

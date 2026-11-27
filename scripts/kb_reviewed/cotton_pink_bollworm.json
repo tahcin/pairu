@@ -1,0 +1,67 @@
+{
+ "pathogen": "Pectinophora gossypiella",
+ "symptoms": [
+  "Flower buds may drop off the plant.",
+  "Flowers fail to open properly and look like a rosette.",
+  "You may see small exit holes on the green bolls.",
+  "Inside the bolls, the seeds and lint are damaged or discolored.",
+  "Bolls may open prematurely and look unhealthy."
+ ],
+ "photo_cues": [
+  "Rosette shaped flowers",
+  "Small round exit holes",
+  "Discolored lint inside bolls",
+  "Double seeds joined together",
+  "Pink or white larvae"
+ ],
+ "favourable_conditions": "The pest is often more active when cotton is sown in April or May.",
+ "prevention": [
+  "Plough your field deeply in summer to expose pupae to birds and sun.",
+  "Remove weeds and other plants that host the pest near your field.",
+  "Use certified seeds and choose early maturing or resistant varieties.",
+  "Rotate your crops to break the pest life cycle.",
+  "Plant a refuge of non-Bt cotton alongside your Bt cotton."
+ ],
+ "practices": [
+  "Check your fields every 3 to 5 days for signs of the pest.",
+  "Use pheromone traps to monitor and catch adult moths.",
+  "Pick and destroy any fallen squares, flowers, or bolls.",
+  "If you see rosette flowers, pluck and destroy them immediately.",
+  "Inspect green bolls by splitting them open to check for larvae."
+ ],
+ "organic_bio": [
+  {
+   "text": "Trichogrammatoideabactrae @ 1,00,000/ha per release",
+   "page": 0
+  },
+  {
+   "text": "Trichogramma bactrae eggs @ 3 cc (60,000)/acre",
+   "page": 1
+  },
+  {
+   "text": "neem seed kernel extract (NSKE) 5%",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "carbaryl",
+  "Phosalone",
+  "Triazophos",
+  "Quinolphos",
+  "Thiodicarb",
+  "Chlorpyriphos",
+  "Fenevelerate",
+  "Cypermethrin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_crop_prot_crop_insectpest_20_cotton_2.txt",
+  "extra:ppqs_cotton_pbw",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "pathogen": "Xanthomonas campestris pv. vesicatoria",
+ "symptoms": [
+  "Small brown spots with a yellow ring appear on the leaves.",
+  "Older leaves may drop off the plant.",
+  "Small water-soaked spots appear on green fruit.",
+  "These spots grow into raised, rough, and scabby sores.",
+  "The centers of the sores turn light brown and sink in."
+ ],
+ "photo_cues": [
+  "Small brown circular spots",
+  "Yellow halo around spots",
+  "Raised scabby fruit surface",
+  "Sunken light brown lesions"
+ ],
+ "favourable_conditions": "Moist weather, heavy rainstorms, high humidity, or persistent dew help the disease spread.",
+ "prevention": [
+  "Always use seeds and seedlings that are free of disease.",
+  "Rotate your tomato crop with plants that do not catch this disease.",
+  "Avoid planting in areas where you grew tomatoes last year to keep away from old plant trash."
+ ],
+ "practices": [
+  "Remove and destroy any plant parts that show signs of the disease.",
+  "Clear away old plant debris from the field to stop the spread.",
+  "Monitor your plants closely for new spots."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mercuric chloride",
+  "copper",
+  "Agrimycin-100",
+  "streptomycin sulfate",
+  "tetracycline hydrochloride",
+  "streptocycline",
+  "imidacloprid",
+  "azadirachtin",
+  "dimethoate",
+  "cyantraniliprole"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "tomato_diseases_6.txt",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

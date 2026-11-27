@@ -1,0 +1,56 @@
+{
+ "pathogen": "Alternaria solani",
+ "symptoms": [
+  "You will see small black spots mostly on the older leaves first.",
+  "These spots grow larger and show a bull's eye pattern of rings in the middle.",
+  "The leaf tissue around the spots often turns yellow.",
+  "Similar spots appear on stems and can wrap around the plant near the soil.",
+  "The fungus also infects the fruit, often starting where the stem attaches.",
+  "Large spots can cover almost the entire fruit with visible rings."
+ ],
+ "photo_cues": [
+  "small black leaf lesions",
+  "bull's eye ring pattern",
+  "yellow tissue around spots",
+  "dark stem lesions",
+  "concentric rings on fruit"
+ ],
+ "favourable_conditions": "Warm, rainy and wet weather helps the disease spread.",
+ "prevention": [
+  "Change the location of your nursery beds every season.",
+  "Remove all weeds and volunteer tomato plants from the area.",
+  "Ask your local agricultural office about using resistant or tolerant plant varieties.",
+  "Make sure to fertilize your plants properly."
+ ],
+ "practices": [
+  "Remove and destroy all crop debris from the field.",
+  "Practice crop rotation to help lower the chance of disease.",
+  "Monitor your plants regularly for early signs of spots."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "azoxystrobin",
+  "captan",
+  "copper oxy chloride",
+  "iprodione",
+  "kitazin",
+  "pyraclostrobin",
+  "zineb",
+  "ziram",
+  "famoxadone",
+  "cymoxanil",
+  "metiram",
+  "metriam",
+  "cyazafamid"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "tomato_diseases_2.txt",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

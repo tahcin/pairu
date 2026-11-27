@@ -1,0 +1,68 @@
+{
+ "pathogen": "Amrasca (Biguttula biguttula) devastans",
+ "symptoms": [
+  "Tender leaves turn yellow.",
+  "Leaf edges start to curl downwards and turn red.",
+  "Leaves may turn a bronze or brick red color.",
+  "The edges of the leaves become brittle and crumble when crushed.",
+  "Leaves dry up and fall off, which slows down plant growth.",
+  "Young plants may become stunted or die in severe cases."
+ ],
+ "photo_cues": [
+  "pale green wedge shaped insect",
+  "yellowing leaf margins",
+  "downward curling leaves",
+  "bronze or red leaf color",
+  "pale green translucent nymphs"
+ ],
+ "favourable_conditions": "Moisture stress and low moisture levels in leaf tissue favor the development of this pest.",
+ "prevention": [
+  "Monitor your fields regularly to catch the pest early.",
+  "Keep the crop healthy to help it withstand feeding damage."
+ ],
+ "practices": [
+  "Check your plants for nymphs or adults on the underside of leaves.",
+  "Count the number of insects on 50 leaves to see if they have reached the economic threshold of 50 insects.",
+  "Remove and destroy parts of the plant that are heavily infested."
+ ],
+ "organic_bio": [
+  {
+   "text": "NSKE 5% 25 kg/ha",
+   "page": 0
+  },
+  {
+   "text": "neem oil formulation 0.5 % or neem oil 3% thrice at fortnightly intervals",
+   "page": 0
+  },
+  {
+   "text": "Azadirachtin 0.03% WSP 500-1000 g/ha",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "carbofuran",
+  "Imidacloprid",
+  "Phosphamidon",
+  "Acetamiprid",
+  "Azadirachtin",
+  "Buprofezin",
+  "Clothianidin",
+  "Diafenthiuron",
+  "Dimethoate",
+  "Fipronil",
+  "Methyl demeton",
+  "Phosalone",
+  "Profenofos",
+  "Thiacloprid",
+  "Thiamethoxam"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_crop_prot_crop_insectpest_20_cotton_10.txt",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

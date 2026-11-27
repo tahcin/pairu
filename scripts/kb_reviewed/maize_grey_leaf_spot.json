@@ -1,0 +1,16 @@
+{
+ "pathogen": "",
+ "symptoms": [],
+ "photo_cues": [],
+ "favourable_conditions": "",
+ "prevention": [],
+ "practices": [],
+ "organic_bio": [],
+ "chemicals_in_text": [],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "extra:cpn_gls",
+  "aesa:maize"
+ ],
+ "_used_pages": []
+}

@@ -1,0 +1,47 @@
+{
+ "pathogen": "Cercospora arachidicola",
+ "symptoms": [
+  "The disease starts about one month after you plant your seeds.",
+  "Small spots appear on the leaves.",
+  "These spots grow larger and turn brown or black over time.",
+  "The spots are round on the top of the leaf.",
+  "The bottom of the leaf shows a light brown color.",
+  "Spots can also show up on the stems and leaf stalks."
+ ],
+ "photo_cues": [
+  "small round brown spots",
+  "black spots on leaves",
+  "light brown leaf undersides",
+  "lesions on plant stems"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Rotate your crops with wheat, cotton, maize, onion, or garlic to keep the soil healthy.",
+  "Choose varieties that are known to be tolerant to leaf spots."
+ ],
+ "practices": [
+  "Check your fields weekly to see if the disease is spreading.",
+  "Remove and destroy parts of the plant that look sick to stop the spread.",
+  "If many spots join together, the leaves may die and fall off early."
+ ],
+ "organic_bio": [
+  {
+   "text": "10% Calotropis leaf extract",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "Mancozeb",
+  "Chlorothalonil"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "groundnut_diseases_groundnut_d1.txt",
+  "aesa:groundnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

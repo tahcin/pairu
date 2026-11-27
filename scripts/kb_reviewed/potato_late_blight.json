@@ -1,0 +1,60 @@
+{
+ "pathogen": "Phytopthora infestans",
+ "symptoms": [
+  "Water soaked spots appear on the leaves and grow larger over time.",
+  "These spots turn purple brown and finally black.",
+  "A white growth that looks like flour develops on the underside of leaves.",
+  "Stems blacken at the nodes and may break, causing the plant to topple over.",
+  "Tubers show purplish brown spots on the surface and rusty brown rot inside.",
+  "The disease spreads very quickly and can kill the whole plant in a few days."
+ ],
+ "photo_cues": [
+  "water soaked leaf spots",
+  "purple brown leaf spots",
+  "black leaf spots",
+  "white floury leaf growth",
+  "rusty brown tuber rot"
+ ],
+ "favourable_conditions": "The disease likes cool and humid weather with high humidity above 90 percent and rain.",
+ "prevention": [
+  "Use resistant potato varieties for planting.",
+  "Avoid injuring tubers when you harvest them.",
+  "Do not store tubers that show signs of the disease.",
+  "Follow crop rotation to keep the soil healthy.",
+  "Avoid water logged conditions in your field."
+ ],
+ "practices": [
+  "Remove and destroy any plants or tubers that look sick.",
+  "Destroy the leaves a few days before you harvest the crop.",
+  "Monitor your field regularly for signs of the disease.",
+  "Ensure your field has good drainage to avoid standing water."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mancozeb",
+  "zineb",
+  "Brestan",
+  "Bordeaux mixture",
+  "captan",
+  "chlorothalonil",
+  "copper oxychloride",
+  "copper sulphate",
+  "cyazafamid",
+  "dimethomorph",
+  "hexaconazole",
+  "mandipropamid",
+  "propineb",
+  "cymoxanil"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_veg_potato_1.txt",
+  "potato_phdiseases_4.txt",
+  "aesa:potato"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

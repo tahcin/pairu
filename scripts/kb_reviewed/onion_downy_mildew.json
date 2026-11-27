@@ -1,0 +1,44 @@
+{
+ "pathogen": "Peronospora destructor",
+ "symptoms": [
+  "Leaves start to turn a pale green color.",
+  "A cottony white growth appears on the leaves.",
+  "The leaves slowly change from pale yellow to dark brown.",
+  "Finally the infected leaves dry up and die."
+ ],
+ "photo_cues": [
+  "white downy leaf growth",
+  "pale green leaves",
+  "pale yellow leaf patches",
+  "dark brown dried leaves",
+  "pustules on leaves"
+ ],
+ "favourable_conditions": "Warm and humid weather helps this disease grow.",
+ "prevention": [
+  "Choose healthy bulbs when you are saving seeds.",
+  "Rotate your crops by planting something else for 3 to 4 years.",
+  "Clean up and destroy all old plant parts and trash from the field.",
+  "Use varieties that are known to resist this disease.",
+  "Expose onion bulbs meant for seeds to the sun for 12 days."
+ ],
+ "practices": [
+  "Avoid planting too late in the season.",
+  "Make sure your field has good drainage.",
+  "Do not use too much fertilizer.",
+  "Avoid watering your crops too often."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "zineb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "onion_diseases_2.txt",
+  "aesa:onion"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

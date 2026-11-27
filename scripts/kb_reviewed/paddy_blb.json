@@ -1,0 +1,66 @@
+{
+ "pathogen": "Xanthomonas oryzae pv. Oryzae",
+ "symptoms": [
+  "You will see water-soaked or yellowish stripes on the leaf blades.",
+  "The edges of the leaves turn yellow or golden and start to dry out.",
+  "Leaves may curl and dry back from the tip while the middle rib stays green.",
+  "Early in the morning, you might see a milky or opaque drop of bacterial ooze on young spots.",
+  "Severely infected leaves will dry up very quickly."
+ ],
+ "photo_cues": [
+  "Yellowish white leaf margins",
+  "Wavy leaf margins",
+  "Milky bacterial ooze",
+  "Dried leaf tips",
+  "Opaque dewdrop on lesions"
+ ],
+ "favourable_conditions": "Warm temperatures between 25 and 30 degrees Celsius, high humidity, rain, deep water, and strong winds that cause wounds favor the disease.",
+ "prevention": [
+  "Choose tolerant rice varieties for your planting.",
+  "Always use healthy, disease-free seeds.",
+  "Grow your seedlings in isolated upland areas.",
+  "Keep your fields clean by removing weeds and old rice stubble.",
+  "Use balanced fertilizer and avoid applying too much nitrogen."
+ ],
+ "practices": [
+  "Drain the water from your field, but keep it flooded during the flowering stage.",
+  "Remove and burn any plants or parts that show signs of the disease.",
+  "Avoid moving water from an infected field into a healthy one.",
+  "Do not clip the tips of your seedlings when transplanting them.",
+  "Monitor your fields regularly for any signs of the disease."
+ ],
+ "organic_bio": [
+  {
+   "text": "Spray neem oil 3%",
+   "page": 0
+  },
+  {
+   "text": "Spray NSKE 5%",
+   "page": 0
+  },
+  {
+   "text": "Spray fresh cowdung extract (20 g cowdung in one litre of water)",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "bleaching powder",
+  "zinc sulfate",
+  "Agrimycin",
+  "wettable ceresan",
+  "Streptocyclin",
+  "Streptomycin sulphate",
+  "Tetracycline",
+  "Copper oxychloride",
+  "tetracycline hydrochloride"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_diseases_rice_3.txt",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

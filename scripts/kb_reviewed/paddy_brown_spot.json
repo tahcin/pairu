@@ -1,0 +1,60 @@
+{
+ "pathogen": "Helminthosporium oryzae",
+ "symptoms": [
+  "The disease starts as tiny brown dots on the leaves.",
+  "These spots grow into oval or round shapes that look like sesame seeds.",
+  "Many spots can join together to form large patches that cause the leaf to dry up.",
+  "You may see brown spots on the grain heads and the neck of the plant.",
+  "Infected seeds may show black or brown spots covered in a velvety growth."
+ ],
+ "photo_cues": [
+  "minute brown dots",
+  "oval to circular spots",
+  "large brown patches",
+  "black velvety mycelial mats",
+  "brownish scorched appearance"
+ ],
+ "favourable_conditions": "The disease spreads when temperatures are 25-30°C, humidity is above 80 percent, and leaves stay wet for 8 to 24 hours.",
+ "prevention": [
+  "Always use seeds that are free from disease.",
+  "Choose to plant resistant rice varieties.",
+  "Remove weeds and other plants that can host the fungus.",
+  "Keep the soil healthy with proper nutrients and avoid water stress.",
+  "Treat seeds with hot water at 53-54°C for 10 to 12 minutes before planting."
+ ],
+ "practices": [
+  "Monitor your field for infected plants.",
+  "Ensure the field is well irrigated to prevent water stress.",
+  "Remove and destroy any plants or parts showing signs of infection."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pseudomonas fluorescens @ 10g/kg of seed followed by seedling dip @ of 2.5 kg or products/ha dissolved in 100 litres",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Captan",
+  "Thiram",
+  "Agrosan",
+  "Ceresan",
+  "Mancozeb",
+  "Grisepfulvin",
+  "Nystatin",
+  "Aureofungin",
+  "Chitosan",
+  "Carbendazim",
+  "Tricyclazole",
+  "Edifenphos",
+  "Iprodione"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_diseases_rice_2.txt",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

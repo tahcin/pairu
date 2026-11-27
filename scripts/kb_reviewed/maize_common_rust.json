@@ -1,0 +1,52 @@
+{
+ "pathogen": "Puccinia sorghi",
+ "symptoms": [
+  "You will see brown spots on both sides of the maize leaves.",
+  "These spots are actually small bumps called pustules.",
+  "These bumps contain the spores of the fungus."
+ ],
+ "photo_cues": [
+  "brown pustules on leaf",
+  "spots on leaf surfaces",
+  "uredinal pustules on leaf"
+ ],
+ "favourable_conditions": "Cool temperatures and high humidity in the air help this disease grow.",
+ "prevention": [
+  "Choose resistant maize varieties like BULAND, SHEETAL, HHM 1, HHM 2, HQPM 1, or NITHYASHREE.",
+  "Remove and destroy any alternate plant hosts like Oxalis corniunlata found near your field."
+ ],
+ "practices": [
+  "Check your plants regularly for the first signs of pustules.",
+  "Remove and destroy any parts of the plant that show signs of the disease.",
+  "If the disease appears, you may need to apply fungicide sprays at 15-day intervals."
+ ],
+ "organic_bio": [
+  {
+   "text": "P. fluorescens @ 2.5 kg / ha + 50 kg of well decomposed FYM or sand",
+   "page": 0
+  },
+  {
+   "text": "T. viride @ 2.5 kg / ha + 50 kg of well decomposed FYM or sand",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Atrazine",
+  "Alachlor",
+  "2,4-D Ethyl Ester",
+  "Paraquat dichloride",
+  "Diuron",
+  "Carbaryl",
+  "Metalaxyl"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "maize_disease_new_maize_4.txt",
+  "aesa:maize"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

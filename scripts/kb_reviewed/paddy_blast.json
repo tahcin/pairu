@@ -1,0 +1,127 @@
+{
+ "pathogen": "Pyricularia (Magnaporthe) grisea, Pyricularia oryzae, Magnaporthe oryzae",
+ "symptoms": [
+  "You will see white to gray-green spots with brown edges on the leaves.",
+  "These spots grow into spindle or diamond shapes with an ashy center.",
+  "The base of the panicle turns dark brown or black and may rot.",
+  "Infected stems can break, causing the panicle to fall over.",
+  "Severe cases make the whole crop look burnt or blighted.",
+  "The disease can cause white panicles that have no grain or poor quality grain."
+ ],
+ "photo_cues": [
+  "spindle shaped leaf spots",
+  "ashy center leaf lesions",
+  "dark brown leaf borders",
+  "blackened panicle base",
+  "broken plant nodes",
+  "white empty panicles"
+ ],
+ "favourable_conditions": "The disease spreads easily in cool weather with high humidity, dew, and when nitrogen fertilizer is used in excess.",
+ "prevention": [
+  "Plant varieties that are resistant or tolerant to blast.",
+  "Avoid planting too late and do not use dry nurseries.",
+  "Apply nitrogen fertilizer in three split doses instead of all at once.",
+  "Keep field bunds clean by removing weeds and grasses.",
+  "Burn straw and stubble after harvest to remove the pathogen."
+ ],
+ "practices": [
+  "Check your fields regularly for signs of the disease.",
+  "Remove and burn any plant parts that show signs of infection.",
+  "Keep the water level in the field at the recommended depth.",
+  "If you see the disease, delay adding more nitrogen fertilizer.",
+  "Use crop rotation with crops that do not host the fungus."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pseudomonas fluorescens talc formulation @10g/kg of seed for dry seed treatment",
+   "page": 0
+  },
+  {
+   "text": "Pseudomonas fluorescens (talc) @ 2.5 kg in stagnated water for seedling root soak",
+   "page": 0
+  },
+  {
+   "text": "Pseudomonas fluorescens talc formulation @ 0.5% spray",
+   "page": 0
+  },
+  {
+   "text": "Pseudomonas fluorescence @ 10g/lit of water for seed treatment",
+   "page": 1
+  },
+  {
+   "text": "Trichoderma viridae @ 5-10 g/kg of seeds",
+   "page": 1
+  },
+  {
+   "text": "Pseudomonas fluorescence @ 5g/lit of water for seedling dip",
+   "page": 1
+  },
+  {
+   "text": "Pseudomonas fluorescence @ 5g/lit of water for foliar spray",
+   "page": 1
+  },
+  {
+   "text": "Neem cake @ 150 kg/ha",
+   "page": 1
+  },
+  {
+   "text": "Trichoderma/Pseudomonas @ 5-10 g/ha of seed",
+   "page": 2
+  }
+ ],
+ "chemicals_in_text": [
+  "Captan",
+  "Carbendazim",
+  "Thiram",
+  "Tricyclazole",
+  "pyroquilon",
+  "Carpropamid",
+  "Hexaconazole",
+  "Isoprothiolan",
+  "Kasugamycin",
+  "Kitazin",
+  "Picoxystobin",
+  "Tebuconazole",
+  "Zineb",
+  "Trifloxystrobin",
+  "Ediphenphos",
+  "Azoxystrobin",
+  "Difenoconazole",
+  "Kresoxim-methyl",
+  "Mancozeb",
+  "Pyraclostrobin",
+  "Validamycin",
+  "Copper oxychloride",
+  "Iprodione",
+  "Propiconazole",
+  "Streptomycin sulphate",
+  "Tetracycline hydrochloride",
+  "Streptocycline",
+  "Cyhalofop-butyl",
+  "Butachlor",
+  "Pretilachlor",
+  "Oxadiargyl",
+  "Chlorimuron ethyl",
+  "Metsufluran methyl",
+  "Anilophos",
+  "Ethoxysulfuron",
+  "Cinmethalin",
+  "Metsulfuron methyl",
+  "2, 4-D- ethyl ester",
+  "Carbofuran",
+  "Carbosulfan",
+  "Chlorpyriphos",
+  "Imidacloprid"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_diseases_rice_1.txt",
+  "extra:ppqs_paddy_blast",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

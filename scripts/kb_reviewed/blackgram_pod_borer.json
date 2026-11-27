@@ -1,0 +1,48 @@
+{
+ "pathogen": "Maruca testulalis, Maruca vitrata",
+ "symptoms": [
+  "You will see leaves being eaten away in the early stages.",
+  "The larva often keeps its head inside the pod while its body hangs outside.",
+  "You will see round holes on the pods.",
+  "The buds, flowers, and pods may have bore holes.",
+  "Infested flowers and pods are often webbed together."
+ ],
+ "photo_cues": [
+  "Greenish white larva",
+  "Brown head on larva",
+  "Round holes on pods",
+  "Webbed flowers and pods",
+  "Light brown forewings"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Install pheromone traps to monitor the pest population.",
+  "Place traps at a rate of 4 to 5 per acre.",
+  "Keep traps at least 75 feet apart from each other.",
+  "Set traps one foot above the plant canopy."
+ ],
+ "practices": [
+  "Check your fields weekly for the number of moths in your traps.",
+  "Remove and destroy any moths caught in the traps after you count them.",
+  "Look for natural predators like ladybird beetles in the field.",
+  "Avoid using insecticides if you see natural predators active in the crop."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pheromone traps @ 4-5 per acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Phosalone"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "greenblack_crop_prot_crop_insect_pul_bla_and_20green_2.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

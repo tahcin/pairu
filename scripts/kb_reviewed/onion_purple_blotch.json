@@ -1,0 +1,50 @@
+{
+ "pathogen": "Alternaria porri",
+ "symptoms": [
+  "The disease starts as tiny white dots on the leaves.",
+  "Yellowish areas appear on the leaf tips.",
+  "Black velvety rings form in a circle or oval shape.",
+  "Spots grow together and spread quickly across the whole leaf.",
+  "Leaves start to die from the tip down.",
+  "The plant may fail to grow a bulb."
+ ],
+ "photo_cues": [
+  "whitish minute dots",
+  "irregular chlorotic areas",
+  "black velvety rings",
+  "sunken whitish flecks",
+  "purple coloured centres"
+ ],
+ "favourable_conditions": "Hot and humid weather with temperatures between 21 and 30 degrees Celsius and high humidity helps the disease grow.",
+ "prevention": [
+  "Select healthy bulbs for planting.",
+  "Use resistant onion varieties.",
+  "Soak seeds in hot water at 50 degrees Celsius for 20 minutes.",
+  "Rotate your crops every 2 to 3 years with plants that do not get this disease.",
+  "Make sure your field has good drainage."
+ ],
+ "practices": [
+  "Check your field regularly for signs of the disease.",
+  "Ensure the field is well drained to prevent water buildup.",
+  "Use the recommended amounts of nitrogen and phosphorus fertilizers."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Thiram",
+  "Copper oxychloride",
+  "Chlorothalonil",
+  "Zineb",
+  "Mancozeb",
+  "difenaconazole",
+  "kitazin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "onion_diseases_7.txt",
+  "aesa:onion"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

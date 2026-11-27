@@ -1,0 +1,46 @@
+{
+ "pathogen": "Ramularia areola, Mycosphaerella areola",
+ "symptoms": [
+  "You will see pale, see-through spots on the underside of older leaves.",
+  "The spots are shaped like squares or angles and are blocked by leaf veins.",
+  "A grey, powdery growth appears on the bottom of the leaves.",
+  "The top of the leaf may show light green or yellow spots.",
+  "Severely affected leaves turn yellow, dry up, and fall off early.",
+  "The plant may have bolls that open too soon with poor quality lint."
+ ],
+ "photo_cues": [
+  "pale translucent angular spots",
+  "grey powdery leaf growth",
+  "light green leaf specks",
+  "yellowing leaf tissue",
+  "dark brown dead spots"
+ ],
+ "favourable_conditions": "The disease usually appears on older leaves after the plant starts setting its first bolls.",
+ "prevention": [
+  "Plant varieties that are known to be resistant or tolerant to this disease.",
+  "Rotate your cotton crops with cereal crops.",
+  "Avoid using too much nitrogen fertilizer.",
+  "Use the correct spacing between plants based on your soil type.",
+  "Remove and burn all leftover plant parts from the field after harvest."
+ ],
+ "practices": [
+  "Check your fields regularly for signs of the disease.",
+  "Remove and destroy any infected plant parts you find.",
+  "Deeply plough the field to bury and kill any remaining plant bits.",
+  "Pull out any cotton plants that grew on their own during the summer."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "wettable sulphur"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_diseases_cotton_d4.txt",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

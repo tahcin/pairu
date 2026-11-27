@@ -1,0 +1,38 @@
+{
+ "pathogen": "Stemphylium cesicarium/ vesicarium [(Wallr.) E.G. Simmons]",
+ "symptoms": [
+  "Small yellow to orange spots or streaks appear on the leaves.",
+  "These spots grow into long spindle shapes.",
+  "The spots have a pinkish border around them.",
+  "The disease can cause heavy damage to the seed stalks."
+ ],
+ "photo_cues": [
+  "yellow to orange flecks",
+  "elongated spindle shaped spots",
+  "pinkish margin on spots"
+ ],
+ "favourable_conditions": "Warm weather with high humidity and long periods of wet leaves for 16 hours or more help the disease grow.",
+ "prevention": [
+  "Soak onion seeds in hot water at 50 degrees Celsius for 20 minutes.",
+  "Plant resistant varieties like Welsh onion.",
+  "Rotate your crops with plants that do not get this disease.",
+  "Keep the field well drained and do not plant too close together."
+ ],
+ "practices": [
+  "Collect and burn all old crop parts left in the field.",
+  "Make sure the field has good drainage.",
+  "Reduce the number of plants in the field to lower density."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mancozeb",
+  "zineb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "aesa:onion"
+ ],
+ "_used_pages": [
+  0
+ ]
+}

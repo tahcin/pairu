@@ -1,0 +1,64 @@
+{
+ "pathogen": "Tomato leaf curl virus (ToLCV)",
+ "symptoms": [
+  "New plant growth looks stunted with short stems.",
+  "New leaves are small, wrinkled, and yellow between the veins.",
+  "Leaf edges curl upward to look like a cup.",
+  "Flowers may form but often fall off before fruit grows.",
+  "Older leaves become leathery and brittle.",
+  "Infected plants look pale and bushy with many side branches."
+ ],
+ "photo_cues": [
+  "upward curling leaf margins",
+  "yellowing between leaf veins",
+  "stunted plant growth",
+  "cup-like leaf shape",
+  "whitefly adults and nymphs"
+ ],
+ "favourable_conditions": "Warm weather conditions are favourable for multiplication.",
+ "prevention": [
+  "Grow resistant or tolerant plant varieties.",
+  "Raise seedlings in a protected nursery covered with a fine net to keep whiteflies out.",
+  "Plant barrier crops like cereals or maize around the field.",
+  "Remove weeds that can host the virus.",
+  "Dip seedling roots in imidacloprid solution for 15 minutes before planting."
+ ],
+ "practices": [
+  "Use yellow sticky traps to monitor whitefly numbers.",
+  "Collect and destroy all infected plant parts and debris.",
+  "Keep the field clean and free of weeds.",
+  "Follow good crop rotation practices with non-host crops."
+ ],
+ "organic_bio": [
+  {
+   "text": "Spray neem seed kernel extract (NSKE) 5% @ 80 g in 160 l of water/acre",
+   "page": 1
+  },
+  {
+   "text": "Spray azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Imidachloprid",
+  "Dimethoate",
+  "Thiamethoxam",
+  "Carbofuran",
+  "Malathion",
+  "Oxydemeton-methyl",
+  "Phorate",
+  "Spiromesifen",
+  "Cyantraniliprole",
+  "Mancozeb",
+  "Fenazaquin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "tomato_diseases_8.txt",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

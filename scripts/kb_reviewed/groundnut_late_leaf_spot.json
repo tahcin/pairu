@@ -1,0 +1,43 @@
+{
+ "pathogen": "Phaeoisariopsis personatum",
+ "symptoms": [
+  "Black spots appear on the bottom of the leaves.",
+  "The spots are almost round in shape.",
+  "The spots feel rough to the touch.",
+  "Many spots can join together on the leaf.",
+  "Leaves may turn yellow and fall off the plant early."
+ ],
+ "photo_cues": [
+  "Black circular spots",
+  "Rough leaf lesions",
+  "Coalescing leaf spots",
+  "Premature leaf shedding"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Plant groundnut with pearl millet or sorghum in a 1 to 3 ratio.",
+  "Rotate your groundnut with cereal crops instead of other hosts.",
+  "Dig deep to bury any old crop remains in the soil.",
+  "Pull out and remove any groundnut plants that grow on their own."
+ ],
+ "practices": [
+  "Remove and destroy any plant parts that show signs of the disease.",
+  "Keep the field clean by removing volunteer groundnut plants.",
+  "Bury crop residues deep in the soil to stop the spread."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "Mancozeb",
+  "Chlorothalonil"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "groundnut_diseases_groundnut_d2.txt",
+  "aesa:groundnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

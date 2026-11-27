@@ -1,0 +1,42 @@
+{
+ "pathogen": "Thrips tabaci",
+ "symptoms": [
+  "You will see small white silvery patches all over the leaves.",
+  "In bad cases, the leaves start to dry out from the tip downwards."
+ ],
+ "photo_cues": [
+  "small white silvery patches",
+  "leaves drying from tip",
+  "pale yellow to grey insect"
+ ],
+ "favourable_conditions": "Flooding the field helps check the population.",
+ "prevention": [
+  "Keep your fields clean and free of weeds.",
+  "Use regular hoeing to disturb the soil.",
+  "Flood the infested field to reduce the number of thrips."
+ ],
+ "practices": [
+  "Check five leaves per plant to count the number of nymphs and adults.",
+  "Use blue sticky traps placed 15 cm above the crop canopy to monitor them.",
+  "You can make your own traps using empty tins painted blue and coated with grease or castor oil."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "dimethoate",
+  "profenofos",
+  "Thimet",
+  "Carbofuran",
+  "Aldicarb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_insect-veg_onion_pest_disease.txt",
+  "onion_onion_1.txt",
+  "aesa:onion"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

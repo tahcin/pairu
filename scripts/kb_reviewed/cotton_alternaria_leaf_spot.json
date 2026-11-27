@@ -1,0 +1,40 @@
+{
+ "pathogen": "Alternaria macrospora, A. alternata",
+ "symptoms": [
+  "You will see small round or irregular spots on the leaves.",
+  "Each spot has a center with rings around it.",
+  "Many spots can join together to create large dead areas.",
+  "The leaves may turn brittle and fall off the plant.",
+  "You might see spots on the stems, bracts, and bolls.",
+  "In wet weather, the spots can turn a sooty black color."
+ ],
+ "photo_cues": [
+  "Small brown irregular spots",
+  "Concentric ring patterns",
+  "Purple colored spot margins",
+  "Sooty black necrotic tissue",
+  "Blighted leaf areas"
+ ],
+ "favourable_conditions": "The disease spreads more in humid weather conditions.",
+ "prevention": [
+  "Remove and destroy all plant parts left in the field after harvest."
+ ],
+ "practices": [
+  "Check your plants regularly for signs of the disease.",
+  "Remove and destroy any infected plant parts you find."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Copper oxychloride"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_diseases_cotton_d6.txt",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

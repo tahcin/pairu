@@ -1,0 +1,106 @@
+{
+ "pathogen": "Bemisia tabaci",
+ "symptoms": [
+  "You will see yellow spots on the leaves that grow together.",
+  "The leaves turn yellow from the veins out to the edges.",
+  "A black mold may grow on the leaves and bolls.",
+  "The plant may lose its leaves too early.",
+  "Flower buds and bolls may fall off the plant.",
+  "The bolls may not open properly."
+ ],
+ "photo_cues": [
+  "tiny white insects",
+  "yellowish oval nymphs",
+  "black sooty mold",
+  "yellow leaf spots",
+  "white waxy powder"
+ ],
+ "favourable_conditions": "Excessive irrigation and high nitrogen fertilizer use can lead to a buildup of the pest.",
+ "prevention": [
+  "Choose early maturing cotton varieties that resist whitefly.",
+  "Remove weeds like Abutilon indicum and other alternate hosts from your fields.",
+  "Avoid planting crops like brinjal, tomato, or okra near your cotton.",
+  "Use wider spacing when sowing your seeds.",
+  "Set up yellow sticky traps to monitor and catch the insects early."
+ ],
+ "practices": [
+  "Check your fields regularly for whitefly starting in April.",
+  "Pick off and destroy any leaves that show signs of the pest.",
+  "Keep your fields clean and free of weeds.",
+  "Use yellow sticky traps at the height of the plant canopy.",
+  "If you shake the plants and see a smoky cloud of insects, take action."
+ ],
+ "organic_bio": [
+  {
+   "text": "Verticillium lecanii 1.15% WP 2500 g/ha",
+   "page": 0
+  },
+  {
+   "text": "Neem seed kernel extract 5% (50 kg) and neem oil at 5 ml/l of water",
+   "page": 0
+  },
+  {
+   "text": "Fish oil rosin soap 25 kg at 1 kg in 40 lit of water",
+   "page": 0
+  },
+  {
+   "text": "Notchi leaves 5% extract",
+   "page": 0
+  },
+  {
+   "text": "Catharanthus rosea extract 5%",
+   "page": 0
+  },
+  {
+   "text": "Azadirachtin 0.15% (Neem Seed Kernel Based EC) @ 2.5-5.0 l/ha",
+   "page": 1
+  },
+  {
+   "text": "Azadirachtin 0.03% (300ppm) (Neem Oil Based WSP) @ 2.5-5.0 l/ha",
+   "page": 1
+  },
+  {
+   "text": "Homemade Neem Extract @ 2.5 l/ha",
+   "page": 1
+  },
+  {
+   "text": "Verticillium lecanii 1.15%WP @ 2.5 kg/ha",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Acetamiprid",
+  "Azadirachtin",
+  "Buprofezin",
+  "Chlorpyriphos",
+  "Clothianidin",
+  "Diafenthiuron",
+  "Fipronil",
+  "Imidacloprid",
+  "Profenofos",
+  "Thiacloprid",
+  "Thiamethoxam",
+  "Triazophos",
+  "Phosphamidon",
+  "Cypermethrin",
+  "Fenvalerate",
+  "Deltamethrin",
+  "Flonicamid",
+  "Pyripoxyfen",
+  "Spiromesifen",
+  "Dinotefuran",
+  "Ethion",
+  "Acephate"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_crop_prot_crop_insectpest_20_cotton_13.txt",
+  "extra:ppqs_cotton_whitefly",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

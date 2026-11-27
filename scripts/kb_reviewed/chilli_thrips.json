@@ -1,0 +1,57 @@
+{
+ "pathogen": "Scirtothrips dorsalis",
+ "symptoms": [
+  "The leaves develop crinkles and curl upwards.",
+  "The leaf stalks become long.",
+  "Flower buds turn brittle and fall off.",
+  "The plant shows stunted growth.",
+  "Flower production and fruit set are stopped."
+ ],
+ "photo_cues": [
+  "upward curling leaves",
+  "tiny straw yellow nymphs",
+  "adults with fringed wings",
+  "stunted plant growth"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Do not grow chilli after sorghum.",
+  "Do not plant chilli and onion together.",
+  "Intercrop with agathi to provide shade.",
+  "Sprinkle water over seedlings to stop thrips from multiplying."
+ ],
+ "practices": [
+  "Check for nymphs and adults on five terminal leaves per plant.",
+  "Use yellow or blue sticky traps at 4 to 5 traps per acre.",
+  "Use light traps at 1 trap per acre near dusk."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "imidacloprid",
+  "carbofuran",
+  "phorate",
+  "Dimethoate",
+  "Emamectin benzoate",
+  "Ethion",
+  "Fipronil",
+  "Oxydemeton–Methyl",
+  "Phosalone",
+  "Spinosad",
+  "Thiacloprid",
+  "lambda-cyhalothrin",
+  "acetamiprid",
+  "carbaryl",
+  "fenpropathrin",
+  "methomyl",
+  "indoxacarb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_insect-veg_chillies_pest_disease.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "pathogen": "Cercospora capsici",
+ "symptoms": [
+  "You will see round brown spots with light grey centers on the leaves.",
+  "These spots can grow larger and join together.",
+  "The center of the spot may fall out and leave a small hole.",
+  "Infected leaves turn yellow and fall off the plant early.",
+  "You may also see dark brown spots with light centers on stems and pods."
+ ],
+ "photo_cues": [
+  "brown circular leaf spots",
+  "light grey spot centers",
+  "dark brown leaf margins",
+  "shot hole leaf appearance",
+  "elliptical stem lesions"
+ ],
+ "favourable_conditions": "The disease spreads easily when there is high humidity and frequent rain.",
+ "prevention": [
+  "Collect seeds only from healthy fruits.",
+  "Ask your local agricultural office about using varieties that resist this disease.",
+  "Keep your field clean of old plant debris and volunteer plants."
+ ],
+ "practices": [
+  "Remove and destroy any plant parts that show signs of the disease.",
+  "Monitor your field regularly to catch the disease early.",
+  "Remove weeds from the field to stop the disease from spreading."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Chlorothalonil",
+  "Kavach",
+  "zineb",
+  "copper oxy chloride",
+  "benomyl"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "chilli_diseases_5.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

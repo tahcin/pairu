@@ -1,0 +1,45 @@
+{
+ "pathogen": "Leaf curl virus",
+ "symptoms": [
+  "Leaves curl toward the middle vein and look twisted.",
+  "The plant stops growing well because the spaces between leaves are short.",
+  "Leaves become much smaller than normal.",
+  "Flower buds fall off before they grow fully.",
+  "The flowers do not have any pollen inside."
+ ],
+ "photo_cues": [
+  "leaves curled toward midrib",
+  "deformed leaf shape",
+  "stunted plant growth",
+  "shortened stem sections",
+  "small flower buds"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Choose healthy seeds that are free from disease.",
+  "Soak seeds in a solution of 150 grams of trisodium orthophosphate per litre of water for 30 minutes before planting.",
+  "Cover nursery beds with nylon nets or straw to keep insects away.",
+  "Plant 2 to 3 rows of maize or sorghum around your field to block insects.",
+  "Avoid planting only chilli in your field."
+ ],
+ "practices": [
+  "Pull out and burn or bury any plants that look sick as soon as you see them.",
+  "Control whiteflies to stop the spread of the virus.",
+  "Monitor your field regularly for signs of the disease."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Carbofuran 3G",
+  "Dimethoate",
+  "Acephate"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "chilli_diseases_7.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

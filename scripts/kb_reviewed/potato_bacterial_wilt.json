@@ -1,0 +1,52 @@
+{
+ "pathogen": "Ralstonia solanacearum",
+ "symptoms": [
+  "The plant begins to wilt starting at the leaf tips or where stems branch out.",
+  "Leaves turn yellow at the base before the whole plant wilts and dies.",
+  "When you cut a stem, you will see a brown ring inside.",
+  "When you cut a tuber in half, you will see black or brown rings.",
+  "Squeezing a cut tuber releases a thick white fluid.",
+  "Fluid may come out of the tuber eyes and cause soil to stick to them."
+ ],
+ "photo_cues": [
+  "wilting plant tips",
+  "yellowing leaf bases",
+  "brown stem ring",
+  "black or brown tuber rings",
+  "white fluid from tuber"
+ ],
+ "favourable_conditions": "High temperature, soil moisture, and low pH favour the disease.",
+ "prevention": [
+  "Use only tubers that are free from the pathogen.",
+  "Rotate your potato crops with wheat.",
+  "Use resistant potato varieties.",
+  "Apply lime to the soil to change the pH level.",
+  "Keep your farming tools clean."
+ ],
+ "practices": [
+  "Remove and destroy any plants that show signs of wilting.",
+  "Disinfect your cutting knife with a bleach solution.",
+  "Monitor your fields regularly for signs of the disease.",
+  "Avoid moving soil or water from infected areas to healthy ones."
+ ],
+ "organic_bio": [
+  {
+   "text": "neem cake @ 80 Kg/acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "sodium hypochlorite",
+  "streptomycin sulphate",
+  "tetracylin hydrocloride"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_veg_potato_6.txt",
+  "aesa:potato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

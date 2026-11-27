@@ -1,0 +1,58 @@
+{
+ "pathogen": "Rhizoctonia solani",
+ "symptoms": [
+  "You will see spots on the leaf sheaths near the water level.",
+  "The spots start as greenish grey and look oval or irregular.",
+  "As they grow, the center turns greyish white with a dark border.",
+  "The spots spread and join together to cover the whole tiller.",
+  "The leaves may die and the entire plant can wither away.",
+  "Infected plants produce poorly filled grains."
+ ],
+ "photo_cues": [
+  "greenish grey oval spots",
+  "greyish white center spots",
+  "blackish brown spot border",
+  "purple brown spot border",
+  "lesions on leaf sheath"
+ ],
+ "favourable_conditions": "The disease spreads quickly in warm weather between 28 and 32 degrees Celsius with high humidity and thick plant spacing.",
+ "prevention": [
+  "Use the right amount of fertilizer and avoid too much nitrogen.",
+  "Keep the correct spacing between plants.",
+  "Remove weeds from the field.",
+  "Deep plough the field in summer and burn the stubble.",
+  "Do not let water flow from an infected field into a healthy one."
+ ],
+ "practices": [
+  "Monitor the field for spots on the leaf sheaths.",
+  "Avoid letting water sit in the field by using alternate wetting and drying.",
+  "Create 30 cm wide alleys in the field to improve air flow.",
+  "Remove and destroy infected plant parts."
+ ],
+ "organic_bio": [
+  {
+   "text": "Apply FYM 12.5 t/ha or green manure 6.25 t/ha to promote antagonistic microflora",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "Propiconazole",
+  "Benomyl",
+  "Iprodione",
+  "Validamycin",
+  "Polyoxin",
+  "Chlorothalonil",
+  "Hexaconazole",
+  "Tricyclazole"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_diseases_rice_6.txt",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

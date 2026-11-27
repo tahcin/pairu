@@ -1,0 +1,43 @@
+{
+ "pathogen": "Bipolaris maydis, Drechslera maydis, H. maydis",
+ "symptoms": [
+  "Young spots on the leaves are small and shaped like diamonds.",
+  "As the spots grow older, they stretch out and get longer.",
+  "The spots can join together to cover large parts of the leaf.",
+  "When spots join, they make the leaf look like it has been burned.",
+  "The size and shape of the spots can change depending on the type of maize you grow."
+ ],
+ "photo_cues": [
+  "small diamond shaped spots",
+  "tan elongated lesions",
+  "buff to brown borders",
+  "burned leaf areas"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Choose resistant maize varieties to plant in your field.",
+  "Do not use seeds that came from fields already infected with the disease."
+ ],
+ "practices": [
+  "Check your fields regularly for signs of the disease.",
+  "Remove and destroy any plants that show signs of infection.",
+  "Rotate your maize with other types of crops."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Carbaryl",
+  "Carbofuran"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "maize_disease_maize_5.txt",
+  "maize_disease_maize_7.txt",
+  "aesa:maize"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

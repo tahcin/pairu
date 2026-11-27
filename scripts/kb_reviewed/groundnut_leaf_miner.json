@@ -1,0 +1,42 @@
+{
+ "pathogen": "Aproaerema modicella",
+ "symptoms": [
+  "Young larvae dig into leaves and eat the inside parts.",
+  "Small brown spots appear on the leaves.",
+  "Later the larvae fold leaves together and hide inside.",
+  "The whole field looks burnt when seen from far away."
+ ],
+ "photo_cues": [
+  "small brown leaf blotches",
+  "folded leaves webbed together",
+  "green larvae with dark heads",
+  "shiny white eggs",
+  "brownish grey moth"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Plant cowpea or soybean near your crop to act as a trap.",
+  "Remove these trap plants once the harvest is done."
+ ],
+ "practices": [
+  "Check your field for larvae regularly.",
+  "Set up light traps to catch the moths.",
+  "Use pheromone traps to monitor the moth population.",
+  "Remove trapped moths from the traps every day."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Dimethiate",
+  "Malathion",
+  "Methyl demeton"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "groundnut_crop_prot_crop_insect_oil_ground_20nut_2.txt",
+  "aesa:groundnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "pathogen": "Leaf crinkle virus",
+ "symptoms": [
+  "Young leaves show yellowing around the side veins and near the edges.",
+  "The leaf edges curl downwards.",
+  "Some leaves look twisted.",
+  "The veins on the underside of the leaf turn reddish brown.",
+  "Plants that get sick early in the season stay small and often die from the top down."
+ ],
+ "photo_cues": [
+  "yellowing around leaf veins",
+  "downward curling leaf edges",
+  "twisted leaf shape",
+  "reddish brown leaf veins"
+ ],
+ "favourable_conditions": "The disease spreads in the field mainly through infected seeds or when diseased leaves rub against healthy ones.",
+ "prevention": [
+  "Use healthy seeds to prevent the disease from entering your field.",
+  "Avoid planting seeds from infected plants."
+ ],
+ "practices": [
+  "Monitor your field regularly for signs of the disease.",
+  "Remove and destroy any plants that show symptoms to stop the spread."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "chlorantraniliprole",
+  "lufenuron",
+  "methyl parathion",
+  "monocrotophos",
+  "phenthoate"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "black_gram_disease_leaf_crinkle.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "pathogen": "Xanthomonas campestris p.v malvacearum, Xanthomonas axonopodis p.v. malvacearum",
+ "symptoms": [
+  "Small dark green spots that look water-soaked appear on the leaves.",
+  "These spots grow and become angular shapes trapped by the leaf veins.",
+  "The veins turn black and the leaves may look twisted or crinkled.",
+  "Black sores form on the stems and branches which can cause the plant to die back.",
+  "The disease can spread to the cotton bolls and cause them to rot."
+ ],
+ "photo_cues": [
+  "dark green water-soaked spots",
+  "angular leaf spots",
+  "blackened leaf veins",
+  "sooty black stem lesions",
+  "rotting cotton bolls"
+ ],
+ "favourable_conditions": "The disease spreads easily in humid conditions.",
+ "prevention": [
+  "Use acid-delinted seeds to stop the disease from starting.",
+  "Avoid planting your cotton too close together.",
+  "Remove and burn all weeds and old plant parts from the field.",
+  "Pull out any volunteer cotton plants that grow on their own."
+ ],
+ "practices": [
+  "Remove and destroy any plants or parts that look sick.",
+  "Watch your crop closely for the first signs of spots.",
+  "Keep the field clean by removing all leftover plant debris."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "sulphuric acid",
+  "Carboxin",
+  "Oxycarboxin",
+  "Streptomycin sulphate",
+  "Thiram",
+  "streptocyclin",
+  "Tetracyclin Hydrocloride",
+  "carbendazim",
+  "urea",
+  "chlormequat chloride",
+  "citric acid",
+  "cobalt chloride"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "cotton_diseases_cotton_d9.txt",
+  "aesa:cotton"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "pathogen": "Septoria lycopersici",
+ "symptoms": [
+  "You will see many small grey spots on the leaves.",
+  "These spots are round and have a dark border.",
+  "The spots start on the lower leaves and move up the plant.",
+  "The spots can join together and cause the leaves to wither.",
+  "The plant may lose all its affected leaves.",
+  "The disease can sometimes attack stems and flowers."
+ ],
+ "photo_cues": [
+  "Small grey circular spots",
+  "Dark leaf spot border",
+  "Spots on lower leaves",
+  "Joined leaf spots",
+  "Withered blighted leaves"
+ ],
+ "favourable_conditions": "High humidity or dew at 25 degrees Celsius and moist weather with rain showers favor this disease.",
+ "prevention": [
+  "Ask your local agricultural office for resistant or tolerant plant varieties.",
+  "Use seeds that have been treated to prevent infection.",
+  "Keep your fields clean to stop the disease from spreading."
+ ],
+ "practices": [
+  "Remove and destroy any plant parts that look sick.",
+  "Monitor your plants regularly for signs of the disease.",
+  "Follow good field hygiene practices to stop the spread."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Thiram",
+  "Dithane M-45",
+  "Mancozeb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "tomato_diseases_4.txt",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

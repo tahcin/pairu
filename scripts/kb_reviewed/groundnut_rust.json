@@ -1,0 +1,41 @@
+{
+ "pathogen": "Puccinia arachidis",
+ "symptoms": [
+  "Small bumps called pustules appear on the bottom of the leaves.",
+  "These bumps can also show up on the top of the leaves.",
+  "The bumps may form on all parts of the plant except for flowers and pegs.",
+  "In bad cases, the leaves die and dry up but stay stuck to the plant."
+ ],
+ "photo_cues": [
+  "pustules on leaf surface",
+  "secondary pustule colonies",
+  "necrotic dried leaves",
+  "leaves attached to plant"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Choose plant varieties that are resistant to rust.",
+  "Rotate your crops with wheat, cotton, maize, onion, or garlic to keep the soil healthy."
+ ],
+ "practices": [
+  "Check your fields every week to see if the disease is spreading.",
+  "If you see the disease, you can spray the plants to protect them.",
+  "You may need to repeat the spray 15 days later if the disease is still there."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Chlorothalonil",
+  "Wettable sulphur",
+  "Tridemorph"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "groundnut_diseases_groundnut_d3.txt",
+  "aesa:groundnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

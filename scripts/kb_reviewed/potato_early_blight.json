@@ -1,0 +1,49 @@
+{
+ "pathogen": "Alternaria solani",
+ "symptoms": [
+  "You will see small black spots on older leaves first.",
+  "These spots grow larger and show a bullseye pattern of rings in the center.",
+  "The leaf tissue around the spots often turns yellow.",
+  "Spots can also appear on stems and may wrap around the plant near the soil.",
+  "In severe cases, the disease kills much of the plant foliage."
+ ],
+ "photo_cues": [
+  "brown black necrotic spots",
+  "oval angular spot shape",
+  "concentric rings pattern",
+  "yellow tissue around spots",
+  "shot holes on fruits"
+ ],
+ "favourable_conditions": "The disease likes warm weather with rain and high humidity.",
+ "prevention": [
+  "Always use healthy seed tubers that are free from disease.",
+  "Choose potato varieties that are known to resist this disease.",
+  "Keep the field clean by removing and destroying all old plant parts after harvest."
+ ],
+ "practices": [
+  "Check your plants regularly for signs of spots.",
+  "Remove and destroy any parts of the plant that show signs of the disease.",
+  "Keep the field clean to stop the spread of spores."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Zineb",
+  "captan",
+  "aureofungin",
+  "chlorothalonil",
+  "copper oxychloride",
+  "mancozeb",
+  "hexaconazole",
+  "kitazin",
+  "propineb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_veg_potato_2.txt",
+  "aesa:potato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

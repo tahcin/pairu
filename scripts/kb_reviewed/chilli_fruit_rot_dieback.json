@@ -1,0 +1,57 @@
+{
+ "pathogen": "Colletotrichum capsici",
+ "symptoms": [
+  "Flowers drop and dry up prematurely.",
+  "The tips of branches die back and wither.",
+  "Small sunken spots appear on the fruit.",
+  "Affected fruit shrivels and may fall off.",
+  "Leaves develop brownish black spots and fall off."
+ ],
+ "photo_cues": [
+  "brownish black leaf spots",
+  "yellowish to pinkish sunken spots",
+  "greyish white necrotic tissue",
+  "black dot like fruiting bodies",
+  "straw coloured fruit"
+ ],
+ "favourable_conditions": "Warm, rainy, and wet weather with high humidity favours the disease.",
+ "prevention": [
+  "Use only disease-free seeds.",
+  "Keep nursery beds and fields free of standing water.",
+  "Remove weeds and volunteer plants near your transplants.",
+  "Follow crop rotation with non-host crops."
+ ],
+ "practices": [
+  "Remove and destroy infected plant parts.",
+  "Ensure good drainage to prevent water from pooling in the field.",
+  "Monitor the crop closely for signs of infection.",
+  "Keep the field and nursery area clean of weeds."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Thiram",
+  "Captan",
+  "Ziram",
+  "miltox",
+  "wettable sulphur",
+  "copper oxychloride",
+  "Zineb",
+  "benomyl",
+  "difenoconazole",
+  "hexaconazole",
+  "propineb",
+  "tebuconazole",
+  "azoxystrobin",
+  "kitazine",
+  "mancozeb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "chilli_diseases_2.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

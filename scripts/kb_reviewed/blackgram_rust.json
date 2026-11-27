@@ -1,0 +1,48 @@
+{
+ "pathogen": "Uromyces phaseoli",
+ "symptoms": [
+  "You will see small, round spots on the leaves.",
+  "These spots have a pale brown center and a reddish brown edge.",
+  "The spots can also appear on branches and pods.",
+  "In bad cases, the leaves will shrivel and fall off the plant.",
+  "The underside of the leaves often shows many reddish brown pustules."
+ ],
+ "photo_cues": [
+  "small reddish brown pustules",
+  "pale brown spot centers",
+  "reddish brown spot margins",
+  "shriveled leaves",
+  "spots on pods"
+ ],
+ "favourable_conditions": "High humidity, cloudy weather, temperatures between 21 and 26 degrees Celsius, and nights with heavy dew help the disease spread.",
+ "prevention": [
+  "Remove volunteer plants from the field to lower disease levels.",
+  "Use healthy seeds that are not carrying the fungus."
+ ],
+ "practices": [
+  "Check your fields regularly for signs of the disease.",
+  "Remove and destroy any plant parts that look sick.",
+  "Keep the field clean of old plant debris where the fungus hides."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "wettable sulphur",
+  "chlorantraniliprole",
+  "lufenuron",
+  "methyl parathion",
+  "monocrotophos",
+  "phenthoate",
+  "thiodicarb",
+  "flubendiamide"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "black_gram_disease_rust.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

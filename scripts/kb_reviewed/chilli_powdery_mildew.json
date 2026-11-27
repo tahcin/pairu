@@ -1,0 +1,49 @@
+{
+ "pathogen": "Leveillula taurica",
+ "symptoms": [
+  "A white powdery coating appears on the underside of leaves.",
+  "Yellow patches show up on the top side of the leaves.",
+  "The plant may lose its leaves as they dry up and fall off.",
+  "You might see the white powder on branches and young fruits.",
+  "Infected fruits stop growing and may fall off early."
+ ],
+ "photo_cues": [
+  "white powdery leaf growth",
+  "yellow patches on leaves",
+  "white powder on branches",
+  "white powder on fruits"
+ ],
+ "favourable_conditions": "Cool dry weather helps the spores grow, and high humidity helps the disease spread.",
+ "prevention": [
+  "Plant resistant or tolerant varieties.",
+  "Practice crop rotation with crops that do not get this disease.",
+  "Destroy alternate host plants that may carry the disease.",
+  "Plant your crop at the right time."
+ ],
+ "practices": [
+  "Consult your local agricultural office for recommended resistant varieties.",
+  "Follow general field hygiene practices to keep the area clean.",
+  "Remove and destroy any plant parts that show signs of infection."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Wettable sulphur",
+  "Dinocap",
+  "Karathane",
+  "flusilazole",
+  "sulphur",
+  "azoxystrobin",
+  "benomyl",
+  "hexaconazole",
+  "tebuconazole"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "chilli_diseases_3.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

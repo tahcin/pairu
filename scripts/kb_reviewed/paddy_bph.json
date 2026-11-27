@@ -1,0 +1,95 @@
+{
+ "pathogen": "Nilaparvata lugens",
+ "symptoms": [
+  "Small insects gather at the base of the plant near the water.",
+  "The plants start to dry up and look scorched.",
+  "You will see round patches in the field where plants are drying and falling over.",
+  "The insects suck the plant sap which stops grain from filling properly.",
+  "The plants may show signs of viral diseases like grassy stunt or ragged stunt."
+ ],
+ "photo_cues": [
+  "Circular yellow patches",
+  "Brown scorched plants",
+  "Cottony white nymphs",
+  "Yellowish brown adult hoppers",
+  "Small curved eggs in leaf sheath"
+ ],
+ "favourable_conditions": "The pest thrives in humid conditions with continuous rice cultivation, high shade, and standing water in the field.",
+ "prevention": [
+  "Do not plant the same susceptible rice variety in the same area every year.",
+  "Use resistant or tolerant rice varieties recommended for your state.",
+  "Avoid using too much nitrogen fertilizer.",
+  "Plant all fields in your area at the same time and keep the fields free of weeds.",
+  "Leave gaps of a few rows every 8 to 10 rows to help air move through the crop."
+ ],
+ "practices": [
+  "Check your fields every 3 to 5 days by gently tapping the base of plants to see if insects jump into the water.",
+  "Drain the water from the field for 3 to 4 days if you see a heavy infestation.",
+  "Use light traps at night or yellow pan traps during the day to monitor and catch the insects.",
+  "Direct any sprays toward the base of the plants where the insects live.",
+  "Avoid using chemical pesticides if you see many natural enemies like spiders in the field."
+ ],
+ "organic_bio": [
+  {
+   "text": "Neem oil 3% 15 lit/ha",
+   "page": 0
+  },
+  {
+   "text": "Neem oil 5 ml/L with 2 ml liquid detergent",
+   "page": 1
+  },
+  {
+   "text": "5% Neem seed kernel extract (NSKE)",
+   "page": 1
+  },
+  {
+   "text": "Commercial neem formulation containing Azadirachtin 1500 ppm @ 2.5ml/ litre of water",
+   "page": 1
+  },
+  {
+   "text": "Metarhizium anisopliae 1.15% WP @ 2-5 g/litre",
+   "page": 1
+  },
+  {
+   "text": "Extract of the Water Pepper leaf @ 20 gm/L with 2 ml liquid detergent",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Phosalone",
+  "Carbaryl",
+  "Methyl demeton",
+  "Chlorpyriphos",
+  "Acephate",
+  "Azadirachtin",
+  "Buprofezin",
+  "Carbosulfan",
+  "Chlorantraniliprole",
+  "Dichlorvos",
+  "Fenoucarb (BPMC)",
+  "Fipronil",
+  "Imidacloprid",
+  "Phosphamidon",
+  "Triazophos",
+  "Ethiprole",
+  "Clothianidin",
+  "Dinotefuran",
+  "Ethofenprox",
+  "Flonicamid",
+  "Pymetrozine",
+  "Thiamethoxam",
+  "Triflumezopyrim",
+  "Carbendazim"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_crop_prot_crop_insectpest_20_cereals_paddy_12.txt",
+  "extra:ppqs_rice_bph",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1,
+  2
+ ]
+}

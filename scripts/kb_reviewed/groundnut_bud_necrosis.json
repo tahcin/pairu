@@ -1,0 +1,44 @@
+{
+ "pathogen": "Peanut bud necrosis virus (PBNV)",
+ "symptoms": [
+  "You will see pale spots on young leaves.",
+  "The leaves develop rings and streaks that look dead.",
+  "The top bud of the plant may die when the weather is hot.",
+  "As the plant grows older it stays small and stunted.",
+  "The plant may grow many extra side shoots."
+ ],
+ "photo_cues": [
+  "pale spots on leaves",
+  "necrotic rings on leaves",
+  "necrotic streaks on leaves",
+  "stunted plant growth",
+  "short stem sections"
+ ],
+ "favourable_conditions": "The disease is more likely to happen when the temperature is relatively high.",
+ "prevention": [
+  "Plant your seeds close together with 15 cm between them.",
+  "Use varieties that are known to be tolerant to this disease.",
+  "Plant your crop early when the first rains come.",
+  "Use dense cropping to help reduce the damage.",
+  "Rotate your groundnut crop with other plants like sorghum or maize."
+ ],
+ "practices": [
+  "Check your field regularly for signs of the virus.",
+  "Pull out and destroy any plants that look sick up to 6 weeks after planting.",
+  "Remove any infected plants from the field as soon as you see them.",
+  "Intercrop groundnut with castor in a 3 to 6 to 1 ratio to help manage the insects that spread the virus."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Monocrotophos"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "groundnut_diseases_groundnut_d5.txt",
+  "aesa:groundnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

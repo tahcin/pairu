@@ -1,0 +1,46 @@
+{
+ "pathogen": "Streptomyces scabies",
+ "symptoms": [
+  "The skin of the potato tuber develops rough, corky spots.",
+  "You may see superficial reddish-brown spots on the surface of young tubers.",
+  "As the potato grows, these spots expand and become pitted or cracked.",
+  "Severe cases leave the potato skin covered in rough black welts.",
+  "The damaged areas may attract insects."
+ ],
+ "photo_cues": [
+  "rough cracked skin",
+  "corky lesions",
+  "reddish-brown spots",
+  "pitted tuber surface",
+  "rough black welts"
+ ],
+ "favourable_conditions": "The disease is common in fields with low soil pH and is made worse by high soil moisture or too much irrigation.",
+ "prevention": [
+  "Only plant seed potatoes that are free from scab.",
+  "Use a crop rotation of four to six years with alfalfa.",
+  "Add green manure to your fields before planting potatoes.",
+  "Avoid using alkaline fertilizers like calcium ammonium nitrate."
+ ],
+ "practices": [
+  "Remove any damaged or rotten potatoes before placing the crop in storage.",
+  "If you wash the tubers, allow them to dry thoroughly before storing.",
+  "Keep potatoes in a dark, well-ventilated cool place for 10 to 14 days after harvest to allow cuts and bruises to heal."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mercuric chloride",
+  "formaldehyde",
+  "PCNB",
+  "calcium ammonium nitrate",
+  "chlorpropham"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_veg_potato_5.txt",
+  "aesa:potato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

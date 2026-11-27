@@ -1,0 +1,93 @@
+{
+ "pathogen": "Helicoverpa armigera",
+ "symptoms": [
+  "Young caterpillars eat the tender leaves of the plant.",
+  "Older caterpillars bore round holes into the fruit.",
+  "The caterpillar pushes part of its body inside the fruit to eat the inside.",
+  "You may see damaged fruits and caterpillars on the plants."
+ ],
+ "photo_cues": [
+  "round holes in fruit",
+  "greenish to brown caterpillar",
+  "dark grey lines on body",
+  "creamy white eggs",
+  "olive green moth"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Plant American tall marigold and tomato seedlings together in a 1 to 16 row ratio.",
+  "Set up pheromone traps to catch the moths.",
+  "Use tomato nursery as a trap crop to attract egg-laying females."
+ ],
+ "practices": [
+  "Regularly check your plants for damaged fruits and caterpillars.",
+  "Pick off and destroy any infected fruits and large caterpillars you find.",
+  "Install pheromone traps in the field and record the number of moths caught.",
+  "Remove and destroy trapped moths after each count."
+ ],
+ "organic_bio": [
+  {
+   "text": "Trichogramma pretiosum @ 1 lakh nos. /ha/release",
+   "page": 0
+  },
+  {
+   "text": "HaNPV 1.5 x 10 12 POBs/ha",
+   "page": 0
+  },
+  {
+   "text": "NPV of H. armigera 0.43% AS @ 3.0 ml/lit or 2 % AS @ 1.0 ml per lit",
+   "page": 0
+  },
+  {
+   "text": "Bacillus thuringiensis 2g/lit",
+   "page": 0
+  },
+  {
+   "text": "Azadirachtin 1.0 % EC (10000 ppm) 2.0 ml/ lit",
+   "page": 0
+  },
+  {
+   "text": "azadirachtin 1% (10000 ppm) neem based EC @ 400-600 ml in 200 l of water/acre",
+   "page": 1
+  },
+  {
+   "text": "azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre",
+   "page": 1
+  },
+  {
+   "text": "Ha NPV 0.43% AS @ 600 ml in 160-240 l of water/acre",
+   "page": 1
+  },
+  {
+   "text": "Ha NPV 2% AS @ 100-200 ml in 200 l of water/acre",
+   "page": 1
+  },
+  {
+   "text": "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "carbaryl",
+  "Azadirachtin",
+  "Indoxacarb",
+  "Flubendiamide",
+  "Novaluron",
+  "Phosalone",
+  "Quinalphos",
+  "chlorantranilioprole",
+  "lambda-cyhalothrin",
+  "methomyl",
+  "cyantraniliprole",
+  "trichlorfon"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "tomato_tomato_1.txt",
+  "aesa:tomato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "pathogen": "Xanthomonas campestris pv. vesicatoria",
+ "symptoms": [
+  "You will see small dark brown or black greasy spots on the leaves.",
+  "These spots grow larger and may join together to form irregular patches.",
+  "Leaves that are badly affected turn yellow and fall off the plant.",
+  "Stems can develop cankers which may cause branches to wilt.",
+  "Fruits show round raised spots that look water soaked with pale yellow borders.",
+  "The centers of these fruit spots may turn brown and sunken."
+ ],
+ "photo_cues": [
+  "dark greasy leaf spots",
+  "yellow leaf borders",
+  "raised brown fruit lesions",
+  "straw coloured spot centers",
+  "elongated stem streaks"
+ ],
+ "favourable_conditions": "The disease spreads easily during times of moderate temperature, high humidity, and intermittent rain.",
+ "prevention": [
+  "Always collect seeds from healthy plants.",
+  "Use disease free seeds for planting.",
+  "Ask your local agricultural office about using resistant or tolerant plant varieties."
+ ],
+ "practices": [
+  "Keep your field clean by removing weeds.",
+  "Monitor your plants regularly for signs of the disease.",
+  "Follow general cultural and mechanical practices to keep the field healthy."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mercuric chloride",
+  "Bordeaux mixture",
+  "copper oxychloride",
+  "streptomycin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "chilli_diseases_4.txt",
+  "aesa:chillies_capsicum"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

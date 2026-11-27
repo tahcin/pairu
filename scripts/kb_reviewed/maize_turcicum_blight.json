@@ -1,0 +1,39 @@
+{
+ "pathogen": "Exserohilum turcicum",
+ "symptoms": [
+  "Small, slightly oval, water-soaked spots appear on the leaves early on.",
+  "These spots grow into long, spindle-shaped dead areas.",
+  "The spots start on the lower leaves and spread as the plant grows.",
+  "Eventually, the entire leaf surface looks like it has been burned."
+ ],
+ "photo_cues": [
+  "small water-soaked spots",
+  "elongated spindle-shaped lesions",
+  "long elliptical lesions",
+  "grayish-green or tan spots"
+ ],
+ "favourable_conditions": "The disease causes significant damage when infection happens at the silking stage under optimum conditions.",
+ "prevention": [
+  "Use resistant or tolerant varieties like PEMH-5, Vivek 21, Vivek 23, Vivek 25, or Nithyashree."
+ ],
+ "practices": [
+  "Monitor the crop for the first signs of the disease.",
+  "Apply treatments at 10-day intervals after the disease first appears."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Mancozeb",
+  "Zineb",
+  "Carbofuran",
+  "Carbaryl"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "maize_disease_maize_4.txt",
+  "aesa:maize"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

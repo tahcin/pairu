@@ -1,0 +1,44 @@
+{
+ "pathogen": "Rhizoctonia solani",
+ "symptoms": [
+  "You may see black specks or scabs on the potato skin.",
+  "The eyes of the potato may turn dark brown when they start to sprout.",
+  "The plant may wilt because the inner tissue is damaged.",
+  "You might find sunken spots on the stem or the stem may rot.",
+  "The inside of the potato can show hard dry rot with browning."
+ ],
+ "photo_cues": [
+  "black specks on tubers",
+  "russeting on tuber skin",
+  "sunken lesions on stem",
+  "rotten stem"
+ ],
+ "favourable_conditions": "The disease develops in cool, wet weather or when temperatures and moisture levels are high.",
+ "prevention": [
+  "Only plant seed tubers that are free from disease.",
+  "Use crop rotation to keep the soil healthy.",
+  "Plant your tubers early in the season.",
+  "If you have well-developed tubers, plant them at a shallow depth."
+ ],
+ "practices": [
+  "Leave the land fallow for two years to reduce the amount of disease in the soil.",
+  "Remove any damaged or rotten potatoes before you put them into storage.",
+  "If you wash your potatoes, make sure they are completely dry before storing them."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "mercuric chloride",
+  "acidulated mercuric chloride",
+  "pentachloroni trobenzene",
+  "chlorpropham"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_veg_potato_4.txt",
+  "aesa:potato"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

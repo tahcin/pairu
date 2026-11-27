@@ -1,0 +1,53 @@
+{
+ "pathogen": "Scirpophaga incertulas",
+ "symptoms": [
+  "You may see brown egg masses near the tips of the leaves.",
+  "The caterpillar bores into the center of the shoot and the tiller.",
+  "The central shoot dries up and is called a dead heart.",
+  "In older plants, the whole panicle dries up and turns white, which is called a white ear.",
+  "Affected plants can be pulled out of the ground easily by hand."
+ ],
+ "photo_cues": [
+  "brown coloured egg mass",
+  "dried central shoot",
+  "white dried panicle",
+  "pale yellow larva",
+  "dark brown head"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Clip the tips of seedlings before you transplant them to remove egg masses.",
+  "Choose rice varieties that are resistant or moderately resistant to the borer.",
+  "After harvest, till the soil and flood the field to destroy larvae hiding in the stubble.",
+  "Delay planting times to avoid the peak time when moths come out.",
+  "Use seedbeds as a trap crop for moths."
+ ],
+ "practices": [
+  "Collect and destroy any egg masses you find in the main field.",
+  "Use pheromone traps to monitor the number of moths in your field.",
+  "Use light traps in the evening to observe the pests.",
+  "Use sweep nets to check the population of pests and their natural enemies."
+ ],
+ "organic_bio": [
+  {
+   "text": "Trichogramma japonicum",
+   "page": 0
+  },
+  {
+   "text": "Neem seed kernel extract",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "carbendazim"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "rice_crop_prot_crop_insectpest_20_cereals_paddy_4.txt",
+  "aesa:rice"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

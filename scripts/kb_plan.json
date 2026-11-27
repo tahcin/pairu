@@ -1,0 +1,1288 @@
+{
+ "diseases": [
+  {
+   "id": "paddy_blast",
+   "crop": "paddy",
+   "name_en": "Blast",
+   "kind": "fungal",
+   "tnau_files": [
+    "rice_diseases_rice_1.txt"
+   ],
+   "text_files": [
+    "rice_diseases_rice_1.txt",
+    "extra:ppqs_paddy_blast",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "\\bblast\\b",
+   "cibrc_targets": [
+    "blast",
+    "leaf blast",
+    "neck blast",
+    "panicle blast"
+   ]
+  },
+  {
+   "id": "paddy_brown_spot",
+   "crop": "paddy",
+   "name_en": "Brown spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "rice_diseases_rice_2.txt"
+   ],
+   "text_files": [
+    "rice_diseases_rice_2.txt",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "brown spot",
+   "cibrc_targets": [
+    "brown spot",
+    "brown leaf spot"
+   ]
+  },
+  {
+   "id": "paddy_blb",
+   "crop": "paddy",
+   "name_en": "Bacterial leaf blight",
+   "kind": "bacterial",
+   "tnau_files": [
+    "rice_diseases_rice_3.txt"
+   ],
+   "text_files": [
+    "rice_diseases_rice_3.txt",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "bacterial (leaf )?blight|\\bBLB\\b",
+   "cibrc_targets": [
+    "bacterial leaf blight"
+   ]
+  },
+  {
+   "id": "paddy_sheath_blight",
+   "crop": "paddy",
+   "name_en": "Sheath blight",
+   "kind": "fungal",
+   "tnau_files": [
+    "rice_diseases_rice_6.txt"
+   ],
+   "text_files": [
+    "rice_diseases_rice_6.txt",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "sheath blight",
+   "cibrc_targets": [
+    "sheath blight"
+   ]
+  },
+  {
+   "id": "paddy_bph",
+   "crop": "paddy",
+   "name_en": "Brown plant hopper",
+   "kind": "pest",
+   "tnau_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_12.txt"
+   ],
+   "text_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_12.txt",
+    "extra:ppqs_rice_bph",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "brown plant ?hopper|\\bBPH\\b|hopper ?burn",
+   "cibrc_targets": [
+    "brown plant hopper",
+    "plant hopper"
+   ]
+  },
+  {
+   "id": "paddy_stem_borer",
+   "crop": "paddy",
+   "name_en": "Yellow stem borer",
+   "kind": "pest",
+   "tnau_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_4.txt"
+   ],
+   "text_files": [
+    "rice_crop_prot_crop_insectpest_20_cereals_paddy_4.txt",
+    "aesa:rice"
+   ],
+   "aesa": "rice",
+   "aesa_kw": "stem borer|dead ?heart|white ?ear",
+   "cibrc_targets": [
+    "stem borer",
+    "yellow stem borer"
+   ]
+  },
+  {
+   "id": "cotton_bacterial_blight",
+   "crop": "cotton",
+   "name_en": "Bacterial blight (black arm)",
+   "kind": "bacterial",
+   "tnau_files": [
+    "cotton_diseases_cotton_d9.txt"
+   ],
+   "text_files": [
+    "cotton_diseases_cotton_d9.txt",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "bacterial blight|black ?arm|angular leaf spot",
+   "cibrc_targets": [
+    "bacterial blight",
+    "bacterial leaf blight",
+    "angular leaf spot",
+    "angular leaf spot or black arm"
+   ]
+  },
+  {
+   "id": "cotton_alternaria_leaf_spot",
+   "crop": "cotton",
+   "name_en": "Alternaria leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "cotton_diseases_cotton_d6.txt"
+   ],
+   "text_files": [
+    "cotton_diseases_cotton_d6.txt",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "alternaria",
+   "cibrc_targets": [
+    "alternaria leaf spot",
+    "alternaria leaf blight",
+    "alternaria leaf",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "cotton_grey_mildew",
+   "crop": "cotton",
+   "name_en": "Grey mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "cotton_diseases_cotton_d4.txt"
+   ],
+   "text_files": [
+    "cotton_diseases_cotton_d4.txt",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "grey mildew|areolate",
+   "cibrc_targets": [
+    "grey mildew"
+   ]
+  },
+  {
+   "id": "cotton_pink_bollworm",
+   "crop": "cotton",
+   "name_en": "Pink bollworm",
+   "kind": "pest",
+   "tnau_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_2.txt"
+   ],
+   "text_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_2.txt",
+    "extra:ppqs_cotton_pbw",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "pink boll ?worm|Pectinophora",
+   "cibrc_targets": [
+    "pink bollworm",
+    "pink boll worm",
+    "pectinophora gossypiella"
+   ]
+  },
+  {
+   "id": "cotton_whitefly",
+   "crop": "cotton",
+   "name_en": "Whitefly",
+   "kind": "pest",
+   "tnau_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_13.txt"
+   ],
+   "text_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_13.txt",
+    "extra:ppqs_cotton_whitefly",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "white ?fly|Bemisia",
+   "cibrc_targets": [
+    "whitefly"
+   ]
+  },
+  {
+   "id": "cotton_jassid",
+   "crop": "cotton",
+   "name_en": "Leafhopper (jassid)",
+   "kind": "pest",
+   "tnau_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_10.txt"
+   ],
+   "text_files": [
+    "cotton_crop_prot_crop_insectpest_20_cotton_10.txt",
+    "aesa:cotton"
+   ],
+   "aesa": "cotton",
+   "aesa_kw": "leaf ?hopper|jassid|Amrasca",
+   "cibrc_targets": [
+    "jassids",
+    "leafhopper"
+   ]
+  },
+  {
+   "id": "chilli_fruit_rot_dieback",
+   "crop": "chilli",
+   "name_en": "Fruit rot and dieback (anthracnose)",
+   "kind": "fungal",
+   "tnau_files": [
+    "chilli_diseases_2.txt"
+   ],
+   "text_files": [
+    "chilli_diseases_2.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "die-?back|anthracnose|fruit rot",
+   "cibrc_targets": [
+    "anthracnose",
+    "fruit rot",
+    "dieback",
+    "anthracnose fruit rot"
+   ]
+  },
+  {
+   "id": "chilli_powdery_mildew",
+   "crop": "chilli",
+   "name_en": "Powdery mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "chilli_diseases_3.txt"
+   ],
+   "text_files": [
+    "chilli_diseases_3.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "powdery mildew",
+   "cibrc_targets": [
+    "powdery mildew"
+   ]
+  },
+  {
+   "id": "chilli_leaf_curl",
+   "crop": "chilli",
+   "name_en": "Leaf curl virus",
+   "kind": "viral",
+   "tnau_files": [
+    "chilli_diseases_7.txt"
+   ],
+   "text_files": [
+    "chilli_diseases_7.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "leaf curl|mosaic complex",
+   "cibrc_targets": [
+    "whitefly"
+   ]
+  },
+  {
+   "id": "chilli_cercospora_leaf_spot",
+   "crop": "chilli",
+   "name_en": "Cercospora leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "chilli_diseases_5.txt"
+   ],
+   "text_files": [
+    "chilli_diseases_5.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "cercospora",
+   "cibrc_targets": [
+    "cercospora leaf spot",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "chilli_bacterial_leaf_spot",
+   "crop": "chilli",
+   "name_en": "Bacterial leaf spot",
+   "kind": "bacterial",
+   "tnau_files": [
+    "chilli_diseases_4.txt"
+   ],
+   "text_files": [
+    "chilli_diseases_4.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "bacterial leaf spot",
+   "cibrc_targets": [
+    "bacterial leaf spot"
+   ]
+  },
+  {
+   "id": "chilli_thrips",
+   "crop": "chilli",
+   "name_en": "Thrips",
+   "kind": "pest",
+   "tnau_files": [
+    "crop_prot_crop_insect-veg_chillies_pest_disease.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_insect-veg_chillies_pest_disease.txt",
+    "aesa:chillies_capsicum"
+   ],
+   "aesa": "chillies_capsicum",
+   "aesa_kw": "thrips|Scirtothrips",
+   "cibrc_targets": [
+    "thrips",
+    "black thrips"
+   ]
+  },
+  {
+   "id": "groundnut_early_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Early leaf spot (tikka)",
+   "kind": "fungal",
+   "tnau_files": [
+    "groundnut_diseases_groundnut_d1.txt"
+   ],
+   "text_files": [
+    "groundnut_diseases_groundnut_d1.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "early leaf spot|tikka|leaf spot",
+   "cibrc_targets": [
+    "early leaf spot",
+    "tikka leaf spot",
+    "tikka",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "groundnut_late_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Late leaf spot (tikka)",
+   "kind": "fungal",
+   "tnau_files": [
+    "groundnut_diseases_groundnut_d2.txt"
+   ],
+   "text_files": [
+    "groundnut_diseases_groundnut_d2.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "late leaf spot|tikka|leaf spot",
+   "cibrc_targets": [
+    "late leaf spot",
+    "lateleafspot",
+    "tikka leaf spot",
+    "tikka",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "groundnut_rust",
+   "crop": "groundnut",
+   "name_en": "Rust",
+   "kind": "fungal",
+   "tnau_files": [
+    "groundnut_diseases_groundnut_d3.txt"
+   ],
+   "text_files": [
+    "groundnut_diseases_groundnut_d3.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "\\brust\\b",
+   "cibrc_targets": [
+    "rust"
+   ]
+  },
+  {
+   "id": "groundnut_stem_rot",
+   "crop": "groundnut",
+   "name_en": "Stem rot",
+   "kind": "fungal",
+   "tnau_files": [
+    "groundnut_diseases_groundnut_d4.txt"
+   ],
+   "text_files": [
+    "groundnut_diseases_groundnut_d4.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "stem rot|Sclerotium|white mould",
+   "cibrc_targets": [
+    "stem rot",
+    "sclerotium rot"
+   ]
+  },
+  {
+   "id": "groundnut_bud_necrosis",
+   "crop": "groundnut",
+   "name_en": "Bud necrosis virus",
+   "kind": "viral",
+   "tnau_files": [
+    "groundnut_diseases_groundnut_d5.txt"
+   ],
+   "text_files": [
+    "groundnut_diseases_groundnut_d5.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "bud necrosis|PBNV|thrips",
+   "cibrc_targets": [
+    "thrips"
+   ]
+  },
+  {
+   "id": "groundnut_leaf_miner",
+   "crop": "groundnut",
+   "name_en": "Leaf miner",
+   "kind": "pest",
+   "tnau_files": [
+    "groundnut_crop_prot_crop_insect_oil_ground_20nut_2.txt"
+   ],
+   "text_files": [
+    "groundnut_crop_prot_crop_insect_oil_ground_20nut_2.txt",
+    "aesa:groundnut"
+   ],
+   "aesa": "groundnut",
+   "aesa_kw": "leaf ?miner|Aproaerema",
+   "cibrc_targets": [
+    "leaf miner",
+    "leaf minor"
+   ]
+  },
+  {
+   "id": "maize_common_rust",
+   "crop": "maize",
+   "name_en": "Common rust",
+   "kind": "fungal",
+   "tnau_files": [
+    "maize_disease_new_maize_4.txt"
+   ],
+   "text_files": [
+    "maize_disease_new_maize_4.txt",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "\\brust\\b",
+   "cibrc_targets": [
+    "common rust",
+    "rust"
+   ]
+  },
+  {
+   "id": "maize_turcicum_blight",
+   "crop": "maize",
+   "name_en": "Northern leaf blight (turcicum)",
+   "kind": "fungal",
+   "tnau_files": [
+    "maize_disease_maize_4.txt"
+   ],
+   "text_files": [
+    "maize_disease_maize_4.txt",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "turcicum|\\bTLB\\b|northern",
+   "cibrc_targets": [
+    "turcicum leaf blight",
+    "turcicum blight",
+    "tercicum leaf blight",
+    "leaf blight",
+    "northern corn leaf blight southern corn leaf blight",
+    "n s orthern leaf blight"
+   ]
+  },
+  {
+   "id": "maize_maydis_blight",
+   "crop": "maize",
+   "name_en": "Southern leaf blight (maydis)",
+   "kind": "fungal",
+   "tnau_files": [
+    "maize_disease_maize_5.txt",
+    "maize_disease_maize_7.txt"
+   ],
+   "text_files": [
+    "maize_disease_maize_5.txt",
+    "maize_disease_maize_7.txt",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "maydis|\\bMLB\\b|southern",
+   "cibrc_targets": [
+    "maydis leaf blight",
+    "leaf blight",
+    "northern corn leaf blight southern corn leaf blight"
+   ]
+  },
+  {
+   "id": "maize_grey_leaf_spot",
+   "crop": "maize",
+   "name_en": "Grey leaf spot",
+   "kind": "fungal",
+   "tnau_files": [],
+   "text_files": [
+    "extra:cpn_gls",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "gr[ae]y leaf spot|Cercospora zeae",
+   "cibrc_targets": []
+  },
+  {
+   "id": "maize_downy_mildew",
+   "crop": "maize",
+   "name_en": "Downy mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "maize_disease_maize_1.txt",
+    "maize_disease_maize_2.txt"
+   ],
+   "text_files": [
+    "maize_disease_maize_1.txt",
+    "maize_disease_maize_2.txt",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "downy mildew",
+   "cibrc_targets": [
+    "downy mildew",
+    "sorghum downy mildew",
+    "browny stripe downy mildew",
+    "phillippine downy mildew",
+    "sugarcane downy mildew"
+   ]
+  },
+  {
+   "id": "maize_fall_armyworm",
+   "crop": "maize",
+   "name_en": "Fall armyworm",
+   "kind": "pest",
+   "tnau_files": [],
+   "text_files": [
+    "extra:vikaspedia_faw",
+    "extra:ppqs_faw",
+    "aesa:maize"
+   ],
+   "aesa": "maize",
+   "aesa_kw": "fall army ?worm|frugiperda",
+   "cibrc_targets": [
+    "fall armyworm",
+    "fall army worm",
+    "spodoptera frugiperda"
+   ]
+  },
+  {
+   "id": "tomato_early_blight",
+   "crop": "tomato",
+   "name_en": "Early blight",
+   "kind": "fungal",
+   "tnau_files": [
+    "tomato_diseases_2.txt"
+   ],
+   "text_files": [
+    "tomato_diseases_2.txt",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "early blight|Alternaria",
+   "cibrc_targets": [
+    "early blight",
+    "alternaria blight",
+    "alternaria leaf spot"
+   ]
+  },
+  {
+   "id": "tomato_late_blight",
+   "crop": "tomato",
+   "name_en": "Late blight",
+   "kind": "fungal",
+   "tnau_files": [],
+   "text_files": [
+    "extra:iihr_tomato_lb",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "late blight|Phytophthora",
+   "cibrc_targets": [
+    "late blight"
+   ]
+  },
+  {
+   "id": "tomato_leaf_curl",
+   "crop": "tomato",
+   "name_en": "Leaf curl virus",
+   "kind": "viral",
+   "tnau_files": [
+    "tomato_diseases_8.txt"
+   ],
+   "text_files": [
+    "tomato_diseases_8.txt",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "leaf curl",
+   "cibrc_targets": [
+    "whitefly"
+   ]
+  },
+  {
+   "id": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "name_en": "Septoria leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "tomato_diseases_4.txt"
+   ],
+   "text_files": [
+    "tomato_diseases_4.txt",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "septoria",
+   "cibrc_targets": [
+    "septoria leaf spot",
+    "septoria leaf blight"
+   ]
+  },
+  {
+   "id": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "name_en": "Bacterial spot",
+   "kind": "bacterial",
+   "tnau_files": [
+    "tomato_diseases_6.txt"
+   ],
+   "text_files": [
+    "tomato_diseases_6.txt",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "bacterial leaf spot|bacterial spot",
+   "cibrc_targets": [
+    "bacterial leaf spot"
+   ]
+  },
+  {
+   "id": "tomato_fruit_borer",
+   "crop": "tomato",
+   "name_en": "Fruit borer",
+   "kind": "pest",
+   "tnau_files": [
+    "tomato_tomato_1.txt"
+   ],
+   "text_files": [
+    "tomato_tomato_1.txt",
+    "aesa:tomato"
+   ],
+   "aesa": "tomato",
+   "aesa_kw": "fruit borer|gram pod borer|Helicoverpa",
+   "cibrc_targets": [
+    "fruit borer",
+    "helicoverpa armigera"
+   ]
+  },
+  {
+   "id": "brinjal_shoot_fruit_borer",
+   "crop": "brinjal",
+   "name_en": "Shoot and fruit borer",
+   "kind": "pest",
+   "tnau_files": [
+    "brinjal_brinjal_1.txt"
+   ],
+   "text_files": [
+    "brinjal_brinjal_1.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "shoot and fruit borer|Leucinodes",
+   "cibrc_targets": [
+    "shoot and fruit borer",
+    "fruit borer",
+    "shoot borer"
+   ]
+  },
+  {
+   "id": "brinjal_little_leaf",
+   "crop": "brinjal",
+   "name_en": "Little leaf",
+   "kind": "bacterial",
+   "tnau_files": [
+    "brinjal_brinjal_6.txt"
+   ],
+   "text_files": [
+    "brinjal_brinjal_6.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "little leaf|phytoplasma",
+   "cibrc_targets": [
+    "jassids",
+    "leafhopper"
+   ]
+  },
+  {
+   "id": "brinjal_phomopsis_blight",
+   "crop": "brinjal",
+   "name_en": "Phomopsis blight and fruit rot",
+   "kind": "fungal",
+   "tnau_files": [
+    "brinjal_phdiseases_2.txt"
+   ],
+   "text_files": [
+    "brinjal_phdiseases_2.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "phomopsis",
+   "cibrc_targets": [
+    "fruit rot",
+    "blight"
+   ]
+  },
+  {
+   "id": "brinjal_bacterial_wilt",
+   "crop": "brinjal",
+   "name_en": "Bacterial wilt",
+   "kind": "bacterial",
+   "tnau_files": [
+    "brinjal_diseases_1.txt"
+   ],
+   "text_files": [
+    "brinjal_diseases_1.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "bacterial wilt|Ralstonia|solanacearum",
+   "cibrc_targets": [
+    "bacterial wilt",
+    "wilt"
+   ]
+  },
+  {
+   "id": "brinjal_cercospora_leaf_spot",
+   "crop": "brinjal",
+   "name_en": "Cercospora leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "brinjal_diseases_2.txt"
+   ],
+   "text_files": [
+    "brinjal_diseases_2.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "cercospora",
+   "cibrc_targets": [
+    "leaf spot",
+    "cercospora sp"
+   ]
+  },
+  {
+   "id": "brinjal_epilachna",
+   "crop": "brinjal",
+   "name_en": "Epilachna beetle (hadda beetle)",
+   "kind": "pest",
+   "tnau_files": [
+    "brinjal_brinjal_4.txt"
+   ],
+   "text_files": [
+    "brinjal_brinjal_4.txt",
+    "aesa:brinjal"
+   ],
+   "aesa": "brinjal",
+   "aesa_kw": "epilachna|hadda|spotted beetle",
+   "cibrc_targets": [
+    "epilachna grub",
+    "beetles"
+   ]
+  },
+  {
+   "id": "banana_panama_wilt",
+   "crop": "banana",
+   "name_en": "Panama wilt (Fusarium wilt)",
+   "kind": "fungal",
+   "tnau_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_7.txt"
+   ],
+   "text_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_7.txt",
+    "aesa:banana"
+   ],
+   "aesa": "banana",
+   "aesa_kw": "panama|fusarium wilt",
+   "cibrc_targets": [
+    "panama wilt"
+   ]
+  },
+  {
+   "id": "banana_sigatoka",
+   "crop": "banana",
+   "name_en": "Sigatoka leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_8.txt"
+   ],
+   "text_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_8.txt",
+    "aesa:banana"
+   ],
+   "aesa": "banana",
+   "aesa_kw": "sigatoka|Mycosphaerella",
+   "cibrc_targets": [
+    "sigatoka leaf spot",
+    "sigatoka",
+    "yellow sigatoka",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "banana_bunchy_top",
+   "crop": "banana",
+   "name_en": "Bunchy top virus",
+   "kind": "viral",
+   "tnau_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_3.txt"
+   ],
+   "text_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruits_banana_3.txt",
+    "aesa:banana"
+   ],
+   "aesa": "banana",
+   "aesa_kw": "bunchy top|aphid",
+   "cibrc_targets": [
+    "aphids"
+   ]
+  },
+  {
+   "id": "banana_anthracnose",
+   "crop": "banana",
+   "name_en": "Anthracnose",
+   "kind": "fungal",
+   "tnau_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruiits_banana_1.txt"
+   ],
+   "text_files": [
+    "banana_diseases_crop_prot_crop_20diseases_fruiits_banana_1.txt",
+    "aesa:banana"
+   ],
+   "aesa": "banana",
+   "aesa_kw": "anthracnose",
+   "cibrc_targets": [
+    "fruit rot"
+   ]
+  },
+  {
+   "id": "banana_rhizome_weevil",
+   "crop": "banana",
+   "name_en": "Rhizome weevil",
+   "kind": "pest",
+   "tnau_files": [
+    "banana_pest_banana_1.txt"
+   ],
+   "text_files": [
+    "banana_pest_banana_1.txt",
+    "aesa:banana"
+   ],
+   "aesa": "banana",
+   "aesa_kw": "rhizome weevil|corm weevil|Cosmopolites",
+   "cibrc_targets": [
+    "rhizome weevil"
+   ]
+  },
+  {
+   "id": "mango_powdery_mildew",
+   "crop": "mango",
+   "name_en": "Powdery mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "mango_2.txt"
+   ],
+   "text_files": [
+    "mango_2.txt",
+    "aesa:mango"
+   ],
+   "aesa": "mango",
+   "aesa_kw": "powdery mildew",
+   "cibrc_targets": [
+    "powdery mildew"
+   ]
+  },
+  {
+   "id": "mango_anthracnose",
+   "crop": "mango",
+   "name_en": "Anthracnose",
+   "kind": "fungal",
+   "tnau_files": [
+    "mango_1.txt"
+   ],
+   "text_files": [
+    "mango_1.txt",
+    "aesa:mango"
+   ],
+   "aesa": "mango",
+   "aesa_kw": "anthracnose",
+   "cibrc_targets": [
+    "anthracnose"
+   ]
+  },
+  {
+   "id": "mango_hopper",
+   "crop": "mango",
+   "name_en": "Mango hopper",
+   "kind": "pest",
+   "tnau_files": [
+    "mango_mango_4.txt"
+   ],
+   "text_files": [
+    "mango_mango_4.txt",
+    "aesa:mango"
+   ],
+   "aesa": "mango",
+   "aesa_kw": "hopper",
+   "cibrc_targets": [
+    "hopper"
+   ]
+  },
+  {
+   "id": "mango_fruit_fly",
+   "crop": "mango",
+   "name_en": "Fruit fly",
+   "kind": "pest",
+   "tnau_files": [
+    "mango_mango_8.txt"
+   ],
+   "text_files": [
+    "mango_mango_8.txt",
+    "aesa:mango"
+   ],
+   "aesa": "mango",
+   "aesa_kw": "fruit fl(y|ies)|Bactrocera",
+   "cibrc_targets": []
+  },
+  {
+   "id": "mango_sooty_mould",
+   "crop": "mango",
+   "name_en": "Sooty mould",
+   "kind": "fungal",
+   "tnau_files": [
+    "mango_7.txt"
+   ],
+   "text_files": [
+    "mango_7.txt",
+    "aesa:mango"
+   ],
+   "aesa": "mango",
+   "aesa_kw": "sooty mou?ld",
+   "cibrc_targets": []
+  },
+  {
+   "id": "blackgram_yellow_mosaic",
+   "crop": "blackgram",
+   "name_en": "Yellow mosaic virus",
+   "kind": "viral",
+   "tnau_files": [
+    "black_gram_disease_yellow_mosaic.txt"
+   ],
+   "text_files": [
+    "black_gram_disease_yellow_mosaic.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "yellow mosaic|\\bYMV\\b|whitefly",
+   "cibrc_targets": [
+    "whitefly"
+   ]
+  },
+  {
+   "id": "blackgram_powdery_mildew",
+   "crop": "blackgram",
+   "name_en": "Powdery mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "black_gram_disease_powdery_mildew.txt"
+   ],
+   "text_files": [
+    "black_gram_disease_powdery_mildew.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "powdery mildew",
+   "cibrc_targets": [
+    "powdery mildew"
+   ]
+  },
+  {
+   "id": "blackgram_cercospora_leaf_spot",
+   "crop": "blackgram",
+   "name_en": "Cercospora leaf spot",
+   "kind": "fungal",
+   "tnau_files": [
+    "black_gram_disease_cercosporal_leaf_spot.txt"
+   ],
+   "text_files": [
+    "black_gram_disease_cercosporal_leaf_spot.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "cercospora",
+   "cibrc_targets": [
+    "cercospora leaf spot",
+    "leaf spot"
+   ]
+  },
+  {
+   "id": "blackgram_leaf_crinkle",
+   "crop": "blackgram",
+   "name_en": "Leaf crinkle virus",
+   "kind": "viral",
+   "tnau_files": [
+    "black_gram_disease_leaf_crinkle.txt"
+   ],
+   "text_files": [
+    "black_gram_disease_leaf_crinkle.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "leaf crinkle",
+   "cibrc_targets": []
+  },
+  {
+   "id": "blackgram_rust",
+   "crop": "blackgram",
+   "name_en": "Rust",
+   "kind": "fungal",
+   "tnau_files": [
+    "black_gram_disease_rust.txt"
+   ],
+   "text_files": [
+    "black_gram_disease_rust.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "\\brust\\b",
+   "cibrc_targets": [
+    "rust"
+   ]
+  },
+  {
+   "id": "blackgram_pod_borer",
+   "crop": "blackgram",
+   "name_en": "Spotted pod borer (Maruca)",
+   "kind": "pest",
+   "tnau_files": [
+    "greenblack_crop_prot_crop_insect_pul_bla_and_20green_2.txt"
+   ],
+   "text_files": [
+    "greenblack_crop_prot_crop_insect_pul_bla_and_20green_2.txt",
+    "aesa:blackgram_greengram"
+   ],
+   "aesa": "blackgram_greengram",
+   "aesa_kw": "spotted pod borer|Maruca",
+   "cibrc_targets": [
+    "spotted pod borer",
+    "maruca vitrata",
+    "maruca spp",
+    "pod borer",
+    "black gram pod borer"
+   ]
+  },
+  {
+   "id": "potato_early_blight",
+   "crop": "potato",
+   "name_en": "Early blight",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_veg_potato_2.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_veg_potato_2.txt",
+    "aesa:potato"
+   ],
+   "aesa": "potato",
+   "aesa_kw": "early blight|Alternaria",
+   "cibrc_targets": [
+    "early blight"
+   ]
+  },
+  {
+   "id": "potato_late_blight",
+   "crop": "potato",
+   "name_en": "Late blight",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_veg_potato_1.txt",
+    "potato_phdiseases_4.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_veg_potato_1.txt",
+    "potato_phdiseases_4.txt",
+    "aesa:potato"
+   ],
+   "aesa": "potato",
+   "aesa_kw": "late blight|Phytophthora",
+   "cibrc_targets": [
+    "late blight"
+   ]
+  },
+  {
+   "id": "potato_black_scurf",
+   "crop": "potato",
+   "name_en": "Black scurf",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_veg_potato_4.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_veg_potato_4.txt",
+    "aesa:potato"
+   ],
+   "aesa": "potato",
+   "aesa_kw": "black scurf|Rhizoctonia",
+   "cibrc_targets": [
+    "black scurf",
+    "black scruf",
+    "black scruff"
+   ]
+  },
+  {
+   "id": "potato_bacterial_wilt",
+   "crop": "potato",
+   "name_en": "Bacterial wilt (brown rot)",
+   "kind": "bacterial",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_veg_potato_6.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_veg_potato_6.txt",
+    "aesa:potato"
+   ],
+   "aesa": "potato",
+   "aesa_kw": "bacterial wilt|brown rot|Ralstonia",
+   "cibrc_targets": [
+    "bacterial brown wilt or ring or the bangle disease of potato"
+   ]
+  },
+  {
+   "id": "potato_common_scab",
+   "crop": "potato",
+   "name_en": "Common scab",
+   "kind": "bacterial",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_veg_potato_5.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_veg_potato_5.txt",
+    "aesa:potato"
+   ],
+   "aesa": "potato",
+   "aesa_kw": "common scab|Streptomyces",
+   "cibrc_targets": [
+    "scab"
+   ]
+  },
+  {
+   "id": "onion_purple_blotch",
+   "crop": "onion",
+   "name_en": "Purple blotch",
+   "kind": "fungal",
+   "tnau_files": [
+    "onion_diseases_7.txt"
+   ],
+   "text_files": [
+    "onion_diseases_7.txt",
+    "aesa:onion"
+   ],
+   "aesa": "onion",
+   "aesa_kw": "purple blotch|Alternaria porri",
+   "cibrc_targets": [
+    "purple blotch",
+    "downy mildew purple blotch"
+   ]
+  },
+  {
+   "id": "onion_stemphylium_blight",
+   "crop": "onion",
+   "name_en": "Stemphylium leaf blight",
+   "kind": "fungal",
+   "tnau_files": [],
+   "text_files": [
+    "aesa:onion"
+   ],
+   "aesa": "onion",
+   "aesa_kw": "stemphylium",
+   "cibrc_targets": [
+    "stemphylium blight",
+    "stemphylium leaf blight",
+    "stemphylum blight",
+    "stemphylium"
+   ]
+  },
+  {
+   "id": "onion_downy_mildew",
+   "crop": "onion",
+   "name_en": "Downy mildew",
+   "kind": "fungal",
+   "tnau_files": [
+    "onion_diseases_2.txt"
+   ],
+   "text_files": [
+    "onion_diseases_2.txt",
+    "aesa:onion"
+   ],
+   "aesa": "onion",
+   "aesa_kw": "downy mildew|Peronospora",
+   "cibrc_targets": [
+    "downy mildew",
+    "downy mildew purple blotch"
+   ]
+  },
+  {
+   "id": "onion_thrips",
+   "crop": "onion",
+   "name_en": "Onion thrips",
+   "kind": "pest",
+   "tnau_files": [
+    "crop_prot_crop_insect-veg_onion_pest_disease.txt",
+    "onion_onion_1.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_insect-veg_onion_pest_disease.txt",
+    "onion_onion_1.txt",
+    "aesa:onion"
+   ],
+   "aesa": "onion",
+   "aesa_kw": "thrips",
+   "cibrc_targets": [
+    "thrips"
+   ]
+  },
+  {
+   "id": "onion_basal_rot",
+   "crop": "onion",
+   "name_en": "Basal rot",
+   "kind": "fungal",
+   "tnau_files": [],
+   "text_files": [
+    "aesa:onion"
+   ],
+   "aesa": "onion",
+   "aesa_kw": "basal rot",
+   "cibrc_targets": []
+  }
+ ]
+}

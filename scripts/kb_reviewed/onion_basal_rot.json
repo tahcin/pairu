@@ -1,0 +1,39 @@
+{
+ "pathogen": "Fusarium oxysporum f. sp. cepae Schlecht",
+ "symptoms": [
+  "The leaves start to turn yellow and the plant stops growing well.",
+  "The leaves begin to dry out starting from the tip and moving downward.",
+  "Early on, the roots turn pink and eventually start to rot.",
+  "The bulb begins to rot from the bottom end.",
+  "The entire plant will die in the later stages of the disease."
+ ],
+ "photo_cues": [
+  "yellowing onion leaves",
+  "stunted plant growth",
+  "drying leaf tips",
+  "pink coloured roots",
+  "rotting bulb base"
+ ],
+ "favourable_conditions": "Moist soil and a temperature of 27 degrees Celsius help the disease to grow.",
+ "prevention": [
+  "Rotate your crops every 4 to 5 years using plants that do not host this disease.",
+  "Plant tobacco or sorghum with your onions to help reduce the disease.",
+  "Use a plastic sheet to cover and heat the soil during the summer for 30 days.",
+  "Choose onion varieties that are known to resist this disease.",
+  "Be careful not to injure the plants while working in the field."
+ ],
+ "practices": [
+  "Make sure your field has good drainage to keep water from sitting.",
+  "Perform deep ploughing during the summer.",
+  "Flood the soil during the time of year when you are not growing crops."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "aesa:onion"
+ ],
+ "_used_pages": [
+  0
+ ]
+}

@@ -1,0 +1,3735 @@
+{
+ "version": 1,
+ "crops": [
+  {
+   "id": "paddy",
+   "name_en": "Paddy",
+   "names": {
+    "te": "వరి",
+    "hi": "धान",
+    "ta": "நெல்",
+    "kn": "ಭತ್ತ",
+    "mr": "भात",
+    "bn": "ধান",
+    "or": "ଧାନ",
+    "gu": "ડાંગર",
+    "pa": "ਝੋਨਾ",
+    "ml": "നെല്ല്"
+   },
+   "diseases": [
+    "paddy_blast",
+    "paddy_brown_spot",
+    "paddy_blb",
+    "paddy_sheath_blight",
+    "paddy_bph",
+    "paddy_stem_borer",
+    "paddy_healthy"
+   ]
+  },
+  {
+   "id": "cotton",
+   "name_en": "Cotton",
+   "names": {
+    "te": "పత్తి",
+    "hi": "कपास",
+    "ta": "பருத்தி",
+    "kn": "ಹತ್ತಿ",
+    "mr": "कापूस",
+    "bn": "তুলা",
+    "or": "କପା",
+    "gu": "કપાસ",
+    "pa": "ਕਪਾਹ",
+    "ml": "പരുത്തി"
+   },
+   "diseases": [
+    "cotton_bacterial_blight",
+    "cotton_alternaria_leaf_spot",
+    "cotton_grey_mildew",
+    "cotton_pink_bollworm",
+    "cotton_whitefly",
+    "cotton_jassid",
+    "cotton_healthy"
+   ]
+  },
+  {
+   "id": "chilli",
+   "name_en": "Chilli",
+   "names": {
+    "te": "మిరప",
+    "hi": "मिर्च",
+    "ta": "மிளகாய்",
+    "kn": "ಮೆಣಸಿನಕಾಯಿ",
+    "mr": "मिरची",
+    "bn": "লঙ্কা",
+    "or": "ଲଙ୍କା",
+    "gu": "મરચાં",
+    "pa": "ਮਿਰਚ",
+    "ml": "മുളക്"
+   },
+   "diseases": [
+    "chilli_fruit_rot_dieback",
+    "chilli_powdery_mildew",
+    "chilli_leaf_curl",
+    "chilli_cercospora_leaf_spot",
+    "chilli_bacterial_leaf_spot",
+    "chilli_thrips",
+    "chilli_healthy"
+   ]
+  },
+  {
+   "id": "groundnut",
+   "name_en": "Groundnut",
+   "names": {
+    "te": "వేరుశనగ",
+    "hi": "मूंगफली",
+    "ta": "நிலக்கடலை",
+    "kn": "ಶೇಂಗಾ",
+    "mr": "भुईमूग",
+    "bn": "চিনাবাদাম",
+    "or": "ଚିନାବାଦାମ",
+    "gu": "મગફળી",
+    "pa": "ਮੂੰਗਫਲੀ",
+    "ml": "നിലക്കടല"
+   },
+   "diseases": [
+    "groundnut_early_leaf_spot",
+    "groundnut_late_leaf_spot",
+    "groundnut_rust",
+    "groundnut_bud_necrosis",
+    "groundnut_leaf_miner",
+    "groundnut_healthy"
+   ]
+  },
+  {
+   "id": "maize",
+   "name_en": "Maize",
+   "names": {
+    "te": "మొక్కజొన్న",
+    "hi": "मक्का",
+    "ta": "மக்காச்சோளம்",
+    "kn": "ಮೆಕ್ಕೆಜೋಳ",
+    "mr": "मका",
+    "bn": "ভুট্টা",
+    "or": "ମକା",
+    "gu": "મકાઈ",
+    "pa": "ਮੱਕੀ",
+    "ml": "ചോളം"
+   },
+   "diseases": [
+    "maize_common_rust",
+    "maize_turcicum_blight",
+    "maize_maydis_blight",
+    "maize_grey_leaf_spot",
+    "maize_healthy"
+   ]
+  },
+  {
+   "id": "tomato",
+   "name_en": "Tomato",
+   "names": {
+    "te": "టమాట",
+    "hi": "टमाटर",
+    "ta": "தக்காளி",
+    "kn": "ಟೊಮ್ಯಾಟೊ",
+    "mr": "टोमॅटो",
+    "bn": "টমেটো",
+    "or": "ଟମାଟୋ",
+    "gu": "ટામેટાં",
+    "pa": "ਟਮਾਟਰ",
+    "ml": "തക്കാളി"
+   },
+   "diseases": [
+    "tomato_early_blight",
+    "tomato_late_blight",
+    "tomato_leaf_curl",
+    "tomato_septoria_leaf_spot",
+    "tomato_bacterial_spot",
+    "tomato_fruit_borer",
+    "tomato_healthy"
+   ]
+  },
+  {
+   "id": "blackgram",
+   "name_en": "Black gram",
+   "names": {
+    "te": "మినుము",
+    "hi": "उड़द",
+    "ta": "உளுந்து",
+    "kn": "ಉದ್ದು",
+    "mr": "उडीद",
+    "bn": "মাষকলাই",
+    "or": "ବିରି",
+    "gu": "અડદ",
+    "pa": "ਮਾਂਹ",
+    "ml": "ഉഴുന്ന്"
+   },
+   "diseases": [
+    "blackgram_leaf_crinkle",
+    "blackgram_rust",
+    "blackgram_pod_borer",
+    "blackgram_healthy"
+   ]
+  },
+  {
+   "id": "potato",
+   "name_en": "Potato",
+   "names": {
+    "te": "బంగాళదుంప",
+    "hi": "आलू",
+    "ta": "உருளைக்கிழங்கு",
+    "kn": "ಆಲೂಗಡ್ಡೆ",
+    "mr": "बटाटा",
+    "bn": "আলু",
+    "or": "ଆଳୁ",
+    "gu": "બટાકા",
+    "pa": "ਆਲੂ",
+    "ml": "ഉരുളക്കിഴങ്ങ്"
+   },
+   "diseases": [
+    "potato_early_blight",
+    "potato_late_blight",
+    "potato_black_scurf",
+    "potato_bacterial_wilt",
+    "potato_common_scab",
+    "potato_healthy"
+   ]
+  },
+  {
+   "id": "onion",
+   "name_en": "Onion",
+   "names": {
+    "te": "ఉల్లి",
+    "hi": "प्याज",
+    "ta": "வெங்காயம்",
+    "kn": "ಈರುಳ್ಳಿ",
+    "mr": "कांदा",
+    "bn": "পেঁয়াজ",
+    "or": "ପିଆଜ",
+    "gu": "ડુંગળી",
+    "pa": "ਪਿਆਜ਼",
+    "ml": "ഉള്ളി"
+   },
+   "diseases": [
+    "onion_purple_blotch",
+    "onion_stemphylium_blight",
+    "onion_downy_mildew",
+    "onion_thrips",
+    "onion_basal_rot",
+    "onion_healthy"
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "paddy_blast",
+   "crop": "paddy",
+   "name_en": "Blast",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Pyricularia (Magnaporthe) grisea, Pyricularia oryzae, Magnaporthe oryzae",
+   "symptoms": [
+    "You will see white to gray-green spots with brown edges on the leaves.",
+    "These spots grow into spindle or diamond shapes with an ashy center.",
+    "The base of the panicle turns dark brown or black and may rot.",
+    "Infected stems can break, causing the panicle to fall over.",
+    "Severe cases make the whole crop look burnt or blighted.",
+    "The disease can cause white panicles that have no grain or poor quality grain."
+   ],
+   "photo_cues": [
+    "spindle shaped leaf spots",
+    "ashy center leaf lesions",
+    "dark brown leaf borders",
+    "blackened panicle base",
+    "broken plant nodes",
+    "white empty panicles"
+   ],
+   "look_alikes": [
+    "paddy_brown_spot",
+    "paddy_sheath_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_blast_paddy_brown_spot",
+     "question": "Are the spots shaped like a spindle or an eye, pointed at both ends, with an ash-grey centre?",
+     "yes": "paddy_blast",
+     "no": "paddy_brown_spot"
+    },
+    {
+     "id": "q_paddy_brown_spot_paddy_blast",
+     "question": "Are the spots small and round or oval, brown like sesame seeds, rather than long and pointed?",
+     "yes": "paddy_brown_spot",
+     "no": "paddy_blast"
+    },
+    {
+     "id": "q_paddy_sheath_blight_paddy_blast",
+     "question": "Are the spots on the leaf sheath near the water line, oval and greenish grey with a brown edge?",
+     "yes": "paddy_sheath_blight",
+     "no": "paddy_blast"
+    }
+   ],
+   "favourable_conditions": "The disease spreads easily in cool weather with high humidity, dew, and when nitrogen fertilizer is used in excess.",
+   "prevention": [
+    "Plant varieties that are resistant or tolerant to blast.",
+    "Avoid planting too late and do not use dry nurseries.",
+    "Apply nitrogen fertilizer in three split doses instead of all at once.",
+    "Keep field bunds clean by removing weeds and grasses.",
+    "Burn straw and stubble after harvest to remove the pathogen."
+   ],
+   "practices": [
+    "Check your fields regularly for signs of the disease.",
+    "Remove and burn any plant parts that show signs of infection.",
+    "Keep the water level in the field at the recommended depth.",
+    "If you see the disease, delay adding more nitrogen fertilizer."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pseudomonas fluorescens talc formulation @10g/kg of seed for dry seed treatment",
+     "source": 0
+    },
+    {
+     "text": "Pseudomonas fluorescens (talc) @ 2.5 kg in stagnated water for seedling root soak",
+     "source": 0
+    },
+    {
+     "text": "Pseudomonas fluorescens talc formulation @ 0.5% spray",
+     "source": 0
+    },
+    {
+     "text": "Pseudomonas fluorescence @ 10g/lit of water for seed treatment",
+     "source": 1
+    },
+    {
+     "text": "Trichoderma viridae @ 5-10 g/kg of seeds",
+     "source": 1
+    },
+    {
+     "text": "Pseudomonas fluorescence @ 5g/lit of water for seedling dip",
+     "source": 1
+    },
+    {
+     "text": "Pseudomonas fluorescence @ 5g/lit of water for foliar spray",
+     "source": 1
+    },
+    {
+     "text": "Neem cake @ 150 kg/ha",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "blast",
+    "leaf blast",
+    "neck blast",
+    "panicle blast"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Blast",
+     "url": "https://web.archive.org/web/20160131050503/http://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_1.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Package of practices for management of paddy blast",
+     "url": "https://ppqs.gov.in/sites/default/files/pop_for_management_of_paddy_blast.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_brown_spot",
+   "crop": "paddy",
+   "name_en": "Brown spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Helminthosporium oryzae",
+   "symptoms": [
+    "The disease starts as tiny brown dots on the leaves.",
+    "These spots grow into oval or round shapes that look like sesame seeds.",
+    "Many spots can join together to form large patches that cause the leaf to dry up.",
+    "You may see brown spots on the grain heads and the neck of the plant.",
+    "Infected seeds may show black or brown spots covered in a velvety growth."
+   ],
+   "photo_cues": [
+    "minute brown dots",
+    "oval to circular spots",
+    "large brown patches",
+    "black velvety mycelial mats",
+    "brownish scorched appearance"
+   ],
+   "look_alikes": [
+    "paddy_blast",
+    "paddy_blb"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_blast_paddy_brown_spot",
+     "question": "Are the spots shaped like a spindle or an eye, pointed at both ends, with an ash-grey centre?",
+     "yes": "paddy_blast",
+     "no": "paddy_brown_spot"
+    },
+    {
+     "id": "q_paddy_brown_spot_paddy_blast",
+     "question": "Are the spots small and round or oval, brown like sesame seeds, rather than long and pointed?",
+     "yes": "paddy_brown_spot",
+     "no": "paddy_blast"
+    },
+    {
+     "id": "q_paddy_blb_paddy_brown_spot",
+     "question": "Does the yellowing start at the leaf tip and run down the leaf edges in a wavy band, without separate spots?",
+     "yes": "paddy_blb",
+     "no": "paddy_brown_spot"
+    }
+   ],
+   "favourable_conditions": "The disease spreads when temperatures are 25-30°C, humidity is above 80 percent, and leaves stay wet for 8 to 24 hours.",
+   "prevention": [
+    "Always use seeds that are free from disease.",
+    "Choose to plant resistant rice varieties.",
+    "Remove weeds and other plants that can host the fungus.",
+    "Keep the soil healthy with proper nutrients and avoid water stress.",
+    "Treat seeds with hot water at 53-54°C for 10 to 12 minutes before planting."
+   ],
+   "practices": [
+    "Monitor your field for infected plants.",
+    "Ensure the field is well irrigated to prevent water stress.",
+    "Remove and destroy any plants or parts showing signs of infection."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pseudomonas fluorescens @ 10g/kg of seed followed by seedling dip @ of 2.5 kg or products/ha dissolved in 100 litres",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "brown spot",
+    "brown leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Brown Spot",
+     "url": "https://web.archive.org/web/20160131050508/http://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_blb",
+   "crop": "paddy",
+   "name_en": "Bacterial leaf blight",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Xanthomonas oryzae pv. Oryzae",
+   "symptoms": [
+    "You will see water-soaked or yellowish stripes on the leaf blades.",
+    "The edges of the leaves turn yellow or golden and start to dry out.",
+    "Leaves may curl and dry back from the tip while the middle rib stays green.",
+    "Early in the morning, you might see a milky or opaque drop of bacterial ooze on young spots.",
+    "Severely infected leaves will dry up very quickly."
+   ],
+   "photo_cues": [
+    "Yellowish white leaf margins",
+    "Wavy leaf margins",
+    "Milky bacterial ooze",
+    "Dried leaf tips",
+    "Opaque dewdrop on lesions"
+   ],
+   "look_alikes": [
+    "paddy_brown_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_blb_paddy_brown_spot",
+     "question": "Does the yellowing start at the leaf tip and run down the leaf edges in a wavy band, without separate spots?",
+     "yes": "paddy_blb",
+     "no": "paddy_brown_spot"
+    }
+   ],
+   "favourable_conditions": "Warm temperatures between 25 and 30 degrees Celsius, high humidity, rain, deep water, and strong winds that cause wounds favor the disease.",
+   "prevention": [
+    "Choose tolerant rice varieties for your planting.",
+    "Always use healthy, disease-free seeds.",
+    "Grow your seedlings in isolated upland areas.",
+    "Keep your fields clean by removing weeds and old rice stubble.",
+    "Use balanced fertilizer and avoid applying too much nitrogen."
+   ],
+   "practices": [
+    "Drain the water from your field, but keep it flooded during the flowering stage.",
+    "Remove and burn any plants or parts that show signs of the disease.",
+    "Avoid moving water from an infected field into a healthy one.",
+    "Do not clip the tips of your seedlings when transplanting them.",
+    "Monitor your fields regularly for any signs of the disease."
+   ],
+   "organic_bio": [
+    {
+     "text": "Spray neem oil 3%",
+     "source": 0
+    },
+    {
+     "text": "Spray NSKE 5%",
+     "source": 0
+    },
+    {
+     "text": "Spray fresh cowdung extract (20 g cowdung in one litre of water)",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "bacterial leaf blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Bacterial leaf blight",
+     "url": "https://web.archive.org/web/20160131050514/http://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_3.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_3.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_sheath_blight",
+   "crop": "paddy",
+   "name_en": "Sheath blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Rhizoctonia solani",
+   "symptoms": [
+    "You will see spots on the leaf sheaths near the water level.",
+    "The spots start as greenish grey and look oval or irregular.",
+    "As they grow, the center turns greyish white with a dark border.",
+    "The spots spread and join together to cover the whole tiller.",
+    "The leaves may die and the entire plant can wither away.",
+    "Infected plants produce poorly filled grains."
+   ],
+   "photo_cues": [
+    "greenish grey oval spots",
+    "greyish white center spots",
+    "blackish brown spot border",
+    "purple brown spot border",
+    "lesions on leaf sheath"
+   ],
+   "look_alikes": [
+    "paddy_blast"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_sheath_blight_paddy_blast",
+     "question": "Are the spots on the leaf sheath near the water line, oval and greenish grey with a brown edge?",
+     "yes": "paddy_sheath_blight",
+     "no": "paddy_blast"
+    }
+   ],
+   "favourable_conditions": "The disease spreads quickly in warm weather between 28 and 32 degrees Celsius with high humidity and thick plant spacing.",
+   "prevention": [
+    "Use the right amount of fertilizer and avoid too much nitrogen.",
+    "Keep the correct spacing between plants.",
+    "Remove weeds from the field.",
+    "Deep plough the field in summer and burn the stubble.",
+    "Do not let water flow from an infected field into a healthy one."
+   ],
+   "practices": [
+    "Monitor the field for spots on the leaf sheaths.",
+    "Avoid letting water sit in the field by using alternate wetting and drying.",
+    "Create 30 cm wide alleys in the field to improve air flow.",
+    "Remove and destroy infected plant parts."
+   ],
+   "organic_bio": [
+    {
+     "text": "Apply FYM 12.5 t/ha or green manure 6.25 t/ha to promote antagonistic microflora",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "sheath blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Sheath Blight",
+     "url": "https://web.archive.org/web/20160131050523/http://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_6.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_6.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_bph",
+   "crop": "paddy",
+   "name_en": "Brown plant hopper",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Nilaparvata lugens",
+   "symptoms": [
+    "Small insects gather at the base of the plant near the water.",
+    "The plants start to dry up and look scorched.",
+    "You will see round patches in the field where plants are drying and falling over.",
+    "The insects suck the plant sap which stops grain from filling properly.",
+    "The plants may show signs of viral diseases like grassy stunt or ragged stunt."
+   ],
+   "photo_cues": [
+    "Circular yellow patches",
+    "Brown scorched plants",
+    "Cottony white nymphs",
+    "Yellowish brown adult hoppers",
+    "Small curved eggs in leaf sheath"
+   ],
+   "look_alikes": [
+    "paddy_stem_borer"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_bph_paddy_stem_borer",
+     "question": "When you part the plants at the base, do you see many small brown insects near the water line?",
+     "yes": "paddy_bph",
+     "no": "paddy_stem_borer"
+    },
+    {
+     "id": "q_paddy_stem_borer_paddy_bph",
+     "question": "Does the dried central shoot or white empty earhead pull out easily when you tug it?",
+     "yes": "paddy_stem_borer",
+     "no": "paddy_bph"
+    }
+   ],
+   "favourable_conditions": "The pest thrives in humid conditions with continuous rice cultivation, high shade, and standing water in the field.",
+   "prevention": [
+    "Do not plant the same susceptible rice variety in the same area every year.",
+    "Use resistant or tolerant rice varieties recommended for your state.",
+    "Avoid using too much nitrogen fertilizer.",
+    "Plant all fields in your area at the same time and keep the fields free of weeds.",
+    "Leave gaps of a few rows every 8 to 10 rows to help air move through the crop."
+   ],
+   "practices": [
+    "Check your fields every 3 to 5 days by gently tapping the base of plants to see if insects jump into the water.",
+    "Drain the water from the field for 3 to 4 days if you see a heavy infestation.",
+    "Use light traps at night or yellow pan traps during the day to monitor and catch the insects.",
+    "Direct any sprays toward the base of the plants where the insects live.",
+    "Avoid using chemical pesticides if you see many natural enemies like spiders in the field."
+   ],
+   "organic_bio": [
+    {
+     "text": "Neem oil 3% 15 lit/ha",
+     "source": 0
+    },
+    {
+     "text": "Neem oil 5 ml/L with 2 ml liquid detergent",
+     "source": 1
+    },
+    {
+     "text": "5% Neem seed kernel extract (NSKE)",
+     "source": 1
+    },
+    {
+     "text": "Commercial neem formulation containing Azadirachtin 1500 ppm @ 2.5ml/ litre of water",
+     "source": 1
+    },
+    {
+     "text": "Metarhizium anisopliae 1.15% WP @ 2-5 g/litre",
+     "source": 1
+    },
+    {
+     "text": "Extract of the Water Pepper leaf @ 20 gm/L with 2 ml liquid detergent",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "brown plant hopper",
+    "plant hopper"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Crop Protection :: Pest of paddy",
+     "url": "https://web.archive.org/web/20141210185134/http://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_12.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_12.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Package of practices for management of rice brown plant hopper",
+     "url": "https://ppqs.gov.in/sites/default/files/pop_for_managment_of_rice_bph.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_stem_borer",
+   "crop": "paddy",
+   "name_en": "Yellow stem borer",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Scirpophaga incertulas",
+   "symptoms": [
+    "You may see brown egg masses near the tips of the leaves.",
+    "The caterpillar bores into the center of the shoot and the tiller.",
+    "The central shoot dries up and is called a dead heart.",
+    "In older plants, the whole panicle dries up and turns white, which is called a white ear.",
+    "Affected plants can be pulled out of the ground easily by hand."
+   ],
+   "photo_cues": [
+    "brown coloured egg mass",
+    "dried central shoot",
+    "white dried panicle",
+    "pale yellow larva",
+    "dark brown head"
+   ],
+   "look_alikes": [
+    "paddy_bph"
+   ],
+   "discriminators": [
+    {
+     "id": "q_paddy_bph_paddy_stem_borer",
+     "question": "When you part the plants at the base, do you see many small brown insects near the water line?",
+     "yes": "paddy_bph",
+     "no": "paddy_stem_borer"
+    },
+    {
+     "id": "q_paddy_stem_borer_paddy_bph",
+     "question": "Does the dried central shoot or white empty earhead pull out easily when you tug it?",
+     "yes": "paddy_stem_borer",
+     "no": "paddy_bph"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Clip the tips of seedlings before you transplant them to remove egg masses.",
+    "Choose rice varieties that are resistant or moderately resistant to the borer.",
+    "After harvest, till the soil and flood the field to destroy larvae hiding in the stubble.",
+    "Delay planting times to avoid the peak time when moths come out.",
+    "Use seedbeds as a trap crop for moths."
+   ],
+   "practices": [
+    "Collect and destroy any egg masses you find in the main field.",
+    "Use pheromone traps to monitor the number of moths in your field.",
+    "Use light traps in the evening to observe the pests.",
+    "Use sweep nets to check the population of pests and their natural enemies."
+   ],
+   "organic_bio": [
+    {
+     "text": "Trichogramma japonicum",
+     "source": 0
+    },
+    {
+     "text": "Neem seed kernel extract",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "stem borer",
+    "yellow stem borer"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Paddy, Crop Protection : Pest of paddy",
+     "url": "https://web.archive.org/web/20141210185150/http://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    }
+   ]
+  },
+  {
+   "id": "paddy_healthy",
+   "crop": "paddy",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
+     "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_bacterial_blight",
+   "crop": "cotton",
+   "name_en": "Bacterial blight (black arm)",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Xanthomonas campestris p.v malvacearum, Xanthomonas axonopodis p.v. malvacearum",
+   "symptoms": [
+    "Small dark green spots that look water-soaked appear on the leaves.",
+    "These spots grow and become angular shapes trapped by the leaf veins.",
+    "The veins turn black and the leaves may look twisted or crinkled.",
+    "Black sores form on the stems and branches which can cause the plant to die back.",
+    "The disease can spread to the cotton bolls and cause them to rot."
+   ],
+   "photo_cues": [
+    "dark green water-soaked spots",
+    "angular leaf spots",
+    "blackened leaf veins",
+    "sooty black stem lesions",
+    "rotting cotton bolls"
+   ],
+   "look_alikes": [
+    "cotton_alternaria_leaf_spot",
+    "cotton_grey_mildew"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cotton_bacterial_blight_cotton_alternaria_leaf_spot",
+     "question": "Are the spots angular, held in by the leaf veins, first water-soaked and then turning black?",
+     "yes": "cotton_bacterial_blight",
+     "no": "cotton_alternaria_leaf_spot"
+    },
+    {
+     "id": "q_cotton_alternaria_leaf_spot_cotton_bacterial_blight",
+     "question": "Are the spots round and brown with rings inside them, like a target?",
+     "yes": "cotton_alternaria_leaf_spot",
+     "no": "cotton_bacterial_blight"
+    },
+    {
+     "id": "q_cotton_grey_mildew_cotton_bacterial_blight",
+     "question": "Is there a white or grey powdery growth on the underside of the spots?",
+     "yes": "cotton_grey_mildew",
+     "no": "cotton_bacterial_blight"
+    }
+   ],
+   "favourable_conditions": "The disease spreads easily in humid conditions.",
+   "prevention": [
+    "Use acid-delinted seeds to stop the disease from starting.",
+    "Avoid planting your cotton too close together.",
+    "Remove and burn all weeds and old plant parts from the field.",
+    "Pull out any volunteer cotton plants that grow on their own."
+   ],
+   "practices": [
+    "Remove and destroy any plants or parts that look sick.",
+    "Watch your crop closely for the first signs of spots.",
+    "Keep the field clean by removing all leftover plant debris."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "bacterial blight",
+    "bacterial leaf blight",
+    "angular leaf spot",
+    "angular leaf spot or black arm"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Bacterial blight",
+     "url": "https://web.archive.org/web/20170410002004/http://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d9.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d9.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_alternaria_leaf_spot",
+   "crop": "cotton",
+   "name_en": "Alternaria leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Alternaria macrospora, A. alternata",
+   "symptoms": [
+    "You will see small round or irregular spots on the leaves.",
+    "Each spot has a center with rings around it.",
+    "Many spots can join together to create large dead areas.",
+    "The leaves may turn brittle and fall off the plant.",
+    "You might see spots on the stems, bracts, and bolls.",
+    "In wet weather, the spots can turn a sooty black color."
+   ],
+   "photo_cues": [
+    "Small brown irregular spots",
+    "Concentric ring patterns",
+    "Purple colored spot margins",
+    "Sooty black necrotic tissue",
+    "Blighted leaf areas"
+   ],
+   "look_alikes": [
+    "cotton_bacterial_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cotton_bacterial_blight_cotton_alternaria_leaf_spot",
+     "question": "Are the spots angular, held in by the leaf veins, first water-soaked and then turning black?",
+     "yes": "cotton_bacterial_blight",
+     "no": "cotton_alternaria_leaf_spot"
+    },
+    {
+     "id": "q_cotton_alternaria_leaf_spot_cotton_bacterial_blight",
+     "question": "Are the spots round and brown with rings inside them, like a target?",
+     "yes": "cotton_alternaria_leaf_spot",
+     "no": "cotton_bacterial_blight"
+    }
+   ],
+   "favourable_conditions": "The disease spreads more in humid weather conditions.",
+   "prevention": [
+    "Avoid dense planting, and keep wider spacing so the crop stays less humid.",
+    "While preparing the field, remove crop residues and plough deep to bury the leftover plant parts.",
+    "Pull out and burn weeds that carry the disease.",
+    "Use acid-delinted seed so the disease does not come in with the seed."
+   ],
+   "practices": [
+    "Check your plants regularly for signs of the disease.",
+    "Remove and destroy any infected plant parts you find."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "alternaria leaf spot",
+    "alternaria leaf blight",
+    "alternaria leaf",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Alterneria",
+     "url": "https://web.archive.org/web/20170410001959/http://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d6.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d6.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_grey_mildew",
+   "crop": "cotton",
+   "name_en": "Grey mildew",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Ramularia areola, Mycosphaerella areola",
+   "symptoms": [
+    "You will see pale, see-through spots on the underside of older leaves.",
+    "The spots are shaped like squares or angles and are blocked by leaf veins.",
+    "A grey, powdery growth appears on the bottom of the leaves.",
+    "The top of the leaf may show light green or yellow spots.",
+    "Severely affected leaves turn yellow, dry up, and fall off early.",
+    "The plant may have bolls that open too soon with poor quality lint."
+   ],
+   "photo_cues": [
+    "pale translucent angular spots",
+    "grey powdery leaf growth",
+    "light green leaf specks",
+    "yellowing leaf tissue",
+    "dark brown dead spots"
+   ],
+   "look_alikes": [
+    "cotton_bacterial_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cotton_grey_mildew_cotton_bacterial_blight",
+     "question": "Is there a white or grey powdery growth on the underside of the spots?",
+     "yes": "cotton_grey_mildew",
+     "no": "cotton_bacterial_blight"
+    }
+   ],
+   "favourable_conditions": "The disease usually appears on older leaves after the plant starts setting its first bolls.",
+   "prevention": [
+    "Plant varieties that are known to be resistant or tolerant to this disease.",
+    "Rotate your cotton crops with cereal crops.",
+    "Avoid using too much nitrogen fertilizer.",
+    "Use the correct spacing between plants based on your soil type.",
+    "Remove and burn all leftover plant parts from the field after harvest."
+   ],
+   "practices": [
+    "Check your fields regularly for signs of the disease.",
+    "Remove and destroy any infected plant parts you find.",
+    "Deeply plough the field to bury and kill any remaining plant bits.",
+    "Pull out any cotton plants that grew on their own during the summer."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "grey mildew"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Grey or Areolate mildew",
+     "url": "https://web.archive.org/web/20170410002748/http://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton_diseases/cotton_d4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_pink_bollworm",
+   "crop": "cotton",
+   "name_en": "Pink bollworm",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Pectinophora gossypiella",
+   "symptoms": [
+    "Flower buds may drop off the plant.",
+    "Flowers fail to open properly and look like a rosette.",
+    "You may see small exit holes on the green bolls.",
+    "Inside the bolls, the seeds and lint are damaged or discolored.",
+    "Bolls may open prematurely and look unhealthy."
+   ],
+   "photo_cues": [
+    "Rosette shaped flowers",
+    "Small round exit holes",
+    "Discolored lint inside bolls",
+    "Double seeds joined together",
+    "Pink or white larvae"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The pest is often more active when cotton is sown in April or May.",
+   "prevention": [
+    "Plough your field deeply in summer to expose pupae to birds and sun.",
+    "Remove weeds and other plants that host the pest near your field.",
+    "Use certified seeds and choose early maturing or resistant varieties.",
+    "Rotate your crops to break the pest life cycle.",
+    "Plant a refuge of non-Bt cotton alongside your Bt cotton."
+   ],
+   "practices": [
+    "Check your fields every 3 to 5 days for signs of the pest.",
+    "Use pheromone traps to monitor and catch adult moths.",
+    "Pick and destroy any fallen squares, flowers, or bolls.",
+    "If you see rosette flowers, pluck and destroy them immediately.",
+    "Inspect green bolls by splitting them open to check for larvae."
+   ],
+   "organic_bio": [
+    {
+     "text": "Trichogrammatoideabactrae @ 1,00,000/ha per release",
+     "source": 0
+    },
+    {
+     "text": "Trichogramma bactrae eggs @ 3 cc (60,000)/acre",
+     "source": 1
+    },
+    {
+     "text": "neem seed kernel extract (NSKE) 5%",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "pink bollworm",
+    "pink boll worm",
+    "pectinophora gossypiella"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Cash Crop :: Pest of Cotton",
+     "url": "https://web.archive.org/web/20150705183957/http://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_2.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Package of practices for pink bollworm of cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/pop_for_pbw_of_cotton.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_whitefly",
+   "crop": "cotton",
+   "name_en": "Whitefly",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Bemisia tabaci",
+   "symptoms": [
+    "You will see yellow spots on the leaves that grow together.",
+    "The leaves turn yellow from the veins out to the edges.",
+    "A black mold may grow on the leaves and bolls.",
+    "The plant may lose its leaves too early.",
+    "Flower buds and bolls may fall off the plant.",
+    "The bolls may not open properly."
+   ],
+   "photo_cues": [
+    "tiny white insects",
+    "yellowish oval nymphs",
+    "black sooty mold",
+    "yellow leaf spots",
+    "white waxy powder"
+   ],
+   "look_alikes": [
+    "cotton_jassid"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cotton_whitefly_cotton_jassid",
+     "question": "When you shake the plant, do tiny white flies rise from the underside of the leaves, and are the leaves sticky or black with soot?",
+     "yes": "cotton_whitefly",
+     "no": "cotton_jassid"
+    },
+    {
+     "id": "q_cotton_jassid_cotton_whitefly",
+     "question": "Do the leaf edges turn yellow and then red or bronze and curl downwards, with small pale green wedge-shaped insects under the leaves?",
+     "yes": "cotton_jassid",
+     "no": "cotton_whitefly"
+    }
+   ],
+   "favourable_conditions": "Excessive irrigation and high nitrogen fertilizer use can lead to a buildup of the pest.",
+   "prevention": [
+    "Choose early maturing cotton varieties that resist whitefly.",
+    "Remove weeds like Abutilon indicum and other alternate hosts from your fields.",
+    "Avoid planting crops like brinjal, tomato, or okra near your cotton.",
+    "Use wider spacing when sowing your seeds.",
+    "Set up yellow sticky traps to monitor and catch the insects early."
+   ],
+   "practices": [
+    "Check your fields regularly for whitefly starting in April.",
+    "Pick off and destroy any leaves that show signs of the pest.",
+    "Keep your fields clean and free of weeds.",
+    "Use yellow sticky traps at the height of the plant canopy.",
+    "If you shake the plants and see a smoky cloud of insects, take action."
+   ],
+   "organic_bio": [
+    {
+     "text": "Verticillium lecanii 1.15% WP 2500 g/ha",
+     "source": 0
+    },
+    {
+     "text": "Neem seed kernel extract 5% (50 kg) and neem oil at 5 ml/l of water",
+     "source": 0
+    },
+    {
+     "text": "Fish oil rosin soap 25 kg at 1 kg in 40 lit of water",
+     "source": 0
+    },
+    {
+     "text": "Notchi leaves 5% extract",
+     "source": 0
+    },
+    {
+     "text": "Catharanthus rosea extract 5%",
+     "source": 0
+    },
+    {
+     "text": "Azadirachtin 0.15% (Neem Seed Kernel Based EC) @ 2.5-5.0 l/ha",
+     "source": 1
+    },
+    {
+     "text": "Azadirachtin 0.03% (300ppm) (Neem Oil Based WSP) @ 2.5-5.0 l/ha",
+     "source": 1
+    },
+    {
+     "text": "Homemade Neem Extract @ 2.5 l/ha",
+     "source": 1
+    },
+    {
+     "text": "Verticillium lecanii 1.15%WP @ 2.5 kg/ha",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "whitefly"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Cash Crop :: Pest of Cotton",
+     "url": "https://web.archive.org/web/20150704234314/http://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_13.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_13.html"
+    },
+    {
+     "title": "DPPQS (Ministry of Agriculture): Package of practices for management of whitefly in cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/pop_for_management_of_white_fly_in_cotton.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_jassid",
+   "crop": "cotton",
+   "name_en": "Leafhopper (jassid)",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Amrasca (Biguttula biguttula) devastans",
+   "symptoms": [
+    "Tender leaves turn yellow.",
+    "Leaf edges start to curl downwards and turn red.",
+    "Leaves may turn a bronze or brick red color.",
+    "The edges of the leaves become brittle and crumble when crushed.",
+    "Leaves dry up and fall off, which slows down plant growth.",
+    "Young plants may become stunted or die in severe cases."
+   ],
+   "photo_cues": [
+    "pale green wedge shaped insect",
+    "yellowing leaf margins",
+    "downward curling leaves",
+    "bronze or red leaf color",
+    "pale green translucent nymphs"
+   ],
+   "look_alikes": [
+    "cotton_whitefly"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cotton_whitefly_cotton_jassid",
+     "question": "When you shake the plant, do tiny white flies rise from the underside of the leaves, and are the leaves sticky or black with soot?",
+     "yes": "cotton_whitefly",
+     "no": "cotton_jassid"
+    },
+    {
+     "id": "q_cotton_jassid_cotton_whitefly",
+     "question": "Do the leaf edges turn yellow and then red or bronze and curl downwards, with small pale green wedge-shaped insects under the leaves?",
+     "yes": "cotton_jassid",
+     "no": "cotton_whitefly"
+    }
+   ],
+   "favourable_conditions": "Moisture stress and low moisture levels in leaf tissue favor the development of this pest.",
+   "prevention": [
+    "Monitor your fields regularly to catch the pest early.",
+    "Keep the crop healthy to help it withstand feeding damage."
+   ],
+   "practices": [
+    "Check your plants for nymphs or adults on the underside of leaves.",
+    "Count the number of insects on 50 leaves to see if they have reached the economic threshold of 50 insects.",
+    "Remove and destroy parts of the plant that are heavily infested."
+   ],
+   "organic_bio": [
+    {
+     "text": "NSKE 5% 25 kg/ha",
+     "source": 0
+    },
+    {
+     "text": "neem oil formulation 0.5 % or neem oil 3% thrice at fortnightly intervals",
+     "source": 0
+    },
+    {
+     "text": "Azadirachtin 0.03% WSP 500-1000 g/ha",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "jassids",
+    "leafhopper"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cotton, Cash Crop :: Pest of Cotton",
+     "url": "https://web.archive.org/web/20150705183743/http://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_10.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cotton_healthy",
+   "crop": "cotton",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
+     "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_fruit_rot_dieback",
+   "crop": "chilli",
+   "name_en": "Fruit rot and dieback (anthracnose)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Colletotrichum capsici",
+   "symptoms": [
+    "Flowers drop and dry up prematurely.",
+    "The tips of branches die back and wither.",
+    "Small sunken spots appear on the fruit.",
+    "Affected fruit shrivels and may fall off.",
+    "Leaves develop brownish black spots and fall off."
+   ],
+   "photo_cues": [
+    "brownish black leaf spots",
+    "yellowish to pinkish sunken spots",
+    "greyish white necrotic tissue",
+    "black dot like fruiting bodies",
+    "straw coloured fruit"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Warm, rainy, and wet weather with high humidity favours the disease.",
+   "prevention": [
+    "Use only disease-free seeds.",
+    "Keep nursery beds and fields free of standing water.",
+    "Remove weeds and volunteer plants near your transplants.",
+    "Follow crop rotation with non-host crops."
+   ],
+   "practices": [
+    "Remove and destroy infected plant parts.",
+    "Ensure good drainage to prevent water from pooling in the field.",
+    "Monitor the crop closely for signs of infection.",
+    "Keep the field and nursery area clean of weeds."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "anthracnose",
+    "fruit rot",
+    "dieback",
+    "anthracnose fruit rot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, Fruit Rot and Die Back",
+     "url": "https://web.archive.org/web/20160520112405/http://agritech.tnau.ac.in/crop_protection/chilli_diseases_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_powdery_mildew",
+   "crop": "chilli",
+   "name_en": "Powdery mildew",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Leveillula taurica",
+   "symptoms": [
+    "A white powdery coating appears on the underside of leaves.",
+    "Yellow patches show up on the top side of the leaves.",
+    "The plant may lose its leaves as they dry up and fall off.",
+    "You might see the white powder on branches and young fruits.",
+    "Infected fruits stop growing and may fall off early."
+   ],
+   "photo_cues": [
+    "white powdery leaf growth",
+    "yellow patches on leaves",
+    "white powder on branches",
+    "white powder on fruits"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Cool dry weather helps the spores grow, and high humidity helps the disease spread.",
+   "prevention": [
+    "Plant resistant or tolerant varieties.",
+    "Practice crop rotation with crops that do not get this disease.",
+    "Destroy alternate host plants that may carry the disease.",
+    "Plant your crop at the right time."
+   ],
+   "practices": [
+    "Consult your local agricultural office for recommended resistant varieties.",
+    "Follow general field hygiene practices to keep the area clean.",
+    "Remove and destroy any plant parts that show signs of infection."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "powdery mildew"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, Powdery mildew",
+     "url": "https://web.archive.org/web/20160520112413/http://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_3.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_leaf_curl",
+   "crop": "chilli",
+   "name_en": "Leaf curl virus",
+   "names": {},
+   "kind": "viral",
+   "pathogen": "Leaf curl virus",
+   "symptoms": [
+    "Leaves curl toward the middle vein and look twisted.",
+    "The plant stops growing well because the spaces between leaves are short.",
+    "Leaves become much smaller than normal.",
+    "Flower buds fall off before they grow fully.",
+    "The flowers do not have any pollen inside."
+   ],
+   "photo_cues": [
+    "leaves curled toward midrib",
+    "deformed leaf shape",
+    "stunted plant growth",
+    "shortened stem sections",
+    "small flower buds"
+   ],
+   "look_alikes": [
+    "chilli_thrips"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_thrips_chilli_leaf_curl",
+     "question": "Do the leaves crinkle and curl upwards, with tiny thin straw-yellow insects on the young leaves?",
+     "yes": "chilli_thrips",
+     "no": "chilli_leaf_curl"
+    },
+    {
+     "id": "q_chilli_leaf_curl_chilli_thrips",
+     "question": "Are the leaves small and curled towards the middle vein, with the plant stunted and its stem joints close together?",
+     "yes": "chilli_leaf_curl",
+     "no": "chilli_thrips"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose healthy seeds that are free from disease.",
+    "Soak seeds in a solution of 150 grams of trisodium orthophosphate per litre of water for 30 minutes before planting.",
+    "Cover nursery beds with nylon nets or straw to keep insects away.",
+    "Plant 2 to 3 rows of maize or sorghum around your field to block insects.",
+    "Avoid planting only chilli in your field."
+   ],
+   "practices": [
+    "Pull out and burn or bury any plants that look sick as soon as you see them.",
+    "Control whiteflies to stop the spread of the virus.",
+    "Monitor your field regularly for signs of the disease."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "whitefly"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, Viral diseases",
+     "url": "https://web.archive.org/web/20160519145754/http://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_7.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_cercospora_leaf_spot",
+   "crop": "chilli",
+   "name_en": "Cercospora leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Cercospora capsici",
+   "symptoms": [
+    "You will see round brown spots with light grey centers on the leaves.",
+    "These spots can grow larger and join together.",
+    "The center of the spot may fall out and leave a small hole.",
+    "Infected leaves turn yellow and fall off the plant early.",
+    "You may also see dark brown spots with light centers on stems and pods."
+   ],
+   "photo_cues": [
+    "brown circular leaf spots",
+    "light grey spot centers",
+    "dark brown leaf margins",
+    "shot hole leaf appearance",
+    "elliptical stem lesions"
+   ],
+   "look_alikes": [
+    "chilli_bacterial_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_cercospora_leaf_spot_chilli_bacterial_leaf_spot",
+     "question": "Are the spots round with a light grey or white centre and a dark brown ring, like a frog's eye?",
+     "yes": "chilli_cercospora_leaf_spot",
+     "no": "chilli_bacterial_leaf_spot"
+    },
+    {
+     "id": "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot",
+     "question": "Are the spots small, dark and water-soaked or raised and scabby, without a pale centre?",
+     "yes": "chilli_bacterial_leaf_spot",
+     "no": "chilli_cercospora_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "The disease spreads easily when there is high humidity and frequent rain.",
+   "prevention": [
+    "Collect seeds only from healthy fruits.",
+    "Ask your local agricultural office about using varieties that resist this disease.",
+    "Keep your field clean of old plant debris and volunteer plants."
+   ],
+   "practices": [
+    "Remove and destroy any plant parts that show signs of the disease.",
+    "Monitor your field regularly to catch the disease early.",
+    "Remove weeds from the field to stop the disease from spreading."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "cercospora leaf spot",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, Cercospora leaf spot",
+     "url": "https://web.archive.org/web/20160519145744/http://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_5.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_bacterial_leaf_spot",
+   "crop": "chilli",
+   "name_en": "Bacterial leaf spot",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Xanthomonas campestris pv. vesicatoria",
+   "symptoms": [
+    "You will see small dark brown or black greasy spots on the leaves.",
+    "These spots grow larger and may join together to form irregular patches.",
+    "Leaves that are badly affected turn yellow and fall off the plant.",
+    "Stems can develop cankers which may cause branches to wilt.",
+    "Fruits show round raised spots that look water soaked with pale yellow borders.",
+    "The centers of these fruit spots may turn brown and sunken."
+   ],
+   "photo_cues": [
+    "dark greasy leaf spots",
+    "yellow leaf borders",
+    "raised brown fruit lesions",
+    "straw coloured spot centers",
+    "elongated stem streaks"
+   ],
+   "look_alikes": [
+    "chilli_cercospora_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_cercospora_leaf_spot_chilli_bacterial_leaf_spot",
+     "question": "Are the spots round with a light grey or white centre and a dark brown ring, like a frog's eye?",
+     "yes": "chilli_cercospora_leaf_spot",
+     "no": "chilli_bacterial_leaf_spot"
+    },
+    {
+     "id": "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot",
+     "question": "Are the spots small, dark and water-soaked or raised and scabby, without a pale centre?",
+     "yes": "chilli_bacterial_leaf_spot",
+     "no": "chilli_cercospora_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "The disease spreads easily during times of moderate temperature, high humidity, and intermittent rain.",
+   "prevention": [
+    "Always collect seeds from healthy plants.",
+    "Use disease free seeds for planting.",
+    "Ask your local agricultural office about using resistant or tolerant plant varieties."
+   ],
+   "practices": [
+    "Keep your field clean by removing weeds.",
+    "Monitor your plants regularly for signs of the disease.",
+    "Follow general cultural and mechanical practices to keep the field healthy."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "bacterial leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, Bacterial leaf spot",
+     "url": "https://web.archive.org/web/20160520112418/http://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/chilli_diseases_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_thrips",
+   "crop": "chilli",
+   "name_en": "Thrips",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Scirtothrips dorsalis",
+   "symptoms": [
+    "The leaves develop crinkles and curl upwards.",
+    "The leaf stalks become long.",
+    "Flower buds turn brittle and fall off.",
+    "The plant shows stunted growth.",
+    "Flower production and fruit set are stopped."
+   ],
+   "photo_cues": [
+    "upward curling leaves",
+    "tiny straw yellow nymphs",
+    "adults with fringed wings",
+    "stunted plant growth"
+   ],
+   "look_alikes": [
+    "chilli_leaf_curl"
+   ],
+   "discriminators": [
+    {
+     "id": "q_chilli_thrips_chilli_leaf_curl",
+     "question": "Do the leaves crinkle and curl upwards, with tiny thin straw-yellow insects on the young leaves?",
+     "yes": "chilli_thrips",
+     "no": "chilli_leaf_curl"
+    },
+    {
+     "id": "q_chilli_leaf_curl_chilli_thrips",
+     "question": "Are the leaves small and curled towards the middle vein, with the plant stunted and its stem joints close together?",
+     "yes": "chilli_leaf_curl",
+     "no": "chilli_thrips"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Do not grow chilli after sorghum.",
+    "Do not plant chilli and onion together.",
+    "Intercrop with agathi to provide shade.",
+    "Sprinkle water over seedlings to stop thrips from multiplying."
+   ],
+   "practices": [
+    "Check for nymphs and adults on five terminal leaves per plant.",
+    "Use yellow or blue sticky traps at 4 to 5 traps per acre.",
+    "Use light traps at 1 trap per acre near dusk."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "thrips",
+    "black thrips"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Chilli, TNAU Agritech Portal :: Crop Protection",
+     "url": "https://web.archive.org/web/20140306010744/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_chillies_pest&disease.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "chilli_healthy",
+   "crop": "chilli",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Chillies and capsicum",
+     "url": "https://ppqs.gov.in/sites/default/files/chillies_capsicum.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_early_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Early leaf spot (tikka)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Cercospora arachidicola",
+   "symptoms": [
+    "The disease starts about one month after you plant your seeds.",
+    "Small spots appear on the leaves.",
+    "These spots grow larger and turn brown or black over time.",
+    "The spots are round on the top of the leaf.",
+    "The bottom of the leaf shows a light brown color.",
+    "Spots can also show up on the stems and leaf stalks."
+   ],
+   "photo_cues": [
+    "small round brown spots",
+    "black spots on leaves",
+    "light brown leaf undersides",
+    "lesions on plant stems"
+   ],
+   "look_alikes": [
+    "groundnut_late_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot",
+     "question": "Are the spots brown on the upper side of the leaf, with only a light brown colour underneath?",
+     "yes": "groundnut_early_leaf_spot",
+     "no": "groundnut_late_leaf_spot"
+    },
+    {
+     "id": "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot",
+     "question": "Are the spots dark brown to black and rough on the underside of the leaf?",
+     "yes": "groundnut_late_leaf_spot",
+     "no": "groundnut_early_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Rotate your crops with wheat, cotton, maize, onion, or garlic to keep the soil healthy.",
+    "Choose varieties that are known to be tolerant to leaf spots."
+   ],
+   "practices": [
+    "Check your fields weekly to see if the disease is spreading.",
+    "Remove and destroy parts of the plant that look sick to stop the spread."
+   ],
+   "organic_bio": [
+    {
+     "text": "10% Calotropis leaf extract",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "early leaf spot",
+    "tikka leaf spot",
+    "tikka",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Groundnut, Early leaf spot",
+     "url": "https://web.archive.org/web/20160201050843/http://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_late_leaf_spot",
+   "crop": "groundnut",
+   "name_en": "Late leaf spot (tikka)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Phaeoisariopsis personatum",
+   "symptoms": [
+    "Black spots appear on the bottom of the leaves.",
+    "The spots are almost round in shape.",
+    "The spots feel rough to the touch.",
+    "Many spots can join together on the leaf.",
+    "Leaves may turn yellow and fall off the plant early."
+   ],
+   "photo_cues": [
+    "Black circular spots",
+    "Rough leaf lesions",
+    "Coalescing leaf spots",
+    "Premature leaf shedding"
+   ],
+   "look_alikes": [
+    "groundnut_early_leaf_spot",
+    "groundnut_rust"
+   ],
+   "discriminators": [
+    {
+     "id": "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot",
+     "question": "Are the spots brown on the upper side of the leaf, with only a light brown colour underneath?",
+     "yes": "groundnut_early_leaf_spot",
+     "no": "groundnut_late_leaf_spot"
+    },
+    {
+     "id": "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot",
+     "question": "Are the spots dark brown to black and rough on the underside of the leaf?",
+     "yes": "groundnut_late_leaf_spot",
+     "no": "groundnut_early_leaf_spot"
+    },
+    {
+     "id": "q_groundnut_rust_groundnut_late_leaf_spot",
+     "question": "Are there small raised bumps (pustules), mostly on the underside of the leaves, rather than flat spots?",
+     "yes": "groundnut_rust",
+     "no": "groundnut_late_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Plant groundnut with pearl millet or sorghum in a 1 to 3 ratio.",
+    "Rotate your groundnut with cereal crops instead of other hosts.",
+    "Dig deep to bury any old crop remains in the soil.",
+    "Pull out and remove any groundnut plants that grow on their own."
+   ],
+   "practices": [
+    "Remove and destroy any plant parts that show signs of the disease.",
+    "Keep the field clean by removing volunteer groundnut plants.",
+    "Bury crop residues deep in the soil to stop the spread."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "late leaf spot",
+    "lateleafspot",
+    "tikka leaf spot",
+    "tikka",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Groundnut, Late leaf spot",
+     "url": "https://web.archive.org/web/20160201084457/http://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_rust",
+   "crop": "groundnut",
+   "name_en": "Rust",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Puccinia arachidis",
+   "symptoms": [
+    "Small bumps called pustules appear on the bottom of the leaves.",
+    "These bumps can also show up on the top of the leaves.",
+    "The bumps may form on all parts of the plant except for flowers and pegs.",
+    "In bad cases, the leaves die and dry up but stay stuck to the plant."
+   ],
+   "photo_cues": [
+    "pustules on leaf surface",
+    "secondary pustule colonies",
+    "necrotic dried leaves",
+    "leaves attached to plant"
+   ],
+   "look_alikes": [
+    "groundnut_late_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_groundnut_rust_groundnut_late_leaf_spot",
+     "question": "Are there small raised bumps (pustules), mostly on the underside of the leaves, rather than flat spots?",
+     "yes": "groundnut_rust",
+     "no": "groundnut_late_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose plant varieties that are resistant to rust.",
+    "Rotate your crops with wheat, cotton, maize, onion, or garlic to keep the soil healthy."
+   ],
+   "practices": [
+    "Check your field every week to see if rust is spreading.",
+    "If a spray is needed, a second round can be given 15 days after the first."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "rust"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Groundnut, Rust",
+     "url": "https://web.archive.org/web/20160201084503/http://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d3.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_bud_necrosis",
+   "crop": "groundnut",
+   "name_en": "Bud necrosis virus",
+   "names": {},
+   "kind": "viral",
+   "pathogen": "Peanut bud necrosis virus (PBNV)",
+   "symptoms": [
+    "You will see pale spots on young leaves.",
+    "The leaves develop rings and streaks that look dead.",
+    "The top bud of the plant may die when the weather is hot.",
+    "As the plant grows older it stays small and stunted.",
+    "The plant may grow many extra side shoots."
+   ],
+   "photo_cues": [
+    "pale spots on leaves",
+    "necrotic rings on leaves",
+    "necrotic streaks on leaves",
+    "stunted plant growth",
+    "short stem sections"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease is more likely to happen when the temperature is relatively high.",
+   "prevention": [
+    "Plant your seeds close together with 15 cm between them.",
+    "Use varieties that are known to be tolerant to this disease.",
+    "Plant your crop early when the first rains come.",
+    "Use dense cropping to help reduce the damage.",
+    "Rotate your groundnut crop with other plants like sorghum or maize."
+   ],
+   "practices": [
+    "Check your field regularly for signs of the virus.",
+    "Pull out and destroy any plants that look sick up to 6 weeks after planting.",
+    "Remove any infected plants from the field as soon as you see them.",
+    "Intercrop groundnut with castor in a 3 to 6 to 1 ratio to help manage the insects that spread the virus."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "thrips"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Groundnut, Bud necrosis: Peanut bud necrosis virus (PBNV)",
+     "url": "https://web.archive.org/web/20160201084513/http://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d5.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/groundnut_diseases/groundnut_d5.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_leaf_miner",
+   "crop": "groundnut",
+   "name_en": "Leaf miner",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Aproaerema modicella",
+   "symptoms": [
+    "Young larvae dig into leaves and eat the inside parts.",
+    "Small brown spots appear on the leaves.",
+    "Later the larvae fold leaves together and hide inside.",
+    "The whole field looks burnt when seen from far away."
+   ],
+   "photo_cues": [
+    "small brown leaf blotches",
+    "folded leaves webbed together",
+    "green larvae with dark heads",
+    "shiny white eggs",
+    "brownish grey moth"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Plant cowpea or soybean near your crop to act as a trap.",
+    "Remove these trap plants once the harvest is done."
+   ],
+   "practices": [
+    "Check your field for larvae regularly.",
+    "Set up light traps to catch the moths.",
+    "Use pheromone traps to monitor the moth population.",
+    "Remove trapped moths from the traps every day."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "leaf miner",
+    "leaf minor"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Groundnut, Groundnut leaf miner",
+     "url": "https://web.archive.org/web/20160516180226/http://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/groundnut/crop_prot_crop_insect_oil_ground%20nut_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    }
+   ]
+  },
+  {
+   "id": "groundnut_healthy",
+   "crop": "groundnut",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Groundnut",
+     "url": "https://ppqs.gov.in/sites/default/files/groundnut.pdf"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "maize_common_rust",
+   "crop": "maize",
+   "name_en": "Common rust",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Puccinia sorghi",
+   "symptoms": [
+    "You will see brown spots on both sides of the maize leaves.",
+    "These spots are actually small bumps called pustules.",
+    "These bumps contain the spores of the fungus."
+   ],
+   "photo_cues": [
+    "brown pustules on leaf",
+    "spots on leaf surfaces",
+    "uredinal pustules on leaf"
+   ],
+   "look_alikes": [
+    "maize_turcicum_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_maize_common_rust_maize_turcicum_blight",
+     "question": "Are there small raised brown bumps (pustules) on both sides of the leaf?",
+     "yes": "maize_common_rust",
+     "no": "maize_turcicum_blight"
+    }
+   ],
+   "favourable_conditions": "Cool temperatures and high humidity in the air help this disease grow.",
+   "prevention": [
+    "Choose resistant maize varieties like BULAND, SHEETAL, HHM 1, HHM 2, HQPM 1, or NITHYASHREE.",
+    "Remove and destroy any alternate plant hosts like Oxalis corniunlata found near your field."
+   ],
+   "practices": [
+    "Check your plants regularly for the first signs of pustules.",
+    "Remove and destroy any parts of the plant that show signs of the disease.",
+    "If the disease appears, you may need to apply fungicide sprays at 15-day intervals."
+   ],
+   "organic_bio": [
+    {
+     "text": "P. fluorescens @ 2.5 kg / ha + 50 kg of well decomposed FYM or sand",
+     "source": 0
+    },
+    {
+     "text": "T. viride @ 2.5 kg / ha + 50 kg of well decomposed FYM or sand",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "common rust",
+    "rust"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Maize, Corn rust",
+     "url": "https://web.archive.org/web/20161107195821/http://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease_new/maize_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
+     "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ]
+  },
+  {
+   "id": "maize_turcicum_blight",
+   "crop": "maize",
+   "name_en": "Northern leaf blight (turcicum)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Exserohilum turcicum",
+   "symptoms": [
+    "Small, slightly oval, water-soaked spots appear on the leaves early on.",
+    "These spots grow into long, spindle-shaped dead areas.",
+    "The spots start on the lower leaves and spread as the plant grows.",
+    "Eventually, the entire leaf surface looks like it has been burned."
+   ],
+   "photo_cues": [
+    "small water-soaked spots",
+    "elongated spindle-shaped lesions",
+    "long elliptical lesions",
+    "grayish-green or tan spots"
+   ],
+   "look_alikes": [
+    "maize_maydis_blight",
+    "maize_common_rust"
+   ],
+   "discriminators": [
+    {
+     "id": "q_maize_turcicum_blight_maize_maydis_blight",
+     "question": "Are the spots long and spindle or cigar shaped, greyish green to tan, starting on the lower leaves?",
+     "yes": "maize_turcicum_blight",
+     "no": "maize_maydis_blight"
+    },
+    {
+     "id": "q_maize_maydis_blight_maize_turcicum_blight",
+     "question": "Are the spots small and diamond shaped at first, then a little longer, tan with a buff to brown border?",
+     "yes": "maize_maydis_blight",
+     "no": "maize_turcicum_blight"
+    },
+    {
+     "id": "q_maize_common_rust_maize_turcicum_blight",
+     "question": "Are there small raised brown bumps (pustules) on both sides of the leaf?",
+     "yes": "maize_common_rust",
+     "no": "maize_turcicum_blight"
+    }
+   ],
+   "favourable_conditions": "The disease causes significant damage when infection happens at the silking stage under optimum conditions.",
+   "prevention": [
+    "Use resistant or tolerant varieties like PEMH-5, Vivek 21, Vivek 23, Vivek 25, or Nithyashree.",
+    "Pull out and remove plants that are badly affected."
+   ],
+   "practices": [
+    "Monitor the crop for the first signs of the disease.",
+    "Pull out and destroy badly affected plants as soon as you see them."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "turcicum leaf blight",
+    "turcicum blight",
+    "tercicum leaf blight",
+    "leaf blight",
+    "northern corn leaf blight southern corn leaf blight",
+    "n s orthern leaf blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Maize, Turcicum Leaf Blight (TLB)",
+     "url": "https://web.archive.org/web/20160730014153/http://agritech.tnau.ac.in/crop_protection/maize_disease/maize_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
+     "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ]
+  },
+  {
+   "id": "maize_maydis_blight",
+   "crop": "maize",
+   "name_en": "Southern leaf blight (maydis)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Bipolaris maydis, Drechslera maydis, H. maydis",
+   "symptoms": [
+    "Young spots on the leaves are small and shaped like diamonds.",
+    "As the spots grow older, they stretch out and get longer.",
+    "The spots can join together to cover large parts of the leaf.",
+    "When spots join, they make the leaf look like it has been burned.",
+    "The size and shape of the spots can change depending on the type of maize you grow."
+   ],
+   "photo_cues": [
+    "small diamond shaped spots",
+    "tan elongated lesions",
+    "buff to brown borders",
+    "burned leaf areas"
+   ],
+   "look_alikes": [
+    "maize_turcicum_blight",
+    "maize_grey_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_maize_turcicum_blight_maize_maydis_blight",
+     "question": "Are the spots long and spindle or cigar shaped, greyish green to tan, starting on the lower leaves?",
+     "yes": "maize_turcicum_blight",
+     "no": "maize_maydis_blight"
+    },
+    {
+     "id": "q_maize_maydis_blight_maize_turcicum_blight",
+     "question": "Are the spots small and diamond shaped at first, then a little longer, tan with a buff to brown border?",
+     "yes": "maize_maydis_blight",
+     "no": "maize_turcicum_blight"
+    },
+    {
+     "id": "q_maize_grey_leaf_spot_maize_maydis_blight",
+     "question": "Are the spots narrow and rectangular, stopped by the veins on both sides, tan turning grey?",
+     "yes": "maize_grey_leaf_spot",
+     "no": "maize_maydis_blight"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose resistant maize varieties to plant in your field.",
+    "Do not use seeds that came from fields already infected with the disease."
+   ],
+   "practices": [
+    "Check your fields regularly for signs of the disease.",
+    "Remove and destroy any plants that show signs of infection.",
+    "Rotate your maize with other types of crops."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "maydis leaf blight",
+    "leaf blight",
+    "northern corn leaf blight southern corn leaf blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Maize, Maydis leaf blight (MLB)",
+     "url": "https://web.archive.org/web/20160730014200/http://agritech.tnau.ac.in/crop_protection/maize_disease/maize_5.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_5.html"
+    },
+    {
+     "title": "TNAU Agritech Portal: Maize, Brown spot",
+     "url": "https://web.archive.org/web/20160730014211/http://agritech.tnau.ac.in/crop_protection/maize_disease/maize_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_7.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
+     "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ]
+  },
+  {
+   "id": "maize_grey_leaf_spot",
+   "crop": "maize",
+   "name_en": "Grey leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Cercospora zeae-maydis",
+   "symptoms": [
+    "Spots first show up on the lower leaves, about two to three weeks before the tassels come out.",
+    "The spots are long and narrow, up to about 5 cm, rectangular and light tan in colour.",
+    "Later the spots turn grey.",
+    "The spots are held in by the leaf veins, and many spots can join together and kill whole leaves."
+   ],
+   "photo_cues": [
+    "narrow rectangular tan spots",
+    "spots bounded by leaf veins",
+    "grey lesions",
+    "joined spots killing the leaf",
+    "spots on lower leaves"
+   ],
+   "look_alikes": [
+    "maize_maydis_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_maize_grey_leaf_spot_maize_maydis_blight",
+     "question": "Are the spots narrow and rectangular, stopped by the veins on both sides, tan turning grey?",
+     "yes": "maize_grey_leaf_spot",
+     "no": "maize_maydis_blight"
+    }
+   ],
+   "favourable_conditions": "Warm weather (around 27 to 32 degrees Celsius) with very humid air, above 90 percent for 12 hours or more, favours it, and it is worse where maize follows maize.",
+   "prevention": [
+    "Grow a resistant hybrid where one is available.",
+    "Rotate maize with other crops, because the fungus survives in old maize residue.",
+    "Tilling in the old residue reduces how much of the fungus survives."
+   ],
+   "practices": [
+    "Look at the lower leaves first, because the spots start there and move upwards.",
+    "After harvest, plough in old maize residue and avoid planting maize again in the same field next season."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "Crop Protection Network (US land-grant universities): Gray leaf spot of corn",
+     "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"
+    }
+   ]
+  },
+  {
+   "id": "maize_healthy",
+   "crop": "maize",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Maize",
+     "url": "https://ppqs.gov.in/sites/default/files/maize.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_early_blight",
+   "crop": "tomato",
+   "name_en": "Early blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Alternaria solani",
+   "symptoms": [
+    "You will see small black spots mostly on the older leaves first.",
+    "These spots grow larger and show a bull's eye pattern of rings in the middle.",
+    "The leaf tissue around the spots often turns yellow.",
+    "Similar spots appear on stems and can wrap around the plant near the soil.",
+    "The fungus also infects the fruit, often starting where the stem attaches.",
+    "Large spots can cover almost the entire fruit with visible rings."
+   ],
+   "photo_cues": [
+    "small black leaf lesions",
+    "bull's eye ring pattern",
+    "yellow tissue around spots",
+    "dark stem lesions",
+    "concentric rings on fruit"
+   ],
+   "look_alikes": [
+    "tomato_late_blight",
+    "tomato_septoria_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_tomato_early_blight_tomato_late_blight",
+     "question": "Do the brown spots have rings inside them like a target, mostly on the older lower leaves?",
+     "yes": "tomato_early_blight",
+     "no": "tomato_late_blight"
+    },
+    {
+     "id": "q_tomato_late_blight_tomato_early_blight",
+     "question": "Are there dark water-soaked patches that spread fast, with white fuzz on the underside in damp weather?",
+     "yes": "tomato_late_blight",
+     "no": "tomato_early_blight"
+    },
+    {
+     "id": "q_tomato_septoria_leaf_spot_tomato_early_blight",
+     "question": "Are there many small round spots with a grey centre and dark edge, without rings inside?",
+     "yes": "tomato_septoria_leaf_spot",
+     "no": "tomato_early_blight"
+    }
+   ],
+   "favourable_conditions": "Warm, rainy and wet weather helps the disease spread.",
+   "prevention": [
+    "Change the location of your nursery beds every season.",
+    "Remove all weeds and volunteer tomato plants from the area.",
+    "Ask your local agricultural office about using resistant or tolerant plant varieties.",
+    "Make sure to fertilize your plants properly."
+   ],
+   "practices": [
+    "Remove and destroy all crop debris from the field.",
+    "Practice crop rotation to help lower the chance of disease.",
+    "Monitor your plants regularly for early signs of spots."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "early blight",
+    "alternaria blight",
+    "alternaria leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Tomato, Early Blight",
+     "url": "https://web.archive.org/web/20160509230817/http://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_late_blight",
+   "crop": "tomato",
+   "name_en": "Late blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Phytophthora infestans",
+   "symptoms": [
+    "You will see small, irregular, water-soaked spots on the leaves.",
+    "These spots turn dark brown and may have white fuzz underneath.",
+    "The stems develop dark, greasy-looking patches that can kill the plant.",
+    "Fruits show sunken brown spots that may develop white mold.",
+    "Dark, greasy spots can also appear on the fruit.",
+    "Brown streaks may appear on the stems and leaf stalks."
+   ],
+   "photo_cues": [
+    "dark brown leaf spots",
+    "white fuzz on leaves",
+    "greasy looking stem patches",
+    "sunken brown fruit lesions"
+   ],
+   "look_alikes": [
+    "tomato_early_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_tomato_early_blight_tomato_late_blight",
+     "question": "Do the brown spots have rings inside them like a target, mostly on the older lower leaves?",
+     "yes": "tomato_early_blight",
+     "no": "tomato_late_blight"
+    },
+    {
+     "id": "q_tomato_late_blight_tomato_early_blight",
+     "question": "Are there dark water-soaked patches that spread fast, with white fuzz on the underside in damp weather?",
+     "yes": "tomato_late_blight",
+     "no": "tomato_early_blight"
+    }
+   ],
+   "favourable_conditions": "The disease spreads quickly in cool, humid weather with temperatures between 15 and 18 degrees Celsius and high humidity.",
+   "prevention": [
+    "Choose resistant tomato varieties like Arka Abhed F1.",
+    "Rotate your crops so you do not plant tomatoes in the same field every year.",
+    "Ensure there is enough space between plants to allow for good airflow.",
+    "Use black plastic mulch to keep the soil dry and stop the disease from spreading.",
+    "Avoid overhead watering and improve your field drainage."
+   ],
+   "practices": [
+    "Check your plants regularly for any signs of the disease.",
+    "Remove and destroy any plant parts that look infected.",
+    "Use stakes to keep plants off the ground and improve airflow.",
+    "Improve field drainage and avoid watering over the leaves."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "late blight"
+   ],
+   "sources": [
+    {
+     "title": "ICAR-IIHR, Indian Horticulture: Late blight disease of tomato, a serious problem for Indian tomato farmers",
+     "url": "https://epubs.icar.org.in/index.php/IndHort/article/view/164935"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_leaf_curl",
+   "crop": "tomato",
+   "name_en": "Leaf curl virus",
+   "names": {},
+   "kind": "viral",
+   "pathogen": "Tomato leaf curl virus (ToLCV)",
+   "symptoms": [
+    "New plant growth looks stunted with short stems.",
+    "New leaves are small, wrinkled, and yellow between the veins.",
+    "Leaf edges curl upward to look like a cup.",
+    "Flowers may form but often fall off before fruit grows.",
+    "Older leaves become leathery and brittle.",
+    "Infected plants look pale and bushy with many side branches."
+   ],
+   "photo_cues": [
+    "upward curling leaf margins",
+    "yellowing between leaf veins",
+    "stunted plant growth",
+    "cup-like leaf shape",
+    "whitefly adults and nymphs"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Warm weather conditions are favourable for multiplication.",
+   "prevention": [
+    "Grow resistant or tolerant plant varieties.",
+    "Raise seedlings in a protected nursery covered with a fine net to keep whiteflies out.",
+    "Plant barrier crops like cereals or maize around the field.",
+    "Remove weeds that can host the virus."
+   ],
+   "practices": [
+    "Use yellow sticky traps to monitor whitefly numbers.",
+    "Collect and destroy all infected plant parts and debris.",
+    "Keep the field clean and free of weeds.",
+    "Follow good crop rotation practices with non-host crops."
+   ],
+   "organic_bio": [
+    {
+     "text": "Spray neem seed kernel extract (NSKE) 5% @ 80 g in 160 l of water/acre",
+     "source": 1
+    },
+    {
+     "text": "Spray azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "whitefly"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Tomato, Leaf curl",
+     "url": "https://web.archive.org/web/20160509231547/http://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "name_en": "Septoria leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Septoria lycopersici",
+   "symptoms": [
+    "You will see many small grey spots on the leaves.",
+    "These spots are round and have a dark border.",
+    "The spots start on the lower leaves and move up the plant.",
+    "The spots can join together and cause the leaves to wither.",
+    "The plant may lose all its affected leaves.",
+    "The disease can sometimes attack stems and flowers."
+   ],
+   "photo_cues": [
+    "Small grey circular spots",
+    "Dark leaf spot border",
+    "Spots on lower leaves",
+    "Joined leaf spots",
+    "Withered blighted leaves"
+   ],
+   "look_alikes": [
+    "tomato_early_blight",
+    "tomato_bacterial_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_tomato_septoria_leaf_spot_tomato_early_blight",
+     "question": "Are there many small round spots with a grey centre and dark edge, without rings inside?",
+     "yes": "tomato_septoria_leaf_spot",
+     "no": "tomato_early_blight"
+    },
+    {
+     "id": "q_tomato_bacterial_spot_tomato_septoria_leaf_spot",
+     "question": "Are the spots small and brown with a yellow ring around them, and do green fruits have raised scabby spots?",
+     "yes": "tomato_bacterial_spot",
+     "no": "tomato_septoria_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "High humidity or dew at 25 degrees Celsius and moist weather with rain showers favor this disease.",
+   "prevention": [
+    "Ask your local agricultural office for resistant or tolerant plant varieties.",
+    "Use seeds that have been treated to prevent infection.",
+    "Keep your fields clean to stop the disease from spreading."
+   ],
+   "practices": [
+    "Remove and destroy any plant parts that look sick.",
+    "Monitor your plants regularly for signs of the disease.",
+    "Follow good field hygiene practices to stop the spread."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "septoria leaf spot",
+    "septoria leaf blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Tomato, Septoria Leaf Spot",
+     "url": "https://web.archive.org/web/20160509230827/http://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "name_en": "Bacterial spot",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Xanthomonas campestris pv. vesicatoria",
+   "symptoms": [
+    "Small brown spots with a yellow ring appear on the leaves.",
+    "Older leaves may drop off the plant.",
+    "Small water-soaked spots appear on green fruit.",
+    "These spots grow into raised, rough, and scabby sores.",
+    "The centers of the sores turn light brown and sink in."
+   ],
+   "photo_cues": [
+    "Small brown circular spots",
+    "Yellow halo around spots",
+    "Raised scabby fruit surface",
+    "Sunken light brown lesions"
+   ],
+   "look_alikes": [
+    "tomato_septoria_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_tomato_bacterial_spot_tomato_septoria_leaf_spot",
+     "question": "Are the spots small and brown with a yellow ring around them, and do green fruits have raised scabby spots?",
+     "yes": "tomato_bacterial_spot",
+     "no": "tomato_septoria_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "Moist weather, heavy rainstorms, high humidity, or persistent dew help the disease spread.",
+   "prevention": [
+    "Always use seeds and seedlings that are free of disease.",
+    "Rotate your tomato crop with plants that do not catch this disease.",
+    "Avoid planting in areas where you grew tomatoes last year to keep away from old plant trash."
+   ],
+   "practices": [
+    "Remove and destroy any plant parts that show signs of the disease.",
+    "Clear away old plant debris from the field to stop the spread.",
+    "Monitor your plants closely for new spots."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "bacterial leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Tomato, Bacterial Leaf Spot",
+     "url": "https://web.archive.org/web/20160509003747/http://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_fruit_borer",
+   "crop": "tomato",
+   "name_en": "Fruit borer",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Helicoverpa armigera",
+   "symptoms": [
+    "Young caterpillars eat the tender leaves of the plant.",
+    "Older caterpillars bore round holes into the fruit.",
+    "The caterpillar pushes part of its body inside the fruit to eat the inside.",
+    "You may see damaged fruits and caterpillars on the plants."
+   ],
+   "photo_cues": [
+    "round holes in fruit",
+    "greenish to brown caterpillar",
+    "dark grey lines on body",
+    "creamy white eggs",
+    "olive green moth"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Plant American tall marigold and tomato seedlings together in a 1 to 16 row ratio.",
+    "Set up pheromone traps to catch the moths.",
+    "Use tomato nursery as a trap crop to attract egg-laying females."
+   ],
+   "practices": [
+    "Regularly check your plants for damaged fruits and caterpillars.",
+    "Pick off and destroy any infected fruits and large caterpillars you find.",
+    "Install pheromone traps in the field and record the number of moths caught.",
+    "Remove and destroy trapped moths after each count."
+   ],
+   "organic_bio": [
+    {
+     "text": "Trichogramma pretiosum @ 1 lakh nos. /ha/release",
+     "source": 0
+    },
+    {
+     "text": "HaNPV 1.5 x 10 12 POBs/ha",
+     "source": 0
+    },
+    {
+     "text": "NPV of H. armigera 0.43% AS @ 3.0 ml/lit or 2 % AS @ 1.0 ml per lit",
+     "source": 0
+    },
+    {
+     "text": "Bacillus thuringiensis 2g/lit",
+     "source": 0
+    },
+    {
+     "text": "Azadirachtin 1.0 % EC (10000 ppm) 2.0 ml/ lit",
+     "source": 0
+    },
+    {
+     "text": "azadirachtin 1% (10000 ppm) neem based EC @ 400-600 ml in 200 l of water/acre",
+     "source": 1
+    },
+    {
+     "text": "azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre",
+     "source": 1
+    },
+    {
+     "text": "Ha NPV 0.43% AS @ 600 ml in 160-240 l of water/acre",
+     "source": 1
+    },
+    {
+     "text": "Ha NPV 2% AS @ 100-200 ml in 200 l of water/acre",
+     "source": 1
+    },
+    {
+     "text": "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "fruit borer",
+    "helicoverpa armigera"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Tomato, Fruit Borer",
+     "url": "https://web.archive.org/web/20141209145036/http://agritech.tnau.ac.in/crop_protection/tomato/tomato_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tomato_healthy",
+   "crop": "tomato",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Tomato",
+     "url": "https://ppqs.gov.in/sites/default/files/tomato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_leaf_crinkle",
+   "crop": "blackgram",
+   "name_en": "Leaf crinkle virus",
+   "names": {},
+   "kind": "viral",
+   "pathogen": "Leaf crinkle virus",
+   "symptoms": [
+    "Young leaves show yellowing around the side veins and near the edges.",
+    "The leaf edges curl downwards.",
+    "Some leaves look twisted.",
+    "The veins on the underside of the leaf turn reddish brown.",
+    "Plants that get sick early in the season stay small and often die from the top down."
+   ],
+   "photo_cues": [
+    "yellowing around leaf veins",
+    "downward curling leaf edges",
+    "twisted leaf shape",
+    "reddish brown leaf veins"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease spreads in the field mainly through infected seeds or when diseased leaves rub against healthy ones.",
+   "prevention": [
+    "Use healthy seeds to prevent the disease from entering your field.",
+    "Avoid planting seeds from infected plants."
+   ],
+   "practices": [
+    "Monitor your field regularly for signs of the disease.",
+    "Remove and destroy any plants that show symptoms to stop the spread."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Leaf Crinkle",
+     "url": "https://web.archive.org/web/20191031203104/http://agritech.tnau.ac.in/crop_protection/black_gram_disease/leaf_crinkle.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/black_gram_disease/leaf_crinkle.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_rust",
+   "crop": "blackgram",
+   "name_en": "Rust",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Uromyces phaseoli",
+   "symptoms": [
+    "You will see small, round spots on the leaves.",
+    "These spots have a pale brown center and a reddish brown edge.",
+    "The spots can also appear on branches and pods.",
+    "In bad cases, the leaves will shrivel and fall off the plant.",
+    "The underside of the leaves often shows many reddish brown pustules."
+   ],
+   "photo_cues": [
+    "small reddish brown pustules",
+    "pale brown spot centers",
+    "reddish brown spot margins",
+    "shriveled leaves",
+    "spots on pods"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "High humidity, cloudy weather, temperatures between 21 and 26 degrees Celsius, and nights with heavy dew help the disease spread.",
+   "prevention": [
+    "Remove volunteer plants from the field to lower disease levels.",
+    "Use healthy seeds that are not carrying the fungus."
+   ],
+   "practices": [
+    "Check your fields regularly for signs of the disease.",
+    "Remove and destroy any plant parts that look sick.",
+    "Keep the field clean of old plant debris where the fungus hides."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "rust"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Rust",
+     "url": "https://web.archive.org/web/20191031203130/http://agritech.tnau.ac.in/crop_protection/black_gram_disease/rust.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/black_gram_disease/rust.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_pod_borer",
+   "crop": "blackgram",
+   "name_en": "Spotted pod borer (Maruca)",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Maruca testulalis, Maruca vitrata",
+   "symptoms": [
+    "You will see leaves being eaten away in the early stages.",
+    "The larva often keeps its head inside the pod while its body hangs outside.",
+    "You will see round holes on the pods.",
+    "The buds, flowers, and pods may have bore holes.",
+    "Infested flowers and pods are often webbed together."
+   ],
+   "photo_cues": [
+    "Greenish white larva",
+    "Brown head on larva",
+    "Round holes on pods",
+    "Webbed flowers and pods",
+    "Light brown forewings"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Install pheromone traps to monitor the pest population.",
+    "Place traps at a rate of 4 to 5 per acre.",
+    "Keep traps at least 75 feet apart from each other.",
+    "Set traps one foot above the plant canopy."
+   ],
+   "practices": [
+    "Check your fields weekly for the number of moths in your traps.",
+    "Remove and destroy any moths caught in the traps after you count them.",
+    "Look for natural predators like ladybird beetles in the field.",
+    "Avoid using insecticides if you see natural predators active in the crop."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pheromone traps @ 4-5 per acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "spotted pod borer",
+    "maruca vitrata",
+    "maruca spp",
+    "pod borer",
+    "black gram pod borer"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Crop Protection :: Pests of Black and Green Gram",
+     "url": "https://web.archive.org/web/20141124040343/http://agritech.tnau.ac.in/crop_protection/greenblack/crop_prot_crop_insect_pul_bla_and%20green_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/greenblack/crop_prot_crop_insect_pul_bla_and%20green_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_healthy",
+   "crop": "blackgram",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_early_blight",
+   "crop": "potato",
+   "name_en": "Early blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Alternaria solani",
+   "symptoms": [
+    "You will see small black spots on older leaves first.",
+    "These spots grow larger and show a bullseye pattern of rings in the center.",
+    "The leaf tissue around the spots often turns yellow.",
+    "Spots can also appear on stems and may wrap around the plant near the soil.",
+    "In severe cases, the disease kills much of the plant foliage."
+   ],
+   "photo_cues": [
+    "brown black necrotic spots",
+    "oval angular spot shape",
+    "concentric rings pattern",
+    "yellow tissue around spots"
+   ],
+   "look_alikes": [
+    "potato_late_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_potato_early_blight_potato_late_blight",
+     "question": "Do the brown spots have rings inside them like a target, starting on the older leaves?",
+     "yes": "potato_early_blight",
+     "no": "potato_late_blight"
+    },
+    {
+     "id": "q_potato_late_blight_potato_early_blight",
+     "question": "Are there dark water-soaked patches that spread fast, with white growth on the underside in damp weather?",
+     "yes": "potato_late_blight",
+     "no": "potato_early_blight"
+    }
+   ],
+   "favourable_conditions": "The disease likes warm weather with rain and high humidity.",
+   "prevention": [
+    "Always use healthy seed tubers that are free from disease.",
+    "Choose potato varieties that are known to resist this disease.",
+    "Keep the field clean by removing and destroying all old plant parts after harvest."
+   ],
+   "practices": [
+    "Check your plants regularly for signs of spots.",
+    "Remove and destroy any parts of the plant that show signs of the disease.",
+    "Keep the field clean to stop the spread of spores."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "early blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Potato, Early blight",
+     "url": "https://web.archive.org/web/20170105163040/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_late_blight",
+   "crop": "potato",
+   "name_en": "Late blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Phytopthora infestans",
+   "symptoms": [
+    "Water soaked spots appear on the leaves and grow larger over time.",
+    "These spots turn purple brown and finally black.",
+    "A white growth that looks like flour develops on the underside of leaves.",
+    "Stems blacken at the nodes and may break, causing the plant to topple over.",
+    "Tubers show purplish brown spots on the surface and rusty brown rot inside.",
+    "The disease spreads very quickly and can kill the whole plant in a few days."
+   ],
+   "photo_cues": [
+    "water soaked leaf spots",
+    "purple brown leaf spots",
+    "black leaf spots",
+    "white floury leaf growth",
+    "rusty brown tuber rot"
+   ],
+   "look_alikes": [
+    "potato_early_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_potato_early_blight_potato_late_blight",
+     "question": "Do the brown spots have rings inside them like a target, starting on the older leaves?",
+     "yes": "potato_early_blight",
+     "no": "potato_late_blight"
+    },
+    {
+     "id": "q_potato_late_blight_potato_early_blight",
+     "question": "Are there dark water-soaked patches that spread fast, with white growth on the underside in damp weather?",
+     "yes": "potato_late_blight",
+     "no": "potato_early_blight"
+    }
+   ],
+   "favourable_conditions": "The disease likes cool and humid weather with high humidity above 90 percent and rain.",
+   "prevention": [
+    "Use resistant potato varieties for planting.",
+    "Avoid injuring tubers when you harvest them.",
+    "Do not store tubers that show signs of the disease.",
+    "Follow crop rotation to keep the soil healthy.",
+    "Avoid water logged conditions in your field."
+   ],
+   "practices": [
+    "Remove and destroy any plants or tubers that look sick.",
+    "Destroy the leaves a few days before you harvest the crop.",
+    "Monitor your field regularly for signs of the disease.",
+    "Ensure your field has good drainage to avoid standing water."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "late blight"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Potato, Late blight of potato",
+     "url": "https://web.archive.org/web/20170105143918/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html"
+    },
+    {
+     "title": "TNAU Agritech Portal: Potato, Late blight",
+     "url": "https://web.archive.org/web/20170718084731/http://agritech.tnau.ac.in/crop_protection/potato_phdiseases_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/potato_phdiseases_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_black_scurf",
+   "crop": "potato",
+   "name_en": "Black scurf",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Rhizoctonia solani",
+   "symptoms": [
+    "You may see black specks or scabs on the potato skin.",
+    "The eyes of the potato may turn dark brown when they start to sprout.",
+    "The plant may wilt because the inner tissue is damaged.",
+    "You might find sunken spots on the stem or the stem may rot.",
+    "The inside of the potato can show hard dry rot with browning."
+   ],
+   "photo_cues": [
+    "black specks on tubers",
+    "russeting on tuber skin",
+    "sunken lesions on stem",
+    "rotten stem"
+   ],
+   "look_alikes": [
+    "potato_common_scab"
+   ],
+   "discriminators": [
+    {
+     "id": "q_potato_black_scurf_potato_common_scab",
+     "question": "Are there black specks or crusts on the tuber skin, rather than rough corky pits?",
+     "yes": "potato_black_scurf",
+     "no": "potato_common_scab"
+    },
+    {
+     "id": "q_potato_common_scab_potato_black_scurf",
+     "question": "Are there rough, corky, raised or pitted patches on the tuber skin?",
+     "yes": "potato_common_scab",
+     "no": "potato_black_scurf"
+    }
+   ],
+   "favourable_conditions": "The disease develops in cool, wet weather or when temperatures and moisture levels are high.",
+   "prevention": [
+    "Only plant seed tubers that are free from disease.",
+    "Use crop rotation to keep the soil healthy.",
+    "Plant your tubers early in the season.",
+    "If you have well-developed tubers, plant them at a shallow depth."
+   ],
+   "practices": [
+    "Leave the land fallow for two years to reduce the amount of disease in the soil.",
+    "Remove any damaged or rotten potatoes before you put them into storage.",
+    "If you wash your potatoes, make sure they are completely dry before storing them."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "black scurf",
+    "black scruf",
+    "black scruff"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Potato, Black scurf",
+     "url": "https://web.archive.org/web/20170106025323/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_bacterial_wilt",
+   "crop": "potato",
+   "name_en": "Bacterial wilt (brown rot)",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Ralstonia solanacearum",
+   "symptoms": [
+    "The plant begins to wilt starting at the leaf tips or where stems branch out.",
+    "Leaves turn yellow at the base before the whole plant wilts and dies.",
+    "When you cut a stem, you will see a brown ring inside.",
+    "When you cut a tuber in half, you will see black or brown rings.",
+    "Squeezing a cut tuber releases a thick white fluid.",
+    "Fluid may come out of the tuber eyes and cause soil to stick to them."
+   ],
+   "photo_cues": [
+    "wilting plant tips",
+    "yellowing leaf bases",
+    "brown stem ring",
+    "black or brown tuber rings",
+    "white fluid from tuber"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "High temperature, soil moisture, and low pH favour the disease.",
+   "prevention": [
+    "Use only tubers that are free from the pathogen.",
+    "Rotate your potato crops with wheat.",
+    "Use resistant potato varieties.",
+    "Apply lime to the soil to change the pH level.",
+    "Keep your farming tools clean."
+   ],
+   "practices": [
+    "Remove and destroy any plants that show signs of wilting.",
+    "Disinfect your cutting knife with a bleach solution.",
+    "Monitor your fields regularly for signs of the disease.",
+    "Avoid moving soil or water from infected areas to healthy ones."
+   ],
+   "organic_bio": [
+    {
+     "text": "neem cake @ 80 Kg/acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "bacterial brown wilt or ring or the bangle disease of potato"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Potato, Brown rot or Bangle blight",
+     "url": "https://web.archive.org/web/20170318011629/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_6.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_6.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_common_scab",
+   "crop": "potato",
+   "name_en": "Common scab",
+   "names": {},
+   "kind": "bacterial",
+   "pathogen": "Streptomyces scabies",
+   "symptoms": [
+    "The skin of the potato tuber develops rough, corky spots.",
+    "You may see superficial reddish-brown spots on the surface of young tubers.",
+    "As the potato grows, these spots expand and become pitted or cracked.",
+    "Severe cases leave the potato skin covered in rough black welts.",
+    "The damaged areas may attract insects."
+   ],
+   "photo_cues": [
+    "rough cracked skin",
+    "corky lesions",
+    "reddish-brown spots",
+    "pitted tuber surface",
+    "rough black welts"
+   ],
+   "look_alikes": [
+    "potato_black_scurf"
+   ],
+   "discriminators": [
+    {
+     "id": "q_potato_black_scurf_potato_common_scab",
+     "question": "Are there black specks or crusts on the tuber skin, rather than rough corky pits?",
+     "yes": "potato_black_scurf",
+     "no": "potato_common_scab"
+    },
+    {
+     "id": "q_potato_common_scab_potato_black_scurf",
+     "question": "Are there rough, corky, raised or pitted patches on the tuber skin?",
+     "yes": "potato_common_scab",
+     "no": "potato_black_scurf"
+    }
+   ],
+   "favourable_conditions": "The disease is common in fields with low soil pH and is made worse by high soil moisture or too much irrigation.",
+   "prevention": [
+    "Only plant seed potatoes that are free from scab.",
+    "Use a crop rotation of four to six years with alfalfa.",
+    "Add green manure to your fields before planting potatoes.",
+    "Avoid using alkaline fertilizers like calcium ammonium nitrate."
+   ],
+   "practices": [
+    "Remove any damaged or rotten potatoes before placing the crop in storage.",
+    "If you wash the tubers, allow them to dry thoroughly before storing.",
+    "Keep potatoes in a dark, well-ventilated cool place for 10 to 14 days after harvest to allow cuts and bruises to heal."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "scab"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Potato, Common scab or corkey scab",
+     "url": "https://web.archive.org/web/20170101053512/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_5.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_5.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "potato_healthy",
+   "crop": "potato",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
+     "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_purple_blotch",
+   "crop": "onion",
+   "name_en": "Purple blotch",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Alternaria porri",
+   "symptoms": [
+    "The disease starts as tiny white dots on the leaves.",
+    "Yellowish areas appear on the leaf tips.",
+    "Black velvety rings form in a circle or oval shape.",
+    "Spots grow together and spread quickly across the whole leaf.",
+    "Leaves start to die from the tip down.",
+    "The plant may fail to grow a bulb."
+   ],
+   "photo_cues": [
+    "whitish minute dots",
+    "irregular chlorotic areas",
+    "black velvety rings",
+    "sunken whitish flecks",
+    "purple coloured centres"
+   ],
+   "look_alikes": [
+    "onion_stemphylium_blight",
+    "onion_downy_mildew"
+   ],
+   "discriminators": [
+    {
+     "id": "q_onion_purple_blotch_onion_stemphylium_blight",
+     "question": "Do the spots have a purple centre with a yellow edge?",
+     "yes": "onion_purple_blotch",
+     "no": "onion_stemphylium_blight"
+    },
+    {
+     "id": "q_onion_stemphylium_blight_onion_purple_blotch",
+     "question": "Are the spots small, yellow to orange and long, mostly on one side of the leaf, without a purple centre?",
+     "yes": "onion_stemphylium_blight",
+     "no": "onion_purple_blotch"
+    },
+    {
+     "id": "q_onion_downy_mildew_onion_purple_blotch",
+     "question": "Are there pale, oval patches with a violet or grey furry growth in the morning dew?",
+     "yes": "onion_downy_mildew",
+     "no": "onion_purple_blotch"
+    }
+   ],
+   "favourable_conditions": "Hot and humid weather with temperatures between 21 and 30 degrees Celsius and high humidity helps the disease grow.",
+   "prevention": [
+    "Select healthy bulbs for planting.",
+    "Use resistant onion varieties.",
+    "Soak seeds in hot water at 50 degrees Celsius for 20 minutes.",
+    "Rotate your crops every 2 to 3 years with plants that do not get this disease.",
+    "Make sure your field has good drainage."
+   ],
+   "practices": [
+    "Check your field regularly for signs of the disease.",
+    "Ensure the field is well drained to prevent water buildup.",
+    "Use the recommended amounts of nitrogen and phosphorus fertilizers."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "purple blotch",
+    "downy mildew purple blotch"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Onion, Purple blotch",
+     "url": "https://web.archive.org/web/20161215004832/http://agritech.tnau.ac.in/crop_protection/onion_diseases_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/onion_diseases_7.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_stemphylium_blight",
+   "crop": "onion",
+   "name_en": "Stemphylium leaf blight",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Stemphylium cesicarium/ vesicarium [(Wallr.) E.G. Simmons]",
+   "symptoms": [
+    "Small yellow to orange spots or streaks appear on the leaves.",
+    "These spots grow into long spindle shapes.",
+    "The spots have a pinkish border around them.",
+    "The disease can cause heavy damage to the seed stalks."
+   ],
+   "photo_cues": [
+    "yellow to orange flecks",
+    "elongated spindle shaped spots",
+    "pinkish margin on spots"
+   ],
+   "look_alikes": [
+    "onion_purple_blotch"
+   ],
+   "discriminators": [
+    {
+     "id": "q_onion_purple_blotch_onion_stemphylium_blight",
+     "question": "Do the spots have a purple centre with a yellow edge?",
+     "yes": "onion_purple_blotch",
+     "no": "onion_stemphylium_blight"
+    },
+    {
+     "id": "q_onion_stemphylium_blight_onion_purple_blotch",
+     "question": "Are the spots small, yellow to orange and long, mostly on one side of the leaf, without a purple centre?",
+     "yes": "onion_stemphylium_blight",
+     "no": "onion_purple_blotch"
+    }
+   ],
+   "favourable_conditions": "Warm weather with high humidity and long periods of wet leaves for 16 hours or more help the disease grow.",
+   "prevention": [
+    "Soak onion seeds in hot water at 50 degrees Celsius for 20 minutes.",
+    "Plant resistant varieties like Welsh onion.",
+    "Rotate your crops with plants that do not get this disease.",
+    "Keep the field well drained and do not plant too close together."
+   ],
+   "practices": [
+    "Collect and burn all old crop parts left in the field.",
+    "Make sure the field has good drainage.",
+    "Reduce the number of plants in the field to lower density."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "stemphylium blight",
+    "stemphylium leaf blight",
+    "stemphylum blight",
+    "stemphylium"
+   ],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_downy_mildew",
+   "crop": "onion",
+   "name_en": "Downy mildew",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Peronospora destructor",
+   "symptoms": [
+    "Leaves start to turn a pale green color.",
+    "A cottony white growth appears on the leaves.",
+    "The leaves slowly change from pale yellow to dark brown.",
+    "Finally the infected leaves dry up and die."
+   ],
+   "photo_cues": [
+    "white downy leaf growth",
+    "pale green leaves",
+    "pale yellow leaf patches",
+    "dark brown dried leaves",
+    "pustules on leaves"
+   ],
+   "look_alikes": [
+    "onion_purple_blotch"
+   ],
+   "discriminators": [
+    {
+     "id": "q_onion_downy_mildew_onion_purple_blotch",
+     "question": "Are there pale, oval patches with a violet or grey furry growth in the morning dew?",
+     "yes": "onion_downy_mildew",
+     "no": "onion_purple_blotch"
+    }
+   ],
+   "favourable_conditions": "Warm and humid weather helps this disease grow.",
+   "prevention": [
+    "Choose healthy bulbs when you are saving seeds.",
+    "Rotate your crops by planting something else for 3 to 4 years.",
+    "Clean up and destroy all old plant parts and trash from the field.",
+    "Use varieties that are known to resist this disease.",
+    "Expose onion bulbs meant for seeds to the sun for 12 days."
+   ],
+   "practices": [
+    "Avoid planting too late in the season.",
+    "Make sure your field has good drainage.",
+    "Do not use too much fertilizer.",
+    "Avoid watering your crops too often."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "downy mildew",
+    "downy mildew purple blotch"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Onion, Downy mildew",
+     "url": "https://web.archive.org/web/20161215005147/http://agritech.tnau.ac.in/crop_protection/onion_diseases_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/onion_diseases_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_thrips",
+   "crop": "onion",
+   "name_en": "Onion thrips",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Thrips tabaci",
+   "symptoms": [
+    "You will see small white silvery patches all over the leaves.",
+    "In bad cases, the leaves start to dry out from the tip downwards.",
+    "The feeding marks show as white to silvery patches and streaks, and badly fed leaves take on a silvery look and wither.",
+    "Tiny black tar-like spots of thrips droppings can be seen on badly damaged leaves."
+   ],
+   "photo_cues": [
+    "small white silvery patches",
+    "leaves drying from tip"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Keep your fields clean and free of weeds.",
+    "Use regular hoeing to disturb the soil."
+   ],
+   "practices": [
+    "Check five leaves per plant to count the number of nymphs and adults.",
+    "Use blue sticky traps placed 15 cm above the crop canopy to monitor them.",
+    "You can make your own traps using empty tins painted blue and coated with grease or castor oil."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "thrips"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Onion, Onion Thrips",
+     "url": "https://web.archive.org/web/20190505064254/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_onion_pest&disease.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_onion_pest&disease.html"
+    },
+    {
+     "title": "TNAU Agritech Portal: Onion, Onion Thrips",
+     "url": "https://web.archive.org/web/20141215193439/http://agritech.tnau.ac.in/crop_protection/onion/onion_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/onion/onion_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_basal_rot",
+   "crop": "onion",
+   "name_en": "Basal rot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Fusarium oxysporum f. sp. cepae Schlecht",
+   "symptoms": [
+    "The leaves start to turn yellow and the plant stops growing well.",
+    "The leaves begin to dry out starting from the tip and moving downward.",
+    "Early on, the roots turn pink and eventually start to rot.",
+    "The bulb begins to rot from the bottom end.",
+    "The entire plant will die in the later stages of the disease."
+   ],
+   "photo_cues": [
+    "yellowing onion leaves",
+    "stunted plant growth",
+    "drying leaf tips",
+    "pink coloured roots",
+    "rotting bulb base"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Moist soil and a temperature of 27 degrees Celsius help the disease to grow.",
+   "prevention": [
+    "Rotate your crops every 4 to 5 years using plants that do not host this disease.",
+    "Plant tobacco or sorghum with your onions to help reduce the disease.",
+    "Use a plastic sheet to cover and heat the soil during the summer for 30 days.",
+    "Choose onion varieties that are known to resist this disease.",
+    "Be careful not to injure the plants while working in the field."
+   ],
+   "practices": [
+    "Make sure your field has good drainage to keep water from sitting.",
+    "Perform deep ploughing during the summer.",
+    "Flood the soil during the time of year when you are not growing crops."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  },
+  {
+   "id": "onion_healthy",
+   "crop": "onion",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Onion",
+     "url": "https://ppqs.gov.in/sites/default/files/onion.pdf"
+    }
+   ]
+  }
+ ]
+}

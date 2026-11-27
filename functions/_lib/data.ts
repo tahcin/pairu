@@ -12,6 +12,7 @@ export interface Data {
   // Reviewed Telugu for KB text (data/kb_te.json), keyed by disease id; empty until that file exists.
   kbTe: Map<string, Record<string, any>>;
   kbTeTag: string;
+  kbTeQuestions: Record<string, string> | null;
 }
 
 let cached: Promise<Data> | null = null;
@@ -43,7 +44,8 @@ export function getData(env: Env, request: Request): Promise<Data> {
       const src = te && (te.diseases ?? te);
       if (Array.isArray(src)) for (const x of src) x && x.id && kbTe.set(x.id, x);
       else if (src && typeof src === "object") for (const [k, v] of Object.entries(src)) if (v && typeof v === "object") kbTe.set(k, v as Record<string, any>);
-      return { kb, uses, banned, hazard, diseaseById, kbTe, kbTeTag: String(kbTe.size) };
+      const kbTeQuestions = te && te.questions && typeof te.questions === "object" ? (te.questions as Record<string, string>) : null;
+      return { kb, uses, banned, hazard, diseaseById, kbTe, kbTeTag: String(kbTe.size), kbTeQuestions };
     })();
     cached.catch(() => (cached = null));
   }

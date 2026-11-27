@@ -125,7 +125,9 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
   const banned = new Map<string, Banned>();
   for (const b of data.banned) {
     banned.set(norm(b.active), b);
-    for (const a of b.aka || []) banned.set(norm(a), b);
+    // aka is a list; guard against a plain string, which would iterate letter by letter.
+    const aka = Array.isArray(b.aka) ? b.aka : typeof b.aka === "string" ? [b.aka] : [];
+    for (const a of aka) if (a && a.length > 2) banned.set(norm(a), b);
   }
   // Optional KB fields from the government IPM (AESA) packages.
   const recommended = new Set((d.recommended_actives || []).map((r) => norm(r.active)));

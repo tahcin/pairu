@@ -77,7 +77,7 @@ export interface Banned {
   active: string;
   status: string;
   note?: string;
-  aka?: string[];
+  aka?: string[] | string;
   printed_name?: string;
   banned_on_crops?: string[];
   restricted_scope?: string;

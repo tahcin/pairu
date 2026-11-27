@@ -59,7 +59,7 @@ export function About() {
         <h2>Data behind it</h2>
         <ul>
           <li>2,804 approved uses for our 12 crops, out of 4,454 rows in the CIB&amp;RC "Major Uses of Pesticides" lists for fungicides, insecticides, bio-fungicides and bio-insecticides.</li>
-          <li>94 banned, withdrawn and restricted entries from the CIB&amp;RC list of banned, refused and restricted pesticides, applied at the moment advice is built.</li>
+          <li>94 banned, withdrawn and restricted entries from the CIB&amp;RC list of banned, refused and restricted pesticides, applied at the moment advice is built. Streptomycin + tetracycline products are also hidden: they are proposed for a ban on crop use by the Government of India (draft order S.O. 5295(E), 2021, no final notification found) and are not recommended.</li>
           <li>WHO 2019 hazard classes for 160 active ingredients. A missing class is shown as no class, never as safe.</li>
           <li>66 diseases and pests across 12 crops, each with symptoms, photo cues, prevention, practices and sources from TNAU Agritech, ICAR and DPPQS pages, plus 82 follow-up questions covering 25 look-alike pairs.</li>
         </ul>

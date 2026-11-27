@@ -23,6 +23,9 @@ export interface Diagnosis {
   questions: Question[];
   model: string;
   cached: boolean;
+  stage?: 1 | 2;
+  verified?: boolean;
+  check?: { set: string[]; answers: Record<string, string> };
 }
 export interface Treatment {
   product: string;
@@ -102,8 +105,8 @@ export const api = {
   crops: () => call<{ crops: CropInfo[]; fixture: boolean }>("/api/crops"),
   diagnose: (crop: string | null, image: string, note: string, lang: Lang) =>
     call<Diagnosis>("/api/diagnose", post({ crop, image, note, lang })),
-  resolve: (candidates: Candidate[], answers: Record<string, boolean>) =>
-    call<{ id: string | null; status: "decided" | "unsure" }>("/api/resolve", post({ candidates, answers })),
+  resolve: (candidates: Candidate[], answers: Record<string, boolean>, check?: Diagnosis["check"]) =>
+    call<{ id: string | null; status: "decided" | "unsure" }>("/api/resolve", post({ candidates, answers, check })),
   advice: (id: string, lang: Lang) => call<Advice>(`/api/advice?id=${encodeURIComponent(id)}&lang=${lang}`),
   tts: (text: string, lang: Lang) => call<{ audios: string[]; mime: string }>("/api/tts", post({ text, lang })),
   stt: (audio: Blob, lang: Lang) => {

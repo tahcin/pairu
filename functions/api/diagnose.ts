@@ -4,8 +4,9 @@ import type { Candidate, Env, Question } from "../_lib/types";
 import { translateMany } from "../_lib/sarvam";
 import { bad, isLang, json, kvGetJSON, kvPutJSON, sha256 } from "../_lib/util";
 import { buildPrompt, QUALITIES, runVision } from "../_lib/vision";
+import { DECIDE_V2, secondLook, VERIFY_MIN } from "../_lib/verify";
 
-const PROMPT_VERSION = "v1";
+const PROMPT_VERSION = "v2"; // v2: second look (functions/_lib/verify.ts) between 0.4 and 0.9
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   let body: { crop?: string | null; image?: string; note?: string; lang?: string };
@@ -57,19 +58,53 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const quality = (QUALITIES as readonly string[]).includes(out.image_quality) ? out.image_quality : "ok";
   const detected = out.crop_detected && out.crop_detected !== "other" ? out.crop_detected : null;
-  const result = {
+  const result: Record<string, unknown> & { status: string; questions: Question[]; candidates: Candidate[] } = {
     crop: crop?.id || detected,
     crop_detected: detected,
     crop_confident: Boolean(out.crop_matches),
     image_quality: quality,
     candidates: cands,
-    ...decide(cands, quality === "ok", data.diseaseById),
+    status: "unsure",
+    questions: [],
     model,
+    stage: 1,
+    verified: false,
   };
+  const top = cands[0];
+  const cropId = crop?.id || (out.crop_matches ? detected : null);
   // A different crop in the photo than the one chosen is not something to diagnose through.
-  if (crop && detected && detected !== crop.id && !out.crop_matches) {
+  const otherCrop = Boolean(crop && detected && detected !== crop.id && !out.crop_matches);
+  if (otherCrop || quality !== "ok" || !top || top.id === "unknown") {
     result.status = "unsure";
-    result.questions = [];
+  } else if (top.confidence >= DECIDE_V2) {
+    result.status = "decided";
+  } else if (top.confidence < VERIFY_MIN || !cropId) {
+    // Too unsure to check, or no crop to check against: the first-look rules apply.
+    Object.assign(result, decide(cands, true, data.diseaseById));
+    if (result.status === "decided") result.status = "unsure";
+  } else {
+    // The second look: Gemini answers our yes/no questions from the photo, code decides.
+    try {
+      const v = await secondLook(env, cropId, image, cands, data.diseaseById, kbTag);
+      if (v) {
+        Object.assign(result, {
+          status: v.status,
+          questions: v.questions,
+          candidates: v.candidates,
+          verified: v.verified,
+          check: v.check,
+          verify_model: v.verify_model,
+          stage: 2,
+        });
+      } else {
+        Object.assign(result, decide(cands, true, data.diseaseById));
+      }
+    } catch {
+      // If the second look fails, fall back to the first-look questions rather than fail the farmer.
+      Object.assign(result, decide(cands, true, data.diseaseById), { stage: 1, verify_failed: true });
+    }
+    // Below 0.9 nothing is decided without the second look agreeing.
+    if (result.stage === 1 && result.status === "decided") result.status = "unsure";
   }
   await kvPutJSON(env.PAIRU_CACHE, key, result, 30);
   return json({ ...(await localise(env, result, lang)), cached: false });

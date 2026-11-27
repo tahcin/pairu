@@ -17,6 +17,7 @@ for f in kb.json registered_uses.json banned.json hazard.json; do
 done
 grep '^GEMINI_API_KEY=' "$APP/.dev.vars" > "$DIR/.dev.vars"
 echo 'ANTHROPIC_API_KEY=disabled-for-eval' >> "$DIR/.dev.vars"
+echo 'EVAL_DEBUG=1' >> "$DIR/.dev.vars"
 chmod 600 "$DIR/.dev.vars"
 cd "$DIR"
 echo "serving from $DIR on port $PORT" >&2

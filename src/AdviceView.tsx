@@ -19,12 +19,13 @@ interface Props {
   cropName: string;
   by: "model" | "answers";
   confidence: number;
+  verified?: boolean;
   seen: number[];
   usedNote: boolean;
   onRestart: () => void;
 }
 
-export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, seen, usedNote, onRestart }: Props) {
+export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, verified = false, seen, usedNote, onRestart }: Props) {
   const L = (k: Key) => t(lang, k);
   const [weather, setWeather] = useState<Weather | null>(null);
   const [voice, setVoice] = useState<"idle" | "loading" | "playing">("idle");
@@ -72,7 +73,9 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     if (!a.healthy) tryLocation();
   }, [a.healthy]);
 
-  const sureLine = by === "answers" ? L("sureAnswers") : confidence >= 0.75 ? L("sureHigh") : L("sureLow");
+  // A second look that confirmed the answer counts as sure, whatever the first look's number was.
+  const sure = by === "answers" || verified || confidence >= 0.9;
+  const sureLine = by === "answers" ? L("sureAnswers") : sure ? L("sureHigh") : L("sureLow");
   const sprayLine = weather ? (weather.reason === "rain" ? L("sprayRain") : weather.reason === "wind" ? L("sprayWind") : L("sprayOk")) : "";
 
   const speech = useMemo(() => {
@@ -134,7 +137,7 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
     const first = a.organic[0]?.text || a.bio_products[0]?.product || a.chemicals[0]?.product || "";
     const lines = a.healthy
       ? [`${cropName}: ${L("healthyTitle")}`]
-      : [`${cropName}: ${title}`, `${sureLine}${by === "model" ? ` (${pct} / 100)` : ""}`, first ? `${L("secDo")}: ${first}` : ""];
+      : [`${cropName}: ${title}`, `${sureLine}${by === "model" && !verified ? ` (${pct} / 100)` : ""}`, first ? `${L("secDo")}: ${first}` : ""];
     lines.push(`${L("callKcc")}: ${KCC}`, location.origin);
     window.open(`https://wa.me/?text=${encodeURIComponent(lines.filter(Boolean).join("\n"))}`, "_blank", "noopener");
   };
@@ -155,9 +158,10 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
             </p>
           )}
         </div>
-        <div className={`sure ${by === "answers" || confidence >= 0.75 ? "high" : "low"}`}>
+        <div className={`sure ${sure ? "high" : "low"}`}>
           <span>{sureLine}</span>
-          {by === "model" && (
+          {verified && <span className="muted small">{L("checkedTwice")}</span>}
+          {by === "model" && !verified && (
             <span className="meter" aria-label={`${pct} / 100`}>
               <span style={{ width: `${pct}%` }} />
               <b>{pct} / 100</b>

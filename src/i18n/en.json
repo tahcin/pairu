@@ -120,5 +120,6 @@
   "useLocation": "Use my location",
   "pickDistrict": "Or choose your district in Andhra Pradesh",
   "avoidTitle": "Avoid",
-  "ipmRecommended": "Recommended in the government IPM package"
+  "ipmRecommended": "Recommended in the government IPM package",
+  "checkedTwice": "Checked twice: a second look at your photo confirmed the signs of this disease"
 }

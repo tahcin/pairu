@@ -55,7 +55,7 @@ function Farmer() {
   const [dx, setDx] = useState<Diagnosis | null>(null);
   const [qIndex, setQIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
-  const [final, setFinal] = useState<{ id: string; by: "model" | "answers"; confidence: number; seen: number[] } | null>(null);
+  const [final, setFinal] = useState<{ id: string; by: "model" | "answers"; confidence: number; seen: number[]; verified: boolean } | null>(null);
   const [advice, setAdvice] = useState<Advice | null>(null);
   const [error, setError] = useState<string | null>(null);
   const L = (k: Key) => t(lang, k);
@@ -97,7 +97,7 @@ function Farmer() {
 
   const decideWith = async (id: string, by: "model" | "answers", d: Diagnosis) => {
     const cand = d.candidates.find((c) => c.id === id);
-    setFinal({ id, by, confidence: cand?.confidence ?? 0, seen: cand?.seen_symptoms || [] });
+    setFinal({ id, by, confidence: cand?.confidence ?? 0, seen: cand?.seen_symptoms || [], verified: by === "model" && Boolean(d.verified) });
     go("advice");
   };
 
@@ -154,7 +154,7 @@ function Farmer() {
     if (!dx) return;
     go("working");
     try {
-      const r = await api.resolve(dx.candidates, next);
+      const r = await api.resolve(dx.candidates, next, dx.check);
       if (r.status === "decided" && r.id) await decideWith(r.id, "answers", dx);
       else go("unsure");
     } catch (e) {
@@ -337,6 +337,7 @@ function Farmer() {
                 cropName={cropName(advice.crop)}
                 by={final.by}
                 confidence={final.confidence}
+                verified={final.verified}
                 seen={final.seen}
                 usedNote={Boolean(note.trim())}
                 onRestart={reset}

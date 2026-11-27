@@ -4,6 +4,7 @@ export interface Env {
   GEMINI_API_KEY: string;
   SARVAM_API_KEY: string;
   ANTHROPIC_API_KEY: string;
+  EVAL_DEBUG?: string; // "1" only in the local eval server (eval/serve_local.sh); enables /api/verify
   PAIRU_CACHE: KVNamespace;
   ASSETS: Fetcher;
 }
@@ -38,8 +39,8 @@ export interface Disease {
   cibrc_targets: string[];
   sources: Source[];
   avoid?: { text: string; source?: number | Source | null; active?: string; actives?: string[] }[];
-  recommended_actives?: { active: string; source?: number | Source | null }[];
   etl?: { text: string; source?: number | Source | null } | null;
+  recommended_actives?: { active: string; source?: number | Source | null }[];
 }
 
 export interface Crop {

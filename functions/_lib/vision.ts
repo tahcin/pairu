@@ -10,6 +10,22 @@ export const LAST_RESORT = "claude-haiku-5-5";
 // A slow model call falls back to the next model instead of hanging.
 export const MODEL_TIMEOUT_MS = 12000;
 
+// Hard daily cap on the paid Claude fallback: count calls per UTC day in KV (only a number is
+// stored) and stop calling Claude after the cap, so the request falls back to "please try again".
+export const CLAUDE_DAILY_CAP = 40;
+async function claudeAllowed(env: Env): Promise<boolean> {
+  if (!env.ANTHROPIC_API_KEY || !env.PAIRU_CACHE) return false;
+  const key = `claude-calls:${new Date().toISOString().slice(0, 10)}`;
+  try {
+    const used = parseInt((await env.PAIRU_CACHE.get(key)) || "0", 10) || 0;
+    if (used >= CLAUDE_DAILY_CAP) return false;
+    await env.PAIRU_CACHE.put(key, String(used + 1), { expirationTtl: 3 * 86400 });
+    return true;
+  } catch {
+    return false; // if the counter cannot be read or written, do not spend
+  }
+}
+
 export const QUALITIES = ["ok", "blurry", "not_a_plant", "too_far"] as const;
 
 export interface VisionOut {
@@ -157,10 +173,14 @@ export async function runVision(
       errors.push(String(e));
     }
   }
-  try {
-    return { out: await callClaude(env, prompt, imageB64, ids, cropIds), model: LAST_RESORT, errors };
-  } catch (e) {
-    errors.push(String(e));
+  if (await claudeAllowed(env)) {
+    try {
+      return { out: await callClaude(env, prompt, imageB64, ids, cropIds), model: LAST_RESORT, errors };
+    } catch (e) {
+      errors.push(String(e));
+    }
+  } else {
+    errors.push("claude daily cap reached");
   }
   throw new Error(errors.join(" | "));
 }

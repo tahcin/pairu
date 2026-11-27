@@ -27,7 +27,7 @@ export function symptomList(data: Data, crop: string): SymptomItem[] {
   return out.sort((a, b) => Number(a.key.split(":")[1]) - Number(b.key.split(":")[1]));
 }
 
-const STOP = new Set("the a an and or of on in to with is are be it its this that these those they them their at by from as for into when then than which who has have had not no can may will you your very more most some any all leaf leaves plant plants".split(" "));
+const STOP = new Set("the a an and or of on in to with is are be it its this that these those they them their at by from as for into when then than which who has have had not no can may will you your very more most some any all leaf leaves plant plants look like see grow turn start become may also there".split(" "));
 const words = (s: string) =>
   new Set(
     s

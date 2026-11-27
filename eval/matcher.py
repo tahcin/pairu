@@ -7,9 +7,11 @@ potato. Crop naming is recorded separately.
 
 Rules, in order:
   1. Lowercase, normalise spelling (grey/gray, mould/mold, hyphens).
-  2. Find every synonym of every candidate id in the text. The match that starts earliest wins
-     (the model names its main answer first); ties go to the longer synonym.
-  3. No disease match: "healthy" style wording maps to <crop>_healthy; refusal wording
+  2. The first bold phrase (**...**) that names a disease or says healthy wins, because the
+     model bolds its answer and discusses look-alikes around it.
+  3. Otherwise find every synonym of every candidate id in the text. The match that starts
+     earliest wins (the model names its main answer first); ties go to the longer synonym.
+  4. No disease match: "healthy" style wording maps to <crop>_healthy; refusal wording
      ("cannot determine", "not sure") maps to "refused"; anything else is "unmatched" and logged.
 
 Synonyms below were written before the model run, from the dataset class names, the KB names
@@ -90,17 +92,31 @@ def candidates_for(kb: dict, crop: str) -> dict[str, list[str]]:
     return c
 
 
+def _best(t: str, cands: dict[str, list[str]]):
+    best = None
+    for did, syns in cands.items():
+        for s in syns:
+            m = re.search(r"(?<![a-z])" + re.escape(s) + r"(?:e?s)?(?![a-z])", t)
+            if m and (best is None or (m.start(), -len(s)) < (best[0], -len(best[2]))):
+                best = (m.start(), did, s)
+    return best
+
+
 def match(text: str | None, crop: str, kb: dict) -> dict:
     if not text:
         return {"id": None, "how": "no_text"}
     t = norm(text)
-    best = None
-    for did, syns in candidates_for(kb, crop).items():
-        for s in syns:
-            m = re.search(r"(?<![a-z])" + re.escape(s) + r"(?![a-z])", t)
-            if m and (best is None or (m.start(), -len(s)) < (best[0], -len(best[2]))):
-                best = (m.start(), did, s)
+    cands = candidates_for(kb, crop)
     crops_named = [c for c, pats in CROP_WORDS.items() if any(re.search(p, t) for p in pats)]
+    # The model marks its answer in bold (**Early Blight**) and often mentions look-alikes in the
+    # surrounding prose, so the first bold phrase that names a disease (or says healthy) wins.
+    for seg in re.findall(r"\*\*(.+?)\*\*", t):
+        b = _best(seg, cands)
+        if b:
+            return {"id": b[1], "how": f"bold:{b[2]}", "crops_named": crops_named}
+        if any(re.search(p, seg) for p in HEALTHY):
+            return {"id": f"{crop}_healthy", "how": "bold:healthy", "crops_named": crops_named}
+    best = _best(t, cands)
     if best:
         return {"id": best[1], "how": f"synonym:{best[2]}", "crops_named": crops_named}
     if any(re.search(p, t) for p in HEALTHY):

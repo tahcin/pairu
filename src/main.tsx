@@ -6,9 +6,9 @@ import "./tokens.css";
 import "./styles.css";
 
 // Load the saved language's strings before the first paint, so no English flashes up.
-let saved: string | null = null;
+let saved: string | null = new URLSearchParams(location.search).get("lang");
 try {
-  saved = localStorage.getItem("pairu.lang");
+  saved = saved || localStorage.getItem("pairu.lang");
 } catch {
   // Storage blocked: Telugu by default.
 }

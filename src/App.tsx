@@ -15,6 +15,26 @@ const AdviceView = lazy(() => loadAdvice().then((m) => ({ default: m.AdviceView 
 const About = lazy(() => import("./pages/About").then((m) => ({ default: m.About })));
 const Evidence = lazy(() => import("./pages/Evidence").then((m) => ({ default: m.Evidence })));
 const Compare = lazy(() => import("./pages/Compare").then((m) => ({ default: m.Compare })));
+const Landing = lazy(() => import("./pages/Landing").then((m) => ({ default: m.Landing })));
+
+// A wide desktop window opening "/" sees the landing page for judges; phones, narrow windows
+// (including Chrome's device mode) and the app inside the landing's phone frame open the app as
+// before. /home shows the landing on any device, and /app opens the app at any width.
+const LANDING_MIN_WIDTH = 900;
+function landingAtRoot(): boolean {
+  try {
+    return window.self === window.top && window.innerWidth >= LANDING_MIN_WIDTH;
+  } catch {
+    return false;
+  }
+}
+
+// ?lang=te opens straight on the crop screen in that language without remembering it (used by
+// the phone frame on the landing page).
+export function urlLang(): Lang | null {
+  const l = new URLSearchParams(location.search).get("lang");
+  return l && LANGUAGES.some((x) => x.code === l) ? (l as Lang) : null;
+}
 
 export const KCC = "1800-180-1551";
 const CROP_ORDER = ["paddy", "chilli", "cotton", "groundnut", "maize", "blackgram", "tomato", "brinjal", "banana", "mango", "cashew", "onion", "potato"];
@@ -46,13 +66,15 @@ export default function App() {
     window.addEventListener("popstate", on);
     return () => window.removeEventListener("popstate", on);
   }, []);
-  const page = path.startsWith("/about") ? <About /> : path.startsWith("/evidence") ? <Evidence /> : path.startsWith("/compare") ? <Compare /> : null;
+  const [rootLanding] = useState(() => location.pathname === "/" && landingAtRoot());
+  const landing = path.startsWith("/home") || (path === "/" && rootLanding);
+  const page = landing ? <Landing /> : path.startsWith("/about") ? <About /> : path.startsWith("/evidence") ? <Evidence /> : path.startsWith("/compare") ? <Compare /> : null;
   if (page) return <Suspense fallback={<div className="app" />}>{page}</Suspense>;
   return <Farmer />;
 }
 
 function Farmer() {
-  const saved = store("pairu.lang") as Lang | null;
+  const saved = urlLang() || (store("pairu.lang") as Lang | null);
   const [lang, setLang] = useState<Lang>(saved && LANGUAGES.some((l) => l.code === saved) ? saved : "te");
   const [step, setStep] = useState<Step>(saved ? "crop" : "lang");
   const [crops, setCrops] = useState<CropInfo[]>([]);

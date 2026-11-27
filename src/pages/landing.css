@@ -1,0 +1,249 @@
+/* Landing page for judges. Same tokens as the app: warm paper, field green, Geist and Noto. */
+
+.landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--s7);
+  min-height: 100dvh;
+  animation: fade var(--t-slow) var(--ease) both;
+}
+.l-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s5);
+  height: 72px;
+}
+.l-nav {
+  display: flex;
+  gap: var(--s6);
+  font-size: var(--fs-sm);
+}
+.l-nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.l-nav a:hover {
+  color: var(--ink);
+}
+.l-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s8);
+  min-height: calc(100dvh - 72px - 24px);
+  padding: var(--s3) 0 var(--s6);
+}
+.l-copy {
+  max-width: 560px;
+}
+.l-copy h1 {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: baseline;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+.l-copy h1 span {
+  font-size: 40px;
+  font-weight: var(--fw-semi);
+  letter-spacing: 0;
+  color: var(--leaf);
+}
+.l-line {
+  margin: var(--s5) 0 0;
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: var(--fw-semi);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.l-sentence {
+  margin: var(--s5) 0 0;
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.l-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: var(--s7);
+}
+.l-actions .btn {
+  min-height: 56px;
+  padding: 0 var(--s6);
+}
+.l-actions .btn.primary:hover {
+  background: var(--leaf-press);
+}
+.l-actions .btn.ghost:hover {
+  border-color: var(--ink-3);
+}
+.l-hint {
+  margin: var(--s4) 0 0;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+
+/* The phone: a drawn frame around the live app. The iframe keeps a real 390 x 844 layout and is
+   scaled to fit the window. */
+.l-phone-wrap {
+  flex: none;
+}
+.l-phone {
+  height: 100%;
+  padding: 12px;
+  border-radius: 52px;
+  background: var(--ink);
+  box-shadow: 0 0 0 1px #3a4535 inset;
+}
+.l-screen {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.l-screen iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  transform-origin: 0 0;
+  background: var(--paper);
+}
+.l-screen-wait {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  animation: breathe 1.6s ease-in-out infinite;
+}
+
+.l-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s4);
+  padding-top: var(--s7);
+  border-top: 1px solid var(--line);
+}
+.l-stat p {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.l-stat .l-num {
+  margin-bottom: var(--s2);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.03em;
+  color: var(--leaf-deep);
+  font-variant-numeric: tabular-nums;
+}
+.l-num span {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semi);
+  letter-spacing: -0.01em;
+  color: var(--ink-3);
+}
+.l-small {
+  margin: var(--s5) 0 0;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.l-compare {
+  margin-top: var(--s7);
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+  padding: var(--s5) var(--s6);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color var(--t-fast) var(--ease);
+}
+.l-compare:hover {
+  border-color: var(--line-strong);
+}
+.l-compare > span {
+  flex: 1;
+  display: grid;
+  gap: var(--s1);
+}
+.l-compare strong {
+  font-size: var(--fs-lg);
+}
+.l-compare > span > span {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+}
+.l-compare svg {
+  flex: none;
+  color: var(--leaf);
+}
+.l-foot {
+  margin-top: var(--s8);
+  padding: var(--s5) 0 var(--s7);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s6);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.l-foot a {
+  color: var(--ink-2);
+}
+
+/* /home on a phone or a narrow window: stack, and leave the live app to "Open the app". */
+@media (max-width: 899px) {
+  .landing {
+    padding: 0 var(--gutter);
+  }
+  .l-nav {
+    display: none;
+  }
+  .l-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: var(--s5) 0 var(--s7);
+  }
+  .l-phone-wrap {
+    display: none;
+  }
+  .l-hint {
+    display: none;
+  }
+  .l-copy h1 {
+    font-size: 44px;
+  }
+  .l-copy h1 span {
+    font-size: 30px;
+  }
+  .l-line {
+    font-size: 22px;
+  }
+  .l-actions .btn {
+    flex: 1 1 100%;
+  }
+  .l-proof {
+    grid-template-columns: 1fr;
+    gap: var(--s5);
+  }
+  .l-compare {
+    padding: var(--s4);
+  }
+}

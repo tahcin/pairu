@@ -1,11 +1,14 @@
 // Model order and quota handling shared by the first look (vision.ts) and the second look (verify.ts).
-// Order: gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemma-4-31b-it (short timeout, it often
-// answers 503), then Claude in vision.ts only, behind its daily cap. A model that answers 429
+// First look: gemini-3.1-flash-lite, gemini-3.5-flash-lite, gemma-4-31b-it (short timeout, it often
+// answers 503), then Claude in vision.ts only, behind its daily cap. Second look: 3.5, 3.1, Gemma.
+// This is the configuration all published accuracy numbers were measured with. A model that answers 429
 // RESOURCE_EXHAUSTED is skipped for the rest of the UTC day through a KV flag, so later requests
 // do not wait on it.
 import type { Env } from "./types";
 
-export const MODEL_ORDER = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemma-4-31b-it"] as const;
+export const FIRST_LOOK_ORDER = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite", "gemma-4-31b-it"] as const;
+export const SECOND_LOOK_ORDER = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemma-4-31b-it"] as const;
+export const MODEL_ORDER = FIRST_LOOK_ORDER;
 const TIMEOUT: Record<string, number> = { "gemma-4-31b-it": 10000 };
 const DEFAULT_TIMEOUT = 12000;
 
@@ -69,9 +72,13 @@ export async function generateJson<T>(env: Env, model: string, prompt: string, i
 }
 
 // Try each model in order, skipping those flagged as exhausted today.
-export async function firstThatWorks<T>(env: Env, call: (model: string) => Promise<T>): Promise<{ value: T; model: string; errors: string[] }> {
+export async function firstThatWorks<T>(
+  env: Env,
+  call: (model: string) => Promise<T>,
+  order: readonly string[] = FIRST_LOOK_ORDER,
+): Promise<{ value: T; model: string; errors: string[] }> {
   const errors: string[] = [];
-  for (const model of MODEL_ORDER) {
+  for (const model of order) {
     if (await isSkipped(env, model)) {
       errors.push(`${model} skipped (quota)`);
       continue;

@@ -26,8 +26,9 @@ export function About() {
             by voice in their own language. The photo is shrunk to at most 1024 pixels on the phone.
           </li>
           <li>
-            <strong>A closed list.</strong> A vision model sees the photo for the first look: Gemini 3.5 Flash Lite or Gemini 3.1 Flash Lite,
-            with Gemma 4 and then Claude Haiku (at most 40 calls a day) as fallbacks. It sees the photo with the list of problems we hold for that crop and must answer in strict JSON, choosing only ids from that
+            <strong>A closed list.</strong> A vision model sees the photo for the first look: Gemini 3.1 Flash Lite, falling back to Gemini 3.5
+            Flash Lite, then Gemma 4, then Claude Haiku (at most 40 calls a day). The second look uses Gemini 3.5 Flash Lite first. This is the
+            setup our published accuracy numbers were measured with. It sees the photo with the list of problems we hold for that crop and must answer in strict JSON, choosing only ids from that
             list, a healthy option or "unknown". It also says whether the photo is sharp and whether it shows the crop the farmer chose.
           </li>
           <li>

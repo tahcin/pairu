@@ -91,11 +91,12 @@ function systemBlocks(r: Results): { title: string; note?: string; rows: Row[] }
   add("Lab photos (one leaf, plain background)", r.by_photo_type_lab);
   add("Field photos", r.by_photo_type_field);
   add("Held-out half: photos not used while building v2", r.held_out_half_in_list);
+  add("Held-out half, diseased leaves only", r.held_out_half_diseased_only);
   add("All photos of diseases Pairu holds", r.all_in_list);
   add("Diseased leaves only", r.all_in_list_diseased_only);
   add("Diseases Pairu does not hold (right answer is not sure)", r.out_of_list);
   for (const [k, v] of Object.entries(r)) {
-    if (["headline", "diseased_leaves_only", "by_photo_type_lab", "by_photo_type_field", "rows", "per_class", "held_out_half_in_list", "all_in_list", "all_in_list_diseased_only", "out_of_list", "v2"].includes(k)) continue;
+    if (["headline", "diseased_leaves_only", "by_photo_type_lab", "by_photo_type_field", "rows", "per_class", "held_out_half_in_list", "held_out_half_diseased_only", "all_in_list", "all_in_list_diseased_only", "out_of_list", "v2"].includes(k)) continue;
     if (isRows(v) || (v && typeof v === "object" && isRows((v as Row).rows))) add(k.replace(/_/g, " "), v);
   }
   return out;
@@ -209,6 +210,14 @@ export function Evidence() {
       ? Object.entries(versions).map(([name, r]) => ({ name, r }))
       : [
           ...(data.v2 && typeof data.v2 === "object" ? [{ name: "Current version (v2): a second look before deciding", r: data.v2 as Results }] : []),
+          ...(data.live_model_order_3_5_flash_lite_first && typeof data.live_model_order_3_5_flash_lite_first === "object"
+            ? [
+                {
+                  name: "If the first model's quota runs out (both looks on Gemini 3.5 Flash Lite)",
+                  r: data.live_model_order_3_5_flash_lite_first as Results,
+                },
+              ]
+            : []),
           { name: data.v2 ? "First version (v1) against the bare model" : "", r: data },
         ]
     : [];

@@ -1,10 +1,10 @@
 // Vision step: show the model the photo and the closed list of diseases we hold for the crop, and
 // get back strict JSON. Gemini free tier first (two models), Claude Haiku only as a last resort.
 import Anthropic from "@anthropic-ai/sdk";
-import { MODEL_ORDER, firstThatWorks, generateJson } from "./models";
+import { FIRST_LOOK_ORDER as MODEL_ORDER, firstThatWorks, generateJson } from "./models";
 import type { Crop, Disease, Env } from "./types";
 
-// Model order lives in models.ts: gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemma-4-31b-it.
+// Model order lives in models.ts: gemini-3.1-flash-lite, gemini-3.5-flash-lite, gemma-4-31b-it.
 export const PRIMARY = MODEL_ORDER[0];
 export const SECONDARY = MODEL_ORDER[1];
 export const LAST_RESORT = "claude-haiku-5-5";

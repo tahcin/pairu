@@ -6,7 +6,7 @@
 // cannot settle go to the farmer. No Claude here: Gemini only.
 import type { Candidate, Disease, Env, Question } from "./types";
 import { kvGetJSON, kvPutJSON, sha256 } from "./util";
-import { MODEL_ORDER, firstThatWorks, generateJson } from "./models";
+import { SECOND_LOOK_ORDER as MODEL_ORDER, firstThatWorks, generateJson } from "./models";
 
 export const DECIDE_V2 = 0.9;   // first look decides on its own at or above this (chosen on half the test set)
 export const VERIFY_MIN = 0.4;  // below this the first look is too unsure to check; we say so
@@ -194,7 +194,7 @@ export async function runCheck(env: Env, crop: string, imageB64: string, questio
   const prompt = verifyPrompt(crop, questions);
   const ids = questions.map((q) => q.id);
   // Same order and quota handling as the first look (models.ts).
-  const r = await firstThatWorks(env, (model) => callGemini(env, model, prompt, imageB64, ids));
+  const r = await firstThatWorks(env, (model) => callGemini(env, model, prompt, imageB64, ids), MODEL_ORDER);
   return { answers: r.value, model: r.model };
 }
 

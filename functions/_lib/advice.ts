@@ -340,14 +340,19 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
   // any "read the label" row, so an unchecked row reaches the top three only when there are not
   // three checked ones.
   const checked = (t: Treatment) => ["inferred", "printed", "per_litre", "bio_unit_from_code"].includes(t.dose_status) && !t.dose_conflict;
+  // Order: single actives before ready-mixes where mixtures are advised against; then actives the
+  // government IPM package recommends for this problem; then rows on a checked dose path;
+  // sprays before granules; safer (not highly hazardous or restricted) before flagged; then a
+  // per-acre dose, lower WHO class and a known waiting period. Diversity of actives is applied after.
   const key = (t: Treatment) => [
     Number(t.avoid),
+    // Where the package advises against mixtures, a ready-mix never outranks a single active, even
+    // one with a recommended active, so the card never contradicts its own "avoid" box.
     Number(noMix && t.mixture),
+    Number(!t.ipm_recommended),
     Number(!checked(t)),
-    // Granules (broadcast) after sprays.
     Number(isGranule(t.product)),
     Number(t.highly_hazardous || t.restricted !== null),
-    Number(!t.ipm_recommended),
     Number(!t.dose_per_acre),
     who(t),
     Number(t.waiting_days == null),

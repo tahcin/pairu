@@ -59,7 +59,8 @@ def te_source(key):
     return {"title": f"Vikaspedia Telugu: {title}", "url": u}
 
 def clean(s):
-    s = re.sub(r"1 x 108", "1 x 10^8", s)
+    s = re.sub(r"(\d) ?x ?108\b", r"\1 x 10^8", s)
+    s = re.sub(r"@ ?108 cfu", "@ 10^8 cfu", s)
     s = s.replace("—", ", ").replace("–", "-").replace(" ,", ",").strip()
     return re.sub(r"\s+", " ", s)
 

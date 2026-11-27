@@ -1,0 +1,65 @@
+{
+ "pathogen": "Fusarium oxysporum f.sp. cubense",
+ "symptoms": [
+  "The lower leaves start to turn a light yellow color, especially around the edges.",
+  "These leaves eventually turn bright yellow and dry out.",
+  "The leaves may break near the base and hang down around the stem.",
+  "The base of the stem splits open.",
+  "Inside the roots and stem, you will see red or brown streaks."
+ ],
+ "photo_cues": [
+  "yellowing lower leaves",
+  "dried leaf margins",
+  "split stem base",
+  "reddish brown internal streaks",
+  "circular discolouration pattern"
+ ],
+ "favourable_conditions": "The disease builds up when you grow bananas in the same field over and over again.",
+ "prevention": [
+  "Rotate your banana crops with paddy or sugarcane.",
+  "Plant varieties that are resistant to the wilt.",
+  "Always select healthy suckers for planting.",
+  "Make sure your field has good drainage, especially when it rains.",
+  "Do not wear footwear on your farm that has been in contact with other banana plants or soil."
+ ],
+ "practices": [
+  "Remove and destroy any plant parts that are infested after you harvest.",
+  "If you find only a few infected plants, kill and chop them up.",
+  "Stew the chopped material in water at 70 degrees Celsius for 30 minutes.",
+  "Clean your machinery and tools with a sanitary solution.",
+  "Use mechanical barriers around infected plants to stop the spread."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pseudomonas fluorescens @ 2.5kg/ha",
+   "page": 0
+  },
+  {
+   "text": "About 60 mg of Pseudomonas fluorescens (in a capsule) can be applied in a 10 cm deep hole made in the corm.",
+   "page": 0
+  },
+  {
+   "text": "Trichoderma viride @ 25 g for 4 times once at the time of planting in the planting pit and remaining doses at third, fifth and seventh month after planting",
+   "page": 0
+  },
+  {
+   "text": "T.harzianum Th-10, as dried banana leaf formulation @ 10g/platn in basal + top dressing on 2,4,and 6 months after planting",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "Carbofuran",
+  "Propiconozole",
+  "Mancozeb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "banana_diseases_crop_prot_crop_20diseases_fruits_banana_7.txt",
+  "aesa:banana"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

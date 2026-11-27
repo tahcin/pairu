@@ -1,0 +1,49 @@
+{
+ "pathogen": "Epilachna vigintioctopunctata",
+ "symptoms": [
+  "The insects scrape the green parts from the leaf surface.",
+  "This feeding creates a pattern that looks like a ladder or a window.",
+  "These windows eventually dry up and fall out, leaving holes in the leaves.",
+  "In bad cases, the leaves become skeletonized and look like thin paper."
+ ],
+ "photo_cues": [
+  "yellow spindle shaped eggs",
+  "yellowish grub with spines",
+  "hemispherical beetle with spots",
+  "ladder like leaf windows",
+  "skeletonized papery leaves"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Pick off the insects by hand and destroy them.",
+  "Conserve natural enemies like wasps and bugs in your field.",
+  "Plant insectary plants like marigold or carrot to support natural enemies."
+ ],
+ "practices": [
+  "Check your plants regularly for insects and eggs.",
+  "Collect damaged leaves that have grubs or egg masses and destroy them.",
+  "Shake the plants to knock the grubs, pupae, and adults onto the ground and destroy them."
+ ],
+ "organic_bio": [
+  {
+   "text": "NSKE 5%",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Carbaryl",
+  "cypermethrin",
+  "quinalphos",
+  "triazophos",
+  "deltamethrin"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "brinjal_brinjal_4.txt",
+  "aesa:brinjal"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

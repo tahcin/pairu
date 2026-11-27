@@ -1,0 +1,66 @@
+{
+ "pathogen": "Mungbean Yellow Mosaic Virus",
+ "symptoms": [
+  "Small yellow spots appear on young leaves at first.",
+  "New leaves show a mix of yellow and green patches.",
+  "The yellow spots grow larger over time.",
+  "Some leaves may turn completely yellow.",
+  "Infected leaves can show dead brown areas.",
+  "Plants stay small, grow slowly, and have few flowers or pods."
+ ],
+ "photo_cues": [
+  "scattered yellow spots",
+  "irregular yellow green patches",
+  "completely yellow leaves",
+  "stunted plant growth",
+  "yellow pods"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Use varieties that are known to be resistant or tolerant to the disease.",
+  "Always plant healthy, certified seeds that are free from weeds.",
+  "Remove and destroy any plants that act as alternate hosts for the virus.",
+  "Rotate your crops with cereals, cucurbits, or cruciferous vegetables.",
+  "Plant a barrier of four rows of sorghum, maize, or bajra around your field."
+ ],
+ "practices": [
+  "Regularly monitor your field for signs of the disease.",
+  "Practice good field sanitation by removing and destroying affected plant parts.",
+  "Keep the field clean and free of weeds.",
+  "Follow general cultural practices to keep the crop healthy."
+ ],
+ "organic_bio": [
+  {
+   "text": "Trichoderma viride 1% WP @ 4g per Kg seeds",
+   "page": 1
+  },
+  {
+   "text": "Trichoderma spp. (8-10 g/Kg seed)",
+   "page": 1
+  },
+  {
+   "text": "Trichoderma viride/harzianum and Pseudomonas fluorescens as seed/seedling/planting material treatment",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Phorate",
+  "penconazole",
+  "chlorantraniliprole",
+  "lufenuron",
+  "methyl parathion",
+  "monocrotophos",
+  "phenthoate",
+  "thiodicarb",
+  "flubendiamide"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "black_gram_disease_yellow_mosaic.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

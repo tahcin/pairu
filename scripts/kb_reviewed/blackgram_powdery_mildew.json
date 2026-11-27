@@ -1,0 +1,60 @@
+{
+ "pathogen": "Erysiphe polygoni",
+ "symptoms": [
+  "White powdery spots appear on leaves and green parts.",
+  "These spots grow larger and turn into circles.",
+  "The white powder eventually covers both sides of the leaves.",
+  "Leaves turn yellow and fall off early when the disease is bad.",
+  "The plant may stop growing and mature too early, which lowers your yield."
+ ],
+ "photo_cues": [
+  "white powdery patches",
+  "circular white spots",
+  "yellowing leaves",
+  "whitish powdery growth"
+ ],
+ "favourable_conditions": "Cool weather with high humidity helps the disease grow.",
+ "prevention": [
+  "Use the bower system to keep space between plants.",
+  "Remove weeds and destroy plants that can carry the disease.",
+  "Rotate your crops with plants that do not get this disease."
+ ],
+ "practices": [
+  "Check your fields often for signs of the disease.",
+  "Remove and destroy parts of the plant that look sick.",
+  "Spray recommended natural extracts as soon as you see the first signs."
+ ],
+ "organic_bio": [
+  {
+   "text": "NSKE 5%",
+   "page": 0
+  },
+  {
+   "text": "Neem oil 3%",
+   "page": 0
+  },
+  {
+   "text": "Eucalyptus leaf extract 10%",
+   "page": 0
+  },
+  {
+   "text": "Trichoderma",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "wettable sulphur",
+  "Propiconazole",
+  "penconazole"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "black_gram_disease_powdery_mildew.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

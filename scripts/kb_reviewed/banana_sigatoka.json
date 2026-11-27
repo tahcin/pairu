@@ -1,0 +1,58 @@
+{
+ "pathogen": "Mycospharella musicola",
+ "symptoms": [
+  "You will see pale yellow or green streaks on the top of the leaves.",
+  "These streaks turn into brown spots that are shaped like an oval.",
+  "The middle of the spots turns light grey with a yellow ring around them.",
+  "The spots join together to create large patches of dry, dead leaf tissue.",
+  "The leaves dry out quickly and fall off the plant.",
+  "The fruit may stay small and thin even if the inside starts to ripen."
+ ],
+ "photo_cues": [
+  "pale yellow leaf streaks",
+  "elliptical brown leaf spots",
+  "grey center leaf spots",
+  "yellow halo on leaves",
+  "large irregular dried patches",
+  "undersized angular fruit"
+ ],
+ "favourable_conditions": "The disease spreads easily in poor, badly drained soils, shady areas, and during frequent irrigation.",
+ "prevention": [
+  "Choose varieties that are known to be tolerant to this disease.",
+  "Do not plant your banana trees too close together.",
+  "Keep your field clean by removing weeds and grass.",
+  "Make sure your field has good drainage to stop water from sitting.",
+  "Use only healthy suckers that are free from disease for planting."
+ ],
+ "practices": [
+  "Walk through your field regularly to check for early signs of the disease.",
+  "Cut off and destroy any leaves that show signs of the disease.",
+  "Remove extra suckers from the plant in a timely manner.",
+  "Keep the area around the plants free of weeds."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Bordeaux mixture",
+  "linseed oil",
+  "Copper oxychloride",
+  "zineb",
+  "gas oil",
+  "mobile oil",
+  "white oil",
+  "Carbendazim",
+  "Propicanozole",
+  "Mancozeb",
+  "Calixin",
+  "teepol",
+  "Propiconazole"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "banana_diseases_crop_prot_crop_20diseases_fruits_banana_8.txt",
+  "aesa:banana"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

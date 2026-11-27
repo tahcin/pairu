@@ -1,0 +1,40 @@
+{
+ "pathogen": "Oidium mangiferae / Acrosporum mangiferae",
+ "symptoms": [
+  "You will see a white powdery fungal growth on leaves, flowers, and young fruits.",
+  "Young leaves may show patches that turn purplish brown.",
+  "Infected flowers and fruits often drop off the tree before they grow.",
+  "The disease can prevent fruits from setting on the tree."
+ ],
+ "photo_cues": [
+  "white powdery fungal growth",
+  "purplish brown leaf patches",
+  "white coating on flowers",
+  "shriveled young fruits"
+ ],
+ "favourable_conditions": "Rains or mists along with cooler nights during the flowering stage help the disease spread.",
+ "prevention": [
+  "Monitor your trees regularly for signs of the disease.",
+  "Check the health of your trees during the flowering season."
+ ],
+ "practices": [
+  "Remove and destroy the parts of the plant that show signs of infection.",
+  "Keep a close watch on your trees to catch the disease early."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "sulphur",
+  "Carbendazim",
+  "Tridemorph",
+  "Karathane"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "mango_2.txt",
+  "aesa:mango"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

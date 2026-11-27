@@ -1,0 +1,43 @@
+{
+ "pathogen": "Cercospora canescens",
+ "symptoms": [
+  "You will see many small spots on the leaves.",
+  "The spots have a pale brown center with a reddish brown border.",
+  "Similar spots can appear on the plant branches and pods.",
+  "Severe cases cause the leaves to fall off the plant.",
+  "On pods, the spots start as small water-soaked marks that grow larger.",
+  "These pod spots eventually become light brown, sunken, and rough."
+ ],
+ "photo_cues": [
+  "Small pale brown spots",
+  "Reddish brown leaf margins",
+  "Sunken rough scabby surface",
+  "Water soaked circular spots",
+  "Yellowish halo around spots"
+ ],
+ "favourable_conditions": "High humidity, moist weather, and heavy rainstorms help the disease spread.",
+ "prevention": [
+  "Plant your crop early as soon as the monsoon starts.",
+  "Use a bower system to keep the plants off the ground.",
+  "Make sure your field has good drainage to keep the soil from getting too wet."
+ ],
+ "practices": [
+  "Check your fields regularly for signs of the disease.",
+  "Remove and destroy any plant parts that look sick.",
+  "Keep the field clean to stop the disease from spreading."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Carbendazim",
+  "Mancozeb"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "black_gram_disease_cercosporal_leaf_spot.txt",
+  "aesa:blackgram_greengram"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

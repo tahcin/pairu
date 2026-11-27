@@ -18,7 +18,7 @@ REV = os.path.join(HERE, "kb_reviewed")
 os.makedirs(REV, exist_ok=True)
 BIO = re.compile(r"pseudomonas|trichoderma|bacillus|beauveria|metarhizium|verticillium|lecanicillium|npv|neem|azadirachtin|"
                  r"trichogramma|chrysoperla|pheromone|parasitoid|\bbt\b|b\. ?t\.|garlic|botanical|nsk|cake|bio-?agent|"
-                 r"ampelomyces|extract|cow ?dung|\bfym\b|manure|nomuraea|predator|light trap|sticky trap|yellow trap|fish oil rosin|tobacco decoction|ash", re.I)
+                 r"ampelomyces|harzianum|fluorescens|viride|cosmolure|lure|extract|cow ?dung|\bfym\b|manure|nomuraea|predator|light trap|sticky trap|yellow trap|fish oil rosin|tobacco decoction|ash", re.I)
 
 def page_text(f, plan_d):
     if f.startswith("extra:"):

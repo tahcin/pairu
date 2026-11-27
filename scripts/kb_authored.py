@@ -54,7 +54,7 @@ PAIRS = [
  ("mango_sooty_mould", "mango_powdery_mildew", "Is the coating black like soot, and does it peel off the leaf when you rub it?"),
  ("blackgram_yellow_mosaic", "blackgram_leaf_crinkle", "Are there bright yellow and green patches mixed on the leaves?"),
  ("blackgram_leaf_crinkle", "blackgram_yellow_mosaic", "Are the leaves larger than normal, thick, crinkled and puckered, without yellow patches?"),
- ("blackgram_cercospora_leaf_spot", "blackgram_rust", "Are the spots flat and round with a grey centre and a reddish brown edge?"),
+ ("blackgram_cercospora_leaf_spot", "blackgram_rust", "Are the spots flat, with a pale brown centre and a reddish brown border, and no raised bumps?"),
  ("blackgram_rust", "blackgram_cercospora_leaf_spot", "Are there raised reddish brown pustules on the underside that leave powder when rubbed?"),
  ("potato_early_blight", "potato_late_blight", "Do the brown spots have rings inside them like a target, starting on the older leaves?"),
  ("potato_late_blight", "potato_early_blight", "Are there dark water-soaked patches that spread fast, with white growth on the underside in damp weather?"),
@@ -132,6 +132,14 @@ FIXES = {
    "organic_bio": [], "_used_pages": [0]}},
  "maize_fall_armyworm": {"set": {"favourable_conditions": ""},
    "drop_bio": ["Dipel"]},
+ "mango_powdery_mildew": {"set": {"prevention": [
+   "Use resistant or tolerant varieties where you can.",
+   "Give the orchard proper irrigation and drainage, as the AESA mango package advises for all its diseases.",
+   "Watch the trees closely at flowering time, because rain or mist with cool nights then helps the disease spread."]}},
+ "blackgram_rust": {"drop": [("symptoms", "pale brown center"), ("symptoms", "small, round spots"),
+   ("photo_cues", "pale brown spot centers"), ("photo_cues", "reddish brown spot margins")]},
+ "blackgram_cercospora_leaf_spot": {"drop": [("prevention", "bower")]},
+ "blackgram_powdery_mildew": {"drop": [("prevention", "bower")], "drop_bio": ["Trichoderma"]},
  "paddy_blast": {"drop_bio": ["5-10 g/ha of seed"], "drop": [("practices", "crop rotation")]},
 }
 

@@ -1,0 +1,45 @@
+{
+ "pathogen": "Banana bunchy top virus",
+ "symptoms": [
+  "Dark green streaks appear on the veins of the lower leaf and stem.",
+  "New leaves are narrow, wavy, and struggle to grow.",
+  "Leaves have yellow edges and bunch together at the top of the plant.",
+  "Plants often fail to produce fruit.",
+  "If fruit grows, the hands and fingers are twisted and distorted.",
+  "Dark brown patches may appear on young fruit."
+ ],
+ "photo_cues": [
+  "dark green leaf streaks",
+  "narrow hook-like extensions",
+  "yellow chlorotic leaf margins",
+  "bunched top leaves",
+  "distorted twisted fruit"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Always use planting materials that are free from the virus.",
+  "Keep your field clean and free of weeds to help spot infected suckers early.",
+  "Do not grow bananas near sugarcane or cucurbit crops to prevent virus spread."
+ ],
+ "practices": [
+  "Remove and destroy all infected banana plants immediately.",
+  "Chop up, dry, and bury the infected plants.",
+  "Monitor the field regularly for signs of the disease."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Fernoxone",
+  "monocrotophos",
+  "phosphomidon",
+  "Methyldemeton"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "banana_diseases_crop_prot_crop_20diseases_fruits_banana_3.txt",
+  "aesa:banana"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

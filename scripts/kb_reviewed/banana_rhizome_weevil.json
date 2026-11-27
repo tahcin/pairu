@@ -1,0 +1,60 @@
+{
+ "pathogen": "Cosmopolites sordidus",
+ "symptoms": [
+  "The plant may die because grubs bore into the rhizome.",
+  "You will see dark tunnels inside the rhizomes.",
+  "The unopened pipe of the plant dies.",
+  "The outer leaves start to wither."
+ ],
+ "photo_cues": [
+  "Dark coloured tunnels",
+  "Yellowish white grub",
+  "Red head on grub",
+  "Dark adult weevil",
+  "White eggs on rhizome"
+ ],
+ "favourable_conditions": "",
+ "prevention": [
+  "Select healthy suckers for planting.",
+  "Do not grow bananas in the same field every time.",
+  "Keep the field clean and tidy.",
+  "Choose varieties that are less likely to get the pest like Poovan, Kadali, Kunnan, or Poomkalli.",
+  "Avoid planting susceptible varieties like Robusta, Karpooruvally, Malbhog, Champa, and Adukkar."
+ ],
+ "practices": [
+  "Remove and destroy affected parts of the plant.",
+  "Trim the rhizome.",
+  "Remove pseudostems below the ground level.",
+  "Use traps to catch adult weevils.",
+  "Monitor the field regularly for signs of the pest."
+ ],
+ "organic_bio": [
+  {
+   "text": "cosmolure trap at 5/ha",
+   "page": 0
+  },
+  {
+   "text": "pheromone traps @ 4-5/acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "carbofuran",
+  "phorate",
+  "quinalphos",
+  "castor cake",
+  "carbaryl",
+  "dimethoate",
+  "methyl demeton",
+  "phosphamidon"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "banana_pest_banana_1.txt",
+  "aesa:banana"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

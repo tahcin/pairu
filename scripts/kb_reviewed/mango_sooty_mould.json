@@ -1,0 +1,41 @@
+{
+ "pathogen": "Capnodium mangiferae, Meliola mangiferae",
+ "symptoms": [
+  "You will see a black velvety coating on the surface of the leaves.",
+  "In bad cases the entire tree looks black including the twigs and leaves.",
+  "The fungus grows on the sticky sugary liquid left behind by insects.",
+  "This black layer blocks the leaf from getting sunlight which hurts the plant."
+ ],
+ "photo_cues": [
+  "black velvety leaf coating",
+  "dark fungal growth",
+  "black encrustation on fruit",
+  "blackened twigs and leaves"
+ ],
+ "favourable_conditions": "High humidity and moist weather help the disease grow.",
+ "prevention": [
+  "Keep your orchard clean and healthy.",
+  "Prune affected branches and destroy them right away to stop the spread.",
+  "Control insects like hoppers, aphids, and scale insects that leave sugary liquid on the plant."
+ ],
+ "practices": [
+  "Manage the insects and the mould at the same time.",
+  "Prune away the parts of the tree that are covered in mould.",
+  "Burn the pruned branches to stop the disease from spreading.",
+  "Spray a starch solution on the leaves to help peel off the fungus."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Monocrotophos",
+  "methyl dematon"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "mango_7.txt",
+  "aesa:mango"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

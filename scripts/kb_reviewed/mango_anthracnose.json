@@ -1,0 +1,52 @@
+{
+ "pathogen": "Colletotrichum gloeosporioides",
+ "symptoms": [
+  "Small blister-like spots appear on leaves and twigs.",
+  "Young leaves wither and dry out.",
+  "Tender twigs die back and branches may dry up.",
+  "Black spots develop on flowers and fruits.",
+  "Infected fruit pulp becomes hard, cracks, and decays.",
+  "Young infected fruits shrivel and drop off the tree."
+ ],
+ "photo_cues": [
+  "Small blister-like spots",
+  "Black spots on fruit",
+  "Black spots on flowers",
+  "Withered young leaves",
+  "Dried tender twigs"
+ ],
+ "favourable_conditions": "High humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius help the disease grow.",
+ "prevention": [
+  "Collect and burn all diseased leaves, twigs, and fruits.",
+  "Cover fruits on the tree with paper bags 15 days before harvest.",
+  "Use resistant or tolerant plant varieties.",
+  "Manage fruit flies to prevent late fruit fall and disease spread."
+ ],
+ "practices": [
+  "Regularly inspect the orchard for signs of the disease.",
+  "Remove and destroy any infected plant parts.",
+  "Keep the field clean by removing dead twigs and debris where the pathogen lives.",
+  "Monitor the orchard to decide when control measures are needed."
+ ],
+ "organic_bio": [
+  {
+   "text": "P. fluorescens (FP 7) at 5g/litre",
+   "page": 0
+  }
+ ],
+ "chemicals_in_text": [
+  "Benomyl",
+  "Thiobendazole",
+  "Azoxystrobin",
+  "copper oxy-chloride"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "mango_1.txt",
+  "aesa:mango"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "pathogen": "Gloeosporium musarum, Colletrotrichum musae",
+ "symptoms": [
+  "Small round black spots appear on young banana fruits.",
+  "These spots grow larger and turn brown.",
+  "The fruit skin turns black and shrivels up.",
+  "Pink spore masses cover the rotting fruit.",
+  "Black sores on the fruit stem cause the fruit to drop off.",
+  "The entire bunch can turn black and rot."
+ ],
+ "photo_cues": [
+  "Small circular black spots",
+  "Enlarged brown patches",
+  "Black shriveled fruit skin",
+  "Pink spore masses",
+  "Black lesions on pedicel"
+ ],
+ "favourable_conditions": "The disease spreads easily in high heat and humidity, especially if fruits have wounds or bruises.",
+ "prevention": [
+  "Keep the field clean and free of weeds.",
+  "Make sure the field has good drainage.",
+  "Use proper fertilizer to keep plants healthy.",
+  "Handle fruit carefully during harvest and transport to avoid bruises.",
+  "Rotate your crops with paddy or sugarcane."
+ ],
+ "practices": [
+  "Burn all infected plant parts to stop the spread.",
+  "Remove the flower bud at the end of the bunch once all hands have opened.",
+  "Harvest bunches at the right stage of maturity.",
+  "Keep the field clean and maintain good hygiene.",
+  "Store harvested bunches in a cool place."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Bordeaux mixture",
+  "Prochloroz",
+  "Carbendazim",
+  "Chlorothalonil",
+  "mycostatin",
+  "Aureofunginsol",
+  "Benomyl",
+  "Mancozeb",
+  "carbofuran",
+  "dimethoate",
+  "oxydemeton-methyl"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "banana_diseases_crop_prot_crop_20diseases_fruiits_banana_1.txt",
+  "aesa:banana"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

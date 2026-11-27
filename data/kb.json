@@ -170,7 +170,56 @@
     "brinjal_little_leaf",
     "brinjal_phomopsis_blight",
     "brinjal_bacterial_wilt",
+    "brinjal_epilachna",
     "brinjal_healthy"
+   ]
+  },
+  {
+   "id": "banana",
+   "name_en": "Banana",
+   "names": {
+    "te": "అరటి",
+    "hi": "केला",
+    "ta": "வாழை",
+    "kn": "ಬಾಳೆ",
+    "mr": "केळी",
+    "bn": "কলা",
+    "or": "କଦଳୀ",
+    "gu": "કેળા",
+    "pa": "ਕੇਲਾ",
+    "ml": "വാഴ"
+   },
+   "diseases": [
+    "banana_panama_wilt",
+    "banana_sigatoka",
+    "banana_bunchy_top",
+    "banana_anthracnose",
+    "banana_rhizome_weevil",
+    "banana_healthy"
+   ]
+  },
+  {
+   "id": "mango",
+   "name_en": "Mango",
+   "names": {
+    "te": "మామిడి",
+    "hi": "आम",
+    "ta": "மா",
+    "kn": "ಮಾವು",
+    "mr": "आंबा",
+    "bn": "আম",
+    "or": "ଆମ୍ବ",
+    "gu": "કેરી",
+    "pa": "ਅੰਬ",
+    "ml": "മാവ്"
+   },
+   "diseases": [
+    "mango_powdery_mildew",
+    "mango_anthracnose",
+    "mango_hopper",
+    "mango_fruit_fly",
+    "mango_sooty_mould",
+    "mango_healthy"
    ]
   },
   {
@@ -189,6 +238,9 @@
     "ml": "ഉഴുന്ന്"
    },
    "diseases": [
+    "blackgram_yellow_mosaic",
+    "blackgram_powdery_mildew",
+    "blackgram_cercospora_leaf_spot",
     "blackgram_leaf_crinkle",
     "blackgram_rust",
     "blackgram_pod_borer",
@@ -3328,6 +3380,67 @@
    ]
   },
   {
+   "id": "brinjal_epilachna",
+   "crop": "brinjal",
+   "name_en": "Epilachna beetle (hadda beetle)",
+   "names": {
+    "te": "అక్షింతల పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Epilachna vigintioctopunctata",
+   "symptoms": [
+    "The insects scrape the green parts from the leaf surface.",
+    "This feeding creates a pattern that looks like a ladder or a window.",
+    "These windows eventually dry up and fall out, leaving holes in the leaves.",
+    "In bad cases, the leaves become skeletonized and look like thin paper."
+   ],
+   "photo_cues": [
+    "yellow spindle shaped eggs",
+    "yellowish grub with spines",
+    "hemispherical beetle with spots",
+    "ladder like leaf windows",
+    "skeletonized papery leaves"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Pick off the insects by hand and destroy them.",
+    "Conserve natural enemies like wasps and bugs in your field.",
+    "Plant insectary plants like marigold or carrot to support natural enemies."
+   ],
+   "practices": [
+    "Check your plants regularly for insects and eggs.",
+    "Collect damaged leaves that have grubs or egg masses and destroy them.",
+    "Shake the plants to knock the grubs, pupae, and adults onto the ground and destroy them."
+   ],
+   "organic_bio": [
+    {
+     "text": "NSKE 5%",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "epilachna grub",
+    "beetles"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Brinjal, Hadda / spotted beetle",
+     "url": "https://web.archive.org/web/20141128000013/http://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/brinjal/brinjal_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Brinjal",
+     "url": "https://ppqs.gov.in/sites/default/files/brinjal.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వంగలో అశంచే చిడపిడలు – వాటి సస్యరక్షణ",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02-1/c2ac02c1fc32-c35c3ec30c40c17c3e-c35c4dc2fc35c38c3ec2f-c2ac02c1ac3ec02c17c02/c07c24c30-c35c3fc37c2fc3ec32c41/వంగలో-అశంచే-చిడపిడలు-–-వాటి-సస్యరక్షణ?lgn=te"
+    }
+   ]
+  },
+  {
    "id": "brinjal_healthy",
    "crop": "brinjal",
    "name_en": "Healthy",
@@ -3369,6 +3482,952 @@
    ]
   },
   {
+   "id": "banana_panama_wilt",
+   "crop": "banana",
+   "name_en": "Panama wilt (Fusarium wilt)",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Fusarium oxysporum f.sp. cubense",
+   "symptoms": [
+    "The lower leaves start to turn a light yellow color, especially around the edges.",
+    "These leaves eventually turn bright yellow and dry out.",
+    "The leaves may break near the base and hang down around the stem.",
+    "The base of the stem splits open.",
+    "Inside the roots and stem, you will see red or brown streaks."
+   ],
+   "photo_cues": [
+    "yellowing lower leaves",
+    "dried leaf margins",
+    "split stem base",
+    "reddish brown internal streaks",
+    "circular discolouration pattern"
+   ],
+   "look_alikes": [
+    "banana_bunchy_top"
+   ],
+   "discriminators": [
+    {
+     "id": "q_banana_panama_wilt_banana_bunchy_top",
+     "question": "Do the older leaves turn yellow from the edges and hang down around the stem, and is the inside of the stem reddish brown when cut?",
+     "yes": "banana_panama_wilt",
+     "no": "banana_bunchy_top"
+    },
+    {
+     "id": "q_banana_bunchy_top_banana_panama_wilt",
+     "question": "Are the new leaves narrow, stiff and bunched at the top, with dark green streaks along the veins?",
+     "yes": "banana_bunchy_top",
+     "no": "banana_panama_wilt"
+    }
+   ],
+   "favourable_conditions": "The disease builds up when you grow bananas in the same field over and over again.",
+   "prevention": [
+    "Rotate your banana crops with paddy or sugarcane.",
+    "Plant varieties that are resistant to the wilt.",
+    "Always select healthy suckers for planting.",
+    "Make sure your field has good drainage, especially when it rains.",
+    "Do not wear footwear on your farm that has been in contact with other banana plants or soil."
+   ],
+   "practices": [
+    "Remove and destroy any plant parts that are infested after you harvest.",
+    "If you find only a few infected plants, kill and chop them up.",
+    "Stew the chopped material in water at 70 degrees Celsius for 30 minutes.",
+    "Clean your machinery and tools with a sanitary solution.",
+    "Use mechanical barriers around infected plants to stop the spread."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pseudomonas fluorescens @ 2.5kg/ha",
+     "source": 0
+    },
+    {
+     "text": "About 60 mg of Pseudomonas fluorescens (in a capsule) can be applied in a 10 cm deep hole made in the corm.",
+     "source": 0
+    },
+    {
+     "text": "Trichoderma viride @ 25 g for 4 times once at the time of planting in the planting pit and remaining doses at third, fifth and seventh month after planting",
+     "source": 0
+    },
+    {
+     "text": "T.harzianum Th-10, as dried banana leaf formulation @ 10g/platn in basal + top dressing on 2,4,and 6 months after planting",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "panama wilt"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Banana, Panama Wilt",
+     "url": "https://web.archive.org/web/20161215004421/http://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_7.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "banana_sigatoka",
+   "crop": "banana",
+   "name_en": "Sigatoka leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Mycospharella musicola",
+   "symptoms": [
+    "You will see pale yellow or green streaks on the top of the leaves.",
+    "These streaks turn into brown spots that are shaped like an oval.",
+    "The middle of the spots turns light grey with a yellow ring around them.",
+    "The spots join together to create large patches of dry, dead leaf tissue.",
+    "The leaves dry out quickly and fall off the plant.",
+    "The fruit may stay small and thin even if the inside starts to ripen."
+   ],
+   "photo_cues": [
+    "pale yellow leaf streaks",
+    "elliptical brown leaf spots",
+    "grey center leaf spots",
+    "yellow halo on leaves",
+    "large irregular dried patches",
+    "undersized angular fruit"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease spreads easily in poor, badly drained soils, shady areas, and during frequent irrigation.",
+   "prevention": [
+    "Choose varieties that are known to be tolerant to this disease.",
+    "Do not plant your banana trees too close together.",
+    "Keep your field clean by removing weeds and grass.",
+    "Make sure your field has good drainage to stop water from sitting.",
+    "Use only healthy suckers that are free from disease for planting."
+   ],
+   "practices": [
+    "Walk through your field regularly to check for early signs of the disease.",
+    "Cut off and destroy any leaves that show signs of the disease.",
+    "Remove extra suckers from the plant in a timely manner.",
+    "Keep the area around the plants free of weeds."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "sigatoka leaf spot",
+    "sigatoka",
+    "yellow sigatoka",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Banana, Yellow sigatoka",
+     "url": "https://web.archive.org/web/20161209194429/http://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_8.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "banana_bunchy_top",
+   "crop": "banana",
+   "name_en": "Bunchy top virus",
+   "names": {},
+   "kind": "viral",
+   "pathogen": "Banana bunchy top virus",
+   "symptoms": [
+    "Dark green streaks appear on the veins of the lower leaf and stem.",
+    "New leaves are narrow, wavy, and struggle to grow.",
+    "Leaves have yellow edges and bunch together at the top of the plant.",
+    "Plants often fail to produce fruit.",
+    "If fruit grows, the hands and fingers are twisted and distorted.",
+    "Dark brown patches may appear on young fruit."
+   ],
+   "photo_cues": [
+    "dark green leaf streaks",
+    "narrow hook-like extensions",
+    "yellow chlorotic leaf margins",
+    "bunched top leaves",
+    "distorted twisted fruit"
+   ],
+   "look_alikes": [
+    "banana_panama_wilt"
+   ],
+   "discriminators": [
+    {
+     "id": "q_banana_panama_wilt_banana_bunchy_top",
+     "question": "Do the older leaves turn yellow from the edges and hang down around the stem, and is the inside of the stem reddish brown when cut?",
+     "yes": "banana_panama_wilt",
+     "no": "banana_bunchy_top"
+    },
+    {
+     "id": "q_banana_bunchy_top_banana_panama_wilt",
+     "question": "Are the new leaves narrow, stiff and bunched at the top, with dark green streaks along the veins?",
+     "yes": "banana_bunchy_top",
+     "no": "banana_panama_wilt"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Always use planting materials that are free from the virus.",
+    "Keep your field clean and free of weeds to help spot infected suckers early.",
+    "Do not grow bananas near sugarcane or cucurbit crops to prevent virus spread."
+   ],
+   "practices": [
+    "Remove and destroy all infected banana plants immediately.",
+    "Chop up, dry, and bury the infected plants.",
+    "Monitor the field regularly for signs of the disease."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "aphids"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Banana, Bunchy Top",
+     "url": "https://web.archive.org/web/20161210091152/http://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_3.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruits_banana_3.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "banana_anthracnose",
+   "crop": "banana",
+   "name_en": "Anthracnose",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Gloeosporium musarum, Colletrotrichum musae",
+   "symptoms": [
+    "Small round black spots appear on young banana fruits.",
+    "These spots grow larger and turn brown.",
+    "The fruit skin turns black and shrivels up.",
+    "Pink spore masses cover the rotting fruit.",
+    "Black sores on the fruit stem cause the fruit to drop off.",
+    "The entire bunch can turn black and rot."
+   ],
+   "photo_cues": [
+    "Small circular black spots",
+    "Enlarged brown patches",
+    "Black shriveled fruit skin",
+    "Pink spore masses",
+    "Black lesions on pedicel"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The disease spreads easily in high heat and humidity, especially if fruits have wounds or bruises.",
+   "prevention": [
+    "Keep the field clean and free of weeds.",
+    "Make sure the field has good drainage.",
+    "Use proper fertilizer to keep plants healthy.",
+    "Handle fruit carefully during harvest and transport to avoid bruises.",
+    "Rotate your crops with paddy or sugarcane."
+   ],
+   "practices": [
+    "Burn all infected plant parts to stop the spread.",
+    "Remove the flower bud at the end of the bunch once all hands have opened.",
+    "Harvest bunches at the right stage of maturity.",
+    "Keep the field clean and maintain good hygiene.",
+    "Store harvested bunches in a cool place."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "fruit rot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Banana, Anthracnose",
+     "url": "https://web.archive.org/web/20161215004416/http://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruiits_banana_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/banana_diseases/crop_prot_crop%20diseases_fruiits_banana_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "banana_rhizome_weevil",
+   "crop": "banana",
+   "name_en": "Rhizome weevil",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Cosmopolites sordidus",
+   "symptoms": [
+    "The plant may die because grubs bore into the rhizome.",
+    "You will see dark tunnels inside the rhizomes.",
+    "The unopened pipe of the plant dies.",
+    "The outer leaves start to wither."
+   ],
+   "photo_cues": [
+    "Dark coloured tunnels",
+    "Yellowish white grub",
+    "Red head on grub",
+    "Dark adult weevil",
+    "White eggs on rhizome"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Select healthy suckers for planting.",
+    "Do not grow bananas in the same field every time.",
+    "Keep the field clean and tidy.",
+    "Choose varieties that are less likely to get the pest like Poovan, Kadali, Kunnan, or Poomkalli.",
+    "Avoid planting susceptible varieties like Robusta, Karpooruvally, Malbhog, Champa, and Adukkar."
+   ],
+   "practices": [
+    "Remove and destroy affected parts of the plant.",
+    "Trim the rhizome.",
+    "Remove pseudostems below the ground level.",
+    "Use traps to catch adult weevils.",
+    "Monitor the field regularly for signs of the pest."
+   ],
+   "organic_bio": [
+    {
+     "text": "cosmolure trap at 5/ha",
+     "source": 0
+    },
+    {
+     "text": "pheromone traps @ 4-5/acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "rhizome weevil"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Banana, Rhizome weevil",
+     "url": "https://web.archive.org/web/20161228223205/http://agritech.tnau.ac.in/crop_protection/banana_pest/banana_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/banana_pest/banana_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "banana_healthy",
+   "crop": "banana",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Banana",
+     "url": "https://ppqs.gov.in/sites/default/files/banana.pdf"
+    }
+   ]
+  },
+  {
+   "id": "mango_powdery_mildew",
+   "crop": "mango",
+   "name_en": "Powdery mildew",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Oidium mangiferae / Acrosporum mangiferae",
+   "symptoms": [
+    "You will see a white powdery fungal growth on leaves, flowers, and young fruits.",
+    "Young leaves may show patches that turn purplish brown.",
+    "Infected flowers and fruits often drop off the tree before they grow.",
+    "The disease can prevent fruits from setting on the tree."
+   ],
+   "photo_cues": [
+    "white powdery fungal growth",
+    "purplish brown leaf patches",
+    "white coating on flowers",
+    "shriveled young fruits"
+   ],
+   "look_alikes": [
+    "mango_sooty_mould"
+   ],
+   "discriminators": [
+    {
+     "id": "q_mango_powdery_mildew_mango_sooty_mould",
+     "question": "Is the coating white and powdery, on the flowers, young fruits and young leaves?",
+     "yes": "mango_powdery_mildew",
+     "no": "mango_sooty_mould"
+    },
+    {
+     "id": "q_mango_sooty_mould_mango_powdery_mildew",
+     "question": "Is the coating black like soot, and does it peel off the leaf when you rub it?",
+     "yes": "mango_sooty_mould",
+     "no": "mango_powdery_mildew"
+    }
+   ],
+   "favourable_conditions": "Rains or mists along with cooler nights during the flowering stage help the disease spread.",
+   "prevention": [
+    "Use resistant or tolerant varieties where you can.",
+    "Give the orchard proper irrigation and drainage, as the AESA mango package advises for all its diseases.",
+    "Watch the trees closely at flowering time, because rain or mist with cool nights then helps the disease spread."
+   ],
+   "practices": [
+    "Remove and destroy the parts of the plant that show signs of infection.",
+    "Keep a close watch on your trees to catch the disease early."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "powdery mildew"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Mango, Powdery mildew",
+     "url": "https://web.archive.org/web/20161116201550/http://agritech.tnau.ac.in/crop_protection/mango_2.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/mango_2.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    }
+   ]
+  },
+  {
+   "id": "mango_anthracnose",
+   "crop": "mango",
+   "name_en": "Anthracnose",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Colletotrichum gloeosporioides",
+   "symptoms": [
+    "Small blister-like spots appear on leaves and twigs.",
+    "Young leaves wither and dry out.",
+    "Tender twigs die back and branches may dry up.",
+    "Black spots develop on flowers and fruits.",
+    "Infected fruit pulp becomes hard, cracks, and decays.",
+    "Young infected fruits shrivel and drop off the tree."
+   ],
+   "photo_cues": [
+    "Small blister-like spots",
+    "Black spots on fruit",
+    "Black spots on flowers",
+    "Withered young leaves",
+    "Dried tender twigs"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "High humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius help the disease grow.",
+   "prevention": [
+    "Collect and burn all diseased leaves, twigs, and fruits.",
+    "Cover fruits on the tree with paper bags 15 days before harvest.",
+    "Use resistant or tolerant plant varieties.",
+    "Manage fruit flies to prevent late fruit fall and disease spread."
+   ],
+   "practices": [
+    "Regularly inspect the orchard for signs of the disease.",
+    "Remove and destroy any infected plant parts.",
+    "Keep the field clean by removing dead twigs and debris where the pathogen lives.",
+    "Monitor the orchard to decide when control measures are needed."
+   ],
+   "organic_bio": [
+    {
+     "text": "P. fluorescens (FP 7) at 5g/litre",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "anthracnose"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Mango, Anthracnose",
+     "url": "https://web.archive.org/web/20161116201733/http://agritech.tnau.ac.in/crop_protection/mango_1.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/mango_1.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    }
+   ]
+  },
+  {
+   "id": "mango_hopper",
+   "crop": "mango",
+   "name_en": "Mango hopper",
+   "names": {
+    "te": "తేనెమంచు పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Idioscopus niveoparsus, I. clypealis, Amirtodus atkinsoni, Idioscopus clypealis Lethierry, I. nitidulus Walker, Amritodus atkinsoni Lethierry, Idioscopus niveosparsus Leth",
+   "symptoms": [
+    "The bugs suck the sap from the flowers.",
+    "Flower buds and flowers fall off the tree.",
+    "You will see a sticky honey dew on lower leaves.",
+    "A black sooty mould grows on the leaves.",
+    "Some parts of the plant may curl and dry up.",
+    "Young fruits may drop from the tree."
+   ],
+   "photo_cues": [
+    "Pale yellow nymphs",
+    "Wedge shaped brown insects",
+    "Sticky dew on leaves",
+    "Black sooty mould",
+    "Dark wings with wavy lines"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "These pests appear in February when the trees start to flower.",
+   "prevention": [
+    "Do not plant trees too close together.",
+    "Keep the orchard clean by pulling weeds.",
+    "Prune dense branches in December.",
+    "Burn crop waste in the evening to smoke the orchard."
+   ],
+   "practices": [
+    "Put up yellow sticky traps above the tree top.",
+    "Check the traps every day.",
+    "Use light traps from 6 pm to 10 pm."
+   ],
+   "organic_bio": [
+    {
+     "text": "Neem oil 5 ml/lit of water",
+     "source": 0
+    },
+    {
+     "text": "3 per cent neem oil",
+     "source": 0
+    },
+    {
+     "text": "neem seed kernel powder extract 5 per cent",
+     "source": 0
+    },
+    {
+     "text": "Metarhizium anisopliae @ 1 x 10^8 cfu/ml",
+     "source": 1
+    },
+    {
+     "text": "Beauveria bassiana @ 10^8 cfu/ml",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "hopper"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Mango, Mango hoppers",
+     "url": "https://web.archive.org/web/20160710143719/http://agritech.tnau.ac.in/crop_protection/mango/mango_4.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/mango/mango_4.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మామిడిలో దిగుబడిని తగ్గించే ప్రధానమైన పురుగులు వాటి యాజమాన్యం",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/పంట-సాగు-మరియు-యాజమాన్య-పద్ధతులు/పంటల-సాగు/మామిడిలో-దిగుబడిని-తగ్గించే-ప్రధానమైన-పురుగులు-వాటి-యాజమాన్యం?lgn=te"
+    }
+   ]
+  },
+  {
+   "id": "mango_fruit_fly",
+   "crop": "mango",
+   "name_en": "Fruit fly",
+   "names": {},
+   "kind": "pest",
+   "pathogen": "Bactrocera (Dacus) dorsalis, Bactrocera dorsalis, B. correcta Bezzi, B. zonata Saunders",
+   "symptoms": [
+    "You will see brown rotten patches on the fruit.",
+    "Some fruits may leak fluid.",
+    "The fruit might fall from the tree early.",
+    "Small worms bore into the fruit as it ripens.",
+    "The fruit starts to rot."
+   ],
+   "photo_cues": [
+    "Brown rotten fruit patches",
+    "Yellowish legless maggots",
+    "Light brown flies",
+    "Transparent wings",
+    "Seed like brown pupae"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The flies prefer to lay eggs in ripe fruit.",
+   "prevention": [
+    "Plough the soil in November and December.",
+    "This exposes the pupae to the sun to kill them.",
+    "Keep the soil covered with plants or old crop parts.",
+    "Add compost or manure to the soil."
+   ],
+   "practices": [
+    "Pick up fallen fruits and put them in a pit.",
+    "Set up pheromone traps at 4 to 5 per acre.",
+    "Change the lures every 2 to 3 weeks.",
+    "Catch and kill the adult flies."
+   ],
+   "organic_bio": [
+    {
+     "text": "Pheromone traps @ 4-5/acre",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Mango, Fruit fly",
+     "url": "https://web.archive.org/web/20160710144043/http://agritech.tnau.ac.in/crop_protection/mango/mango_8.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/mango/mango_8.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    }
+   ]
+  },
+  {
+   "id": "mango_sooty_mould",
+   "crop": "mango",
+   "name_en": "Sooty mould",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Capnodium mangiferae, Meliola mangiferae",
+   "symptoms": [
+    "You will see a black velvety coating on the surface of the leaves.",
+    "In bad cases the entire tree looks black including the twigs and leaves.",
+    "The fungus grows on the sticky sugary liquid left behind by insects.",
+    "This black layer blocks the leaf from getting sunlight which hurts the plant."
+   ],
+   "photo_cues": [
+    "black velvety leaf coating",
+    "dark fungal growth",
+    "black encrustation on fruit",
+    "blackened twigs and leaves"
+   ],
+   "look_alikes": [
+    "mango_powdery_mildew"
+   ],
+   "discriminators": [
+    {
+     "id": "q_mango_powdery_mildew_mango_sooty_mould",
+     "question": "Is the coating white and powdery, on the flowers, young fruits and young leaves?",
+     "yes": "mango_powdery_mildew",
+     "no": "mango_sooty_mould"
+    },
+    {
+     "id": "q_mango_sooty_mould_mango_powdery_mildew",
+     "question": "Is the coating black like soot, and does it peel off the leaf when you rub it?",
+     "yes": "mango_sooty_mould",
+     "no": "mango_powdery_mildew"
+    }
+   ],
+   "favourable_conditions": "High humidity and moist weather help the disease grow.",
+   "prevention": [
+    "Keep your orchard clean and healthy.",
+    "Prune affected branches and destroy them right away to stop the spread.",
+    "Control insects like hoppers, aphids, and scale insects that leave sugary liquid on the plant."
+   ],
+   "practices": [
+    "Manage the insects and the mould at the same time.",
+    "Prune away the parts of the tree that are covered in mould.",
+    "Burn the pruned branches to stop the disease from spreading.",
+    "Spray a starch solution on the leaves to help peel off the fungus."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Mango, Sooty mould",
+     "url": "https://web.archive.org/web/20161107171528/http://agritech.tnau.ac.in/crop_protection/mango_7.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/mango_7.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    }
+   ]
+  },
+  {
+   "id": "mango_healthy",
+   "crop": "mango",
+   "name_en": "Healthy",
+   "names": {},
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Mango",
+     "url": "https://ppqs.gov.in/sites/default/files/mango.pdf"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_yellow_mosaic",
+   "crop": "blackgram",
+   "name_en": "Yellow mosaic virus",
+   "names": {
+    "te": "పల్లాకు తెగులు"
+   },
+   "kind": "viral",
+   "pathogen": "Mungbean Yellow Mosaic Virus",
+   "symptoms": [
+    "Small yellow spots appear on young leaves at first.",
+    "New leaves show a mix of yellow and green patches.",
+    "The yellow spots grow larger over time.",
+    "Some leaves may turn completely yellow.",
+    "Infected leaves can show dead brown areas.",
+    "Plants stay small, grow slowly, and have few flowers or pods."
+   ],
+   "photo_cues": [
+    "scattered yellow spots",
+    "irregular yellow green patches",
+    "completely yellow leaves",
+    "stunted plant growth",
+    "yellow pods"
+   ],
+   "look_alikes": [
+    "blackgram_leaf_crinkle"
+   ],
+   "discriminators": [
+    {
+     "id": "q_blackgram_yellow_mosaic_blackgram_leaf_crinkle",
+     "question": "Are there bright yellow and green patches mixed on the leaves?",
+     "yes": "blackgram_yellow_mosaic",
+     "no": "blackgram_leaf_crinkle"
+    },
+    {
+     "id": "q_blackgram_leaf_crinkle_blackgram_yellow_mosaic",
+     "question": "Are the leaves larger than normal, thick, crinkled and puckered, without yellow patches?",
+     "yes": "blackgram_leaf_crinkle",
+     "no": "blackgram_yellow_mosaic"
+    }
+   ],
+   "favourable_conditions": "",
+   "prevention": [
+    "Use varieties that are known to be resistant or tolerant to the disease.",
+    "Always plant healthy, certified seeds that are free from weeds.",
+    "Remove and destroy any plants that act as alternate hosts for the virus.",
+    "Rotate your crops with cereals, cucurbits, or cruciferous vegetables.",
+    "Plant a barrier of four rows of sorghum, maize, or bajra around your field."
+   ],
+   "practices": [
+    "Regularly monitor your field for signs of the disease.",
+    "Practice good field sanitation by removing and destroying affected plant parts.",
+    "Keep the field clean and free of weeds.",
+    "Follow general cultural practices to keep the crop healthy."
+   ],
+   "organic_bio": [
+    {
+     "text": "Trichoderma viride 1% WP @ 4g per Kg seeds",
+     "source": 1
+    },
+    {
+     "text": "Trichoderma spp. (8-10 g/Kg seed)",
+     "source": 1
+    },
+    {
+     "text": "Trichoderma viride/harzianum and Pseudomonas fluorescens as seed/seedling/planting material treatment",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [
+    "whitefly"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Yellow Mosaic",
+     "url": "https://web.archive.org/web/20191031203224/http://agritech.tnau.ac.in/crop_protection/black_gram_disease/yellow_mosaic.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/black_gram_disease/yellow_mosaic.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మినుము",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_powdery_mildew",
+   "crop": "blackgram",
+   "name_en": "Powdery mildew",
+   "names": {
+    "te": "బూడిద తెగులు"
+   },
+   "kind": "fungal",
+   "pathogen": "Erysiphe polygoni",
+   "symptoms": [
+    "White powdery spots appear on leaves and green parts.",
+    "These spots grow larger and turn into circles.",
+    "The white powder eventually covers both sides of the leaves.",
+    "Leaves turn yellow and fall off early when the disease is bad.",
+    "The plant may stop growing and mature too early, which lowers your yield."
+   ],
+   "photo_cues": [
+    "white powdery patches",
+    "circular white spots",
+    "yellowing leaves",
+    "whitish powdery growth"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Cool weather with high humidity helps the disease grow.",
+   "prevention": [
+    "Remove weeds and destroy plants that can carry the disease.",
+    "Rotate your crops with plants that do not get this disease."
+   ],
+   "practices": [
+    "Check your fields often for signs of the disease.",
+    "Remove and destroy parts of the plant that look sick.",
+    "Spray recommended natural extracts as soon as you see the first signs."
+   ],
+   "organic_bio": [
+    {
+     "text": "NSKE 5%",
+     "source": 0
+    },
+    {
+     "text": "Neem oil 3%",
+     "source": 0
+    },
+    {
+     "text": "Eucalyptus leaf extract 10%",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [
+    "powdery mildew"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Powdery Mildew",
+     "url": "https://web.archive.org/web/20191031203109/http://agritech.tnau.ac.in/crop_protection/black_gram_disease/powdery_mildew.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/black_gram_disease/powdery_mildew.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: మినుము",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/c1cc3fc32c4dc32c3ec32-c35c3ec30c3f-c38c2ec3ec1ac3ec30c02/c06c02c27c4dc30c2ac4dc30c26c47c36c4d-c32c4b-c35c4dc2fc35c38c3ec2f-c2ac02c1fc32c41/c2ac02c1fc32c41/మినుము?lgn=te"
+    }
+   ]
+  },
+  {
+   "id": "blackgram_cercospora_leaf_spot",
+   "crop": "blackgram",
+   "name_en": "Cercospora leaf spot",
+   "names": {},
+   "kind": "fungal",
+   "pathogen": "Cercospora canescens",
+   "symptoms": [
+    "You will see many small spots on the leaves.",
+    "The spots have a pale brown center with a reddish brown border.",
+    "Similar spots can appear on the plant branches and pods.",
+    "Severe cases cause the leaves to fall off the plant.",
+    "On pods, the spots start as small water-soaked marks that grow larger.",
+    "These pod spots eventually become light brown, sunken, and rough."
+   ],
+   "photo_cues": [
+    "Small pale brown spots",
+    "Reddish brown leaf margins",
+    "Sunken rough scabby surface",
+    "Water soaked circular spots",
+    "Yellowish halo around spots"
+   ],
+   "look_alikes": [
+    "blackgram_rust"
+   ],
+   "discriminators": [
+    {
+     "id": "q_blackgram_cercospora_leaf_spot_blackgram_rust",
+     "question": "Are the spots flat, with a pale brown centre and a reddish brown border, and no raised bumps?",
+     "yes": "blackgram_cercospora_leaf_spot",
+     "no": "blackgram_rust"
+    },
+    {
+     "id": "q_blackgram_rust_blackgram_cercospora_leaf_spot",
+     "question": "Are there raised reddish brown pustules on the underside that leave powder when rubbed?",
+     "yes": "blackgram_rust",
+     "no": "blackgram_cercospora_leaf_spot"
+    }
+   ],
+   "favourable_conditions": "High humidity, moist weather, and heavy rainstorms help the disease spread.",
+   "prevention": [
+    "Plant your crop early as soon as the monsoon starts.",
+    "Make sure your field has good drainage to keep the soil from getting too wet."
+   ],
+   "practices": [
+    "Check your fields regularly for signs of the disease.",
+    "Remove and destroy any plant parts that look sick.",
+    "Keep the field clean to stop the disease from spreading."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "cercospora leaf spot",
+    "leaf spot"
+   ],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Black gram, Cercospora leaf spot",
+     "url": "https://web.archive.org/web/20191031203059/http://agritech.tnau.ac.in/crop_protection/black_gram_disease/cercosporal_leaf_spot.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/black_gram_disease/cercosporal_leaf_spot.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Black gram and green gram",
+     "url": "https://ppqs.gov.in/sites/default/files/blackgram_greengram%20%281%29.pdf"
+    }
+   ]
+  },
+  {
    "id": "blackgram_leaf_crinkle",
    "crop": "blackgram",
    "name_en": "Leaf crinkle virus",
@@ -3388,8 +4447,23 @@
     "twisted leaf shape",
     "reddish brown leaf veins"
    ],
-   "look_alikes": [],
-   "discriminators": [],
+   "look_alikes": [
+    "blackgram_yellow_mosaic"
+   ],
+   "discriminators": [
+    {
+     "id": "q_blackgram_yellow_mosaic_blackgram_leaf_crinkle",
+     "question": "Are there bright yellow and green patches mixed on the leaves?",
+     "yes": "blackgram_yellow_mosaic",
+     "no": "blackgram_leaf_crinkle"
+    },
+    {
+     "id": "q_blackgram_leaf_crinkle_blackgram_yellow_mosaic",
+     "question": "Are the leaves larger than normal, thick, crinkled and puckered, without yellow patches?",
+     "yes": "blackgram_leaf_crinkle",
+     "no": "blackgram_yellow_mosaic"
+    }
+   ],
    "favourable_conditions": "The disease spreads in the field mainly through infected seeds or when diseased leaves rub against healthy ones.",
    "prevention": [
     "Use healthy seeds to prevent the disease from entering your field.",
@@ -3423,21 +4497,32 @@
    "kind": "fungal",
    "pathogen": "Uromyces phaseoli",
    "symptoms": [
-    "You will see small, round spots on the leaves.",
-    "These spots have a pale brown center and a reddish brown edge.",
     "The spots can also appear on branches and pods.",
     "In bad cases, the leaves will shrivel and fall off the plant.",
     "The underside of the leaves often shows many reddish brown pustules."
    ],
    "photo_cues": [
     "small reddish brown pustules",
-    "pale brown spot centers",
-    "reddish brown spot margins",
     "shriveled leaves",
     "spots on pods"
    ],
-   "look_alikes": [],
-   "discriminators": [],
+   "look_alikes": [
+    "blackgram_cercospora_leaf_spot"
+   ],
+   "discriminators": [
+    {
+     "id": "q_blackgram_cercospora_leaf_spot_blackgram_rust",
+     "question": "Are the spots flat, with a pale brown centre and a reddish brown border, and no raised bumps?",
+     "yes": "blackgram_cercospora_leaf_spot",
+     "no": "blackgram_rust"
+    },
+    {
+     "id": "q_blackgram_rust_blackgram_cercospora_leaf_spot",
+     "question": "Are there raised reddish brown pustules on the underside that leave powder when rubbed?",
+     "yes": "blackgram_rust",
+     "no": "blackgram_cercospora_leaf_spot"
+    }
+   ],
    "favourable_conditions": "High humidity, cloudy weather, temperatures between 21 and 26 degrees Celsius, and nights with heavy dew help the disease spread.",
    "prevention": [
     "Remove volunteer plants from the field to lower disease levels.",

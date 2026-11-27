@@ -1,0 +1,52 @@
+{
+ "pathogen": "Bactrocera (Dacus) dorsalis, Bactrocera dorsalis, B. correcta Bezzi, B. zonata Saunders",
+ "symptoms": [
+  "You will see brown rotten patches on the fruit.",
+  "Some fruits may leak fluid.",
+  "The fruit might fall from the tree early.",
+  "Small worms bore into the fruit as it ripens.",
+  "The fruit starts to rot."
+ ],
+ "photo_cues": [
+  "Brown rotten fruit patches",
+  "Yellowish legless maggots",
+  "Light brown flies",
+  "Transparent wings",
+  "Seed like brown pupae"
+ ],
+ "favourable_conditions": "The flies prefer to lay eggs in ripe fruit.",
+ "prevention": [
+  "Plough the soil in November and December.",
+  "This exposes the pupae to the sun to kill them.",
+  "Keep the soil covered with plants or old crop parts.",
+  "Add compost or manure to the soil."
+ ],
+ "practices": [
+  "Pick up fallen fruits and put them in a pit.",
+  "Set up pheromone traps at 4 to 5 per acre.",
+  "Change the lures every 2 to 3 weeks.",
+  "Catch and kill the adult flies."
+ ],
+ "organic_bio": [
+  {
+   "text": "Pheromone traps @ 4-5/acre",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "fenthion",
+  "malathion",
+  "dimethoate",
+  "carbaryl",
+  "deltamethrin"
+ ],
+ "_model": "gemma-4-31b-it",
+ "_files": [
+  "mango_mango_8.txt",
+  "aesa:mango"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

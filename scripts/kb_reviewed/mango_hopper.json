@@ -1,0 +1,76 @@
+{
+ "pathogen": "Idioscopus niveoparsus, I. clypealis, Amirtodus atkinsoni, Idioscopus clypealis Lethierry, I. nitidulus Walker, Amritodus atkinsoni Lethierry, Idioscopus niveosparsus Leth",
+ "symptoms": [
+  "The bugs suck the sap from the flowers.",
+  "Flower buds and flowers fall off the tree.",
+  "You will see a sticky honey dew on lower leaves.",
+  "A black sooty mould grows on the leaves.",
+  "Some parts of the plant may curl and dry up.",
+  "Young fruits may drop from the tree."
+ ],
+ "photo_cues": [
+  "Pale yellow nymphs",
+  "Wedge shaped brown insects",
+  "Sticky dew on leaves",
+  "Black sooty mould",
+  "Dark wings with wavy lines"
+ ],
+ "favourable_conditions": "These pests appear in February when the trees start to flower.",
+ "prevention": [
+  "Do not plant trees too close together.",
+  "Keep the orchard clean by pulling weeds.",
+  "Prune dense branches in December.",
+  "Burn crop waste in the evening to smoke the orchard."
+ ],
+ "practices": [
+  "Put up yellow sticky traps above the tree top.",
+  "Check the traps every day.",
+  "Use light traps from 6 pm to 10 pm."
+ ],
+ "organic_bio": [
+  {
+   "text": "Neem oil 5 ml/lit of water",
+   "page": 0
+  },
+  {
+   "text": "3 per cent neem oil",
+   "page": 0
+  },
+  {
+   "text": "neem seed kernel powder extract 5 per cent",
+   "page": 0
+  },
+  {
+   "text": "Metarhizium anisopliae @ 1x 108 cfu/ml",
+   "page": 1
+  },
+  {
+   "text": "Beauveria bassiana @ 108 cfu/ml",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "acephate 75 SP",
+  "phosalone 35 EC",
+  "Wettable sulphur",
+  "carbaryl",
+  "toxaphene",
+  "Buprofezin 25% SC",
+  "deltamethrin 2.8% EC",
+  "dimethoate 30% EC",
+  "imidacloprid 17.8% SL",
+  "lambda-cyhalothrin 5% EC",
+  "malathion 50% EC",
+  "monocrotophos 36% SL",
+  "oxydemeton–methyl 25% EC"
+ ],
+ "_model": "gemma-4-31b-it",
+ "_files": [
+  "mango_mango_4.txt",
+  "aesa:mango"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

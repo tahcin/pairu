@@ -50,6 +50,7 @@ function registerKb(kb: KB, lang: string, doc: any) {
     list(d.organic_bio, t.organic_bio);
     list(d.avoid, t.avoid);
     if (d.etl?.text && t.etl) pairs.push([d.etl.text, str(t.etl)]);
+    if (d.first_action?.text && t.first_action) pairs.push([d.first_action.text, str(t.first_action)]);
     for (const q of d.discriminators || []) if (doc.questions?.[q.id]) pairs.push([q.question, String(doc.questions[q.id])]);
     // Second-look confirm question ("Do you see <cue>?", built in verify.ts from photo_cues[0]):
     // the translated template with the translated cue, so it is never sent in English.

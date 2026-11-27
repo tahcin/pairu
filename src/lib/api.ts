@@ -34,8 +34,10 @@ export interface Treatment {
   bio: boolean;
   target: string;
   dose_raw: string;
-  dose_status: "inferred" | "printed" | "per_litre" | "per_kg_seed" | "seed_soil" | "bio_as_printed" | "low_water" | "unreconciled" | "not_a_rate";
+  dose_status: "inferred" | "printed" | "per_litre" | "per_kg_seed" | "seed_soil" | "bio_as_printed" | "bio_water" | "bio_unit_from_code" | "low_water" | "unreconciled" | "not_a_rate";
   dose_treatment?: string | null;
+  dose_raw_unit?: string | null;
+  mixture?: boolean;
   dose_conflict?: { raw: string; water: string; status: string }[] | null;
   dose_per_ha: { value: string; unit: string } | null;
   dose_per_acre: { value: string; unit: string } | null;
@@ -68,6 +70,14 @@ export interface Advice {
   organic: { text: string; source: { title: string; url: string } | null }[];
   avoid?: { text: string; source: { title: string; url: string } | null }[];
   etl?: { text: string; source: { title: string; url: string } | null } | null;
+  do_first?:
+    | { source: "first_action"; kind: string }
+    | { source: "organic"; index: number }
+    | { source: "practice"; index: number }
+    | { source: "product"; group: "bio" | "chem"; index: number }
+    | null;
+  first_action?: { text: string; kind: string } | null;
+  avoid_mixtures?: boolean;
   bio_products: Treatment[];
   chemicals: Treatment[];
   banned_removed: number;

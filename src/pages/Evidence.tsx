@@ -15,6 +15,12 @@ const FILES = [
 ];
 
 type Row = Record<string, unknown>;
+// results.json notes sometimes point at another field by its key ("see cnn.lab_photos_in_cnn_training");
+// show such references as plain words.
+function readable(text: string): string {
+  return text.replace(/\(see ([a-z0-9_]+(?:\.[a-z0-9_]+)+)\)/gi, (_m, ref: string) => `(see the note on ${ref.split(".").pop()!.replace(/_/g, " ").replace(/\bcnn\b/gi, "CNN")} below)`).replace(/\b([a-z0-9]+(?:_[a-z0-9]+)+)\b/g, (m) => m.replace(/_/g, " "));
+}
+
 type Results = Record<string, unknown> & { headline?: Row[]; summary?: string; limits?: string[]; method?: Record<string, string> };
 
 const pct = (v: unknown) => (typeof v === "number" ? `${v.toFixed(1)}%` : "");
@@ -288,7 +294,7 @@ export function Evidence() {
                       right={count(r.right)}
                       wrong={count(r.answered_and_wrong)}
                       unsure={count(r.refused)}
-                      note={String(r.note || "")}
+                      note={readable(String(r.note || ""))}
                       best={r.system === "Pairu v2"}
                     />
                   ))}
@@ -342,7 +348,7 @@ export function Evidence() {
           <section className="ev-section caveats">
             <h2>Limits and caveats</h2>
             <ul>
-              {data.limits.map((l, i) => (
+              {data.limits.map((l) => readable(l)).map((l, i) => (
                 <li key={i}>{l}</li>
               ))}
               {lvf && <li>PlantDoc labels are known to be noisy, farmer answers were scripted from the true label on 7 of the 44 field photos, and the bare model was not run on PlantDoc.</li>}
@@ -361,7 +367,7 @@ export function Evidence() {
                 {systemBlocks(r).map((b, i) => (
                   <div key={i}>
                     <h3>{b.title}</h3>
-                    {b.note && <p className="muted small">{b.note}</p>}
+                    {b.note && <p className="muted small">{readable(b.note)}</p>}
                     <SystemTable rows={b.rows} />
                   </div>
                 ))}

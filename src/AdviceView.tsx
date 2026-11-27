@@ -180,7 +180,19 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
   // The single most useful next step, shown right under the diagnosis: the first natural option,
   // else the first approved biological product, else the first approved chemical the IPM
   // package does not warn against.
-  const firstProduct = [...a.bio_products, ...a.chemicals].find((p) => !p.avoid);
+  // Chosen on the server by rule (functions/_lib/advice.ts): the KB's first action, else a safe
+  // practice, natural option or product. Never a highly hazardous, restricted, avoided or seed/soil row.
+  const df = a.do_first;
+  const firstProduct =
+    df && df.source === "product" ? (df.group === "bio" ? a.bio_products : a.chemicals)[df.index] || null : null;
+  const firstText =
+    df?.source === "first_action"
+      ? a.first_action?.text || ""
+      : df?.source === "organic"
+        ? a.organic[df.index]?.text || ""
+        : df?.source === "practice"
+          ? a.practices[df.index] || ""
+          : "";
   const jumpToTreat = () => document.getElementById("treat")?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
@@ -221,11 +233,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
         {a.healthy && <p className="body">{L("healthyBody")}</p>}
       </section>
 
-      {!a.healthy && (a.organic.length > 0 || firstProduct) && (
+      {!a.healthy && (firstText || firstProduct) && (
         <section className="first-step">
           <h2>{L("doFirst")}</h2>
-          {a.organic.length > 0 ? (
-            <p className="first-text">{pending ? <Bar w={90} /> : a.organic[0].text}</p>
+          {firstText ? (
+            <p className="first-text">{pending ? <Bar w={90} /> : firstText}</p>
           ) : firstProduct ? (
             <p className="first-text">
               {cleanLabel(firstProduct.product)}
@@ -297,8 +309,8 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             </div>
           )}
           {a.kind === "viral" && (a.bio_products.length > 0 || a.chemicals.length > 0) && <p className="notice">{L("virusNote")}</p>}
-          {a.bio_products.length > 0 && <Products lang={lang} title={L("bioProducts")} items={a.bio_products} />}
-          {a.chemicals.length > 0 && <Products lang={lang} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
+          {a.bio_products.length > 0 && <Products lang={lang} mixtures={Boolean(a.avoid_mixtures)} title={L("bioProducts")} items={a.bio_products} />}
+          {a.chemicals.length > 0 && <Products lang={lang} mixtures={Boolean(a.avoid_mixtures)} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
           {a.bio_products.length === 0 && a.chemicals.length === 0 && <p className="notice">{L("noApproved")}</p>}
           {a.bio_products.length > 0 && a.chemicals.length === 0 && <p className="body">{L("noChemicals")}</p>}
           {a.avoid && a.avoid.length > 0 && (
@@ -479,7 +491,7 @@ function SrcLink({ href, text }: { href: string; text: string }) {
   );
 }
 
-function Products({ lang, title, note, items }: { lang: Lang; title: string; note?: string; items: Treatment[] }) {
+function Products({ lang, title, note, items, mixtures = false }: { lang: Lang; title: string; note?: string; items: Treatment[]; mixtures?: boolean }) {
   const L = (k: Key) => t(lang, k);
   const [all, setAll] = useState(false);
   // Products the KB says to avoid for this problem stay hidden unless the farmer asks for all.
@@ -499,6 +511,7 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
               <div className="product-head">
                 <strong className="product-name">{cleanLabel(p.product)}</strong>
                 {p.highly_hazardous && <span className="badge danger">WHO {p.who_class}</span>}
+                {mixtures && p.mixture && <span className="badge">{L("mixtureBadge")}</span>}
               </div>
               {p.ipm_recommended && (
                 <p className="ipm">
@@ -545,11 +558,16 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
                       <span className="stat-label">
                         {p.dose_status === "seed_soil"
                           ? L(TREAT_KEY[p.dose_treatment || "seed"] || "treatSeed")
+                          : p.dose_status === "bio_water"
+                            ? L("sprayWaterPrinted")
                           : p.dose_status === "per_litre"
                             ? L("perLitre")
                             : L("asPrinted")}
                       </span>
-                      <span className="stat-value raw">{p.dose_raw}</span>
+                      <span className="stat-value raw">
+                        {p.dose_raw}
+                        {p.dose_raw_unit ? ` ${p.dose_raw_unit}` : ""}
+                      </span>
                     </div>
                   )}
                   {!p.bio && (
@@ -596,6 +614,8 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
               )}
               {(p.dose_status === "unreconciled" || p.dose_status === "low_water") && !p.dose_conflict && <p className="flag warn">{L("checkLabelDose")}</p>}
               {p.dose_status === "bio_as_printed" && /^\s*[\d.]+(\s*(-|to|–)\s*[\d.]+)?\s*$/.test(p.dose_raw) && <p className="flag warn">{L("unitNotPrinted")}</p>}
+              {p.dose_status === "bio_unit_from_code" && <p className="muted small">{L("unitFromType")}</p>}
+              {p.dose_raw_unit && p.dose_status !== "bio_as_printed" && !p.dose_per_acre && <p className="muted small">{L("unitFromType")}</p>}
               {p.note && <p className="muted small">{p.note}</p>}
               <SrcLink href={p.source.url || CIBRC_URL} text={`${L("source")}: CIB&RC${p.source.page ? `, ${L("page")} ${p.source.page}` : ""}`} />
             </li>

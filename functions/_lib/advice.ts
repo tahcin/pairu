@@ -2,7 +2,7 @@
 // and target, with banned actives removed and WHO class Ia/Ib flagged.
 import type { Data } from "./data";
 import type { Banned, Disease, RegisteredUse } from "./types";
-import { resolveDose, type DoseStatus } from "./dose";
+import { formKind, isGranule, resolveDose, type DoseStatus } from "./dose";
 
 const HA_PER_ACRE = 0.404686; // 1 acre = 0.404686 hectare
 
@@ -18,6 +18,9 @@ export interface Treatment {
   dose_per_acre: { value: string; unit: string } | null;
   dose_per_litre: { value: string; unit: string } | null;
   dose_treatment: string | null;
+  // Unit for a bare printed number, from the formulation type (ml for liquids, g for solids), so a
+  // number is never shown without a unit. Only for values of 20 or more; no per-acre figure.
+  dose_raw_unit: string | null;
   // Same product printed with doses that disagree on this card: shown once, as printed, no numbers.
   dose_conflict: { raw: string; water: string; status: string }[] | null;
   water_per_ha: string;
@@ -30,6 +33,7 @@ export interface Treatment {
   restricted: string | null;
   note: string;
   ipm_recommended: boolean;
+  mixture: boolean;
   avoid: boolean;
   source: RegisteredUse["source"];
 }
@@ -50,6 +54,9 @@ export interface AdviceCard {
   bio_products: Treatment[];
   chemicals: Treatment[];
   avoid: { text: string; source: { title: string; url: string } | null }[];
+  do_first: DoFirst;
+  first_action: { text: string; kind: string } | null;
+  avoid_mixtures: boolean;
   etl: { text: string; source: { title: string; url: string } | null } | null;
   banned_removed: number;
   prevention: string[];
@@ -144,6 +151,75 @@ function mergeConflicts(list: Treatment[], baseOf: Map<Treatment, number | null>
   return out;
 }
 
+function rawUnit(raw: string, label: string): string | null {
+  const m = (raw || "").trim().match(/^(\d+(?:\.\d+)?)(?:\s*(?:-|to|–)\s*\d+(?:\.\d+)?)?\s*(?:\/\s*ha)?$/i);
+  if (!m || parseFloat(m[1]) < 20) return null;
+  const kind = formKind(label) ?? (isGranule(label) ? "solid" : null);
+  return kind === "liquid" ? "ml" : kind === "solid" ? "g" : null;
+}
+
+// Mode-of-action spread in the three shown first: no active may appear in all three (so the farmer
+// is not offered three products of the same chemistry, for example three azoxystrobin products).
+function diversify(list: Treatment[]): Treatment[] {
+  const top: Treatment[] = [];
+  const later: Treatment[] = [];
+  for (const t of list) {
+    if (top.length >= 3) {
+      later.push(t);
+      continue;
+    }
+    const counts = new Map<string, number>();
+    for (const x of [...top, t]) for (const a of new Set(x.actives.map(norm))) counts.set(a, (counts.get(a) || 0) + 1);
+    if ([...counts.values()].some((c) => c > 2)) later.push(t);
+    else top.push(t);
+  }
+  return [...top, ...later];
+}
+
+// The "what to do first" line. The KB's first_action wins; otherwise a safe rule: for a virus,
+// removing infected plants; else the first natural option; else the first product that is not
+// highly hazardous (WHO Ia/Ib), not restricted, not avoided, not a ready-mix where mixtures are
+// advised against, not a seed/soil/nursery row and with a checked dose; else the first practice.
+export type DoFirst =
+  | { source: "first_action"; kind: string }
+  | { source: "organic"; index: number }
+  | { source: "practice"; index: number }
+  | { source: "product"; group: "bio" | "chem"; index: number }
+  | null;
+
+export function safeForFirst(t: Treatment, noMix: boolean): boolean {
+  if (t.avoid || t.restricted !== null || t.dose_conflict) return false;
+  if (t.who_class === "Ia" || t.who_class === "Ib") return false;
+  if (noMix && t.mixture) return false;
+  if (["seed_soil", "per_kg_seed", "low_water", "unreconciled", "not_a_rate"].includes(t.dose_status)) return false;
+  if (t.bio) return t.dose_status !== "bio_as_printed" || /[a-z]/i.test(t.dose_raw);
+  return Boolean(t.dose_per_acre || t.dose_per_litre);
+}
+
+function chooseFirst(d: Disease, bio: Treatment[], chem: Treatment[]): DoFirst {
+  if (d.id.endsWith("_healthy")) return null;
+  if (d.first_action?.text) return { source: "first_action", kind: d.first_action.kind || "practice" };
+  const practices = d.practices || [];
+  if (d.kind === "viral") {
+    const i = practices.findIndex((p) => /uproot|rogue|roguing|pull out|remove (and|&) (destroy|burn)|destroy (infected|affected)|remove infected|remove affected/i.test(p));
+    if (i >= 0) return { source: "practice", index: i };
+  }
+  if ((d.organic_bio || []).length) return { source: "organic", index: 0 };
+  // Mostly seed, tuber or soil treatments in the register: the problem starts in the seed or soil,
+  // so a field spray is not the first step; show the first practice (rotation, clean seed) instead.
+  const all = [...bio, ...chem];
+  const soilRows = all.filter((t) => t.dose_status === "seed_soil").length;
+  const sprayRows = all.filter((t) => t.dose_per_acre || t.dose_per_litre).length;
+  if (soilRows > 0 && soilRows >= sprayRows && practices.length) return { source: "practice", index: 0 };
+  const noMix = Boolean(d.avoid_mixtures);
+  const b = bio.findIndex((t) => safeForFirst(t, noMix));
+  if (b >= 0) return { source: "product", group: "bio", index: b };
+  const c = chem.findIndex((t) => safeForFirst(t, noMix));
+  if (c >= 0) return { source: "product", group: "chem", index: c };
+  if (practices.length) return { source: "practice", index: 0 };
+  return null;
+}
+
 // Crops whose produce is eaten as a fruit or vegetable (for the dimethoate rule).
 const FRUIT_VEG = new Set(["chilli", "tomato", "brinjal", "banana", "mango", "potato", "onion"]);
 // Restriction scopes that mean "not for field use on our crops" at all.
@@ -226,6 +302,7 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
       dose_per_acre: dose.per_acre,
       dose_per_litre: dose.per_litre || null,
       dose_treatment: dose.treatment || null,
+      dose_raw_unit: rawUnit(u.dose_formulation_raw, u.product_label),
       dose_conflict: null,
       // Water volume is only worked out per acre next to a checked per-hectare dose.
       water_per_ha: waterOk ? u.water_l_ha : "",
@@ -238,6 +315,7 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
       restricted,
       note: u.note_raw || "",
       ipm_recommended: actives.some((a) => recommended.has(norm(a))),
+      mixture: actives.length > 1,
       avoid: actives.some((a) => avoidSet.has(norm(a))),
       source: u.source,
     };
@@ -256,8 +334,17 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
   const WHO_ORDER: Record<string, number> = { U: 0, III: 1, II: 2, Ib: 4, Ia: 5 };
   // A missing WHO class is unknown, not safe, so it sorts after class II.
   const who = (t: Treatment) => (t.who_class ? WHO_ORDER[t.who_class] ?? 3 : 3);
+  const noMix = Boolean(d.avoid_mixtures);
+  // A row on a checked dose path (per acre or per litre, reconciled with the register) comes before
+  // any "read the label" row, so an unchecked row reaches the top three only when there are not
+  // three checked ones.
+  const checked = (t: Treatment) => ["inferred", "printed", "per_litre", "bio_unit_from_code"].includes(t.dose_status) && !t.dose_conflict;
   const key = (t: Treatment) => [
     Number(t.avoid),
+    Number(noMix && t.mixture),
+    Number(!checked(t)),
+    // Granules (broadcast) after sprays.
+    Number(isGranule(t.product)),
     Number(t.highly_hazardous || t.restricted !== null),
     Number(!t.ipm_recommended),
     Number(!t.dose_per_acre),
@@ -271,8 +358,8 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     return 0;
   };
   chem.sort(cmp);
-  bio.sort((a, b) => Number(b.ipm_recommended) - Number(a.ipm_recommended));
-  return { bio, chem, bannedRemoved };
+  bio.sort((a, b) => Number(!checked(a)) - Number(!checked(b)) || Number(b.ipm_recommended) - Number(a.ipm_recommended));
+  return { bio: diversify(bio), chem: diversify(chem), bannedRemoved };
 }
 
 export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
@@ -293,6 +380,9 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
       text: o.text,
       source: typeof o.source === "number" && d.sources[o.source] ? d.sources[o.source] : null,
     })),
+    do_first: chooseFirst(d, bio, chem),
+    first_action: d.first_action?.text ? { text: d.first_action.text, kind: d.first_action.kind || "practice" } : null,
+    avoid_mixtures: Boolean(d.avoid_mixtures),
     etl: d.etl && d.etl.text
       ? {
           text: d.etl.text,

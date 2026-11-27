@@ -58,7 +58,7 @@ export interface DescribeResult {
   source: "describe";
 }
 
-// Score = picked statements of the disease / statements shown for it. Decided only with at least two
+// Score = picked statements of the disease / statements shown for it. Decided only with at least three
 // matches and a clear lead; look-alikes go to the same follow-up questions; anything close is unsure.
 export function scoreDescription(data: Data, crop: string, keys: string[]): DescribeResult {
   const picked = new Map<string, number[]>();
@@ -81,7 +81,7 @@ export function scoreDescription(data: Data, crop: string, keys: string[]): Desc
   const base = { candidates, questions: [] as ReturnType<typeof questionsFor>, source: "describe" as const };
   if (!a) return { ...base, status: "unsure" };
   const clearLead = !b || (a.score >= 2 * b.score && a.n >= b.n + 1);
-  if (a.n >= 2 && clearLead) return { ...base, status: "decided" };
+  if (a.n >= 3 && clearLead) return { ...base, status: "decided" };
   if (b) {
     const da = data.diseaseById.get(a.id) as Disease;
     const db = data.diseaseById.get(b.id) as Disease;

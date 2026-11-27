@@ -50,7 +50,7 @@
   "water": "Water per acre",
   "waitBefore": "Days to wait after spraying before harvest",
   "waitUnknown": "Waiting period is not given in the list",
-  "hazardHigh": "Highly hazardous. Wear gloves, a mask and full clothes, and keep children and animals away.",
+  "hazardHigh": "Highly hazardous. Only a trained person should spray it, wearing gloves, a mask and full clothes. Keep children and animals away.",
   "restricted": "Restricted use",
   "noChemicals": "The government list has no chemical registered for this disease on this crop.",
   "bannedLeftOut": "Banned products are never shown.",
@@ -176,5 +176,13 @@
   "waitShort": "Wait before harvest",
   "daysN": "{n} days",
   "retakeShort": "Retake",
-  "confirmQ": "Do you see: {cue}?"
+  "confirmQ": "Do you see: {cue}?",
+  "footAbout": "How Pairu works",
+  "footEvidence": "Evidence",
+  "footCompare": "Plain AI vs Pairu",
+  "unsureBodyDescribe": "From the signs you chose we cannot tell which problem this is, and we would rather say so than guess. Try a photo of one sick leaf, or call the Kisan Call Centre for free advice.",
+  "tryPhoto": "Try a photo of the leaf",
+  "mixtureBadge": "mixture",
+  "sprayWaterPrinted": "Spray water, as printed",
+  "unitFromType": "The list prints no unit here; the unit comes from the product type (ml for liquids, g for powders). Check the label."
 }

@@ -10,7 +10,7 @@ import { join } from "node:path";
 const dir = mkdtempSync(join(tmpdir(), "pairu-doses-"));
 const out = join(dir, "advice.mjs");
 execFileSync("npx", ["esbuild", "functions/_lib/advice.ts", "--bundle", "--format=esm", "--platform=node", `--outfile=${out}`, "--log-level=error"]);
-const { treatmentsFor } = await import(out);
+const { treatmentsFor, buildCard } = await import(out);
 const { resolveDose, aiDose, percents, formKind, isGranule } = await import(out.replace("advice.mjs", "advice.mjs")).then(async (m) => {
   const d = join(dir, "dose.mjs");
   execFileSync("npx", ["esbuild", "functions/_lib/dose.ts", "--bundle", "--format=esm", "--platform=node", `--outfile=${d}`, "--log-level=error"]);
@@ -22,9 +22,10 @@ const uses = load("data/registered_uses.json");
 const rows = uses.filter((r) => r.crop_id);
 const counts = {};
 const kinds = {};
-const violations = { per_acre_on_seed_soil: [], liquid_in_g_or_solid_in_ml: [], over_2x_from_ai: [], bio_bare_number_without_note: [], granule_per_litre: [] };
+const violations = { seed_from_product_name_only: [], do_first_hazardous_or_restricted: [], per_acre_on_seed_soil: [], liquid_in_g_or_solid_in_ml: [], over_2x_from_ai: [], bio_bare_number_without_note: [], granule_per_litre: [] };
 const isBare = (s) => /^\s*\d+(?:\.\d+)?(?:\s*(?:-|to|–)\s*\d+(?:\.\d+)?)?\s*$/.test(s || "");
 
+const agreement = [];
 const res = rows.map((r) => {
   const d = resolveDose(r);
   counts[d.status] = (counts[d.status] || 0) + 1;
@@ -37,6 +38,11 @@ const res = rows.map((r) => {
     if ((kind === "liquid") !== liquidUnit) violations.liquid_in_g_or_solid_in_ml.push({ r, v });
   }
   if (d.per_litre && isGranule(r.product_label)) violations.granule_per_litre.push(r);
+  // "seed" only in the product name (for example Neem Seed Kernel Extract) must not make a seed treatment.
+  if (d.treatment === "seed" && /seed/i.test(r.product_label) && !/\b(FS|WS|DS|ST)\b/.test(r.product_label)) {
+    const cells = [r.dose_formulation_raw, r.dose_ai_g_ha, r.waiting_period_raw, r.water_l_ha, r.note_raw, r.target_raw].join(" ").toLowerCase();
+    if (!/seed|\/\s*kg|per\s+kg/.test(cells) && !/seed (treatment|dressing|dresser)|per\s*\d*\s*kg\s*(of\s*)?seeds?/i.test(r.product_label)) violations.seed_from_product_name_only.push(r);
+  }
   if (d.base_lo) {
     const ai = aiDose(r.dose_ai_g_ha);
     const p = percents(r.product_label);
@@ -44,6 +50,7 @@ const res = rows.map((r) => {
       const options = [ai.first / (p[0] / 100), ai.sum / (p.reduce((a, b) => a + b, 0) / 100)].flatMap((e) => [e, e * 1000]);
       const best = Math.min(...options.map((e) => Math.max(d.base_lo / e, e / d.base_lo)));
       if (best > 2) violations.over_2x_from_ai.push({ r, d, best });
+      agreement.push(best);
     }
   }
   // The app adds a "unit not printed, read the label" note to bio rows shown as a bare number.
@@ -57,9 +64,17 @@ const banned = load("data/banned.json");
 const hazard = load("data/hazard.json");
 const data = { kb, uses, banned, hazard, diseaseById: new Map(kb.diseases.map((d) => [d.id, d])) };
 let merged = 0;
+const doFirstCounts = {};
 let topThreeNotChecked = [];
 for (const dz of kb.diseases) {
   const { bio, chem } = treatmentsFor(dz, data);
+  const card = buildCard(dz, data, "en");
+  const df = card.do_first;
+  doFirstCounts[df ? (df.source === "product" ? `product (${df.group})` : df.source) : "none"] = (doFirstCounts[df ? (df.source === "product" ? `product (${df.group})` : df.source) : "none"] || 0) + 1;
+  if (df && df.source === "product") {
+    const p = (df.group === "bio" ? card.bio_products : card.chemicals)[df.index];
+    if (p.who_class === "Ia" || p.who_class === "Ib" || p.restricted) violations.do_first_hazardous_or_restricted.push({ r: { product_label: `${dz.id}: ${p.product}` } });
+  }
   for (const t of [...bio, ...chem]) if (t.dose_conflict) merged++;
   chem.slice(0, 3).forEach((t) => {
     if (!["inferred", "printed", "per_litre", "seed_soil"].includes(t.dose_status)) topThreeNotChecked.push(`${dz.id}: ${t.product} (${t.dose_conflict ? "dose differs by use" : t.dose_status})`);
@@ -77,8 +92,14 @@ console.log(`  biological, as printed with its unit or with a read-the-label not
 console.log(`  other text, as printed: ${n("not_a_rate")}`);
 console.log(`  unreconciled, as printed with a read-the-label note: ${n("unreconciled")}`);
 console.log(`products merged on a card because their doses differ by use: ${merged}`);
+console.log(`biological: spray water printed in the dose column ${n("bio_water")}, unit taken from the formulation type ${n("bio_unit_from_code")}`);
+console.log(`"what to do first" source across ${kb.diseases.length} entries: ${JSON.stringify(doFirstCounts)}`);
+const within = (x) => agreement.filter((b) => b <= x).length;
+console.log(`\nAGREEMENT WITH THE ACTIVE-INGREDIENT COLUMN: of ${agreement.length} per-acre doses shown that can be checked against the a.i. dose,`);
+console.log(`  ${((100 * within(1.1)) / agreement.length).toFixed(1)}% are within 10% of the a.i. calculation and ${((100 * within(1.25)) / agreement.length).toFixed(1)}% within 25% (all are within 1.5x by construction).\n`);
 console.log("invariants (all must be 0):");
 for (const [k, v] of Object.entries(violations)) console.log(`  ${k}: ${v.length}`);
+for (const v of [...violations.seed_from_product_name_only, ...violations.do_first_hazardous_or_restricted].slice(0, 5)) console.log("    ", v.r.product_label);
 for (const v of violations.liquid_in_g_or_solid_in_ml.slice(0, 5)) console.log("    ", v.r.product_label, JSON.stringify(v.v));
 for (const v of violations.over_2x_from_ai.slice(0, 5)) console.log("    ", v.r.product_label, v.r.dose_formulation_raw, v.best.toFixed(1));
 console.log(`top-three chemicals not on a checked path: ${topThreeNotChecked.length}`);

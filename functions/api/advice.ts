@@ -35,6 +35,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     prevention: list("prevention", card.prevention.length),
     practices: list("practices", card.practices.length),
     avoid: list("avoid", card.avoid.length),
+    first_action: typeof rv?.first_action === "string" ? rv.first_action : rv?.first_action && typeof rv.first_action === "object" && typeof rv.first_action.text === "string" ? rv.first_action.text : null,
     etl: typeof rv?.etl === "string" ? rv.etl : rv?.etl && typeof rv.etl === "object" && typeof rv.etl.text === "string" ? rv.etl.text : null,
   };
 
@@ -49,6 +50,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     ...card.practices.map((x, j) => need(x, reviewed.practices[j])),
     ...card.avoid.map((x, j) => need(x.text, reviewed.avoid[j])),
     card.etl ? need(card.etl.text, reviewed.etl) : "",
+    card.first_action ? need(card.first_action.text, reviewed.first_action) : "",
   ];
   let tr: string[];
   try {
@@ -74,6 +76,8 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   };
   const etlText = pick(reviewed.etl);
   if (card.etl) out.etl = { ...card.etl, text: etlText || card.etl.text };
+  const faText = pick(reviewed.first_action);
+  if (card.first_action) out.first_action = { ...card.first_action, text: faText || card.first_action.text };
   await kvPutJSON(env.PAIRU_CACHE, key, out, 30);
   return json({ ...out, translated: true, cached: false });
 };

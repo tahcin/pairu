@@ -380,6 +380,18 @@ tr.bare td {
   color: var(--ink-3);
   font-weight: var(--fw-medium);
 }
+.cmp-pairu-cell {
+  padding: var(--s3) var(--s4);
+  border-top: 1px solid var(--line);
+  background: var(--leaf-soft);
+}
+.cmp-pairu-cell p {
+  margin: 2px 0 0;
+  color: var(--leaf-deep) !important;
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+}
 .cmp-said p,
 .cmp-reg p {
   margin: 2px 0 0;
@@ -450,6 +462,14 @@ tr.bare td {
   }
   .cmp-cols {
     grid-template-columns: 1fr 1fr;
+  }
+  .cmp-head.three,
+  .cmp-cols.three {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cmp-pairu-cell {
+    border-top: 0;
+    border-left: 1px solid var(--line);
   }
   .cmp-reg {
     border-top: 0;

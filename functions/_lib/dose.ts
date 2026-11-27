@@ -14,6 +14,8 @@ export type DoseStatus =
   | "per_kg_seed"
   | "seed_soil"
   | "bio_as_printed"
+  | "bio_water"
+  | "bio_unit_from_code"
   | "low_water"
   | "unreconciled"
   | "not_a_rate";
@@ -107,9 +109,9 @@ export function parseRate(raw: string): { lo: number; hi: number | null; unit: U
   return { lo, hi: m[2] ? parseFloat(m[2]) : null, unit };
 }
 
+// Rounding never changes a printed value such as 12.5 kg: one decimal below 100, steps of 5 above.
 const fmt = (n: number) => {
   if (n >= 100) return String(Math.round(n / 5) * 5);
-  if (n >= 10) return String(Math.round(n));
   return String(Math.round(n * 10) / 10);
 };
 
@@ -150,14 +152,18 @@ const PER_LITRE_TEXT = /(?:per|\/)\s*(?:l|lit|litre|liter|lt)\b|\bper\s+litre|\/
 
 // Seed, tuber, sett, seedling-dip, soil and nursery treatments, detected from ANY cell of the row.
 export function treatmentKind(row: DoseRow): TreatmentKind | null {
-  const all = [row.product_label, row.dose_formulation_raw, row.dose_ai_g_ha, row.waiting_period_raw, row.water_l_ha, row.note_raw, row.target_raw]
-    .filter(Boolean)
-    .join(" | ")
-    .toLowerCase();
-  if (/\btuber|\bsett\b|\bsetts\b|seed piece|seed potato/.test(all)) return "tuber";
-  if (/nursery|seedling dip|root dip|seedling root/.test(all)) return "nursery";
-  if (/\bseed|\/\s*kg\b|per\s+kg\b/.test(all) || /\b(FS|WS|DS|ST)\b/.test(row.product_label || "")) return "seed";
-  if (/\bsoil\b|drench|furrow application|soil application/.test(all)) return "soil";
+  // The product name is never searched for words like "seed" ("Neem Seed Kernel Extract" is a
+  // foliar spray). Only the dose, a.i., waiting-period, water and note cells are, plus explicit
+  // treatment phrases and the seed-treatment formulation codes (FS, WS, DS, ST) in the label.
+  const label = (row.product_label || "").toLowerCase();
+  const cells = [row.dose_formulation_raw, row.dose_ai_g_ha, row.waiting_period_raw, row.water_l_ha, row.note_raw].filter(Boolean).join(" | ").toLowerCase();
+  const target = (row.target_raw || "").toLowerCase();
+  const explicit = (re: RegExp) => re.test(cells) || re.test(label) || re.test(target);
+  if (/\btuber|\bsett\b|\bsetts\b|seed piece|seed potato/.test(cells) || explicit(/tuber (treatment|dip)/)) return "tuber";
+  if (/nursery|seedling dip|root dip|seedling root/.test(cells) || explicit(/nursery (treatment|bed)/)) return "nursery";
+  if (/\bseeds?\b|\/\s*kg\b|per\s+kg\b/.test(cells) || explicit(/seed (treatment|dressing|dresser)|per\s*\d*\s*kg\s*(of\s*)?seeds?|\/\s*kg\s*seed/) || /\b(FS|WS|DS|ST)\b/.test(row.product_label || ""))
+    return "seed";
+  if (/\bsoil\b|drench|furrow application/.test(cells) || explicit(/soil (application|drench|treatment)/)) return "soil";
   return null;
 }
 
@@ -174,7 +180,8 @@ export function resolveDose(row: DoseRow): DoseResult {
   const kind = formKind(row.product_label) ?? (granule ? "solid" : null);
   const water = parseRate(row.water_l_ha || "");
   const drone = /drone/i.test(`${row.water_l_ha} ${row.note_raw}`);
-  const waterOk = Boolean(water && water.lo >= 100);
+  // Granules are broadcast: never shown with spray water.
+  const waterOk = Boolean(water && water.lo >= 100 && !granule);
 
   // 2. Printed as a concentration in spray water ("1 ml/litre water", "0.1%"). Not for granules.
   if (!granule && (PER_LITRE_TEXT.test(raw) || /%/.test(raw))) return asPrinted("per_litre", "printed per litre of water");
@@ -185,8 +192,13 @@ export function resolveDose(row: DoseRow): DoseResult {
 
   const rate = parseRate(raw);
   if (!rate) return asPrinted(bio ? "bio_as_printed" : "not_a_rate", "not a plain rate");
-  // Biological rows printed with a unit: shown with that unit, as printed.
+  // Biological rows printed with a unit: shown with that unit, as printed. A printed volume of 100
+  // litres or more is the spray water, not the dose (Trichoderma "500 liter/ha").
+  if (bio && rate.unit === "l" && rate.lo >= 100) return asPrinted("bio_water", "a spray-water volume printed in the dose column", { water_ok: false });
   if (bio && rate.unit) return asPrinted("bio_as_printed", "biological product with a printed unit");
+  // A granule printed with spray water and under 1 kg per hectare: the label code and dose disagree
+  // (likely a WG printed as GR), so no figure is shown.
+  if (granule && water && !rate.unit && rate.lo < 1000 && rate.lo >= 1) return asPrinted("unreconciled", "granule code but spray water and a small dose: label code and dose disagree");
 
   const ai = aiDose(row.dose_ai_g_ha);
   const pcts = percents(row.product_label);
@@ -250,6 +262,13 @@ export function resolveDose(row: DoseRow): DoseResult {
         if (hit) return perHa(s, "inferred", `inferred unit agrees with ${hit.note}`);
       }
     }
+    // A solid printed below 1 is kilograms when the a.i. column agrees (chlorothalonil 75% WP,
+    // "0.88-1.150" with a.i. "0.66-0.863" means 0.88-1.15 kg/ha). Liquids below 1 stay refused:
+    // those are usually concentrations for a dip (pencycuron "0.25-0.50").
+    if (rate.lo < 1 && !rate.unit && kind === "solid" && !bio) {
+      const hit = matchHa(1000);
+      if (hit) return perHa(1000, "inferred", `kilograms, agrees with ${hit.note}`);
+    }
     if (bio && rate.lo >= 1) {
       for (const s of [1, 1000]) {
         const hit = matchHa(s);
@@ -275,6 +294,19 @@ export function resolveDose(row: DoseRow): DoseResult {
         reason: "unit as printed; no a.i. dose to check against",
       };
     }
+  }
+  // Biological product printed as a bare number of 20 or more: the formulation type gives the unit
+  // family (EC, SC, SL are millilitres; WP, WG are grams), so the number is never shown bare.
+  if (bio && !rate.unit && kind && rate.lo >= 20 && rate.lo * 1 <= MAX_PER_HA) {
+    const hi = rate.hi;
+    return {
+      status: "bio_unit_from_code",
+      per_ha: range(rate.lo, hi, kind),
+      per_acre: range(rate.lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind),
+      base_lo: rate.lo,
+      water_ok: waterOk,
+      reason: "biological, unit from the formulation type",
+    };
   }
   return asPrinted(bio ? "bio_as_printed" : "unreconciled", "no usable unit and nothing to check it against");
 }

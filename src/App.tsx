@@ -321,7 +321,7 @@ function Farmer() {
               </button>
             )}
             <HistoryEntry lang={lang} onOpen={() => go("history")} />
-            <SiteFooter />
+            <SiteFooter lang={lang} />
           </section>
         )}
 
@@ -397,7 +397,7 @@ function Farmer() {
             {dx?.image_quality === "too_far" && <Notice text={L("tooFar")} />}
             {dx && dx.image_quality === "ok" && crop && dx.crop_detected && dx.crop_detected !== crop && !dx.crop_confident && <Notice text={L("otherCrop")} />}
             {described && <Notice text={L("photoMoreReliable")} />}
-            <p className="body">{L("unsureBody")}</p>
+            <p className="body">{described ? L("unsureBodyDescribe") : L("unsureBody")}</p>
             <button
               className="btn primary wide big"
               onClick={() => {
@@ -407,7 +407,7 @@ function Farmer() {
               }}
             >
               <Camera />
-              {L("retake")}
+              {described ? L("tryPhoto") : L("retake")}
             </button>
             <KvkHandoff lang={lang} />
           </section>
@@ -447,22 +447,23 @@ function Farmer() {
   );
 }
 
-// Links for judges, in English, at the foot of the crop screen.
-export function SiteFooter() {
+// Links for judges at the foot of the crop screen, labelled in the farmer's language (the pages
+// themselves are in English).
+export function SiteFooter({ lang }: { lang: Lang }) {
   const go = (p: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     navigate(p);
   };
   return (
-    <footer className="foot" lang="en">
+    <footer className="foot">
       <a href="/about" onClick={go("/about")}>
-        How Pairu works
+        {t(lang, "footAbout")}
       </a>
       <a href="/evidence" onClick={go("/evidence")}>
-        Evidence
+        {t(lang, "footEvidence")}
       </a>
       <a href="/compare" onClick={go("/compare")}>
-        Plain AI vs Pairu
+        {t(lang, "footCompare")}
       </a>
     </footer>
   );

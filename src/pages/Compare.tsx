@@ -1,11 +1,18 @@
-// Judge-facing page: one real chilli question put to a general AI, checked line by line against
-// the CIB&RC register. Static copy of submission/contrast.md (27 Nov 2026); nothing added.
+// Judge-facing page: one real chilli question put to plain Gemini, checked line by line against
+// the CIB&RC register (static copy of submission/contrast.md, 27 Nov 2026), side by side with what
+// Pairu's own chilli thrips card shows, fetched live from the same /api/advice the app uses.
+import { useEffect, useState } from "react";
+import { api, type Advice, type Treatment } from "../lib/api";
 import { DocBar, DocFoot } from "./Doc";
 import "./pages.css";
 
 const CIBRC_URL = "https://ppqs.gov.in/divisions/cib-rc/major-uses-of-pesticides";
 
 interface Row {
+  // Picks the products on Pairu's chilli thrips card that answer this row.
+  pairu?: (t: Treatment) => boolean;
+  pairuNone?: string;
+  pairuName?: boolean;
   said: string;
   register: string;
   problem: string;
@@ -15,30 +22,36 @@ interface Row {
 
 const ROWS: Row[] = [
   {
+    pairu: (t) => t.actives.includes("diafenthiuron"),
+    pairuNone: "Not listed",
     said: "Diafenthiuron 50% WP, 400 g per acre, for thrips",
     register: "Registered on chilli for mites only, 600 g/ha (about 243 g/acre), waiting period 3 days",
     problem: "Not approved for thrips on chilli; the dose is about 1.65 times the approved one",
     level: "bad",
   },
   {
+    pairu: (t) => /imidacloprid 17\.?8/i.test(t.product),
     said: "Imidacloprid 17.8% SL, 50 to 60 ml per acre, “budget-friendly”",
     register: "125 to 250 ml/ha (51 to 101 ml/acre), waiting period 40 days",
     problem: "Never mentions that the farmer must wait 40 days before picking, for a crop picked every week",
     level: "bad",
   },
   {
+    pairu: (t) => /^fipronil 0?5 ?% sc/i.test(t.product),
     said: "Fipronil 5% SC, 400 to 500 ml per acre",
     register: "800 to 1,000 ml/ha (324 to 405 ml/acre), waiting period 7 days",
     problem: "Upper dose up to about 1.2 times the approved one; no waiting period",
     level: "bad",
   },
   {
+    pairu: (t) => /spinetoram/i.test(t.product),
     said: "Spinetoram 11.7% SC, 180 to 200 ml per acre",
     register: "470 to 500 ml/ha (190 to 202 ml/acre), waiting period 7 days",
     problem: "Dose is right; no waiting period",
     level: "partial",
   },
   {
+    pairuName: true,
     said: "Labels the pest “తెల్లదోమ లేదా తామర పురుగులు”",
     register: "",
     problem: "తెల్లదోమ is whitefly, not thrips",
@@ -46,7 +59,34 @@ const ROWS: Row[] = [
   },
 ];
 
+function dose(t: Treatment): string {
+  const d = t.dose_per_acre ? `${t.dose_per_acre.value} ${t.dose_per_acre.unit} per acre` : t.dose_per_litre ? `${t.dose_per_litre.value} ${t.dose_per_litre.unit} per litre` : "read the label";
+  const w = t.waiting_days != null ? `, wait ${t.waiting_days} days before picking` : "";
+  return `${t.product}: ${d}${w}`;
+}
+
 export function Compare() {
+  const [card, setCard] = useState<Advice | null>(null);
+  const [te, setTe] = useState<string>("");
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    api
+      .advice("chilli_thrips", "en")
+      .then(setCard)
+      .catch(() => setFailed(true));
+    api
+      .advice("chilli_thrips", "te")
+      .then((a) => setTe(a.names?.te || a.name))
+      .catch(() => undefined);
+  }, []);
+  const pairuCell = (r: Row): string[] => {
+    if (failed) return ["Could not load Pairu's card just now."];
+    if (!card) return ["Loading Pairu's card"];
+    if (r.pairuName) return [te ? `Names it ${te} (chilli thrips) and keeps it apart from whitefly, which has its own card` : card.name];
+    const hits = [...card.bio_products, ...card.chemicals].filter((t) => r.pairu?.(t));
+    if (!hits.length) return [r.pairuNone || "Not listed"];
+    return hits.slice(0, 3).map(dose);
+  };
   return (
     <div className="app doc">
       <DocBar here="/compare" />
@@ -59,7 +99,7 @@ export function Compare() {
           </p>
         </blockquote>
         <p className="doc-lede">
-          Asked on 27 Nov 2026, 20:05 IST, through the Gemini API (model <code>gemini-3.5-flash-lite</code>, no system prompt). Every product and
+          Plain Gemini was asked on 27 Nov 2026, 20:05 IST, through the Gemini API (model <code>gemini-3.5-flash-lite</code>, no system prompt). Every product and
           dose was then checked against the CIB&amp;RC &ldquo;Major Uses of Pesticides&rdquo; register (insecticides, as on 30.09.2026) for chilli.
           Per-acre figures are per-hectare values divided by 2.471.
         </p>
@@ -68,24 +108,29 @@ export function Compare() {
           <b>None of the four products came with a waiting period before harvest, and none came with a source.</b>
         </div>
 
-        <div className="cmp-head" aria-hidden="true">
-          <span>What a general AI said</span>
+        <div className="cmp-head three" aria-hidden="true">
+          <span>Plain Gemini said</span>
           <span>What the government register approves</span>
+          <span>What Pairu&rsquo;s chilli thrips card shows (live)</span>
         </div>
         <ol className="cmp-list">
           {ROWS.map((r, i) => (
             <li key={i} className={`cmp-row ${r.level}`}>
-              <div className="cmp-cols">
+              <div className="cmp-cols three">
                 <div className="cmp-said">
-                  <span className="cmp-label">What a general AI said</span>
+                  <span className="cmp-label">Plain Gemini said</span>
                   <p>{r.said}</p>
                 </div>
-                {r.register && (
-                  <div className="cmp-reg">
-                    <span className="cmp-label">What the register approves for chilli</span>
-                    <p>{r.register}</p>
-                  </div>
-                )}
+                <div className="cmp-reg">
+                  <span className="cmp-label">What the register approves for chilli</span>
+                  <p>{r.register || "Not a product"}</p>
+                </div>
+                <div className="cmp-pairu-cell">
+                  <span className="cmp-label">What Pairu&rsquo;s chilli thrips card shows (live)</span>
+                  {pairuCell(r).map((line, j) => (
+                    <p key={j}>{line}</p>
+                  ))}
+                </div>
               </div>
               <p className="cmp-problem">
                 <span className="cmp-mark" aria-hidden="true" />
@@ -94,6 +139,12 @@ export function Compare() {
             </li>
           ))}
         </ol>
+
+        <p className="muted small">
+          About diafenthiuron: the diafenthiuron products on Pairu&rsquo;s thrips card are combinations that the register lists for chilli
+          thrips (for example Hexythiazox 3.5% + Diafenthiuron 42% WDG). Plain Diafenthiuron 50% WP, the product plain Gemini named, is registered
+          on chilli only for mites, so Pairu does not show it for thrips.
+        </p>
 
         <section className="cmp-pairu">
           <h2>Pairu on the same problem</h2>

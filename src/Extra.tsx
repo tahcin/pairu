@@ -7,6 +7,9 @@ import { CropIcon } from "./components/CropIcon";
 import { Check, ChevronRight, History, Mic } from "./components/Icons";
 import { ageDays, isDue, loadHistory, updateCheck, RECHECK_DAYS, type CheckEntry } from "./lib/history";
 
+// At most eight sign tiles at first; the rest behind "show more".
+const SYMPTOMS_FIRST = 8;
+
 export function DescribeStep({
   lang,
   crop,
@@ -22,6 +25,7 @@ export function DescribeStep({
 }) {
   const L = (k: Key) => t(lang, k);
   const [items, setItems] = useState<{ key: string; text: string }[] | null>(null);
+  const [showAll, setShowAll] = useState(false);
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [failed, setFailed] = useState(false);
   const [hint, setHint] = useState(false);
@@ -90,13 +94,18 @@ export function DescribeStep({
       )}
       {items && (
         <div className="sym-list" role="group">
-          {items.map((it) => (
+          {(showAll ? items : items.filter((it, i) => i < SYMPTOMS_FIRST || picked.has(it.key))).map((it) => (
             <button key={it.key} className={`sym ${picked.has(it.key) ? "on" : ""}`} aria-pressed={picked.has(it.key)} onClick={() => toggle(it.key)}>
               <span className="dot">{picked.has(it.key) ? <Check size={16} /> : null}</span>
               <span>{it.text}</span>
             </button>
           ))}
         </div>
+      )}
+      {items && items.length > SYMPTOMS_FIRST && (
+        <button className="btn ghost small wide" onClick={() => setShowAll(!showAll)}>
+          {showAll ? L("showLess") : `${L("showMore")} (${items.length - SYMPTOMS_FIRST})`}
+        </button>
       )}
       {hint && <p className="notice">{L("noneSelected")}</p>}
       {error && (

@@ -19,7 +19,20 @@ export type Answer = "yes" | "no" | "cannot_tell";
 
 export interface CheckQuestion extends Question {
   kind: "tell_apart" | "confirm";
+  // A confirm question whose sign is already asked by a tell-apart question (for example both ask
+  // about spindle-shaped spots): it is not shown, and a "yes" to that question confirms the sign.
+  implied_by?: string;
 }
+
+const MAX_ASK = 2;
+const CUE_STOP = new Set("the a an and or of on in with is are do you see leaf leaves spots spot".split(" "));
+const cueWords = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[^a-z\s-]/g, " ")
+    .split(/[\s-]+/)
+    .map((w) => w.replace(/(ing|ed|es|s)$/, ""))
+    .filter((w) => w.length > 2 && !CUE_STOP.has(w));
 
 export interface Check {
   set: string[];
@@ -69,7 +82,13 @@ export function checkQuestions(set: string[], byId: Map<string, Disease>): Check
   for (const id of set) {
     const cue = byId.get(id)?.photo_cues?.[0];
     if (!cue) continue;
-    qs.push({ id: confirmId(id), disease: id, question: `Do you see ${cue.trim().replace(/\.$/, "")}?`, yes: id, no: "", kind: "confirm" });
+    const cw = cueWords(cue);
+    const twin = qs.find((q) => {
+      if (q.kind !== "tell_apart" || q.yes !== id) return false;
+      const qw = new Set(cueWords(q.question));
+      return cw.length > 0 && cw.filter((w) => qw.has(w)).length / cw.length >= 0.5;
+    });
+    qs.push({ id: confirmId(id), disease: id, question: `Do you see ${cue.trim().replace(/\.$/, "")}?`, yes: id, no: "", kind: "confirm", ...(twin ? { implied_by: twin.id } : {}) });
   }
   return qs;
 }
@@ -103,8 +122,11 @@ export function resolveCheck(set: string[], questions: CheckQuestion[], answers:
   }
   const confirmed = new Set<string>();
   const unconfirmed = new Set<string>();
+  const impliedBy = new Map(questions.filter((q) => q.kind === "confirm" && q.implied_by).map((q) => [q.yes, q.implied_by as string]));
   for (const id of set) {
-    const a = norm(answers[confirmId(id)]);
+    let a = norm(answers[confirmId(id)]);
+    // A "yes" to the tell-apart question that already asks about this sign confirms it.
+    if (a === "cannot_tell" && impliedBy.has(id) && norm(answers[impliedBy.get(id) as string]) === "yes") a = "yes";
     if (a === "no") out.add(id);
     else if (a === "yes") confirmed.add(id);
     else unconfirmed.add(id);
@@ -112,12 +134,27 @@ export function resolveCheck(set: string[], questions: CheckQuestion[], answers:
   const alive = set.filter((id) => !out.has(id));
   if (!alive.length) return { status: "unsure", id: null, alive, open: [] };
   if (alive.length === 1 && confirmed.has(alive[0])) return { status: "decided", id: alive[0], alive, open: [] };
+  const seenText = new Set<string>();
   const open = questions.filter((q) =>
     q.kind === "confirm"
-      ? alive.includes(q.yes) && unconfirmed.has(q.yes)
+      ? !q.implied_by && alive.includes(q.yes) && unconfirmed.has(q.yes)
       : alive.includes(q.yes) && alive.includes(q.no) && openPairs.has([q.yes, q.no].sort().join("|")),
   );
-  return { status: open.length ? "ask" : "unsure", id: null, alive, open };
+  // Never the same question twice.
+  const uniq = open.filter((q) => {
+    const k = q.question.trim().toLowerCase();
+    if (seenText.has(k)) return false;
+    seenText.add(k);
+    return true;
+  });
+  // At most two questions, one per open pair first, so the farmer is never asked a long list.
+  const pairOf = (q: CheckQuestion) => (q.kind === "confirm" ? `c:${q.yes}` : [q.yes, q.no].sort().join("|"));
+  const firstOfPair: CheckQuestion[] = [];
+  const rest: CheckQuestion[] = [];
+  const seenPair = new Set<string>();
+  for (const q of uniq) (seenPair.has(pairOf(q)) ? rest : firstOfPair).push(q), seenPair.add(pairOf(q));
+  const ask = [...firstOfPair, ...rest].slice(0, MAX_ASK);
+  return { status: ask.length ? "ask" : "unsure", id: null, alive, open: ask };
 }
 
 export function verifyPrompt(crop: string, questions: CheckQuestion[]): string {

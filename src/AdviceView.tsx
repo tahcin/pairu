@@ -84,8 +84,9 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
     if (!a.healthy) tryLocation();
   }, [a.healthy]);
 
-  // A second look that confirmed the answer counts as sure, whatever the first look's number was.
-  const sure = by !== "describe" && (by === "answers" || verified || confidence >= 0.9);
+  // A second look that confirmed the signs shows "Checked twice" but stays a best guess: in our test
+  // it was right only about two times in three (eval/README.md). A first look at 0.9 or more was right every time.
+  const sure = by !== "describe" && (by === "answers" || confidence >= 0.9);
   const sureLine = by === "describe" ? L("fromDescription") : by === "answers" ? L("sureAnswers") : sure ? L("sureHigh") : L("sureLow");
   const sprayLine = weather ? (weather.reason === "rain" ? L("sprayRain") : weather.reason === "wind" ? L("sprayWind") : L("sprayOk")) : "";
 

@@ -55,6 +55,31 @@ Weak spots worth knowing: tomato bacterial spot (Pairu 0 of 5, mostly called ear
 
 The bare model's answers that name no disease in our matcher (14, all listed in `results.json`) were read by hand: each names a different disease or pest (for example curly top virus, powdery mildew, maize streak virus, rice leaf scald), so counting them as wrong is fair. The matcher's rules were fixed after looking at the first two answers only (bold answer first, plurals), before the rest of the run.
 
+## Diagnosis v2: decide alone only at 0.9, otherwise a second look
+
+What changed. In v1 the first look answered on its own at a confidence of 0.75 or more, and its confidence was about 0.85 for right and wrong answers alike. In v2 the first look answers on its own only at 0.9 or more. Between 0.4 and 0.9 a second look runs (`functions/_lib/verify.ts`): the model sees the same photo again and answers yes, no or cannot tell to questions taken from the knowledge base, namely the questions that tell the candidate diseases apart and one "do you see this sign?" question per candidate (the top two candidates plus the top one's look-alikes, at most four, plus healthy if the first look offered it). Code then decides: a disease survives only if its own sign is seen and no answer rules it out. One survivor is the answer, marked "Checked twice"; questions the photo could not settle go to the farmer; if nothing survives, Pairu says it is not sure. The second look uses gemini-3.5-flash-lite with gemini-3.1-flash-lite as fallback, never Claude. Below 0.4, Pairu says it is not sure.
+
+**The 0.9 threshold was chosen on half of the test set.** We split the images by the MD5 hash of the file name; the threshold was picked by looking at v1's first-look confidences on the even half only. The odd half was not used to choose anything, so its numbers are the fair, held-out ones. Numbers on all images are shown as well but include the half the threshold was tuned on.
+
+How it was run. The first look was not repeated: `run_v2.py` replays the first-look answers saved in the v1 run and calls only the second look, through an eval-only path (`/api/verify`, which answers 404 unless the local eval server sets `EVAL_DEBUG=1`) that runs the same code the app runs. 68 images went to the second look, using 68 Gemini calls and no Claude. Questions left for the farmer were answered by a script from the true label, **which is the best case**: a real farmer can misread a leaf. The second look used the knowledge base at commit 7113bef (83 entries); the first looks were made with the earlier 78-entry version, whose tomato, potato and maize lists are the same (paddy later gained three pests).
+
+| Photos of diseases Pairu holds | v1 | v2 | Bare model |
+|---|---|---|---|
+| Held-out half (n=37): right | 27 (73.0%) | 28 (75.7%) | 19 (51.4%) |
+| Held-out half: answered and wrong | 9 (24.3%) | 5 (13.5%) | 18 (48.6%) |
+| Held-out half: refused (not sure) | 1 | 4 | 0 |
+| Held-out half: farmer had to answer questions | 4 | 6 | not asked |
+| All 80: right | 57 (71.2%) | 58 (72.5%) | 38 (47.5%) |
+| All 80: answered and wrong | 16 (20.0%) | 12 (15.0%) | 42 (52.5%) |
+| All 80: refused | 7 | 10 | 0 |
+| All 80: farmer had to answer questions | 8 | 15 | not asked |
+| Diseased leaves only (n=65): right / answered and wrong | 43 / 16 | 44 / 12 | 38 / 27 |
+| Out of list (n=15): refused / named a wrong listed disease | 2 / 13 | 3 / 12 | 0 / 14 (named the true disease once) |
+
+What this shows, honestly. v2 gives about the same number of right answers as v1 and fewer confident wrong ones (5 against 9 on the held-out half, 12 against 16 on all 80), at the price of a few more refusals and of asking the farmer more often (15 times against 8). The first look on its own at 0.9 or more was right on all 23 in-list photos where it reached that level. The second look is the weak part: of the 37 in-list answers it marked as checked twice, 25 were right and 12 were wrong (for example it turned three tomato early blight photos that v1 had right into late blight). So the app shows "Checked twice" as a fact about what was done, but treats such an answer as a best guess rather than as sure. Out-of-list diseases are still mostly named as something on the list. With 37 held-out photos, a difference of one to four images is within the noise.
+
+Reproduce: start `eval/serve_local.sh`, then `python3 -I eval/run_v2.py`, then `python3 -I eval/score.py eval/runs/20261127-173944.jsonl && python3 -I eval/score_v2.py eval/runs/v2-20261127-183716.jsonl`. `results.json` keeps the v1 numbers and adds a `v2` block.
+
 ## Limits
 
 - Most images are PlantVillage lab photos of a single leaf on a plain background, which are far easier than a phone photo taken in a field. The rice images are real field photos and are reported separately.

@@ -120,3 +120,21 @@ Eight districts have no KVK of their own: Vizianagaram, Visakhapatnam, Kakinada,
 - Claude (claude-sonnet-5-5) reviewed it, one call per crop plus one call for strings added later, 13 calls in all. The review fixed meaning errors, used plain coastal Andhra village Telugu, kept product and bio-agent names in English, kept every number, and applied `glossary_te.json` the same way throughout.
 
 The reviewer's Telugu corrections (brown spot symptoms, host, velvety growth, irrigation wording, the Pseudomonas recipe, bullseye, girdle, spores, early blight naming) were given to the review as fixed wording, and a scan confirms none of the flagged words remain. A few lines were then fixed by hand (`TE_OVERRIDES` in `scripts/kb_te.py`). No Telugu agronomist has reviewed this text yet. The UI strings the reviewer flagged (`whichCrop`, `noChemicals`, `photoTip`, crop spellings) belong to the app layer.
+
+### KB round 3: second agriculture review (`submission/judging/judge2-agri-r2.md`)
+
+Fixed:
+- **Pink bollworm.** New source: ICAR-CICR Nagpur, "Strategies and advisory for cotton pest and disease management 2024-25" (copy on nsai.co.in). `recommended_actives` are now emamectin benzoate and profenofos, which CICR names for pink bollworm at 60 to 120 days after sowing. CICR also names chlorpyrifos 20 EC on its own, but we leave it out: in the register it mostly comes as a mix with a pyrethroid, and CICR says never to spray mixtures. Indoxacarb is not registered for pink bollworm, so it is out too.
+- **Pink bollworm `avoid`.** "Strictly avoid spraying pyrethroids before 120 days of sowing or any insecticide mixtures at any time", from CICR. The reviewer said 90 to 100 days; CICR says 120, and we follow CICR. The practices now include pheromone traps at 5 per hectare from 45 days, and splitting 20 green bolls per acre (CICR).
+- **Not added for pink bollworm.** Neither CICR nor DPPQS names spinetoram for pink bollworm (CICR lists it for thrips and other bollworms), so it is not in `recommended_actives`. None of the sources we read mention mating disruption (PB rope), so it is not in practices either.
+- **False smut Telugu name** is now మానిపండు తెగులు, as used on the Vikaspedia Telugu rice page (వరి).
+- **Gall midge.** The Telugu text now says ఉల్లికాడ instead of the coined "వెండి కొమ్ము". The Vikaspedia Telugu page describes the tube "ఉల్లికాడ లాగ".
+- **Groundnut late leaf spot.** The intercrop line now reads "1 row of pearl millet or sorghum for every 3 rows of groundnut". TNAU prints "pearl millet or sorghum with groundnut (1 : 3)".
+- **Chilli yellow mite.** A symptom line no longer names the mite, so the describe-symptoms tile does not give away the answer.
+
+Not KB items. These are left to DATA and APP, as the reviewer's own fixes say:
+- **Bio row on brown spot printed with "500 liter/ha".** That figure is the register's water volume. kb.json carries no such row, and the label fix belongs in the dose layer.
+- **Cyantraniliprole 18.41% SC on tomato.** The register row has 10 L water per ha and a 75-day waiting period, which points to a drone or drench use. kb.json has no application-method field; the card should say "as printed, drone or drench".
+- **"Cartap Hydrofipronil ide" label typo.** It lives in registered_uses.json (DATA).
+- **Onion thrips.** `recommended_actives` lists profenofos, which the TNAU onion page names. The register's waiting period for it on onion is long, so the app should drop any product whose waiting period runs past the crop's remaining days.
+- **Brinjal shoot and fruit borer.** Its `recommended_actives` come from TNAU and AESA, and we checked them against both. We found no newer source to rerank them.

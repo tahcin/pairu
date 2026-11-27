@@ -7,7 +7,7 @@ import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL  # noqa: E402
+from kb_authored import CROPS, PAIRS, HEALTHY, FIXES, TE as TE_NAMES, REWRITE, AVOID, REC_SET, REC_DROP, BIO_ACTIVES, ETL, REC_FILE, FIXES_ADD_PRACTICES  # noqa: E402
 
 APP = os.path.dirname(HERE)
 REV = os.path.join(HERE, "kb_reviewed")
@@ -37,6 +37,7 @@ EXTRA = {
  "ppqs_paddy_false_smut": ("DPPQS (Ministry of Agriculture): Package of practices for management of false smut of paddy", "https://ppqs.gov.in/sites/default/files/pop_for_management_of_false_smut_of_paddy.pdf"),
  "ppqs_thrips_parvispinus_core": ("DPPQS with ICAR and SAUs: Monitoring, diagnosis and management of South East Asian thrips, Thrips parvispinus, in chilli (June 2022)", "https://ppqs.gov.in/sites/default/files/south_east_asian_thrips_thrips_parvispinus-monitoring_and_management.pdf"),
  "ppqs_thrips_parvispinus_adhoc": ("DPPQS: Ad hoc management strategies on Thrips parvispinus", "https://ppqs.gov.in/sites/default/files/adhoc_management_strategies_on_thrips_parvispinus.pdf"),
+ "cicr_2024": ("ICAR-CICR Nagpur: Strategies and advisory for cotton pest and disease management, 2024-25", "https://nsai.co.in/storage/app/media/uploaded-files/ICAR-CICR_Advisory%20Pest%20and%20Disease%20Management%202024.pdf"),
  "cpn_gls": ("Crop Protection Network (US land-grant universities): Gray leaf spot of corn", "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"),
 }
 
@@ -146,9 +147,12 @@ def main():
                 if rr["active"] in REC_DROP.get(i, []) or rr["active"] in BIO_ACTIVES:
                     continue
                 pg = rr["page"]
-                f = d["text_files"][pg] if pg is not None else next(x for x in d["text_files"] if x.startswith("extra:"))
+                f = REC_FILE.get(i) or (d["text_files"][pg] if pg is not None else next(x for x in d["text_files"] if x.startswith("extra:")))
                 ra.append({"active": rr["active"], "source": sidx(f)})
             e["recommended_actives"] = ra
+            if i in FIXES_ADD_PRACTICES:
+                e["practices"] += [x for x in FIXES_ADD_PRACTICES[i] if x not in e["practices"]]
+                sidx(REC_FILE.get(i, d["text_files"][0]))
             if i in ETL:
                 e["etl"] = {"text": ETL[i][0], "source": sidx(ETL[i][1])}
         h = HEALTHY[cid]

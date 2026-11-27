@@ -1134,7 +1134,7 @@
    "pathogen": "Orseolia oryzae",
    "symptoms": [
     "The plant grows a hollow tube that looks like an onion leaf.",
-    "You may see a silvery white tube called a silver shoot.",
+    "Instead of a new leaf, the centre of the tiller comes out as a pale, hollow tube like an onion leaf (silver shoot).",
     "The infested tiller stops growing new leaves.",
     "The plant fails to produce any grain heads.",
     "Leaves may look deformed, wilted, or rolled."
@@ -1251,7 +1251,7 @@
    "crop": "paddy",
    "name_en": "False smut",
    "names": {
-    "te": "కాటుక తెగులు"
+    "te": "మానిపండు తెగులు"
    },
    "kind": "fungal",
    "pathogen": "Ustilaginoidea virens",
@@ -1322,10 +1322,14 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Rice",
      "url": "https://ppqs.gov.in/sites/default/files/rice.pdf"
+    },
+    {
+     "title": "Vikaspedia Telugu: వరి",
+     "url": "https://te.vikaspedia.in/viewcontent/agriculture/best-practices/c2fc41c35-c30c24c41c32-c36c3fc15c4dc37c23c3e-c2ac3ec20c4dc2f-c2ac4dc30c23c3ec33c3fc15/c35c3fc35c3fc27-c2ac02c1fc32c32c4b-c09c24c4dc24c2e-c2fc3ec1cc2ec3ec28c4dc2f-c2ac26c4dc27c24c41c32c41-1/వరి?lgn=te"
     }
    ],
    "names_source": {
-    "te": "descriptive"
+    "te": "vikaspedia"
    },
    "avoid": [],
    "recommended_actives": [
@@ -1814,7 +1818,9 @@
     "Use pheromone traps to monitor and catch adult moths.",
     "Pick and destroy any fallen squares, flowers, or bolls.",
     "If you see rosette flowers, pluck and destroy them immediately.",
-    "Inspect green bolls by splitting them open to check for larvae."
+    "Inspect green bolls by splitting them open to check for larvae.",
+    "Put up pheromone traps at 5 per hectare from 45 days after sowing to watch the moths.",
+    "From 60 days, pluck 20 green bolls per acre from different plants and split them open to look for larvae."
    ],
    "organic_bio": [
     {
@@ -1848,16 +1854,47 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Cotton",
      "url": "https://ppqs.gov.in/sites/default/files/cotton.pdf"
+    },
+    {
+     "title": "ICAR-CICR Nagpur: Strategies and advisory for cotton pest and disease management, 2024-25",
+     "url": "https://nsai.co.in/storage/app/media/uploaded-files/ICAR-CICR_Advisory%20Pest%20and%20Disease%20Management%202024.pdf"
     }
    ],
    "names_source": {
     "te": "descriptive"
    },
-   "avoid": [],
+   "avoid": [
+    {
+     "text": "Do not spray pyrethroids before 120 days after sowing, and never spray insecticide mixtures, to prevent whitefly and aphid outbreaks. Pyrethroids are kept for pink bollworm after 120 days.",
+     "actives": [
+      "cypermethrin",
+      "alpha-cypermethrin",
+      "beta-cypermethrin",
+      "zeta-cypermethrin",
+      "deltamethrin",
+      "fenvalerate",
+      "esfenvalerate",
+      "lambda-cyhalothrin",
+      "gamma-cyhalothrin",
+      "bifenthrin",
+      "fenpropathrin",
+      "permethrin",
+      "cyfluthrin",
+      "beta-cyfluthrin",
+      "fluvalinate",
+      "tau-fluvalinate"
+     ],
+     "source": 3
+    }
+   ],
    "recommended_actives": [
     {
-     "active": "chlorpyrifos",
-     "source": 1
+     "active": "emamectin benzoate",
+     "source": 3
+    },
+    {
+     "active": "profenofos",
+     "source": 3
     }
    ],
    "etl": {
@@ -3329,7 +3366,7 @@
    ],
    "favourable_conditions": "",
    "prevention": [
-    "Plant groundnut with pearl millet or sorghum in a 1 to 3 ratio.",
+    "Grow 1 row of pearl millet or sorghum for every 3 rows of groundnut.",
     "Rotate your groundnut with cereal crops instead of other hosts.",
     "Dig deep to bury any old crop remains in the soil.",
     "Pull out and remove any groundnut plants that grow on their own."

@@ -257,7 +257,7 @@ TE = {
  "paddy_blast": ("అగ్గి తెగులు", "p24"), "paddy_brown_spot": ("గోధుమ రంగు ఆకుమచ్చ తెగులు", "descriptive"),
  "paddy_blb": ("బ్యాక్టీరియా ఎండాకు తెగులు", "p12"), "paddy_sheath_blight": ("పాముపొడ తెగులు", "p12"),
  "paddy_bph": ("సుడిదోమ", "p24"), "paddy_stem_borer": ("కాండం తొలిచే పురుగు", "p24"),
- "paddy_leaf_folder": ("ఆకుముడత పురుగు", "p11"), "paddy_gall_midge": ("ఉల్లికోడు", "p24"), "paddy_false_smut": ("కాటుక తెగులు", "descriptive"),
+ "paddy_leaf_folder": ("ఆకుముడత పురుగు", "p11"), "paddy_gall_midge": ("ఉల్లికోడు", "p24"), "paddy_false_smut": ("మానిపండు తెగులు", "p32"),
  "cotton_bacterial_blight": ("నల్లమచ్చ తెగులు", "p31"), "cotton_alternaria_leaf_spot": ("ఆల్టర్నేరియా ఆకుమచ్చ తెగులు", "descriptive"),
  "cotton_grey_mildew": ("బూడిద రంగు బూజు తెగులు", "descriptive"), "cotton_pink_bollworm": ("గులాబీ రంగు కాయతొలుచు పురుగు", "descriptive"),
  "cotton_whitefly": ("తెల్లదోమ", "p19"), "cotton_jassid": ("పచ్చదోమ", "p19"),
@@ -316,3 +316,19 @@ ETL = {
  "blackgram_pod_borer": ("3 caterpillars per plant.", "greenblack_crop_prot_crop_insect_pul_bla_and_20green_2.txt"),
 }
 REC_SET["maize_fall_armyworm"] = ["emamectin benzoate", "spinosad", "chlorantraniliprole"]
+
+# Pink bollworm (round 3): ICAR-CICR "Strategies and advisory for cotton pest and disease management 2024-25"
+# names profenofos, emamectin benzoate, indoxacarb or chlorpyrifos 20 EC (single product) at 60 to 120 days, and pyrethroids
+# only after 120 days. Indoxacarb is not registered for pink bollworm in the CIB&RC list, so it is left out.
+REC_FILE = {"cotton_pink_bollworm": "extra:cicr_2024"}
+REC_SET["cotton_pink_bollworm"] = ["emamectin benzoate", "profenofos"]
+AVOID["cotton_pink_bollworm"] = [
+ {"text": "Do not spray pyrethroids before 120 days after sowing, and never spray insecticide mixtures, to prevent whitefly and aphid outbreaks. Pyrethroids are kept for pink bollworm after 120 days.",
+  "file": "extra:cicr_2024", "actives": PYRETHROIDS}]
+FIXES_ADD_PRACTICES = {"cotton_pink_bollworm": ["Put up pheromone traps at 5 per hectare from 45 days after sowing to watch the moths.",
+                                                "From 60 days, pluck 20 green bolls per acre from different plants and split them open to look for larvae."]}
+
+REWRITE.update({
+ "Plant groundnut with pearl millet or sorghum in a 1 to 3 ratio.": "Grow 1 row of pearl millet or sorghum for every 3 rows of groundnut.",
+ "You may see a silvery white tube called a silver shoot.": "Instead of a new leaf, the centre of the tiller comes out as a pale, hollow tube like an onion leaf (silver shoot).",
+})

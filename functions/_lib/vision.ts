@@ -7,6 +7,9 @@ export const PRIMARY = "gemini-3.1-flash-lite";
 export const SECONDARY = "gemini-3.5-flash-lite";
 export const LAST_RESORT = "claude-haiku-5-5";
 
+// A slow model call falls back to the next model instead of hanging.
+export const MODEL_TIMEOUT_MS = 12000;
+
 export const QUALITIES = ["ok", "blurry", "not_a_plant", "too_far"] as const;
 
 export interface VisionOut {
@@ -85,6 +88,7 @@ async function callGemini(env: Env, model: string, prompt: string, imageB64: str
       contents: [{ role: "user", parts: [{ inline_data: { mime_type: "image/jpeg", data: imageB64 } }, { text: prompt }] }],
       generationConfig: { responseMimeType: "application/json", responseSchema: schema },
     }),
+    signal: AbortSignal.timeout(MODEL_TIMEOUT_MS),
   });
   if (!res.ok) throw new Error(`${model} ${res.status}: ${(await res.text()).slice(0, 300)}`);
   const body = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
@@ -93,7 +97,7 @@ async function callGemini(env: Env, model: string, prompt: string, imageB64: str
 }
 
 async function callClaude(env: Env, prompt: string, imageB64: string, ids: string[], cropIds: string[]): Promise<VisionOut> {
-  const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+  const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, timeout: MODEL_TIMEOUT_MS, maxRetries: 0 });
   const schema = {
     type: "object",
     additionalProperties: false,

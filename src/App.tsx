@@ -316,7 +316,7 @@ function Farmer() {
           <>
             {error && !advice && (
               <section>
-                <ErrorBox text={error === "offline" ? L("offline") : L("error")} />
+                <ErrorBox text={error === "offline" ? L("offline") : error === "rate_limited" ? L("rateLimited") : L("error")} />
                 <button className="btn primary wide" onClick={() => final && setFinal({ ...final })}>
                   {L("tryAgain")}
                 </button>
@@ -544,7 +544,7 @@ function PhotoStep(props: {
             )}
           </div>
 
-          {props.error && <ErrorBox text={props.error === "offline" ? L("offline") : L("error")} />}
+          {props.error && <ErrorBox text={props.error === "offline" ? L("offline") : props.error === "rate_limited" ? L("rateLimited") : L("error")} />}
           <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt" || !online}>
             {L("check")}
           </button>

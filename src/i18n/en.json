@@ -114,5 +114,6 @@
   "s_tomato_healthy": "Tomato, healthy leaf",
   "s_potato_early_blight": "Potato, dark brown spots",
   "s_rice_brownspot": "Paddy, small brown spots",
-  "s_rice_blast": "Paddy, blurry photo (shows the not-sure path)"
+  "s_rice_blast": "Paddy, blurry photo (shows the not-sure path)",
+  "rateLimited": "Too many checks from this phone in a short time. Please wait a few minutes and try again."
 }

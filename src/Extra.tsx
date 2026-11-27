@@ -130,10 +130,8 @@ export function HistoryEntry({ lang, onOpen }: { lang: Lang; onOpen: () => void 
       )}
       <button className="row-btn" onClick={onOpen}>
         <span className="row-icon">{last.thumb ? <img src={last.thumb} alt="" /> : <History />}</span>
-        <span className="row-label">
-          {t(lang, "myChecks")}
-          <span className="row-sub">{list.length}</span>
-        </span>
+        <span className="row-label">{t(lang, "myChecks")}</span>
+        <span className="count-pill">{list.length}</span>
         <ChevronRight />
       </button>
     </div>

@@ -316,6 +316,17 @@ h3 {
   font-size: var(--fs-xs);
   color: var(--ink-3);
 }
+.count-pill {
+  min-width: 30px;
+  height: 30px;
+  padding: 0 var(--s2);
+  border-radius: var(--r-pill);
+  background: var(--paper-sunk);
+  display: grid;
+  place-items: center;
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
 .row-action {
   font-size: var(--fs-sm);
   color: var(--leaf);

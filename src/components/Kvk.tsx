@@ -112,7 +112,6 @@ export function KvkHandoff({ lang }: { lang: Lang }) {
           <button className="row-btn compact" onClick={() => setPicker(true)}>
             <span className="row-label">
               {district ? districtLabel(district, lang) : t(lang, "chooseDistrict")}
-              {!district && <span className="row-sub">{t(lang, "pickDistrictKvk")}</span>}
             </span>
             <span className="row-action">{district ? t(lang, "changeDistrict") : ""}</span>
             <ChevronRight />

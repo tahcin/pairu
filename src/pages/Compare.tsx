@@ -80,10 +80,12 @@ export function Compare() {
                   <span className="cmp-label">What a general AI said</span>
                   <p>{r.said}</p>
                 </div>
-                <div className="cmp-reg">
-                  <span className="cmp-label">What the register approves for chilli</span>
-                  <p>{r.register || <span className="muted">Not a register question</span>}</p>
-                </div>
+                {r.register && (
+                  <div className="cmp-reg">
+                    <span className="cmp-label">What the register approves for chilli</span>
+                    <p>{r.register}</p>
+                  </div>
+                )}
               </div>
               <p className="cmp-problem">
                 <span className="cmp-mark" aria-hidden="true" />

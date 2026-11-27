@@ -139,7 +139,7 @@ function Stack({ name, n, right, wrong, unsure, note, best }: { name: string; n:
           {unsure ? <span className="seg unsure" style={{ width: `${pc(unsure)}%` }} title={`Said not sure: ${unsure} of ${n}`} /> : null}
         </div>
       ) : (
-        <div className="stack empty-stack">not run</div>
+        <div className="stack empty-stack">no result</div>
       )}
       <p className="stack-foot">
         {ok ? `${right} right, ${wrong} wrong, ${unsure ?? 0} not sure, of ${n} photos` : ""}

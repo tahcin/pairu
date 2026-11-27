@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, type Advice, type Treatment, type Weather } from "./lib/api";
 import { Player, speakWithBrowser, stopBrowserSpeech } from "./lib/audio";
-import { t, type Key, type Lang } from "./i18n";
-import { Check, Leaf, Share, Speaker, StopIcon, Warn } from "./components/Icons";
-import { KCC } from "./App";
+import { t, tf, type Key, type Lang } from "./i18n";
+import { Camera, Check, ChevronDown, ChevronRight, Clock, External, Leaf, Share, Speaker, StopIcon, Sun, Warn } from "./components/Icons";
+import { KCC, Sheet } from "./App";
 import { DISTRICTS, nearestDistrict, saveDistrict, savedDistrict } from "./lib/place";
 import { KvkHandoff } from "./components/Kvk";
 
@@ -176,47 +176,73 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
     window.open(`https://wa.me/?text=${encodeURIComponent(lines.filter(Boolean).join("\n"))}`, "_blank", "noopener");
   };
 
+
+  // The single most useful next step, shown right under the diagnosis: the first natural option,
+  // else the first approved biological product, else the first approved chemical the IPM
+  // package does not warn against.
+  const firstProduct = [...a.bio_products, ...a.chemicals].find((p) => !p.avoid);
+  const jumpToTreat = () => document.getElementById("treat")?.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <article className="advice">
       {a.fixture && <p className="fixture">{L("sampleData")}</p>}
 
-      <section className="card hero-card">
-        {photo && <img className="thumb" src={photo} alt="" />}
-        <div>
-          <p className="muted small">{cropName}</p>
-          <h1 className="title">{a.healthy ? L("healthyTitle") : title || <Bar w={60} tall />}</h1>
-          {!a.healthy && (
-            <p className="muted small">
-              {a.name_en}
-              {a.pathogen ? ` · ${a.pathogen}` : ""}
-            </p>
-          )}
-        </div>
+      <section className="result-hero">
+        {photo && (
+          <div className="hero-photo">
+            <img src={photo} alt="" />
+          </div>
+        )}
+        <p className="crop-line">{cropName}</p>
+        <h1 className="disease">{a.healthy ? L("healthyTitle") : title || <Bar w={60} tall />}</h1>
+        {!a.healthy && (
+          <p className="sci" lang="en">
+            {a.name_en}
+            {a.pathogen ? ` · ${a.pathogen}` : ""}
+          </p>
+        )}
         <div className={`sure ${sure ? "high" : "low"}`}>
-          <span>{sureLine}</span>
-          {verified && <span className="muted small">{L("checkedTwice")}</span>}
-          {by === "model" && !verified && (
-            <span className="meter" aria-label={`${pct} / 100`}>
-              <span style={{ width: `${pct}%` }} />
-              <b>{pct} / 100</b>
-            </span>
-          )}
-          {usedNote && <span className="muted small">{L("fromWords")}</span>}
-          {by === "describe" && <span className="muted small">{L("photoMoreReliable")}</span>}
+          <span className="sure-icon">{sure ? <Check size={18} /> : <Warn size={18} />}</span>
+          <div className="sure-text">
+            <strong>{sureLine}</strong>
+            {verified && <span>{L("checkedTwice")}</span>}
+            {by === "model" && !verified && (
+              <span className="meter" role="img" aria-label={`${pct} / 100`}>
+                <span className="meter-track">
+                  <span className="meter-fill" style={{ width: `${pct}%` }} />
+                </span>
+                <b>{pct} / 100</b>
+              </span>
+            )}
+            {usedNote && <span>{L("fromWords")}</span>}
+            {by === "describe" && <span>{L("photoMoreReliable")}</span>}
+          </div>
         </div>
         {a.healthy && <p className="body">{L("healthyBody")}</p>}
       </section>
 
-      <div className="actions">
-        <button className={`btn primary ${voice !== "idle" ? "active" : ""}`} onClick={listen} disabled={pending}>
-          {voice === "idle" ? <Speaker /> : <StopIcon />}
-          {voice === "loading" ? L("loadingAudio") : voice === "playing" ? L("stop") : L("listen")}
-        </button>
-        <button className="btn whatsapp" onClick={share}>
-          <Share />
-          {L("share")}
-        </button>
-      </div>
+      {!a.healthy && (a.organic.length > 0 || firstProduct) && (
+        <section className="first-step">
+          <h2>{L("doFirst")}</h2>
+          {a.organic.length > 0 ? (
+            <p className="first-text">{pending ? <Bar w={90} /> : a.organic[0].text}</p>
+          ) : firstProduct ? (
+            <p className="first-text">
+              {cleanLabel(firstProduct.product)}
+              {firstProduct.dose_per_acre && firstProduct.dose_per_ha && (
+                <span className="first-sub">
+                  {L("perAcre")}: {firstProduct.dose_per_acre.value} {firstProduct.dose_per_acre.unit}
+                </span>
+              )}
+            </p>
+          ) : null}
+          <button className="btn on-leaf wide" onClick={jumpToTreat}>
+            {L("seeAllSteps")}
+            <ChevronDown size={20} />
+          </button>
+        </section>
+      )}
+
       {voiceMsg && (
         <p className="notice" role="alert">
           {voiceMsg}
@@ -224,12 +250,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
       )}
 
       {!a.healthy && a.symptoms.length > 0 && (
-        <section className="card">
-          <h2>{L("secSymptoms")}</h2>
+        <Fold title={L("secSymptoms")} open>
           <ul className="list">
             {a.symptoms.map((s, i) => (
               <li key={i} className={seen.includes(i) ? "seen" : ""}>
-                <span className="dot">{seen.includes(i) ? <Check size={16} /> : null}</span>
+                <span className="dot">{seen.includes(i) ? <Check size={14} /> : null}</span>
                 <span>
                   {pending ? <Bar w={70 + ((i * 17) % 25)} /> : s}
                   {seen.includes(i) && <span className="tag">{by === "describe" ? L("youSaidSee") : L("seenInPhoto")}</span>}
@@ -238,30 +263,25 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             ))}
           </ul>
           {a.favourable_conditions && !pending && (
-            <p className="body small-gap">
+            <p className="aside">
               <strong>{L("spreadsWhen")}: </strong>
               {a.favourable_conditions}
             </p>
           )}
-        </section>
+        </Fold>
       )}
 
       {!a.healthy && (
-        <section className="card">
-          <h2>{L("secDo")}</h2>
+        <Fold title={L("secDo")} open id="treat">
           {a.etl && (
             <div className="etl">
               <h3>{L("sprayYet")}</h3>
               {pending ? <Bar w={85} /> : <p>{a.etl.text}</p>}
-              {a.etl.source && (
-                <a className="src-link" href={a.etl.source.url} target="_blank" rel="noopener">
-                  {L("source")}: {a.etl.source.title}
-                </a>
-              )}
+              {a.etl.source && <SrcLink href={a.etl.source.url} text={`${L("source")}: ${a.etl.source.title}`} />}
             </div>
           )}
           {a.organic.length > 0 && (
-            <>
+            <div className="group">
               <h3>
                 <Leaf size={18} />
                 {L("naturalFirst")}
@@ -270,15 +290,11 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
                 {a.organic.map((o, i) => (
                   <li key={i}>
                     {pending ? <Bar w={80} /> : <span>{o.text}</span>}
-                    {o.source && (
-                      <a className="src-link" href={o.source.url} target="_blank" rel="noopener">
-                        {L("source")}: {o.source.title}
-                      </a>
-                    )}
+                    {o.source && <SrcLink href={o.source.url} text={`${L("source")}: ${o.source.title}`} />}
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
           )}
           {a.kind === "viral" && (a.bio_products.length > 0 || a.chemicals.length > 0) && <p className="notice">{L("virusNote")}</p>}
           {a.bio_products.length > 0 && <Products lang={lang} title={L("bioProducts")} items={a.bio_products} />}
@@ -295,105 +311,97 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
                 {a.avoid.map((x, i) => (
                   <li key={i}>
                     {pending ? <Bar w={80} /> : x.text}
-                    {x.source && (
-                      <a className="src-link" href={x.source.url} target="_blank" rel="noopener">
-                        {L("source")}: {x.source.title}
-                      </a>
-                    )}
+                    {x.source && <SrcLink href={x.source.url} text={`${L("source")}: ${x.source.title}`} />}
                   </li>
                 ))}
               </ul>
             </div>
           )}
-          <p className="muted small">
+          <p className="legal">
             {L("bannedLeftOut")} {L("legalNote")}
           </p>
-        </section>
+        </Fold>
       )}
 
       {!a.healthy && weatherState === "needs_place" && (
-        <section className="card">
-          <h2>{L("secWeather")}</h2>
-          <button className="btn ghost wide" onClick={() => setPicker(true)}>
-            {L("checkWeather")}
+        <section className="card weather">
+          <h2 className="card-title">{L("secWeather")}</h2>
+          <button className="row-btn compact" onClick={() => setPicker(true)}>
+            <span className="row-icon">
+              <Sun />
+            </span>
+            <span className="row-label">{L("checkWeather")}</span>
+            <ChevronRight />
           </button>
         </section>
       )}
       {picker && (
-        <div className="sheet-backdrop" onClick={() => setPicker(false)}>
-          <div className="sheet" role="dialog" aria-modal="true" aria-label={L("checkWeather")} onClick={(e) => e.stopPropagation()}>
-            <div className="sheet-head">
-              <h2>{L("checkWeather")}</h2>
-              <button className="chip" onClick={() => setPicker(false)}>
-                {L("close")}
+        <Sheet title={L("checkWeather")} closeLabel={L("close")} onClose={() => setPicker(false)}>
+          <button
+            className="btn primary wide"
+            onClick={() => {
+              setPicker(false);
+              tryLocation();
+            }}
+          >
+            {L("useLocation")}
+          </button>
+          <p className="muted small sheet-note">{L("pickDistrict")}</p>
+          <div className="district-list">
+            {DISTRICTS.map((d) => (
+              <button
+                key={d.name}
+                className="district"
+                onClick={() => {
+                  setPicker(false);
+                  saveDistrict(d.name);
+                  window.dispatchEvent(new Event("pairu:district"));
+                  loadWeather(d.lat, d.lon, lang === "te" ? d.te : d.name);
+                }}
+              >
+                {lang === "te" ? d.te : d.name}
               </button>
-            </div>
-            <button
-              className="btn primary wide"
-              onClick={() => {
-                setPicker(false);
-                tryLocation();
-              }}
-            >
-              {L("useLocation")}
-            </button>
-            <p className="muted small">{L("pickDistrict")}</p>
-            <div className="district-list">
-              {DISTRICTS.map((d) => (
-                <button
-                  key={d.name}
-                  className="district"
-                  onClick={() => {
-                    setPicker(false);
-                    saveDistrict(d.name);
-                    window.dispatchEvent(new Event("pairu:district"));
-                    loadWeather(d.lat, d.lon, lang === "te" ? d.te : d.name);
-                  }}
-                >
-                  {lang === "te" ? d.te : d.name}
-                </button>
-              ))}
-            </div>
+            ))}
           </div>
-        </div>
+        </Sheet>
       )}
       {weather && (
         <section className={`card weather ${weather.spray_ok ? "ok" : "no"}`}>
-          <h2>{L("secWeather")}</h2>
-          {place && <p className="muted small">{place}</p>}
-          <p className="body">{sprayLine}</p>
+          <h2 className="card-title">{L("secWeather")}</h2>
+          <div className="weather-verdict">
+            <span className="weather-icon">{weather.spray_ok ? <Check size={20} /> : <Warn size={20} />}</span>
+            <p>{sprayLine}</p>
+          </div>
           <p className="muted small">
+            {place ? `${place} · ` : ""}
             {L("rainNext24")}: {weather.rain_24h_mm} mm · {L("wind")}: {weather.wind_kmh} km/h
           </p>
         </section>
       )}
 
       {a.prevention.length > 0 && (
-        <section className="card">
-          <h2>{L("secPrevent")}</h2>
+        <Fold title={L("secPrevent")} open={Boolean(a.healthy)}>
           <ul className="list plain">
             {a.prevention.map((p, i) => (
               <li key={i}>{pending ? <Bar w={75} /> : p}</li>
             ))}
           </ul>
-        </section>
+        </Fold>
       )}
 
       {a.practices.length > 0 && (
-        <section className="card">
-          <h2>{L("secPractice")}</h2>
+        <Fold title={L("secPractice")} open={Boolean(a.healthy)}>
           <ul className="list plain">
             {a.practices.map((p, i) => (
               <li key={i}>{pending ? <Bar w={75} /> : p}</li>
             ))}
           </ul>
-        </section>
+        </Fold>
       )}
 
       <KvkHandoff lang={lang} />
 
-      <section className="card sources">
-        <h2>{L("secSources")}</h2>
+      <Fold title={L("secSources")} className="sources">
         {lang === "te" && <p className="muted small">{L("aiReviewed")}</p>}
         {lang !== "te" && lang !== "en" && <p className="muted small">{L("machineTranslated")}</p>}
         <ul>
@@ -426,12 +434,48 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, v
             </li>
           )}
         </ul>
-      </section>
+      </Fold>
 
       <button className="btn ghost wide" onClick={onRestart}>
+        <Camera size={22} />
         {L("startOver")}
       </button>
+
+      <div className="action-bar">
+        <div className="action-bar-inner">
+          <button className={`btn primary listen ${voice !== "idle" ? "active" : ""}`} onClick={listen} disabled={pending}>
+            {voice === "idle" ? <Speaker /> : voice === "loading" ? <span className="spinner" aria-hidden="true" /> : <StopIcon />}
+            {voice === "loading" ? L("loadingAudio") : voice === "playing" ? L("stop") : L("listen")}
+          </button>
+          <button className="btn whatsapp" onClick={share} aria-label={L("share")}>
+            <Share />
+            <span className="share-label">{L("share")}</span>
+          </button>
+        </div>
+      </div>
     </article>
+  );
+}
+
+// A collapsible card. Native <details>, so it works with the keyboard and screen readers.
+function Fold({ title, open, id, className, children }: { title: string; open?: boolean; id?: string; className?: string; children: React.ReactNode }) {
+  return (
+    <details className={`card fold ${className || ""}`} open={open} id={id}>
+      <summary>
+        <h2 className="card-title">{title}</h2>
+        <ChevronDown />
+      </summary>
+      <div className="fold-body">{children}</div>
+    </details>
+  );
+}
+
+function SrcLink({ href, text }: { href: string; text: string }) {
+  return (
+    <a className="src-link" href={href} target="_blank" rel="noopener">
+      {text}
+      <External size={14} />
+    </a>
   );
 }
 
@@ -442,130 +486,129 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
   const preferred = items.filter((p) => !p.avoid);
   const shown = all ? items : preferred.slice(0, SHOW_FIRST);
   return (
-    <>
+    <div className="group">
       <h3>{title}</h3>
-      {note && <p className="muted small">{note}</p>}
+      {note && <p className="muted small group-note">{note}</p>}
       <ul className="products">
-        {shown.map((p, i) => (
-          <li key={i} className="product">
-            <div className="product-head">
-              <strong>{cleanLabel(p.product)}</strong>
-              {p.highly_hazardous && <span className="badge danger">WHO {p.who_class}</span>}
-            </div>
-            {p.ipm_recommended && <p className="ipm">{L("ipmRecommended")}</p>}
-            {p.avoid && <p className="restricted">{L("avoidTitle")}</p>}
-            {p.highly_hazardous && (
-              <p className="hazard">
-                <Warn size={18} />
-                {L("hazardHigh")}
-              </p>
-            )}
-            {p.restricted && (
-              <p className="restricted">
-                <strong>{L("restricted")}: </strong>
-                {p.restricted}
-              </p>
-            )}
-            <dl className="facts">
-              {p.dose_per_acre && p.dose_per_ha && (
-                <div>
-                  <dt>{L("perAcre")}</dt>
-                  <dd>
-                    <b>
-                      {p.dose_per_acre.value} {p.dose_per_acre.unit}
-                    </b>
-                  </dd>
-                </div>
+        {shown.map((p, i) => {
+          const perAcre = p.dose_per_acre && p.dose_per_ha;
+          const rawDose = !p.dose_conflict && !p.dose_per_acre && !p.dose_per_litre && p.dose_raw;
+          const hasDose = perAcre || p.dose_per_litre || rawDose;
+          return (
+            <li key={i} className={`product ${p.highly_hazardous ? "hazardous" : ""} ${p.avoid ? "avoided" : ""}`}>
+              <div className="product-head">
+                <strong className="product-name">{cleanLabel(p.product)}</strong>
+                {p.highly_hazardous && <span className="badge danger">WHO {p.who_class}</span>}
+              </div>
+              {p.ipm_recommended && (
+                <p className="ipm">
+                  <Check size={14} />
+                  {L("ipmRecommended")}
+                </p>
               )}
-              {p.dose_per_acre && p.dose_per_ha && (
-                <div>
-                  <dt>{L("perHectareShort")}</dt>
-                  <dd>
-                    {p.dose_per_ha.value} {p.dose_per_ha.unit}
-                  </dd>
-                </div>
+              {p.avoid && <p className="flag warn">{L("avoidTitle")}</p>}
+              {p.highly_hazardous && (
+                <p className="flag danger">
+                  <Warn size={18} />
+                  {L("hazardHigh")}
+                </p>
               )}
-              {p.dose_per_litre && (
-                <div className="full">
-                  <dt>{L("perLitre")}</dt>
-                  <dd>
-                    <b>
-                      {p.dose_per_litre.value} {p.dose_per_litre.unit}
-                    </b>
-                  </dd>
+              {p.restricted && (
+                <p className="flag warn">
+                  <strong>{L("restricted")}: </strong>
+                  {p.restricted}
+                </p>
+              )}
+              {(hasDose || !p.bio) && (
+                <div className="stats">
+                  {perAcre && (
+                    <div className="stat">
+                      <span className="stat-label">{L("perAcre")}</span>
+                      <span className="stat-value">
+                        {p.dose_per_acre!.value} {p.dose_per_acre!.unit}
+                      </span>
+                      <span className="stat-sub">
+                        {L("perHectareShort")}: {p.dose_per_ha!.value} {p.dose_per_ha!.unit}
+                      </span>
+                    </div>
+                  )}
+                  {p.dose_per_litre && (
+                    <div className="stat">
+                      <span className="stat-label">{L("perLitre")}</span>
+                      <span className="stat-value">
+                        {p.dose_per_litre.value} {p.dose_per_litre.unit}
+                      </span>
+                    </div>
+                  )}
+                  {rawDose && (
+                    <div className="stat">
+                      <span className="stat-label">
+                        {p.dose_status === "seed_soil"
+                          ? L(TREAT_KEY[p.dose_treatment || "seed"] || "treatSeed")
+                          : p.dose_status === "per_litre"
+                            ? L("perLitre")
+                            : L("asPrinted")}
+                      </span>
+                      <span className="stat-value raw">{p.dose_raw}</span>
+                    </div>
+                  )}
+                  {!p.bio && (
+                    <div className="stat wait">
+                      <span className="stat-label">
+                        <Clock size={15} />
+                        {L("waitShort")}
+                      </span>
+                      {p.waiting_days != null ? (
+                        <span className="stat-value">{tf(lang, "daysN", { n: p.waiting_days })}</span>
+                      ) : p.waiting_raw && p.waiting_raw !== "-" ? (
+                        <span className="stat-value raw">{p.waiting_raw}</span>
+                      ) : (
+                        <span className="stat-value none">{L("waitUnknown")}</span>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
               {p.dose_conflict && (
-                <div className="full">
-                  <dt>{L("doseDiffers")}</dt>
-                  <dd>
-                    <ul className="variants">
-                      {p.dose_conflict.map((v, i) => (
-                        <li key={i}>
-                          {v.raw}
-                          {v.water ? ` · ${L("waterAsPrinted")}: ${v.water}` : ""}
-                        </li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              )}
-              {!p.dose_conflict && !p.dose_per_acre && !p.dose_per_litre && p.dose_raw && (
-                <div className="full">
-                  <dt>
-                    {p.dose_status === "seed_soil"
-                      ? L(TREAT_KEY[p.dose_treatment || "seed"] || "treatSeed")
-                      : p.dose_status === "per_litre"
-                        ? L("perLitre")
-                        : L("asPrinted")}
-                  </dt>
-                  <dd>{p.dose_raw}</dd>
+                <div className="fact">
+                  <span className="stat-label">{L("doseDiffers")}</span>
+                  <ul className="variants">
+                    {p.dose_conflict.map((v, j) => (
+                      <li key={j}>
+                        {v.raw}
+                        {v.water ? ` · ${L("waterAsPrinted")}: ${v.water}` : ""}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
               {p.water_per_acre && (
-                <div>
-                  <dt>{L("water")}</dt>
-                  <dd>{p.water_per_acre}</dd>
-                </div>
+                <p className="fact-line">
+                  <span>{L("water")}</span>
+                  <b>{p.water_per_acre}</b>
+                </p>
               )}
               {p.water_note && p.water_note.trim() !== "-" && (
-                <div className="full">
-                  <dt>{L("howToUse")}</dt>
-                  <dd>{p.water_note}</dd>
-                </div>
+                <p className="fact-line stacked">
+                  <span>{L("howToUse")}</span>
+                  {p.water_note}
+                </p>
               )}
-              {!p.bio && (
-                <div>
-                  <dt>{L("waitBefore")}</dt>
-                  <dd>
-                    {p.waiting_days != null ? (
-                      <b>{p.waiting_days}</b>
-                    ) : p.waiting_raw && p.waiting_raw !== "-" ? (
-                      p.waiting_raw
-                    ) : (
-                      <span className="muted">{L("waitUnknown")}</span>
-                    )}
-                  </dd>
-                </div>
-              )}
-            </dl>
-            {(p.dose_status === "unreconciled" || p.dose_status === "low_water") && !p.dose_conflict && <p className="restricted">{L("checkLabelDose")}</p>}
-            {p.dose_status === "bio_as_printed" && /^\s*[\d.]+(\s*(-|to|–)\s*[\d.]+)?\s*$/.test(p.dose_raw) && (
-              <p className="restricted">{L("unitNotPrinted")}</p>
-            )}
-            {p.note && <p className="muted small">{p.note}</p>}
-            <p className="muted small">
-              {L("source")}: CIB&RC{p.source.page ? `, ${L("page")} ${p.source.page}` : ""}
-            </p>
-          </li>
-        ))}
+              {(p.dose_status === "unreconciled" || p.dose_status === "low_water") && !p.dose_conflict && <p className="flag warn">{L("checkLabelDose")}</p>}
+              {p.dose_status === "bio_as_printed" && /^\s*[\d.]+(\s*(-|to|–)\s*[\d.]+)?\s*$/.test(p.dose_raw) && <p className="flag warn">{L("unitNotPrinted")}</p>}
+              {p.note && <p className="muted small">{p.note}</p>}
+              <SrcLink href={p.source.url || CIBRC_URL} text={`${L("source")}: CIB&RC${p.source.page ? `, ${L("page")} ${p.source.page}` : ""}`} />
+            </li>
+          );
+        })}
       </ul>
       {(all ? items.length > preferred.slice(0, SHOW_FIRST).length : items.length > shown.length) && (
-        <button className="btn ghost small" onClick={() => setAll(!all)}>
+        <button className="btn ghost small wide" onClick={() => setAll(!all)}>
           {all ? L("showLess") : `${L("showMore")} (${items.length - shown.length})`}
+          <ChevronDown size={18} />
         </button>
       )}
-    </>
+    </div>
   );
 }
 

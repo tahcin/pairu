@@ -1,16 +1,20 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { api, type Advice, type CropInfo, type Diagnosis, type Question } from "./lib/api";
 import { compressImage } from "./lib/image";
 import { useVoice } from "./lib/useVoice";
-import { LANGUAGES, langName, t, type Key, type Lang } from "./i18n";
+import { LANGUAGES, langName, loadLang, t, tf, type Key, type Lang } from "./i18n";
 import { CropIcon } from "./components/CropIcon";
 import { KvkHandoff } from "./components/Kvk";
 import { DescribeStep, HistoryEntry, HistoryScreen } from "./Extra";
 import { addCheck, makeThumb, updateCheck, type CheckEntry } from "./lib/history";
-import { Back, Camera, Gallery, Globe, Mic, Phone } from "./components/Icons";
-import { AdviceView } from "./AdviceView";
-import { About } from "./pages/About";
-import { Evidence } from "./pages/Evidence";
+import { Back, Camera, Check, ChevronRight, Close, Cross, Gallery, Globe, ListIcon, Mark, Mic, Phone, Question as QuestionIcon, Sun } from "./components/Icons";
+
+// The advice card and the English pages for judges load on demand, so the first screen stays small.
+const loadAdvice = () => import("./AdviceView");
+const AdviceView = lazy(() => loadAdvice().then((m) => ({ default: m.AdviceView })));
+const About = lazy(() => import("./pages/About").then((m) => ({ default: m.About })));
+const Evidence = lazy(() => import("./pages/Evidence").then((m) => ({ default: m.Evidence })));
+const Compare = lazy(() => import("./pages/Compare").then((m) => ({ default: m.Compare })));
 
 export const KCC = "1800-180-1551";
 const CROP_ORDER = ["paddy", "chilli", "cotton", "groundnut", "maize", "blackgram", "tomato", "brinjal", "banana", "mango", "cashew", "onion", "potato"];
@@ -42,8 +46,8 @@ export default function App() {
     window.addEventListener("popstate", on);
     return () => window.removeEventListener("popstate", on);
   }, []);
-  if (path.startsWith("/about")) return <About />;
-  if (path.startsWith("/evidence")) return <Evidence />;
+  const page = path.startsWith("/about") ? <About /> : path.startsWith("/evidence") ? <Evidence /> : path.startsWith("/compare") ? <Compare /> : null;
+  if (page) return <Suspense fallback={<div className="app" />}>{page}</Suspense>;
   return <Farmer />;
 }
 
@@ -76,12 +80,18 @@ function Farmer() {
       .catch(() => setError("error"));
   }, []);
 
+  // Fetch the advice card's code while the farmer is still taking the photo.
+  useEffect(() => {
+    if (step === "photo" || step === "describe") loadAdvice().catch(() => undefined);
+  }, [step]);
+
   const go = (s: Step) => {
     setStep(s);
     window.scrollTo(0, 0);
   };
 
-  const chooseLang = (l: Lang) => {
+  const chooseLang = async (l: Lang) => {
+    await loadLang(l);
     setLang(l);
     store("pairu.lang", l);
     go(advice ? "advice" : photo ? "photo" : "crop");
@@ -213,6 +223,8 @@ function Farmer() {
   };
 
   const cropName = (id: string) => crops.find((c) => c.id === id)?.names?.[lang] || t(lang, `crop_${id}` as Key);
+  const errorText = (e: string) => (e === "offline" ? L("offline") : e === "rate_limited" ? L("rateLimited") : L("error"));
+  const q = step === "ask" && dx ? dx.questions[qIndex] : null;
 
   return (
     <div className="app">
@@ -223,74 +235,90 @@ function Farmer() {
           </button>
         ) : (
           <span className="brand">
-            <span className="brand-mark" aria-hidden="true" />
+            <Mark />
             {lang === "te" ? "పైరు" : "Pairu"}
           </span>
         )}
         {step !== "lang" && (
-          <button className="chip" onClick={() => go("lang")}>
+          <button className="chip" onClick={() => go("lang")} aria-label={`${L("language")}: ${langName(lang)}`}>
             <Globe size={18} />
             {langName(lang)}
           </button>
         )}
       </header>
 
-      <main className="main">
+      <main className="main" key={step}>
         {step === "lang" && (
-          <section>
-            <div className="intro" lang="te">
-              <p lang="te">{t("te", "tagline")}</p>
-              <p lang="hi">{t("hi", "tagline")}</p>
-              <p lang="en">{t("en", "tagline")}</p>
+          <section className="screen lang-screen">
+            <div className="hello">
+              <h1 className="display" lang="te">
+                {t("te", "chooseLanguage")}
+              </h1>
+              <p className="hello-sub">
+                <span lang="hi">{t("hi", "chooseLanguage")}</span>
+                <span lang="en">{t("en", "chooseLanguage")}</span>
+              </p>
             </div>
-            <h1 className="title center">భాష · भाषा · Language</h1>
             <div className="lang-grid">
               {LANGUAGES.map((l, i) => (
                 <button key={l.code} className={`lang-btn ${i === 0 ? "first" : ""} ${l.code === lang && saved ? "on" : ""}`} lang={l.code} onClick={() => chooseLang(l.code)}>
                   <span className="native">{l.native}</span>
                   {l.code !== "en" && <span className="sub">{l.english}</span>}
+                  {i === 0 && <ChevronRight size={22} />}
                 </button>
               ))}
+            </div>
+            <div className="what-card">
+              <p lang="te">{t("te", "tagline")}</p>
+              <p lang="en">{t("en", "tagline")}</p>
             </div>
           </section>
         )}
 
         {step === "crop" && (
-          <section>
-            <p className="lede">{L("tagline")}</p>
-            <h1 className="title">{L("whichCrop")}</h1>
+          <section className="screen">
+            <h1 className="display">{L("whichCrop")}</h1>
             {error && !crops.length && <ErrorBox text={L("error")} />}
-            <div className="crop-grid">
-              {crops.map((c) => (
+            {!crops.length && !error && (
+              <div className="crop-grid" aria-hidden="true">
+                {CROP_ORDER.map((c) => (
+                  <span key={c} className="crop-tile skeleton" />
+                ))}
+              </div>
+            )}
+            {crops.length > 0 && (
+              <div className="crop-grid">
+                {crops.map((c) => (
+                  <button
+                    key={c.id}
+                    className="crop-tile"
+                    onClick={() => {
+                      setCrop(c.id);
+                      go("photo");
+                    }}
+                  >
+                    <span className="crop-art">
+                      <CropIcon id={c.id} size={52} />
+                    </span>
+                    <span className="crop-name">{cropName(c.id)}</span>
+                  </button>
+                ))}
                 <button
-                  key={c.id}
-                  className="crop-tile"
+                  className="crop-tile other"
                   onClick={() => {
-                    setCrop(c.id);
+                    setCrop(null);
                     go("photo");
                   }}
                 >
-                  <CropIcon id={c.id} />
-                  <span>{cropName(c.id)}</span>
+                  <span className="crop-art">
+                    <CropIcon id="unknown" size={44} />
+                  </span>
+                  <span className="crop-name">{L("dontKnowCrop")}</span>
                 </button>
-              ))}
-              <button
-                className="crop-tile other"
-                onClick={() => {
-                  setCrop(null);
-                  go("photo");
-                }}
-              >
-                <CropIcon id="unknown" />
-                <span>{L("dontKnowCrop")}</span>
-              </button>
-            </div>
+              </div>
+            )}
             <HistoryEntry lang={lang} onOpen={() => go("history")} />
-            <footer className="foot">
-              <a href="/about" onClick={(e) => (e.preventDefault(), navigate("/about"))}>
-                About Pairu (English)
-              </a>
-            </footer>
+            <SiteFooter />
           </section>
         )}
 
@@ -310,53 +338,65 @@ function Farmer() {
           />
         )}
 
-        {step === "describe" && crop && (
-          <DescribeStep lang={lang} crop={crop} cropName={cropName(crop)} onCheck={runDescribe} error={error} />
-        )}
+        {step === "describe" && crop && <DescribeStep lang={lang} crop={crop} cropName={cropName(crop)} onCheck={runDescribe} error={error} />}
 
         {step === "history" && <HistoryScreen lang={lang} cropName={cropName} onOpen={reopen} />}
 
-        {step === "working" && <Working lang={lang} photo={photo?.preview || null} />}
+        {step === "working" && <Working lang={lang} photo={photo?.preview || null} crop={crop} cropName={crop ? cropName(crop) : ""} />}
 
-        {step === "ask" && dx && dx.questions[qIndex] && (
-          <section className="ask">
-            {photo && <img className="preview small" src={photo.preview} alt="" />}
-            <h1 className="title">{L("askTitle")}</h1>
-            <p className="muted">{L("askSub")}</p>
+        {q && dx && (
+          <section className="screen ask">
+            {photo && (
+              <div className="ask-photo">
+                <img src={photo.preview} alt="" />
+              </div>
+            )}
+            <p className="ask-count">{tf(lang, "qOf", { n: qIndex + 1, total: dx.questions.length })}</p>
             <div className="steps" aria-hidden="true">
-              {dx.questions.map((q, i) => (
-                <span key={q.id} className={i <= qIndex ? "on" : ""} />
+              {dx.questions.map((qq, i) => (
+                <span key={qq.id} className={i < qIndex ? "done" : i === qIndex ? "on" : ""} />
               ))}
             </div>
-            <p className="question">{dx.questions[qIndex].question}</p>
+            <div className="question-wrap" key={q.id}>
+              <h1 className="question">{q.question}</h1>
+              <p className="muted">{L("askSub")}</p>
+            </div>
             <div className="yesno">
-              <button className="btn yes" onClick={() => answer(dx.questions[qIndex], true)}>
+              <button className="btn yes" onClick={() => answer(q, true)}>
+                <Check size={26} />
                 {L("yes")}
               </button>
-              <button className="btn no" onClick={() => answer(dx.questions[qIndex], false)}>
+              <button className="btn no" onClick={() => answer(q, false)}>
+                <Cross size={26} />
                 {L("no")}
               </button>
             </div>
-            <button className="btn ghost wide" onClick={() => answer(dx.questions[qIndex], null)}>
+            <button className="btn quiet wide" onClick={() => answer(q, null)}>
               {L("notSureAnswer")}
             </button>
           </section>
         )}
 
         {step === "unsure" && (
-          <section className="unsure">
-            {photo && <img className="preview small" src={photo.preview} alt="" />}
-            <h1 className="title">{L("unsureTitle")}</h1>
-            {dx?.image_quality === "blurry" && <p className="notice">{L("blurry")}</p>}
-            {dx?.image_quality === "not_a_plant" && <p className="notice">{L("notPlant")}</p>}
-            {dx?.image_quality === "too_far" && <p className="notice">{L("tooFar")}</p>}
-            {dx && dx.image_quality === "ok" && crop && dx.crop_detected && dx.crop_detected !== crop && !dx.crop_confident && (
-              <p className="notice">{L("otherCrop")}</p>
-            )}
-            {described && <p className="notice">{L("photoMoreReliable")}</p>}
+          <section className="screen unsure">
+            <div className="unsure-head">
+              {photo ? (
+                <img className="unsure-photo" src={photo.preview} alt="" />
+              ) : (
+                <span className="unsure-icon">
+                  <QuestionIcon size={30} />
+                </span>
+              )}
+              <h1 className="title">{L("unsureTitle")}</h1>
+            </div>
+            {dx?.image_quality === "blurry" && <Notice text={L("blurry")} />}
+            {dx?.image_quality === "not_a_plant" && <Notice text={L("notPlant")} />}
+            {dx?.image_quality === "too_far" && <Notice text={L("tooFar")} />}
+            {dx && dx.image_quality === "ok" && crop && dx.crop_detected && dx.crop_detected !== crop && !dx.crop_confident && <Notice text={L("otherCrop")} />}
+            {described && <Notice text={L("photoMoreReliable")} />}
             <p className="body">{L("unsureBody")}</p>
             <button
-              className="btn primary wide"
+              className="btn primary wide big"
               onClick={() => {
                 setPhoto(null);
                 setDx(null);
@@ -373,33 +413,29 @@ function Farmer() {
         {step === "advice" && (
           <>
             {error && !advice && (
-              <section>
-                <ErrorBox text={error === "offline" ? L("offline") : error === "rate_limited" ? L("rateLimited") : L("error")} />
+              <section className="screen">
+                <ErrorBox text={errorText(error)} />
                 <button className="btn primary wide" onClick={() => final && setFinal({ ...final })}>
                   {L("tryAgain")}
                 </button>
               </section>
             )}
-            {!advice && !error && (
-              <section className="working">
-                {photo && <img className="preview small" src={photo.preview} alt="" />}
-                <div className="scanbar" aria-hidden="true" />
-                <h1 className="title center">{L("checkingMedicines")}</h1>
-              </section>
-            )}
+            {!advice && !error && <Working lang={lang} photo={photo?.preview || null} crop={crop} cropName={crop ? cropName(crop) : ""} medicines />}
             {advice && final && (
-              <AdviceView
-                lang={lang}
-                advice={advice}
-                photo={photo?.preview || null}
-                cropName={cropName(advice.crop)}
-                by={final.by}
-                confidence={final.confidence}
-                verified={final.verified}
-                seen={final.seen}
-                usedNote={Boolean(note.trim())}
-                onRestart={reset}
-              />
+              <Suspense fallback={<Working lang={lang} photo={photo?.preview || null} crop={crop} cropName={crop ? cropName(crop) : ""} medicines />}>
+                <AdviceView
+                  lang={lang}
+                  advice={advice}
+                  photo={photo?.preview || null}
+                  cropName={cropName(advice.crop)}
+                  by={final.by}
+                  confidence={final.confidence}
+                  verified={final.verified}
+                  seen={final.seen}
+                  usedNote={Boolean(note.trim())}
+                  onRestart={reset}
+                />
+              </Suspense>
             )}
           </>
         )}
@@ -408,19 +444,69 @@ function Farmer() {
   );
 }
 
-// Calm progress while the vision model works: the message changes once if it takes a while.
-function Working({ lang, photo }: { lang: Lang; photo: string | null }) {
-  const [slow, setSlow] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setSlow(true), 6000);
-    return () => clearTimeout(t);
-  }, []);
+// Links for judges, in English, at the foot of the crop screen.
+export function SiteFooter() {
+  const go = (p: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(p);
+  };
   return (
-    <section className="working" aria-live="polite">
-      {photo && <img className="preview" src={photo} alt="" />}
-      <div className="scanbar" aria-hidden="true" />
-      <h1 className="title center">{slow ? t(lang, "stillLooking") : t(lang, "working")}</h1>
-      {!slow && <p className="muted center">{t(lang, "workingSub")}</p>}
+    <footer className="foot" lang="en">
+      <a href="/about" onClick={go("/about")}>
+        How Pairu works
+      </a>
+      <a href="/evidence" onClick={go("/evidence")}>
+        Evidence
+      </a>
+      <a href="/compare" onClick={go("/compare")}>
+        Plain AI vs Pairu
+      </a>
+    </footer>
+  );
+}
+
+// While the vision model works: the photo with a slow scanning light over it, and the steps Pairu
+// really takes (first look, compare with the closed list, a second look when needed), each
+// ticked as the next begins. The timing is approximate; the steps themselves are what the server does.
+function Working({ lang, photo, crop, cropName, medicines }: { lang: Lang; photo: string | null; crop: string | null; cropName: string; medicines?: boolean }) {
+  const [phase, setPhase] = useState(0);
+  useEffect(() => {
+    if (medicines) return;
+    const a = setTimeout(() => setPhase(1), 2200);
+    const b = setTimeout(() => setPhase(2), 6000);
+    return () => {
+      clearTimeout(a);
+      clearTimeout(b);
+    };
+  }, [medicines]);
+  const lines: Key[] = medicines ? ["checkingMedicines"] : ["wk1", "wk2", "wk3"];
+  return (
+    <section className="screen working" aria-live="polite">
+      <div className={`scan ${photo ? "" : "no-photo"}`}>
+        {photo ? (
+          <img src={photo} alt="" />
+        ) : (
+          <span className="scan-crop">
+            <CropIcon id={crop || "unknown"} size={96} />
+          </span>
+        )}
+        <span className="scan-light" aria-hidden="true" />
+        <span className="frame-corners" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+          <i />
+        </span>
+      </div>
+      <ol className="progress">
+        {lines.map((k, i) => (
+          <li key={k} className={i < phase ? "done" : i === phase ? "now" : "next"}>
+            <span className="pdot">{i < phase ? <Check size={14} /> : null}</span>
+            <span>{k === "wk2" ? (cropName ? tf(lang, "wk2", { crop: cropName }) : t(lang, "wk2any")) : t(lang, k)}</span>
+          </li>
+        ))}
+      </ol>
+      {phase === 2 && !medicines && <p className="muted small center fade-in">{t(lang, "stillLooking")}</p>}
     </section>
   );
 }
@@ -446,10 +532,14 @@ function idx(id: string) {
 
 export function ErrorBox({ text }: { text: string }) {
   return (
-    <p className="notice" role="alert">
+    <p className="notice error" role="alert">
       {text}
     </p>
   );
+}
+
+export function Notice({ text }: { text: string }) {
+  return <p className="notice">{text}</p>;
 }
 
 export function KccCard({ lang }: { lang: Lang }) {
@@ -458,12 +548,41 @@ export function KccCard({ lang }: { lang: Lang }) {
       <span className="kcc-icon">
         <Phone />
       </span>
-      <span>
+      <span className="kcc-text">
         <strong>{t(lang, "callKcc")}</strong>
         <span className="kcc-num">{KCC}</span>
         <span className="muted small">{t(lang, "kccFree")}</span>
       </span>
     </a>
+  );
+}
+
+// A bottom sheet with a title and a close button, shared by samples and district pickers.
+export function Sheet({ title, closeLabel, onClose, children }: { title: string; closeLabel: string; onClose: () => void; children: React.ReactNode }) {
+  const closeRef = useRef(onClose);
+  closeRef.current = onClose;
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => e.key === "Escape" && closeRef.current();
+    window.addEventListener("keydown", k);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", k);
+      document.body.style.overflow = "";
+    };
+  }, []);
+  return (
+    <div className="sheet-backdrop" onClick={onClose}>
+      <div className="sheet" role="dialog" aria-modal="true" aria-label={title} onClick={(e) => e.stopPropagation()}>
+        <div className="sheet-grip" aria-hidden="true" />
+        <div className="sheet-head">
+          <h2>{title}</h2>
+          <button className="icon-btn round" onClick={onClose} aria-label={closeLabel}>
+            <Close />
+          </button>
+        </div>
+        {children}
+      </div>
+    </div>
   );
 }
 
@@ -516,33 +635,59 @@ function PhotoStep(props: {
   const stopRec = voice.stop;
 
   return (
-    <section className="photo">
+    <section className="screen photo">
       <div className="picked">
-        <CropIcon id={props.crop || "unknown"} size={32} />
+        <CropIcon id={props.crop || "unknown"} size={28} />
         <span>{props.cropName}</span>
       </div>
       <input ref={cameraRef} type="file" accept="image/*" capture="environment" hidden onChange={(e) => onFile(e.target.files?.[0])} />
       <input ref={galleryRef} type="file" accept="image/*" hidden onChange={(e) => onFile(e.target.files?.[0])} />
 
-      {!online && <p className="notice">{L("offlineCheck")}</p>}
+      {!online && <Notice text={L("offlineCheck")} />}
       {!photo ? (
         <>
-          <button className="camera-hero" onClick={() => cameraRef.current?.click()} disabled={busy}>
-            <span className="camera-ring">
-              <Camera size={44} />
+          <h1 className="title">{L("takePhotoTitle")}</h1>
+          <button className={`viewfinder ${busy ? "busy" : ""}`} onClick={() => cameraRef.current?.click()} disabled={busy}>
+            <span className="frame-corners" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <i />
             </span>
-            <span className="camera-label">{L("takePhoto")}</span>
+            <svg className="leaf-guide" viewBox="0 0 120 120" aria-hidden="true">
+              <path d="M60 108V64" />
+              <path d="M60 66C60 34 80 14 108 12c-2 30-22 50-48 54z" />
+              <path d="M60 80C58 56 42 40 14 40c2 24 18 38 46 40z" />
+            </svg>
+            <span className="shutter">
+              <span className="shutter-ring">
+                <Camera size={34} />
+              </span>
+              <span className="shutter-label">{L("takePhoto")}</span>
+            </span>
           </button>
-          <p className="muted center">{L("photoTip")}</p>
-          <button className="btn ghost wide" onClick={() => galleryRef.current?.click()}>
-            <Gallery />
-            {L("fromGallery")}
-          </button>
-          {props.crop && (
-            <button className="text-link" onClick={props.onDescribe}>
-              {L("describeInstead")}
+          <p className="tip">
+            <Sun size={20} />
+            <span>{L("photoTip")}</span>
+          </p>
+          <div className="alt-actions">
+            <button className="row-btn" onClick={() => galleryRef.current?.click()}>
+              <span className="row-icon">
+                <Gallery />
+              </span>
+              <span className="row-label">{L("fromGallery")}</span>
+              <ChevronRight />
             </button>
-          )}
+            {props.crop && (
+              <button className="row-btn" onClick={props.onDescribe}>
+                <span className="row-icon">
+                  <ListIcon />
+                </span>
+                <span className="row-label">{L("describeInstead")}</span>
+                <ChevronRight />
+              </button>
+            )}
+          </div>
           <button className="text-link" onClick={() => setSamples(true)}>
             {L("trySample")}
           </button>
@@ -550,46 +695,55 @@ function PhotoStep(props: {
         </>
       ) : (
         <>
-          <img className="preview" src={photo.preview} alt="" />
-          <button className="btn ghost wide" onClick={() => cameraRef.current?.click()}>
-            <Camera size={22} />
-            {L("retake")}
-          </button>
-
-          {voice.supported && <div className="speak">
-            <p className="muted">{L("speakOptional")}</p>
-            <button
-              className={`mic ${mic === "rec" ? "rec" : ""}`}
-              onPointerDown={(e) => {
-                e.preventDefault();
-                startRec();
-              }}
-              onPointerUp={stopRec}
-              onPointerLeave={stopRec}
-              onPointerCancel={stopRec}
-              onContextMenu={(e) => e.preventDefault()}
-              disabled={mic === "stt"}
-            >
-              <Mic />
-              <span>{mic === "rec" ? L("listening") : mic === "stt" ? L("transcribing") : L("holdToSpeak")}</span>
+          <div className="photo-frame">
+            <img src={photo.preview} alt="" />
+            <button className="retake-pill" onClick={() => cameraRef.current?.click()}>
+              <Camera size={18} />
+              {L("retakeShort")}
             </button>
-            {mic === "denied" && <p className="notice">{L("micDenied")}</p>}
-            {mic === "error" && <p className="notice">{L("micUnsupported")}</p>}
-            {note && (
-              <div className="said">
-                <span className="muted small">{L("youSaid")}</span>
-                <p>{note}</p>
-                <button className="link" onClick={() => setNote("")}>
-                  ×
-                </button>
-              </div>
-            )}
-          </div>}
+          </div>
+
+          {voice.supported && (
+            <div className="speak">
+              <p className="speak-hint">{L("speakOptional")}</p>
+              <button
+                className={`mic ${mic === "rec" ? "rec" : ""}`}
+                onPointerDown={(e) => {
+                  e.preventDefault();
+                  startRec();
+                }}
+                onPointerUp={stopRec}
+                onPointerLeave={stopRec}
+                onPointerCancel={stopRec}
+                onContextMenu={(e) => e.preventDefault()}
+                disabled={mic === "stt"}
+              >
+                <span className="mic-icon">
+                  <Mic size={24} />
+                </span>
+                <span>{mic === "rec" ? L("listening") : mic === "stt" ? L("transcribing") : L("holdToSpeak")}</span>
+              </button>
+              {mic === "denied" && <Notice text={L("micDenied")} />}
+              {mic === "error" && <Notice text={L("micUnsupported")} />}
+              {note && (
+                <div className="said">
+                  <span className="muted small">{L("youSaid")}</span>
+                  <p>{note}</p>
+                  <button className="icon-btn round said-clear" onClick={() => setNote("")} aria-label={L("close")}>
+                    <Close size={18} />
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
 
           {props.error && <ErrorBox text={props.error === "offline" ? L("offline") : props.error === "rate_limited" ? L("rateLimited") : L("error")} />}
-          <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt" || !online}>
-            {L("check")}
-          </button>
+          <div className="sticky-cta">
+            <button className="btn primary wide big" onClick={props.onCheck} disabled={mic === "rec" || mic === "stt" || !online}>
+              {L("check")}
+              <ChevronRight size={22} />
+            </button>
+          </div>
         </>
       )}
     </section>
@@ -614,24 +768,16 @@ export const SAMPLES: Sample[] = [
 
 function SampleSheet({ lang, onPick, onClose }: { lang: Lang; onPick: (s: Sample) => void; onClose: () => void }) {
   return (
-    <div className="sheet-backdrop" onClick={onClose}>
-      <div className="sheet" role="dialog" aria-modal="true" aria-label={t(lang, "sampleTitle")} onClick={(e) => e.stopPropagation()}>
-        <div className="sheet-head">
-          <h2>{t(lang, "sampleTitle")}</h2>
-          <button className="chip" onClick={onClose}>
-            {t(lang, "close")}
+    <Sheet title={t(lang, "sampleTitle")} closeLabel={t(lang, "close")} onClose={onClose}>
+      <p className="muted small sheet-note">{t(lang, "sampleNote")}</p>
+      <div className="sample-grid">
+        {SAMPLES.map((s) => (
+          <button key={s.file} className="sample" onClick={() => onPick(s)}>
+            <img src={`/samples/${s.file}`} alt="" loading="lazy" />
+            <span>{t(lang, s.key)}</span>
           </button>
-        </div>
-        <p className="muted small">{t(lang, "sampleNote")}</p>
-        <div className="sample-grid">
-          {SAMPLES.map((s) => (
-            <button key={s.file} className="sample" onClick={() => onPick(s)}>
-              <img src={`/samples/${s.file}`} alt="" loading="lazy" />
-              <span>{t(lang, s.key)}</span>
-            </button>
-          ))}
-        </div>
+        ))}
       </div>
-    </div>
+    </Sheet>
   );
 }

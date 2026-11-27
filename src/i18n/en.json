@@ -165,5 +165,15 @@
   "machineTranslated": "This advice was translated by a computer from English. Some words may be unusual.",
   "s_tomato_late_blight": "Tomato, dark wet-looking patches",
   "s_tomato_leaf_curl": "Tomato, small curled yellowing leaves",
-  "crop_cashew": "Cashew"
+  "crop_cashew": "Cashew",
+  "doFirst": "What to do first",
+  "seeAllSteps": "See every treatment",
+  "wk1": "Looking at the leaf",
+  "wk2": "Comparing it with the diseases of {crop}",
+  "wk2any": "Comparing it with the diseases we know",
+  "wk3": "Taking a second, closer look",
+  "qOf": "Question {n} of {total}",
+  "waitShort": "Wait before harvest",
+  "daysN": "{n} days",
+  "retakeShort": "Retake"
 }

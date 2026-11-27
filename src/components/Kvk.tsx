@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { t, type Lang } from "../i18n";
 import { DISTRICTS, saveDistrict, savedDistrict } from "../lib/place";
-import { Phone } from "./Icons";
+import { ChevronRight, Phone } from "./Icons";
+import { KccCard, Sheet } from "../App";
 
 interface KvkRow {
   district: string;
@@ -39,23 +40,15 @@ export function districtLabel(name: string, lang: Lang) {
 
 export function DistrictSheet({ lang, title, onPick, onClose }: { lang: Lang; title: string; onPick: (name: string) => void; onClose: () => void }) {
   return (
-    <div className="sheet-backdrop" onClick={onClose}>
-      <div className="sheet" role="dialog" aria-modal="true" aria-label={title} onClick={(e) => e.stopPropagation()}>
-        <div className="sheet-head">
-          <h2>{title}</h2>
-          <button className="chip" onClick={onClose}>
-            {t(lang, "close")}
+    <Sheet title={title} closeLabel={t(lang, "close")} onClose={onClose}>
+      <div className="district-list">
+        {DISTRICTS.map((d) => (
+          <button key={d.name} className="district" onClick={() => onPick(d.name)}>
+            {lang === "te" ? d.te : d.name}
           </button>
-        </div>
-        <div className="district-list">
-          {DISTRICTS.map((d) => (
-            <button key={d.name} className="district" onClick={() => onPick(d.name)}>
-              {lang === "te" ? d.te : d.name}
-            </button>
-          ))}
-        </div>
+        ))}
       </div>
-    </div>
+    </Sheet>
   );
 }
 
@@ -92,41 +85,40 @@ export function KvkHandoff({ lang }: { lang: Lang }) {
   }
   return (
     <section className="card handoff">
-      <h2>{kvks.length ? t(lang, "talkKvk") : t(lang, "talkExpert")}</h2>
+      <h2 className="card-title">{t(lang, "talkExpert")}</h2>
+      <KccCard lang={lang} />
       {kvks.length > 0 && (
-        <>
+        <div className="kvk-block">
+          <h3>{t(lang, "talkKvk")}</h3>
           {nearestOther && <p className="muted small">{t(lang, "nearestKvkOther")}</p>}
           {district && mine.length > 0 ? (
             mine.map((k, i) => (
               <div key={i} className="kvk">
                 <strong>{k.name}</strong>
                 {k.address && <p className="muted small">{k.address}</p>}
-                {phones(k.phone).map((p) => (
-                  <a key={p} className="btn ghost wide tel" href={`tel:${p.replace(/[^\d+]/g, "")}`}>
-                    <Phone size={20} />
-                    {p}
-                  </a>
-                ))}
+                <div className="tel-list">
+                  {phones(k.phone).map((p) => (
+                    <a key={p} className="btn ghost tel" href={`tel:${p.replace(/[^\d+]/g, "")}`}>
+                      <Phone size={20} />
+                      {p}
+                    </a>
+                  ))}
+                </div>
               </div>
             ))
-          ) : (
-            <p className="muted small">{district ? t(lang, "noKvkFound") : t(lang, "pickDistrictKvk")}</p>
-          )}
-          <button className="text-link" onClick={() => setPicker(true)}>
-            {district ? `${districtLabel(district, lang)} · ${t(lang, "changeDistrict")}` : t(lang, "chooseDistrict")}
+          ) : district ? (
+            <p className="muted small">{t(lang, "noKvkFound")}</p>
+          ) : null}
+          <button className="row-btn compact" onClick={() => setPicker(true)}>
+            <span className="row-label">
+              {district ? districtLabel(district, lang) : t(lang, "chooseDistrict")}
+              {!district && <span className="row-sub">{t(lang, "pickDistrictKvk")}</span>}
+            </span>
+            <span className="row-action">{district ? t(lang, "changeDistrict") : ""}</span>
+            <ChevronRight />
           </button>
-        </>
+        </div>
       )}
-      <a className="kcc" href="tel:18001801551">
-        <span className="kcc-icon">
-          <Phone />
-        </span>
-        <span>
-          <strong>{t(lang, "callKcc")}</strong>
-          <span className="kcc-num">1800-180-1551</span>
-          <span className="muted small">{t(lang, "kccFree")}</span>
-        </span>
-      </a>
       {picker && (
         <DistrictSheet
           lang={lang}

@@ -1,4 +1,6 @@
 import { navigate } from "../App";
+import { DocBar, DocFoot } from "./Doc";
+import "./pages.css";
 
 const link = (path: string) => (e: React.MouseEvent) => {
   e.preventDefault();
@@ -8,15 +10,7 @@ const link = (path: string) => (e: React.MouseEvent) => {
 export function About() {
   return (
     <div className="app doc">
-      <header className="bar">
-        <a className="brand" href="/" onClick={link("/")}>
-          <span className="brand-mark" aria-hidden="true" />
-          Pairu
-        </a>
-        <a className="chip" href="/evidence" onClick={link("/evidence")}>
-          Evidence
-        </a>
-      </header>
+      <DocBar here="/about" />
       <main className="main prose">
         <h1>How Pairu works</h1>
         <p>
@@ -37,12 +31,14 @@ export function About() {
             list, a healthy option or "unknown". It also says whether the photo is sharp and whether it shows the crop the farmer chose.
           </li>
           <li>
-            <strong>Code applies the thresholds.</strong> A diagnosis is accepted only when the top candidate scores at least 0.75 and leads the
-            next one by at least 0.25. The model never decides this itself.
+            <strong>Code applies the thresholds.</strong> A first look scoring 0.9 or more is accepted (the threshold was chosen on one half of
+            the test photos only). Between 0.4 and 0.9, the model takes a second look at the same photo and answers yes, no or cannot tell to
+            questions that tell the candidates apart; code keeps a disease only if its sign is seen and nothing rules it out, and shows a single
+            survivor as a best guess. The model never decides this itself.
           </li>
           <li>
-            <strong>Follow-up questions.</strong> When the top two are known look-alikes, Pairu asks up to three yes or no questions written to
-            tell them apart (for example, whether the spots have rings like a target), and the answers decide.
+            <strong>Follow-up questions.</strong> Signs the photo cannot settle become one to three yes or no questions for the farmer (for
+            example, whether the spots have rings like a target), and the answers decide. A tie stays unsure.
           </li>
           <li>
             <strong>Refusal path.</strong> If the photo is blurry or too far, shows a different crop, or the answers do not settle it, Pairu says
@@ -58,15 +54,16 @@ export function About() {
 
         <h2>Data behind it</h2>
         <ul>
-          <li>2,804 approved uses for our 12 crops, out of 4,454 rows in the CIB&amp;RC "Major Uses of Pesticides" lists for fungicides, insecticides, bio-fungicides and bio-insecticides.</li>
-          <li>94 banned, withdrawn and restricted entries from the CIB&amp;RC list of banned, refused and restricted pesticides, applied at the moment advice is built. Streptomycin + tetracycline products are also hidden: they are proposed for a ban on crop use by the Government of India (draft order S.O. 5295(E), 2021, no final notification found) and are not recommended.</li>
+          <li>2,806 approved uses for our 13 crops, out of 4,454 rows in the CIB&amp;RC "Major Uses of Pesticides" lists for fungicides, insecticides, bio-fungicides and bio-insecticides.</li>
+          <li>96 banned, withdrawn and restricted entries from the CIB&amp;RC list of banned, refused and restricted pesticides, applied at the moment advice is built. Streptomycin + tetracycline products are also hidden: they are proposed for a ban on crop use by the Government of India (draft order S.O. 5295(E), 2021, no final notification found) and are not recommended.</li>
           <li>WHO 2019 hazard classes for 160 active ingredients. A missing class is shown as no class, never as safe.</li>
-          <li>66 diseases and pests across 12 crops, each with symptoms, photo cues, prevention, practices and sources from TNAU Agritech, ICAR and DPPQS pages, plus 82 follow-up questions covering 25 look-alike pairs.</li>
+          <li>77 diseases and pests across 13 crops (paddy, cotton, chilli, groundnut, maize, tomato, brinjal, banana, mango, black gram, potato, onion and cashew), plus a healthy entry for each crop, with symptoms, photo cues, prevention, practices and sources from TNAU Agritech, ICAR, NIPHM and DPPQS pages, "should I spray yet?" thresholds for 19, and 48 follow-up questions for look-alike pairs.</li>
+          <li>24 Krishi Vigyan Kendras for the 26 Andhra Pradesh districts, from ANGRAU, Dr. YSR Horticultural University and ICAR lists.</li>
         </ul>
 
         <h2>Limits, stated plainly</h2>
         <ul>
-          <li>Pairu only knows the 66 problems in its list. Anything else should come back as "not sure", and the vision model can still be wrong.</li>
+          <li>Pairu only knows the 77 problems in its list. Anything else should come back as "not sure", and the vision model can still be wrong.</li>
           <li>Lab photos of single leaves are easier than photos taken in a field; the evidence page reports both where we have them.</li>
           <li>Some doses in the government lists are printed without a unit. Pairu then converts only the number and tells the farmer to check grams or millilitres on the label.</li>
           <li>Telugu disease text was drafted by machine translation and then checked by an AI model (Claude) against a farming glossary; it has not yet been reviewed by an agronomist. The other languages are machine translated (Gemini) and not yet reviewed by a person.</li>
@@ -77,9 +74,14 @@ export function About() {
         <h2>In the farmer's own language</h2>
         <p>
           The whole interface, not just the answer, works in Telugu, Hindi, Tamil, Kannada, Marathi, Bengali, Odia, Gujarati, Punjabi, Malayalam
-          and English. Telugu and Hindi strings were written by hand; the others were translated once with Sarvam. Disease guidance is translated
-          with Sarvam Translate, the farmer can speak instead of typing (Sarvam speech to text), and the full answer can be read aloud (Sarvam
-          Bulbul). A WhatsApp button sends a short summary to family or the local dealer.
+          and English. Telugu and Hindi interface strings were written by hand and the others were machine translated once. Disease guidance is
+          served from stored translations for every language, the farmer can speak instead of typing, and the full answer can be read aloud,
+          with Sarvam&rsquo;s speech and voice when available and the phone&rsquo;s own voice otherwise. A WhatsApp button sends a short summary
+          to family or the local dealer. A side by side check of a general AI&rsquo;s spray advice against the register is on the{" "}
+          <a href="/compare" onClick={link("/compare")}>
+            Plain AI vs Pairu
+          </a>{" "}
+          page.
         </p>
 
         <h2>Sources</h2>
@@ -121,7 +123,7 @@ export function About() {
           result in a short-lived cache keyed by a hash of the photo, so the same photo is not sent twice. Location is asked for only to check the
           spray weather and is never stored.
         </p>
-        <p className="muted small">Built for Avishkaar Season 4, problem statement AG-03, by team Solus.</p>
+        <DocFoot />
       </main>
     </div>
   );

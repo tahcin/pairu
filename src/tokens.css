@@ -1,0 +1,87 @@
+/* Pairu design tokens. One warm theme, high contrast for sunlight. Every colour, size, radius and
+   motion value used by styles.css comes from here. */
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Colour: paper, ink and a field-green brand, with turmeric for caution and brick for danger. */
+  --paper: #f6f1e7;
+  --paper-sunk: #efe7d8;
+  --surface: #fffdf8;
+  --ink: #1d2719;
+  --ink-2: #3b4636;
+  --ink-3: #5f6858;
+  --line: #e3d9c8;
+  --line-strong: #cbbfa9;
+
+  --leaf: #2d5b34;
+  --leaf-press: #234a29;
+  --leaf-ink: #ffffff;
+  --leaf-soft: #e1ebd6;
+  --leaf-wash: #f0f5ea;
+  --leaf-deep: #1d3a22;
+
+  --turmeric: #b06d14;
+  --turmeric-soft: #f6e5c4;
+  --turmeric-ink: #5e3a0a;
+
+  --brick: #a1311f;
+  --brick-soft: #f7ddd5;
+  --brick-ink: #73200f;
+
+  --whatsapp: #1b7a4b;
+  --focus: #1f6fb2;
+
+  /* Type: Geist for Latin, Noto Sans for each Indian script. */
+  --font: "Geist", "Noto Sans Telugu", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Kannada", "Noto Sans Bengali", "Noto Sans Oriya",
+    "Noto Sans Gujarati", "Noto Sans Gurmukhi", "Noto Sans Malayalam", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-xs: 14px;
+  --fs-sm: 16px;
+  --fs-md: 18px;
+  --fs-lg: 21px;
+  --fs-xl: 26px;
+  --fs-2xl: 32px;
+  --lh-tight: 1.25;
+  --lh-body: 1.55;
+  --fw-medium: 550;
+  --fw-semi: 620;
+  --fw-bold: 700;
+
+  /* Space on a 4 px grid. */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s7: 32px;
+  --s8: 40px;
+  --gutter: 16px;
+
+  /* Shape. */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  --border: 1.5px;
+  --tap: 52px;
+  --tap-lg: 60px;
+  --raise: 0 1px 2px rgba(29, 39, 25, 0.06);
+
+  /* Motion: short, eased, never bouncy. */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 140ms;
+  --t-base: 220ms;
+  --t-slow: 420ms;
+
+  --page: 560px;
+  --bar-h: 60px;
+}

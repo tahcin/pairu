@@ -1,21 +1,42 @@
-// UI strings. English, Telugu and Hindi are written by hand; the other eight languages are
-// translated once from English with Sarvam by scripts/translate-ui.mjs and checked in.
+// UI strings. English, Telugu and Hindi are written by hand and bundled with the first screen; the
+// other eight languages were translated once from English by scripts/translate-ui.mjs, are checked
+// in, and load on demand (each is about 25 KB) so the first screen stays small on 3G.
 import en from "./en.json";
 import te from "./te.json";
 import hi from "./hi.json";
-import ta from "./ta.json";
-import kn from "./kn.json";
-import mr from "./mr.json";
-import bn from "./bn.json";
-import or from "./or.json";
-import gu from "./gu.json";
-import pa from "./pa.json";
-import ml from "./ml.json";
 
 export type Key = keyof typeof en;
 export type Lang = "te" | "hi" | "ta" | "kn" | "mr" | "bn" | "or" | "gu" | "pa" | "ml" | "en";
 
-const tables: Record<Lang, Partial<Record<Key, string>>> = { en, te, hi, ta, kn, mr, bn, or, gu, pa, ml };
+const tables: Partial<Record<Lang, Partial<Record<Key, string>>>> = { en, te, hi };
+
+const loaders: Partial<Record<Lang, () => Promise<{ default: Partial<Record<Key, string>> }>>> = {
+  ta: () => import("./ta.json"),
+  kn: () => import("./kn.json"),
+  mr: () => import("./mr.json"),
+  bn: () => import("./bn.json"),
+  or: () => import("./or.json"),
+  gu: () => import("./gu.json"),
+  pa: () => import("./pa.json"),
+  ml: () => import("./ml.json"),
+};
+
+export function langReady(lang: Lang): boolean {
+  return Boolean(tables[lang]);
+}
+
+// Resolves once the strings for this language are in memory. On failure (offline before the file
+// was ever cached) the app falls back to English strings, never to raw keys.
+export async function loadLang(lang: Lang): Promise<void> {
+  if (tables[lang]) return;
+  const load = loaders[lang];
+  if (!load) return;
+  try {
+    tables[lang] = (await load()).default;
+  } catch {
+    // English fallback through t().
+  }
+}
 
 // Order on the first screen: Telugu first for Andhra Pradesh, then by number of speakers.
 export const LANGUAGES: { code: Lang; native: string; english: string }[] = [
@@ -33,7 +54,12 @@ export const LANGUAGES: { code: Lang; native: string; english: string }[] = [
 ];
 
 export function t(lang: Lang, key: Key): string {
-  return tables[lang]?.[key] || tables.en[key] || key;
+  return tables[lang]?.[key] || tables.en?.[key] || key;
+}
+
+// t() with {name} placeholders filled in.
+export function tf(lang: Lang, key: Key, vars: Record<string, string | number>): string {
+  return t(lang, key).replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m));
 }
 
 export function langName(code: Lang): string {

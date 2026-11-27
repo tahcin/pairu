@@ -4,7 +4,7 @@ import { api } from "./lib/api";
 import { useVoice } from "./lib/useVoice";
 import { t, type Key, type Lang } from "./i18n";
 import { CropIcon } from "./components/CropIcon";
-import { Check, Mic } from "./components/Icons";
+import { Check, ChevronRight, History, Mic } from "./components/Icons";
 import { ageDays, isDue, loadHistory, updateCheck, RECHECK_DAYS, type CheckEntry } from "./lib/history";
 
 export function DescribeStep({
@@ -53,13 +53,13 @@ export function DescribeStep({
   const stop = voice.stop;
 
   return (
-    <section className="describe">
+    <section className="screen describe">
       <div className="picked">
-        <CropIcon id={crop} size={32} />
+        <CropIcon id={crop} size={28} />
         <span>{cropName}</span>
       </div>
       <h1 className="title">{L("describeTitle")}</h1>
-      <p className="notice">{L("describeSub")}</p>
+      <p className="lede">{L("describeSub")}</p>
       {!voice.supported && <p className="muted small">{L("micUnsupported")}</p>}
       {voice.supported && <button
         className={`mic ${mic === "rec" ? "rec" : ""}`}
@@ -73,7 +73,9 @@ export function DescribeStep({
         onContextMenu={(e) => e.preventDefault()}
         disabled={mic === "stt"}
       >
-        <Mic />
+        <span className="mic-icon">
+          <Mic size={24} />
+        </span>
         <span>{mic === "rec" ? L("listening") : mic === "stt" ? L("transcribing") : L("speakSigns")}</span>
       </button>}
       {mic === "denied" && <p className="notice">{L("micDenied")}</p>}
@@ -82,7 +84,7 @@ export function DescribeStep({
       {!items && !failed && (
         <div className="sym-list">
           {[70, 85, 60, 78].map((w, i) => (
-            <span key={i} className="ph" style={{ width: `${w}%`, height: "48px" }} />
+            <span key={i} className="ph sym-ph" style={{ width: `${w}%` }} />
           ))}
         </div>
       )}
@@ -97,11 +99,15 @@ export function DescribeStep({
         </div>
       )}
       {hint && <p className="notice">{L("noneSelected")}</p>}
-      {error && <p className="notice">{error === "rate_limited" ? L("rateLimited") : error === "offline" ? L("offline") : L("error")}</p>}
+      {error && (
+        <p className="notice error" role="alert">
+          {error === "rate_limited" ? L("rateLimited") : error === "offline" ? L("offline") : L("error")}
+        </p>
+      )}
       <div className="sticky-cta">
         <button className="btn primary wide big" onClick={() => (picked.size ? onCheck([...picked]) : setHint(true))}>
           {L("describeCheck")}
-          {picked.size ? ` (${picked.size})` : ""}
+          {picked.size ? <span className="count">{picked.size}</span> : null}
         </button>
       </div>
     </section>
@@ -113,15 +119,22 @@ export function HistoryEntry({ lang, onOpen }: { lang: Lang; onOpen: () => void 
   const list = loadHistory();
   if (!list.length) return null;
   const due = list.some(isDue);
+  const last = list[0];
   return (
     <div className="history-entry">
       {due && (
         <button className="due-banner" onClick={onOpen}>
-          {t(lang, "dueBanner")}
+          <span>{t(lang, "dueBanner")}</span>
+          <ChevronRight />
         </button>
       )}
-      <button className="btn ghost wide" onClick={onOpen}>
-        {t(lang, "myChecks")} ({list.length})
+      <button className="row-btn" onClick={onOpen}>
+        <span className="row-icon">{last.thumb ? <img src={last.thumb} alt="" /> : <History />}</span>
+        <span className="row-label">
+          {t(lang, "myChecks")}
+          <span className="row-sub">{list.length}</span>
+        </span>
+        <ChevronRight />
       </button>
     </div>
   );
@@ -142,10 +155,15 @@ export function HistoryScreen({ lang, cropName, onOpen }: { lang: Lang; cropName
     setList(loadHistory());
   };
   return (
-    <section className="history">
+    <section className="screen history">
       <h1 className="title">{L("myChecks")}</h1>
-      <p className="muted small">{L("keptOnPhone")}</p>
-      {!list.length && <p className="body">{L("noChecks")}</p>}
+      <p className="lede">{L("keptOnPhone")}</p>
+      {!list.length && (
+        <div className="empty">
+          <History size={32} />
+          <p>{L("noChecks")}</p>
+        </div>
+      )}
       <ul className="checks">
         {list.map((e) => {
           const days = ageDays(e);
@@ -153,13 +171,16 @@ export function HistoryScreen({ lang, cropName, onOpen }: { lang: Lang; cropName
           return (
             <li key={e.id} className="check">
               <button className="check-main" onClick={() => onOpen(e)}>
-                {e.thumb ? <img src={e.thumb} alt="" /> : <span className="thumb-icon"><CropIcon id={e.crop} size={40} /></span>}
-                <span>
+                {e.thumb ? <img src={e.thumb} alt="" /> : <span className="thumb-icon">
+                    <CropIcon id={e.crop} size={40} />
+                  </span>}
+                <span className="check-text">
                   <strong>{name}</strong>
                   <span className="muted small block">
                     {cropName(e.crop)} · {fmtDate(e.date)} · {days === 0 ? L("today") : `${days} ${L("daysAgo")}`}
                   </span>
                 </span>
+                <ChevronRight />
               </button>
               {isDue(e) && (
                 <div className="due">
@@ -178,11 +199,11 @@ export function HistoryScreen({ lang, cropName, onOpen }: { lang: Lang; cropName
                 </div>
               )}
               {e.outcome && (
-                <p className="muted small">
+                <p className={`outcome-tag ${e.outcome}`}>
                   {L(e.outcome)} · {fmtDate(e.outcomeDate || e.date)}
                 </p>
               )}
-              {!e.outcome && days < RECHECK_DAYS && !e.disease.endsWith("_healthy") && <p className="muted small">{L("checkAgainIn")}</p>}
+              {!e.outcome && days < RECHECK_DAYS && !e.disease.endsWith("_healthy") && <p className="muted small check-note">{L("checkAgainIn")}</p>}
             </li>
           );
         })}

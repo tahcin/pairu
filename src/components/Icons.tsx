@@ -81,3 +81,66 @@ export const Leaf = ({ size = 20 }: P) => (
     <path d="M5 19l8-8" />
   </svg>
 );
+export const Close = ({ size = 22 }: P) => (
+  <svg {...base(size)}>
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);
+export const ChevronRight = ({ size = 20 }: P) => (
+  <svg {...base(size)}>
+    <path d="M9 5l7 7-7 7" />
+  </svg>
+);
+export const ChevronDown = ({ size = 22 }: P) => (
+  <svg {...base(size)}>
+    <path d="M5 9l7 7 7-7" />
+  </svg>
+);
+export const ListIcon = ({ size = 24 }: P) => (
+  <svg {...base(size)}>
+    <path d="M9 6h11M9 12h11M9 18h11" />
+    <path d="M4 6l1 1 1.5-2M4 12l1 1 1.5-2M4 18l1 1 1.5-2" />
+  </svg>
+);
+export const Sun = ({ size = 20 }: P) => (
+  <svg {...base(size)}>
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
+  </svg>
+);
+export const Question = ({ size = 28 }: P) => (
+  <svg {...base(size)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6v.6M12 17v.5" />
+  </svg>
+);
+export const External = ({ size = 16 }: P) => (
+  <svg {...base(size)}>
+    <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+  </svg>
+);
+export const Clock = ({ size = 18 }: P) => (
+  <svg {...base(size)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7v5l3 2" />
+  </svg>
+);
+export const History = ({ size = 22 }: P) => (
+  <svg {...base(size)}>
+    <path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5" />
+    <path d="M4 4v4.5h4.5M12 8v4l2.5 2" />
+  </svg>
+);
+export const Cross = ({ size = 24 }: P) => (
+  <svg {...base(size)}>
+    <path d="M7 7l10 10M17 7L7 17" />
+  </svg>
+);
+// The Pairu mark: one leaf on a stem, drawn as a filled shape.
+export const Mark = ({ size = 26 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16 29V17" stroke="var(--leaf)" strokeWidth="2.6" strokeLinecap="round" />
+    <path d="M16 18C16 9.5 21.5 4 29 3.5c-.4 8-6 13.6-13 14.5z" fill="var(--leaf)" />
+    <path d="M16 22C15.6 15.8 11.4 11.6 4 11.4c.4 6.4 4.8 10.4 12 10.6z" fill="#6f9a52" />
+  </svg>
+);

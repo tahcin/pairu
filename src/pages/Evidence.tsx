@@ -24,23 +24,40 @@ const link = (path: string) => (e: React.MouseEvent) => {
 const pct = (v: unknown) => (typeof v === "number" ? `${v.toFixed(1)}%` : "");
 const num = (v: unknown) => (v === undefined || v === null ? "" : String(v));
 
-const COLS: { key: string; label: string; fmt: (v: unknown) => string }[] = [
-  { key: "n", label: "Photos", fmt: num },
-  { key: "top1_accuracy_pct", label: "Right disease", fmt: pct },
-  { key: "accuracy_when_answered_pct", label: "Right when it answered", fmt: pct },
-  { key: "refusal_rate_pct", label: "Said not sure", fmt: pct },
-  { key: "wrong_confident_rate_pct", label: "Confidently wrong", fmt: pct },
-];
+const LABELS: Record<string, string> = {
+  n: "Photos",
+  top1_accuracy_pct: "Right disease",
+  right: "Right",
+  right_pct: "Right",
+  accuracy_when_answered_pct: "Right when it answered",
+  answered_and_wrong: "Answered and wrong",
+  answered_and_wrong_pct: "Answered and wrong",
+  wrong_confident_rate_pct: "Confidently wrong",
+  refused: "Said not sure",
+  refused_pct: "Said not sure",
+  refusal_rate_pct: "Said not sure",
+  farmer_had_to_answer: "Farmer answered questions",
+  named_a_wrong_disease: "Named a wrong disease",
+  named_the_true_disease: "Named the true disease",
+};
+// Counts that have a matching percentage column are left out, to keep tables narrow on a phone.
+function columns(rows: Row[]): string[] {
+  const keys: string[] = [];
+  for (const r of rows) for (const k of Object.keys(r)) if (k !== "system" && !keys.includes(k) && typeof r[k] !== "object") keys.push(k);
+  const shown = keys.filter((k) => LABELS[k] || k.endsWith("_pct"));
+  return shown.filter((k) => !(shown.includes(`${k}_pct`) && k !== "n"));
+}
 
 function SystemTable({ rows }: { rows: Row[] }) {
+  const cols = columns(rows);
   return (
     <div className="table-wrap">
       <table>
         <thead>
           <tr>
             <th>System</th>
-            {COLS.map((c) => (
-              <th key={c.key}>{c.label}</th>
+            {cols.map((c) => (
+              <th key={c}>{LABELS[c] || c.replace(/_pct$/, "").replace(/_/g, " ")}</th>
             ))}
           </tr>
         </thead>
@@ -48,8 +65,8 @@ function SystemTable({ rows }: { rows: Row[] }) {
           {rows.map((r, i) => (
             <tr key={i} className={String(r.system || "").toLowerCase().startsWith("bare") ? "bare" : ""}>
               <td>{String(r.system || r.name || "")}</td>
-              {COLS.map((c) => (
-                <td key={c.key}>{c.fmt(r[c.key])}</td>
+              {cols.map((c) => (
+                <td key={c}>{c.endsWith("_pct") ? pct(r[c]) : num(r[c])}</td>
               ))}
             </tr>
           ))}
@@ -71,8 +88,12 @@ function systemBlocks(r: Results): { title: string; note?: string; rows: Row[] }
   add("Diseased leaves only", r.diseased_leaves_only);
   add("Lab photos (one leaf, plain background)", r.by_photo_type_lab);
   add("Field photos", r.by_photo_type_field);
+  add("Held-out half: photos not used while building v2", r.held_out_half_in_list);
+  add("All photos of diseases Pairu holds", r.all_in_list);
+  add("Diseased leaves only", r.all_in_list_diseased_only);
+  add("Diseases Pairu does not hold (right answer is not sure)", r.out_of_list);
   for (const [k, v] of Object.entries(r)) {
-    if (["headline", "diseased_leaves_only", "by_photo_type_lab", "by_photo_type_field", "rows", "per_class"].includes(k)) continue;
+    if (["headline", "diseased_leaves_only", "by_photo_type_lab", "by_photo_type_field", "rows", "per_class", "held_out_half_in_list", "all_in_list", "all_in_list_diseased_only", "out_of_list", "v2"].includes(k)) continue;
     if (isRows(v) || (v && typeof v === "object" && isRows((v as Row).rows))) add(k.replace(/_/g, " "), v);
   }
   return out;
@@ -101,7 +122,14 @@ export function Evidence() {
   }, []);
 
   const versions = data && typeof data.versions === "object" && data.versions ? (data.versions as Record<string, Results>) : null;
-  const views: { name: string; r: Results }[] = data ? (versions ? Object.entries(versions).map(([name, r]) => ({ name, r })) : [{ name: "", r: data }]) : [];
+  const views: { name: string; r: Results }[] = data
+    ? versions
+      ? Object.entries(versions).map(([name, r]) => ({ name, r }))
+      : [
+          ...(data.v2 && typeof data.v2 === "object" ? [{ name: "Current version (v2): a second look before deciding", r: data.v2 as Results }] : []),
+          { name: data.v2 ? "First version (v1) against the bare model" : "", r: data },
+        ]
+    : [];
 
   return (
     <div className="app doc">
@@ -123,12 +151,12 @@ export function Evidence() {
             labelled photos, compared with the bare vision model, with the size of the test set and its limits.
           </p>
         )}
-        {data && typeof data.summary === "string" && <p className="lede-big">{data.summary}</p>}
+        {data && !data.v2 && typeof data.summary === "string" && <p className="lede-big">{data.summary}</p>}
 
         {views.map(({ name, r }) => (
           <section key={name || "main"}>
             {name && <h2>{name}</h2>}
-            {name && typeof r.summary === "string" && <p>{r.summary}</p>}
+            {name && typeof r.summary === "string" && <p className="lede-big">{r.summary}</p>}
             {systemBlocks(r).map((b, i) => (
               <div key={i}>
                 <h3>{b.title}</h3>
@@ -142,7 +170,13 @@ export function Evidence() {
                 <KeyValues obj={r.pairu_steps as Row} />
               </>
             ) : null}
-            {r.out_of_list && typeof r.out_of_list === "object" ? (
+            {r.v2_steps_all_95 && typeof r.v2_steps_all_95 === "object" ? (
+              <>
+                <h3>Inside v2's decision (all 95 photos)</h3>
+                <KeyValues obj={r.v2_steps_all_95 as Row} />
+              </>
+            ) : null}
+            {r.out_of_list && typeof r.out_of_list === "object" && !Array.isArray(r.out_of_list) ? (
               <>
                 <h3>Diseases Pairu does not hold</h3>
                 <KeyValues obj={r.out_of_list as Row} />

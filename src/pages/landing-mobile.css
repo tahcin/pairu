@@ -1,0 +1,875 @@
+/* The phone landing. Paper, ink, field green, turmeric and brick from tokens.css; Geist with
+   Geist Mono for figures, Noto Sans for the Indian scripts. One idea per screen, a single left edge
+   at the gutter, text never under 14 px, tap targets at least 48 px. */
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html.mf-page,
+html.mf-page body {
+  background: var(--paper);
+  overflow-x: clip;
+}
+
+.mf {
+  --g: 20px;
+  --st: env(safe-area-inset-top, 0px);
+  --sb: env(safe-area-inset-bottom, 0px);
+  --bar: 56px;
+  --mono: "Geist Mono", ui-monospace, monospace;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
+}
+@media (min-width: 600px) {
+  .mf {
+    --g: 32px;
+  }
+}
+.mf a {
+  color: inherit;
+}
+.mf .mono {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+.mf :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ---- Top bar: progress line, chapter, skip, open ---- */
+.mf-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  padding: var(--st) env(safe-area-inset-right, 0px) 0 env(safe-area-inset-left, 0px);
+  transition: background-color var(--t-base) var(--ease);
+}
+.mf.past-film .mf-bar,
+.mf-bar.still {
+  background: var(--paper);
+  box-shadow: 0 1px 0 var(--line);
+}
+.mf-line {
+  display: block;
+  height: 3px;
+  background: rgba(29, 39, 25, 0.1);
+}
+.mf-fill {
+  display: block;
+  height: 100%;
+  background: var(--leaf);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+.mf-row {
+  height: var(--bar);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px 0 var(--g);
+}
+.mf-chapter {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.mf-chapter .n {
+  color: var(--ink-3);
+}
+.mf-chapter .l {
+  color: var(--ink);
+  font-weight: 620;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mf-brand {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.mf-skip {
+  flex: none;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0 12px;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 550;
+  cursor: pointer;
+}
+.mf-open {
+  flex: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: var(--r-pill);
+  background: var(--leaf);
+  color: var(--leaf-ink) !important;
+  font-size: 15px;
+  font-weight: 620;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mf-open:active,
+.mf-btn.primary:active {
+  background: var(--leaf-press);
+}
+.mf.past-film .mf-chapter {
+  visibility: hidden;
+}
+.mf.past-film .mf-skip {
+  display: none;
+}
+
+/* ---- Stage ---- */
+.mf-track {
+  position: relative;
+}
+.mf-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100lvh;
+  overflow: hidden;
+  background: var(--paper);
+}
+.mf-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 600ms var(--ease);
+}
+.mf.is-ready .mf-canvas {
+  opacity: 1;
+}
+.mf-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100svh;
+  pointer-events: none;
+}
+.mf-frame a,
+.mf-frame button {
+  pointer-events: auto;
+}
+.cap {
+  position: absolute;
+  inset: 0;
+  padding: calc(var(--st) + var(--bar) + 20px) var(--g) 0;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.mf-mega {
+  margin: 0;
+  font-size: clamp(30px, 8.6vw, 42px);
+  font-weight: 660;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 15ch;
+  text-wrap: balance;
+}
+.mf-h {
+  margin: 0;
+  font-size: clamp(25px, 6.8vw, 32px);
+  font-weight: 660;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  max-width: 19ch;
+  text-wrap: balance;
+}
+.mf-lede {
+  margin: 12px 0 0;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 32ch;
+}
+.mf-lede .sw {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d08a1e;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+.mf-tag {
+  margin: 0;
+  font-size: clamp(20px, 5.6vw, 24px);
+  font-weight: 620;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  max-width: 19ch;
+  text-wrap: balance;
+}
+.mf-src {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-3);
+  max-width: 40ch;
+}
+.mf-src a {
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+
+/* Hero over the sky */
+.c-hero {
+  opacity: 1;
+  visibility: visible;
+  padding-top: calc(var(--st) + var(--bar) + 4svh);
+}
+.c-hero h1,
+.ms-hero h1 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.te-hero {
+  font-family: "Noto Sans Telugu", var(--font);
+  font-size: min(40vw, 25svh, 220px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--leaf-deep);
+  margin-left: -0.04em;
+}
+.en-hero {
+  font-size: 18px;
+  font-weight: 550;
+  color: var(--ink-2);
+  margin-top: 2px;
+}
+.c-hero .mf-tag {
+  margin-top: 3svh;
+}
+.mf-cue {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--sb) + 28px);
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 620;
+  transition: opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease);
+}
+.mf-cue i {
+  position: relative;
+  width: 2px;
+  height: 16px;
+  background: var(--line-strong);
+  overflow: hidden;
+  border-radius: 1px;
+}
+.mf-cue i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 2px;
+  height: 8px;
+  background: var(--ink);
+  animation: mf-cue 1.6s var(--ease-in-out) infinite;
+}
+@keyframes mf-cue {
+  to {
+    transform: translateY(24px);
+  }
+}
+.mf:not(.at-top) .mf-cue,
+.mf:not(.is-ready) .mf-cue {
+  opacity: 0;
+  transform: translate(-50%, 8px);
+}
+
+/* Name sheet: a paper card that rises over the leaf, like the app's result */
+.c-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px var(--g) calc(var(--sb) + 28px);
+  background: var(--paper);
+  border-radius: 22px 22px 0 0;
+  transform: translate3d(0, 105%, 0);
+  visibility: hidden;
+  will-change: transform;
+}
+.mf-names {
+  position: relative;
+  height: calc(clamp(30px, 8.8vw, 40px) * 1.3 * 2 + 30px);
+}
+.mf-names .slot {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.mf-names .slot[data-slot="-1"] {
+  opacity: 1;
+}
+.mf-names .nm,
+.mf-g {
+  display: block;
+  font-size: clamp(30px, 8.8vw, 40px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--leaf-deep);
+  text-wrap: balance;
+}
+.mf-names .lab {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 550;
+  color: var(--ink-3);
+}
+.mf-g .w {
+  display: inline-block;
+  white-space: nowrap;
+}
+.mf-g .g {
+  --gk: clamp(0, calc(var(--k, 1) * (var(--n) + 5) - var(--i)), 1);
+  display: inline-block;
+  white-space: pre;
+  opacity: var(--gk);
+  transform: translate3d(0, calc((1 - var(--gk)) * 0.35em), 0);
+}
+.mf-en {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.c-name .mf-tag {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 17px;
+  font-weight: 550;
+  color: var(--ink-2);
+  max-width: 30ch;
+}
+
+/* Register scenes */
+.mf-key {
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.mf-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.mf-key i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.c-crops .lab {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+.c-crops .lab .cn,
+.ms-strips .lab .cn {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.c-crops .lab .mono,
+.ms-strips .lab .mono {
+  color: var(--ink-3);
+}
+.c-rows .row {
+  position: absolute;
+  right: var(--g);
+  opacity: 0;
+}
+.mf .row .prod {
+  display: block;
+  font-size: 16px;
+  font-weight: 620;
+  line-height: 1.3;
+  max-width: 28ch;
+}
+.mf .row .figs {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+.mf .row .fig {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mf .row .fig b {
+  font-size: clamp(28px, 8vw, 34px);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--leaf-deep);
+}
+.mf .row .fig span {
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--ink-3);
+  max-width: 14ch;
+}
+.c-rows .rest {
+  position: absolute;
+  left: var(--g);
+  right: var(--g);
+  bottom: calc(var(--sb) + 18px);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+
+/* Plain AI */
+.chilli-lab {
+  position: absolute;
+  left: var(--g);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.mf .claim {
+  --x: 0;
+  display: block;
+}
+.c-chilli .claim {
+  position: absolute;
+  left: calc(var(--g) + 26px);
+  right: var(--g);
+}
+.mf .cl-said {
+  font-size: 16px;
+  font-weight: 620;
+  line-height: 1.35;
+  transition: color var(--t-base) var(--ease);
+  /* The strike is a solid brick rule drawn across every line of the claim as --x goes 0 to 1. */
+  background: linear-gradient(var(--brick), var(--brick)) no-repeat 0 58% / calc(var(--x) * 100%) 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.mf .claim.struck .cl-said,
+.ms .cl-said {
+  color: var(--ink-3);
+}
+.mf .cl-why {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--brick-ink);
+  opacity: var(--x);
+  transform: translate3d(0, calc((1 - var(--x)) * -6px), 0);
+}
+
+/* Evidence */
+.mf-sub {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--ink-3);
+}
+.mf-ev {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+.mf-who {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink-2);
+  min-height: 4.05em;
+}
+.mf-evcol.main .mf-who {
+  color: var(--ink);
+  font-weight: 650;
+}
+.mf-dots {
+  display: grid;
+  gap: 3px;
+}
+.mf-dots i {
+  --dk: clamp(0, calc(var(--k, 1) * (var(--n) + 10) - var(--i)), 1);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  opacity: var(--dk);
+  transform: scale(calc(0.3 + 0.7 * var(--dk)));
+}
+.mf .d-r {
+  background: var(--leaf);
+}
+.mf .d-w {
+  background: var(--brick);
+}
+.mf .d-u {
+  box-shadow: inset 0 0 0 1.5px var(--line-strong);
+}
+.mf-evnum {
+  margin: 12px 0 0;
+  font-size: 16px;
+  color: var(--ink-2);
+}
+.mf-evnum b {
+  font-size: clamp(32px, 9vw, 40px);
+  font-weight: 600;
+  color: var(--brick);
+  margin-right: 4px;
+}
+.mf-evrest {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+.mf-note {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-3);
+  max-width: 44ch;
+}
+.mf-legend {
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.mf-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.mf-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.mf-more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 4px;
+}
+
+/* ---- Finale ---- */
+.mf-finale {
+  position: relative;
+  z-index: 1;
+  background: var(--paper);
+  padding: 72px var(--g) calc(var(--sb) + 24px);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.mf-finale h2 {
+  margin: 0;
+  font-size: clamp(32px, 9vw, 42px);
+  font-weight: 680;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+.mf-finale > p {
+  margin: 14px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 32ch;
+}
+.mf-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+.mf-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  border-radius: var(--r-md);
+  border: var(--border) solid var(--line-strong);
+  background: var(--surface);
+  font-size: 18px;
+  font-weight: 620;
+  text-decoration: none;
+}
+.mf-btn.primary {
+  min-height: 64px;
+  border-color: var(--leaf);
+  background: var(--leaf);
+  color: var(--leaf-ink) !important;
+  font-size: 20px;
+}
+.mf-text-btn {
+  min-height: 48px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 550;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.mf-foot {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+}
+.mf-foot nav {
+  display: flex;
+  flex-direction: column;
+}
+.mf-foot nav a {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+  font-weight: 550;
+  text-decoration: none;
+}
+.mf-foot p {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* ---- Still version ---- */
+.ms-hero {
+  padding: calc(var(--st) + var(--bar) + 28px) var(--g) 28px;
+}
+.ms-hero .mf-tag {
+  margin-top: 20px;
+}
+.ms-photo {
+  margin: 0;
+}
+.ms-photo img {
+  display: block;
+  width: 100%;
+  height: 44svh;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: 45% 50%;
+}
+.ms-sec {
+  padding: 56px var(--g) 8px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.ms-step {
+  margin: 0;
+  font-size: clamp(24px, 6.6vw, 30px);
+  font-weight: 640;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.ms-leaf {
+  display: block;
+  width: 100%;
+  margin: 28px 0 12px;
+  transform: rotate(-16deg);
+  overflow: visible;
+}
+.ms-te {
+  margin: 28px 0 0;
+  font-size: clamp(30px, 8.8vw, 40px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--leaf-deep);
+}
+.ms-names {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.ms-names li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 18px;
+}
+.ms-names .lab {
+  font-size: 14px;
+  color: var(--ink-3);
+  flex: none;
+}
+.ms-eleven {
+  margin: 14px 0 0;
+  font-size: 17px;
+  font-weight: 620;
+}
+.ms-strips {
+  position: relative;
+  margin-top: 22px;
+}
+.ms-strips canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ms-strips .lab {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ms-paddy {
+  display: block;
+  margin-top: 22px;
+}
+.ms-rows {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.ms-rows .row {
+  padding-left: 26px;
+  position: relative;
+}
+.ms-rows .row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3f7a3a;
+}
+.ms-claims {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.ms-claims .claim {
+  position: relative;
+  padding-left: 26px;
+}
+.ms-claims .claim::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brick);
+}
+.ms .c-ev {
+  opacity: 1;
+}
+
+/* ---- Landscape phones: shorter screens ---- */
+@media (orientation: landscape) and (max-height: 560px) {
+  .mf {
+    --bar: 48px;
+    --g: max(24px, env(safe-area-inset-left, 0px));
+  }
+  .cap {
+    padding-top: calc(var(--st) + var(--bar) + 10px);
+  }
+  .te-hero {
+    font-size: 30svh;
+  }
+  .mf-mega {
+    font-size: 28px;
+    max-width: 24ch;
+  }
+  .mf-h {
+    font-size: 24px;
+    max-width: 32ch;
+  }
+  .c-name {
+    left: auto;
+    width: min(520px, 56vw);
+    border-radius: 22px 0 0 0;
+    padding-top: 18px;
+  }
+  .c-name .mf-tag {
+    display: none;
+  }
+  .c-rows .row {
+    right: auto;
+    width: calc((100vw - 2 * var(--g)) / 3 - 40px);
+  }
+  .mf-ev {
+    max-width: 640px;
+  }
+  .mf-who {
+    min-height: 0;
+  }
+  .ms-photo img {
+    height: 70svh;
+  }
+}

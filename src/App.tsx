@@ -16,6 +16,7 @@ const About = lazy(() => import("./pages/About").then((m) => ({ default: m.About
 const Evidence = lazy(() => import("./pages/Evidence").then((m) => ({ default: m.Evidence })));
 const Compare = lazy(() => import("./pages/Compare").then((m) => ({ default: m.Compare })));
 const Landing = lazy(() => import("./pages/Landing").then((m) => ({ default: m.Landing })));
+const LandingMobile = lazy(() => import("./pages/LandingMobile").then((m) => ({ default: m.LandingMobile })));
 
 // A wide desktop window opening "/" sees the landing page for judges; phones, narrow windows
 // (including Chrome's device mode) and the app inside the landing's phone frame open the app as
@@ -69,7 +70,9 @@ export default function App() {
   }, []);
   const [rootLanding] = useState(() => location.pathname === "/" && landingAtRoot());
   const landing = path.startsWith("/home") || (path === "/" && rootLanding);
-  const page = landing ? <Landing /> : path.startsWith("/about") ? <About /> : path.startsWith("/evidence") ? <Evidence /> : path.startsWith("/compare") ? <Compare /> : null;
+  // /home on a phone (under 900 px wide when the page opened) gets the phone film.
+  const [phone] = useState(() => window.innerWidth < LANDING_MIN_WIDTH);
+  const page = landing ? phone ? <LandingMobile /> : <Landing /> : path.startsWith("/about") ? <About /> : path.startsWith("/evidence") ? <Evidence /> : path.startsWith("/compare") ? <Compare /> : null;
   if (page) return <Suspense fallback={<div className="app" />}>{page}</Suspense>;
   return <Farmer />;
 }

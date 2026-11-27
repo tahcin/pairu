@@ -337,7 +337,7 @@ html.mf-page body {
 }
 .mf-names {
   position: relative;
-  height: calc(clamp(30px, 8.8vw, 40px) * 1.3 * 2 + 30px);
+  height: calc(clamp(30px, 8.8vw, 40px) * 1.3 * 2 + 38px);
 }
 .mf-names .slot {
   position: absolute;

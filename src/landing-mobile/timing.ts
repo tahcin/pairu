@@ -24,7 +24,7 @@ export const M = {
   chilli: 0.68,
   chilliCap: [0.656, 0.795],
   reject: [0.695, 0.775],
-  out: 0.79,
+  out: 0.784,
   ev1: [0.8, 0.895],
   ev2: [0.9, 1.01],
 } as const;

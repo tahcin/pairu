@@ -101,3 +101,14 @@ Where we disagree with the reviewer:
 Telugu names: every entry now has a Telugu name. Where a Vikaspedia Telugu page uses the name, `names_source.te` is "vikaspedia" and the page is in `sources`. Otherwise it is "descriptive": the plain name a coastal Andhra farmer would use, mostly the ones the reviewer suggested. The reviewer's corrections were applied: brown spot is now గోధుమ రంగు ఆకుమచ్చ తెగులు, grey mildew is బూడిద రంగు బూజు తెగులు, and pink bollworm is గులాబీ రంగు కాయతొలుచు పురుగు.
 
 `etl` ("should I spray yet?"): the Economic Threshold Level for 19 entries. It is quoted from the ETL tables in the AESA rice, cotton, groundnut and maize packages and from the DPPQS packages for brown plant hopper, cotton whitefly and pink bollworm. For tomato fruit borer and black gram pod borer it comes from the TNAU pest page, and for fall armyworm from the Vikaspedia (ICAR-IIMR) action-threshold table. The newer AESA packages (chilli, tomato, brinjal, banana, mango, onion, potato, black gram) use field-by-field AESA decisions instead of ETL tables, so entries without a source threshold have no `etl`. The fall armyworm `recommended_actives` (emamectin benzoate, spinosad, chlorantraniliprole) come from the same Vikaspedia table.
+
+## kvk_ap.json (Krishi Vigyan Kendras in Andhra Pradesh)
+
+The file lists 24 KVKs, checked on 27 Nov 2026.
+- The 13 ANGRAU KVKs come from ANGRAU's own KVK page (`https://angrau.ac.in/ANGRU/KVK.aspx`), with phone, email and website.
+- The 4 Dr. YSR Horticultural University KVKs come from its Extension Services page (`https://drysrhu.ap.gov.in/Extension%20Services.html`), with phone and email.
+- The other 7 (RASS Karakambadi, CTRI Kalavacharla, CTRI Kandukur, Vinayashram, SVVU Lam, Yagantipalle and BCT Haripuram) come from ICAR's list of KVKs in Andhra Pradesh (`https://icar.org.in/en/node/15047`). That list gives an address and host but no phone or email, so those fields are left out. The ICAR-ATARI Zone X and kvk.icar.gov.in sites did not answer from our network.
+
+`district` is the current AP district. Where the source prints a pre-2022 district, `district_as_printed` keeps the source's wording and a `note` explains the move. These moves are our mapping by mandal, not something the sources state.
+
+Eight districts have no KVK of their own: Vizianagaram, Visakhapatnam, Kakinada, Dr. B.R. Ambedkar Konaseema, Eluru, Palnadu, Sri Sathya Sai and Chittoor.

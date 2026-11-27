@@ -1,0 +1,350 @@
+{
+ "about": "Krishi Vigyan Kendras in Andhra Pradesh. Contacts from the host university's own page (ANGRAU, Dr. YSR Horticultural University); address and host for the others from ICAR's list of KVKs in Andhra Pradesh. Fields a source does not give are left out. district is the current (2022) AP district; district_as_printed is what the source prints.",
+ "checked": "2026-11-27",
+ "count": 24,
+ "kvks": [
+  {
+   "name": "KVK Amadalavalasa",
+   "district": "Srikakulam",
+   "district_as_printed": "Srikakulam",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Agricultural Research Station, Amadalavalasa, Srikakulam 532 185",
+   "phone": "9989623822",
+   "email": "kvk.amadalavalasa@angrau.ac.in",
+   "website": "https://www.kvkamadalavalasa-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Rastakuntubai",
+   "district": "Parvathipuram Manyam",
+   "district_as_printed": "Parvathipuram Manyam",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "PO Rastakuntubai 535 523",
+   "phone": "8978114299",
+   "email": "kvk.rastakuntabai@angrau.ac.in",
+   "website": "https://www.kvkrastakuntubai-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Kondempudi",
+   "district": "Anakapalli",
+   "district_as_printed": "Visakhapatnam",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "phone": "9989623984 / 9440887450",
+   "email": "kvk.kondempudi@angrau.ac.in",
+   "website": "https://kvkkondempudi-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx"
+   ],
+   "checked": "2026-11-27",
+   "note": "ANGRAU prints the old Visakhapatnam district; Kondempudi falls in Anakapalli district after the 2022 reorganisation."
+  },
+  {
+   "name": "KVK Undi",
+   "district": "West Godavari",
+   "district_as_printed": "West Godavari",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Undi 534 199, West Godavari",
+   "phone": "9989623823",
+   "email": "kvk.undi@angrau.ac.in",
+   "website": "https://www.kvkundi-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "Dr. K.L. Rao KVK Garikapadu",
+   "district": "NTR",
+   "district_as_printed": "Krishna",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Garikapadu 521 175",
+   "phone": "9989623824",
+   "email": "kvk.garikapadu@angrau.ac.in",
+   "website": "https://www.kvkgarikapadu-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Krishna district; Garikapadu (Jaggayyapeta mandal) is in NTR district since 2022."
+  },
+  {
+   "name": "KVK Ghantasala",
+   "district": "Krishna",
+   "district_as_printed": "Krishna",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Agricultural Research Station, Ghantasala 521 133",
+   "phone": "8008201253",
+   "email": "kvk.ghantasala@angrau.ac.in",
+   "website": "https://www.kvkghantasala-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Darsi",
+   "district": "Prakasam",
+   "district_as_printed": "Prakasam",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Agricultural Research Station, PO Darsi, Prakasam 523 247",
+   "phone": "9989623827",
+   "email": "kvk.darsi@angrau.ac.in",
+   "website": "https://kvkdarsi-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Nellore",
+   "district": "Sri Potti Sriramulu Nellore",
+   "district_as_printed": "Nellore",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Mini By Pass Road, opposite Royal Enfield showroom, B.V. Nagar, Nellore 524 004",
+   "phone": "9989623828",
+   "email": "kvk.nellore@angrau.ac.in",
+   "website": "https://kvknellore-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Kalikiri",
+   "district": "Annamayya",
+   "district_as_printed": "Annamayya",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Kalikiri 517 234",
+   "phone": "8008500320",
+   "email": "kvk.kalikiri@angrau.ac.in",
+   "website": "https://www.kvkkalikiri-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Utukur",
+   "district": "YSR Kadapa",
+   "district_as_printed": "YSR Kadapa",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Utukur, Kadapa, YSR district 516 003",
+   "phone": "9989623826",
+   "email": "kvk.utukur@angrau.ac.in",
+   "website": "https://www.kvkutukur-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Banavasi",
+   "district": "Kurnool",
+   "district_as_printed": "Kurnool",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "Banavasi, Yemmiganur 518 360, Kurnool district",
+   "phone": "8074420092",
+   "email": "kvk.banavasi@angrau.ac.in",
+   "website": "https://www.kvkbanavasi-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Reddipalle",
+   "district": "Anantapur",
+   "district_as_printed": "Anantapuramu",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "phone": "9989623825",
+   "email": "kvk.reddipalle@angrau.ac.in",
+   "website": "https://www.kvkreddipalli-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Kalyandurg",
+   "district": "Anantapur",
+   "district_as_printed": "Anantapuramu",
+   "host": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+   "address": "8-881, Jainagar Colony, Kalyandurg 515 761",
+   "phone": "7702544492",
+   "email": "kvk.kalyandurg@angrau.ac.in",
+   "website": "https://www.kvkkalyandurg-angrau.org",
+   "sources": [
+    "https://angrau.ac.in/ANGRU/KVK.aspx",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Venkataramannagudem",
+   "district": "West Godavari",
+   "district_as_printed": "West Godavari",
+   "host": "Dr. Y.S.R. Horticultural University",
+   "address": "Dr. YSR Horticultural University, Venkataramannagudem, West Godavari 534 101",
+   "phone": "7382633692",
+   "email": "kvk_vrgudemaphu@rediffmail.com",
+   "sources": [
+    "https://drysrhu.ap.gov.in/Extension%20Services.html",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Pandirimamidi",
+   "district": "Alluri Sitharama Raju",
+   "district_as_printed": "East Godavari",
+   "host": "Dr. Y.S.R. Horticultural University",
+   "address": "Pandirimamidi, Rampachodavaram, East Godavari 533 288",
+   "phone": "7382633693",
+   "email": "kvkpmd@gmail.com",
+   "sources": [
+    "https://drysrhu.ap.gov.in/Extension%20Services.html"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as East Godavari; Rampachodavaram is in Alluri Sitharama Raju district since 2022."
+  },
+  {
+   "name": "KVK Periyavaram",
+   "district": "Tirupati",
+   "district_as_printed": "SPSR Nellore",
+   "host": "Dr. Y.S.R. Horticultural University",
+   "address": "Periyavaram, Venkatagiri mandal, SPSR Nellore 524 132",
+   "phone": "9440572070",
+   "email": "kvkpym@drysrhu.edu.in",
+   "sources": [
+    "https://drysrhu.ap.gov.in/Extension%20Services.html",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as SPSR Nellore; Venkatagiri mandal is in Tirupati district since 2022."
+  },
+  {
+   "name": "KVK Vonipenta",
+   "district": "YSR Kadapa",
+   "district_as_printed": "YSR Kadapa",
+   "host": "Dr. Y.S.R. Horticultural University",
+   "address": "Vonipenta, Mydukur mandal, YSR Kadapa 516 173",
+   "phone": "9985666503",
+   "email": "kvkvpt@drysrhu.edu.in",
+   "sources": [
+    "https://drysrhu.ap.gov.in/Extension%20Services.html",
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "RASS Acharya Ranga KVK, Karakambadi",
+   "district": "Tirupati",
+   "district_as_printed": "Chittoor",
+   "host": "Rashtriya Seva Samithi (RASS), Tirupati (NGO)",
+   "address": "Karakambadi post, Renigunta mandal 517 520",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Chittoor district; Renigunta mandal is in Tirupati district since 2022."
+  },
+  {
+   "name": "KVK Kalavacharla (CTRI)",
+   "district": "East Godavari",
+   "district_as_printed": "East Godavari",
+   "host": "ICAR-Central Tobacco Research Institute, Rajahmundry",
+   "address": "Kalavacharla, Rajanagaram mandal, East Godavari 533 297",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Kandukur (CTRI)",
+   "district": "Sri Potti Sriramulu Nellore",
+   "district_as_printed": "Prakasam",
+   "host": "ICAR-Central Tobacco Research Institute, Rajahmundry",
+   "address": "CTRI premises, Kandukur 523 105",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Prakasam; Kandukur moved to SPSR Nellore district in 2022."
+  },
+  {
+   "name": "KVK Vinayashram",
+   "district": "Bapatla",
+   "district_as_printed": "Guntur",
+   "host": "Vinayashram, Cherukupalli (NGO)",
+   "address": "Vinayashram, Cherukupalli mandal, Guntur 522 309",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Guntur; Cherukupalli mandal is in Bapatla district since 2022."
+  },
+  {
+   "name": "KVK Lam (SVVU)",
+   "district": "Guntur",
+   "district_as_printed": "Guntur",
+   "host": "Sri Venkateswara Veterinary University, Tirupati",
+   "address": "Lam, Guntur 522 034",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27"
+  },
+  {
+   "name": "KVK Yagantipalle",
+   "district": "Nandyal",
+   "district_as_printed": "Kurnool",
+   "host": "Sri Hanumantharaya Educational and Charitable Society, Kurnool (NGO)",
+   "address": "Yagantipalle, Banaganapalle mandal 518 124",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Kurnool; Banaganapalle mandal is in Nandyal district since 2022."
+  },
+  {
+   "name": "BCT KVK Haripuram",
+   "district": "Anakapalli",
+   "district_as_printed": "Visakhapatnam",
+   "host": "Bhagavatula Charitable Trust (NGO)",
+   "address": "BCT Farm Complex, Haripuram, Rambilli mandal 531 061",
+   "sources": [
+    "https://icar.org.in/en/node/15047"
+   ],
+   "checked": "2026-11-27",
+   "note": "Printed as Visakhapatnam; Rambilli mandal is in Anakapalli district since 2022."
+  }
+ ],
+ "districts_without_kvk": [
+  "Vizianagaram",
+  "Visakhapatnam",
+  "Kakinada",
+  "Dr. B.R. Ambedkar Konaseema",
+  "Eluru",
+  "Palnadu",
+  "Sri Sathya Sai",
+  "Chittoor"
+ ]
+}

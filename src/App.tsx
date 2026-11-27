@@ -13,7 +13,7 @@ import { About } from "./pages/About";
 import { Evidence } from "./pages/Evidence";
 
 export const KCC = "1800-180-1551";
-const CROP_ORDER = ["paddy", "chilli", "cotton", "groundnut", "maize", "blackgram", "tomato", "brinjal", "banana", "mango", "onion", "potato"];
+const CROP_ORDER = ["paddy", "chilli", "cotton", "groundnut", "maize", "blackgram", "tomato", "brinjal", "banana", "mango", "cashew", "onion", "potato"];
 
 type Step = "lang" | "crop" | "photo" | "describe" | "working" | "ask" | "unsure" | "advice" | "history";
 

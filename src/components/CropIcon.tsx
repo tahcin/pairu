@@ -131,6 +131,15 @@ const icons: Record<string, JSX.Element> = {
       <path d="M28 57 L30 61 M32 57 V62 M36 57 L34 61" stroke="#9C7340" strokeWidth="1.5" strokeLinecap="round" />
     </g>
   ),
+  cashew: (
+    <g>
+      <path d="M30 8 C30 12 31 14 32 16" stroke="#6B5A2E" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <path d="M32 10 C38 4 48 6 50 10 C44 14 38 14 32 10 Z" fill={LEAF} />
+      <path d="M20 22 C20 16 26 14 32 14 C40 14 46 18 45 26 C44 34 40 40 32 41 C24 41 20 34 20 22 Z" fill="#E4572E" />
+      <path d="M26 20 C26 18 28 17 30 17" stroke="#F28C6B" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      <path d="M36 40 C44 40 48 46 46 52 C44 58 36 60 30 56 C26 53 28 49 32 48 C35 47 34 44 33 41 Z" fill="#9C8A6A" stroke="#6E5F45" strokeWidth="1.5" />
+    </g>
+  ),
   unknown: (
     <g fill="none" strokeLinecap="round">
       <path d="M32 56 C32 42 32 30 32 22" stroke={STEM} strokeWidth="3" />

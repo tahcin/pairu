@@ -164,5 +164,6 @@
   "micUnsupported": "Speaking is not available on this phone. Tap the signs instead.",
   "machineTranslated": "This advice was translated by a computer from English. Some words may be unusual.",
   "s_tomato_late_blight": "Tomato, dark wet-looking patches",
-  "s_tomato_leaf_curl": "Tomato, small curled yellowing leaves"
+  "s_tomato_leaf_curl": "Tomato, small curled yellowing leaves",
+  "crop_cashew": "Cashew"
 }

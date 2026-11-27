@@ -1251,6 +1251,97 @@
    ]
   },
   {
+   "id": "cashew_tea_mosquito_bug",
+   "crop": "cashew",
+   "name_en": "Tea mosquito bug",
+   "kind": "pest",
+   "tnau_files": [],
+   "text_files": [
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "mosquito bug|Helopeltis",
+   "cibrc_targets": [
+    "tea mosquito bug"
+   ]
+  },
+  {
+   "id": "cashew_stem_root_borer",
+   "crop": "cashew",
+   "name_en": "Stem and root borer",
+   "kind": "pest",
+   "tnau_files": [],
+   "text_files": [
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "stem and root borer|Plocaederus|CSRB",
+   "cibrc_targets": []
+  },
+  {
+   "id": "cashew_thrips",
+   "crop": "cashew",
+   "name_en": "Thrips (flower and foliage)",
+   "kind": "pest",
+   "tnau_files": [],
+   "text_files": [
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "thrips|Rhynchothrips|Selenothrips|Scirtothrips",
+   "cibrc_targets": [
+    "thrips"
+   ]
+  },
+  {
+   "id": "cashew_anthracnose",
+   "crop": "cashew",
+   "name_en": "Anthracnose",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt",
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "anthracnose",
+   "cibrc_targets": []
+  },
+  {
+   "id": "cashew_inflorescence_blight",
+   "crop": "cashew",
+   "name_en": "Inflorescence blight",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt",
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "inflorescence blight",
+   "cibrc_targets": []
+  },
+  {
+   "id": "cashew_dieback",
+   "crop": "cashew",
+   "name_en": "Die-back (pink disease)",
+   "kind": "fungal",
+   "tnau_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt"
+   ],
+   "text_files": [
+    "crop_prot_crop_20diseases_plantation_cashew.txt",
+    "aesa:cashewnut"
+   ],
+   "aesa": "cashewnut",
+   "aesa_kw": "die.?back|pink disease|Corticium",
+   "cibrc_targets": []
+  },
+  {
    "id": "onion_purple_blotch",
    "crop": "onion",
    "name_en": "Purple blotch",

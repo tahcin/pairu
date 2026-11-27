@@ -1,0 +1,49 @@
+{
+ "pathogen": "Colletotrichum gloeosporioides, Gloeosporium gloeosporioides",
+ "symptoms": [
+  "The fungus attacks tender leaves and twigs.",
+  "You will see reddish brown spots that look water-soaked.",
+  "Sticky resin may ooze out from the affected areas.",
+  "The spots grow larger and kill the shoots.",
+  "Tender leaves become crinkled and fruits shrivel up.",
+  "Infected flower parts turn black and the tree may eventually die."
+ ],
+ "photo_cues": [
+  "reddish brown spots",
+  "water soaked lesions",
+  "sticky resin exudation",
+  "crinkled tender leaves",
+  "shrivelled fruits",
+  "blackened flower parts"
+ ],
+ "favourable_conditions": "High humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius help the disease grow.",
+ "prevention": [
+  "Collect and burn all diseased leaves and twigs.",
+  "Ask your local agricultural office about varieties that resist this disease.",
+  "Cover fruits with paper bags 15 days before you harvest them."
+ ],
+ "practices": [
+  "Regularly check your trees for signs of damage.",
+  "Cut off and destroy all affected branches and twigs.",
+  "Keep your plantation free of weeds."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Bordeaux mixture",
+  "Mancozeb",
+  "Cuman L",
+  "Blitox",
+  "Dimecron",
+  "Agallol",
+  "dichlorvos"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_plantation_cashew.txt",
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

@@ -20,11 +20,11 @@ for f in ("index.json", "index2.json"):
 AESA = {
  "rice": "rice.pdf", "maize": "maize.pdf", "groundnut": "groundnut.pdf", "blackgram_greengram": "blackgram_greengram%20%281%29.pdf",
  "banana": "banana.pdf", "brinjal": "brinjal.pdf", "chillies_capsicum": "chillies_capsicum.pdf", "cotton": "cotton.pdf",
- "mango": "mango.pdf", "onion": "onion.pdf", "potato": "potato.pdf", "tomato": "tomato.pdf",
+ "mango": "mango.pdf", "cashewnut": "cashewnut.pdf", "onion": "onion.pdf", "potato": "potato.pdf", "tomato": "tomato.pdf",
 }
 AESA_NAME = {"rice": "Rice", "maize": "Maize", "groundnut": "Groundnut", "blackgram_greengram": "Black gram and green gram",
  "banana": "Banana", "brinjal": "Brinjal", "chillies_capsicum": "Chillies and capsicum", "cotton": "Cotton", "mango": "Mango",
- "onion": "Onion", "potato": "Potato", "tomato": "Tomato"}
+ "onion": "Onion", "potato": "Potato", "tomato": "Tomato", "cashewnut": "Cashew"}
 EXTRA = {
  "ppqs_paddy_blast": ("DPPQS (Ministry of Agriculture): Package of practices for management of paddy blast", "https://ppqs.gov.in/sites/default/files/pop_for_management_of_paddy_blast.pdf"),
  "ppqs_rice_bph": ("DPPQS (Ministry of Agriculture): Package of practices for management of rice brown plant hopper", "https://ppqs.gov.in/sites/default/files/pop_for_managment_of_rice_bph.pdf"),
@@ -41,7 +41,7 @@ EXTRA = {
  "cpn_gls": ("Crop Protection Network (US land-grant universities): Gray leaf spot of corn", "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"),
 }
 
-PRINCIPLES = {"banana", "blackgram_greengram", "chillies_capsicum", "brinjal", "maize", "potato", "mango", "onion", "tomato"}
+PRINCIPLES = {"cashewnut", "banana", "blackgram_greengram", "chillies_capsicum", "brinjal", "maize", "potato", "mango", "onion", "tomato"}
 
 TITLE_OVERRIDE = {"crop_prot_crop_insectpest_20_cereals_paddy.txt": "Pests of paddy (main page)"}
 

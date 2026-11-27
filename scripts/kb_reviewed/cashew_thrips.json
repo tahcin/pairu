@@ -1,0 +1,30 @@
+{
+ "pathogen": "Rhynchothrips raoensis Ramakrishna Ayyar, Selenothrips rubrocinctus Giard., Rhipiphorothrips cruentatus Hood, Retithrips syriacus Mayet",
+ "symptoms": "",
+ "photo_cues": [
+  "Nymphs on twigs",
+  "Adults on leaves",
+  "Insects on flowers"
+ ],
+ "favourable_conditions": "Planting chilli or onion as intercrops favors thrips.",
+ "prevention": [
+  "Plant Sesbania grandiflora to act as a barrier.",
+  "Do not plant chilli or onion in the field.",
+  "Sprinkle water over seedlings to stop thrips from multiplying."
+ ],
+ "practices": [
+  "Set up 4 to 5 sticky traps per acre.",
+  "Use yellow or blue tins coated with grease, Vaseline, or castor oil.",
+  "Count nymphs and adults on five twigs or leaves per plant.",
+  "Use the tapping method to count thrips."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [],
+ "_model": "gemma-4-31b-it",
+ "_files": [
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0
+ ]
+}

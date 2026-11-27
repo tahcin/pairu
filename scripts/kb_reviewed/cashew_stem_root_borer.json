@@ -1,0 +1,35 @@
+{
+ "pathogen": "Plocaederus ferrugenius",
+ "symptoms": [
+  "You will see gum oozing out from the bark which then hardens.",
+  "The leaves turn yellow and start to fall off.",
+  "Twigs begin to dry up as the damage gets worse.",
+  "The tree eventually dies because the pest stops the flow of sap."
+ ],
+ "photo_cues": [
+  "hardened gum on bark",
+  "yellowing cashew leaves",
+  "dried up twigs",
+  "irregular tunnels in bark",
+  "circular exit holes"
+ ],
+ "favourable_conditions": "The pest infestation is more severe in neglected plantations and during the summer months.",
+ "prevention": [
+  "Keep your plantation clean and well cared for to avoid attracting the pest.",
+  "Monitor trees that are more than two years old as they are most at risk."
+ ],
+ "practices": [
+  "Regularly check your trees for signs of gumming or tunnels.",
+  "Remove and destroy any parts of the tree that are heavily infested.",
+  "Keep the plantation clean to prevent the pest from spreading."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0
+ ]
+}

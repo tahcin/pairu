@@ -2,7 +2,7 @@
 import json, os, sys
 
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CROP_IDS = "paddy cotton chilli groundnut maize tomato brinjal banana mango blackgram potato onion".split()
+CROP_IDS = "paddy cotton chilli groundnut maize tomato brinjal banana mango blackgram potato onion cashew".split()
 KINDS = {"fungal", "bacterial", "viral", "pest", "nutrient", "abiotic"}
 LANGS = {"te", "hi", "ta", "kn", "mr", "bn", "or", "gu", "pa", "ml"}
 

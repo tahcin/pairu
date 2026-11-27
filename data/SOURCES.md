@@ -138,3 +138,12 @@ Not KB items. These are left to DATA and APP, as the reviewer's own fixes say:
 - **"Cartap Hydrofipronil ide" label typo.** It lives in registered_uses.json (DATA).
 - **Onion thrips.** `recommended_actives` lists profenofos, which the TNAU onion page names. The register's waiting period for it on onion is long, so the app should drop any product whose waiting period runs past the crop's remaining days.
 - **Brinjal shoot and fruit borer.** Its `recommended_actives` come from TNAU and AESA, and we checked them against both. We found no newer source to rerank them.
+
+### Cashew (13th crop, added 27 Nov 2026)
+
+Crop id `cashew` has six problems plus `cashew_healthy`: tea mosquito bug, stem and root borer, thrips (flower and foliage), anthracnose, inflorescence blight and die-back (pink disease).
+- **Sources.** The NIPHM and DPPQS AESA based IPM package for cashewnut (`https://ppqs.gov.in/sites/default/files/cashewnut.pdf`) and the TNAU Agritech Portal cashew diseases page (Internet Archive copy). The ICAR-DCR Puttur site (cashew.icar.gov.in) showed only a default server page, so nothing comes from DCR directly.
+- **CIB&RC.** The register lists a single use for cashew: Beta-cyfluthrin 8.49% + Imidacloprid 19.81% OD against "tea mosquito bug and thrips". `scripts/build_registered_uses.py` now maps "Cashew" rows to `cashew`, and `targets_by_crop.json` has `tea mosquito bug` and `thrips` for it. Stem and root borer, anthracnose, inflorescence blight and die-back have no approved chemical use, so those cards show only practices and organic options.
+- **No `recommended_actives` or `etl`.** The AESA cashew package names no chemicals and gives no ETL table.
+- **Telugu names** for cashew problems are descriptive.
+- **Cashew Telugu.** The Sarvam account ran out of credits (HTTP 402 "No credits available") while drafting the cashew strings. Claude (claude-sonnet-5-5) therefore translated them straight from the English, under the same rules and glossary, in one call. That brings the total to 14 Claude calls for kb_te.json.

@@ -1,0 +1,50 @@
+{
+ "pathogen": "Corticium salmonicolor",
+ "symptoms": [
+  "You might see white or pink growth on the branches.",
+  "The tips of the shoots die and the death spreads down.",
+  "After heavy rains, you can see silky threads on the branches.",
+  "The bark can split and peel off.",
+  "Branches may turn yellow and fall off.",
+  "This can make parts of your tree look bare."
+ ],
+ "photo_cues": [
+  "Pink growth on branches",
+  "Silky threads on stems",
+  "Split and peeling bark",
+  "Yellow branches",
+  "Dead shoot tips"
+ ],
+ "favourable_conditions": "High humidity and moist conditions help the disease grow.",
+ "prevention": [
+  "Use healthy wood for planting that has no disease.",
+  "Keep the disease out of new farms.",
+  "Choose plant types that can resist the disease."
+ ],
+ "practices": [
+  "Cut off sick branches well below the sick part.",
+  "Destroy the sick branches you cut.",
+  "Clean up all dried and sick branches from the field.",
+  "Put cow dung on the cut ends of the branches."
+ ],
+ "organic_bio": [
+  {
+   "text": "pasting with cow dung",
+   "page": 1
+  }
+ ],
+ "chemicals_in_text": [
+  "Bordeaux paste",
+  "Bordeaux mixture",
+  "copper oxy-chloride"
+ ],
+ "_model": "gemma-4-31b-it",
+ "_files": [
+  "crop_prot_crop_20diseases_plantation_cashew.txt",
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

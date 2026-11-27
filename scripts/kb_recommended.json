@@ -1047,6 +1047,12 @@
  "potato_black_scurf": [],
  "potato_bacterial_wilt": [],
  "potato_common_scab": [],
+ "cashew_tea_mosquito_bug": [],
+ "cashew_stem_root_borer": [],
+ "cashew_thrips": [],
+ "cashew_anthracnose": [],
+ "cashew_inflorescence_blight": [],
+ "cashew_dieback": [],
  "onion_purple_blotch": [
   {
    "active": "chlorothalonil",

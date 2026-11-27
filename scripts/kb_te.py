@@ -174,7 +174,7 @@ def leftovers():
         print("call cap reached"); return
     items = {k: {"en": v, "te": cache.get(v, "")} for k, v in left.items()}
     client = anthropic.Anthropic(api_key=env("ANTHROPIC_API_KEY"))
-    user = f"Glossary:\n{json.dumps(glossary, ensure_ascii=False, indent=0)}\n\n{JUDGE_FIXES}\n\nItems:\n{json.dumps(items, ensure_ascii=False, indent=0)}"
+    user = "Where the draft \"te\" is empty (the Sarvam quota ran out), translate the English yourself under the same rules.\n\n" + f"Glossary:\n{json.dumps(glossary, ensure_ascii=False, indent=0)}\n\n{JUDGE_FIXES}\n\nItems:\n{json.dumps(items, ensure_ascii=False, indent=0)}"
     t0 = time.time()
     with client.beta.messages.stream(model="claude-sonnet-5-5", max_tokens=64000, system=SYSTEM, output_config={"effort": "medium"},
                                      betas=["server-side-fallback-2026-07-01"], fallbacks="default",

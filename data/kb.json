@@ -277,6 +277,31 @@
    ]
   },
   {
+   "id": "cashew",
+   "name_en": "Cashew",
+   "names": {
+    "te": "జీడిమామిడి",
+    "hi": "काजू",
+    "ta": "முந்திரி",
+    "kn": "ಗೋಡಂಬಿ",
+    "mr": "काजू",
+    "bn": "কাজু",
+    "or": "କାଜୁ",
+    "gu": "કાજુ",
+    "pa": "ਕਾਜੂ",
+    "ml": "കശുമാവ്"
+   },
+   "diseases": [
+    "cashew_tea_mosquito_bug",
+    "cashew_stem_root_borer",
+    "cashew_thrips",
+    "cashew_anthracnose",
+    "cashew_inflorescence_blight",
+    "cashew_dieback",
+    "cashew_healthy"
+   ]
+  },
+  {
    "id": "onion",
    "name_en": "Onion",
    "names": {
@@ -7036,6 +7061,437 @@
     {
      "title": "NIPHM and DPPQS: AESA based IPM package, Potato",
      "url": "https://ppqs.gov.in/sites/default/files/potato.pdf"
+    }
+   ]
+  },
+  {
+   "id": "cashew_tea_mosquito_bug",
+   "crop": "cashew",
+   "name_en": "Tea mosquito bug",
+   "names": {
+    "te": "టీ దోమ"
+   },
+   "kind": "pest",
+   "pathogen": "Helopeltis antonii Signoret",
+   "symptoms": [
+    "Young and adult bugs suck sap from tender leaves, young shoots, flower clusters, young nuts and apples.",
+    "A gummy, resin-like liquid oozes from the feeding marks.",
+    "The feeding spots turn pinkish brown within a day and black in 2 to 3 days, forming black scabs.",
+    "Tender leaves crinkle, and shoots show long black streaks and may die back.",
+    "Attacked flower clusters turn black and die, young nuts drop, and badly hit trees look scorched."
+   ],
+   "photo_cues": [
+    "black streaks on tender shoots",
+    "pinkish brown to black feeding spots",
+    "blackened flower clusters",
+    "gum drops on feeding marks",
+    "reddish brown ant-like bug with black head"
+   ],
+   "look_alikes": [
+    "cashew_inflorescence_blight"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cashew_tea_mosquito_bug_cashew_inflorescence_blight",
+     "question": "Do you see black streaks or black spots on tender shoots and leaves too, or small reddish brown bugs, and not only on the flower clusters?",
+     "yes": "cashew_tea_mosquito_bug",
+     "no": "cashew_inflorescence_blight"
+    }
+   ],
+   "favourable_conditions": "The bug thrives in temperatures between 24 and 32 degrees Celsius with relative humidity between 50 and 100 percent.",
+   "prevention": [
+    "Remove other plants the bug lives on, such as neem, guava, cocoa, drumstick and cotton, from in and around the plantation.",
+    "Pull out self-sown neem seedlings in and around the cashew garden.",
+    "Do not grow cotton or other host crops between cashew trees.",
+    "When the bug breaks out, manage it together with neighbouring farmers, because one farmer alone cannot control it."
+   ],
+   "practices": [
+    "Check five twigs per tree and count the young and adult bugs, mostly in the early morning when they feed.",
+    "Watch new flushes and flower clusters closely from flushing to fruit set."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "tea mosquito bug"
+   ],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_stem_root_borer",
+   "crop": "cashew",
+   "name_en": "Stem and root borer",
+   "names": {
+    "te": "కాండం, వేరు తొలిచే పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Plocaederus ferrugenius",
+   "symptoms": [
+    "You will see gum oozing out from the bark which then hardens.",
+    "The leaves turn yellow and start to fall off.",
+    "Twigs begin to dry up as the damage gets worse.",
+    "The tree eventually dies because the pest stops the flow of sap."
+   ],
+   "photo_cues": [
+    "hardened gum on bark",
+    "yellowing cashew leaves",
+    "dried up twigs",
+    "irregular tunnels in bark",
+    "circular exit holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "The pest infestation is more severe in neglected plantations and during the summer months.",
+   "prevention": [
+    "Remove dead trees and trees with advanced attack at least once every 6 months.",
+    "Do not wound trunks with sickles or other tools, because wounds attract the beetle to lay eggs.",
+    "Keep the plantation clean and look closely at trees older than two years."
+   ],
+   "practices": [
+    "Look for gum and powdery waste coming out of small holes at the base of the trunk.",
+    "Chisel out the damaged bark at a live hole and remove the grubs.",
+    "After removing the grubs, swab the trunk up to 1 metre high with neem oil (50 ml neem oil in 1 litre water with 0.5 ml teepol or 5 g soap)."
+   ],
+   "organic_bio": [
+    {
+     "text": "Neem oil swab on the trunk up to 1 metre after removing grubs: 50 ml neem oil + 1 litre water + 0.5 ml teepol or 5 g soap",
+     "source": 0
+    }
+   ],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_thrips",
+   "crop": "cashew",
+   "name_en": "Thrips (flower and foliage)",
+   "names": {
+    "te": "తామర పురుగు"
+   },
+   "kind": "pest",
+   "pathogen": "Rhynchothrips raoensis Ramakrishna Ayyar, Selenothrips rubrocinctus Giard., Rhipiphorothrips cruentatus Hood, Retithrips syriacus Mayet",
+   "symptoms": [
+    "Young and adult thrips live in groups on the underside of leaves and suck sap from leaves, flower clusters, apples and nuts.",
+    "Leaves turn pale brown and crinkle, with a rough upper surface.",
+    "Scabs and corky layers form on flower stalks, apples and nuts.",
+    "Flowers and young fruits drop and nuts are misshapen; in bad cases leaves fall and trees stop growing."
+   ],
+   "photo_cues": [
+    "pale brown crinkled leaves",
+    "corky scab on nuts and apples",
+    "scabby flower stalks",
+    "tiny insects under leaves",
+    "greenish yellow nymphs with red bands"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "Foliage thrips build up in the dry season from December to a peak in April and May, and fall in the rains; flushes after the monsoon are attacked most.",
+   "prevention": [
+    "Plant Sesbania grandiflora to act as a barrier.",
+    "Do not plant chilli or onion in the field.",
+    "Sprinkle water over seedlings to stop thrips from multiplying."
+   ],
+   "practices": [
+    "Set up 4 to 5 sticky traps per acre.",
+    "Use yellow or blue tins coated with grease, Vaseline, or castor oil.",
+    "Count nymphs and adults on five twigs or leaves per plant.",
+    "Use the tapping method to count thrips."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [
+    "thrips"
+   ],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_anthracnose",
+   "crop": "cashew",
+   "name_en": "Anthracnose",
+   "names": {
+    "te": "ఆంత్రాక్నోస్ (ఆకుమచ్చ తెగులు)"
+   },
+   "kind": "fungal",
+   "pathogen": "Colletotrichum gloeosporioides, Gloeosporium gloeosporioides",
+   "symptoms": [
+    "The fungus attacks tender leaves and twigs.",
+    "You will see reddish brown spots that look water-soaked.",
+    "Sticky resin may ooze out from the affected areas.",
+    "The spots grow larger and kill the shoots.",
+    "Tender leaves become crinkled and fruits shrivel up.",
+    "Infected flower parts turn black and the tree may eventually die."
+   ],
+   "photo_cues": [
+    "reddish brown spots",
+    "water soaked lesions",
+    "sticky resin exudation",
+    "crinkled tender leaves",
+    "shrivelled fruits",
+    "blackened flower parts"
+   ],
+   "look_alikes": [
+    "cashew_inflorescence_blight",
+    "cashew_dieback"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cashew_inflorescence_blight_cashew_anthracnose",
+     "question": "Are the spots mostly on the flower stalks, starting small and water-soaked and then turning pinkish brown and scabby?",
+     "yes": "cashew_inflorescence_blight",
+     "no": "cashew_anthracnose"
+    },
+    {
+     "id": "q_cashew_dieback_cashew_anthracnose",
+     "question": "Is there a white or pink growth or silky threads on the dying branches?",
+     "yes": "cashew_dieback",
+     "no": "cashew_anthracnose"
+    }
+   ],
+   "favourable_conditions": "High humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius help the disease grow.",
+   "prevention": [
+    "Collect and burn all diseased leaves and twigs.",
+    "Ask your local agricultural office about varieties that resist this disease.",
+    "Cover fruits with paper bags 15 days before you harvest them."
+   ],
+   "practices": [
+    "Regularly check your trees for signs of damage.",
+    "Cut off and destroy all affected branches and twigs.",
+    "Keep your plantation free of weeds."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cashew, Crop Protection",
+     "url": "https://web.archive.org/web/20120906022804/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_inflorescence_blight",
+   "crop": "cashew",
+   "name_en": "Inflorescence blight",
+   "names": {
+    "te": "పూత ఎండు తెగులు"
+   },
+   "kind": "fungal",
+   "pathogen": "Colletotrichum mangiferae, Phomopsis anacardii",
+   "symptoms": [
+    "The floral branches begin to dry up.",
+    "Small water-soaked spots appear on the main and side flower stalks.",
+    "These spots turn pinkish brown and eventually become scabby.",
+    "Sticky gum may ooze out from the affected areas.",
+    "The spots grow into large patches that cause the entire flower cluster to dry."
+   ],
+   "photo_cues": [
+    "minute water soaked lesions",
+    "pinkish brown spots",
+    "scabby surface texture",
+    "gummy exudates",
+    "dried floral branches"
+   ],
+   "look_alikes": [
+    "cashew_tea_mosquito_bug",
+    "cashew_anthracnose"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cashew_tea_mosquito_bug_cashew_inflorescence_blight",
+     "question": "Do you see black streaks or black spots on tender shoots and leaves too, or small reddish brown bugs, and not only on the flower clusters?",
+     "yes": "cashew_tea_mosquito_bug",
+     "no": "cashew_inflorescence_blight"
+    },
+    {
+     "id": "q_cashew_inflorescence_blight_cashew_anthracnose",
+     "question": "Are the spots mostly on the flower stalks, starting small and water-soaked and then turning pinkish brown and scabby?",
+     "yes": "cashew_inflorescence_blight",
+     "no": "cashew_anthracnose"
+    }
+   ],
+   "favourable_conditions": "The disease is very severe when there is cloudy weather, high humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius.",
+   "prevention": [
+    "Avoid planting cashew in areas that get heavy rain during the flowering and fruiting time.",
+    "Do not plant cashew where temperatures stay below 20 degrees Celsius for a long time.",
+    "Consult your local agricultural office to find varieties that resist this disease.",
+    "Keep the field clean by removing and destroying crop waste."
+   ],
+   "practices": [
+    "Monitor your trees closely during the monsoon season.",
+    "Remove and destroy any parts of the plant that show signs of the disease.",
+    "Manage the tea mosquito bug, as it is often the primary cause that allows the fungus to enter."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cashew, Crop Protection",
+     "url": "https://web.archive.org/web/20120906022804/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_dieback",
+   "crop": "cashew",
+   "name_en": "Die-back (pink disease)",
+   "names": {
+    "te": "కొమ్మ ఎండు తెగులు (పింక్ తెగులు)"
+   },
+   "kind": "fungal",
+   "pathogen": "Corticium salmonicolor",
+   "symptoms": [
+    "You might see white or pink growth on the branches.",
+    "The tips of the shoots die and the death spreads down.",
+    "After heavy rains, you can see silky threads on the branches.",
+    "The bark can split and peel off.",
+    "Branches may turn yellow and fall off.",
+    "This can make parts of your tree look bare."
+   ],
+   "photo_cues": [
+    "Pink growth on branches",
+    "Silky threads on stems",
+    "Split and peeling bark",
+    "Yellow branches",
+    "Dead shoot tips"
+   ],
+   "look_alikes": [
+    "cashew_anthracnose"
+   ],
+   "discriminators": [
+    {
+     "id": "q_cashew_dieback_cashew_anthracnose",
+     "question": "Is there a white or pink growth or silky threads on the dying branches?",
+     "yes": "cashew_dieback",
+     "no": "cashew_anthracnose"
+    }
+   ],
+   "favourable_conditions": "High humidity and moist conditions help the disease grow.",
+   "prevention": [
+    "Use healthy wood for planting that has no disease.",
+    "Choose plant types that can resist the disease.",
+    "Take every care not to bring the disease into newly planted gardens."
+   ],
+   "practices": [
+    "Cut off sick branches well below the sick part.",
+    "Destroy the sick branches you cut.",
+    "Clean up all dried and sick branches from the field.",
+    "Put cow dung on the cut ends of the branches."
+   ],
+   "organic_bio": [
+    {
+     "text": "pasting with cow dung",
+     "source": 1
+    }
+   ],
+   "cibrc_targets": [],
+   "sources": [
+    {
+     "title": "TNAU Agritech Portal: Cashew, Crop Protection",
+     "url": "https://web.archive.org/web/20120906022804/http://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html",
+     "original": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation_cashew.html"
+    },
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
+    }
+   ],
+   "names_source": {
+    "te": "descriptive"
+   },
+   "avoid": [],
+   "recommended_actives": []
+  },
+  {
+   "id": "cashew_healthy",
+   "crop": "cashew",
+   "name_en": "Healthy",
+   "names": {
+    "te": "ఆరోగ్యంగా ఉంది"
+   },
+   "names_source": {
+    "te": "descriptive"
+   },
+   "kind": "abiotic",
+   "pathogen": "",
+   "symptoms": [
+    "Leaves are evenly green for the variety, with no spots, streaks, rings or powdery coating.",
+    "Leaf edges and tips are not curling, yellowing, drying or burnt.",
+    "There are no insects, eggs, webbing, holes or bore marks on the leaves, stems or fruits."
+   ],
+   "photo_cues": [
+    "evenly green leaf",
+    "no spots or lesions",
+    "no curling or yellowing",
+    "no insects or holes"
+   ],
+   "look_alikes": [],
+   "discriminators": [],
+   "favourable_conditions": "",
+   "prevention": [
+    "Choose a variety that resists or tolerates the main pests and diseases, and use healthy seed or planting material.",
+    "Treat seed or planting material before sowing, preferably with a bio-pesticide.",
+    "Keep proper spacing, give organic manure and fertiliser by soil test, and avoid too much nitrogen, which makes the crop soft and easy for pests and diseases to attack.",
+    "Water the crop properly and rotate crops from season to season."
+   ],
+   "practices": [
+    "Walk through the field at least once a week and look at the soil, water, plants, pests and the friendly insects that eat pests.",
+    "Look after the friendly insects and spiders by avoiding broad-spectrum chemical sprays.",
+    "Act early when you see trouble, for example by collecting egg masses or removing infested plants."
+   ],
+   "organic_bio": [],
+   "cibrc_targets": [],
+   "avoid": [],
+   "recommended_actives": [],
+   "sources": [
+    {
+     "title": "NIPHM and DPPQS: AESA based IPM package, Cashew",
+     "url": "https://ppqs.gov.in/sites/default/files/cashewnut.pdf"
     }
    ]
   },

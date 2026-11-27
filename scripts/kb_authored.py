@@ -17,6 +17,7 @@ CROPS = {
  "mango": ("Mango", {"te": "మామిడి", "hi": "आम", "ta": "மா", "kn": "ಮಾವು", "mr": "आंबा", "bn": "আম", "or": "ଆମ୍ବ", "gu": "કેરી", "pa": "ਅੰਬ", "ml": "മാവ്"}),
  "blackgram": ("Black gram", {"te": "మినుము", "hi": "उड़द", "ta": "உளுந்து", "kn": "ಉದ್ದು", "mr": "उडीद", "bn": "মাষকলাই", "or": "ବିରି", "gu": "અડદ", "pa": "ਮਾਂਹ", "ml": "ഉഴുന്ന്"}),
  "potato": ("Potato", {"te": "బంగాళదుంప", "hi": "आलू", "ta": "உருளைக்கிழங்கு", "kn": "ಆಲೂಗಡ್ಡೆ", "mr": "बटाटा", "bn": "আলু", "or": "ଆଳୁ", "gu": "બટાકા", "pa": "ਆਲੂ", "ml": "ഉരുളക്കിഴങ്ങ്"}),
+ "cashew": ("Cashew", {"te": "జీడిమామిడి", "hi": "काजू", "ta": "முந்திரி", "kn": "ಗೋಡಂಬಿ", "mr": "काजू", "bn": "কাজু", "or": "କାଜୁ", "gu": "કાજુ", "pa": "ਕਾਜੂ", "ml": "കശുമാവ്"}),
  "onion": ("Onion", {"te": "ఉల్లి", "hi": "प्याज", "ta": "வெங்காயம்", "kn": "ಈರುಳ್ಳಿ", "mr": "कांदा", "bn": "পেঁয়াজ", "or": "ପିଆଜ", "gu": "ડુંગળી", "pa": "ਪਿਆਜ਼", "ml": "ഉള്ളി"}),
 }
 
@@ -91,7 +92,7 @@ _H_SYM = [
 _H_CUES = ["evenly green leaf", "no spots or lesions", "no curling or yellowing", "no insects or holes"]
 _AESA_FOR = {"paddy": "rice", "cotton": "cotton", "chilli": "chillies_capsicum", "groundnut": "groundnut", "maize": "maize",
  "tomato": "tomato", "brinjal": "brinjal", "banana": "banana", "mango": "mango", "blackgram": "blackgram_greengram",
- "potato": "potato", "onion": "onion"}
+ "potato": "potato", "onion": "onion", "cashew": "cashewnut"}
 HEALTHY = {c: {"symptoms": _H_SYM, "photo_cues": _H_CUES, "prevention": _H_PREV, "practices": _H_PRAC, "aesa": a}
            for c, a in _AESA_FOR.items()}
 
@@ -331,4 +332,50 @@ FIXES_ADD_PRACTICES = {"cotton_pink_bollworm": ["Put up pheromone traps at 5 per
 REWRITE.update({
  "Plant groundnut with pearl millet or sorghum in a 1 to 3 ratio.": "Grow 1 row of pearl millet or sorghum for every 3 rows of groundnut.",
  "You may see a silvery white tube called a silver shoot.": "Instead of a new leaf, the centre of the tiller comes out as a pale, hollow tube like an onion leaf (silver shoot).",
+})
+
+FIXES.update({
+ "cashew_tea_mosquito_bug": {"set": {
+   "symptoms": ["Young and adult bugs suck sap from tender leaves, young shoots, flower clusters, young nuts and apples.",
+     "A gummy, resin-like liquid oozes from the feeding marks.",
+     "The feeding spots turn pinkish brown within a day and black in 2 to 3 days, forming black scabs.",
+     "Tender leaves crinkle, and shoots show long black streaks and may die back.",
+     "Attacked flower clusters turn black and die, young nuts drop, and badly hit trees look scorched."],
+   "photo_cues": ["black streaks on tender shoots", "pinkish brown to black feeding spots", "blackened flower clusters", "gum drops on feeding marks", "reddish brown ant-like bug with black head"],
+   "prevention": ["Remove other plants the bug lives on, such as neem, guava, cocoa, drumstick and cotton, from in and around the plantation.",
+     "Pull out self-sown neem seedlings in and around the cashew garden.",
+     "Do not grow cotton or other host crops between cashew trees.",
+     "When the bug breaks out, manage it together with neighbouring farmers, because one farmer alone cannot control it."],
+   "practices": ["Check five twigs per tree and count the young and adult bugs, mostly in the early morning when they feed.",
+     "Watch new flushes and flower clusters closely from flushing to fruit set."]}},
+ "cashew_thrips": {"set": {
+   "symptoms": ["Young and adult thrips live in groups on the underside of leaves and suck sap from leaves, flower clusters, apples and nuts.",
+     "Leaves turn pale brown and crinkle, with a rough upper surface.",
+     "Scabs and corky layers form on flower stalks, apples and nuts.",
+     "Flowers and young fruits drop and nuts are misshapen; in bad cases leaves fall and trees stop growing."],
+   "photo_cues": ["pale brown crinkled leaves", "corky scab on nuts and apples", "scabby flower stalks", "tiny insects under leaves", "greenish yellow nymphs with red bands"],
+   "favourable_conditions": "Foliage thrips build up in the dry season from December to a peak in April and May, and fall in the rains; flushes after the monsoon are attacked most."}},
+ "cashew_stem_root_borer": {"set": {
+   "prevention": ["Remove dead trees and trees with advanced attack at least once every 6 months.",
+     "Do not wound trunks with sickles or other tools, because wounds attract the beetle to lay eggs.",
+     "Keep the plantation clean and look closely at trees older than two years."],
+   "practices": ["Look for gum and powdery waste coming out of small holes at the base of the trunk.",
+     "Chisel out the damaged bark at a live hole and remove the grubs.",
+     "After removing the grubs, swab the trunk up to 1 metre high with neem oil (50 ml neem oil in 1 litre water with 0.5 ml teepol or 5 g soap)."],
+   "organic_bio": [{"text": "Neem oil swab on the trunk up to 1 metre after removing grubs: 50 ml neem oil + 1 litre water + 0.5 ml teepol or 5 g soap", "page": 0}]}},
+ "cashew_dieback": {"drop": [("prevention", "Keep the disease out of new farms")],
+   "add": {"prevention": ["Take every care not to bring the disease into newly planted gardens."]}},
+})
+PAIRS += [
+ ("cashew_tea_mosquito_bug", "cashew_inflorescence_blight", "Do you see black streaks or black spots on tender shoots and leaves too, or small reddish brown bugs, and not only on the flower clusters?"),
+ ("cashew_inflorescence_blight", "cashew_anthracnose", "Are the spots mostly on the flower stalks, starting small and water-soaked and then turning pinkish brown and scabby?"),
+ ("cashew_dieback", "cashew_anthracnose", "Is there a white or pink growth or silky threads on the dying branches?"),
+]
+TE.update({
+ "cashew_tea_mosquito_bug": ("టీ దోమ", "descriptive"),
+ "cashew_stem_root_borer": ("కాండం, వేరు తొలిచే పురుగు", "descriptive"),
+ "cashew_thrips": ("తామర పురుగు", "descriptive"),
+ "cashew_anthracnose": ("ఆంత్రాక్నోస్ (ఆకుమచ్చ తెగులు)", "descriptive"),
+ "cashew_inflorescence_blight": ("పూత ఎండు తెగులు", "descriptive"),
+ "cashew_dieback": ("కొమ్మ ఎండు తెగులు (పింక్ తెగులు)", "descriptive"),
 })

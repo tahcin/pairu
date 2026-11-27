@@ -1,0 +1,44 @@
+{
+ "pathogen": "Colletotrichum mangiferae, Phomopsis anacardii",
+ "symptoms": [
+  "The floral branches begin to dry up.",
+  "Small water-soaked spots appear on the main and side flower stalks.",
+  "These spots turn pinkish brown and eventually become scabby.",
+  "Sticky gum may ooze out from the affected areas.",
+  "The spots grow into large patches that cause the entire flower cluster to dry."
+ ],
+ "photo_cues": [
+  "minute water soaked lesions",
+  "pinkish brown spots",
+  "scabby surface texture",
+  "gummy exudates",
+  "dried floral branches"
+ ],
+ "favourable_conditions": "The disease is very severe when there is cloudy weather, high humidity, frequent rains, and temperatures between 24 and 32 degrees Celsius.",
+ "prevention": [
+  "Avoid planting cashew in areas that get heavy rain during the flowering and fruiting time.",
+  "Do not plant cashew where temperatures stay below 20 degrees Celsius for a long time.",
+  "Consult your local agricultural office to find varieties that resist this disease.",
+  "Keep the field clean by removing and destroying crop waste."
+ ],
+ "practices": [
+  "Monitor your trees closely during the monsoon season.",
+  "Remove and destroy any parts of the plant that show signs of the disease.",
+  "Manage the tea mosquito bug, as it is often the primary cause that allows the fungus to enter."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [
+  "Cuman L",
+  "Blitox",
+  "Dimecron"
+ ],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "crop_prot_crop_20diseases_plantation_cashew.txt",
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0,
+  1
+ ]
+}

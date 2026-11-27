@@ -1,0 +1,35 @@
+{
+ "pathogen": "Helopeltis antonii Signoret",
+ "symptoms": [
+  "The bug damages new shoots and leaves.",
+  "It causes damage to the flower clusters.",
+  "It leads to the loss of young, tender nuts.",
+  "The bug feeds on plant tissues and causes blight."
+ ],
+ "photo_cues": [
+  "orange coloured young nymphs",
+  "ant like insect shape",
+  "creamy white eggs",
+  "chorionic threads on tissue"
+ ],
+ "favourable_conditions": "The bug thrives in temperatures between 24 and 32 degrees Celsius with relative humidity between 50 and 100 percent.",
+ "prevention": [
+  "Remove alternate host plants like neem, guava, cocoa, and cotton from your farm.",
+  "Clear out self-sown neem plants in and around the plantation.",
+  "Avoid planting cashew near other crops that host these bugs, such as cotton.",
+  "Work with your neighbors to manage the pest on a large community scale."
+ ],
+ "practices": [
+  "Monitor your crop regularly to look for signs of damage.",
+  "Count and record the number of nymphs and adults on five random twigs per plant."
+ ],
+ "organic_bio": [],
+ "chemicals_in_text": [],
+ "_model": "gemini-3.1-flash-lite",
+ "_files": [
+  "aesa:cashewnut"
+ ],
+ "_used_pages": [
+  0
+ ]
+}

@@ -91,6 +91,13 @@ D = [
  ("potato_black_scurf", "potato", "Black scurf", "fungal", r"crop_prot_crop_20diseases_veg_potato_", r"^Black scurf", "potato", r"black scurf|Rhizoctonia", ["black scurf", "black scruf", "black scruff"]),
  ("potato_bacterial_wilt", "potato", "Bacterial wilt (brown rot)", "bacterial", r"crop_prot_crop_20diseases_veg_potato_", r"[Bb]acterial wilt|[Bb]rown rot", "potato", r"bacterial wilt|brown rot|Ralstonia", ["bacterial brown wilt or ring or the bangle disease of potato"]),
  ("potato_common_scab", "potato", "Common scab", "bacterial", r"crop_prot_crop_20diseases_veg_potato_", r"^Common scab", "potato", r"common scab|Streptomyces", ["scab"]),
+ # cashew (13th crop, added for Srikakulam)
+ ("cashew_tea_mosquito_bug", "cashew", "Tea mosquito bug", "pest", r"^$", r"^$", "cashewnut", r"mosquito bug|Helopeltis", ["tea mosquito bug"]),
+ ("cashew_stem_root_borer", "cashew", "Stem and root borer", "pest", r"^$", r"^$", "cashewnut", r"stem and root borer|Plocaederus|CSRB", []),
+ ("cashew_thrips", "cashew", "Thrips (flower and foliage)", "pest", r"^$", r"^$", "cashewnut", r"thrips|Rhynchothrips|Selenothrips|Scirtothrips", ["thrips"]),
+ ("cashew_anthracnose", "cashew", "Anthracnose", "fungal", r"crop_prot_crop_20diseases_plantation_cashew", r".", "cashewnut", r"anthracnose", []),
+ ("cashew_inflorescence_blight", "cashew", "Inflorescence blight", "fungal", r"crop_prot_crop_20diseases_plantation_cashew", r".", "cashewnut", r"inflorescence blight", []),
+ ("cashew_dieback", "cashew", "Die-back (pink disease)", "fungal", r"crop_prot_crop_20diseases_plantation_cashew", r".", "cashewnut", r"die.?back|pink disease|Corticium", []),
  # onion
  ("onion_purple_blotch", "onion", "Purple blotch", "fungal", r"onion_diseases", r"^Purple", "onion", r"purple blotch|Alternaria porri", ["purple blotch", "downy mildew purple blotch"]),
  ("onion_stemphylium_blight", "onion", "Stemphylium leaf blight", "fungal", r"onion_diseases", r"Stemphylium", "onion", r"stemphylium", ["stemphylium blight", "stemphylium leaf blight", "stemphylum blight", "stemphylium"]),

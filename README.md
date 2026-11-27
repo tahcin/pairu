@@ -4,6 +4,8 @@ Pairu helps a farmer photograph a sick leaf and hear, in their own language, wha
 
 **Live app:** https://pairu.tahcin.tech &nbsp;|&nbsp; **Evidence page:** https://pairu.tahcin.tech/evidence
 
+**Demo video** (1:41, with voiceover), deck and technical documentation: https://drive.google.com/drive/folders/1WckhEcr0AZLbTv4PRPkgxdbW2QGeMv4g
+
 Built for Avishkaar Season 4 (Virtual Track, AITAM Tekkali), problem statement AG-03: "Develop an intelligent multilingual recommendation system that provides reliable crop-specific disease-management guidance, including disease symptoms, treatment options, preventive measures, and recommended farming practices in farmers' native languages."
 
 ![Pairu in Telugu: crop tiles, a follow-up question, the advice card and IPM-ranked approved treatments](docs/screenshot.png)

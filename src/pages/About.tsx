@@ -25,29 +25,54 @@ export function About() {
           is, which signs to check, what to do now, how to prevent it next time and whether the weather is right for spraying.
         </p>
 
-        <h2>The model proposes, code decides</h2>
-        <p>
-          A vision model (Gemini 3.1 Flash Lite, falling back to Gemini 3.5 Flash Lite and then Claude Haiku) looks at the photo together with the
-          closed list of diseases we hold for that crop and must answer in strict JSON, choosing only ids from that list, a healthy option or
-          "unknown". It also reports whether the photo is sharp enough and whether it shows the crop the farmer chose.
-        </p>
-        <p>
-          Our code, not the model, then decides what happens. A diagnosis is accepted only when the top candidate scores at least 0.75 and leads the
-          next by at least 0.25. When the top two are known look-alikes (early blight and Septoria leaf spot on tomato, for example), Pairu asks the
-          farmer one to three yes or no questions written to tell them apart, and the answers decide. If the photo is poor, the crop looks wrong or
-          the answers do not settle it, Pairu says plainly that it is not sure and offers a retake or a free call to the Kisan Call Centre
-          (1800-180-1551) instead of guessing.
-        </p>
+        <h2>How Pairu decides</h2>
+        <ol className="pipeline">
+          <li>
+            <strong>Photo and words.</strong> The farmer picks a crop (or says they are not sure), takes a photo, and can describe the problem
+            by voice in their own language. The photo is shrunk to at most 1024 pixels on the phone.
+          </li>
+          <li>
+            <strong>A closed list.</strong> A vision model (Gemini 3.1 Flash Lite, then Gemini 3.5 Flash Lite, then Claude Haiku only if both
+            fail) sees the photo with the list of problems we hold for that crop and must answer in strict JSON, choosing only ids from that
+            list, a healthy option or "unknown". It also says whether the photo is sharp and whether it shows the crop the farmer chose.
+          </li>
+          <li>
+            <strong>Code applies the thresholds.</strong> A diagnosis is accepted only when the top candidate scores at least 0.75 and leads the
+            next one by at least 0.25. The model never decides this itself.
+          </li>
+          <li>
+            <strong>Follow-up questions.</strong> When the top two are known look-alikes, Pairu asks up to three yes or no questions written to
+            tell them apart (for example, whether the spots have rings like a target), and the answers decide.
+          </li>
+          <li>
+            <strong>Refusal path.</strong> If the photo is blurry or too far, shows a different crop, or the answers do not settle it, Pairu says
+            plainly that it is not sure and offers a retake or a free call to the Kisan Call Centre (1800-180-1551) instead of guessing.
+          </li>
+          <li>
+            <strong>Advice joined with the government register.</strong> The diagnosis is joined on the exact crop and pest with the CIB&amp;RC
+            register of approved uses. Banned, withdrawn and crop-restricted products are removed, WHO class Ia and Ib products carry a warning,
+            organic and biological options come first, and each product shows its approved dose, water volume and waiting period before harvest.
+            For virus diseases Pairu explains that the approved sprays target the insect that spreads the virus.
+          </li>
+        </ol>
 
-        <h2>Only treatments the Government of India approves for that crop</h2>
-        <p>
-          Every chemical and biological product shown comes from the CIB&amp;RC "Major Uses of Pesticides" lists, joined on the exact crop and the
-          exact pest or disease, with the approved dose, the water volume and the waiting period before harvest. Doses are converted to per acre
-          only when the list prints a plain number; otherwise they are shown exactly as printed per hectare. Products on the government's banned,
-          withdrawn or crop-restricted list are removed, and products whose active ingredient is in WHO hazard class Ia or Ib carry a clear
-          warning. Organic and biological options are listed first. The CIB&amp;RC lists say they are for guidance and not for legal purposes, so
-          Pairu also tells the farmer to follow the product label.
-        </p>
+        <h2>Data behind it</h2>
+        <ul>
+          <li>2,804 approved uses for our 12 crops, out of 4,454 rows in the CIB&amp;RC "Major Uses of Pesticides" lists for fungicides, insecticides, bio-fungicides and bio-insecticides.</li>
+          <li>94 banned, withdrawn and restricted entries from the CIB&amp;RC list of banned, refused and restricted pesticides, applied at the moment advice is built.</li>
+          <li>WHO 2019 hazard classes for 160 active ingredients. A missing class is shown as no class, never as safe.</li>
+          <li>66 diseases and pests across 12 crops, each with symptoms, photo cues, prevention, practices and sources from TNAU Agritech, ICAR and DPPQS pages, plus 82 follow-up questions covering 25 look-alike pairs.</li>
+        </ul>
+
+        <h2>Limits, stated plainly</h2>
+        <ul>
+          <li>Pairu only knows the 66 problems in its list. Anything else should come back as "not sure", and the vision model can still be wrong.</li>
+          <li>Lab photos of single leaves are easier than photos taken in a field; the evidence page reports both where we have them.</li>
+          <li>Some doses in the government lists are printed without a unit. Pairu then converts only the number and tells the farmer to check grams or millilitres on the label.</li>
+          <li>Disease text is machine translated with Sarvam except where the KB holds a local name (24 Telugu disease names come from Vikaspedia).</li>
+          <li>Pests are judged from the damage a leaf photo shows, which is weaker than seeing the insect.</li>
+          <li>The CIB&amp;RC lists say they are for guidance and not for legal purposes, so Pairu always tells the farmer to follow the product label.</li>
+        </ul>
 
         <h2>In the farmer's own language</h2>
         <p>
@@ -72,6 +97,14 @@ export function About() {
             24 hours or the wind is above 15 km/h)
           </li>
         </ul>
+
+        <h2>Sample photos</h2>
+        <p>
+          The "Try a sample photo" link on the photo screen opens six real labelled photos that are not part of the evaluation test set: four
+          single-leaf lab photos from PlantVillage (Mohanty et al. 2016, CC BY-SA 3.0, github.com/spMohanty/PlantVillage-Dataset: tomato early
+          blight, tomato Septoria leaf spot, healthy tomato, potato early blight) and two rice field photos from Rice Leaf Disease Image Samples
+          (Sethy et al. 2020, Mendeley Data, doi 10.17632/fwcj7stb8r, CC BY 4.0: blast, brown spot). The images are unchanged.
+        </p>
 
         <h2>How well it works</h2>
         <p>

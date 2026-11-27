@@ -793,3 +793,8 @@ td {
     animation: none;
   }
 }
+.pipeline {
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+}

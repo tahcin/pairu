@@ -1,0 +1,16 @@
+{
+  "name": "Pairu",
+  "short_name": "Pairu",
+  "description": "Photograph a sick leaf and hear, in your own language, what the disease is, how sure we are, and what to do.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5efe3",
+  "theme_color": "#2e5a33",
+  "lang": "te",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

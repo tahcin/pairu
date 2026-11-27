@@ -1,0 +1,2471 @@
+{
+ "version": 1,
+ "lang": "pa",
+ "about": "Punjabi text for data/kb.json, keyed like data/kb_te.json. Machine translated with gemma-4-31b-it (fallback gemini-3.5-flash-lite); not yet reviewed by a person.",
+ "crops": {
+  "paddy": "ਝੋਨਾ",
+  "cotton": "ਕਪਾਹ",
+  "chilli": "ਮਿਰਚ",
+  "groundnut": "ਮੂੰਗਫਲੀ",
+  "maize": "ਮੱਕੀ",
+  "tomato": "ਟਮਾਟਰ",
+  "brinjal": "ਬੈਂਗਣ",
+  "banana": "ਕੇਲਾ",
+  "mango": "ਅੰਬ",
+  "blackgram": "ਮਾਂਹ",
+  "potato": "ਆਲੂ",
+  "cashew": "ਕਾਜੂ",
+  "onion": "ਪਿਆਜ਼"
+ },
+ "diseases": {
+  "paddy_blast": {
+   "name": "Jhul Jhul",
+   "symptoms": [
+    "Patte te chitte ton sitti-hare rang de nishan jinha de kinare bhure hunde han, dikhange.",
+    "Eh nishan vadh ke takle ya heere varge aakar de ban jande han jinha da vichala hissa rakh varga hunda hai.",
+    "Baali da mudhla hissa gura-bhura ya kala ho janda hai ate sadh sakda hai.",
+    "Rogi tana tut sakda hai, jis karke baali thale gir jandi hai.",
+    "Bhari halat vich saari fasal sadi ya sali hoe lagdi hai.",
+    "Is bimari karke chitte rang diyan baaliyan nikal diyan han jinha vich dane nahi hunde ya ghat vadiya dane hunde han."
+   ],
+   "prevention": [
+    "Ajehi kism bijo jo is bimari di rotham kar sake.",
+    "Bijaai bahut late na karo ate sukki nursari da prayog na karo.",
+    "Nitrogen khad ikathi paun di bajae tin hisse karke pao.",
+    "Khet de banhan nu nshin-ghas hata ke saf rakhho.",
+    "Kataai to baad, parali ate naalan nu khet vichon hata do ya mitti vich vaho, sado mat."
+   ],
+   "practices": [
+    "Apne khet nu lagataar check karo ke koi bimari da lakshan ta nahi hai.",
+    "Jinna paudheyan te bimari hove ohna nu kad ke saal do.",
+    "Khet vich pani da level sahi rakho.",
+    "Je bimari dikhe ta nitrogen khad hor pauni rok do."
+   ],
+   "favourable_conditions": "Thande mausam, zyada nami, os, ate nitrogen khad da hadon vad prayog hon te eh bimari tezi nal pildi hai.",
+   "organic_bio": [
+    "Pseudomonas fluorescens talc formulation @ 10g/kg bij sowee lai sukke bij di sod lai",
+    "Pseudomonas fluorescens (talc) @ 2.5 kg khode pani vich paudheyan diyan jadon nu dubon lai",
+    "Pseudomonas fluorescens talc formulation @ 0.5% da chhidka",
+    "Pseudomonas fluorescence @ 10g/lit pani vich bij di sod lai",
+    "Trichoderma viridae @ 5-10 g/kg bij",
+    "Pseudomonas fluorescence @ 5g/lit pani vich paudhe dip karan lai",
+    "Pseudomonas fluorescence @ 5g/lit pani vich patte te chhidka lai",
+    "Neem cake @ 150 kg/ha"
+   ],
+   "avoid": [],
+   "etl": "Patte da blast: har patte te 3 ton 5 nishan. Gadan da blast: 2 ton 5 paudhe pratvarg meter rogi gadan vale."
+  },
+  "paddy_brown_spot": {
+   "name": "Bhoora dhabba rog",
+   "symptoms": [
+    "Bimari di shuruat patte te chhote-chhote bhure bindiya nal hundi hai.",
+    "Eh nishan vadh ke andakar ya gol ho jande han jo til de dane varge lagde han.",
+    "Bahut saare nishan ikathe ho ke vade dhabbe ban jande han jisse patta suk janda hai.",
+    "Tuhanu dane de sirhe te ate paudhe di gadan te bhure dhabbe dikh sakde han.",
+    "Rogi dane te kale ya bhure rang de makhmali fafund di parat dikh sakdi hai."
+   ],
+   "prevention": [
+    "Hamesha bimari-mukt bij da prayog karo.",
+    "Ajehi chano jo bimari rokh sake.",
+    "Nshin ate hor paudhe jo fafund nu pala sakde han, hata do.",
+    "Sahi tatva pa ke mitti nu upjau rakho ate pani di kami na aun do.",
+    "Bijaai ton pehlan bij nu 53-54°C garam pani vich 10 ton 12 minat lai sodho."
+   ],
+   "practices": [
+    "Apne khet vich rogi paudheyan nu dekho.",
+    "Paudhe nu pani di kami na ave, is lai khet nu changi tarah sincho.",
+    "Rogi paudhe ya ohna de hisse kad ke nasht kar do."
+   ],
+   "favourable_conditions": "Jad tapman 25-30°C hove, nami 80 pratishat ton utte hove, ate patte 8 ton 24 ghante gile rehn, ta eh bimari pildi hai.",
+   "organic_bio": [
+    "Pseudomonas fluorescens @ 10g/kg bij nal sod karke baad vich paudhe dip karan lai 2.5 kg ya product/ha 100 lit pani vich ghol ke"
+   ],
+   "avoid": [],
+   "etl": "Prat patte te 2 ton 3 dhabbe ate prat varg meter 2 ton 3 rogi paudhe."
+  },
+  "paddy_blb": {
+   "name": "Patte da galan rog",
+   "symptoms": [
+    "Patte te pani varge ya pile rang de lariye dikhange.",
+    "Patte de kinare pile ya sone varge ho ke sukn lagde han.",
+    "Patte sirhe ton mud ke suk sakde han jadki vichali rekh hari rehndi hai.",
+    "Saver vele, naye nishana te dudhiya ya gadha pani jeha boond varga dikh sakda hai.",
+    "Bahut zyada rogi patte jaldi hi suk jande han."
+   ],
+   "prevention": [
+    "Ajehi kism chuno jo is bimari nu seh sake.",
+    "Hamesha swasth ate bimari-mukt bij da prayog karo.",
+    "Apni nursari alag unche ilake vich ughao.",
+    "Khet nu nshin ate purane naalan nu hata ke saf rakhho.",
+    "Santulit khad varto ate nitrogen hadon vad na pao."
+   ],
+   "practices": [
+    "Khet vichon pani kad do, par phullan de same pani khara rakho.",
+    "Rogi paudhe ya ohna de hisse kad ke saal do.",
+    "Rogi khet da pani swasth khet vich na jaen do.",
+    "Paudhe laun vele ohna de sirhe na kato.",
+    "Apne khet nu lagataar check karo."
+   ],
+   "favourable_conditions": "Garam tapman 25 ton 30 degree Celsius, zyada nami, varakhha, danga pani, ate tez hawan jo chot paudiyan han, is bimari nu vadhaundiyan han.",
+   "organic_bio": [
+    "Neem oil 3% da chhidka",
+    "NSKE 5% da chhidka",
+    "Taaze gobar da ras (20 gram gobar ik litre pani vich) da chhidka"
+   ],
+   "avoid": [],
+   "etl": "Prat varg meter 2 ton 3 rogi patte (nursari vich, prat varg meter 2 ton 3 murjhhonde paudhe)."
+  },
+  "paddy_sheath_blight": {
+   "name": "Ghol da sarna",
+   "symptoms": [
+    "Pani de level de kol patte de ghol te dhabbe dikhange.",
+    "Dhabbe hare-slaye rang de shuru hunde han ate gol ya tedhe-medhe hunde han.",
+    "Jyon hi oh vadhde han, vichala hissa slate-chittaate kinara bhura ho janda hai.",
+    "Dhabbe vadh ke saare tanner nu gher lainde han.",
+    "Patte mar sakde han ate saara paudha suk sakda hai.",
+    "Rogi paudhe vich dane theek tarah nahi bharde."
+   ],
+   "prevention": [
+    "Lod mutabik khad varto ate nitrogen hadon vad na pao.",
+    "Paudheyan vich sahi fasla rakho.",
+    "Khet vichon nshin hatao.",
+    "Garmi vich dahi vaho ate naal ya naadnu hata do ya mitti vich rala do.",
+    "Rogi khet da pani swasth khet vich na paen do."
+   ],
+   "practices": [
+    "Patte de ghol te dhabbe dekhan lai khet nu check karo.",
+    "Khel vich pani khara na rehn do, varo-varo pani sukhao ate bharo.",
+    "Hawa di chal theek karan lai khet vich 30 cm chaude raste banao.",
+    "Rogi paudhe de hisse kad ke nasht kar do."
+   ],
+   "favourable_conditions": "Eh bimari garam mausam vich 28 ton 32 degree Celsius tapman, zyada nami, ate paudheyan di ghani fasla karke tezi nal pildi hai.",
+   "organic_bio": [
+    "Virodhi mikroroganu nu vadhon lai FYM 12.5 t/ha ya hari khaad 6.25 t/ha pao"
+   ],
+   "avoid": [],
+   "etl": "5 ton 6 mm lamme dhabbe ate prat varg meter 2 ton 3 rogi paudhe."
+  },
+  "paddy_bph": {
+   "name": "Bhoora tela",
+   "symptoms": [
+    "Chhote kire pani de kol paudhe de adhar te ikathe ho jande han.",
+    "Paudhe sukn lagde han ate sali varge lagde han.",
+    "Khet vich gol dayre ban jande han jithe paudhe suk ke thale gir rhe han.",
+    "Kire paudhe da ras chusde han jisse dane theek tarah nahi bharde.",
+    "Paudhe te viral bimariyan de lakshan dikh sakde han."
+   ],
+   "prevention": [
+    "Har saal ikko hi ajehi kism na bijo jo bimari jaldi fadi hove.",
+    "Apne sube lai dasiyan gaiyan rothak kismyan varto.",
+    "Nitrogen khad da hadon vad prayog na karo.",
+    "Apne ilake vich sare khet ikko samay bijo ate khet nu nshin-mukt rakho.",
+    "Hawa de langhan lai har 8 ton 10 kataran to baad kujh thawan chhado."
+   ],
+   "practices": [
+    "Har 3 ton 5 dina bad khet nu check karo, paudhe nu hohla jeha hila ke dekho ke kire pani vich digde han ki nahi.",
+    "Je zyada tela hove ta 3 ton 4 din lai khet vichon pani kad do.",
+    "Kire fadan lai rat nu light trap ya din nu peele pan trap varto.",
+    "Chhidka hamesha paudhe de adhar te karo jithe kire rehnde han.",
+    "Je khet vich makdi vargi mitr kire hon ta rasanik dawai da chhidka na karo."
+   ],
+   "favourable_conditions": "Eh kida nami vale mausam, lagataar jhone di kheti, zyada chhanve sthan, ate khet vich khare pani vich khub pilda hai.",
+   "organic_bio": [
+    "Neem oil 3% 15 lit/ha",
+    "Neem oil 5 ml/L nal 2 ml liquid detergent",
+    "5% Neem seed kernel extract (NSKE)",
+    "Azadirachtin 1500 ppm vala neem product @ 2.5ml/ litre pani",
+    "Metarhizium anisopliae 1.15% WP @ 2-5 g/litre",
+    "Pani mirch de patte da ras @ 20 gm/L nal 2 ml liquid detergent"
+   ],
+   "avoid": [
+    "Tela maran lai synthetic pyrethroids, methyl parathion, fenthion ya quinalphos da chhidka na karo: is nal tela hor zyada vadh janda hai.",
+    "Ik tanki vich do ki nashak na ralao, ate ikko ki nashak bar-bar na varto.",
+    "Rogi fasal nu sado mat: is nal tela naal de kheta vich chala janda hai."
+   ],
+   "etl": "Chhidka tabhi karo jad prat hill 5 ton 10 tela hove, ya jithe har saal tela anda hove othe prat hill 2 tela hove."
+  },
+  "paddy_leaf_folder": {
+   "name": "Patte lapetn vala kida",
+   "symptoms": [
+    "Patte lamai vich mud jande han ate sunde andar rehndi hai.",
+    "Sunde patte da hara hissa khurak dindi hai.",
+    "Khrab patte chitte ho jande han ate suk jande han.",
+    "Buri halat vich saara khet sali lagda hai."
+   ],
+   "prevention": [
+    "Zyada nuksan to bachn lai fasal cheti bijo.",
+    "Paudheyan vich fasla thodi zyada rakho.",
+    "Nitrogen khad hadon vad na pao.",
+    "Khet de banhan nu saf rakhho.",
+    "Khet vich chhanv karan vali cheeza hatao."
+   ],
+   "practices": [
+    "Khet nu lagataar nuksan lai check karo.",
+    "Parwane fadan lai light trap lagao.",
+    "Khet vich makdi ate dragonfly vargi mitr kire nu bacha ke rakho.",
+    "Kire de chhuppan de sthan khatam karan lai banhan nu saf rakhho."
+   ],
+   "favourable_conditions": "Zyada nuksan chhanve sthana te ate zyada nitrogen khad vale kheta vich hunda hai.",
+   "organic_bio": [
+    "Trichogramma chilonis @ 5 cc (1,00,000/ha) tin vaari 37, 44 ate 51 dina te",
+    "NSKE 5 %"
+   ],
+   "avoid": [],
+   "etl": "Prat hill 2 pure khrab patte jinha vich sunde hove."
+  },
+  "paddy_gall_midge": {
+   "name": "Gall midge",
+   "symptoms": [
+    "Paudhe te pyaz de patte vargi khokhli nali ug jandi hai.",
+    "Nave patte di bajae, tanner da vichala hissa pyaz de patte varga chitta khokhla nal varga (silver shoot) nikalda hai.",
+    "Rogi tanner naye patte kaddhna band kar dinda hai.",
+    "Paudhe te koi baali nahi andi.",
+    "Patte vikrit, murjhhaye ya mude hoye lag sakde han."
+   ],
+   "prevention": [
+    "Mausam di shuruat vich fasal cheti bijo.",
+    "Ajehi kism chuno jo is kire nu seh sake.",
+    "Khet de banhan nu saf ate nshin-mukt rakhho.",
+    "Sare kheta vich alag-alag samay te bijaai na karo.",
+    "Potash khad sifarsi dar te pao."
+   ],
+   "practices": [
+    "Khet vichon 5 ton 7 din lai pani kad do.",
+    "Nuksan vale paudhe ikathe karke saal do.",
+    "Vadde kire fadan lai sham nu light trap lagao.",
+    "Silver shoot lai khet nu check karo ate je 10 pratishat tanner prabhavit hon ta kadam chakko."
+   ],
+   "favourable_conditions": "Badalvahi ya varsha de mausam vich is kire di ginti tezi nal vadhdi hai.",
+   "organic_bio": [
+    "Akhri vhai vele Neem cake @ 100 kg",
+    "10% Neem patte da ras",
+    "5% NSKE",
+    "1% Neem oil",
+    "3% Jadi-booti da ras"
+   ],
+   "avoid": [],
+   "etl": "Prat varg meter 1 gall, ya 10% silver shoots."
+  },
+  "paddy_false_smut": {
+   "name": "Jhutha smut",
+   "symptoms": [
+    "Ikkle-ikkle dane peele rang de fafund vich badal jande han.",
+    "Makhmali spore de gole ughde han ate dane de phull vale hisse nu gher lainde han.",
+    "Spore de gole chhote shuru hunde han ate 1 cm tak vadh jande han.",
+    "Aam tor par baali vich kade-kade dane rogi hunde han baki thik rehnde han.",
+    "Jyon hi fafund vadhdi hai, gole fat jande han ate narangi ton peele-hare ya hare-kale ho jande han."
+   ],
+   "prevention": [
+    "Vadiya kism de bimari-mukt bij varto.",
+    "Smut gole ghat karan lai fasal cheti bijo.",
+    "Apne jhone nal ajehi fasal badal ke bijo jo is fafund nu na palawe.",
+    "Nshin hataun lai banhan ate khalan nu saf rakhho.",
+    "Nitrogen khad hadon vad na pao ate karke hisse vich pao."
+   ],
+   "practices": [
+    "Bimari de lakshan lai apne khet nu lagataar check karo.",
+    "Kataai vele rogi paudhe kad ke saal do ta jo fafund mitti vich na digge.",
+    "Jad paudhe gile hon ta khet vich kam na karo.",
+    "Khet nu khara rahan den di bajae nami ghat karan lai vich-vich pani kad do."
+   ],
+   "favourable_conditions": "Eh bimari unna ilakian vich pildi hai jithe nami zyada hove, tapman 25 ton 35 degree Celsius hove, ate phullan de same madyam varsha hove.",
+   "organic_bio": [
+    "Pseudomonas fluorescence 10g/lit pani vich 30 minat lai (bij sod)",
+    "Trichoderma viridae @ 5-10 g/kg bij",
+    "Pseudomonas fluorescence 5g/lit pani vich 20 minat lai (paudhe dip)",
+    "Neem cake @ 150 kg/ha",
+    "Pseudomonas fluorescence 5g/lit pani vich (patte te chhidka)"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "paddy_stem_borer": {
+   "name": "Tana chhedak",
+   "symptoms": [
+    "Tuhanu patte de sirhe de kol bhure ande dikh sakde han.",
+    "Sunde tanner ate shoot de vichale hisse vich chhed kar dindi hai.",
+    "Vichala shoot suk janda hai jinu dead heart kiha janda hai.",
+    "Vadde paudhe vich, saari baali suk jandi hai ate chitti ho jandi hai, jinu white ear kiha janda hai.",
+    "Rogi paudhe hath nal aasani nal zameen vichon kaddhe ja sakde han."
+   ],
+   "prevention": [
+    "Ande hataun lai bijaai to pehlan paudhe de sirhe kato.",
+    "Ajehi jhone di kism chuno jo is kire nu seh sake.",
+    "Kataai to baad, mitti vaho ate khet vich pani bharo ta jo naalan vich luki sunde mar sakan.",
+    "Parwane aun de mukh samay ton bachn lai bijaai late karo.",
+    "Parwane fadan lai nursari nu trap fasal varto."
+   ],
+   "practices": [
+    "Mukh khet vichon ande ikathe karke saal do.",
+    "Khet vich parwana di ginti check karan lai pheromone trap varto.",
+    "Kire dekhan lai sham nu light trap varto.",
+    "Kire ate ohna de mitr kire di ginti check karan lai sweep net varto."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "Trichogramma japonicum",
+    "Neem seed kernel extract"
+   ],
+   "avoid": [],
+   "etl": "Nursari vich, prat varg meter 1 ande da guchha. Tanner avastha to, prat varg meter 2 ande de guchhe, ya 10% dead hearts, ya prat varg meter 1 parwana, ya ik hafte vich prat trap 25 parwane."
+  },
+  "paddy_healthy": {
+   "name": "Tandrust",
+   "symptoms": [
+    "Patte kism mutabik barabar hare han, koi dhabba, lakeer, ring ya powder nahi hai.",
+    "Patte de kinare ate sirhe mud, pile, suk ya sali nahi rhe.",
+    "Patte, tanner ya fala te koi kida, ande, jala, chhed ya nishan nahi hai."
+   ],
+   "prevention": [
+    "Ajehi kism chuno jo mukh bimari ate kire nu rokh sake, ate swasth bij varto.",
+    "Bijaai to pehlan bij ya paudhe nu bio-pesticide nal sodho.",
+    "Sahi fasla rakho, mitti di jach karva ke khad pao, ate nitrogen hadon vad na pao jisse fasal naram ho jave ate kire jaldi hamla karan.",
+    "Fasal nu theek pani do ate fasal badal ke bijo."
+   ],
+   "practices": [
+    "Hafte vich ghoton ik baar khet vich gehre maro ate mitti, pani, paudhe, kire ate mitr kire nu dekho.",
+    "Rasanik chhidka na karke mitr kire ate makdiya di raksha karo.",
+    "Jad samasya dikhe ta cheti kadam chakko, jive ande ya rogi paudhe hata ke."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cotton_bacterial_blight": {
+   "name": "ਬੈਕਟੀਰੀਅਲ ਬਲਾਈਟ (ਕਾਲਾ ਗੋਡਾ)",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਰੇ ਹੋਏ ਛੋਟੇ ਗੂੜ੍ਹੇ ਹਰੇ ਦਾਣੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਦਾਣੇ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ ਦੀਆਂ ਰਗਾਂ ਵਿੱਚ ਘਿਰ ਕੇ ਕੋਨੇਦਾਰ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਰਗਾਂ ਕਾਲੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਪੱਤੇ ਮੁੜੇ ਹੋਏ ਜਾਂ ਸੁੰਗੜੇ ਹੋਏ ਲੱਗ ਸਕਦੇ ਹਨ।",
+    "ਤਣਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਕਾਲੇ ਜ਼ਖ਼ਮ ਬਣ ਜਾਂਦੇ ਹਨ ਜਿਸ ਨਾਲ ਪੌਦਾ ਸੁੱਕ ਸਕਦਾ ਹੈ।",
+    "ਇਹ ਬਿਮਾਰੀ ਕਪਾਹ ਦੇ ਟੀਡਿਆਂ ਤੱਕ ਫੈਲ ਸਕਦੀ ਹੈ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਗਾਲ ਸਕਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਬਿਮਾਰੀ ਨੂੰ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਰੋਕਣ ਲਈ ਤੇਜ਼ਾਬ ਨਾਲ ਸਾਫ਼ ਕੀਤੇ ਬੀਜ ਵਰਤੋ।",
+    "ਆਪਣੀ ਕਪਾਹ ਨੂੰ ਬਹੁਤ ਨੇੜੇ-ਨੇੜੇ ਨਾ ਬੀਜੋ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਸਾਰੇ ਨਦੀਨ ਅਤੇ ਪੌਦਿਆਂ ਦੇ ਪੁਰਾਣੇ ਹਿੱਸੇ ਹਟਾ ਦਿਓ।",
+    "ਆਪਣੇ ਆਪ ਉੱਗਣ ਵਾਲੇ ਕਪਾਹ ਦੇ ਬੂਟਿਆਂ ਨੂੰ ਪੁੱਟ ਦਿਓ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੌਦੇ ਜਾਂ ਹਿੱਸੇ ਨੂੰ ਹਟਾਓ ਅਤੇ ਖ਼ਤਮ ਕਰੋ।",
+    "ਦਾਣਿਆਂ ਦੇ ਪਹਿਲੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੀ ਫ਼ਸਲ ਉੱਤੇ ਨੇੜਿਓਂ ਨਜ਼ਰ ਰੱਖੋ।",
+    "ਖੇਤ ਵਿੱਚ ਬਚਿਆ ਹੋਇਆ ਸਾਰਾ ਮਲਬਾ ਹਟਾ ਕੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਸਮਰੱਥ ਸਿਲ੍ਹ ਵਾਲੇ ਮੌਸਮ ਵਿੱਚ ਬਿਮਾਰੀ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cotton_alternaria_leaf_spot": {
+   "name": "ਅਲਟਰਨੇਰੀਆ ਪੱਤਾ ਦਾਗ਼",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਗੋਲ ਜਾਂ ਬੇਢੰਗੇ ਦਾਣੇ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਹਰ ਦਾਣੇ ਦੇ ਕੇਂਦਰ ਵਿੱਚ ਆਲੇ-ਦੁਆਲੇ ਛੱਲੇ ਹੁੰਦੇ ਹਨ।",
+    "ਬਹੁਤਾਰੇ ਦਾਣੇ ਮਿਲ ਕੇ ਵੱਡੇ ਸੁੱਕੇ ਹਿੱਸੇ ਬਣਾ ਸਕਦੇ ਹਨ।",
+    "ਪੱਤੇ ਭੁਰਭੁਰੇ ਹੋ ਕੇ ਪੌਦੇ ਤੋਂ ਡਿੱਗ ਸਕਦੇ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਤਣਿਆਂ, ਬ੍ਰੈਕਟਾਂ ਅਤੇ ਟੀਡਿਆਂ ਉੱਤੇ ਦਾਣੇ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਗੀਲੇ ਮੌਸਮ ਵਿੱਚ, ਦਾਣੇ ਕਾਲੇ ਸੂਹੇ ਰੰਗ ਦੇ ਹੋ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਘਣੇ ਪੌਦੇ ਨਾ ਲਾਓ, ਅਤੇ ਜ਼ਿਆਦਾ ਫ਼ਾਸਲਾ ਰੱਖੋ ਤਾਂ ਜੋ ਫ਼ਸਲ ਵਿੱਚ ਘੱਟ ਸਿਲ੍ਹ ਰਹੇ।",
+    "ਖੇਤ ਤਿਆਰ ਕਰਦੇ ਸਮੇਂ, ਫ਼ਸਲ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਹਟਾਓ ਅਤੇ ਪਿੱਛੇ ਬਚੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਦਬਾਉਣ ਲਈ ਡੂੰਘੀ ਵਾਹੀ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਫੈਲਾਉਣ ਵਾਲੇ ਨਦੀਨਾਂ ਨੂੰ ਪੁੱਟ ਕੇ ਸਾੜ ਦਿਓ।",
+    "ਤੇਜ਼ਾਬ ਨਾਲ ਸਾਫ਼ ਕੀਤੇ ਬੀਜ ਵਰਤੋ ਤਾਂ ਜੋ ਬਿਮਾਰੀ ਬੀਜ ਰਾਹੀਂ ਨਾ ਆਵੇ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਤੌਰ 'ਤੇ ਜਾਂਚ ਕਰੋ।",
+    "ਤੁਹਾਨੂੰ ਮਿਲਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਲਾਗਗ੍ਰਸਤ ਪੌਦੇ ਦੇ ਹਿੱਸੇ ਨੂੰ ਹਟਾਓ ਅਤੇ ਖ਼ਤਮ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਸਿਲ੍ਹ ਵਾਲੇ ਮੌਸਮ ਵਿੱਚ ਬਿਮਾਰੀ ਜ਼ਿਆਦਾ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cotton_grey_mildew": {
+   "name": "ਗ੍ਰੇ ਮਿਲਡਿਊ (ਸਲੇਟੀ ਫ਼ਫ਼ੂੰਦੀ)",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੁਰਾਣੇ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਫਿੱਕੇ, ਆਰ-ਪਾਰ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਧੱਬੇ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਧੱਬੇ ਚੌਰਸ ਜਾਂ ਕੋਣਾਂ ਵਰਗੇ ਆਕਾਰ ਦੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੱਤੇ ਦੀਆਂ ਨਾੜੀਆਂ ਦੁਆਰਾ ਰੋਕੇ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਉੱਤੇ ਸਲੇਟੀ ਰੰਗ ਦਾ ਪਾਊਡਰ ਵਰਗਾ ਵਾਧਾ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।",
+    "ਪੱਤੇ ਦੇ ਉੱਪਰਲੇ ਹਿੱਸੇ ਉੱਤੇ ਹਲਕੇ ਹਰੇ ਜਾਂ ਪੀਲੇ ਧੱਬੇ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਪੀਲੇ ਹੋ ਜਾਂਦੇ ਹਨ, ਸੁੱਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦੇ ਟੀਂਡੇ ਬਹੁਤ ਜਲਦੀ ਖੁੱਲ੍ਹ ਸਕਦੇ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਰੂੰ ਮਾੜੀ ਕੁਆਲਟੀ ਦਾ ਹੋ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਅਜites ਕਿਸਮਾਂ ਬੀਜੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਪ੍ਰਤੀ ਰੋਧਕ ਜਾਂ ਸਹਿਣਸ਼ੀਲ ਵਜੋਂ ਜਾਣੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਆਪਣੀ ਕਪਾਹ ਦੀ ਫ਼ਸਲ ਨੂੰ ਅਨਾਜ ਵਾਲੀਆਂ ਫ਼ਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ (ਫ਼ਸਲੀ ਚੱਕਰ ਅਪਣਾ ਕੇ) ਬੀਜੋ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਦੀ ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਬਚੋ।",
+    "ਆਪਣੀ ਮਿੱਟੀ ਦੀ ਕਿਸਮ ਦੇ ਆਧਾਰ 'ਤੇ ਪੌਦਿਆਂ ਵਿਚਕਾਰ ਸਹੀ ਫ਼ਾਸਲਾ ਰੱਖੋ।",
+    "ਵਾਢੀ ਤੋਂ ਬਾਅਦ, ਖੇਤ ਵਿੱਚੋਂ ਸਾਰੇ ਬਚੇ ਹੋਏ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸੇ ਹਟਾ ਦਿਓ ਜਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਡੂੰਘਾ ਵਾਹ ਦਿਓ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਕਿਸੇ ਵੀ ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ ਦੇ ਹਿੱਸੇ ਨੂੰ ਲੱਭ ਕੇ ਹਟਾ ਦਿਓ ਅਤੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਕਿਸੇ ਵੀ ਬਚੇ ਹੋਏ ਪੌਦੇ ਦੇ ਟੁਕੜਿਆਂ ਨੂੰ ਦੱਬਣ ਅਤੇ ਮਾਰਨ ਲਈ ਖੇਤ ਨੂੰ ਡੂੰਘਾ ਵਾਹੋ।",
+    "ਗਰਮੀਆਂ ਦੌਰਾਨ ਆਪਣੇ ਆਪ ਉੱਗਣ ਵਾਲੇ ਕਪਾਹ ਦੇ ਪੌਦਿਆਂ ਨੂੰ ਪੁੱਟ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਆਮ ਤੌਰ 'ਤੇ ਪੁਰਾਣੇ ਪੱਤਿਆਂ ਉੱਤੇ ਉਸ ਸਮੇਂ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ ਜਦੋਂ ਪੌਦਾ ਆਪਣੇ ਪਹਿਲੇ ਟੀਂਡੇ ਬਣਾਉਣ ਲੱਗਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cotton_pink_bollworm": {
+   "name": "ਗੁਲਾਬੀ ਸੁੰਡੀ",
+   "symptoms": [
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਕਲੀਆਂ ਪੌਦੇ ਤੋਂ ਝੜ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲ ਠੀਕ ਤਰ੍ਹਾਂ ਨਹੀਂ ਖੁੱਲ੍ਹਦੇ ਅਤੇ ਗੁਲਾਬ ਦੇ ਫੁੱਲ ਵਰਗੇ ਲੱਗਦੇ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਹਰੇ ਟੀਡਿਆਂ ਉੱਤੇ ਬਾਹਰ ਨਿਕਲਣ ਦੇ ਛੋਟੇ ਛੇਕ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਟੀਡਿਆਂ ਦੇ ਅੰਦਰ, ਬੀਜ ਅਤੇ ਰੂੰ ਖਰਾਬ ਜਾਂ ਰੰਗਹੀਣ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਟੀਡੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਖੁੱਲ੍ਹ ਸਕਦੇ ਹਨ ਅਤੇ ਬਿਮਾਰ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਪਿਉਪਾ ਨੂੰ ਪੰਛੀਆਂ ਅਤੇ ਧੁੱਪ ਦੇ ਸਾਹਮਣੇ ਲਿਆਉਣ ਲਈ ਗਰਮੀਆਂ ਵਿੱਚ ਆਪਣੇ ਖੇਤ ਨੂੰ ਡੂੰਘਾ ਵਾਹੋ।",
+    "ਆਪਣੇ ਖੇਤ ਨੇੜੇ ਨਦੀਨਾਂ ਅਤੇ ਹੋਰ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾਓ ਜੋ ਕੀੜੇ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕਰਦੇ ਹਨ।",
+    "ਪ੍ਰਮਾਣਿਤ ਬੀਜ ਵਰਤੋ ਅਤੇ ਜਲਦੀ ਪੱਕਣ ਵਾਲੀਆਂ ਜਾਂ ਰੋਧਕ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਕੀੜੇ ਦੇ ਜੀਵਨ ਚੱਕਰ ਨੂੰ ਤੋੜਨ ਲਈ ਆਪਣੀਆਂ ਫ਼ਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ।",
+    "ਆਪਣੀ ਬੀਟੀ ਕਪਾਹ ਦੇ ਨਾਲ ਗੈਰ-ਬੀਟੀ ਕਪਾਹ ਦੀ ਪਨਾਹਗਾਹ ਬੀਜੋ।"
+   ],
+   "practices": [
+    "ਕੀੜੇ ਦੇ ਲੱਛਣਾਂ ਲਈ ਹਰ 3 ਤੋਂ 5 ਦਿਨਾਂ ਬਾਅਦ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਬਾਲਗ ਪਤੰਗਾਂ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਫੜਨ ਲਈ ਫੇਰੋਮੋਨ ਟਰੈਪ ਵਰਤੋ।",
+    "ਡਿੱਗੇ ਹੋਏ ਚੌਕੋਰ ਫੁੱਲਾਂ, ਫੁੱਲਾਂ ਜਾਂ ਟੀਡਿਆਂ ਨੂੰ ਚੁਣੋ ਅਤੇ ਖ਼ਤਮ ਕਰੋ।",
+    "ਜੇਕਰ ਤੁਹਾਨੂੰ ਗੁਲਾਬ ਦੇ ਫੁੱਲ ਵਰਗੀਆਂ ਕਲੀਆਂ ਦਿਖਾਈ ਦੇਣ, ਤਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਤੋੜੋ ਅਤੇ ਤੁਰੰਤ ਖ਼ਤਮ ਕਰੋ।",
+    "ਲਾਰਵਾ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਹਰੇ ਟੀਡਿਆਂ ਨੂੰ ਪਾੜ ਕੇ ਉਨ੍ਹਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਪਤੰਗਾਂ 'ਤੇ ਨਜ਼ਰ ਰੱਖਣ ਲਈ ਬਿਜਾਈ ਤੋਂ 45 ਦਿਨਾਂ ਬਾਅਦ ਪ੍ਰਤੀ ਹੈਕਟੇਅਰ 5 ਫੇਰੋਮੋਨ ਟਰੈਪ ਲਗਾਓ।",
+    "60 ਦਿਨਾਂ ਤੋਂ, ਵੱਖ-ਵੱਖ ਪੌਦਿਆਂ ਵਿੱਚੋਂ ਪ੍ਰਤੀ ਏਕੜ 20 ਹਰੇ ਟੀਡੇ ਤੋੜੋ ਅਤੇ ਲਾਰਵਾ ਦੇਖਣ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ ਪਾੜੋ।"
+   ],
+   "favourable_conditions": "ਜਦੋਂ ਕਪਾਹ ਅਪ੍ਰੈਲ ਜਾਂ ਮਈ ਵਿੱਚ ਬੀਜੀ ਜਾਂਦੀ ਹੈ ਤਾਂ ਕੀੜਾ ਅਕਸਰ ਵਧੇਰੇ ਸਰਗਰਮ ਹੁੰਦਾ ਹੈ।",
+   "organic_bio": [
+    "Trichogrammatoideabactrae @ 1,00,000/ha per release",
+    "Trichogramma bactrae eggs @ 3 cc (60,000)/acre",
+    "neem seed kernel extract (NSKE) 5%"
+   ],
+   "avoid": [
+    "ਚਿੱਟੀ ਮੱਖੀ ਅਤੇ ਚੇਪੀ ਦੇ ਪ੍ਰਕੋਪ ਨੂੰ ਰੋਕਣ ਲਈ, ਬਿਜਾਈ ਤੋਂ 120 ਦਿਨਾਂ ਪਹਿਲਾਂ ਪਾਈਥਰੋਇਡਜ਼ ਦਾ ਛਿੜਕਾਅ ਨਾ ਕਰੋ, ਅਤੇ ਕਦੇ ਵੀ ਕੀਟਨਾਸ਼ਕ ਮਿਸ਼ਰਣਾਂ ਦਾ ਛਿੜਕਾਅ ਨਾ ਕਰੋ। ਪਾਈਥਰੋਇਡਜ਼ ਨੂੰ 120 ਦਿਨਾਂ ਬਾਅਦ ਗੁਲਾਬੀ ਸੁੰਡੀ ਲਈ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "etl": "10% ਖਰਾਬ (ਗੁਲਾਬ ਵਰਗੀਆਂ) ਕਲੀਆਂ, ਜਾਂ 10% ਖਰਾਬ ਹਰੇ ਟੀਡੇ (ਚਿੱਟੇ ਜਾਂ ਗੁਲਾਬੀ ਲਾਰਵਾ ਜਾਂ ਬਾਹਰ ਨਿਕਲਣ ਵਾਲੇ ਛੇਕਾਂ ਵਾਲੇ 20 ਵਿੱਚੋਂ 2 ਟੀਡੇ), ਜਾਂ ਲਗਾਤਾਰ 3 ਰਾਤਾਂ ਲਈ ਪ੍ਰਤੀ ਫੇਰੋਮੋਨ ਟਰੈਪ 8 ਪਤੰਗ।"
+  },
+  "cotton_whitefly": {
+   "name": "ਚਿੱਟੀ ਮੱਖੀ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਪੀਲੇ ਦਾਣੇ ਦਿਖਾਈ ਦੇਣਗੇ ਜੋ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਰਗਾਂ ਤੋਂ ਕਿਨਾਰਿਆਂ ਤੱਕ ਪੀਲੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਅਤੇ ਟੀਡਿਆਂ ਉੱਤੇ ਕਾਲੀ ਫ਼ਫ਼ੂੰਦੀ ਉੱਗ ਸਕਦੀ ਹੈ।",
+    "ਪੌਦਾ ਆਪਣੇ ਪੱਤੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਗੁਆ ਸਕਦਾ ਹੈ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਕਲੀਆਂ ਅਤੇ ਟੀਡੇ ਪੌਦੇ ਤੋਂ ਝੜ ਸਕਦੇ ਹਨ।",
+    "ਟੀਡੇ ਠੀਕ ਤਰ੍ਹਾਂ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕਦੇ।"
+   ],
+   "prevention": [
+    "ਚਿੱਟੀ ਮੱਖੀ ਦਾ ਵਿਰੋਧ ਕਰਨ ਵਾਲੀਆਂ ਜਲਦੀ ਪੱਕਣ ਵਾਲੀਆਂ ਕਪਾਹ ਦੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਆਪਣੇ ਖੇਤਾਂ ਵਿੱਚੋਂ Abutilon indicum ਵਰਗੇ ਨਦੀਨਾਂ ਅਤੇ ਹੋਰ ਬਦਲਵੇਂ ਮੇਜ਼ਬਾਨਾਂ ਨੂੰ ਹਟਾਓ।",
+    "ਆਪਣੀ ਕਪਾਹ ਦੇ ਨੇੜੇ ਵੜਿੰਗਣ, ਟਮਾਟਰ, ਜਾਂ ਭਿੰਡੀ ਵਰਗੀਆਂ ਫ਼ਸਲਾਂ ਬੀਜਣ ਤੋਂ ਬਚੋ।",
+    "ਆਪਣੇ ਬੀਜ ਬੀਜਣ ਵੇਲੇ ਵੱਡਾ ਫ਼ਾਸਲਾ ਵਰਤੋ।",
+    "ਕੀੜਿਆਂ ਦੀ ਸ਼ੁਰੂ ਵਿੱਚ ਨਿਗਰਾਨੀ ਕਰਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਫੜਨ ਲਈ ਪੀਲੇ ਚਿਪਕਣ ਵਾਲੇ ਟਰੈਪ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਅਪ੍ਰੈਲ ਤੋਂ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲੀ ਚਿੱਟੀ ਮੱਖੀ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਤੌਰ 'ਤੇ ਜਾਂਚ ਕਰੋ।",
+    "ਕੀੜੇ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੱਤੇ ਨੂੰ ਤੋੜੋ ਅਤੇ ਖ਼ਤਮ ਕਰੋ।",
+    "ਆਪਣੇ ਖੇਤਾਂ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ।",
+    "ਪੌਦੇ ਦੇ ਛੱਤਰ ਦੀ ਉਚਾਈ 'ਤੇ ਪੀਲੇ ਚਿਪਕਣ ਵਾਲੇ ਟਰੈਪ ਵਰਤੋ।",
+    "ਜੇਕਰ ਤੁਸੀਂ ਪੌਦਿਆਂ ਨੂੰ ਹਿਲਾਉਂਦੇ ਹੋ ਅਤੇ ਕੀੜਿਆਂ ਦਾ ਧੂੰਏਂ ਵਰਗਾ ਬੱਦਲ ਦੇਖਦੇ ਹੋ, ਤਾਂ ਕਾਰਵਾਈ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਸਿੰਚਾਈ ਅਤੇ ਉੱਚ ਨਾਈਟ੍ਰੋਜਨ ਖਾਦ ਦੀ ਵਰਤੋਂ ਨਾਲ ਕੀੜੇ ਦਾ ਵਾਧਾ ਹੋ ਸਕਦਾ ਹੈ।",
+   "organic_bio": [
+    "Verticillium lecanii 1.15% WP 2500 g/ha",
+    "Neem seed kernel extract 5% (50 kg) and neem oil at 5 ml/l of water",
+    "Fish oil rosin soap 25 kg at 1 kg in 40 lit of water",
+    "Notchi leaves 5% extract",
+    "Catharanthus rosea extract 5%",
+    "Azadirachtin 0.15% (Neem Seed Kernel Based EC) @ 2.5-5.0 l/ha",
+    "Azadirachtin 0.03% (300ppm) (Neem Oil Based WSP) @ 2.5-5.0 l/ha",
+    "Homemade Neem Extract @ 2.5 l/ha",
+    "Verticillium lecanii 1.15%WP @ 2.5 kg/ha"
+   ],
+   "avoid": [
+    "cypermethrin, deltamethrin ਅਤੇ fenvalerate ਵਰਗੇ ਸਿੰਥੈਟਿਕ ਪਾਈਥਰੋਇਡਜ਼, ਅਤੇ acephate ਅਤੇ acetamiprid ਤੋਂ ਬਚੋ, ਕਿਉਂਕਿ ਇਹ ਚਿੱਟੀ ਮੱਖੀ ਨੂੰ ਬਦਤਰ ਤਰੀਕੇ ਨਾਲ ਵਾਪਸ ਲਿਆਉਂਦੇ ਹਨ।"
+   ],
+   "etl": "ਸਵੇਰੇ 10 ਵਜੇ ਤੋਂ ਪਹਿਲਾਂ ਪੌਦੇ ਦੇ ਉੱਪਰਲੇ ਹਿੱਸੇ ਵਿੱਚ ਪ੍ਰਤੀ ਪੱਤਾ 6 ਬਾਲਗ ਚਿੱਟੀਆਂ ਮੱਖੀਆਂ, ਜਾਂ ਅੱਧੇ ਤੋਂ ਵੱਧ ਪੌਦਿਆਂ ਉੱਤੇ ਪੌਦੇ ਦੇ ਵਿਚਕਾਰ 10 ਤੋਂ ਵੱਧ। ਜਦੋਂ ਤੁਸੀਂ ਪੌਦੇ ਨੂੰ ਹੌਲੀ ਜਿਹੇ ਹਿਲਾਉਂਦੇ ਹੋ ਤਾਂ ਮੱਖੀਆਂ ਦਾ ਧੂੰਏਂ ਵਰਗਾ ਬੱਦਲ ਉੱਠਦਾ ਹੈ।"
+  },
+  "cotton_jassid": {
+   "name": "ਤੇਲਾ (ਜੈਸਿਡ)",
+   "symptoms": [
+    "ਕੋਮਲ ਪੱਤੇ ਪੀਲੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਦੇ ਕਿਨਾਰੇ ਹੇਠਾਂ ਵੱਲ ਮੁੜਨੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਲਾਲ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਕਾਂਸੀ ਜਾਂ ਇੱਟ ਵਰਗੇ ਲਾਲ ਰੰਗ ਦੇ ਹੋ ਸਕਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਭੁਰਭੁਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਮਲਣ 'ਤੇ ਟੁੱਟ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਡਿੱਗ ਜਾਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਪੌਦੇ ਦਾ ਵਿਕਾਸ ਹੌਲੀ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "ਗੰਭੀਰ ਮਾਮਲਿਆਂ ਵਿੱਚ ਛੋਟੇ ਪੌਦੇ ਛੋਟੇ ਰਹਿ ਜਾਂਦੇ ਹਨ ਜਾਂ ਮਰ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਕੀੜੇ ਨੂੰ ਜਲਦੀ ਫੜਨ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਤੌਰ 'ਤੇ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਖਾਣ ਦੇ ਨੁਕਸਾਨ ਨੂੰ ਸਹਿਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਫ਼ਸਲ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਨਿੰਫ਼ਸ ਜਾਂ ਬਾਲਗਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਇਹ ਦੇਖਣ ਲਈ 50 ਪੱਤਿਆਂ ਉੱਤੇ ਕੀੜਿਆਂ ਦੀ ਗਿਣਤੀ ਕਰੋ ਕਿ ਕੀ ਉਹ 50 ਕੀੜਿਆਂ ਦੀ ਆਰਥਿਕ ਹੱਦ ਤੱਕ ਪਹੁੰਚ ਗਏ ਹਨ।",
+    "ਪੌਦੇ ਦੇ ਉਨ੍ਹਾਂ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾਓ ਅਤੇ ਖ਼ਤਮ ਕਰੋ ਜੋ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਹਨ।"
+   ],
+   "favourable_conditions": "ਪੱਤਿਆਂ ਦੇ ਟਿਸ਼ੂਆਂ ਵਿੱਚ ਨਮੀ ਦਾ ਤਣਾਅ ਅਤੇ ਘੱਟ ਨਮੀ ਦਾ ਪੱਧਰ ਇਸ ਕੀੜੇ ਦੇ ਵਿਕਾਸ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [
+    "NSKE 5% 25 kg/ha",
+    "neem oil formulation 0.5 % or neem oil 3% thrice at fortnightly intervals",
+    "Azadirachtin 0.03% WSP 500-1000 g/ha"
+   ],
+   "avoid": [
+    "ਚੂਸਣ ਵਾਲੇ ਕੀੜਿਆਂ ਵਿਰੁੱਧ ਪਾਈਥਰੋਇਡਜ਼ ਤੋਂ ਬਚੋ: ਇਹ ਇਨ੍ਹਾਂ ਕੀੜਿਆਂ ਦੇ ਮੁੜ ਉਭਾਰ ਵੱਲ ਲੈ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "etl": "ਪ੍ਰਤੀ ਪੱਤਾ 2 ਤੋਂ ਵੱਧ ਜੈਸਿਡ, ਕੁਝ ਹੇਠਲੇ ਪੱਤੇ ਸੁੰਗੜੇ ਅਤੇ ਮੁੜੇ ਹੋਏ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਪੀਲੇ ਹੋ ਰਹੇ ਹਨ।"
+  },
+  "cotton_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਕਿਸਮ ਲਈ ਪੱਤੇ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਦਾਣੇ, ਧਾਰੀਆਂ, ਛੱਲਿਆਂ ਜਾਂ ਪਾਊਡਰ ਪਰਤ ਦੇ।",
+    "ਪੱਤੇ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਨਹੀਂ ਮੁੜ ਰਹੇ, ਪੀਲੇ ਨਹੀਂ ਹੋ ਰਹੇ, ਸੁੱਕ ਨਹੀਂ ਰਹੇ ਜਾਂ ਸੜ ਨਹੀਂ ਰਹੇ ਹਨ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਅੰਡੇ, ਜਾਲੀ, ਛੇਕ ਜਾਂ ਬੋਰ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਵਿਰੋਧ ਕਰਦੀ ਹੈ ਜਾਂ ਸਹਿਣ ਕਰਦੀ ਹੈ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਜੈਵਿਕ-ਕੀਟਨਾਸ਼ਕ ਨਾਲ।",
+    "ਸਹੀ ਫ਼ਾਸਲਾ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਕਰਕੇ ਦੇਸੀ ਖਾਦ ਅਤੇ ਰਸਾਇਣਕ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫ਼ਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦਾ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਲਈ ਹਮਲਾ ਕਰਨਾ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।",
+    "ਫ਼ਸਲ ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਤੋਂ ਮੌਸਮ ਵਿੱਚ ਫ਼ਸਲਾਂ ਬਦਲ ਕੇ ਬੀਜੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚੋਂ ਲੰਘੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਦੋਸਤਾਨਾ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਵਿਆਪਕ-ਸਪੈਕਟ੍ਰਮ ਰਸਾਇਣਕ ਛਿੜਕਾਅ ਤੋਂ ਬਚ ਕੇ ਦੋਸਤਾਨਾ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖਦੇ ਹੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਲਾਗਗ੍ਰਸਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_fruit_rot_dieback": {
+   "name": "ਫਲ ਸੜਨਾ ਅਤੇ ਡਾਈਬੈਕ (ਐਂਥ੍ਰਾਕਨੋਜ਼)",
+   "symptoms": [
+    "ਫੁੱਲ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਸੁੱਕ ਕੇ ਝੜ ਜਾਂਦੇ ਹਨ।",
+    "ਡਾਣੀਆਂ ਦੇ ਸਿਰੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਮਰ ਜਾਂਦੇ ਹਨ।",
+    "ਫਲ ਉੱਤੇ ਛੋਟੇ-ਛੋਟੇ ਧਸੇ ਹੋਏ ਦਾਗ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਰੋਗ ਵਾਲਾ ਫਲ ਸੁੰਘੜ ਜਾਂਦਾ ਹੈ ਅਤੇ ਹੇਠਾਂ ਡਿੱਗ ਸਕਦਾ ਹੈ।",
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਭੂਰੇ-ਕਾਲੇ ਦਾਗ ਬਣ ਜਾਂਦੇ ਹਨ ਅਤੇ ਉਹ ਝੜ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਸਿਰਫ਼ ਬਿਮਾਰੀ ਰਹਿਤ ਬੀਜ ਹੀ ਵਰਤੋ।",
+    "ਨਰਸਰੀ ਦੀਆਂ ਕੀਾਰੀਆਂ ਅਤੇ ਖੇਤਾਂ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਨਾ ਹੋਣ ਦਿਓ।",
+    "ਆਪਣੇ ਬੂਟਿਆਂ ਦੇ ਆਸ-ਪਾਸੋਂ ਨਦੀਨ ਅਤੇ ਫਾਲਤੂ ਬੂਟੇ ਹਟਾ ਦਿਓ।",
+    "ਉਨ੍ਹਾਂ ਫਸਲਾਂ ਨਾਲ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਬਿਮਾਰੀ ਨਹੀਂ ਲੱਗਦੀ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਵਾਲੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਬਾਹਰ ਕੱਢ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਹੋਣ ਤੋਂ ਰੋਕਣ ਲਈ ਚੰਗੇ ਜਲ ਨਿਕਾਸ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਫਸਲ ਉੱਤੇ ਪੂਰੀ ਨਜ਼ਰ ਰੱਖੋ।",
+    "ਖੇਤ ਅਤੇ ਨਰਸਰੀ ਵਾਲੀ ਥਾਂ ਨੂੰ ਨਦੀਨਾਂ ਤੋਂ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਗਰਮ, ਬਰਸਾਤੀ ਅਤੇ ਸਿੱਲ੍ਹ ਵਾਲਾ ਮੌਸਮ ਜਿਸ ਵਿੱਚ ਨਮੀ ਬਹੁਤ ਹੋਵੇ, ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_powdery_mildew": {
+   "name": "ਪਾਊਡਰੀ ਮਿਲਡਿਊ (ਚਿੱਟਾ ਮੀਂਹ)",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਚਿੱਟੇ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਬਣ ਜਾਂਦੀ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਉੱਪਰਲੇ ਪਾਸੇ ਪੀਲੇ ਰੰਗ ਦੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦੇ ਪੱਤੇ ਸੁੱਕ ਕੇ ਝੜ ਸਕਦੇ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਡਾਣੀਆਂ ਅਤੇ ਛੋਟੇ ਫਲਾਂ ਉੱਤੇ ਵੀ ਚਿੱਟਾ ਪਾਊਡਰ ਦਿਖਾਈ ਦੇ ਸਕਦਾ ਹੈ।",
+    "ਬਿਮਾਰੀ ਵਾਲੇ ਫਲ ਵਧਣੋਂ ਰੁਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਝੜ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਵਾਲੀਆਂ ਜਾਂ ਰੋਧਕ ਕਿਸਮਾਂ ਦੀ ਬਿਜਾਈ ਕਰੋ।",
+    "ਉਨ੍ਹਾਂ ਫਸਲਾਂ ਨਾਲ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਬਿਮਾਰੀ ਨਹੀਂ ਲੱਗਦੀ।",
+    "ਉਨ੍ਹਾਂ ਹੋਰ ਬੂਟਿਆਂ ਨੂੰ ਨਸ਼ਟ ਕਰ ਦਿਓ ਜੋ ਬਿਮਾਰੀ ਨੂੰ ਅੱਗੇ ਫੈਲਾ ਸਕਦੇ ਹਨ।",
+    "ਆਪਣੀ ਫਸਲ ਦੀ ਬਿਜਾਈ ਸਹੀ ਸਮੇਂ ਉੱਤੇ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਸਿਫਾਰਸ਼ ਕੀਤੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਬਾਰੇ ਆਪਣੇ ਨੇੜਲੇ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਸਲਾਹ ਲਓ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖਣ ਲਈ ਆਮ ਸਾਫ਼-ਸਫ਼ਾਈ ਦੇ ਤਰੀਕੇ ਅਪਣਾਓ।",
+    "ਜਿਨ੍ਹਾਂ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਉੱਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹੋਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਤੋੜ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਠੰਢਾ ਅਤੇ ਸੁੱਕਾ ਮੌਸਮ ਉੱਲੀ ਦੇ ਬੀਜਾਂ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ, ਅਤੇ ਵੱਧ ਸਿੱਲ੍ਹ ਨਾਲ ਬਿਮਾਰੀ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_leaf_curl": {
+   "name": "ਪੱਤਾ ਮਰੋੜ ਵਾਇਰਸ (ਲੀਫ ਕਰਲ)",
+   "symptoms": [
+    "ਪੱਤੇ ਵਿਚਕਾਰਲੀ ਨਾੜੀ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਵੱਟੇ ਹੋਏ ਲੱਗਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦਾ ਵਾਧਾ ਚੰਗੀ ਤਰ੍ਹਾਂ ਨਹੀਂ ਹੁੰਦਾ ਕਿਉਂਕਿ ਪੱਤਿਆਂ ਵਿੱਚਕਾਰਲਾ ਫਾਸਲਾ ਘੱਟ ਹੁੰਦਾ ਹੈ।",
+    "ਪੱਤੇ ਆਮ ਨਾਲੋਂ ਬਹੁਤ ਛੋਟੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਕਲੀਆਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਖਿੜਨ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਝੜ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੇ ਅੰਦਰ ਕੋਈ ਪਰਾਗ ਨਹੀਂ ਹੁੰਦਾ।"
+   ],
+   "prevention": [
+    "ਤੰਦਰੁਸਤ ਅਤੇ ਬਿਮਾਰੀ ਰਹਿਤ ਬੀਜ ਚੁਣੋ।",
+    "ਕੀੜਿਆਂ ਤੋਂ ਬਚਾਉਣ ਲਈ ਨਰਸਰੀ ਦੀਆਂ ਕੀਾਰੀਆਂ ਨੂੰ ਨਾਈਲੋਨ ਦੇ ਜਾਲ ਜਾਂ ਪਰਾਲੀ ਨਾਲ ਢੱਕੋ।",
+    "ਕੀੜਿਆਂ ਨੂੰ ਰੋਕਣ ਲਈ ਆਪਣੇ ਖੇਤ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਮੱਕੀ ਜਾਂ ਜਵਾਰ ਦੀਆਂ 2 ਤੋਂ 3 ਕਤਾਰਾਂ ਲਗਾਓ।",
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਸਿਰਫ਼ ਮਿਰਚ ਹੀ ਨਾ ਉਗਾਓ।"
+   ],
+   "practices": [
+    "ਜਿਵੇਂ ਹੀ ਤੁਹਾਨੂੰ ਕੋਈ ਬਿਮਾਰ ਪੌਦਾ ਦਿਸੇ, ਉਸ ਨੂੰ ਪੁੱਟ ਕੇ ਸਾੜ ਦਿਓ ਜਾਂ ਮਿੱਟੀ ਵਿੱਚ ਦੱਬ ਦਿਓ।",
+    "ਵਾਇਰਸ ਨੂੰ ਫੈਲਣੋਂ ਰੋਕਣ ਲਈ ਚਿੱਟੀ ਮੱਖੀ ਦੀ ਰੋਕਥਾਮ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦਾ ਨਿਯਮਤ ਤੌਰ 'ਤੇ ਨਿਰੀਖਣ ਕਰੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_cercospora_leaf_spot": {
+   "name": "ਸਰਕੋਸਪੋਰਾ ਪੱਤਾ ਧੱਬਾ ਰੋਗ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਹਲਕੇ ਸਲੇਟੀ ਰੰਗ ਦੇ ਕੇਂਦਰ ਵਾਲੇ ਗੋਲ ਭੂਰੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਸਕਦੇ ਹਨ ਅਤੇ ਆਪਸ ਵਿੱਚ ਮਿਲ ਸਕਦੇ ਹਨ।",
+    "ਦਾਗ ਦਾ ਵਿਚਕਾਰਲਾ ਹਿੱਸਾ ਡਿੱਗ ਸਕਦਾ ਹੈ ਅਤੇ ਇੱਕ ਛੋਟਾ ਜਿਹਾ ਛੇਕ ਬਣ ਸਕਦਾ ਹੈ।",
+    "ਰੋਗ ਵਾਲੇ ਪੱਤੇ ਪੀਲੇ ਪੈ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਪੌਦੇ ਤੋਂ ਝੜ ਜਾਂਦੇ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਤਣਿਆਂ ਅਤੇ ਫਲੀਆਂ ਉੱਤੇ ਵੀ ਹਲਕੇ ਕੇਂਦਰ ਵਾਲੇ ਗੂੜ੍ਹੇ ਭੂਰੇ ਦਾਗ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਸਿਰਫ਼ ਤੰਦਰੁਸਤ ਫਲਾਂ ਤੋਂ ਹੀ ਬੀਜ ਇਕੱਠੇ ਕਰੋ।",
+    "ਆਪਣੇ ਨੇੜਲੇ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਵਾਲੀਆਂ ਕਿਸਮਾਂ ਬਾਰੇ ਪੁੱਛੋ।",
+    "ਆਪਣੇ ਖੇਤ ਨੂੰ ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਅਤੇ ਫਾਲਤੂ ਬੂਟਿਆਂ ਤੋਂ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਜਿਨ੍ਹਾਂ ਪੌਦਿਆਂ ਉੱਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹੋਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਸ਼ੁਰੂ ਵਿੱਚ ਹੀ ਫੜਨ ਲਈ ਆਪਣੇ ਖੇਤ ਦਾ ਨਿਯਮਤ ਨਿਰੀਖਣ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਵਿੱਚੋਂ ਨਦੀਨ ਕੱਢ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਜਦੋਂ ਹਵਾ ਵਿੱਚ ਸਿੱਲ੍ਹ ਜ਼ਿਆਦਾ ਹੋਵੇ ਅਤੇ ਅਕਸਰ ਮੀਂਹ ਪੈਂਦਾ ਹੋਵੇ ਤਾਂ ਇਹ ਬਿਮਾਰੀ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_bacterial_leaf_spot": {
+   "name": "ਬੈਕਟੀਰੀਅਲ ਪੱਤਾ ਧੱਬਾ ਰੋਗ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਗੂੜ੍ਹੇ ਭੂਰੇ ਜਾਂ ਕਾਲੇ ਤੇਲ ਵਰਗੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਆਪਸ ਵਿੱਚ ਮਿਲ ਕੇ ਬੇਡੌਲ ਧੱਬੇ ਬਣਾ ਲੈਂਦੇ ਹਨ।",
+    "ਜਿਹੜੇ ਪੱਤੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਹੁੰਦੇ ਹਨ, ਉਹ ਪੀਲੇ ਪੈ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪੌਦੇ ਤੋਂ ਝੜ ਜਾਂਦੇ ਹਨ।",
+    "ਤਣਿਆਂ ਉੱਤੇ ਜ਼ਖ਼ਮ ਬਣ ਜਾਂਦੇ ਹਨ ਜਿਸ ਨਾਲ ਡਾਣੀਆਂ ਸੁੱਕ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫਲਾਂ ਉੱਤੇ ਗੋਲ ਉੱਭਰੇ ਹੋਏ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜੋ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਲੱਗਦੇ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਹਲਕੀ ਪੀਲੀ ਕੰਧ ਹੁੰਦੀ ਹੈ।",
+    "ਫਲਾਂ ਦੇ ਇਨ੍ਹਾਂ ਦਾਗਾਂ ਦਾ ਵਿਚਕਾਰਲਾ ਹਿੱਸਾ ਭੂਰਾ ਅਤੇ ਧਸਿਆ ਹੋ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਹਮੇਸ਼ਾ ਤੰਦਰੁਸਤ ਪੌਦਿਆਂ ਤੋਂ ਬੀਜ ਇਕੱਠੇ ਕਰੋ।",
+    "ਬਿਜਾਈ ਲਈ ਬਿਮਾਰੀ ਰਹਿਤ ਬੀਜ ਵਰਤੋ।",
+    "ਰੋਧਕ ਜਾਂ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਵਾਲੀਆਂ ਪੌਦਿਆਂ ਦੀਆਂ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਬਾਰੇ ਆਪਣੇ ਨੇੜਲੇ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਪੁੱਛੋ।"
+   ],
+   "practices": [
+    "ਨਦੀਨਾਂ ਨੂੰ ਹਟਾ ਕੇ ਆਪਣੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਉੱਤੇ ਨਿਯਮਤ ਤੌਰ 'ਤੇ ਨਜ਼ਰ ਰੱਖੋ।",
+    "ਖੇਤ ਨੂੰ ਤੰਦਰੁਸਤ ਰੱਖਣ ਲਈ ਆਮ ਦੇਖਭਾਲ ਅਤੇ ਰੁਟੀਨ ਦੇ ਤਰੀਕੇ ਅਪਣਾਓ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਦਰਮਿਆਨੇ ਤਾਪਮਾਨ, ਜ਼ਿਆਦਾ ਸਿੱਲ੍ਹ ਅਤੇ ਰੁਕ-ਰੁਕ ਕੇ ਪੈਣ ਵਾਲੇ ਮੀਂਹ ਦੇ ਸਮੇਂ ਦੌਰਾਨ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_black_thrips": {
+   "name": "ਕਾਲੇ ਥ੍ਰਿਪਸ (ਥ੍ਰਿਪਸ ਪਾਰਵਿਸਪਿਨਸ)",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਡੂੰਘੇ ਖਰਚੇ ਅਤੇ ਛੇਕ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਪੱਤੇ ਦਾ ਹੇਠਲਾ ਪਾਸਾ ਲਾਲ-ਭੂਰਾ ਹੋ ਜਾਂਦਾ ਹੈ ਜਦੋਂ ਕਿ ਉੱਪਰਲਾ ਪਾਸਾ ਪੀਲਾ ਅਤੇ ਦਾਗਦਾਰ ਲੱਗਦਾ ਹੈ।",
+    "ਪੱਤੇ ਮੁੜ ਸਕਦੇ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਉੱਤੇ ਪੀਲੀਆਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦੇ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਪੱਤੀਆਂ ਉੱਤੇ ਭੂਰੀਆਂ ਲਕੀਰਾਂ ਬਣ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲ ਸੁੱਕ ਸਕਦੇ ਹਨ, ਮੁਰਝਾ ਸਕਦੇ ਹਨ ਅਤੇ ਪੌਦੇ ਤੋਂ ਝੜ ਸਕਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦਾ ਵਾਧਾ ਰੁਕ ਜਾਂਦਾ ਹੈ ਅਤੇ ਫਲ ਘੱਟ ਲੱਗਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਦੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਥ੍ਰਿਪਸ ਨੂੰ ਸਹਿਣ ਕਰ ਸਕਣ ਜਾਂ ਉਨ੍ਹਾਂ ਪ੍ਰਤੀ ਰੋਧਕ ਹੋਣ।",
+    "ਤੰਦਰੁਸਤ ਪੌਦੇ (ਬੂਟੇ) ਵਰਤੋ ਅਤੇ ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਸਿਫਾਰਸ਼ ਕੀਤੇ ਉਤਪਾਦਾਂ ਨਾਲ ਬੀਜਾਂ ਦਾ ਉਪਚਾਰ ਕਰੋ।",
+    "ਆਪਣੇ ਖੇਤਾਂ ਅਤੇ ਵੱਢਾਂ ਨੂੰ ਉਨ੍ਹਾਂ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ ਜੋ ਇਸ ਕੀੜੇ ਨੂੰ ਪਨਾਹ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਭੀੜ-ਭੜੱਕੇ ਤੋਂ ਬਚਣ ਲਈ ਪੌਦਿਆਂ ਵਿੱਚ ਸਹੀ ਫਾਸਲਾ ਰੱਖੋ।",
+    "ਆਪਣੇ ਖੇਤ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਮੱਕੀ ਜਾਂ ਜਵਾਰ ਵਰਗੀਆਂ ਲੰਬੀਆਂ ਫਸਲਾਂ ਨੂੰ ਬੈਰੀਅਰ (ਰੁਕਾਵਟ) ਵਜੋਂ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਪੌਦਿਆਂ ਅਤੇ ਆਸ-ਪਾਸ ਦੇ ਨਦੀਨਾਂ ਵਿੱਚ ਥ੍ਰਿਪਸ ਦੇ ਲੱਛਣਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਜਿਹੜੇ ਪੌਦੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਹੋਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਪੁੱਟ ਕੇ ਸਾੜ ਦਿਓ ਜਾਂ ਦੱਬ ਦਿਓ।",
+    "ਕੀੜਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਨੀਲੇ ਜਾਂ ਪੀਲੇ ਰੰਗ ਦੇ ਚਿਪਕਾਉ ਟਰੈਪ ਵਰਤੋ।",
+    "ਪਾਣੀ ਦੇ ਜ਼ੋਰਦਾਰ ਫੁਹਾਰੇ ਨਾਲ ਪੌਦਿਆਂ ਤੋਂ ਕੀੜਿਆਂ ਨੂੰ ਧੋਣ ਲਈ ਸਪ੍ਰਿੰਕਲਰ ਸਿਸਟਮ ਵਰਤੋ।",
+    "ਜ਼ਮੀਨ ਵਿੱਚ ਲੁਕੇ ਹੋਏ ਪਿਉਪਾ ਨੂੰ ਮਾਰਨ ਲਈ ਮਿੱਟੀ ਨੂੰ ਵਾਰ-ਵਾਰ ਗੋਡੀ ਕਰੋ ਜਾਂ ਵਾਹੋ।"
+   ],
+   "favourable_conditions": "ਮਾਨਸੂਨ ਮੌਸਮ ਦੌਰਾਨ ਭਾਰੀ ਮੀਂਹ ਇਸ ਕੀੜੇ ਦੇ ਫੈਲਣ ਨੂੰ ਉਤਸ਼ਾਹਿਤ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [
+    "Beauveria bassiana at 4.00 g or ml/L",
+    "Pseudomonas fluorescence at 20g/L",
+    "Bacillus albus at 20 g/L",
+    "Neem Seed Kernel Extract or 5% Neem Seed Powder Extract",
+    "0.50% Neem oil (5 ml/L)",
+    "5% Vitex negundo extract (50 ml/L)",
+    "Azadirachtin 3000 PPM at 2 ml/L",
+    "2% Fish Oil Rosin Soap (20 ml/L)"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_yellow_mite": {
+   "name": "ਪੀਲੀ ਮਾਈਟ (ਚੌੜੀ ਮਾਈਟ)",
+   "symptoms": [
+    "ਪੱਤੇ ਹੇਠਾਂ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੁੰਘੜੇ ਹੋਏ ਲੱਗਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਹੇਠਾਂ ਵੱਲ ਰੋਲ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ ਦੇ ਡੰਡਲ ਲੰਬੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਗੂੜ੍ਹੇ ਹਰੇ ਰੰਗ ਦੇ ਹੋ ਸਕਦੇ ਹਨ।",
+    "ਡਾਣੀਆਂ ਦੇ ਸਿਰੇ ਉੱਤੇ ਨਵੇਂ ਪੱਤੇ ਤੰਗ ਗੁੱਛਿਆਂ ਵਿੱਚ ਉੱਗਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦਾ ਵਾਧਾ ਰੁਕ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਮਿਰਚ ਦੀ ਫਸਲ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਬੈਰੀਅਰ ਵਜੋਂ ਮੱਕੀ ਦੀਆਂ ਦੋ ਕਤਾਰਾਂ ਲਗਾਓ।",
+    "ਸ਼ਿਕਾਰੀ ਮਾਈਟਸ ਦੀ ਸਰਗਰਮੀ ਨੂੰ ਉਤਸ਼ਾਹਿਤ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਮਾਈਟਸ ਦੇ ਲੱਛਣਾਂ ਲਈ ਖੇਤ ਦਾ ਨਿਯਮਤ ਨਿਰੀਖਣ ਕਰੋ।",
+    "ਜੇਕਰ ਕੀੜੇ ਦਾ ਹਮਲਾ ਘੱਟ ਹੈ, ਤਾਂ ਨਿੰਮ ਦੇ ਬੀਜਾਂ ਦੇ ਪਾਊਡਰ ਦਾ ਘੋਲ ਵਰਤੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "neem seed powder extract 4%"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_thrips": {
+   "name": "ਥ੍ਰਿਪਸ",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਵਿੱਚ ਸੁੰਘੜਨ ਆ ਜਾਂਦੀ ਹੈ ਅਤੇ ਉਹ ਉੱਪਰ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਡੰਡਲ ਲੰਬੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਕਲੀਆਂ ਭੁਰਭੁਰੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਝੜ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਪੌਦੇ ਦਾ ਵਾਧਾ ਰੁਕਿਆ ਹੋਇਆ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।",
+    "ਫੁੱਲ ਬਣਨੇ ਅਤੇ ਫਲ ਲੱਗਣੇ ਬੰਦ ਹੋ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਜਵਾਰ ਤੋਂ ਬਾਅਦ ਮਿਰਚ ਨਾ ਉਗਾਓ।",
+    "ਮਿਰਚ ਅਤੇ ਪਿਆਜ਼ ਨੂੰ ਇਕੱਠੇ ਨਾ ਲਗਾਓ।",
+    "ਛਾਂ ਕਰਨ ਲਈ ਅਗਥੀ ਦੀ ਫਸਲ ਨਾਲ ਰਲਾ ਕੇ (ਅੰਤਰ-ਫਸਲ ਵਜੋਂ) ਬਿਜਾਈ ਕਰੋ।",
+    "ਥ੍ਰਿਪਸ ਨੂੰ ਵੱਧਣੋਂ ਰੋਕਣ ਲਈ ਪੌਦਿਆਂ ਉੱਤੇ ਪਾਣੀ ਦਾ ਛਿੜਕਾਅ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਪ੍ਰਤੀ ਪੌਦਾ ਪੰਜ ਸਿਰੇ ਵਾਲੇ ਪੱਤਿਆਂ ਉੱਤੇ ਨਿੰਫ਼ ਅਤੇ ਬਾਲਗ ਕੀੜਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਪ੍ਰਤੀ ਏਕੜ 4 ਤੋਂ 5 ਪੀਲੇ ਜਾਂ ਨੀਲੇ ਚਿਪਕਾਉ ਟਰੈਪ ਵਰਤੋ।",
+    "ਸ਼ਾਮ ਦੇ ਸਮੇਂ ਪ੍ਰਤੀ ਏਕੜ 1 ਲਾਈਟ ਟਰੈਪ (ਰੋਸ਼ਨੀ ਵਾਲਾ ਫੰਦਾ) ਵਰਤੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "chilli_healthy": {
+   "name": "ਤੰਦਰੁਸਤ (ਸਿਹਤਮੰਦ ਫਸਲ)",
+   "symptoms": [
+    "ਕਿਸਮ ਦੇ ਹਿਸਾਬ ਨਾਲ ਪੱਤੇ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਉਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਗੋਲੇ ਜਾਂ ਚਿੱਟੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜ ਨਹੀਂ ਰਹੇ ਹੁੰਦੇ, ਪੀਲੇ ਨਹੀਂ ਪੈ ਰਹੇ ਹੁੰਦੇ, ਸੁੱਕ ਨਹੀਂ ਰਹੇ ਹੁੰਦੇ ਜਾਂ ਸੜ ਨਹੀਂ ਰਹੇ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਛੇਕ ਜਾਂ ਸੁਰਾਖ਼ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਨੂੰ ਸਹਿਣ ਕਰ ਸਕੇ ਜਾਂ ਰੋਧਕ ਹੋਵੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਵਰਤੋ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਜੀਹਦਾਰ ਤੌਰ 'ਤੇ ਜੈਵਿਕ-ਕੀਟਨਾਸ਼ਕ ਨਾਲ।",
+    "ਸਹੀ ਫਾਸਲਾ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਕਰਵਾ ਕੇ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਪਰਹੇਜ਼ ਕਰੋ ਜਿਸ ਨਾਲ ਫਸਲ ਨਰਮ ਹੋ ਜਾਂਦੀ ਹੈ ਅਤੇ ਕੀੜੇ-ਬਿਮਾਰੀਆਂ ਲਈ ਹਮਲਾ ਕਰਨਾ ਆਸਾਨ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਤਰ੍ਹਾਂ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਤੋਂ ਮੌਸਮ ਫਸਲੀ ਚੱਕਰ ਬਦਲੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਗੇੜਾ ਮਾਰੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਉਨ੍ਹਾਂ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਵਿਆਪਕ ਸਪੈਕਟ੍ਰਮ ਵਾਲੇ ਰਸਾਇਣਕ ਸਪਰੇਆਂ ਤੋਂ ਬੱਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਕੋਈ ਸਮੱਸਿਆ ਦਿਖੇ ਤਾਂ ਜਲਦੀ ਕਦਮ ਚੱਕੋ, ਉਦਾਹਰਣ ਵਜੋਂ ਆਂਡਿਆਂ ਦੇ ਗੁੱਛੇ ਇਕੱਠੇ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "groundnut_early_leaf_spot": {
+   "name": "tikka rog",
+   "symptoms": [
+    "beej bajan ton lagbhag ik mahine baad rog shuru hunda hai.",
+    "pattiyan uthe chote daag ban jande han.",
+    "eh daag waddhe ho jande han te samay nal bhure ya kale ho jande han.",
+    "patti de uthle passe daag gol hunde han.",
+    "patti de thale passe halke bhure rang de daag dikhde han.",
+    "daag dane te pattiyan de danth uthe vi aa sakde han."
+   ],
+   "prevention": [
+    "mitti nu swasth rakhn layi kank, kapah, makki, pyaz ya lahsun nal fasal badal ke bjo.",
+    "ajehi kism chuno jehri is rog nu sehn kar sake."
+   ],
+   "practices": [
+    "haftewar apne khet nu vekho ke rog taan nahi phail reha.",
+    "rogi paudhe de hisse nu bahar kad ke nshat kar deo taan jo rog na phailay."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "10% Calotropis leaf extract"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "groundnut_late_leaf_spot": {
+   "name": "pichli tikka rog",
+   "symptoms": [
+    "pattiyan de thale passe kale daag dikhde han.",
+    "eh daag lagbhag gol hunde han.",
+    "eh daag hath laun te khrurdre lagde han.",
+    "kafi sare daag patti uthe ikatthe ho sakde han.",
+    "pattiyan peeliyan ho ke paudhe ton jald hi gir sakdiyan han."
+   ],
+   "prevention": [
+    "mungfali de har 3 ranga piche bajra ya jowar di 1 rang bjo.",
+    "mungfali de nal dujiyan faslan di bajaye anaaj wali fasal badal ke bjo.",
+    "purane fasal de avsesh nu mitti vich changi tara dabn layi doonghi wahai kro.",
+    "apne aap ugge mungfali de paudhe nu pat ke bahar kad deo."
+   ],
+   "practices": [
+    "jis paudhe vich rog de lakshan hon use kad ke nshat kar deo.",
+    "apne aap ugge paudhe nu khet vichon hata ke khet saaf rakho.",
+    "rog nu phailan ton rokn layi fasal de avsesh nu mitti vich doongha dab deo."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "groundnut_rust": {
+   "name": "rast rog",
+   "symptoms": [
+    "pattiyan de thale passe chote chote fode jahe ubhaar ban jande han.",
+    "eh ubhaar pattiyan de uthle passe vi aa sakde han.",
+    "eh ubhaar phul te sui (peg) nu chad ke paudhe de har hisse te ban sakde han.",
+    "bure halaatan vich pattiyan mar jandiyan han te sukk jandiyan han par paudhe nal hi jhuri rehndiyan han."
+   ],
+   "prevention": [
+    "ajehi kism chuno jehri rast rog nu sehn kar sake.",
+    "mitti nu swasth rakhn layi kank, kapah, makki, pyaz ya lahsun nal fasal badal ke bjo."
+   ],
+   "practices": [
+    "har hafte khet nu vekho ke rast rog taan nahi phail reha.",
+    "je spray karn di lod hove, tan pehli spray ton 15 din baad duji spray kiti ja sakdi hai."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "groundnut_bud_necrosis": {
+   "name": "bud necrosis virus",
+   "symptoms": [
+    "tuhanu nvi pattiyan uthe fike daag dikhnge.",
+    "pattiyan uthe gol ghere te lakaran ban jandiyan han jo mariyan lagdiyan han.",
+    "garmi de mausam vich paudhe da uthla bud mar sakda hai.",
+    "jive jive paudha wadda hunda hai eh chota te bonha reh janda hai.",
+    "paudhe de kai faltu passe wale tana nikal sakde han."
+   ],
+   "prevention": [
+    "apne beej 15 cm di doori te nede nede bjo.",
+    "ajehi kism varto jehri is rog nu sehn kar sake.",
+    "jadon pehliyan barshaat hove taan apni fasal jald hi bjo.",
+    "nuksan ghat karn layi ghaat fasal bjo.",
+    "mungfali di fasal nu jowar ya makki wargi duji fasal nal badal ke bjo."
+   ],
+   "practices": [
+    "virus de lakshan layi apne khet di niyamit janch kro.",
+    "bajan ton 6 hafte tak bimar paudhe nu pat ke nshat kar deo.",
+    "jive hi rogi paudha dikhe use khet vichon bahar kadd deo.",
+    "mungfali de har 3 ton 6 ranga piche arand (castor) di ik rang bjo, jehri thrips nu rokn vich sahayak hundi hai jo virus phailaunde han."
+   ],
+   "favourable_conditions": "jadon tapman kafi wadda hunda hai taan is rog de hon di sambhavna wadh hundi hai.",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": "is virus nu phailan wale thrips layi: prati terminal bud 5 balak thrips."
+  },
+  "groundnut_leaf_miner": {
+   "name": "leaf miner",
+   "symptoms": [
+    "chote sondi pattiyan de andar wadhde han te andarle hisse nu khande han.",
+    "pattiyan uthe chote bhure daag dikhde han.",
+    "baad vich sondi pattiyan nu mor ke andar luk jandiyan han.",
+    "dooron vekhiye taan sara khet sadya hoya lagda hai."
+   ],
+   "prevention": [
+    "fasal de kol cowpea ya soybean bjo jehri trap da kam kare.",
+    "katai hon to baad ehna trap paudhe nu hata deo."
+   ],
+   "practices": [
+    "sondi layi apne khet di niyamit janch kro.",
+    "mothen nu farn layi light trap lagao.",
+    "moth di ginti di nigrani layi pheromone trap varto.",
+    "har roz trap vichon fariye moth nu bahar kadd deo."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": "prati paudha 2 ton 3 sondi."
+  },
+  "groundnut_healthy": {
+   "name": "swasth",
+   "symptoms": [
+    "pattiyan kism de hisab nal barabar hariyan han, koi daag, lakaran, ghere ya powdery parat nahi hai.",
+    "pattiyan de kinare te sire murhde, peele, sukk ya sadya hoya nahi hai.",
+    "pattiyan, tana ya falaan uthe koi keede, ande, jaal, chhed ya bor ke nishane nahi han."
+   ],
+   "prevention": [
+    "ajehi kism chuno jehri mukh keedan te rogan te kabu pave ya sehn kare, te swasth beej ya bijai samagri varto.",
+    "bajan ton pehlan beej ya bijai samagri da upchar kro, ho sake taan bio-pesticide nal.",
+    "sahi fasla rakho, mitti di janch karwa ke organic khad te fertilizer deo, te vadh nitrogen na varto jisse fasal narm ho jave te keedan te rogan da hamla asaan ho jave.",
+    "fasal nu lohde hisab nal pani deo te har ritu vich fasal badal ke bjo."
+   ],
+   "practices": [
+    "hafthe vich ghatton-ghatt ik var khet vich giro te mitti, pani, paudhe, keede te mitra keede jo keedan nu khande han, unna nu vekho.",
+    "wadh-spectrum chemical spray na kar ke mitra keedan te makriyan di sambhal kro.",
+    "musibat dikhn te jald kadam chakho, jive ke ande ikathe karke ya rogi paudhe nu hata ke."
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "maize_common_rust": {
+   "name": "ਕਾਮਨ ਰਸਟ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਮੱਕੀ ਦੇ ਪੱਤਿਆਂ ਦੇ ਦੋਵਾਂ ਪਾਸਿਆਂ 'ਤੇ ਭੂਰੇ ਰੰਗ ਦੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਅਸਲ ਵਿੱਚ ਛੋਟੇ ਉਭਾਰ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ ਪਸਚੂਲਸ (pustules) ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+    "ਇਹਨਾਂ ਉਭਾਰਾਂ ਵਿੱਚ ਉੱਲੀ ਦੇ ਬੀਜਾਣੂ ਹੁੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "BULAND, SHEETAL, HHM 1, HHM 2, HQPM 1, ਜਾਂ NITHYASHREE ਵਰਗੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਆਪਣੇ ਖੇਤ ਦੇ ਨੇੜੇ ਮਿਲਣ ਵਾਲੇ Oxalis corniunlata ਵਰਗੇ ਬਦਲਵੇਂ ਪੌਦਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਪਸਚੂਲਸ ਦੇ ਪਹਿਲੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਪੌਦੇ ਦੇ ਕਿਸੇ ਵੀ ਹਿੱਸੇ ਨੂੰ ਹਟਾ ਦਿਓ ਅਤੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਜਿਸ 'ਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਈ ਦੇਣ।",
+    "ਜੇ ਬਿਮਾਰੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ 15 ਦਿਨਾਂ ਦੇ ਵਕਫੇ 'ਤੇ ਫੰਗੀਸਾਈਡ ਸਪਰੇਅ ਕਰਨ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ।"
+   ],
+   "favourable_conditions": "ਠੰਡਾ ਤਾਪਮਾਨ ਅਤੇ ਹਵਾ ਵਿੱਚ ਜ਼ਿਆਦਾ ਨਮੀ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।",
+   "organic_bio": [
+    "P. fluorescens @ 2.5 kg / ha + 50 kg ਚੰਗੀ ਤਰ੍ਹਾਂ ਗਲੀ-ਸੜੀ ਰੂੜੀ ਦੀ ਖਾਦ ਜਾਂ ਰੇਤ",
+    "T. viride @ 2.5 kg / ha + 50 kg ਚੰਗੀ ਤਰ੍ਹਾਂ ਗਲੀ-ਸੜੀ ਰੂੜੀ ਦੀ ਖਾਦ ਜਾਂ ਰੇਤ"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "maize_turcicum_blight": {
+   "name": "ਨਾਰਦਰਨ ਲੀਫ ਬਲਾਈਟ (turcicum)",
+   "symptoms": [
+    "ਸ਼ੁਰੂ ਵਿੱਚ ਪੱਤਿਆਂ 'ਤੇ ਛੋਟੇ, ਥੋੜੇ ਅੰਡਾਕਾਰ, ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਦਾਗ ਲੰਬੇ, ਤੁਰਲੀ ਦੇ ਆਕਾਰ ਦੇ ਸੁੱਕੇ ਹੋਏ ਹਿੱਸਿਆਂ ਵਿੱਚ ਬਦਲ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗ ਹੇਠਲੇ ਪੱਤਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੌਦੇ ਦੇ ਵਧਣ ਨਾਲ ਫੈਲ ਜਾਂਦੇ ਹਨ।",
+    "ਅੰਤ ਵਿੱਚ, ਪੂਰਾ ਪੱਤਾ ਇੰਝ ਲੱਗਦਾ ਹੈ ਜਿਵੇਂ ਸੜ ਗਿਆ ਹੋਵੇ।"
+   ],
+   "prevention": [
+    "PEMH-5, Vivek 21, Vivek 23, Vivek 25, ਜਾਂ Nithyashree ਵਰਗੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਬਾਹਰ ਕੱਢ ਦਿਓ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਪਹਿਲੇ ਲੱਛਣਾਂ ਲਈ ਫਸਲ ਦੀ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਜਿਵੇਂ ਹੀ ਤੁਸੀਂ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ ਦੇਖੋ, ਉਹਨਾਂ ਨੂੰ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਜਦੋਂ ਸਿਲਕਿੰਗ (ਛੱਲੀ ਨਿਕਲਣ) ਦੇ ਪੜਾਅ 'ਤੇ ਅਨੁਕੂਲ ਹਾਲਤਾਂ ਵਿੱਚ ਲਾਗ ਲੱਗਦੀ ਹੈ ਤਾਂ ਇਹ ਬਿਮਾਰੀ ਕਾਫੀ ਨੁਕਸਾਨ ਕਰਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": "10% ਪੌਦੇ ਲੀਫ ਬਲਾਈਟ ਨਾਲ ਪ੍ਰਭਾਵਿਤ ਹੋਣ।"
+  },
+  "maize_maydis_blight": {
+   "name": "ਸਾਊਦਰਨ ਲੀਫ ਬਲਾਈਟ (maydis)",
+   "symptoms": [
+    "ਪੱਤਿਆਂ 'ਤੇ ਨੌਜਵਾਨ ਦਾਗ ਛੋਟੇ ਅਤੇ ਹੀਰੇ (diamond) ਦੇ ਆਕਾਰ ਦੇ ਹੁੰਦੇ ਹਨ।",
+    "ਜਿਵੇਂ-ਜਿਵੇਂ ਦਾਗ ਪੁਰਾਣੇ ਹੁੰਦੇ ਹਨ, ਉਹ ਫੈਲ ਜਾਂਦੇ ਹਨ ਅਤੇ ਲੰਬੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗ ਆਪਸ ਵਿੱਚ ਜੁੜ ਕੇ ਪੱਤੇ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਨੂੰ ਕਵਰ ਕਰ ਸਕਦੇ ਹਨ।",
+    "ਜਦੋਂ ਦਾਗ ਜੁੜ ਜਾਂਦੇ ਹਨ, ਤਾਂ ਪੱਤਾ ਇੰਝ ਲੱਗਦਾ ਹੈ ਜਿਵੇਂ ਸੜ ਗਿਆ ਹੋਵੇ।",
+    "ਦਾਗਾਂ ਦਾ ਆਕਾਰ ਅਤੇ ਸ਼ਕਲ ਤੁਹਾਡੇ ਦੁਆਰਾ ਉਗਾਈ ਗਈ ਮੱਕੀ ਦੀ ਕਿਸਮ ਦੇ ਅਧਾਰ 'ਤੇ ਬਦਲ ਸਕਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਲਗਾਉਣ ਲਈ ਰੋਧਕ ਮੱਕੀ ਦੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਉਹਨਾਂ ਖੇਤਾਂ ਤੋਂ ਬੀਜ ਨਾ ਵਰਤੋ ਜੋ ਪਹਿਲਾਂ ਹੀ ਬਿਮਾਰੀ ਨਾਲ ਪ੍ਰਭਾਵਿਤ ਹੋ ਚੁੱਕੇ ਹਨ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਲਾਗ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੌਦੇ ਨੂੰ ਹਟਾਓ ਅਤੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਆਪਣੀ ਮੱਕੀ ਦੀ ਫਸਲ ਨੂੰ ਦੂਜੀਆਂ ਫਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ ਬੀਜੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": "10% ਪੌਦੇ ਲੀਫ ਬਲਾਈਟ ਨਾਲ ਪ੍ਰਭਾਵਿਤ ਹੋਣ।"
+  },
+  "maize_grey_leaf_spot": {
+   "name": "ਗ੍ਰੇ ਲੀਫ ਸਪਾਟ",
+   "symptoms": [
+    "ਦਾਗ ਪਹਿਲਾਂ ਹੇਠਲੇ ਪੱਤਿਆਂ 'ਤੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ, ਝੰਡੇ (tassels) ਨਿਕਲਣ ਤੋਂ ਲਗਭਗ ਦੋ ਤੋਂ ਤਿੰਨ ਹਫ਼ਤੇ ਪਹਿਲਾਂ।",
+    "ਦਾਗ ਲੰਬੇ ਅਤੇ ਤੰਗ, ਲਗਭਗ 5 cm ਤੱਕ, ਆਇਤਾਕਾਰ ਅਤੇ ਹਲਕੇ ਭੂਰੇ ਰੰਗ ਦੇ ਹੁੰਦੇ ਹਨ।",
+    "ਬਾਅਦ ਵਿੱਚ ਦਾਗ ਸਲੇਟੀ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗ ਪੱਤਿਆਂ ਦੀਆਂ ਨਾੜੀਆਂ ਤੱਕ ਸੀਮਤ ਰਹਿੰਦੇ ਹਨ, ਅਤੇ ਕਈ ਦਾਗ ਜੁੜ ਕੇ ਪੂਰੇ ਪੱਤਿਆਂ ਨੂੰ ਮਾਰ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਜਿੱਥੇ ਉਪਲਬਧ ਹੋਵੇ ਉੱਥੇ ਰੋਧਕ ਹਾਈਬ੍ਰਿਡ ਉਗਾਓ।",
+    "ਮੱਕੀ ਨੂੰ ਹੋਰ ਫਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ ਬੀਜੋ, ਕਿਉਂਕਿ ਉੱਲੀ ਪੁਰਾਣੀ ਮੱਕੀ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਵਿੱਚ ਜਿਉਂਦੀ ਰਹਿੰਦੀ ਹੈ।",
+    "ਪੁਰਾਣੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਵਾਹੁਣ ਨਾਲ ਉੱਲੀ ਦੇ ਬਚਣ ਦੀ ਸੰਭਾਵਨਾ ਘੱਟ ਜਾਂਦੀ ਹੈ।"
+   ],
+   "practices": [
+    "ਪਹਿਲਾਂ ਹੇਠਲੇ ਪੱਤਿਆਂ ਨੂੰ ਦੇਖੋ, ਕਿਉਂਕਿ ਦਾਗ ਉੱਥੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ ਅਤੇ ਉੱਪਰ ਵੱਲ ਵਧਦੇ ਹਨ।",
+    "ਕਟਾਈ ਤੋਂ ਬਾਅਦ, ਪੁਰਾਣੀ ਮੱਕੀ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਵਾਹ ਦਿਓ ਅਤੇ ਅਗਲੇ ਸੀਜ਼ਨ ਵਿੱਚ ਉਸੇ ਖੇਤ ਵਿੱਚ ਦੁਬਾਰਾ ਮੱਕੀ ਲਗਾਉਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "favourable_conditions": "ਗਰਮ ਮੌਸਮ (ਲਗਭਗ 27 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ) ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਮੀ ਵਾਲੀ ਹਵਾ, 12 ਘੰਟੇ ਜਾਂ ਇਸ ਤੋਂ ਵੱਧ ਸਮੇਂ ਲਈ 90 ਪ੍ਰਤੀਸ਼ਤ ਤੋਂ ਉੱਪਰ, ਇਸ ਨੂੰ ਵਧਾਉਂਦੀ ਹੈ, ਅਤੇ ਇਹ ਉਦੋਂ ਮਾੜੀ ਹੁੰਦੀ ਹੈ ਜਦੋਂ ਮੱਕੀ ਤੋਂ ਬਾਅਦ ਮੱਕੀ ਲਗਾਈ ਜਾਂਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "maize_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਬਰਾਬਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਦਾਗ, ਧਾਰੀਆਂ, ਰਿੰਗਾਂ ਜਾਂ ਪਾਊਡਰ ਵਾਲੀ ਪਰਤ ਦੇ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜ ਨਹੀਂ ਰਹੇ, ਪੀਲੇ ਨਹੀਂ ਹੋ ਰਹੇ, ਸੁੱਕ ਨਹੀਂ ਰਹੇ ਜਾਂ ਸੜ ਨਹੀਂ ਰਹੇ ਹਨ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਅੰਡੇ, ਜਾਲੇ, ਛੇਕ ਜਾਂ ਮੋਰੀਆਂ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦਾ ਇਲਾਜ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਬਾਇਓ-ਪੈਸਟੀਸਾਈਡ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੇ ਟੈਸਟ ਦੁਆਰਾ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦਾ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਲਈ ਹਮਲਾ ਕਰਨਾ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਸੀਜ਼ਨ ਦਰ ਸੀਜ਼ਨ ਫਸਲਾਂ ਨੂੰ ਬਦਲ ਕੇ ਬੀਜੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਕੀੜਿਆਂ ਨੂੰ ਖਾਣ ਵਾਲੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ।",
+    "ਬ੍ਰੌਡ-ਸਪੈਕਟ੍ਰਮ ਰਸਾਇਣਕ ਸਪਰੇਆਂ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਣ ਲਈ ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "tomato_late_blight": {
+   "name": "ਲੇਟ ਬਲਾਈਟ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ, ਅਨਿਯਮਿਤ, ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਗੂੜ੍ਹੇ ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਹੇਠਲੇ ਪਾਸੇ ਚਿੱਟੀ ਰੂੰ ਵਰਗੀ ਉੱਲੀ ਹੋ ਸਕਦੀ ਹੈ।",
+    "ਤਣਿਆਂ ਉੱਤੇ ਗੂੜ੍ਹੇ, ਤੇਲ ਵਰਗੇ ਚਟਾਕ ਬਣ ਜਾਂਦੇ ਹਨ ਜੋ ਪੌਦੇ ਨੂੰ ਮਾਰ ਸਕਦੇ ਹਨ।",
+    "ਫਲਾਂ ਉੱਤੇ ਪਿਚਕੇ ਹੋਏ ਭੂਰੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਚਿੱਟੀ ਉੱਲੀ ਲੱਗ ਸਕਦੀ ਹੈ।",
+    "ਫਲ ਉੱਤੇ ਗੂੜ੍ਹੇ, ਤੇਲ ਵਰਗੇ ਦਾਗ ਵੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਤਣਿਆਂ ਅਤੇ ਪੱਤਿਆਂ ਦੀਆਂ ਡੰਡੀਆਂ ਉੱਤੇ ਭੂਰੀਆਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦੇ ਸਕਦੀਆਂ ਹਨ।"
+   ],
+   "prevention": [
+    "Arka Abhed F1 ਵਰਗੀਆਂ ਬਿਮਾਰੀ ਰੋਧਕ ਟਮਾਟਰ ਦੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ।",
+    "ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ ਤਾਂ ਜੋ ਹਰ ਸਾਲ ਇੱਕੋ ਖੇਤ ਵਿੱਚ ਟਮਾਟਰ ਨਾ ਲਗਾਓ।",
+    "ਹਵਾ ਦੇ ਚੰਗੇ ਗੇੜ ਲਈ ਪੌਦਿਆਂ ਵਿਚਕਾਰ ਲੋੜੀਂਦੀ ਦੂਰੀ ਰੱਖੋ।",
+    "ਮਿੱਟੀ ਨੂੰ ਸੁੱਕਾ ਰੱਖਣ ਅਤੇ ਬਿਮਾਰੀ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਕਾਲੀ ਪਲਾਸਟਿਕ ਮਲਚ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਉੱਪਰੋਂ ਪਾਣੀ ਦੇਣ ਤੋਂ ਬਚੋ ਅਤੇ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਨੂੰ ਸੁਧਾਰੋ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਕਿਸੇ ਵੀ ਲੱਛਣ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਜੋ ਪੌਦੇ ਦੇ ਹਿੱਸੇ ਬਿਮਾਰ ਦਿਖਾਈ ਦੇਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਪੌਦਿਆਂ ਨੂੰ ਜ਼ਮੀਨ ਤੋਂ ਉੱਪਰ ਰੱਖਣ ਅਤੇ ਹਵਾ ਦੇ ਗੇੜ ਲਈ ਸਹਾਰਾ (ਸਟੇਕਿੰਗ) ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਸੁਧਾਰੋ ਅਤੇ ਪੱਤਿਆਂ ਉੱਤੇ ਪਾਣੀ ਪਾਉਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ 15 ਤੋਂ 18 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਅਤੇ ਜ਼ਿਆਦਾ ਸਿੱਲ੍ਹੇ ਠੰਡੇ ਮੌਸਮ ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "tomato_leaf_curl": {
+   "name": "ਲੀਫ ਕਰਲ ਵਾਇਰਸ",
+   "symptoms": [
+    "ਨਵੇਂ ਪੌਦੇ ਦਾ ਵਾਧਾ ਰੁਕਿਆ ਹੋਇਆ ਅਤੇ ਤਣੇ ਛੋਟੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਨਵੇਂ ਪੱਤੇ ਛੋਟੇ, ਸੁੰਗੜੇ ਹੋਏ ਅਤੇ ਨਾੜੀਆਂ ਦੇ ਵਿਚਕਾਰੋਂ ਪੀਲੇ ਹੁੰਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਉੱਪਰ ਵੱਲ ਮੁੜ ਕੇ ਕੱਪ ਵਰਗੇ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਫੁੱਲ ਤਾਂ ਲੱਗਦੇ ਹਨ ਪਰ ਫਲ ਬਣਨ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਅਕਸਰ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਪੁਰਾਣੇ ਪੱਤੇ ਚਮੜੇ ਵਰਗੇ ਸਖ਼ਤ ਅਤੇ ਭੁਰਭੁਰੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਬਿਮਾਰ ਪੌਦੇ ਫਿੱਕੇ ਅਤੇ ਝਾੜੀਦਾਰ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਟਾਹਣੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਬਿਮਾਰੀ ਰੋਧਕ ਕਿਸਮਾਂ ਉਗਾਓ।",
+    "ਚਿੱਟੀ ਮੱਖੀ ਨੂੰ ਰੋਕਣ ਲਈ ਨਰਸਰੀ ਨੂੰ ਬਰੀਕ ਜਾਲੀ ਨਾਲ ਢੱਕ ਕੇ ਰੱਖੋ।",
+    "ਖੇਤ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਅਨਾਜ ਜਾਂ ਮੱਕੀ ਵਰਗੀਆਂ ਰੁਕਾਵਟ ਵਾਲੀਆਂ ਫਸਲਾਂ ਲਗਾਓ।",
+    "ਉਹ ਨਦੀਨ ਹਟਾ ਦਿਓ ਜੋ ਵਾਇਰਸ ਨੂੰ ਪਾਲਦੇ ਹਨ।"
+   ],
+   "practices": [
+    "ਚਿੱਟੀ ਮੱਖੀ ਦੀ ਗਿਣਤੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਲਈ ਪੀਲੇ ਚਿਪਚਿਪੇ ਟ੍ਰੈਪ (yellow sticky traps) ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਸਾਰੇ ਬਿਮਾਰ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨ-ਮੁਕਤ ਰੱਖੋ।",
+    "ਗੈਰ-ਮੇਜ਼ਬਾਨ ਫਸਲਾਂ ਨਾਲ ਵਧੀਆ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।"
+   ],
+   "favourable_conditions": "ਗਰਮ ਮੌਸਮ ਵਾਇਰਸ ਦੇ ਫੈਲਣ ਲਈ ਅਨੁਕੂਲ ਹੁੰਦਾ ਹੈ।",
+   "organic_bio": [
+    "Spray neem seed kernel extract (NSKE) 5% @ 80 g in 160 l of water/acre",
+    "Spray azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "tomato_septoria_leaf_spot": {
+   "name": "ਸੈਪਟੋਰੀਆ ਲੀਫ ਸਪਾਟ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਬਹੁਤ ਸਾਰੇ ਛੋਟੇ ਸਲੇਟੀ ਰੰਗ ਦੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਗੋਲ ਹੁੰਦੇ ਹਨ ਅਤੇ ਇਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਗੂੜ੍ਹੇ ਹੁੰਦੇ ਹਨ।",
+    "ਦਾਗ ਹੇਠਲੇ ਪੱਤਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਹੋ ਕੇ ਉੱਪਰ ਵੱਲ ਵਧਦੇ ਹਨ।",
+    "ਦਾਗ ਆਪਸ ਵਿੱਚ ਜੁੜ ਸਕਦੇ ਹਨ ਅਤੇ ਪੱਤੇ ਸੁੱਕ ਸਕਦੇ ਹਨ।",
+    "ਪੌਦੇ ਦੇ ਸਾਰੇ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਡਿੱਗ ਸਕਦੇ ਹਨ।",
+    "ਇਹ ਬਿਮਾਰੀ ਕਈ ਵਾਰ ਤਣਿਆਂ ਅਤੇ ਫੁੱਲਾਂ ਉੱਤੇ ਵੀ ਹਮਲਾ ਕਰਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਬਿਮਾਰੀ ਰੋਧਕ ਕਿਸਮਾਂ ਬਾਰੇ ਆਪਣੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਪੁੱਛੋ।",
+    "ਬਿਮਾਰੀ ਤੋਂ ਬਚਾਅ ਲਈ ਸੋਧੇ ਹੋਏ ਬੀਜਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਦੀ ਸਫਾਈ ਦਾ ਧਿਆਨ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "25 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ 'ਤੇ ਜ਼ਿਆਦਾ ਸਿੱਲ੍ਹ ਜਾਂ ਤਰੇਲ ਅਤੇ ਮੀਂਹ ਵਾਲਾ ਮੌਸਮ ਇਸ ਬਿਮਾਰੀ ਲਈ ਅਨੁਕੂਲ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "tomato_bacterial_spot": {
+   "name": "ਬੈਕਟੀਰੀਅਲ ਸਪਾਟ",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਪੀਲੇ ਘੇਰੇ ਵਾਲੇ ਛੋਟੇ ਭੂਰੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਪੁਰਾਣੇ ਪੱਤੇ ਪੌਦੇ ਤੋਂ ਡਿੱਗ ਸਕਦੇ ਹਨ।",
+    "ਹਰੇ ਫਲਾਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਛੋਟੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਦਾਗ ਉੱਭਰੇ ਹੋਏ, ਖੁਰਦਰੇ ਅਤੇ ਫੋੜਿਆਂ ਵਰਗੇ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਫੋੜਿਆਂ ਦੇ ਕੇਂਦਰ ਹਲਕੇ ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੰਦਰ ਨੂੰ ਧੱਸ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਹਮੇਸ਼ਾ ਬਿਮਾਰੀ-ਮੁਕਤ ਬੀਜਾਂ ਅਤੇ ਪਨੀਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਆਪਣੇ ਟਮਾਟਰ ਦੀ ਫਸਲ ਨੂੰ ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਨਾਲ ਬਦਲੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਤੋਂ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੁੰਦੀਆਂ।",
+    "ਪੁਰਾਣੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਤੋਂ ਬਚਣ ਲਈ ਉੱਥੇ ਟਮਾਟਰ ਨਾ ਲਗਾਓ ਜਿੱਥੇ ਪਿਛਲੇ ਸਾਲ ਲਗਾਏ ਸਨ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਵਿੱਚੋਂ ਪੁਰਾਣੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਸਾਫ਼ ਕਰੋ।",
+    "ਨਵੇਂ ਦਾਗਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨੇੜਿਓਂ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਸਿੱਲ੍ਹਾ ਮੌਸਮ, ਭਾਰੀ ਮੀਂਹ, ਜ਼ਿਆਦਾ ਨਮੀ ਜਾਂ ਲਗਾਤਾਰ ਪੈਣ ਵਾਲੀ ਤਰੇਲ ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "tomato_fruit_borer": {
+   "name": "ਫਰੂਟ ਬੋਰਰ",
+   "symptoms": [
+    "ਛੋਟੀਆਂ ਸੁੰਡੀਆਂ ਪੌਦੇ ਦੇ ਨਰਮ ਪੱਤੇ ਖਾਂਦੀਆਂ ਹਨ।",
+    "ਵੱਡੀਆਂ ਸੁੰਡੀਆਂ ਫਲ ਵਿੱਚ ਗੋਲ ਮੋਰੀਆਂ ਕਰ ਦਿੰਦੀਆਂ ਹਨ।",
+    "ਸੁੰਡੀ ਆਪਣਾ ਸਰੀਰ ਫਲ ਦੇ ਅੰਦਰ ਪਾ ਕੇ ਅੰਦਰਲਾ ਹਿੱਸਾ ਖਾਂਦੀ ਹੈ।",
+    "ਤੁਸੀਂ ਪੌਦਿਆਂ ਉੱਤੇ ਖਰਾਬ ਹੋਏ ਫਲ ਅਤੇ ਸੁੰਡੀਆਂ ਦੇਖ ਸਕਦੇ ਹੋ।"
+   ],
+   "prevention": [
+    "ਅਮਰੀਕਨ ਲੰਬੇ ਗੇਂਦੇ (marigold) ਅਤੇ ਟਮਾਟਰ ਦੀ ਪਨੀਰੀ ਨੂੰ 1 ਤੋਂ 16 ਦੀ ਕਤਾਰ ਅਨੁਪਾਤ ਵਿੱਚ ਲਗਾਓ।",
+    "ਪਤੰਗਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਅੰਡੇ ਦੇਣ ਵਾਲੀਆਂ ਮਾਦਾਵਾਂ ਨੂੰ ਆਕਰਸ਼ਿਤ ਕਰਨ ਲਈ ਟਮਾਟਰ ਦੀ ਨਰਸਰੀ ਨੂੰ ਫਸਲ ਦੇ ਤੌਰ 'ਤੇ ਵਰਤੋ।"
+   ],
+   "practices": [
+    "ਖਰਾਬ ਫਲਾਂ ਅਤੇ ਸੁੰਡੀਆਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਪ੍ਰਭਾਵਿਤ ਫਲਾਂ ਅਤੇ ਵੱਡੀਆਂ ਸੁੰਡੀਆਂ ਨੂੰ ਤੋੜ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਲਗਾਓ ਅਤੇ ਫੜੇ ਗਏ ਪਤੰਗਿਆਂ ਦੀ ਗਿਣਤੀ ਦਰਜ ਕਰੋ।",
+    "ਹਰ ਗਿਣਤੀ ਤੋਂ ਬਾਅਦ ਫੜੇ ਗਏ ਪਤੰਗਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "Trichogramma pretiosum @ 1 lakh nos. /ha/release",
+    "HaNPV 1.5 x 10 12 POBs/ha",
+    "NPV of H. armigera 0.43% AS @ 3.0 ml/lit or 2 % AS @ 1.0 ml per lit",
+    "Bacillus thuringiensis 2g/lit",
+    "Azadirachtin 1.0 % EC (10000 ppm) 2.0 ml/ lit",
+    "azadirachtin 1% (10000 ppm) neem based EC @ 400-600 ml in 200 l of water/acre",
+    "azadirachtin 5% W/W neem extract concentrate @ 80 g in 160 l of water/acre",
+    "Ha NPV 0.43% AS @ 600 ml in 160-240 l of water/acre",
+    "Ha NPV 2% AS @ 100-200 ml in 200 l of water/acre",
+    "Bacillus thuringiensis var gallariae @ 400-600 g in 200 l of water/acre"
+   ],
+   "avoid": [],
+   "etl": "10% fruit damage."
+  },
+  "tomato_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹਨ, ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹਨ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਅੰਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਸੁੰਡੀ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਪਨੀਰੀ ਵਰਤੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਪਨੀਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਬਾਇਓ-ਪੈਸਟੀਸਾਈਡ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ-ਬਿਮਾਰੀਆਂ ਨੂੰ ਸੱਦਾ ਦਿੰਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਪਾਣੀ ਦਿਓ ਅਤੇ ਸੀਜ਼ਨ ਦਰ ਸੀਜ਼ਨ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ।",
+    "ਕੀੜਿਆਂ ਨੂੰ ਖਾਣ ਵਾਲੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ ਅਤੇ ਜ਼ਿਆਦਾ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚੋ।",
+    "ਜਦੋਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "maize_downy_mildew": {
+   "name": "ਡਾਉਨੀ ਮਿਲਡਿਊ",
+   "symptoms": [
+    "ਪੌਦਾ ਪੀਲਾ ਅਤੇ ਛੋਟਾ ਦਿਖਾਈ ਦੇ ਸਕਦਾ ਹੈ।",
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ 'ਤੇ ਚਿੱਟੀਆਂ ਧਾਰੀਆਂ ਦਿਖਾਈ ਦੇ ਸਕਦੀਆਂ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੀ ਸਤ੍ਹਾ 'ਤੇ ਚਿੱਟੇ ਰੰਗ ਦੀ ਉੱਲੀ ਦਿਖਾਈ ਦੇ ਸਕਦੀ ਹੈ।",
+    "ਝੰਡੇ (tassels) ਫੁੱਲਾਂ ਦੀ ਬਜਾਏ ਪੱਤਿਆਂ ਵਰਗੇ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਪੌਦੇ ਨੂੰ ਬੀਜ ਸਹੀ ਢੰਗ ਨਾਲ ਬਣਾਉਣ ਵਿੱਚ ਮੁਸ਼ਕਲ ਆ ਸਕਦੀ ਹੈ।",
+    "ਪੱਤਿਆਂ 'ਤੇ ਪੀਲੀਆਂ ਧਾਰੀਆਂ ਦਿਖਾਈ ਦੇ ਸਕਦੀਆਂ ਹਨ ਜੋ ਬਾਅਦ ਵਿੱਚ ਜਾਮਨੀ ਜਾਂ ਲਾਲ ਹੋ ਜਾਂਦੀਆਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਮੱਕੀ ਦੀਆਂ ਉਹ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਪ੍ਰਤੀ ਰੋਧਕ ਹੋਣ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੇ ਬੀਜਾਂ ਨੂੰ ਸਿਫਾਰਸ਼ ਕੀਤੀਆਂ ਫੰਗੀਸਾਈਡਾਂ ਨਾਲ ਸੋਧੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਮੱਕੀ ਨੂੰ ਜਵਾਰ ਦੇ ਖੇਤਾਂ ਦੇ ਨੇੜੇ ਲਗਾਉਣ ਤੋਂ ਬਚੋ।",
+    "ਉਸੇ ਖੇਤ ਵਿੱਚ ਜਵਾਰ ਤੋਂ ਬਾਅਦ ਮੱਕੀ ਨਾ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਜਿਵੇਂ ਹੀ ਤੁਸੀਂ ਬਿਮਾਰ ਪੌਦੇ ਦੇਖੋ, ਉਹਨਾਂ ਨੂੰ ਪੁੱਟ ਦਿਓ।",
+    "ਫੈਲਣ ਨੂੰ ਰੋਕਣ ਲਈ ਹਟਾਏ ਗਏ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਦੇ ਸ਼ੁਰੂਆਤੀ ਲੱਛਣਾਂ ਲਈ ਆਪਣੀ ਫਸਲ ਦੀ ਨੇੜਿਓਂ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਅਕਸਰ ਬਰਸਾਤ ਦੇ ਮੌਸਮ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜਣ ਨਾਲ ਜੁੜੀ ਹੁੰਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": "10% ਪੌਦੇ ਪ੍ਰਭਾਵਿਤ ਹੋਣ।"
+  },
+  "maize_fall_armyworm": {
+   "name": "ਫਾਲ ਆਰਮੀਵਰਮ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਨੌਜਵਾਨ ਪੌਦਿਆਂ ਦੇ ਪੱਤਿਆਂ 'ਤੇ ਲੰਬੀਆਂ ਕਾਗਜ਼ੀ ਖਿੜਕੀਆਂ ਦਿਖਾਈ ਦੇ ਸਕਦੀਆਂ ਹਨ।",
+    "ਪੱਤਿਆਂ ਵਿੱਚ ਫਟੇ ਹੋਏ ਛੇਕ ਹੋ ਜਾਂਦੇ ਹਨ ਜੋ ਕੀੜੇ ਦੇ ਵਧਣ ਨਾਲ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਖਾਧੇ ਜਾ ਸਕਦੇ ਹਨ।",
+    "ਕੀੜਾ ਮੱਕੀ ਦੀਆਂ ਛੱਲੀਆਂ ਵਿੱਚ ਮੋਰੀ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਨੁਕਸਾਨ ਪਹੁੰਚਾ ਸਕਦਾ ਹੈ।",
+    "ਤੁਹਾਨੂੰ ਕੀੜਿਆਂ ਦੁਆਰਾ ਛੱਡਿਆ ਗਿਆ ਬਹੁਤ ਸਾਰਾ ਮਲ ਦਿਖਾਈ ਦੇ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਕੀੜਿਆਂ ਨੂੰ ਪੰਛੀਆਂ ਲਈ ਪ੍ਰਗਟ ਕਰਨ ਲਈ ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੇ ਖੇਤ ਨੂੰ ਡੂੰਘਾ ਵਾਹੋ।",
+    "ਵੱਖ-ਵੱਖ ਸਮੇਂ 'ਤੇ ਵਾਧੇ ਤੋਂ ਬਚਣ ਲਈ ਆਪਣੀਆਂ ਫਸਲਾਂ ਨੂੰ ਆਪਣੇ ਗੁਆਂਢੀਆਂ ਦੇ ਨਾਲ ਹੀ ਲਗਾਓ।",
+    "ਆਪਣੀ ਮੱਕੀ ਦੇ ਵਿਚਕਾਰ ਦਾਲਾਂ ਜਿਵੇਂ ਕਿ ਅਰਹਰ ਜਾਂ ਮਾਂਹ ਦੀਆਂ ਕਤਾਰਾਂ ਲਗਾਓ।",
+    "ਖੇਤ ਵਿੱਚ ਪੰਛੀਆਂ ਦੇ ਬੈਠਣ ਲਈ ਅੱਡੇ ਲਗਾਓ ਤਾਂ ਜੋ ਕੀੜੇ ਖਾਣ ਵਾਲੇ ਪੰਛੀ ਆਕਰਸ਼ਿਤ ਹੋਣ।",
+    "ਆਪਣੇ ਖੇਤ ਦੇ ਕਿਨਾਰੇ 'ਤੇ ਨੇਪੀਅਰ ਘਾਹ ਵਰਗੀਆਂ ਫਸਲਾਂ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਨੁਕਸਾਨ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਹਰ ਹਫ਼ਤੇ W ਪੈਟਰਨ ਵਿੱਚ ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ।",
+    "ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਅਤੇ ਸੁੰਡੀਆਂ ਨੂੰ ਹੱਥ ਨਾਲ ਚੁਣੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਕੁਚਲ ਦਿਓ ਜਾਂ ਪਾਣੀ ਵਿੱਚ ਸੁੱਟ ਦਿਓ।",
+    "ਪੌਦੇ ਦੇ ਵਿਚਕਾਰਲੇ ਹਿੱਸੇ (whorl) ਵਿੱਚ ਰੇਤ ਅਤੇ ਚੂਨੇ ਜਾਂ ਸੁਆਹ ਦਾ ਮਿਸ਼ਰਣ ਪਾਓ।",
+    "ਨਰ ਕੀੜਿਆਂ ਨੂੰ ਫੜਨ ਅਤੇ ਨਸ਼ਟ ਕਰਨ ਲਈ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ (pheromone traps) ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਉੱਗਣ ਦੇ ਸਮੇਂ ਤੋਂ ਹੀ ਆਪਣੀ ਫਸਲ ਦੀ ਨਿਯਮਤ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "5% ਨਿੰਮ ਦੇ ਬੀਜਾਂ ਦਾ ਅਰਕ (NSKE) ਜਾਂ azadirachtin 1500ppm @ 5ml/l ਪਾਣੀ",
+    "Metarhizium anisopliae (1 x 10^8 cfu/g) @ 5g/l",
+    "Nomuraea rileyi ਚੌਲਾਂ ਦੇ ਦਾਣਿਆਂ ਵਾਲਾ ਫਾਰਮੂਲੇਸ਼ਨ (1 x 10^8 cfu/g) @ 3 g/l ਪਾਣੀ",
+    "Beauveria bassiana ਅਤੇ Verticillium lecanii 1 x 10^8 CFU/g @ 5 g/litre 'ਤੇ",
+    "NPV ਫਾਰਮੂਲੇਸ਼ਨ @ 2 g/l ਜਾਂ 400 g/acre",
+    "Trichogramma pretiosum ਅਤੇ Telenomus remus @ 50000 ਪ੍ਰਤੀ ਏਕੜ"
+   ],
+   "avoid": [],
+   "etl": "ਬੀਜ ਉੱਗਣ ਤੋਂ ਲੈ ਕੇ ਵਿਚਕਾਰਲੇ ਪੜਾਅ ਤੱਕ, ਜਦੋਂ ਲਗਭਗ 10% ਪੌਦੇ ਨੁਕਸਾਨੇ ਜਾਣ ਤਾਂ ਕਾਰਵਾਈ ਕਰੋ (ਉਦਾਹਰਣ ਲਈ W-ਆਕਾਰ ਦੀ ਸੈਰ 'ਤੇ 20 ਵਿੱਚੋਂ 2 ਪੌਦੇ)। ਵਿਚਕਾਰਲੇ ਪੜਾਅ ਤੋਂ ਬਾਅਦ, ਉਸੇ ਪੱਧਰ 'ਤੇ ਸਪਰੇਅ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੁੰਦੀ।"
+  },
+  "tomato_early_blight": {
+   "name": "ਅਰਲੀ ਬਲਾਈਟ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪਹਿਲਾਂ ਪੁਰਾਣੇ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਕਾਲੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਵਿਚਕਾਰ ਨਿਸ਼ਾਨੇ ਵਰਗੇ ਗੋਲ ਚੱਕਰ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਪੱਤੇ ਦਾ ਹਿੱਸਾ ਅਕਸਰ ਪੀਲਾ ਪੈ ਜਾਂਦਾ ਹੈ।",
+    "ਅਜਿਹੇ ਦਾਗ ਤਣਿਆਂ ਉੱਤੇ ਵੀ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਅਤੇ ਮਿੱਟੀ ਦੇ ਨੇੜੇ ਪੌਦੇ ਨੂੰ ਘੇਰ ਸਕਦੇ ਹਨ।",
+    "ਇਹ ਉੱਲੀ ਫਲ ਨੂੰ ਵੀ ਖਰਾਬ ਕਰਦੀ ਹੈ, ਜੋ ਅਕਸਰ ਡੰਡੀ ਵਾਲੀ ਥਾਂ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।",
+    "ਵੱਡੇ ਦਾਗ ਲਗਭਗ ਪੂਰੇ ਫਲ ਨੂੰ ਘੇਰ ਲੈਂਦੇ ਹਨ ਜਿਸ ਵਿੱਚ ਸਾਫ਼ ਚੱਕਰ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਹਰ ਸੀਜ਼ਨ ਵਿੱਚ ਆਪਣੀ ਨਰਸਰੀ ਦੀ ਜਗ੍ਹਾ ਬਦਲੋ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਸਾਰੇ ਨਦੀਨ ਅਤੇ ਟਮਾਟਰ ਦੇ ਫਾਲਤੂ ਪੌਦੇ ਹਟਾ ਦਿਓ।",
+    "ਆਪਣੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਬਿਮਾਰੀ ਰੋਧਕ ਕਿਸਮਾਂ ਬਾਰੇ ਪੁੱਛੋ।",
+    "ਆਪਣੇ ਪੌਦਿਆਂ ਨੂੰ ਸਹੀ ਖਾਦ ਪਾਉਣਾ ਯਕੀਨੀ ਬਣਾਓ।"
+   ],
+   "practices": [
+    "ਖੇਤ ਵਿੱਚੋਂ ਫਸਲ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਘਟਾਉਣ ਲਈ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।",
+    "ਦਾਗਾਂ ਦੇ ਸ਼ੁਰੂਆਤੀ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਗਰਮ, ਬਰਸਾਤੀ ਅਤੇ ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਵਿੱਚ ਇਹ ਬਿਮਾਰੀ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_shoot_fruit_borer": {
+   "name": "ਤਣੇ ਅਤੇ ਫਲ ਦਾ ਸੁੰਡੀ",
+   "symptoms": [
+    "ਤੁਸੀਂ ਵੇਖੋਗੇ ਕਿ ਨਰਮ ਟਾਹਣੀਆਂ ਮੁਰਝਾ ਕੇ ਸੁੱਕ ਰਹੀਆਂ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਡੋਡੀਆਂ ਪੌਦੇ ਤੋਂ ਡਿੱਗ ਸਕਦੀਆਂ ਹਨ।",
+    "ਟਾਹਣੀਆਂ ਅਤੇ ਫਲਾਂ ਉੱਤੇ ਛੋਟੇ ਮੋਰੀਆਂ ਦਿਖਾਈ ਦਿੰਦੀਆਂ ਹਨ।",
+    "ਇਹ ਮੋਰੀਆਂ ਅਕਸਰ ਕੀੜਿਆਂ ਦੇ ਮਲ ਨਾਲ ਬੰਦ ਹੁੰਦੀਆਂ ਹਨ।",
+    "ਫਲ ਦੇ ਅੰਦਰ, ਕੀੜਾ ਮਲ ਨਾਲ ਭਰੀਆਂ ਸੁਰੰਗਾਂ ਬਣਾਉਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਇੱਕੋ ਖੇਤ ਵਿੱਚ ਹਰ ਸਾਲ ਬੈਂਗਣ ਨਾ ਉਗਾਓ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜਿਨ੍ਹਾਂ ਦੇ ਫਲ ਲੰਬੇ ਅਤੇ ਤੰਗ ਹੁੰਦੇ ਹਨ।",
+    "ਪਤੰਗਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਖਰਾਬ ਹੋਏ ਫਲਾਂ ਅਤੇ ਟਾਹਣੀਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਜਿਨ੍ਹਾਂ ਟਾਹਣੀਆਂ ਵਿੱਚ ਮੋਰੀਆਂ ਹਨ, ਉਨ੍ਹਾਂ ਨੂੰ ਕੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਸਾਰੇ ਖਰਾਬ ਫਲਾਂ ਨੂੰ ਤੋੜ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਹਰ ਹਫ਼ਤੇ ਟ੍ਰੈਪ ਵਿੱਚ ਫਸੇ ਪਤੰਗਿਆਂ ਦੀ ਗਿਣਤੀ ਕਰੋ।",
+    "ਗਿਣਤੀ ਕਰਨ ਤੋਂ ਬਾਅਦ ਫਸੇ ਹੋਏ ਪਤੰਗਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "Neem seed kernel extract (NSKE) 5 %"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_little_leaf": {
+   "name": "ਛੋਟੇ ਪੱਤਿਆਂ ਵਾਲਾ ਰੋਗ",
+   "symptoms": [
+    "ਨਵੇਂ ਪੱਤੇ ਆਮ ਨਾਲੋਂ ਬਹੁਤ ਛੋਟੇ ਉੱਗਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਡੰਠਲ ਬਹੁਤ ਛੋਟੇ ਹੋ ਜਾਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਪੱਤੇ ਤਣੇ ਨਾਲ ਚਿਪਕੇ ਹੋਏ ਲੱਗਦੇ ਹਨ।",
+    "ਪੌਦਾ ਝਾੜੀਦਾਰ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ ਕਿਉਂਕਿ ਬਹੁਤ ਸਾਰੀਆਂ ਛੋਟੀਆਂ ਡੋਡੀਆਂ ਇਕੱਠੀਆਂ ਉੱਗਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲ ਆਮ ਫੁੱਲਾਂ ਦੀ ਬਜਾਏ ਹਰੇ ਪੱਤੇਦਾਰ ਬਣਤਰ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹਨ।",
+    "ਫਲ ਬਹੁਤ ਘੱਟ ਲੱਗਦੇ ਹਨ, ਅਤੇ ਜੇਕਰ ਉਹ ਉੱਗਦੇ ਵੀ ਹਨ, ਤਾਂ ਉਹ ਸਖ਼ਤ ਰਹਿੰਦੇ ਹਨ ਅਤੇ ਸਹੀ ਤਰ੍ਹਾਂ ਪੱਕਦੇ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਜਿਨ੍ਹਾਂ ਪੌਦਿਆਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਈ ਦੇਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਸ਼ੁਰੂ ਵਿੱਚ ਹੀ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "Solanaceae ਪਰਿਵਾਰ ਦੇ ਨਦੀਨਾਂ ਨੂੰ ਸਾਫ਼ ਕਰੋ ਜੋ ਬਿਮਾਰੀ ਫੈਲਾ ਸਕਦੇ ਹਨ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਪੌਦਿਆਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਕਿਸੇ ਵੀ ਪ੍ਰਭਾਵਿਤ ਪੌਦੇ ਨੂੰ ਤੁਰੰਤ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਪੱਤੇ ਦੇ ਟਿੱਡੇ (leaf hopper) ਕੀੜਿਆਂ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ ਜੋ ਬਿਮਾਰੀ ਨੂੰ ਤੰਦਰੁਸਤ ਪੌਦਿਆਂ ਤੱਕ ਪਹੁੰਚਾਉਂਦੇ ਹਨ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_phomopsis_blight": {
+   "name": "ਫੋਮੋਪਸਿਸ ਝੁਲਸ ਅਤੇ ਫਲਾਂ ਦਾ ਸੜਨਾ",
+   "symptoms": [
+    "ਛੋਟੇ ਬੂਟੇ ਡਿੱਗ ਕੇ ਮਰ ਸਕਦੇ ਹਨ ਕਿਉਂਕਿ ਮਿੱਟੀ ਦੇ ਨੇੜੇ ਤਣਾ ਖਰਾਬ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਅਨਿਯਮਿਤ ਭੂਰੇ ਜਾਂ ਸਲੇਟੀ ਰੰਗ ਦੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਅਤੇ ਉਹ ਪੀਲੇ ਹੋ ਕੇ ਡਿੱਗ ਸਕਦੇ ਹਨ।",
+    "ਤਣੇ ਉੱਤੇ ਗੂੜ੍ਹੇ ਭੂਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਬਣ ਜਾਂਦੇ ਹਨ ਜਿਸ ਨਾਲ ਪੌਦਾ ਡਿੱਗ ਸਕਦਾ ਹੈ।",
+    "ਫਲਾਂ ਉੱਤੇ ਛੋਟੇ ਫਿੱਕੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜੋ ਵੱਡੇ ਹੋ ਕੇ ਪੂਰੇ ਫਲ ਨੂੰ ਘੇਰ ਲੈਂਦੇ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਫਲ ਅੰਤ ਵਿੱਚ ਨਰਮ ਪਾਣੀ ਵਾਲੇ ਬਣ ਜਾਂਦੇ ਹਨ ਜਾਂ ਕਾਲੇ ਅਤੇ ਸੁੱਕੇ ਹੋ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਹਮੇਸ਼ਾ ਤੰਦਰੁਸਤ ਫਲਾਂ ਤੋਂ ਹੀ ਬੀਜ ਲਓ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜਾਂ ਨੂੰ 50 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਗਰਮ ਪਾਣੀ ਵਿੱਚ 30 ਮਿੰਟ ਲਈ ਸੋਧੋ।",
+    "ਹਰ ਸਾਲ ਇੱਕੋ ਥਾਂ 'ਤੇ ਬੈਂਗਣ ਲਗਾਉਣ ਦੀ ਬਜਾਏ ਝੋਨੇ ਜਾਂ ਤਿਲ ਵਰਗੀਆਂ ਫਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ ਲਗਾਓ।",
+    "ਮਿੱਟੀ ਵਿੱਚ ਬਿਮਾਰੀ ਨੂੰ ਘਟਾਉਣ ਲਈ ਗਰਮੀਆਂ ਵਿੱਚ ਆਪਣੇ ਖੇਤਾਂ ਨੂੰ ਡੂੰਘਾ ਵਾਹੋ।",
+    "ਬੈਂਗਣ ਦੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਪੌਦੇ ਦੇ ਸਾਰੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹਨ।",
+    "ਬਿਮਾਰੀ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਵਿੱਚੋਂ ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਦੇ ਮਲਬੇ ਨੂੰ ਸਾਫ਼ ਕਰੋ।",
+    "ਧੱਬਿਆਂ ਜਾਂ ਸੜਨ ਦੇ ਕਿਸੇ ਵੀ ਲੱਛਣ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ 29 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਦੇ ਆਸ-ਪਾਸ ਦੇ ਤਾਪਮਾਨ ਵਿੱਚ ਵਧਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_bacterial_wilt": {
+   "name": "ਬੈਕਟੀਰੀਅਲ ਮੁਰਝਾ",
+   "symptoms": [
+    "ਪੌਦਾ ਅਚਾਨਕ ਮੁਰਝਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਮਰ ਜਾਂਦਾ ਹੈ।",
+    "ਪੁਰਾਣੇ ਪੱਤੇ ਪਹਿਲਾਂ ਹੇਠਾਂ ਵੱਲ ਝੁਕ ਜਾਂਦੇ ਹਨ।",
+    "ਪੂਰਾ ਪੌਦਾ ਪੀਲਾ ਹੋ ਜਾਂਦਾ ਹੈ ਅਤੇ ਵਧਣਾ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ।",
+    "ਪੌਦਾ ਦੁਪਹਿਰ ਨੂੰ ਮੁਰਝਾ ਸਕਦਾ ਹੈ ਅਤੇ ਰਾਤ ਨੂੰ ਠੀਕ ਹੋ ਸਕਦਾ ਹੈ, ਪਰ ਅੰਤ ਵਿੱਚ ਮਰ ਜਾਂਦਾ ਹੈ।",
+    "ਤਣੇ ਅਤੇ ਜੜ੍ਹਾਂ ਦੇ ਅੰਦਰਲਾ ਹਿੱਸਾ ਭੂਰਾ ਹੋ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "Pant Samrat ਵਰਗੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਉਗਾਓ।",
+    "ਬੈਂਗਣ ਨੂੰ ਮੱਕੀ, ਸੋਇਆਬੀਨ, ਕਣਕ, ਚੌਲ, ਜਾਂ ਫੁੱਲਗੋਭੀ ਵਰਗੀਆਂ ਫਸਲਾਂ ਨਾਲ ਬਦਲ ਕੇ ਲਗਾਓ।",
+    "Brassica ਵਰਗੀਆਂ ਹਰੀ ਖਾਦ ਵਾਲੀਆਂ ਫਸਲਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਦੇ ਸਾਰੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਦਿਓ।",
+    "ਮਿੱਟੀ ਵਿੱਚ root knot nematodes ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਦੇ ਸਾਰੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਸਾੜ ਦਿਓ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ root knot nematodes ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਮਿੱਟੀ ਵਿੱਚ ਜ਼ਿਆਦਾ ਨਮੀ ਅਤੇ ਦਰਮਿਆਨਾ ਤਾਪਮਾਨ ਬਿਮਾਰੀ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [
+    "ਨੀਮ ਦੀ ਖਲ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_epilachna": {
+   "name": "Epilachna beetle (ਹੱਡਾ ਭੂੰਡੀ)",
+   "symptoms": [
+    "ਕੀੜੇ ਪੱਤੇ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਹਰੇ ਹਿੱਸੇ ਨੂੰ ਖੁਰਚਦੇ ਹਨ।",
+    "ਇਹ ਖਾਣ ਨਾਲ ਇੱਕ ਅਜਿਹਾ ਪੈਟਰਨ ਬਣਦਾ ਹੈ ਜੋ ਪੌੜੀ ਜਾਂ ਖਿੜਕੀ ਵਰਗਾ ਲੱਗਦਾ ਹੈ।",
+    "ਇਹ ਖਿੜਕੀਆਂ ਅੰਤ ਵਿੱਚ ਸੁੱਕ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਡਿੱਗ ਜਾਂਦੀਆਂ ਹਨ, ਜਿਸ ਨਾਲ ਪੱਤਿਆਂ ਵਿੱਚ ਮੋਰੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ, ਪੱਤੇ ਪਿੰਜਰ ਬਣ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪਤਲੇ ਕਾਗਜ਼ ਵਰਗੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਕੀੜਿਆਂ ਨੂੰ ਹੱਥਾਂ ਨਾਲ ਚੁਣੋ ਅਤੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਤਤਈਆਂ ਅਤੇ ਹੋਰ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਬਚਾਓ।",
+    "ਮਿੱਤਰ ਕੀੜਿਆਂ ਦੀ ਮਦਦ ਲਈ ਗੇਂਦਾ ਜਾਂ ਗਾਜਰ ਵਰਗੇ ਪੌਦੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਕੀੜਿਆਂ ਅਤੇ ਆਂਡਿਆਂ ਲਈ ਆਪਣੇ ਪੌਦਿਆਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਖਰਾਬ ਹੋਏ ਪੱਤਿਆਂ ਨੂੰ ਇਕੱਠਾ ਕਰੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਸੁੰਡੀਆਂ ਜਾਂ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਨਸ਼ਟ ਕਰੋ।",
+    "ਪੌਦਿਆਂ ਨੂੰ ਹਿਲਾਓ ਤਾਂ ਜੋ ਸੁੰਡੀਆਂ, ਕੋਸ਼ ਅਤੇ ਬਾਲਗ ਕੀੜੇ ਜ਼ਮੀਨ 'ਤੇ ਡਿੱਗ ਪੈਣ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਨਸ਼ਟ ਕਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "NSKE 5%"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "brinjal_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ 'ਤੇ ਕੋਈ ਧੱਬੇ, ਲਕੀਰਾਂ, ਗੋਲੇ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜਦੇ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਸੁੰਡੀ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਪ੍ਰਤੀ ਰੋਧਕ ਹੋਵੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਪੌਦੇ ਲਗਾਉਣ ਵਾਲੀ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਪੌਦਿਆਂ ਨੂੰ ਸੋਧੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਜੈਵਿਕ ਕੀਟਨਾਸ਼ਕ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦਾ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਲਈ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਦੇ ਅਨੁਸਾਰ ਫਸਲਾਂ ਨੂੰ ਬਦਲ ਕੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਘੱਟੋ-ਘੱਟ ਹਫ਼ਤੇ ਵਿੱਚ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਵੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਵੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_panama_wilt": {
+   "name": "ਪਨਾਮਾ ਵਿਲਟ (ਫਿਊਜ਼ੇਰੀਅਮ ਵਿਲਟ)",
+   "symptoms": [
+    "ਹੇਠਲੇ ਪੱਤੇ ਹਲਕੇ ਪੀਲੇ ਹੋਣੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ, ਖਾਸ ਕਰਕੇ ਕਿਨਾਰਿਆਂ ਤੋਂ।",
+    "ਇਹ ਪੱਤੇ ਅਖੀਰ ਵਿੱਚ ਗੂੜ੍ਹੇ ਪੀਲੇ ਹੋ ਕੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਮੁੱਢ ਤੋਂ ਟੁੱਟ ਕੇ ਤਣੇ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਲਟਕ ਸਕਦੇ ਹਨ।",
+    "ਤਣੇ ਦਾ ਮੁੱਢ ਪਾਟ ਜਾਂਦਾ ਹੈ।",
+    "ਜੜ੍ਹਾਂ ਅਤੇ ਤਣੇ ਦੇ ਅੰਦਰ, ਤੁਹਾਨੂੰ ਲਾਲ ਜਾਂ ਭੂਰੀਆਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।"
+   ],
+   "prevention": [
+    "ਕੇਲੇ ਦੀ ਫਸਲ ਨੂੰ ਝੋਨੇ ਜਾਂ ਗੰਨੇ ਨਾਲ ਬਦਲ ਕੇ ਲਗਾਓ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਲਗਾਓ ਜੋ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰ ਸਕਣ।",
+    "ਹਮੇਸ਼ਾ ਲਗਾਉਣ ਲਈ ਤੰਦਰੁਸਤ ਪਨੀਰੀ (ਸੱਕਰਸ) ਚੁਣੋ।",
+    "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਦਾ ਵਧੀਆ ਪ੍ਰਬੰਧ ਹੋਵੇ, ਖਾਸ ਕਰਕੇ ਮੀਂਹ ਦੇ ਸਮੇਂ।",
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਉਹ ਜੁੱਤੀਆਂ ਨਾ ਪਾਓ ਜੋ ਦੂਜੇ ਕੇਲੇ ਦੇ ਪੌਦਿਆਂ ਜਾਂ ਮਿੱਟੀ ਦੇ ਸੰਪਰਕ ਵਿੱਚ ਆਈਆਂ ਹੋਣ।"
+   ],
+   "practices": [
+    "ਫਸਲ ਕੱਟਣ ਤੋਂ ਬਾਅਦ ਬਿਮਾਰ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਜੇਕਰ ਤੁਹਾਨੂੰ ਕੁਝ ਹੀ ਬਿਮਾਰ ਪੌਦੇ ਮਿਲਦੇ ਹਨ, ਤਾਂ ਉਹਨਾਂ ਨੂੰ ਵੱਢ ਕੇ ਖਤਮ ਕਰ ਦਿਓ।",
+    "ਵੱਢੇ ਹੋਏ ਹਿੱਸਿਆਂ ਨੂੰ 70 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਪਾਣੀ ਵਿੱਚ 30 ਮਿੰਟ ਲਈ ਉਬਾਲੋ।",
+    "ਆਪਣੇ ਸੰਦਾਂ ਅਤੇ ਮਸ਼ੀਨਰੀ ਨੂੰ ਕੀਟਾਣੂਨਾਸ਼ਕ ਘੋਲ ਨਾਲ ਸਾਫ਼ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਬਿਮਾਰ ਪੌਦਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਰੁਕਾਵਟਾਂ ਲਗਾਓ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਉਦੋਂ ਵਧਦੀ ਹੈ ਜਦੋਂ ਤੁਸੀਂ ਇੱਕੋ ਖੇਤ ਵਿੱਚ ਵਾਰ-ਵਾਰ ਕੇਲੇ ਲਗਾਉਂਦੇ ਹੋ।",
+   "organic_bio": [
+    "Pseudomonas fluorescens @ 2.5kg/ha",
+    "ਲਗਭਗ 60 mg Pseudomonas fluorescens (ਕੈਪਸੂਲ ਵਿੱਚ) ਨੂੰ ਤਣੇ ਵਿੱਚ 10 cm ਡੂੰਘੇ ਮੋਰੀ ਵਿੱਚ ਪਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।",
+    "Trichoderma viride @ 25 g, 4 ਵਾਰ: ਇੱਕ ਵਾਰ ਲਗਾਉਣ ਸਮੇਂ ਟੋਏ ਵਿੱਚ ਅਤੇ ਬਾਕੀ ਖੁਰਾਕਾਂ ਲਗਾਉਣ ਤੋਂ ਤੀਜੇ, ਪੰਜਵੇਂ ਅਤੇ ਸੱਤਵੇਂ ਮਹੀਨੇ ਬਾਅਦ",
+    "T.harzianum Th-10, ਸੁੱਕੇ ਕੇਲੇ ਦੇ ਪੱਤਿਆਂ ਦੇ ਰੂਪ ਵਿੱਚ @ 10g/plant, ਲਗਾਉਣ ਸਮੇਂ ਅਤੇ ਲਗਾਉਣ ਤੋਂ 2, 4, ਅਤੇ 6 ਮਹੀਨੇ ਬਾਅਦ"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_sigatoka": {
+   "name": "ਸਿਗਾਟੋਕਾ ਪੱਤਿਆਂ ਦੇ ਧੱਬੇ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਦੇ ਉੱਪਰ ਹਲਕੀਆਂ ਪੀਲੀਆਂ ਜਾਂ ਹਰੀਆਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।",
+    "ਇਹ ਲਕੀਰਾਂ ਅੰਡਾਕਾਰ ਭੂਰੇ ਧੱਬਿਆਂ ਵਿੱਚ ਬਦਲ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਧੱਬਿਆਂ ਦਾ ਵਿਚਕਾਰਲਾ ਹਿੱਸਾ ਹਲਕਾ ਸਲੇਟੀ ਹੋ ਜਾਂਦਾ ਹੈ ਅਤੇ ਉਹਨਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਪੀਲਾ ਘੇਰਾ ਹੁੰਦਾ ਹੈ।",
+    "ਧੱਬੇ ਮਿਲ ਕੇ ਸੁੱਕੇ, ਮਰੇ ਹੋਏ ਪੱਤਿਆਂ ਦੇ ਵੱਡੇ ਪੈਚ ਬਣਾਉਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਜਲਦੀ ਸੁੱਕ ਕੇ ਪੌਦੇ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਫਲ ਛੋਟਾ ਅਤੇ ਪਤਲਾ ਰਹਿ ਸਕਦਾ ਹੈ ਭਾਵੇਂ ਅੰਦਰੋਂ ਪੱਕਣਾ ਸ਼ੁਰੂ ਹੋ ਜਾਵੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਰੱਖਦੀਆਂ ਹੋਣ।",
+    "ਆਪਣੇ ਕੇਲੇ ਦੇ ਰੁੱਖਾਂ ਨੂੰ ਬਹੁਤ ਨੇੜੇ ਨਾ ਲਗਾਓ।",
+    "ਨਦੀਨਾਂ ਅਤੇ ਘਾਹ ਨੂੰ ਹਟਾ ਕੇ ਆਪਣੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਪਾਣੀ ਖੜ੍ਹਾ ਹੋਣ ਤੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਦਾ ਵਧੀਆ ਪ੍ਰਬੰਧ ਰੱਖੋ।",
+    "ਲਗਾਉਣ ਲਈ ਸਿਰਫ਼ ਤੰਦਰੁਸਤ ਅਤੇ ਬਿਮਾਰੀ-ਮੁਕਤ ਪਨੀਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਸ਼ੁਰੂਆਤੀ ਲੱਛਣਾਂ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਗੇੜਾ ਮਾਰੋ।",
+    "ਜਿਨ੍ਹਾਂ ਪੱਤਿਆਂ 'ਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਈ ਦੇਣ, ਉਹਨਾਂ ਨੂੰ ਕੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਪੌਦੇ ਤੋਂ ਵਾਧੂ ਪਨੀਰੀ ਨੂੰ ਸਮੇਂ ਸਿਰ ਹਟਾ ਦਿਓ।",
+    "ਪੌਦਿਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਖੇਤਰ ਨੂੰ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਮਾੜੀ ਅਤੇ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਵਾਲੀ ਮਿੱਟੀ, ਛਾਂ ਵਾਲੇ ਇਲਾਕਿਆਂ ਅਤੇ ਵਾਰ-ਵਾਰ ਸਿੰਚਾਈ ਕਰਨ ਨਾਲ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_bunchy_top": {
+   "name": "ਬੰਚੀ ਟੌਪ ਵਾਇਰਸ",
+   "symptoms": [
+    "ਹੇਠਲੇ ਪੱਤੇ ਅਤੇ ਤਣੇ ਦੀਆਂ ਨਾੜੀਆਂ 'ਤੇ ਗੂੜ੍ਹੀਆਂ ਹਰੀਆਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦਿੰਦੀਆਂ ਹਨ।",
+    "ਨਵੇਂ ਪੱਤੇ ਤੰਗ, ਲਹਿਰਦਾਰ ਹੁੰਦੇ ਹਨ ਅਤੇ ਵਧਣ ਵਿੱਚ ਮੁਸ਼ਕਲ ਮਹਿਸੂਸ ਕਰਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਪੀਲੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੌਦੇ ਦੇ ਸਿਖਰ 'ਤੇ ਗੁੱਛੇ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਪੌਦੇ ਅਕਸਰ ਫਲ ਨਹੀਂ ਦਿੰਦੇ।",
+    "ਜੇ ਫਲ ਲੱਗਦਾ ਹੈ, ਤਾਂ ਉਹ ਟੇਢੇ-ਮੇਢੇ ਅਤੇ ਵਿਗੜੇ ਹੋਏ ਹੁੰਦੇ ਹਨ।",
+    "ਛੋਟੇ ਫਲਾਂ 'ਤੇ ਗੂੜ੍ਹੇ ਭੂਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਹਮੇਸ਼ਾ ਅਜਿਹੀ ਪਨੀਰੀ ਵਰਤੋ ਜੋ ਵਾਇਰਸ ਤੋਂ ਮੁਕਤ ਹੋਵੇ।",
+    "ਆਪਣੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ ਤਾਂ ਜੋ ਬਿਮਾਰ ਪੌਦਿਆਂ ਨੂੰ ਜਲਦੀ ਪਛਾਣਿਆ ਜਾ ਸਕੇ।",
+    "ਵਾਇਰਸ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਕੇਲੇ ਨੂੰ ਗੰਨੇ ਜਾਂ ਕੱਦੂ ਵਰਗੀਆਂ ਫਸਲਾਂ ਦੇ ਨੇੜੇ ਨਾ ਉਗਾਓ।"
+   ],
+   "practices": [
+    "ਸਾਰੇ ਬਿਮਾਰ ਕੇਲੇ ਦੇ ਪੌਦਿਆਂ ਨੂੰ ਤੁਰੰਤ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰ ਪੌਦਿਆਂ ਨੂੰ ਵੱਢ ਕੇ, ਸੁਕਾ ਕੇ ਅਤੇ ਦੱਬ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਖੇਤ ਦੀ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_anthracnose": {
+   "name": "ਐਂਥਰਾਕਨੋਜ਼",
+   "symptoms": [
+    "ਛੋਟੇ ਕੇਲੇ ਦੇ ਫਲਾਂ 'ਤੇ ਛੋਟੇ ਗੋਲ ਕਾਲੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਧੱਬੇ ਵੱਡੇ ਹੋ ਕੇ ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਫਲ ਦੀ ਚਮੜੀ ਕਾਲੀ ਹੋ ਜਾਂਦੀ ਹੈ ਅਤੇ ਸੁੰਗੜ ਜਾਂਦੀ ਹੈ।",
+    "ਗਲਦੇ ਹੋਏ ਫਲ 'ਤੇ ਗੁਲਾਬੀ ਰੰਗ ਦੇ ਬੀਜਾਣੂਆਂ ਦੀ ਪਰਤ ਜੰਮ ਜਾਂਦੀ ਹੈ।",
+    "ਫਲ ਦੇ ਡੰਠਲ 'ਤੇ ਕਾਲੇ ਜ਼ਖ਼ਮ ਹੋਣ ਕਾਰਨ ਫਲ ਡਿੱਗ ਜਾਂਦਾ ਹੈ।",
+    "ਪੂਰਾ ਗੁੱਛਾ ਕਾਲਾ ਹੋ ਕੇ ਗਲ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ।",
+    "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਦਾ ਵਧੀਆ ਪ੍ਰਬੰਧ ਹੋਵੇ।",
+    "ਪੌਦਿਆਂ ਨੂੰ ਤੰਦਰੁਸਤ ਰੱਖਣ ਲਈ ਸਹੀ ਖਾਦ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਫਸਲ ਕੱਟਣ ਅਤੇ ਢੋਆ-ਢੁਆਈ ਦੌਰਾਨ ਫਲਾਂ ਨੂੰ ਧਿਆਨ ਨਾਲ ਸੰਭਾਲੋ ਤਾਂ ਜੋ ਉਹਨਾਂ ਨੂੰ ਸੱਟ ਨਾ ਲੱਗੇ।",
+    "ਆਪਣੀਆਂ ਫਸਲਾਂ ਨੂੰ ਝੋਨੇ ਜਾਂ ਗੰਨੇ ਨਾਲ ਬਦਲ ਕੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਪੌਦੇ ਦੇ ਸਾਰੇ ਬਿਮਾਰ ਹਿੱਸਿਆਂ ਨੂੰ ਸਾੜ ਦਿਓ।",
+    "ਗੁੱਛੇ ਦੇ ਅੰਤ ਵਿੱਚ ਫੁੱਲ ਦੀ ਡੋਡੀ ਨੂੰ ਹਟਾ ਦਿਓ ਜਦੋਂ ਸਾਰੇ ਫਲ ਖੁੱਲ੍ਹ ਜਾਣ।",
+    "ਗੁੱਛਿਆਂ ਨੂੰ ਸਹੀ ਪੱਕਣ ਦੀ ਅਵਸਥਾ 'ਤੇ ਕੱਟੋ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ ਚੰਗੀ ਸਫਾਈ ਬਣਾਈ ਰੱਖੋ।",
+    "ਕੱਟੇ ਹੋਏ ਗੁੱਛਿਆਂ ਨੂੰ ਠੰਢੀ ਜਗ੍ਹਾ 'ਤੇ ਸਟੋਰ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਗਰਮੀ ਅਤੇ ਨਮੀ ਵਿੱਚ ਆਸਾਨੀ ਨਾਲ ਫੈਲਦੀ ਹੈ, ਖਾਸ ਕਰਕੇ ਜੇ ਫਲਾਂ 'ਤੇ ਜ਼ਖ਼ਮ ਜਾਂ ਸੱਟਾਂ ਹੋਣ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_rhizome_weevil": {
+   "name": "ਰਾਈਜ਼ੋਮ ਵੀਵਿਲ (ਸੁੰਡੀ)",
+   "symptoms": [
+    "ਪੌਦਾ ਮਰ ਸਕਦਾ ਹੈ ਕਿਉਂਕਿ ਸੁੰਡੀਆਂ ਜੜ੍ਹ (ਰਾਈਜ਼ੋਮ) ਵਿੱਚ ਸੁਰਾਖ ਕਰ ਦਿੰਦੀਆਂ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਜੜ੍ਹਾਂ ਦੇ ਅੰਦਰ ਕਾਲੀਆਂ ਸੁਰੰਗਾਂ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।",
+    "ਪੌਦੇ ਦੀ ਨਵੀਂ ਨਿਕਲ ਰਹੀ ਕਰੂੰਬਲ ਮਰ ਜਾਂਦੀ ਹੈ।",
+    "ਬਾਹਰਲੇ ਪੱਤੇ ਸੁੱਕਣੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਲਗਾਉਣ ਲਈ ਤੰਦਰੁਸਤ ਪਨੀਰੀ ਚੁਣੋ।",
+    "ਹਰ ਵਾਰ ਇੱਕੋ ਖੇਤ ਵਿੱਚ ਕੇਲੇ ਨਾ ਉਗਾਓ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼-ਸੁਥਰਾ ਰੱਖੋ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜਿਨ੍ਹਾਂ 'ਤੇ ਕੀੜਿਆਂ ਦਾ ਹਮਲਾ ਘੱਟ ਹੁੰਦਾ ਹੈ ਜਿਵੇਂ ਕਿ Poovan, Kadali, Kunnan, ਜਾਂ Poomkalli।",
+    "Robusta, Karpooruvally, Malbhog, Champa, ਅਤੇ Adukkar ਵਰਗੀਆਂ ਕਿਸਮਾਂ ਲਗਾਉਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "practices": [
+    "ਪੌਦੇ ਦੇ ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਜੜ੍ਹ (ਰਾਈਜ਼ੋਮ) ਦੀ ਛਾਂਟੀ ਕਰੋ।",
+    "ਜ਼ਮੀਨ ਦੇ ਹੇਠਲੇ ਪੱਧਰ ਤੋਂ ਤਣੇ ਨੂੰ ਹਟਾ ਦਿਓ।",
+    "ਬਾਲਗ ਕੀੜਿਆਂ ਨੂੰ ਫੜਨ ਲਈ ਫਾਹਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਕੀੜਿਆਂ ਦੇ ਲੱਛਣਾਂ ਲਈ ਖੇਤ ਦੀ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "cosmolure trap @ 5/ha",
+    "pheromone traps @ 4-5/acre"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "banana_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਆਪਣੀ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਧੱਬੇ, ਲਕੀਰਾਂ, ਘੇਰਿਆਂ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਦੇ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜਦੇ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਸੁਰਾਖ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਨੂੰ ਸਹਿਣ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਪਨੀਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਪਨੀਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਜੈਵਿਕ ਕੀਟਨਾਸ਼ਕ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦਾ ਹੈ ਅਤੇ ਕੀੜਿਆਂ-ਬਿਮਾਰੀਆਂ ਲਈ ਆਸਾਨ ਸ਼ਿਕਾਰ ਬਣਾਉਂਦਾ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਦੇ ਅਨੁਸਾਰ ਫਸਲਾਂ ਨੂੰ ਬਦਲ ਕੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਗੇੜਾ ਮਾਰੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ ਅਤੇ ਜ਼ਹਿਰੀਲੇ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_powdery_mildew": {
+   "name": "Powdery mildew",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ, ਫੁੱਲਾਂ ਅਤੇ ਛੋਟੇ ਫਲਾਂ ਉੱਤੇ ਚਿੱਟੇ ਰੰਗ ਦੀ ਉੱਲੀ ਦਿਖਾਈ ਦੇਵੇਗੀ।",
+    "ਛੋਟੇ ਪੱਤਿਆਂ ਉੱਤੇ ਨਿਸ਼ਾਨ ਪੈ ਸਕਦੇ ਹਨ ਜੋ ਬਾਅਦ ਵਿੱਚ ਜਾਮਨੀ-ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਬਿਮਾਰ ਫੁੱਲ ਅਤੇ ਫਲ ਅਕਸਰ ਵੱਡੇ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਇਸ ਬਿਮਾਰੀ ਕਾਰਨ ਰੁੱਖ ਉੱਤੇ ਫਲ ਨਹੀਂ ਲੱਗਦੇ।"
+   ],
+   "prevention": [
+    "ਜਿੱਥੇ ਹੋ ਸਕੇ, ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਵਾਲੀਆਂ ਕਿਸਮਾਂ ਲਗਾਓ।",
+    "ਬਾਗ ਨੂੰ ਸਹੀ ਪਾਣੀ ਅਤੇ ਨਿਕਾਸੀ ਦਿਓ, ਜਿਵੇਂ ਕਿ AESA ਅੰਬ ਪੈਕੇਜ ਵਿੱਚ ਸਲਾਹ ਦਿੱਤੀ ਗਈ ਹੈ।",
+    "ਫੁੱਲ ਆਉਣ ਸਮੇਂ ਰੁੱਖਾਂ ਦੀ ਚੰਗੀ ਤਰ੍ਹਾਂ ਦੇਖਭਾਲ ਕਰੋ, ਕਿਉਂਕਿ ਮੀਂਹ ਜਾਂ ਧੁੰਦ ਅਤੇ ਠੰਢੀਆਂ ਰਾਤਾਂ ਨਾਲ ਇਹ ਬਿਮਾਰੀ ਫੈਲਦੀ ਹੈ।"
+   ],
+   "practices": [
+    "ਪੌਦੇ ਦੇ ਜਿਨ੍ਹਾਂ ਹਿੱਸਿਆਂ ਉੱਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹੋਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਤੋੜ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਸ਼ੁਰੂ ਵਿੱਚ ਹੀ ਫੜਨ ਲਈ ਆਪਣੇ ਰੁੱਖਾਂ ਉੱਤੇ ਨਜ਼ਰ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਫੁੱਲ ਆਉਣ ਦੇ ਸਮੇਂ ਮੀਂਹ ਜਾਂ ਧੁੰਦ ਅਤੇ ਠੰਢੀਆਂ ਰਾਤਾਂ ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_anthracnose": {
+   "name": "Anthracnose",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਛੋਟੇ ਛਾਲੇ ਵਰਗੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਛੋਟੇ ਪੱਤੇ ਮੁਰਝਾ ਕੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
+    "ਨਰਮ ਟਾਹਣੀਆਂ ਮਰ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਸ਼ਾਖਾਵਾਂ ਸੁੱਕ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲਾਂ ਅਤੇ ਫਲਾਂ ਉੱਤੇ ਕਾਲੇ ਦਾਗ ਪੈ ਜਾਂਦੇ ਹਨ।",
+    "ਬਿਮਾਰ ਫਲ ਦਾ ਗੁੱਦਾ ਸਖ਼ਤ ਹੋ ਜਾਂਦਾ ਹੈ, ਫਟ ਜਾਂਦਾ ਹੈ ਅਤੇ ਗਲ ਜਾਂਦਾ ਹੈ।",
+    "ਛੋਟੇ ਬਿਮਾਰ ਫਲ ਸੁੰਗੜ ਕੇ ਰੁੱਖ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਸਾਰੇ ਬਿਮਾਰ ਪੱਤਿਆਂ, ਟਾਹਣੀਆਂ ਅਤੇ ਫਲਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਸਾੜ ਦਿਓ।",
+    "ਤੋੜਨ ਤੋਂ 15 ਦਿਨ ਪਹਿਲਾਂ ਰੁੱਖ ਉੱਤੇ ਲੱਗੇ ਫਲਾਂ ਨੂੰ ਕਾਗਜ਼ ਦੇ ਲਿਫਾਫਿਆਂ ਨਾਲ ਢੱਕ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਸਹਿਣ ਕਰਨ ਵਾਲੀਆਂ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਫਲਾਂ ਨੂੰ ਦੇਰ ਨਾਲ ਡਿੱਗਣ ਅਤੇ ਬਿਮਾਰੀ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਫਲਾਂ ਦੀ ਮੱਖੀ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਬਾਗ ਦਾ ਨਿਯਮਿਤ ਨਿਰੀਖਣ ਕਰੋ।",
+    "ਕਿਸੇ ਵੀ ਬਿਮਾਰ ਪੌਦੇ ਦੇ ਹਿੱਸੇ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਮਰੀਆਂ ਹੋਈਆਂ ਟਾਹਣੀਆਂ ਅਤੇ ਕੂੜਾ-ਕਰਕਟ ਹਟਾ ਕੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ ਜਿੱਥੇ ਕੀਟਾਣੂ ਰਹਿੰਦੇ ਹਨ।",
+    "ਇਹ ਫੈਸਲਾ ਕਰਨ ਲਈ ਕਿ ਕੰਟਰੋਲ ਦੇ ਉਪਾਅ ਕਦੋਂ ਕਰਨੇ ਹਨ, ਬਾਗ ਦੀ ਨਿਗਰਾਨੀ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਵੱਧ ਨਮੀ, ਲਗਾਤਾਰ ਮੀਂਹ ਅਤੇ 24 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਬਿਮਾਰੀ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [
+    "P. fluorescens (FP 7) at 5g/litre"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_hopper": {
+   "name": "Mango hopper",
+   "symptoms": [
+    "ਕੀੜੇ ਫੁੱਲਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਡੋਡੀਆਂ ਅਤੇ ਫੁੱਲ ਰੁੱਖ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਤੁਹਾਨੂੰ ਹੇਠਲੇ ਪੱਤਿਆਂ ਉੱਤੇ ਚਿਪਚਿਪਾ ਸ਼ਹਿਦ ਵਰਗਾ ਪਦਾਰਥ ਦਿਖਾਈ ਦੇਵੇਗਾ।",
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਕਾਲੀ ਉੱਲੀ ਉੱਗ ਜਾਂਦੀ ਹੈ।",
+    "ਪੌਦੇ ਦੇ ਕੁਝ ਹਿੱਸੇ ਮੁੜ ਸਕਦੇ ਹਨ ਅਤੇ ਸੁੱਕ ਸਕਦੇ ਹਨ।",
+    "ਛੋਟੇ ਫਲ ਰੁੱਖ ਤੋਂ ਡਿੱਗ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਰੁੱਖਾਂ ਨੂੰ ਬਹੁਤ ਨੇੜੇ ਨਾ ਲਗਾਓ।",
+    "ਨਦੀਨਾਂ ਨੂੰ ਪੁੱਟ ਕੇ ਬਾਗ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।",
+    "ਦਸੰਬਰ ਵਿੱਚ ਸੰਘਣੀਆਂ ਟਾਹਣੀਆਂ ਦੀ ਛੰਗਾਈ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਰੁੱਖ ਦੇ ਉੱਪਰ ਪੀਲੇ ਚਿਪਚਿਪੇ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਹਰ ਰੋਜ਼ ਟ੍ਰੈਪਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਸ਼ਾਮ 6 ਵਜੇ ਤੋਂ ਰਾਤ 10 ਵਜੇ ਤੱਕ ਲਾਈਟ ਟ੍ਰੈਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਕੀੜੇ ਫਰਵਰੀ ਵਿੱਚ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜਦੋਂ ਰੁੱਖਾਂ ਨੂੰ ਫੁੱਲ ਲੱਗਣੇ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ।",
+   "organic_bio": [
+    "Neem oil 5 ml/lit of water",
+    "3 per cent neem oil",
+    "neem seed kernel powder extract 5 per cent",
+    "Metarhizium anisopliae @ 1 x 10^8 cfu/ml",
+    "Beauveria bassiana @ 10^8 cfu/ml"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_fruit_fly": {
+   "name": "Fruit fly",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਫਲ ਉੱਤੇ ਭੂਰੇ ਰੰਗ ਦੇ ਗਲੇ ਹੋਏ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਕੁਝ ਫਲਾਂ ਵਿੱਚੋਂ ਪਾਣੀ ਨਿਕਲ ਸਕਦਾ ਹੈ।",
+    "ਫਲ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਰੁੱਖ ਤੋਂ ਡਿੱਗ ਸਕਦਾ ਹੈ।",
+    "ਜਿਵੇਂ-ਜਿਵੇਂ ਫਲ ਪੱਕਦਾ ਹੈ, ਛੋਟੇ ਕੀੜੇ ਇਸ ਵਿੱਚ ਮੋਰੀ ਕਰ ਦਿੰਦੇ ਹਨ।",
+    "ਫਲ ਗਲਣਾ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਨਵੰਬਰ ਅਤੇ ਦਸੰਬਰ ਵਿੱਚ ਜ਼ਮੀਨ ਦੀ ਵਾਹੀ ਕਰੋ।",
+    "ਇਸ ਨਾਲ ਸੁੰਡੀਆਂ ਧੁੱਪ ਵਿੱਚ ਆ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਮਰ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਮਿੱਟੀ ਨੂੰ ਪੌਦਿਆਂ ਜਾਂ ਪੁਰਾਣੀ ਫਸਲ ਦੇ ਹਿੱਸਿਆਂ ਨਾਲ ਢੱਕ ਕੇ ਰੱਖੋ।",
+    "ਮਿੱਟੀ ਵਿੱਚ ਖਾਦ ਪਾਓ।"
+   ],
+   "practices": [
+    "ਡਿੱਗੇ ਹੋਏ ਫਲਾਂ ਨੂੰ ਚੁੱਕੋ ਅਤੇ ਇੱਕ ਟੋਏ ਵਿੱਚ ਪਾ ਦਿਓ।",
+    "ਪ੍ਰਤੀ ਏਕੜ 4 ਤੋਂ 5 ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਹਰ 2 ਤੋਂ 3 ਹਫ਼ਤਿਆਂ ਬਾਅਦ ਲੂਰ ਬਦਲੋ।",
+    "ਵੱਡੀਆਂ ਮੱਖੀਆਂ ਨੂੰ ਫੜ ਕੇ ਮਾਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਮੱਖੀਆਂ ਪੱਕੇ ਹੋਏ ਫਲਾਂ ਵਿੱਚ ਅੰਡੇ ਦੇਣਾ ਪਸੰਦ ਕਰਦੀਆਂ ਹਨ।",
+   "organic_bio": [
+    "Pheromone traps @ 4-5/acre"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_sooty_mould": {
+   "name": "Sooty mould",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਦੀ ਸਤ੍ਹਾ ਉੱਤੇ ਕਾਲੀ ਮਖਮਲੀ ਪਰਤ ਦਿਖਾਈ ਦੇਵੇਗੀ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ, ਪੂਰਾ ਰੁੱਖ ਕਾਲਾ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ ਟਾਹਣੀਆਂ ਅਤੇ ਪੱਤੇ ਵੀ ਸ਼ਾਮਲ ਹਨ।",
+    "ਇਹ ਉੱਲੀ ਕੀੜਿਆਂ ਦੁਆਰਾ ਛੱਡੇ ਗਏ ਚਿਪਚਿਪੇ ਮਿੱਠੇ ਤਰਲ ਉੱਤੇ ਉੱਗਦੀ ਹੈ।",
+    "ਇਹ ਕਾਲੀ ਪਰਤ ਪੱਤੇ ਨੂੰ ਧੁੱਪ ਲੈਣ ਤੋਂ ਰੋਕਦੀ ਹੈ, ਜਿਸ ਨਾਲ ਪੌਦੇ ਨੂੰ ਨੁਕਸਾਨ ਹੁੰਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਆਪਣੇ ਬਾਗ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਸਿਹਤਮੰਦ ਰੱਖੋ।",
+    "ਪ੍ਰਭਾਵਿਤ ਟਾਹਣੀਆਂ ਨੂੰ ਛਾਂਗੋ ਅਤੇ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ ਤੁਰੰਤ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਹੌਪਰ, ਐਫਿਡ ਅਤੇ ਸਕੇਲ ਕੀੜਿਆਂ ਨੂੰ ਕੰਟਰੋਲ ਕਰੋ ਜੋ ਪੌਦੇ ਉੱਤੇ ਮਿੱਠਾ ਤਰਲ ਛੱਡਦੇ ਹਨ।"
+   ],
+   "practices": [
+    "ਕੀੜਿਆਂ ਅਤੇ ਉੱਲੀ ਦਾ ਇੱਕੋ ਸਮੇਂ ਪ੍ਰਬੰਧ ਕਰੋ।",
+    "ਰੁੱਖ ਦੇ ਉਨ੍ਹਾਂ ਹਿੱਸਿਆਂ ਨੂੰ ਛਾਂਗ ਦਿਓ ਜੋ ਉੱਲੀ ਨਾਲ ਢੱਕੇ ਹੋਏ ਹਨ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਛਾਂਗੀਆਂ ਹੋਈਆਂ ਟਾਹਣੀਆਂ ਨੂੰ ਸਾੜ ਦਿਓ।",
+    "ਉੱਲੀ ਨੂੰ ਉਤਾਰਨ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਪੱਤਿਆਂ ਉੱਤੇ ਸਟਾਰਚ ਦਾ ਘੋਲ ਛਿੜਕੋ।"
+   ],
+   "favourable_conditions": "ਵੱਧ ਨਮੀ ਅਤੇ ਸਿੱਲ੍ਹਾ ਮੌਸਮ ਬਿਮਾਰੀ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "mango_healthy": {
+   "name": "Healthy",
+   "symptoms": [
+    "ਪੱਤੇ ਆਪਣੀ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹਨ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਅੰਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਸਿਹਤਮੰਦ ਬੀਜ ਜਾਂ ਪੌਦੇ ਲਗਾਉਣ ਵਾਲੀ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਪੌਦੇ ਲਗਾਉਣ ਵਾਲੀ ਸਮੱਗਰੀ ਦਾ ਇਲਾਜ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਬਾਇਓ-ਪੈਸਟੀਸਾਈਡ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦਾ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਤੇ ਬਿਮਾਰੀਆਂ ਲਈ ਆਸਾਨ ਸ਼ਿਕਾਰ ਬਣਾਉਂਦਾ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਦੇ ਅਨੁਸਾਰ ਫਸਲਾਂ ਬਦਲੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_yellow_mosaic": {
+   "name": "ਪੀਲਾ ਚਿਤਕਬਰਾ ਰੋਗ (Yellow mosaic virus)",
+   "symptoms": [
+    "ਸ਼ੁਰੂ ਵਿੱਚ ਨਵੇਂ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਪੀਲੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਨਵੇਂ ਪੱਤਿਆਂ ਉੱਤੇ ਪੀਲੇ ਅਤੇ ਹਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਮਿਲੇ-ਜੁਲੇ ਹੁੰਦੇ ਹਨ।",
+    "ਸਮੇਂ ਦੇ ਨਾਲ ਪੀਲੇ ਦਾਗ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਕੁਝ ਪੱਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਪੀਲੇ ਹੋ ਸਕਦੇ ਹਨ।",
+    "ਰੋਗਗ੍ਰਸਤ ਪੱਤਿਆਂ ਉੱਤੇ ਸੁੱਕੇ ਭੂਰੇ ਨਿਸ਼ਾਨ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਬੂਟੇ ਛੋਟੇ ਰਹਿ ਜਾਂਦੇ ਹਨ, ਹੌਲੀ ਵਧਦੇ ਹਨ ਅਤੇ ਫੁੱਲ ਜਾਂ ਫਲੀਆਂ ਘੱਟ ਲੱਗਦੀਆਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਵਰਤੋ ਜੋ ਇਸ ਰੋਗ ਨੂੰ ਸਹਿਣ ਕਰਨ ਦੀ ਤਾਕਤ ਰੱਖਦੀਆਂ ਹੋਣ।",
+    "ਹਮੇਸ਼ਾ ਤੰਦਰੁਸਤ ਅਤੇ ਪ੍ਰਮਾਣਿਤ ਬੀਜ ਵਰਤੋ ਜੋ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਹੋਣ।",
+    "ਉਹਨਾਂ ਬੂਟਿਆਂ ਨੂੰ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰੋ ਜੋ ਵਾਇਰਸ ਨੂੰ ਫੈਲਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+    "ਫਸਲਾਂ ਦਾ ਫੇਰ-ਬਦਲ ਕਰੋ, ਜਿਵੇਂ ਕਿ ਕਣਕ, ਕੱਦੂ-ਵਰਗੀਆ ਸਬਜ਼ੀਆਂ ਜਾਂ ਗੋਭੀ-ਵਰਗੀਆ ਸਬਜ਼ੀਆਂ।",
+    "ਆਪਣੇ ਖੇਤ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਚਾਰ ਲਾਈਨਾਂ ਜਵਾਰ, ਮੱਕੀ ਜਾਂ ਬਾਜਰੇ ਦੀਆਂ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਰੋਗ ਦੇ ਲੱਛਣਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਖੇਤ ਦੀ ਸਫਾਈ ਰੱਖੋ ਅਤੇ ਰੋਗਗ੍ਰਸਤ ਬੂਟਿਆਂ ਦੇ ਹਿੱਸਿਆਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਖੇਤ ਨੂੰ ਸਾਫ਼ ਅਤੇ ਨਦੀਨ-ਮੁਕਤ ਰੱਖੋ।",
+    "ਫਸਲ ਨੂੰ ਤੰਦਰੁਸਤ ਰੱਖਣ ਲਈ ਖੇਤੀਬਾੜੀ ਦੇ ਆਮ ਤਰੀਕੇ ਅਪਣਾਓ।",
+    "ਜਿਨ੍ਹਾਂ ਬੂਟਿਆਂ ਉੱਤੇ ਪੀਲੇ ਧੱਬੇ ਦਿਖਣ, ਉਹਨਾਂ ਨੂੰ ਜਲਦੀ ਪੁੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਤਾਂ ਜੋ ਚਿੱਟੀ ਮੱਖੀ ਵਾਇਰਸ ਨਾ ਫੈਲਾ ਸਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "ਚਿੱਟੀ ਮੱਖੀ ਨੂੰ ਫੜਨ ਅਤੇ ਨਿਗਰਾਨੀ ਲਈ 4 ਤੋਂ 5 ਪੀਲੇ ਚਿਪਚਿਪੇ ਕਾਰਡ ਪ੍ਰਤੀ ਏਕੜ, ਫਸਲ ਤੋਂ 15 cm ਉੱਪਰ ਲਗਾਓ।",
+    "ਚਿੱਟੀ ਮੱਖੀ ਦੇ ਖਿਲਾਫ 5 ml Neem oil ਪ੍ਰਤੀ ਲੀਟਰ ਪਾਣੀ ਵਿੱਚ ਮਿਲਾ ਕੇ ਛਿੜਕਾਅ ਕਰੋ।"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_powdery_mildew": {
+   "name": "ਚਿੱਟਾ ਉੱਲੀ ਰੋਗ (Powdery mildew)",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਅਤੇ ਹਰੇ ਹਿੱਸਿਆਂ ਉੱਤੇ ਚਿੱਟੇ ਪਾਊਡਰ ਵਰਗੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਕੇ ਗੋਲ ਚੱਕਰ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਚਿੱਟਾ ਪਾਊਡਰ ਅੰਤ ਵਿੱਚ ਪੱਤਿਆਂ ਦੇ ਦੋਵਾਂ ਪਾਸਿਆਂ ਨੂੰ ਢੱਕ ਲੈਂਦਾ ਹੈ।",
+    "ਜਦੋਂ ਰੋਗ ਜ਼ਿਆਦਾ ਹੁੰਦਾ ਹੈ ਤਾਂ ਪੱਤੇ ਪੀਲੇ ਹੋ ਕੇ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਬੂਟੇ ਦਾ ਵਾਧਾ ਰੁਕ ਸਕਦਾ ਹੈ ਅਤੇ ਉਹ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ ਪੱਕ ਸਕਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਝਾੜ ਘੱਟ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਨਦੀਨਾਂ ਨੂੰ ਹਟਾਓ ਅਤੇ ਉਹਨਾਂ ਬੂਟਿਆਂ ਨੂੰ ਨਸ਼ਟ ਕਰੋ ਜੋ ਰੋਗ ਫੈਲਾ ਸਕਦੇ ਹਨ।",
+    "ਫਸਲਾਂ ਦਾ ਫੇਰ-ਬਦਲ ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਨਾਲ ਕਰੋ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਰੋਗ ਨਹੀਂ ਲੱਗਦਾ।"
+   ],
+   "practices": [
+    "ਰੋਗ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਅਕਸਰ ਜਾਂਚ ਕਰੋ।",
+    "ਬੂਟੇ ਦੇ ਉਹ ਹਿੱਸੇ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰੋ ਜੋ ਬਿਮਾਰ ਦਿਖਦੇ ਹਨ।",
+    "ਪਹਿਲੇ ਲੱਛਣ ਦਿਖਦੇ ਹੀ ਸਿਫਾਰਸ਼ ਕੀਤੇ ਕੁਦਰਤੀ ਅਰਕਾਂ ਦਾ ਛਿੜਕਾਅ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਠੰਡਾ ਮੌਸਮ ਅਤੇ ਜ਼ਿਆਦਾ ਨਮੀ ਇਸ ਰੋਗ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+   "organic_bio": [
+    "NSKE 5%",
+    "Neem oil 3%",
+    "Eucalyptus leaf extract 10%"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_cercospora_leaf_spot": {
+   "name": "ਸਰਕੋਸਪੋਰਾ ਪੱਤਿਆਂ ਦਾ ਦਾਗ (Cercospora leaf spot)",
+   "symptoms": [
+    "ਤੁਸੀਂ ਪੱਤਿਆਂ ਉੱਤੇ ਬਹੁਤ ਸਾਰੇ ਛੋਟੇ ਦਾਗ ਦੇਖੋਗੇ।",
+    "ਦਾਗਾਂ ਦਾ ਕੇਂਦਰ ਫਿੱਕਾ ਭੂਰਾ ਅਤੇ ਕਿਨਾਰੇ ਲਾਲ-ਭੂਰੇ ਰੰਗ ਦੇ ਹੁੰਦੇ ਹਨ।",
+    "ਅਜਿਹੇ ਦਾਗ ਬੂਟੇ ਦੀਆਂ ਟਾਹਣੀਆਂ ਅਤੇ ਫਲੀਆਂ ਉੱਤੇ ਵੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲੇ ਕਾਰਨ ਪੱਤੇ ਬੂਟੇ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਫਲੀਆਂ ਉੱਤੇ, ਦਾਗ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਛੋਟੇ ਨਿਸ਼ਾਨਾਂ ਵਜੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ ਜੋ ਬਾਅਦ ਵਿੱਚ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਇਹ ਫਲੀ ਦੇ ਦਾਗ ਅੰਤ ਵਿੱਚ ਹਲਕੇ ਭੂਰੇ, ਅੰਦਰ ਨੂੰ ਧਸੇ ਹੋਏ ਅਤੇ ਖੁਰਦਰੇ ਹੋ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਮੌਨਸੂਨ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹੀ ਆਪਣੀ ਫਸਲ ਜਲਦੀ ਬੀਜੋ।",
+    "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਦਾ ਚੰਗਾ ਪ੍ਰਬੰਧ ਹੋਵੇ ਤਾਂ ਜੋ ਮਿੱਟੀ ਜ਼ਿਆਦਾ ਗਿੱਲੀ ਨਾ ਰਹੇ।"
+   ],
+   "practices": [
+    "ਰੋਗ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਬੂਟੇ ਦੇ ਕੋਈ ਵੀ ਹਿੱਸੇ ਜੋ ਬਿਮਾਰ ਦਿਖਦੇ ਹਨ, ਉਹਨਾਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਰੋਗ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਜ਼ਿਆਦਾ ਨਮੀ, ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਅਤੇ ਭਾਰੀ ਮੀਂਹ ਇਸ ਰੋਗ ਨੂੰ ਫੈਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_leaf_crinkle": {
+   "name": "ਪੱਤੇ ਮੁੜਨ ਵਾਲਾ ਵਾਇਰਸ (Leaf crinkle virus)",
+   "symptoms": [
+    "ਨਵੇਂ ਪੱਤਿਆਂ ਦੇ ਪਾਸਿਆਂ ਦੀਆਂ ਨਾੜੀਆਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਅਤੇ ਕਿਨਾਰਿਆਂ ਦੇ ਨੇੜੇ ਪੀਲਾਪਣ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਹੇਠਾਂ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ।",
+    "ਕੁਝ ਪੱਤੇ ਮਰੋੜੇ ਹੋਏ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਪੱਤੇ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਦੀਆਂ ਨਾੜੀਆਂ ਲਾਲ-ਭੂਰੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਜੋ ਬੂਟੇ ਸੀਜ਼ਨ ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ ਬਿਮਾਰ ਹੋ ਜਾਂਦੇ ਹਨ, ਉਹ ਛੋਟੇ ਰਹਿ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅਕਸਰ ਉੱਪਰੋਂ ਸੁੱਕ ਕੇ ਮਰ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਰੋਗ ਨੂੰ ਆਉਣ ਤੋਂ ਰੋਕਣ ਲਈ ਤੰਦਰੁਸਤ ਬੀਜਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬਿਮਾਰ ਬੂਟਿਆਂ ਤੋਂ ਲਏ ਗਏ ਬੀਜਾਂ ਨੂੰ ਬੀਜਣ ਤੋਂ ਪਰਹੇਜ਼ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਰੋਗ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦੀ ਨਿਯਮਤ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਰੋਗ ਨੂੰ ਫੈਲਣ ਤੋਂ ਰੋਕਣ ਲਈ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਬੂਟੇ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਰੋਗ ਖੇਤ ਵਿੱਚ ਮੁੱਖ ਤੌਰ 'ਤੇ ਬਿਮਾਰ ਬੀਜਾਂ ਰਾਹੀਂ ਜਾਂ ਜਦੋਂ ਬਿਮਾਰ ਪੱਤੇ ਤੰਦਰੁਸਤ ਪੱਤਿਆਂ ਨਾਲ ਰਗੜ ਖਾਂਦੇ ਹਨ, ਤਾਂ ਫੈਲਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_rust": {
+   "name": "ਕੁੰਗੀ (Rust)",
+   "symptoms": [
+    "ਦਾਗ ਟਾਹਣੀਆਂ ਅਤੇ ਫਲੀਆਂ ਉੱਤੇ ਵੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ, ਪੱਤੇ ਸੁੱਕ ਕੇ ਬੂਟੇ ਤੋਂ ਡਿੱਗ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਅਕਸਰ ਬਹੁਤ ਸਾਰੇ ਲਾਲ-ਭੂਰੇ ਰੰਗ ਦੇ ਦਾਣੇ (pustules) ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਰੋਗ ਦੇ ਪੱਧਰ ਨੂੰ ਘਟਾਉਣ ਲਈ ਖੇਤ ਵਿੱਚੋਂ ਫਾਲਤੂ ਉੱਗੇ ਬੂਟੇ ਹਟਾ ਦਿਓ।",
+    "ਤੰਦਰੁਸਤ ਬੀਜ ਵਰਤੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਉੱਲੀ ਨਾ ਹੋਵੇ।"
+   ],
+   "practices": [
+    "ਰੋਗ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਬੂਟੇ ਦੇ ਕੋਈ ਵੀ ਹਿੱਸੇ ਜੋ ਬਿਮਾਰ ਦਿਖਦੇ ਹਨ, ਉਹਨਾਂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰੋ।",
+    "ਖੇਤ ਨੂੰ ਪੁਰਾਣੇ ਬੂਟਿਆਂ ਦੇ ਰਹਿੰਦ-ਖੂੰਹਦ ਤੋਂ ਸਾਫ਼ ਰੱਖੋ ਜਿੱਥੇ ਉੱਲੀ ਲੁਕੀ ਰਹਿੰਦੀ ਹੈ।"
+   ],
+   "favourable_conditions": "ਜ਼ਿਆਦਾ ਨਮੀ, ਬੱਦਲਵਾਈ ਵਾਲਾ ਮੌਸਮ, 21 ਤੋਂ 26 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਅਤੇ ਰਾਤ ਨੂੰ ਜ਼ਿਆਦਾ ਤਰੇਲ ਇਸ ਰੋਗ ਨੂੰ ਫੈਲਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "blackgram_pod_borer": {
+   "name": "ਫਲੀ ਦਾ ਸੁੰਡੀ (Spotted pod borer - Maruca)",
+   "symptoms": [
+    "ਤੁਸੀਂ ਸ਼ੁਰੂਆਤੀ ਪੜਾਵਾਂ ਵਿੱਚ ਪੱਤੇ ਖਾਧੇ ਹੋਏ ਦੇਖੋਗੇ।",
+    "ਸੁੰਡੀ ਅਕਸਰ ਆਪਣਾ ਸਿਰ ਫਲੀ ਦੇ ਅੰਦਰ ਰੱਖਦੀ ਹੈ ਜਦੋਂ ਕਿ ਇਸਦਾ ਸਰੀਰ ਬਾਹਰ ਲਟਕਦਾ ਹੈ।",
+    "ਤੁਸੀਂ ਫਲੀਆਂ ਉੱਤੇ ਗੋਲ ਮੋਰੀਆਂ ਦੇਖੋਗੇ।",
+    "ਕਲੀਆਂ, ਫੁੱਲਾਂ ਅਤੇ ਫਲੀਆਂ ਵਿੱਚ ਮੋਰੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ।",
+    "ਰੋਗਗ੍ਰਸਤ ਫੁੱਲ ਅਤੇ ਫਲੀਆਂ ਅਕਸਰ ਜਾਲੇ ਨਾਲ ਜੁੜੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਕੀੜਿਆਂ ਦੀ ਗਿਣਤੀ ਦੀ ਨਿਗਰਾਨੀ ਕਰਨ ਲਈ ਫੇਰੋਮੋਨ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "4 ਤੋਂ 5 ਟ੍ਰੈਪ ਪ੍ਰਤੀ ਏਕੜ ਦੇ ਹਿਸਾਬ ਨਾਲ ਲਗਾਓ।",
+    "ਟ੍ਰੈਪਾਂ ਨੂੰ ਇੱਕ ਦੂਜੇ ਤੋਂ ਘੱਟੋ-ਘੱਟ 75 ਫੁੱਟ ਦੀ ਦੂਰੀ 'ਤੇ ਰੱਖੋ।",
+    "ਟ੍ਰੈਪਾਂ ਨੂੰ ਬੂਟੇ ਦੇ ਉੱਪਰ ਇੱਕ ਫੁੱਟ ਦੀ ਉਚਾਈ 'ਤੇ ਸੈੱਟ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਟ੍ਰੈਪਾਂ ਵਿੱਚ ਕੀੜਿਆਂ ਦੀ ਗਿਣਤੀ ਲਈ ਹਰ ਹਫ਼ਤੇ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਟ੍ਰੈਪਾਂ ਵਿੱਚ ਫੜੇ ਗਏ ਕੀੜਿਆਂ ਨੂੰ ਗਿਣਨ ਤੋਂ ਬਾਅਦ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚ ਕੁਦਰਤੀ ਦੁਸ਼ਮਣਾਂ ਜਿਵੇਂ ਕਿ ladybird beetles ਨੂੰ ਲੱਭੋ।",
+    "ਜੇਕਰ ਤੁਸੀਂ ਫਸਲ ਵਿੱਚ ਕੁਦਰਤੀ ਦੁਸ਼ਮਣਾਂ ਨੂੰ ਸਰਗਰਮ ਦੇਖਦੇ ਹੋ ਤਾਂ ਕੀਟਨਾਸ਼ਕਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਪਰਹੇਜ਼ ਕਰੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [
+    "Pheromone traps @ 4-5 ਪ੍ਰਤੀ ਏਕੜ"
+   ],
+   "avoid": [],
+   "etl": "3 ਸੁੰਡੀਆਂ ਪ੍ਰਤੀ ਬੂਟਾ।"
+  },
+  "blackgram_healthy": {
+   "name": "ਤੰਦਰੁਸਤ (Healthy)",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਦੀ ਪਰਤ ਨਹੀਂ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹਨ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹਨ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਨੂੰ ਸਹਿਣ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਵਰਤੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜਾਂ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ bio-pesticide ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਤੇ ਬਿਮਾਰੀਆਂ ਦੇ ਹਮਲੇ ਨੂੰ ਆਸਾਨ ਬਣਾਉਂਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਸੀਜ਼ਨ ਦਰ ਸੀਜ਼ਨ ਫਸਲਾਂ ਦਾ ਫੇਰ-ਬਦਲ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਚੱਲੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਬੂਟਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਰਸਾਇਣਕ ਛਿੜਕਾਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਣ ਵਜੋਂ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਰੋਗਗ੍ਰਸਤ ਬੂਟਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_early_blight": {
+   "name": "ਅਗੇਤਾ ਝੁਲਸ ਰੋਗ",
+   "symptoms": [
+    "ਪਹਿਲਾਂ ਪੁਰਾਣੇ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਕਾਲੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਇਹ ਦਾਗ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਵਿਚਕਾਰ ਨਿਸ਼ਾਨੇ ਵਰਗੇ ਗੋਲ ਚੱਕਰ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਪੱਤੇ ਦਾ ਹਿੱਸਾ ਅਕਸਰ ਪੀਲਾ ਪੈ ਜਾਂਦਾ ਹੈ।",
+    "ਦਾਗ ਤਣਿਆਂ ਉੱਤੇ ਵੀ ਆ ਸਕਦੇ ਹਨ ਅਤੇ ਜ਼ਮੀਨ ਦੇ ਨੇੜੇ ਪੌਦੇ ਨੂੰ ਘੇਰ ਸਕਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲੇ ਦੀ ਸੂਰਤ ਵਿੱਚ, ਇਹ ਬਿਮਾਰੀ ਪੌਦੇ ਦੇ ਬਹੁਤੇ ਪੱਤਿਆਂ ਨੂੰ ਸੁਕਾ ਦਿੰਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਹਮੇਸ਼ਾ ਬਿਮਾਰੀ ਰਹਿਤ ਤੰਦਰੁਸਤ ਬੀਜ ਹੀ ਵਰਤੋ।",
+    "ਆਲੂਆਂ ਦੀਆਂ ਉਹ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫਸਲ ਕੱਟਣ ਤੋਂ ਬਾਅਦ ਖੇਤ ਵਿੱਚੋਂ ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਦੇ ਅਵਸ਼ੇਸ਼ਾਂ ਨੂੰ ਹਟਾ ਕੇ ਖੇਤ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਆਪਣੇ ਪੌਦਿਆਂ ਨੂੰ ਨਿਯਮਿਤ ਤੌਰ 'ਤੇ ਦੇਖੋ ਕਿ ਕਿਤੇ ਦਾਗ ਤਾਂ ਨਹੀਂ ਹਨ।",
+    "ਪੌਦੇ ਦੇ ਕਿਸੇ ਵੀ ਹਿੱਸੇ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਜਿਸ 'ਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹੋਣ।",
+    "ਬਿਮਾਰੀ ਦੇ ਫੈਲਾਅ ਨੂੰ ਰੋਕਣ ਲਈ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਗਰਮ ਮੌਸਮ, ਮੀਂਹ ਅਤੇ ਜ਼ਿਆਦਾ ਨਮੀ ਵਿੱਚ ਵਧਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_late_blight": {
+   "name": "ਪਛੇਤਾ ਝੁਲਸ ਰੋਗ",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਦਾਗ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ ਜੋ ਸਮੇਂ ਦੇ ਨਾਲ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਇਹ ਦਾਗ ਜਾਮਨੀ-ਭੂਰੇ ਅਤੇ ਅੰਤ ਵਿੱਚ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਆਟੇ ਵਰਗੀ ਚਿੱਟੀ ਉੱਲੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।",
+    "ਤਣੇ ਗੰਢਾਂ ਤੋਂ ਕਾਲੇ ਪੈ ਜਾਂਦੇ ਹਨ ਅਤੇ ਟੁੱਟ ਸਕਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਪੌਦਾ ਡਿੱਗ ਜਾਂਦਾ ਹੈ।",
+    "ਆਲੂਆਂ ਦੀ ਸਤ੍ਹਾ 'ਤੇ ਜਾਮਨੀ-ਭੂਰੇ ਦਾਗ ਅਤੇ ਅੰਦਰੋਂ ਜੰਗਾਲ ਵਰਗੀ ਭੂਰੀ ਸੜਨ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।",
+    "ਇਹ ਬਿਮਾਰੀ ਬਹੁਤ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੀ ਹੈ ਅਤੇ ਕੁਝ ਦਿਨਾਂ ਵਿੱਚ ਪੂਰੇ ਪੌਦੇ ਨੂੰ ਮਾਰ ਸਕਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਬਿਜਾਈ ਲਈ ਬਿਮਾਰੀ ਰੋਧਕ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਆਲੂ ਪੁੱਟਣ ਵੇਲੇ ਉਨ੍ਹਾਂ ਨੂੰ ਸੱਟ ਲੱਗਣ ਤੋਂ ਬਚਾਓ।",
+    "ਜਿਨ੍ਹਾਂ ਆਲੂਆਂ 'ਤੇ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਹੋਣ, ਉਨ੍ਹਾਂ ਨੂੰ ਸਟੋਰ ਨਾ ਕਰੋ।",
+    "ਮਿੱਟੀ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖਣ ਲਈ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।",
+    "ਆਪਣੇ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਨਾ ਹੋਣ ਦਿਓ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੌਦੇ ਜਾਂ ਆਲੂ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਫਸਲ ਪੁੱਟਣ ਤੋਂ ਕੁਝ ਦਿਨ ਪਹਿਲਾਂ ਪੱਤਿਆਂ ਨੂੰ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦੀ ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦੇ ਨਿਕਾਸ ਦਾ ਚੰਗਾ ਪ੍ਰਬੰਧ ਹੋਵੇ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਠੰਡੇ ਅਤੇ ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਵਿੱਚ, ਜਦੋਂ ਨਮੀ 90 percent ਤੋਂ ਵੱਧ ਹੋਵੇ ਅਤੇ ਮੀਂਹ ਪਵੇ, ਉਦੋਂ ਵਧਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_black_scurf": {
+   "name": "ਬਲੈਕ ਸਕਰਫ",
+   "symptoms": [
+    "ਤੁਸੀਂ ਆਲੂ ਦੀ ਚਮੜੀ 'ਤੇ ਕਾਲੇ ਦਾਣੇ ਜਾਂ ਪਪੜੀਆਂ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਜਦੋਂ ਆਲੂ ਉੱਗਣੇ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ ਤਾਂ ਉਨ੍ਹਾਂ ਦੀਆਂ ਅੱਖਾਂ ਗੂੜ੍ਹੀਆਂ ਭੂਰੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ।",
+    "ਅੰਦਰੂਨੀ ਟਿਸ਼ੂ ਖਰਾਬ ਹੋਣ ਕਾਰਨ ਪੌਦਾ ਮੁਰਝਾ ਸਕਦਾ ਹੈ।",
+    "ਤੁਹਾਨੂੰ ਤਣੇ 'ਤੇ ਧਸੇ ਹੋਏ ਦਾਗ ਮਿਲ ਸਕਦੇ ਹਨ ਜਾਂ ਤਣਾ ਗਲ ਸਕਦਾ ਹੈ।",
+    "ਆਲੂ ਦੇ ਅੰਦਰ ਸਖ਼ਤ ਸੁੱਕੀ ਸੜਨ ਅਤੇ ਭੂਰਾਪਨ ਦਿਖਾਈ ਦੇ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਸਿਰਫ਼ ਬਿਮਾਰੀ ਰਹਿਤ ਬੀਜ ਵਾਲੇ ਆਲੂ ਹੀ ਲਗਾਓ।",
+    "ਮਿੱਟੀ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖਣ ਲਈ ਫਸਲੀ ਚੱਕਰ ਅਪਣਾਓ।",
+    "ਆਪਣੇ ਆਲੂ ਸੀਜ਼ਨ ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ ਲਗਾਓ।",
+    "ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਚੰਗੀ ਤਰ੍ਹਾਂ ਵਿਕਸਤ ਆਲੂ ਹਨ, ਤਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਘੱਟ ਡੂੰਘਾਈ 'ਤੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਮਿੱਟੀ ਵਿੱਚ ਬਿਮਾਰੀ ਦੀ ਮਾਤਰਾ ਘਟਾਉਣ ਲਈ ਜ਼ਮੀਨ ਨੂੰ ਦੋ ਸਾਲਾਂ ਲਈ ਖਾਲੀ ਛੱਡ ਦਿਓ।",
+    "ਸਟੋਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਸੇ ਵੀ ਖਰਾਬ ਜਾਂ ਸੜੇ ਹੋਏ ਆਲੂ ਨੂੰ ਹਟਾ ਦਿਓ।",
+    "ਜੇਕਰ ਤੁਸੀਂ ਆਲੂ ਧੋਂਦੇ ਹੋ, ਤਾਂ ਸਟੋਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਉਹ ਪੂਰੀ ਤਰ੍ਹਾਂ ਸੁੱਕੇ ਹੋਣ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਠੰਡੇ, ਗਿੱਲੇ ਮੌਸਮ ਵਿੱਚ ਜਾਂ ਜਦੋਂ ਤਾਪਮਾਨ ਅਤੇ ਨਮੀ ਦਾ ਪੱਧਰ ਜ਼ਿਆਦਾ ਹੁੰਦਾ ਹੈ, ਉਦੋਂ ਵਿਕਸਿਤ ਹੁੰਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_bacterial_wilt": {
+   "name": "ਬੈਕਟੀਰੀਅਲ ਵਿਲਟ (ਭੂਰੀ ਸੜਨ)",
+   "symptoms": [
+    "ਪੌਦਾ ਪੱਤਿਆਂ ਦੇ ਸਿਰਿਆਂ ਤੋਂ ਜਾਂ ਜਿੱਥੋਂ ਤਣੇ ਨਿਕਲਦੇ ਹਨ, ਉੱਥੋਂ ਮੁਰਝਾਉਣਾ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦਾ ਹੈ।",
+    "ਪੂਰੇ ਪੌਦੇ ਦੇ ਮੁਰਝਾਉਣ ਅਤੇ ਮਰਨ ਤੋਂ ਪਹਿਲਾਂ ਪੱਤੇ ਹੇਠਾਂ ਤੋਂ ਪੀਲੇ ਪੈ ਜਾਂਦੇ ਹਨ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਤਣਾ ਕੱਟਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਅੰਦਰ ਇੱਕ ਭੂਰੀ ਰਿੰਗ ਦਿਖਾਈ ਦੇਵੇਗੀ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਆਲੂ ਨੂੰ ਅੱਧਾ ਕੱਟਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਕਾਲੀਆਂ ਜਾਂ ਭੂਰੀਆਂ ਰਿੰਗਾਂ ਦਿਖਾਈ ਦੇਣਗੀਆਂ।",
+    "ਕੱਟੇ ਹੋਏ ਆਲੂ ਨੂੰ ਨਿਚੋੜਨ 'ਤੇ ਗਾੜ੍ਹਾ ਚਿੱਟਾ ਤਰਲ ਨਿਕਲਦਾ ਹੈ।",
+    "ਤਰਲ ਆਲੂ ਦੀਆਂ ਅੱਖਾਂ ਵਿੱਚੋਂ ਬਾਹਰ ਆ ਸਕਦਾ ਹੈ ਅਤੇ ਮਿੱਟੀ ਨੂੰ ਉਨ੍ਹਾਂ ਨਾਲ ਚਿਪਕਾ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਸਿਰਫ਼ ਉਹ ਆਲੂ ਵਰਤੋ ਜੋ ਬਿਮਾਰੀ ਤੋਂ ਮੁਕਤ ਹੋਣ।",
+    "ਆਪਣੀ ਆਲੂ ਦੀ ਫਸਲ ਨੂੰ ਕਣਕ ਨਾਲ ਬਦਲ ਕੇ ਲਗਾਓ।",
+    "ਬਿਮਾਰੀ ਰੋਧਕ ਆਲੂਆਂ ਦੀਆਂ ਕਿਸਮਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਮਿੱਟੀ ਦਾ pH ਪੱਧਰ ਬਦਲਣ ਲਈ ਚੂਨਾ ਪਾਓ।",
+    "ਆਪਣੇ ਖੇਤੀ ਦੇ ਸੰਦ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਮੁਰਝਾਉਣ ਦੇ ਲੱਛਣ ਦਿਖਾਉਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਪੌਦੇ ਨੂੰ ਹਟਾ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਆਪਣੇ ਕੱਟਣ ਵਾਲੇ ਚਾਕੂ ਨੂੰ ਬਲੀਚ ਦੇ ਘੋਲ ਨਾਲ ਰੋਗਾਣੂ-ਮੁਕਤ ਕਰੋ।",
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤਾਂ ਦੀ ਨਿਯਮਿਤ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਪ੍ਰਭਾਵਿਤ ਖੇਤਰਾਂ ਤੋਂ ਮਿੱਟੀ ਜਾਂ ਪਾਣੀ ਨੂੰ ਤੰਦਰੁਸਤ ਖੇਤਰਾਂ ਵਿੱਚ ਲਿਜਾਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "favourable_conditions": "ਉੱਚ ਤਾਪਮਾਨ, ਮਿੱਟੀ ਵਿੱਚ ਨਮੀ ਅਤੇ ਘੱਟ pH ਪੱਧਰ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦੇ ਹਨ।",
+   "organic_bio": [
+    "neem cake @ 80 Kg/acre"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_common_scab": {
+   "name": "ਕਾਮਨ ਸਕੈਬ",
+   "symptoms": [
+    "ਆਲੂ ਦੀ ਚਮੜੀ 'ਤੇ ਖੁਰਦਰੇ, ਕਾਰਕ ਵਰਗੇ ਦਾਗ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਤੁਸੀਂ ਛੋਟੇ ਆਲੂਆਂ ਦੀ ਸਤ੍ਹਾ 'ਤੇ ਉੱਪਰੋਂ ਲਾਲ-ਭੂਰੇ ਦਾਗ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਜਿਵੇਂ-ਜਿਵੇਂ ਆਲੂ ਵਧਦਾ ਹੈ, ਇਹ ਦਾਗ ਫੈਲ ਜਾਂਦੇ ਹਨ ਅਤੇ ਟੋਏਦਾਰ ਜਾਂ ਫਟੇ ਹੋਏ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ ਆਲੂ ਦੀ ਚਮੜੀ ਖੁਰਦਰੇ ਕਾਲੇ ਨਿਸ਼ਾਨਾਂ ਨਾਲ ਭਰ ਜਾਂਦੀ ਹੈ।",
+    "ਖਰਾਬ ਹੋਏ ਹਿੱਸੇ ਕੀੜਿਆਂ ਨੂੰ ਆਕਰਸ਼ਿਤ ਕਰ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਸਿਰਫ਼ ਉਹ ਬੀਜ ਵਾਲੇ ਆਲੂ ਲਗਾਓ ਜੋ ਸਕੈਬ ਤੋਂ ਮੁਕਤ ਹੋਣ।",
+    "ਚਾਰ ਤੋਂ ਛੇ ਸਾਲਾਂ ਦੇ ਫਸਲੀ ਚੱਕਰ ਵਿੱਚ ਅਲਫਾਲਫਾ (ਰਿਜ਼ਕਾ) ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਆਲੂ ਲਗਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੇ ਖੇਤਾਂ ਵਿੱਚ ਹਰੀ ਖਾਦ ਪਾਓ।",
+    "calcium ammonium nitrate ਵਰਗੀਆਂ ਖਾਰੀ ਖਾਦਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਤੋਂ ਬਚੋ।"
+   ],
+   "practices": [
+    "ਫਸਲ ਨੂੰ ਸਟੋਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਸੇ ਵੀ ਖਰਾਬ ਜਾਂ ਸੜੇ ਹੋਏ ਆਲੂ ਨੂੰ ਹਟਾ ਦਿਓ।",
+    "ਜੇਕਰ ਤੁਸੀਂ ਆਲੂ ਧੋਂਦੇ ਹੋ, ਤਾਂ ਸਟੋਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਚੰਗੀ ਤਰ੍ਹਾਂ ਸੁੱਕਣ ਦਿਓ।",
+    "ਆਲੂ ਪੁੱਟਣ ਤੋਂ ਬਾਅਦ 10 ਤੋਂ 14 ਦਿਨਾਂ ਲਈ ਹਨੇਰੇ, ਹਵਾਦਾਰ ਅਤੇ ਠੰਢੀ ਜਗ੍ਹਾ 'ਤੇ ਰੱਖੋ ਤਾਂ ਜੋ ਕੱਟ ਅਤੇ ਸੱਟਾਂ ਭਰ ਸਕਣ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਘੱਟ pH ਵਾਲੇ ਖੇਤਾਂ ਵਿੱਚ ਆਮ ਹੈ ਅਤੇ ਜ਼ਿਆਦਾ ਨਮੀ ਜਾਂ ਬਹੁਤ ਜ਼ਿਆਦਾ ਸਿੰਚਾਈ ਨਾਲ ਹੋਰ ਵਿਗੜ ਜਾਂਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "potato_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ 'ਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਛੇਕ ਜਾਂ ਸੁਰਾਖ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬਿਜਾਈ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਸਮੱਗਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ bio-pesticide ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਤੇ ਬਿਮਾਰੀਆਂ ਲਈ ਆਸਾਨ ਸ਼ਿਕਾਰ ਬਣਾਉਂਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਦੇ ਅਨੁਸਾਰ ਫਸਲਾਂ ਬਦਲ ਕੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਚੱਕਰ ਲਗਾਓ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "broad-spectrum chemical sprays ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_tea_mosquito_bug": {
+   "name": "Tea mosquito bug",
+   "symptoms": [
+    "ਛੋਟੇ ਅਤੇ ਵੱਡੇ ਕੀੜੇ ਨਰਮ ਪੱਤਿਆਂ, ਨਵੀਆਂ ਟਾਹਣੀਆਂ, ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ, ਛੋਟੇ ਫਲਾਂ ਅਤੇ ਕਾਜੂ ਦੇ ਸੇਬਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
+    "ਕੀੜਿਆਂ ਦੇ ਡੰਗ ਮਾਰਨ ਵਾਲੀਆਂ ਥਾਵਾਂ ਤੋਂ ਗੂੰਦ ਵਰਗਾ ਚਿਪਚਿਪਾ ਪਦਾਰਥ ਨਿਕਲਦਾ ਹੈ।",
+    "ਇਹ ਨਿਸ਼ਾਨ ਇੱਕ ਦਿਨ ਵਿੱਚ ਗੁਲਾਬੀ-ਭੂਰੇ ਅਤੇ 2 ਤੋਂ 3 ਦਿਨਾਂ ਵਿੱਚ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਕਾਲੇ ਦਾਗ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਨਰਮ ਪੱਤੇ ਸੁੰਗੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਲੰਬੀਆਂ ਕਾਲੀਆਂ ਲਕੀਰਾਂ ਪੈ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਉਹ ਸੁੱਕ ਸਕਦੀਆਂ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਫੁੱਲਾਂ ਦੇ ਗੁੱਛੇ ਕਾਲੇ ਹੋ ਕੇ ਮਰ ਜਾਂਦੇ ਹਨ, ਛੋਟੇ ਫਲ ਡਿੱਗ ਜਾਂਦੇ ਹਨ ਅਤੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਰੁੱਖ ਸੜੇ ਹੋਏ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਬਾਗ ਦੇ ਅੰਦਰ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਤੋਂ ਨਿੰਮ, ਅਮਰੂਦ, ਕੋਕੋ, ਸਹਿੰਜਣਾ ਅਤੇ ਨਰਮੇ ਵਰਗੇ ਪੌਦੇ ਹਟਾ ਦਿਓ ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਇਹ ਕੀੜਾ ਪਲਦਾ ਹੈ।",
+    "ਕਾਜੂ ਦੇ ਬਾਗ ਵਿੱਚ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਉੱਗੇ ਨਿੰਮ ਦੇ ਬੂਟਿਆਂ ਨੂੰ ਪੁੱਟ ਦਿਓ।",
+    "ਕਾਜੂ ਦੇ ਰੁੱਖਾਂ ਵਿਚਕਾਰ ਨਰਮਾ ਜਾਂ ਹੋਰ ਫਸਲਾਂ ਨਾ ਉਗਾਓ।",
+    "ਜਦੋਂ ਕੀੜੇ ਦਾ ਹਮਲਾ ਹੋਵੇ, ਤਾਂ ਗੁਆਂਢੀ ਕਿਸਾਨਾਂ ਨਾਲ ਮਿਲ ਕੇ ਇਸ ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ, ਕਿਉਂਕਿ ਇੱਕਲਾ ਕਿਸਾਨ ਇਸ ਨੂੰ ਕਾਬੂ ਨਹੀਂ ਕਰ ਸਕਦਾ।"
+   ],
+   "practices": [
+    "ਹਰ ਰੁੱਖ ਦੀਆਂ ਪੰਜ ਟਾਹਣੀਆਂ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਸਵੇਰੇ ਜਲਦੀ ਜਦੋਂ ਕੀੜੇ ਰਸ ਚੂਸਦੇ ਹਨ, ਉਦੋਂ ਉਨ੍ਹਾਂ ਦੀ ਗਿਣਤੀ ਕਰੋ।",
+    "ਨਵੇਂ ਫੁੱਟਣ ਵਾਲੇ ਪੱਤਿਆਂ ਅਤੇ ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ ਨੂੰ ਫਲ ਲੱਗਣ ਤੱਕ ਧਿਆਨ ਨਾਲ ਦੇਖੋ।"
+   ],
+   "favourable_conditions": "ਇਹ ਕੀੜਾ 24 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਅਤੇ 50 ਤੋਂ 100 ਪ੍ਰਤੀਸ਼ਤ ਨਮੀ ਵਿੱਚ ਵਧਦਾ-ਫੁੱਲਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_stem_root_borer": {
+   "name": "Stem and root borer",
+   "symptoms": [
+    "ਤੁਸੀਂ ਦੇਖੋਗੇ ਕਿ ਤਣੇ ਦੀ ਛਿੱਲ ਵਿੱਚੋਂ ਗੂੰਦ ਨਿਕਲ ਰਹੀ ਹੈ ਜੋ ਬਾਅਦ ਵਿੱਚ ਸਖ਼ਤ ਹੋ ਜਾਂਦੀ ਹੈ।",
+    "ਪੱਤੇ ਪੀਲੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਡਿੱਗਣ ਲੱਗਦੇ ਹਨ।",
+    "ਨੁਕਸਾਨ ਵਧਣ ਨਾਲ ਟਾਹਣੀਆਂ ਸੁੱਕਣ ਲੱਗਦੀਆਂ ਹਨ।",
+    "ਅੰਤ ਵਿੱਚ ਰੁੱਖ ਮਰ ਜਾਂਦਾ ਹੈ ਕਿਉਂਕਿ ਕੀੜਾ ਰਸ ਦੇ ਵਹਾਅ ਨੂੰ ਰੋਕ ਦਿੰਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਮਰੇ ਹੋਏ ਰੁੱਖਾਂ ਅਤੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਰੁੱਖਾਂ ਨੂੰ ਹਰ 6 ਮਹੀਨਿਆਂ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਹਟਾ ਦਿਓ।",
+    "ਦਾਤੀ ਜਾਂ ਹੋਰ ਸੰਦਾਂ ਨਾਲ ਤਣੇ ਨੂੰ ਜ਼ਖਮੀ ਨਾ ਕਰੋ, ਕਿਉਂਕਿ ਜ਼ਖਮਾਂ ਵੱਲ ਕੀੜੇ ਆਕਰਸ਼ਿਤ ਹੁੰਦੇ ਹਨ ਅਤੇ ਅੰਡੇ ਦਿੰਦੇ ਹਨ।",
+    "ਬਾਗ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ ਦੋ ਸਾਲ ਤੋਂ ਵੱਧ ਉਮਰ ਦੇ ਰੁੱਖਾਂ ਨੂੰ ਧਿਆਨ ਨਾਲ ਦੇਖੋ।"
+   ],
+   "practices": [
+    "ਤਣੇ ਦੇ ਹੇਠਲੇ ਹਿੱਸੇ ਵਿੱਚ ਛੋਟੇ ਛੇਕਾਂ ਵਿੱਚੋਂ ਨਿਕਲਣ ਵਾਲੀ ਗੂੰਦ ਅਤੇ ਪਾਊਡਰ ਵਰਗੇ ਕੂੜੇ ਨੂੰ ਲੱਭੋ।",
+    "ਜ਼ਿੰਦਾ ਛੇਕ ਵਾਲੀ ਥਾਂ ਤੋਂ ਖਰਾਬ ਹੋਈ ਛਿੱਲ ਨੂੰ ਛੈਣੀ ਨਾਲ ਕੱਟੋ ਅਤੇ ਕੀੜਿਆਂ (grubs) ਨੂੰ ਬਾਹਰ ਕੱਢੋ।",
+    "ਕੀੜੇ ਕੱਢਣ ਤੋਂ ਬਾਅਦ, ਤਣੇ ਨੂੰ 1 ਮੀਟਰ ਦੀ ਉਚਾਈ ਤੱਕ ਨਿੰਮ ਦੇ ਤੇਲ ਨਾਲ ਸਾਫ਼ ਕਰੋ (50 ml ਨਿੰਮ ਦਾ ਤੇਲ, 1 ਲੀਟਰ ਪਾਣੀ ਵਿੱਚ 0.5 ml teepol ਜਾਂ 5 g ਸਾਬਣ ਮਿਲਾ ਕੇ)।"
+   ],
+   "favourable_conditions": "ਇਹ ਕੀੜਾ ਅਣਗੌਲੇ ਬਾਗਾਂ ਵਿੱਚ ਅਤੇ ਗਰਮੀਆਂ ਦੇ ਮਹੀਨਿਆਂ ਵਿੱਚ ਜ਼ਿਆਦਾ ਨੁਕਸਾਨ ਕਰਦਾ ਹੈ।",
+   "organic_bio": [
+    "ਕੀੜੇ ਕੱਢਣ ਤੋਂ ਬਾਅਦ ਤਣੇ ਨੂੰ 1 ਮੀਟਰ ਤੱਕ ਨਿੰਮ ਦੇ ਤੇਲ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ: 50 ml ਨਿੰਮ ਦਾ ਤੇਲ + 1 ਲੀਟਰ ਪਾਣੀ + 0.5 ml teepol ਜਾਂ 5 g ਸਾਬਣ"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_thrips": {
+   "name": "Thrips (flower and foliage)",
+   "symptoms": [
+    "ਛੋਟੇ ਅਤੇ ਵੱਡੇ ਥ੍ਰਿਪਸ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਸਮੂਹਾਂ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ, ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ, ਸੇਬਾਂ ਅਤੇ ਫਲਾਂ ਵਿੱਚੋਂ ਰਸ ਚੂਸਦੇ ਹਨ।",
+    "ਪੱਤੇ ਫਿੱਕੇ ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਸੁੰਗੜ ਜਾਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਉਪਰਲੀ ਸਤ੍ਹਾ ਖੁਰਦਰੀ ਹੋ ਜਾਂਦੀ ਹੈ।",
+    "ਫੁੱਲਾਂ ਦੀਆਂ ਡੰਡੀਆਂ, ਸੇਬਾਂ ਅਤੇ ਫਲਾਂ ਉੱਤੇ ਦਾਗ ਅਤੇ ਕਾਰਕ ਵਰਗੀਆਂ ਪਰਤਾਂ ਬਣ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਫੁੱਲ ਅਤੇ ਛੋਟੇ ਫਲ ਡਿੱਗ ਜਾਂਦੇ ਹਨ ਅਤੇ ਫਲ ਵਿਗੜ ਜਾਂਦੇ ਹਨ; ਬਹੁਤ ਜ਼ਿਆਦਾ ਹਮਲੇ ਵਿੱਚ ਪੱਤੇ ਡਿੱਗ ਜਾਂਦੇ ਹਨ ਅਤੇ ਰੁੱਖਾਂ ਦਾ ਵਾਧਾ ਰੁਕ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਰੁਕਾਵਟ ਵਜੋਂ Sesbania grandiflora ਲਗਾਓ।",
+    "ਖੇਤ ਵਿੱਚ ਮਿਰਚ ਜਾਂ ਪਿਆਜ਼ ਨਾ ਲਗਾਓ।",
+    "ਥ੍ਰਿਪਸ ਨੂੰ ਵਧਣ ਤੋਂ ਰੋਕਣ ਲਈ ਬੂਟਿਆਂ ਉੱਤੇ ਪਾਣੀ ਦਾ ਛਿੜਕਾਅ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਪ੍ਰਤੀ ਏਕੜ 4 ਤੋਂ 5 ਚਿਪਕਣ ਵਾਲੇ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਗਰੀਸ, ਵੈਸਲੀਨ ਜਾਂ ਅਰੰਡੀ ਦੇ ਤੇਲ ਨਾਲ ਲਿਪੇ ਹੋਏ ਪੀਲੇ ਜਾਂ ਨੀਲੇ ਡੱਬੇ ਵਰਤੋ।",
+    "ਪ੍ਰਤੀ ਪੌਦਾ ਪੰਜ ਟਾਹਣੀਆਂ ਜਾਂ ਪੱਤਿਆਂ ਉੱਤੇ ਨਿੰਫਸ ਅਤੇ ਵੱਡੇ ਕੀੜਿਆਂ ਦੀ ਗਿਣਤੀ ਕਰੋ।",
+    "ਥ੍ਰਿਪਸ ਦੀ ਗਿਣਤੀ ਕਰਨ ਲਈ ਟੈਪਿੰਗ ਵਿਧੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਪੱਤਿਆਂ ਵਾਲੇ ਥ੍ਰਿਪਸ ਸੁੱਕੇ ਮੌਸਮ ਵਿੱਚ ਦਸੰਬਰ ਤੋਂ ਅਪ੍ਰੈਲ-ਮਈ ਤੱਕ ਵਧਦੇ ਹਨ ਅਤੇ ਬਰਸਾਤ ਵਿੱਚ ਘੱਟ ਜਾਂਦੇ ਹਨ; ਮਾਨਸੂਨ ਤੋਂ ਬਾਅਦ ਨਵੇਂ ਪੱਤਿਆਂ ਉੱਤੇ ਸਭ ਤੋਂ ਵੱਧ ਹਮਲਾ ਹੁੰਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_anthracnose": {
+   "name": "Anthracnose",
+   "symptoms": [
+    "ਇਹ ਉੱਲੀ ਨਰਮ ਪੱਤਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਉੱਤੇ ਹਮਲਾ ਕਰਦੀ ਹੈ।",
+    "ਤੁਹਾਨੂੰ ਲਾਲ-ਭੂਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਦਿਖਾਈ ਦੇਣਗੇ ਜੋ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਲੱਗਦੇ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਿਆਂ ਵਿੱਚੋਂ ਚਿਪਚਿਪੀ ਗੂੰਦ ਨਿਕਲ ਸਕਦੀ ਹੈ।",
+    "ਧੱਬੇ ਵੱਡੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਟਾਹਣੀਆਂ ਨੂੰ ਮਾਰ ਦਿੰਦੇ ਹਨ।",
+    "ਨਰਮ ਪੱਤੇ ਸੁੰਗੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਫਲ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਫੁੱਲ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੰਤ ਵਿੱਚ ਰੁੱਖ ਮਰ ਸਕਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਸਾਰੇ ਬਿਮਾਰ ਪੱਤਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਸਾੜ ਦਿਓ।",
+    "ਆਪਣੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਬਾਰੇ ਪੁੱਛੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਦੀਆਂ ਹਨ।",
+    "ਫਲਾਂ ਨੂੰ ਤੋੜਨ ਤੋਂ 15 ਦਿਨ ਪਹਿਲਾਂ ਕਾਗਜ਼ ਦੇ ਲਿਫਾਫਿਆਂ ਨਾਲ ਢੱਕ ਦਿਓ।"
+   ],
+   "practices": [
+    "ਨੁਕਸਾਨ ਦੇ ਸੰਕੇਤਾਂ ਲਈ ਆਪਣੇ ਰੁੱਖਾਂ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਸਾਰੇ ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਿਆਂ ਅਤੇ ਟਾਹਣੀਆਂ ਨੂੰ ਕੱਟ ਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਆਪਣੇ ਬਾਗ ਨੂੰ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ।"
+   ],
+   "favourable_conditions": "ਵਧੇਰੇ ਨਮੀ, ਅਕਸਰ ਪੈਣ ਵਾਲੀ ਬਾਰਿਸ਼ ਅਤੇ 24 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_inflorescence_blight": {
+   "name": "Inflorescence blight",
+   "symptoms": [
+    "ਫੁੱਲਾਂ ਵਾਲੀਆਂ ਟਾਹਣੀਆਂ ਸੁੱਕਣ ਲੱਗਦੀਆਂ ਹਨ।",
+    "ਮੁੱਖ ਅਤੇ ਪਾਸੇ ਵਾਲੀਆਂ ਫੁੱਲਾਂ ਦੀਆਂ ਡੰਡੀਆਂ ਉੱਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਛੋਟੇ ਧੱਬੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਇਹ ਧੱਬੇ ਗੁਲਾਬੀ-ਭੂਰੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੰਤ ਵਿੱਚ ਦਾਗਦਾਰ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪ੍ਰਭਾਵਿਤ ਹਿੱਸਿਆਂ ਵਿੱਚੋਂ ਚਿਪਚਿਪੀ ਗੂੰਦ ਨਿਕਲ ਸਕਦੀ ਹੈ।",
+    "ਇਹ ਧੱਬੇ ਵੱਡੇ ਹੋ ਕੇ ਪੂਰੇ ਫੁੱਲਾਂ ਦੇ ਗੁੱਛੇ ਨੂੰ ਸੁਕਾ ਦਿੰਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਕਾਜੂ ਨੂੰ ਅਜਿਹੀਆਂ ਥਾਵਾਂ 'ਤੇ ਲਗਾਉਣ ਤੋਂ ਬਚੋ ਜਿੱਥੇ ਫੁੱਲ ਅਤੇ ਫਲ ਲੱਗਣ ਸਮੇਂ ਭਾਰੀ ਬਾਰਿਸ਼ ਹੁੰਦੀ ਹੈ।",
+    "ਕਾਜੂ ਉੱਥੇ ਨਾ ਲਗਾਓ ਜਿੱਥੇ ਤਾਪਮਾਨ ਲੰਬੇ ਸਮੇਂ ਲਈ 20 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤੋਂ ਘੱਟ ਰਹਿੰਦਾ ਹੈ।",
+    "ਇਸ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰਨ ਵਾਲੀਆਂ ਕਿਸਮਾਂ ਲੱਭਣ ਲਈ ਆਪਣੇ ਸਥਾਨਕ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਨਾਲ ਸਲਾਹ ਕਰੋ।",
+    "ਫਸਲ ਦੇ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਹਟਾ ਕੇ ਅਤੇ ਨਸ਼ਟ ਕਰਕੇ ਖੇਤ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਮਾਨਸੂਨ ਦੇ ਮੌਸਮ ਦੌਰਾਨ ਆਪਣੇ ਰੁੱਖਾਂ ਦੀ ਨੇੜਿਓਂ ਨਿਗਰਾਨੀ ਕਰੋ।",
+    "ਪੌਦੇ ਦੇ ਕਿਸੇ ਵੀ ਹਿੱਸੇ ਨੂੰ ਹਟਾ ਦਿਓ ਅਤੇ ਨਸ਼ਟ ਕਰ ਦਿਓ ਜਿਸ ਵਿੱਚ ਬਿਮਾਰੀ ਦੇ ਲੱਛਣ ਦਿਖਾਈ ਦੇਣ।",
+    "Tea mosquito bug ਦਾ ਪ੍ਰਬੰਧ ਕਰੋ, ਕਿਉਂਕਿ ਇਹ ਅਕਸਰ ਮੁੱਖ ਕਾਰਨ ਹੁੰਦਾ ਹੈ ਜੋ ਉੱਲੀ ਨੂੰ ਅੰਦਰ ਜਾਣ ਦਿੰਦਾ ਹੈ।"
+   ],
+   "favourable_conditions": "ਇਹ ਬਿਮਾਰੀ ਬੱਦਲਵਾਈ, ਵਧੇਰੇ ਨਮੀ, ਅਕਸਰ ਬਾਰਿਸ਼ ਅਤੇ 24 ਤੋਂ 32 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਵਿੱਚ ਬਹੁਤ ਗੰਭੀਰ ਹੋ ਜਾਂਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_dieback": {
+   "name": "Die-back (pink disease)",
+   "symptoms": [
+    "ਤੁਸੀਂ ਟਾਹਣੀਆਂ ਉੱਤੇ ਚਿੱਟੇ ਜਾਂ ਗੁਲਾਬੀ ਰੰਗ ਦਾ ਵਾਧਾ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਟਾਹਣੀਆਂ ਦੇ ਸਿਰੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ ਅਤੇ ਇਹ ਸੁਕਾਅ ਹੇਠਾਂ ਵੱਲ ਫੈਲਦਾ ਹੈ।",
+    "ਭਾਰੀ ਬਾਰਿਸ਼ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਟਾਹਣੀਆਂ ਉੱਤੇ ਰੇਸ਼ਮੀ ਧਾਗੇ ਦੇਖ ਸਕਦੇ ਹੋ।",
+    "ਛਿੱਲ ਫਟ ਸਕਦੀ ਹੈ ਅਤੇ ਉਤਰ ਸਕਦੀ ਹੈ।",
+    "ਟਾਹਣੀਆਂ ਪੀਲੀਆਂ ਹੋ ਕੇ ਡਿੱਗ ਸਕਦੀਆਂ ਹਨ।",
+    "ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਰੁੱਖ ਦੇ ਕੁਝ ਹਿੱਸੇ ਖਾਲੀ ਦਿਖਾਈ ਦੇ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਲਗਾਉਣ ਲਈ ਤੰਦਰੁਸਤ ਲੱਕੜ ਦੀ ਵਰਤੋਂ ਕਰੋ ਜਿਸ ਵਿੱਚ ਕੋਈ ਬਿਮਾਰੀ ਨਾ ਹੋਵੇ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਣ।",
+    "ਨਵੇਂ ਲਗਾਏ ਗਏ ਬਾਗਾਂ ਵਿੱਚ ਬਿਮਾਰੀ ਨਾ ਆਉਣ ਦੇਣ ਲਈ ਪੂਰੀ ਸਾਵਧਾਨੀ ਵਰਤੋ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰ ਟਾਹਣੀਆਂ ਨੂੰ ਬਿਮਾਰ ਹਿੱਸੇ ਤੋਂ ਕਾਫ਼ੀ ਹੇਠਾਂ ਤੋਂ ਕੱਟ ਦਿਓ।",
+    "ਕੱਟੀਆਂ ਹੋਈਆਂ ਬਿਮਾਰ ਟਾਹਣੀਆਂ ਨੂੰ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਸਾਰੀਆਂ ਸੁੱਕੀਆਂ ਅਤੇ ਬਿਮਾਰ ਟਾਹਣੀਆਂ ਨੂੰ ਸਾਫ਼ ਕਰੋ।",
+    "ਟਾਹਣੀਆਂ ਦੇ ਕੱਟੇ ਹੋਏ ਸਿਰਿਆਂ ਉੱਤੇ ਗੋਬਰ ਲਗਾਓ।"
+   ],
+   "favourable_conditions": "ਵਧੇਰੇ ਨਮੀ ਅਤੇ ਸਿੱਲ੍ਹੇ ਹਾਲਾਤ ਬਿਮਾਰੀ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+   "organic_bio": [
+    "ਗੋਬਰ ਨਾਲ ਲੇਪ ਕਰਨਾ"
+   ],
+   "avoid": [],
+   "etl": ""
+  },
+  "cashew_healthy": {
+   "name": "Healthy",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਕੋਈ ਧੱਬੇ, ਲਕੀਰਾਂ, ਚੱਕਰ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਅੰਡੇ, ਜਾਲੇ, ਛੇਕ ਜਾਂ ਸੁਰਾਖ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬੂਟਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬੂਟਿਆਂ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਬਾਇਓ-ਪੈਸਟੀਸਾਈਡ ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਦਿਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ-ਬਿਮਾਰੀਆਂ ਲਈ ਆਸਾਨ ਸ਼ਿਕਾਰ ਬਣਾਉਂਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਮੌਸਮ ਅਨੁਸਾਰ ਫਸਲਾਂ ਬਦਲ ਕੇ ਲਗਾਓ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਕੀੜਿਆਂ ਨੂੰ ਖਾਣ ਵਾਲੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ।",
+    "ਵਿਆਪਕ-ਸਪੈਕਟ੍ਰਮ ਰਸਾਇਣਕ ਸਪਰੇਆਂ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਅੰਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_purple_blotch": {
+   "name": "ਪਰਪਲ ਬਲੌਚ",
+   "symptoms": [
+    "ਬਿਮਾਰੀ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਚਿੱਟੇ ਦਾਗਾਂ ਵਜੋਂ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।",
+    "ਪੱਤਿਆਂ ਦੇ ਸਿਰਿਆਂ ਉੱਤੇ ਪੀਲੇ ਰੰਗ ਦੇ ਨਿਸ਼ਾਨ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।",
+    "ਗੋਲ ਜਾਂ ਅੰਡਾਕਾਰ ਸ਼ਕਲ ਵਿੱਚ ਕਾਲੇ ਮਖਮਲੀ ਘੇਰੇ ਬਣ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗ ਆਪਸ ਵਿੱਚ ਜੁੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਪੂਰੇ ਪੱਤੇ ਉੱਤੇ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤੇ ਸਿਰੇ ਤੋਂ ਸੁੱਕ ਕੇ ਮਰਨੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਬੂਟੇ ਨੂੰ ਗੰਢੀ (ਗੰਢ) ਨਹੀਂ ਲੱਗਦੀ।"
+   ],
+   "prevention": [
+    "ਬਿਜਾਈ ਲਈ ਤੰਦਰੁਸਤ ਗੰਢਾਂ ਚੁਣੋ।",
+    "ਪਿਆਜ਼ ਦੀਆਂ ਬਿਮਾਰੀ ਰੋਧਕ ਕਿਸਮਾਂ ਵਰਤੋ।",
+    "ਬੀਜਾਂ ਨੂੰ 50 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਗਰਮ ਪਾਣੀ ਵਿੱਚ 20 ਮਿੰਟ ਲਈ ਭਿਓਂ ਕੇ ਰੱਖੋ।",
+    "ਹਰ 2 ਤੋਂ 3 ਸਾਲ ਬਾਅਦ ਫਸਲ ਬਦਲ ਕੇ ਬੀਜੋ, ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਲਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਬਿਮਾਰੀ ਨਾ ਲੱਗੇ।",
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਵਧੀਆ ਹੋਵੇ।"
+   ],
+   "practices": [
+    "ਬਿਮਾਰੀ ਦੇ ਲੱਛਣਾਂ ਲਈ ਆਪਣੇ ਖੇਤ ਦੀ ਨਿਯਮਤ ਜਾਂਚ ਕਰੋ।",
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਖੜ੍ਹਾ ਨਾ ਹੋਵੇ।",
+    "ਸਿਫਾਰਸ਼ ਕੀਤੀ ਮਾਤਰਾ ਵਿੱਚ ਨਾਈਟ੍ਰੋਜਨ ਅਤੇ ਫਾਸਫੋਰਸ ਖਾਦਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+   ],
+   "favourable_conditions": "ਗਰਮ ਅਤੇ ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਵਿੱਚ ਜਦੋਂ ਤਾਪਮਾਨ 21 ਤੋਂ 30 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਦੇ ਵਿਚਕਾਰ ਹੋਵੇ ਅਤੇ ਨਮੀ ਜ਼ਿਆਦਾ ਹੋਵੇ, ਤਾਂ ਇਹ ਬਿਮਾਰੀ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੀ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_stemphylium_blight": {
+   "name": "ਸਟੈਮਫੀਲੀਅਮ ਲੀਫ ਬਲਾਈਟ",
+   "symptoms": [
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਪੀਲੇ ਤੋਂ ਸੰਤਰੀ ਰੰਗ ਦੇ ਦਾਗ ਜਾਂ ਲਕੀਰਾਂ ਦਿਖਾਈ ਦਿੰਦੀਆਂ ਹਨ।",
+    "ਇਹ ਦਾਗ ਲੰਬੇ ਤੁਰਲੀ (spindle) ਵਰਗੇ ਆਕਾਰ ਵਿੱਚ ਵੱਧ ਜਾਂਦੇ ਹਨ।",
+    "ਦਾਗਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਗੁਲਾਬੀ ਰੰਗ ਦਾ ਘੇਰਾ ਹੁੰਦਾ ਹੈ।",
+    "ਇਹ ਬਿਮਾਰੀ ਬੀਜ ਵਾਲੇ ਡੰਡਿਆਂ ਨੂੰ ਬਹੁਤ ਨੁਕਸਾਨ ਪਹੁੰਚਾ ਸਕਦੀ ਹੈ।"
+   ],
+   "prevention": [
+    "ਪਿਆਜ਼ ਦੇ ਬੀਜਾਂ ਨੂੰ 50 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਗਰਮ ਪਾਣੀ ਵਿੱਚ 20 ਮਿੰਟ ਲਈ ਭਿਓਂ ਕੇ ਰੱਖੋ।",
+    "Welsh onion ਵਰਗੀਆਂ ਰੋਧਕ ਕਿਸਮਾਂ ਲਾਓ।",
+    "ਫਸਲ ਬਦਲ ਕੇ ਬੀਜੋ, ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਲਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਬਿਮਾਰੀ ਨਾ ਲੱਗੇ।",
+    "ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਵਧੀਆ ਰੱਖੋ ਅਤੇ ਬੂਟੇ ਬਹੁਤ ਨੇੜੇ-ਨੇੜੇ ਨਾ ਲਾਓ।"
+   ],
+   "practices": [
+    "ਖੇਤ ਵਿੱਚ ਪਈ ਪੁਰਾਣੀ ਫਸਲ ਦੇ ਰਹਿੰਦ-ਖੂੰਹਦ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਬਾਹਰ ਕੱਢ ਦਿਓ ਜਾਂ ਦੱਬ ਦਿਓ।",
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਵਧੀਆ ਹੋਵੇ।",
+    "ਖੇਤ ਵਿੱਚ ਬੂਟਿਆਂ ਦੀ ਗਿਣਤੀ ਘਟਾਓ ਤਾਂ ਜੋ ਭੀੜ ਘੱਟ ਹੋਵੇ।"
+   ],
+   "favourable_conditions": "ਗਰਮ ਮੌਸਮ, ਜ਼ਿਆਦਾ ਨਮੀ ਅਤੇ 16 ਘੰਟੇ ਜਾਂ ਇਸ ਤੋਂ ਵੱਧ ਸਮੇਂ ਤੱਕ ਪੱਤਿਆਂ ਦਾ ਗਿੱਲਾ ਰਹਿਣਾ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_downy_mildew": {
+   "name": "ਡਾਉਨੀ ਮਿਲਡਿਊ",
+   "symptoms": [
+    "ਪੱਤੇ ਹਲਕੇ ਹਰੇ ਰੰਗ ਦੇ ਹੋਣੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਪੱਤਿਆਂ ਉੱਤੇ ਰੂੰ ਵਰਗੀ ਚਿੱਟੀ ਪਰਤ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ।",
+    "ਪੱਤੇ ਹੌਲੀ-ਹੌਲੀ ਹਲਕੇ ਪੀਲੇ ਤੋਂ ਗੂੜ੍ਹੇ ਭੂਰੇ ਰੰਗ ਦੇ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਅੰਤ ਵਿੱਚ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਸੁੱਕ ਕੇ ਮਰ ਜਾਂਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਬੀਜ ਰੱਖਣ ਲਈ ਤੰਦਰੁਸਤ ਗੰਢਾਂ ਚੁਣੋ।",
+    "3 ਤੋਂ 4 ਸਾਲ ਤੱਕ ਫਸਲ ਬਦਲ ਕੇ ਬੀਜੋ।",
+    "ਖੇਤ ਵਿੱਚੋਂ ਪੁਰਾਣੇ ਪੌਦਿਆਂ ਦੇ ਹਿੱਸੇ ਅਤੇ ਕੂੜਾ-ਕਰਕਟ ਸਾਫ਼ ਕਰਕੇ ਨਸ਼ਟ ਕਰ ਦਿਓ।",
+    "ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਵਰਤੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਣ।",
+    "ਬੀਜ ਲਈ ਰੱਖੀਆਂ ਪਿਆਜ਼ ਦੀਆਂ ਗੰਢਾਂ ਨੂੰ 12 ਦਿਨਾਂ ਲਈ ਧੁੱਪ ਵਿੱਚ ਰੱਖੋ।"
+   ],
+   "practices": [
+    "ਸੀਜ਼ਨ ਵਿੱਚ ਬਹੁਤ ਦੇਰ ਨਾਲ ਬਿਜਾਈ ਕਰਨ ਤੋਂ ਬਚੋ।",
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਵਧੀਆ ਹੋਵੇ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਖਾਦ ਨਾ ਪਾਓ।",
+    "ਫਸਲ ਨੂੰ ਬਹੁਤ ਜ਼ਿਆਦਾ ਪਾਣੀ ਦੇਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "favourable_conditions": "ਗਰਮ ਅਤੇ ਸਿੱਲ੍ਹਾ ਮੌਸਮ ਇਸ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_thrips": {
+   "name": "ਪਿਆਜ਼ ਦੇ ਥ੍ਰਿਪਸ",
+   "symptoms": [
+    "ਤੁਹਾਨੂੰ ਪੱਤਿਆਂ ਉੱਤੇ ਛੋਟੇ ਚਿੱਟੇ ਚਾਂਦੀ ਵਰਗੇ ਦਾਗ ਦਿਖਾਈ ਦੇਣਗੇ।",
+    "ਜ਼ਿਆਦਾ ਹਮਲੇ ਦੀ ਸੂਰਤ ਵਿੱਚ, ਪੱਤੇ ਸਿਰੇ ਤੋਂ ਸੁੱਕਣੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    "ਖਾਣ ਦੇ ਨਿਸ਼ਾਨ ਚਿੱਟੇ ਤੋਂ ਚਾਂਦੀ ਵਰਗੇ ਦਾਗਾਂ ਅਤੇ ਲਕੀਰਾਂ ਵਾਂਗ ਦਿਖਦੇ ਹਨ, ਅਤੇ ਬੁਰੀ ਤਰ੍ਹਾਂ ਪ੍ਰਭਾਵਿਤ ਪੱਤੇ ਚਾਂਦੀ ਵਰਗੇ ਹੋ ਕੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।",
+    "ਬੁਰੀ ਤਰ੍ਹਾਂ ਨੁਕਸਾਨੇ ਗਏ ਪੱਤਿਆਂ ਉੱਤੇ ਥ੍ਰਿਪਸ ਦੀ ਮੈਲ ਦੇ ਛੋਟੇ ਕਾਲੇ ਦਾਗ ਦੇਖੇ ਜਾ ਸਕਦੇ ਹਨ।"
+   ],
+   "prevention": [
+    "ਆਪਣੇ ਖੇਤਾਂ ਨੂੰ ਸਾਫ਼ ਰੱਖੋ ਅਤੇ ਨਦੀਨਾਂ ਤੋਂ ਮੁਕਤ ਰੱਖੋ।",
+    "ਮਿੱਟੀ ਨੂੰ ਹਿਲਾਉਣ ਲਈ ਨਿਯਮਤ ਗੋਡੀ ਕਰੋ।"
+   ],
+   "practices": [
+    "ਬੱਚਿਆਂ ਅਤੇ ਬਾਲਗ ਕੀੜਿਆਂ ਦੀ ਗਿਣਤੀ ਕਰਨ ਲਈ ਪ੍ਰਤੀ ਬੂਟਾ ਪੰਜ ਪੱਤਿਆਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+    "ਉਨ੍ਹਾਂ ਦੀ ਨਿਗਰਾਨੀ ਲਈ ਫਸਲ ਦੇ ਉੱਪਰ 15 cm ਦੀ ਉਚਾਈ 'ਤੇ ਨੀਲੇ ਰੰਗ ਦੇ ਚਿਪਕਵੇਂ ਟ੍ਰੈਪ ਲਗਾਓ।",
+    "ਤੁਸੀਂ ਖਾਲੀ ਡੱਬਿਆਂ ਨੂੰ ਨੀਲਾ ਰੰਗ ਕਰਕੇ ਅਤੇ ਉਨ੍ਹਾਂ ਉੱਤੇ ਗਰੀਸ ਜਾਂ ਅਰੰਡੀ ਦਾ ਤੇਲ ਲਗਾ ਕੇ ਆਪਣੇ ਖੁਦ ਦੇ ਟ੍ਰੈਪ ਬਣਾ ਸਕਦੇ ਹੋ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_basal_rot": {
+   "name": "ਬੇਸਲ ਰੌਟ",
+   "symptoms": [
+    "ਪੱਤੇ ਪੀਲੇ ਹੋਣੇ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਬੂਟੇ ਦਾ ਵਾਧਾ ਰੁਕ ਜਾਂਦਾ ਹੈ।",
+    "ਪੱਤੇ ਸਿਰੇ ਤੋਂ ਸੁੱਕਣੇ ਸ਼ੁਰੂ ਹੋ ਕੇ ਹੇਠਾਂ ਵੱਲ ਵਧਦੇ ਹਨ।",
+    "ਸ਼ੁਰੂ ਵਿੱਚ, ਜੜ੍ਹਾਂ ਗੁਲਾਬੀ ਹੋ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਅੰਤ ਵਿੱਚ ਗਲਣੀਆਂ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ।",
+    "ਗੰਢ ਹੇਠਲੇ ਪਾਸੇ ਤੋਂ ਗਲਣੀ ਸ਼ੁਰੂ ਹੋ ਜਾਂਦੀ ਹੈ।",
+    "ਬਿਮਾਰੀ ਦੇ ਬਾਅਦ ਦੇ ਪੜਾਵਾਂ ਵਿੱਚ ਪੂਰਾ ਬੂਟਾ ਮਰ ਜਾਂਦਾ ਹੈ।"
+   ],
+   "prevention": [
+    "ਹਰ 4 ਤੋਂ 5 ਸਾਲ ਬਾਅਦ ਫਸਲ ਬਦਲ ਕੇ ਬੀਜੋ, ਅਜਿਹੀਆਂ ਫਸਲਾਂ ਲਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਹ ਬਿਮਾਰੀ ਨਾ ਲੱਗੇ।",
+    "ਬਿਮਾਰੀ ਨੂੰ ਘਟਾਉਣ ਲਈ ਪਿਆਜ਼ ਦੇ ਨਾਲ ਤੰਬਾਕੂ ਜਾਂ ਜਵਾਰ ਲਾਓ।",
+    "ਗਰਮੀਆਂ ਦੌਰਾਨ 30 ਦਿਨਾਂ ਲਈ ਮਿੱਟੀ ਨੂੰ ਪਲਾਸਟਿਕ ਦੀ ਸ਼ੀਟ ਨਾਲ ਢੱਕ ਕੇ ਗਰਮ ਕਰੋ।",
+    "ਪਿਆਜ਼ ਦੀਆਂ ਅਜਿਹੀਆਂ ਕਿਸਮਾਂ ਚੁਣੋ ਜੋ ਇਸ ਬਿਮਾਰੀ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕਣ।",
+    "ਖੇਤ ਵਿੱਚ ਕੰਮ ਕਰਦੇ ਸਮੇਂ ਬੂਟਿਆਂ ਨੂੰ ਨੁਕਸਾਨ ਪਹੁੰਚਾਉਣ ਤੋਂ ਬਚੋ।"
+   ],
+   "practices": [
+    "ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਖੇਤ ਵਿੱਚ ਪਾਣੀ ਦਾ ਨਿਕਾਸ ਵਧੀਆ ਹੋਵੇ ਤਾਂ ਜੋ ਪਾਣੀ ਖੜ੍ਹਾ ਨਾ ਰਹੇ।",
+    "ਗਰਮੀਆਂ ਵਿੱਚ ਡੂੰਘੀ ਵਾਹੀ ਕਰੋ।",
+    "ਜਦੋਂ ਫਸਲ ਨਾ ਲੱਗੀ ਹੋਵੇ ਤਾਂ ਖੇਤ ਨੂੰ ਪਾਣੀ ਨਾਲ ਭਰ ਦਿਓ।"
+   ],
+   "favourable_conditions": "ਨਮੀ ਵਾਲੀ ਮਿੱਟੀ ਅਤੇ 27 ਡਿਗਰੀ ਸੈਲਸੀਅਸ ਤਾਪਮਾਨ ਬਿਮਾਰੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  },
+  "onion_healthy": {
+   "name": "ਤੰਦਰੁਸਤ",
+   "symptoms": [
+    "ਪੱਤੇ ਕਿਸਮ ਦੇ ਅਨੁਸਾਰ ਇੱਕਸਾਰ ਹਰੇ ਹੁੰਦੇ ਹਨ, ਕੋਈ ਦਾਗ, ਲਕੀਰਾਂ, ਘੇਰੇ ਜਾਂ ਪਾਊਡਰ ਵਰਗੀ ਪਰਤ ਨਹੀਂ ਹੁੰਦੀ।",
+    "ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਅਤੇ ਸਿਰੇ ਮੁੜੇ ਹੋਏ, ਪੀਲੇ, ਸੁੱਕੇ ਜਾਂ ਸੜੇ ਹੋਏ ਨਹੀਂ ਹੁੰਦੇ।",
+    "ਪੱਤਿਆਂ, ਤਣਿਆਂ ਜਾਂ ਫਲਾਂ ਉੱਤੇ ਕੋਈ ਕੀੜੇ, ਆਂਡੇ, ਜਾਲੇ, ਮੋਰੀਆਂ ਜਾਂ ਸੁਰਾਖ ਦੇ ਨਿਸ਼ਾਨ ਨਹੀਂ ਹੁੰਦੇ।"
+   ],
+   "prevention": [
+    "ਅਜਿਹੀ ਕਿਸਮ ਚੁਣੋ ਜੋ ਮੁੱਖ ਕੀੜਿਆਂ ਅਤੇ ਬਿਮਾਰੀਆਂ ਦਾ ਟਾਕਰਾ ਕਰ ਸਕੇ, ਅਤੇ ਤੰਦਰੁਸਤ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਵਰਤੋ।",
+    "ਬੀਜਣ ਤੋਂ ਪਹਿਲਾਂ ਬੀਜ ਜਾਂ ਬਿਜਾਈ ਵਾਲੀ ਸਮੱਗਰੀ ਦਾ ਉਪਚਾਰ ਕਰੋ, ਤਰਜੀਹੀ ਤੌਰ 'ਤੇ ਕਿਸੇ bio-pesticide ਨਾਲ।",
+    "ਸਹੀ ਦੂਰੀ ਰੱਖੋ, ਮਿੱਟੀ ਦੀ ਜਾਂਚ ਅਨੁਸਾਰ ਜੈਵਿਕ ਖਾਦ ਅਤੇ ਖਾਦ ਪਾਓ, ਅਤੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਨਾਈਟ੍ਰੋਜਨ ਤੋਂ ਬਚੋ, ਜੋ ਫਸਲ ਨੂੰ ਨਰਮ ਬਣਾਉਂਦੀ ਹੈ ਅਤੇ ਕੀੜਿਆਂ ਤੇ ਬਿਮਾਰੀਆਂ ਦੇ ਹਮਲੇ ਨੂੰ ਸੌਖਾ ਕਰਦੀ ਹੈ।",
+    "ਫਸਲ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪਾਣੀ ਦਿਓ ਅਤੇ ਹਰ ਸੀਜ਼ਨ ਵਿੱਚ ਫਸਲ ਬਦਲ ਕੇ ਬੀਜੋ।"
+   ],
+   "practices": [
+    "ਹਫ਼ਤੇ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਾਰ ਖੇਤ ਵਿੱਚ ਘੁੰਮੋ ਅਤੇ ਮਿੱਟੀ, ਪਾਣੀ, ਪੌਦਿਆਂ, ਕੀੜਿਆਂ ਅਤੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਨੂੰ ਦੇਖੋ ਜੋ ਨੁਕਸਾਨਦੇਹ ਕੀੜਿਆਂ ਨੂੰ ਖਾਂਦੇ ਹਨ।",
+    "ਬਹੁਤ ਜ਼ਿਆਦਾ ਰਸਾਇਣਕ ਸਪਰੇਅ ਤੋਂ ਬਚ ਕੇ ਮਿੱਤਰ ਕੀੜਿਆਂ ਅਤੇ ਮੱਕੜੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰੋ।",
+    "ਜਦੋਂ ਤੁਸੀਂ ਮੁਸੀਬਤ ਦੇਖੋ ਤਾਂ ਜਲਦੀ ਕਾਰਵਾਈ ਕਰੋ, ਉਦਾਹਰਨ ਲਈ ਆਂਡਿਆਂ ਦੇ ਸਮੂਹਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਜਾਂ ਪ੍ਰਭਾਵਿਤ ਪੌਦਿਆਂ ਨੂੰ ਹਟਾ ਕੇ।"
+   ],
+   "favourable_conditions": "",
+   "organic_bio": [],
+   "avoid": [],
+   "etl": ""
+  }
+ },
+ "questions": {
+  "q_paddy_blast_paddy_brown_spot": "Ki dhabbe takle ya akh varge han, dono pase to tikhe, ate vichale rakh varga rang hai?",
+  "q_paddy_brown_spot_paddy_blast": "Ki dhabbe chhote ate gol ya andakar han, til varge bhure, na ki lamme ate tikhe?",
+  "q_paddy_sheath_blight_paddy_blast": "Ki pani de level de kol patte de ghol te dhabbe, andakar ate hare-slate rang de bhure kinare vale han?",
+  "q_paddy_blb_paddy_brown_spot": "Ki pilapan patte de sirhe to shuru hunda hai ate lari vich patte de kinare chalda hai, bina kisi alag dhabbe de?",
+  "q_paddy_bph_paddy_stem_borer": "Jad tusi adhar to paudhe nu hilae ta ki pani de kol bahut saare chhote bhure kire dikhde han?",
+  "q_paddy_stem_borer_paddy_bph": "Ki sukkha vichala shoot ya chitti khali baali khichan nal aasani nal nikal jandi hai?",
+  "q_paddy_gall_midge_paddy_stem_borer": "Ki vichala shoot pyaz de patte vargi khokhli, chitti-chandi vargi nali vich badal gaya hai?",
+  "q_cotton_bacterial_blight_cotton_alternaria_leaf_spot": "ਕੀ ਦਾਣੇ ਕੋਨੇਦਾਰ ਹਨ, ਪੱਤਿਆਂ ਦੀਆਂ ਰਗਾਂ ਵਿੱਚ ਘਿਰੇ ਹੋਏ ਹਨ, ਪਹਿਲਾਂ ਪਾਣੀ ਨਾਲ ਭਰੇ ਹੋਏ ਹਨ ਅਤੇ ਫਿਰ ਕਾਲੇ ਹੋ ਜਾਂਦੇ ਹਨ?",
+  "q_cotton_alternaria_leaf_spot_cotton_bacterial_blight": "ਕੀ ਦਾਣੇ ਗੋਲ ਅਤੇ ਭੂਰੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅੰਦਰ ਛੱਲੇ ਹਨ, ਨਿਸ਼ਾਨੇ ਵਾਂਗ?",
+  "q_cotton_grey_mildew_cotton_bacterial_blight": "ਕੀ ਦਾਣਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਸਫੇਦ ਜਾਂ ਸਲੇਟੀ ਪਾਊਡਰ ਵਰਗਾ ਵਾਧਾ ਹੈ?",
+  "q_cotton_whitefly_cotton_jassid": "ਜਦੋਂ ਤੁਸੀਂ ਪੌਦੇ ਨੂੰ ਹਿਲਾਉਂਦੇ ਹੋ, ਕੀ ਛੋਟੀਆਂ ਚਿੱਟੀਆਂ ਮੱਖੀਆਂ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸਿਓਂ ਉੱਠਦੀਆਂ ਹਨ, ਅਤੇ ਕੀ ਪੱਤੇ ਚਿਪਕਣ ਵਾਲੇ ਹਨ ਜਾਂ ਕਾਲੀ ਸੂਹ ਨਾਲ ਭਰੇ ਹਨ?",
+  "q_cotton_jassid_cotton_whitefly": "ਕੀ ਪੱਤਿਆਂ ਦੇ ਕਿਨਾਰੇ ਪੀਲੇ ਅਤੇ ਫਿਰ ਲਾਲ ਜਾਂ ਕਾਂਸੀ ਦੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਹੇਠਾਂ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ, ਪੱਤਿਆਂ ਦੇ ਹੇਠਾਂ ਛੋਟੇ ਫਿੱਕੇ ਹਰੇ ਪਾਣੀਆਂ ਵਰਗੇ ਕੀੜਿਆਂ ਨਾਲ?",
+  "q_chilli_thrips_chilli_leaf_curl": "ਕੀ ਪੱਤੇ ਸੁੰਗੜ ਜਾਂਦੇ ਹਨ ਅਤੇ ਉੱਪਰ ਵੱਲ ਮੁੜ ਜਾਂਦੇ ਹਨ, ਨਾਲ ਹੀ ਛੋਟੇ ਪਤਲੇ ਤੂੜੀ-ਪੀਲੇ ਰੰਗ ਦੇ ਕੀੜੇ ਨਵੇਂ ਪੱਤਿਆਂ ਉੱਤੇ ਹੁੰਦੇ ਹਨ?",
+  "q_chilli_leaf_curl_chilli_thrips": "ਕੀ ਪੱਤੇ ਛੋਟੇ ਹੁੰਦੇ ਹਨ ਅਤੇ ਵਿਚਕਾਰਲੀ ਨਾੜੀ ਵੱਲ ਮੁੜੇ ਹੁੰਦੇ ਹਨ, ਪੌਦੇ ਦਾ ਵਾਧਾ ਰੁਕਿਆ ਹੁੰਦਾ ਹੈ ਅਤੇ ਇਸਦੇ ਤਣੇ ਦੇ ਜੋੜ ਨੇੜੇ ਹੁੰਦੇ ਹਨ?",
+  "q_chilli_yellow_mite_chilli_leaf_curl": "ਕੀ ਪੱਤੇ ਹੇਠਾਂ ਵੱਲ ਕਿਨਾਰੇ ਰੋਲ ਹੋ ਕੇ ਮੁੜਦੇ ਹਨ, ਨਾ ਕਿ ਰੁਕੇ ਹੋਏ ਪੌਦੇ ਉੱਤੇ ਛੋਟੇ ਪੱਤੇ ਗੁੱਛਿਆਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ?",
+  "q_chilli_cercospora_leaf_spot_chilli_bacterial_leaf_spot": "ਕੀ ਦਾਗ ਹਲਕੇ ਸਲੇਟੀ ਜਾਂ ਚਿੱਟੇ ਕੇਂਦਰ ਅਤੇ ਗੂੜ੍ਹੇ ਭੂਰੇ ਘੇਰੇ ਨਾਲ ਗੋਲ ਹੁੰਦੇ ਹਨ, ਜਿਵੇਂ ਡੱਡੂ ਦੀ ਅੱਖ?",
+  "q_chilli_bacterial_leaf_spot_chilli_cercospora_leaf_spot": "ਕੀ ਦਾਗ ਛੋਟੇ, ਗੂੜ੍ਹੇ ਭੂਰੇ ਤੋਂ ਕਾਲੇ ਅਤੇ ਤੇਲ ਵਰਗੇ ਹੁੰਦੇ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਹਲਕੇ ਸਲੇਟੀ ਕੇਂਦਰ ਦੇ?",
+  "q_chilli_black_thrips_chilli_thrips": "ਕੀ ਫੁੱਲ ਖਰਾਬ ਹੋਏ ਹਨ, ਪੱਤੀਆਂ ਉੱਤੇ ਭੂਰੀਆਂ ਲਕੀਰਾਂ ਹਨ ਅਤੇ ਫੁੱਲ ਝੜ ਰਹੇ ਹਨ, ਅਤੇ ਕੀ ਪੱਤਿਆਂ ਦਾ ਹੇਠਲਾ ਪਾਸਾ ਲਾਲ ਭੂਰਾ ਹੈ?",
+  "q_chilli_yellow_mite_chilli_thrips": "ਕੀ ਪੱਤੇ ਉਲਟੀ ਹੋਈ ਕਿਸ਼ਤੀ ਵਾਂਗ ਹੇਠਾਂ ਵੱਲ ਮੁੜਦੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਰੋਲ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੱਤਿਆਂ ਦੇ ਡੰਠਲ ਲੰਬੇ ਹੁੰਦੇ ਹਨ?",
+  "q_groundnut_early_leaf_spot_groundnut_late_leaf_spot": "ki patti de uthle passe daag bhure han, te thale val kewal halka bhura rang hai?",
+  "q_groundnut_late_leaf_spot_groundnut_early_leaf_spot": "ki patti de thale passe daag gutte bhure ton kale te khurdre han?",
+  "q_groundnut_rust_groundnut_late_leaf_spot": "ki pattiyan de thale passe sapat daag di bajaye chote ubhraye fode (pustules) han?",
+  "q_maize_common_rust_maize_turcicum_blight": "ਕੀ ਪੱਤੇ ਦੇ ਦੋਵਾਂ ਪਾਸਿਆਂ 'ਤੇ ਛੋਟੇ ਉਭਰੇ ਹੋਏ ਭੂਰੇ ਦਾਗ (ਪਸਚੂਲਸ) ਹਨ?",
+  "q_maize_turcicum_blight_maize_maydis_blight": "ਕੀ ਦਾਗ ਲੰਬੇ ਅਤੇ ਤੁਰਲੀ ਜਾਂ ਸਿਗਾਰ ਦੇ ਆਕਾਰ ਦੇ, ਸਲੇਟੀ-ਹਰੇ ਤੋਂ ਭੂਰੇ ਰੰਗ ਦੇ ਹਨ, ਜੋ ਹੇਠਲੇ ਪੱਤਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ?",
+  "q_maize_maydis_blight_maize_turcicum_blight": "ਕੀ ਦਾਗ ਪਹਿਲਾਂ ਛੋਟੇ ਅਤੇ ਹੀਰੇ ਦੇ ਆਕਾਰ ਦੇ ਹੁੰਦੇ ਹਨ, ਫਿਰ ਥੋੜੇ ਲੰਬੇ, ਭੂਰੇ ਰੰਗ ਦੇ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਹਲਕੇ ਭੂਰੇ ਹੁੰਦੇ ਹਨ?",
+  "q_maize_grey_leaf_spot_maize_maydis_blight": "ਕੀ ਦਾਗ ਤੰਗ ਅਤੇ ਆਇਤਾਕਾਰ ਹਨ, ਜੋ ਦੋਵਾਂ ਪਾਸਿਆਂ ਤੋਂ ਨਾੜੀਆਂ ਦੁਆਰਾ ਰੁਕੇ ਹੋਏ ਹਨ, ਅਤੇ ਭੂਰੇ ਤੋਂ ਸਲੇਟੀ ਰੰਗ ਵਿੱਚ ਬਦਲ ਜਾਂਦੇ ਹਨ?",
+  "q_tomato_early_blight_tomato_late_blight": "ਕੀ ਭੂਰੇ ਦਾਗਾਂ ਦੇ ਵਿਚਕਾਰ ਨਿਸ਼ਾਨੇ ਵਰਗੇ ਚੱਕਰ ਹਨ, ਜੋ ਜ਼ਿਆਦਾਤਰ ਪੁਰਾਣੇ ਹੇਠਲੇ ਪੱਤਿਆਂ ਉੱਤੇ ਹਨ?",
+  "q_tomato_late_blight_tomato_early_blight": "ਕੀ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਗੂੜ੍ਹੇ ਚਟਾਕ ਹਨ ਜੋ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੇ ਹਨ, ਅਤੇ ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਵਿੱਚ ਹੇਠਲੇ ਪਾਸੇ ਚਿੱਟੀ ਰੂੰ ਵਰਗੀ ਉੱਲੀ ਹੈ?",
+  "q_tomato_septoria_leaf_spot_tomato_early_blight": "ਕੀ ਸਲੇਟੀ ਕੇਂਦਰ ਅਤੇ ਗੂੜ੍ਹੇ ਕਿਨਾਰੇ ਵਾਲੇ ਬਹੁਤ ਸਾਰੇ ਛੋਟੇ ਗੋਲ ਦਾਗ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਅੰਦਰ ਕੋਈ ਚੱਕਰ ਨਹੀਂ ਹਨ?",
+  "q_tomato_bacterial_spot_tomato_septoria_leaf_spot": "ਕੀ ਦਾਗ ਛੋਟੇ ਅਤੇ ਭੂਰੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਪੀਲਾ ਘੇਰਾ ਹੈ, ਅਤੇ ਕੀ ਹਰੇ ਫਲਾਂ ਉੱਤੇ ਉੱਭਰੇ ਹੋਏ ਖੁਰਦਰੇ ਦਾਗ ਹਨ?",
+  "q_banana_panama_wilt_banana_bunchy_top": "ਕੀ ਪੁਰਾਣੇ ਪੱਤੇ ਕਿਨਾਰਿਆਂ ਤੋਂ ਪੀਲੇ ਹੋ ਕੇ ਤਣੇ ਦੇ ਆਲੇ-ਦੁਆਲੇ ਲਟਕ ਜਾਂਦੇ ਹਨ, ਅਤੇ ਕੀ ਕੱਟਣ 'ਤੇ ਤਣੇ ਦੇ ਅੰਦਰੋਂ ਲਾਲ-ਭੂਰਾ ਰੰਗ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ?",
+  "q_banana_bunchy_top_banana_panama_wilt": "ਕੀ ਨਵੇਂ ਪੱਤੇ ਤੰਗ, ਸਖ਼ਤ ਅਤੇ ਸਿਖਰ 'ਤੇ ਗੁੱਛੇਦਾਰ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੀਆਂ ਨਾੜੀਆਂ 'ਤੇ ਗੂੜ੍ਹੀਆਂ ਹਰੀਆਂ ਲਕੀਰਾਂ ਹਨ?",
+  "q_mango_powdery_mildew_mango_sooty_mould": "ਕੀ ਪਰਤ ਚਿੱਟੀ ਅਤੇ ਪਾਊਡਰ ਵਰਗੀ ਹੈ, ਜੋ ਫੁੱਲਾਂ, ਛੋਟੇ ਫਲਾਂ ਅਤੇ ਛੋਟੇ ਪੱਤਿਆਂ ਉੱਤੇ ਹੈ?",
+  "q_mango_sooty_mould_mango_powdery_mildew": "ਕੀ ਪਰਤ ਕਾਲੀ ਸੂਟ ਵਰਗੀ ਹੈ, ਅਤੇ ਕੀ ਰਗੜਨ 'ਤੇ ਇਹ ਪੱਤੇ ਤੋਂ ਉੱਤਰ ਜਾਂਦੀ ਹੈ?",
+  "q_blackgram_yellow_mosaic_blackgram_leaf_crinkle": "ਕੀ ਪੱਤਿਆਂ ਉੱਤੇ ਚਮਕਦਾਰ ਪੀਲੇ ਅਤੇ ਹਰੇ ਰੰਗ ਦੇ ਧੱਬੇ ਮਿਲੇ-ਜੁਲੇ ਹਨ?",
+  "q_blackgram_leaf_crinkle_blackgram_yellow_mosaic": "ਕੀ ਪੱਤੇ ਆਮ ਨਾਲੋਂ ਵੱਡੇ, ਮੋਟੇ, ਮੁੜੇ ਹੋਏ ਅਤੇ ਸੁੰਗੜੇ ਹੋਏ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਪੀਲੇ ਧੱਬੇ ਦੇ?",
+  "q_blackgram_cercospora_leaf_spot_blackgram_rust": "ਕੀ ਦਾਗ ਸਮਤਲ ਹਨ, ਜਿਨ੍ਹਾਂ ਦਾ ਕੇਂਦਰ ਫਿੱਕਾ ਭੂਰਾ ਅਤੇ ਕਿਨਾਰਾ ਲਾਲ-ਭੂਰਾ ਹੈ, ਅਤੇ ਕੋਈ ਉਭਰੇ ਹੋਏ ਦਾਣੇ ਨਹੀਂ ਹਨ?",
+  "q_blackgram_rust_blackgram_cercospora_leaf_spot": "ਕੀ ਪੱਤਿਆਂ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਉਭਰੇ ਹੋਏ ਲਾਲ-ਭੂਰੇ ਦਾਣੇ ਹਨ ਜੋ ਰਗੜਨ 'ਤੇ ਪਾਊਡਰ ਛੱਡਦੇ ਹਨ?",
+  "q_potato_early_blight_potato_late_blight": "ਕੀ ਭੂਰੇ ਦਾਗਾਂ ਦੇ ਅੰਦਰ ਨਿਸ਼ਾਨੇ ਵਰਗੇ ਚੱਕਰ ਹਨ, ਜੋ ਪੁਰਾਣੇ ਪੱਤਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ?",
+  "q_potato_late_blight_potato_early_blight": "ਕੀ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਗੂੜ੍ਹੇ ਦਾਗ ਹਨ ਜੋ ਤੇਜ਼ੀ ਨਾਲ ਫੈਲਦੇ ਹਨ, ਅਤੇ ਸਿੱਲ੍ਹੇ ਮੌਸਮ ਵਿੱਚ ਹੇਠਲੇ ਪਾਸੇ ਚਿੱਟੀ ਉੱਲੀ ਦਿਖਾਈ ਦਿੰਦੀ ਹੈ?",
+  "q_potato_black_scurf_potato_common_scab": "ਕੀ ਆਲੂ ਦੀ ਚਮੜੀ 'ਤੇ ਕਾਲੇ ਦਾਣੇ ਜਾਂ ਪਪੜੀਆਂ ਹਨ, ਨਾ ਕਿ ਖੁਰਦਰੇ ਕਾਰਕ ਵਰਗੇ ਟੋਏ?",
+  "q_potato_common_scab_potato_black_scurf": "ਕੀ ਆਲੂ ਦੀ ਚਮੜੀ 'ਤੇ ਖੁਰਦਰੇ, ਕਾਰਕ ਵਰਗੇ, ਉਭਰੇ ਹੋਏ ਜਾਂ ਟੋਏਦਾਰ ਦਾਗ ਹਨ?",
+  "q_cashew_tea_mosquito_bug_cashew_inflorescence_blight": "ਕੀ ਤੁਸੀਂ ਨਰਮ ਟਾਹਣੀਆਂ ਅਤੇ ਪੱਤਿਆਂ ਉੱਤੇ ਵੀ ਕਾਲੀਆਂ ਲਕੀਰਾਂ ਜਾਂ ਕਾਲੇ ਧੱਬੇ ਦੇਖਦੇ ਹੋ, ਜਾਂ ਛੋਟੇ ਲਾਲ-ਭੂਰੇ ਕੀੜੇ, ਅਤੇ ਸਿਰਫ ਫੁੱਲਾਂ ਦੇ ਗੁੱਛਿਆਂ ਉੱਤੇ ਹੀ ਨਹੀਂ?",
+  "q_cashew_inflorescence_blight_cashew_anthracnose": "ਕੀ ਧੱਬੇ ਜ਼ਿਆਦਾਤਰ ਫੁੱਲਾਂ ਦੀਆਂ ਡੰਡੀਆਂ ਉੱਤੇ ਹਨ, ਜੋ ਛੋਟੇ ਅਤੇ ਪਾਣੀ ਨਾਲ ਭਿੱਜੇ ਹੋਏ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ ਅਤੇ ਫਿਰ ਗੁਲਾਬੀ-ਭੂਰੇ ਅਤੇ ਦਾਗਦਾਰ ਹੋ ਜਾਂਦੇ ਹਨ?",
+  "q_cashew_dieback_cashew_anthracnose": "ਕੀ ਸੁੱਕ ਰਹੀਆਂ ਟਾਹਣੀਆਂ ਉੱਤੇ ਚਿੱਟਾ ਜਾਂ ਗੁਲਾਬੀ ਵਾਧਾ ਜਾਂ ਰੇਸ਼ਮੀ ਧਾਗੇ ਹਨ?",
+  "q_onion_purple_blotch_onion_stemphylium_blight": "ਕੀ ਦਾਗਾਂ ਦੇ ਵਿਚਕਾਰ ਜਾਮਨੀ ਕੇਂਦਰ ਅਤੇ ਕਿਨਾਰੇ ਪੀਲੇ ਹਨ?",
+  "q_onion_stemphylium_blight_onion_purple_blotch": "ਕੀ ਦਾਗ ਪੀਲੇ ਤੋਂ ਸੰਤਰੀ ਅਤੇ ਤੁਰਲੀ ਵਾਂਗ ਲੰਬੇ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਕਿਨਾਰੇ ਗੁਲਾਬੀ ਹਨ ਨਾ ਕਿ ਜਾਮਨੀ ਕੇਂਦਰ?",
+  "q_onion_downy_mildew_onion_purple_blotch": "ਕੀ ਪੱਤੇ ਹਲਕੇ ਹਰੇ ਹੋ ਕੇ ਉਨ੍ਹਾਂ ਉੱਤੇ ਚਿੱਟੀ ਰੂੰ ਵਰਗੀ ਪਰਤ ਆ ਜਾਂਦੀ ਹੈ, ਬਿਨਾਂ ਕਿਸੇ ਗੂੜ੍ਹੇ ਦਾਗ ਦੇ?"
+ }
+}

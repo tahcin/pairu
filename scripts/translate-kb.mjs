@@ -7,10 +7,15 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const LANGS = { hi: "Hindi", ta: "Tamil", kn: "Kannada", mr: "Marathi", bn: "Bengali", or: "Odia", gu: "Gujarati", pa: "Punjabi", ml: "Malayalam" };
+const SCRIPT_NAME = { hi: "Devanagari", mr: "Devanagari", bn: "Bengali", pa: "Gurmukhi", gu: "Gujarati", or: "Odia", ta: "Tamil", kn: "Kannada", ml: "Malayalam" };
 const PRIMARY = "gemma-4-31b-it";
 const FALLBACK = "gemini-3.5-flash-lite";
-const FALLBACK_CAP = 150;
-const calls = { [PRIMARY]: 0, [FALLBACK]: 0, failed: 0 };
+// Second free-tier model with its own daily quota, tried before the capped fallback. It is also the
+// live app's first vision model, so its use here is capped too (SPARE_CAP) to leave quota for diagnosis.
+const SPARE = "gemini-3.1-flash-lite";
+const SPARE_CAP = Number(process.env.SPARE_CAP || 40);
+const FALLBACK_CAP = Number(process.env.FALLBACK_CAP || 150);
+const calls = { [PRIMARY]: 0, [SPARE]: 0, [FALLBACK]: 0, failed: 0 };
 
 let key = process.env.GEMINI_API_KEY;
 if (!key && existsSync(".dev.vars")) key = (readFileSync(".dev.vars", "utf8").match(/^GEMINI_API_KEY\s*=\s*"?([^"\n]+)"?/m) || [])[1];
@@ -53,7 +58,7 @@ async function gemini(model, prompt, timeoutMs = 90000) {
     headers: { "content-type": "application/json", "x-goog-api-key": key },
     body: JSON.stringify({
       contents: [{ role: "user", parts: [{ text: prompt }] }],
-      generationConfig: model.startsWith("gemini") ? { responseMimeType: "application/json", temperature: 0.2 } : { temperature: 0.2 },
+      generationConfig: model.startsWith("gemini-") ? { responseMimeType: "application/json", temperature: 0.2 } : { temperature: 0.2 },
     }),
     signal: AbortSignal.timeout(timeoutMs),
   });
@@ -64,7 +69,7 @@ async function gemini(model, prompt, timeoutMs = 90000) {
 
 async function translate(obj, lang) {
   const prompt = [
-    `Translate every string value in this JSON from English into ${LANGS[lang]} for small farmers in India.`,
+    `Translate every string value in this JSON from English into ${LANGS[lang]} for small farmers in India. Write only in the ${SCRIPT_NAME[lang]} script; never use letters of any other Indian script.`,
     "Use plain, everyday village words a farmer would say, short clear sentences, and the local common names of pests and diseases where they exist.",
     "Keep pesticide, product and chemical names (for example imidacloprid, Pseudomonas fluorescens, Bordeaux mixture) exactly in English letters.",
     "Keep every number, percentage and unit exactly as written. Do not add or drop information.",
@@ -72,14 +77,26 @@ async function translate(obj, lang) {
     "",
     JSON.stringify(obj),
   ].join("\n");
-  // gemma answered 503 after about 70 s at the time of writing, so it gets one short try and, after
-  // two failures in a run, is skipped (circuit breaker) in favour of the fallback model.
-  if (gemmaFails < 2) {
+  // gemma is tried twice per crop; after six failures in a row it is skipped (circuit breaker) in
+  // favour of the fallback model, which has a hard call cap.
+  for (let i = 0; i < 2 && gemmaFails < (process.env.NO_GEMMA ? 0 : 6); i++) {
     try {
       calls[PRIMARY]++;
-      return extractJson(await gemini(PRIMARY, prompt, 45000));
+      const out = extractJson(await gemini(PRIMARY, prompt, 150000));
+      gemmaFails = 0;
+      return out;
     } catch (e) {
       gemmaFails++;
+      await sleep(3000);
+    }
+  }
+  for (let i = 0; i < 2 && calls[SPARE] < SPARE_CAP; i++) {
+    try {
+      calls[SPARE]++;
+      await sleep(4500);
+      return extractJson(await gemini(SPARE, prompt));
+    } catch (e) {
+      await sleep(5000);
     }
   }
   if (calls[FALLBACK] >= FALLBACK_CAP) throw new Error("fallback cap reached");
@@ -88,11 +105,25 @@ async function translate(obj, lang) {
   return extractJson(await gemini(FALLBACK, prompt));
 }
 
-// Check shape: every key present, lists the same length, every string non-empty.
+// Unicode blocks of each script; a translation containing letters of another Indian script is
+// a model glitch (seen: Bengali letters inside a Kannada pest name) and is redone.
+const SCRIPT = { hi: [0x0900, 0x097f], mr: [0x0900, 0x097f], bn: [0x0980, 0x09ff], pa: [0x0a00, 0x0a7f], gu: [0x0a80, 0x0aff], or: [0x0b00, 0x0b7f], ta: [0x0b80, 0x0bff], te: [0x0c00, 0x0c7f], kn: [0x0c80, 0x0cff], ml: [0x0d00, 0x0d7f] };
+let CUR = "";
+function foreignScript(text) {
+  const [lo, hi] = SCRIPT[CUR] || [0, 0];
+  for (const ch of text) {
+    const c = ch.codePointAt(0);
+    if (c === 0x0964 || c === 0x0965) continue; // the danda is shared by several scripts
+    if (c >= 0x0900 && c <= 0x0d7f && (c < lo || c > hi)) return true;
+  }
+  return false;
+}
+
+// Check shape: every key present, lists the same length, every string non-empty and in the right script.
 function gaps(src, out, path = "") {
   const g = [];
   if (typeof src === "string") {
-    if (src.trim() && !(typeof out === "string" && out.trim())) g.push(path);
+    if (src.trim() && !(typeof out === "string" && out.trim() && !foreignScript(out))) g.push(path);
     return g;
   }
   if (Array.isArray(src)) {
@@ -106,6 +137,7 @@ function gaps(src, out, path = "") {
 
 const langs = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(LANGS);
 for (const lang of langs) {
+  CUR = lang;
   const file = `data/kb_${lang}.json`;
   const doc = existsSync(file)
     ? JSON.parse(readFileSync(file, "utf8"))
@@ -131,7 +163,7 @@ for (const lang of langs) {
       const o = out.diseases?.[id];
       if (o && !gaps(src.diseases[id], o).length) doc.diseases[id] = o;
     }
-    for (const q of Object.keys(src.questions)) if (typeof out.questions?.[q] === "string" && out.questions[q].trim()) doc.questions[q] = out.questions[q];
+    for (const q of Object.keys(src.questions)) if (typeof out.questions?.[q] === "string" && out.questions[q].trim() && !foreignScript(out.questions[q])) doc.questions[q] = out.questions[q];
     console.log(`${lang} ${crop.id}: ${bad.length ? `${bad.length} gaps` : "ok"}  calls ${JSON.stringify(calls)}`);
     writeFileSync(file, JSON.stringify(doc, null, 1) + "\n");
   }

@@ -112,3 +112,11 @@ The file lists 24 KVKs, checked on 27 Nov 2026.
 `district` is the current AP district. Where the source prints a pre-2022 district, `district_as_printed` keeps the source's wording and a `note` explains the move. These moves are our mapping by mandal, not something the sources state.
 
 Eight districts have no KVK of their own: Vizianagaram, Visakhapatnam, Kakinada, Dr. B.R. Ambedkar Konaseema, Eluru, Palnadu, Sri Sathya Sai and Chittoor.
+
+## kb_te.json and glossary_te.json (Telugu text)
+
+`kb_te.json` holds Telugu for every farmer-facing field in kb.json: symptoms, prevention, practices, favourable conditions, organic options, avoid, ETL and the yes or no questions. It has 1,224 strings, keyed by disease id and field index, with questions keyed by question id. It was made in two steps (`scripts/kb_te.py`).
+- Sarvam translate (sarvam-translate:v1) wrote the first draft.
+- Claude (claude-sonnet-5-5) reviewed it, one call per crop plus one call for strings added later, 13 calls in all. The review fixed meaning errors, used plain coastal Andhra village Telugu, kept product and bio-agent names in English, kept every number, and applied `glossary_te.json` the same way throughout.
+
+The reviewer's Telugu corrections (brown spot symptoms, host, velvety growth, irrigation wording, the Pseudomonas recipe, bullseye, girdle, spores, early blight naming) were given to the review as fixed wording, and a scan confirms none of the flagged words remain. A few lines were then fixed by hand (`TE_OVERRIDES` in `scripts/kb_te.py`). No Telugu agronomist has reviewed this text yet. The UI strings the reviewer flagged (`whichCrop`, `noChemicals`, `photoTip`, crop spellings) belong to the app layer.

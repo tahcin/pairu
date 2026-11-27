@@ -22,10 +22,11 @@ const uses = load("data/registered_uses.json");
 const rows = uses.filter((r) => r.crop_id);
 const counts = {};
 const kinds = {};
-const violations = { seed_from_product_name_only: [], do_first_hazardous_or_restricted: [], per_acre_on_seed_soil: [], liquid_in_g_or_solid_in_ml: [], over_2x_from_ai: [], bio_bare_number_without_note: [], granule_per_litre: [] };
+const violations = { hazardous_in_top3_with_safer_option: [], seed_from_product_name_only: [], do_first_hazardous_or_restricted: [], per_acre_on_seed_soil: [], liquid_in_g_or_solid_in_ml: [], over_2x_from_ai: [], bio_bare_number_without_note: [], granule_per_litre: [] };
 const isBare = (s) => /^\s*\d+(?:\.\d+)?(?:\s*(?:-|to|–)\s*\d+(?:\.\d+)?)?\s*$/.test(s || "");
 
 const agreement = [];
+const shownAgreement = [];
 const res = rows.map((r) => {
   const d = resolveDose(r);
   counts[d.status] = (counts[d.status] || 0) + 1;
@@ -51,6 +52,12 @@ const res = rows.map((r) => {
       const best = Math.min(...options.map((e) => Math.max(d.base_lo / e, e / d.base_lo)));
       if (best > 2) violations.over_2x_from_ai.push({ r, d, best });
       agreement.push(best);
+      // Same check on the rounded per-acre figure the farmer actually sees.
+      if (d.per_acre) {
+        const v = parseFloat(d.per_acre.value);
+        const shownHa = (v * (d.per_acre.unit === "kg" || d.per_acre.unit === "l" ? 1000 : 1)) / 0.404686;
+        shownAgreement.push(Math.min(...options.map((e) => Math.max(shownHa / e, e / shownHa))));
+      }
     }
   }
   // The app adds a "unit not printed, read the label" note to bio rows shown as a bare number.
@@ -76,6 +83,15 @@ for (const dz of kb.diseases) {
     if (p.who_class === "Ia" || p.who_class === "Ib" || p.restricted) violations.do_first_hazardous_or_restricted.push({ r: { product_label: `${dz.id}: ${p.product}` } });
   }
   for (const t of [...bio, ...chem]) if (t.dose_conflict) merged++;
+  // No WHO Ia/Ib or restricted product in the visible top three when a safer approved one exists.
+  for (const list of [card.bio_products, card.chemicals]) {
+    const visible = list.filter((t) => !t.avoid);
+    const flagged = (t) => t.who_class === "Ia" || t.who_class === "Ib" || t.restricted;
+    const safer = visible.filter((t) => !flagged(t)).length;
+    visible.slice(0, 3).forEach((t, i) => {
+      if (flagged(t) && safer > i) violations.hazardous_in_top3_with_safer_option.push({ r: { product_label: `${dz.id}: ${t.product}` } });
+    });
+  }
   chem.slice(0, 3).forEach((t) => {
     if (!["inferred", "printed", "per_litre", "seed_soil"].includes(t.dose_status)) topThreeNotChecked.push(`${dz.id}: ${t.product} (${t.dose_conflict ? "dose differs by use" : t.dose_status})`);
   });
@@ -97,9 +113,11 @@ console.log(`"what to do first" source across ${kb.diseases.length} entries: ${J
 const within = (x) => agreement.filter((b) => b <= x).length;
 console.log(`\nAGREEMENT WITH THE ACTIVE-INGREDIENT COLUMN: of ${agreement.length} per-acre doses shown that can be checked against the a.i. dose,`);
 console.log(`  ${((100 * within(1.1)) / agreement.length).toFixed(1)}% are within 10% of the a.i. calculation and ${((100 * within(1.25)) / agreement.length).toFixed(1)}% within 25% (all are within 1.5x by construction).\n`);
+const w2 = (x) => shownAgreement.filter((b) => b <= x).length;
+console.log(`  On the rounded per-acre figures as displayed (${shownAgreement.length}): ${((100 * w2(1.1)) / shownAgreement.length).toFixed(1)}% within 10%, ${((100 * w2(1.25)) / shownAgreement.length).toFixed(1)}% within 25%.\n`);
 console.log("invariants (all must be 0):");
 for (const [k, v] of Object.entries(violations)) console.log(`  ${k}: ${v.length}`);
-for (const v of [...violations.seed_from_product_name_only, ...violations.do_first_hazardous_or_restricted].slice(0, 5)) console.log("    ", v.r.product_label);
+for (const v of [...violations.hazardous_in_top3_with_safer_option, ...violations.seed_from_product_name_only, ...violations.do_first_hazardous_or_restricted].slice(0, 5)) console.log("    ", v.r.product_label);
 for (const v of violations.liquid_in_g_or_solid_in_ml.slice(0, 5)) console.log("    ", v.r.product_label, JSON.stringify(v.v));
 for (const v of violations.over_2x_from_ai.slice(0, 5)) console.log("    ", v.r.product_label, v.r.dose_formulation_raw, v.best.toFixed(1));
 console.log(`top-three chemicals not on a checked path: ${topThreeNotChecked.length}`);

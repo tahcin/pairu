@@ -455,8 +455,11 @@ function trimQuestions(d: Diagnosis): Diagnosis {
     .sort((a, b) => Number((a as { kind?: string }).kind === "confirm") - Number((b as { kind?: string }).kind === "confirm"))
     .filter((q) => {
       const k = ((q as { question_en?: string }).question_en || q.question).trim().toLowerCase();
-      if (seen.has(k)) return false;
+      // Same question, or the same disease pair asked the other way round: keep only the first.
+      const pair = (q as { kind?: string }).kind === "confirm" ? `c:${q.yes}` : `p:${[q.yes, q.no].sort().join("|")}`;
+      if (seen.has(k) || seen.has(pair)) return false;
       seen.add(k);
+      seen.add(pair);
       return true;
     })
     .slice(0, 2);

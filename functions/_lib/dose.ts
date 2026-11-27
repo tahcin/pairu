@@ -122,10 +122,27 @@ function show(base: number, kind: "liquid" | "solid"): [string, string] {
   return base >= 1000 ? [fmt(base / 1000), big] : [fmt(base), small];
 }
 
-function range(lo: number, hi: number | null, kind: "liquid" | "solid"): { value: string; unit: string } {
-  const [lv, lu] = show(lo, kind);
+// Per-acre figures are rounded for a farmer (no false precision such as 64.7 ml): 2 significant
+// figures below 100, the nearest 5 from 100 to 1,000, 2 significant figures above. The printed
+// per-hectare value is always shown next to it unrounded.
+export function fmtAcre(n: number): string {
+  if (n >= 100 && n <= 1000) return String(Math.round(n / 5) * 5);
+  if (n <= 0) return "0";
+  const p = Math.pow(10, Math.floor(Math.log10(n)) - 1);
+  return String(Math.round((Math.round(n / p) * p) * 1000) / 1000);
+}
+
+function showAcre(base: number, kind: "liquid" | "solid"): [string, string] {
+  const small = kind === "liquid" ? "ml" : "g";
+  const big = kind === "liquid" ? "l" : "kg";
+  return base >= 1000 ? [fmtAcre(base / 1000), big] : [fmtAcre(base), small];
+}
+
+function range(lo: number, hi: number | null, kind: "liquid" | "solid", acre = false): { value: string; unit: string } {
+  const sh = acre ? showAcre : show;
+  const [lv, lu] = sh(lo, kind);
   if (hi === null || hi === lo) return { value: lv, unit: lu };
-  const [hv, hu] = show(hi, kind);
+  const [hv, hu] = sh(hi, kind);
   if (lu === hu) return { value: `${lv}-${hv}`, unit: lu };
   return { value: `${lv} ${lu} to ${hv}`, unit: hu };
 }
@@ -220,7 +237,7 @@ export function resolveDose(row: DoseRow): DoseResult {
       return {
         status,
         per_ha: range(lo, hi, kind),
-        per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind),
+        per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind, true),
         base_lo: lo,
         water_ok: waterOk,
         reason: note,
@@ -287,7 +304,7 @@ export function resolveDose(row: DoseRow): DoseResult {
       const hi = rate.hi !== null ? rate.hi * s : null;
       return {
         status: "printed",
-        per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, k),
+        per_acre: range(lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, k, true),
         per_ha: range(lo, hi, k),
         base_lo: lo,
         water_ok: waterOk,
@@ -302,7 +319,7 @@ export function resolveDose(row: DoseRow): DoseResult {
     return {
       status: "bio_unit_from_code",
       per_ha: range(rate.lo, hi, kind),
-      per_acre: range(rate.lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind),
+      per_acre: range(rate.lo * HA_PER_ACRE, hi !== null ? hi * HA_PER_ACRE : null, kind, true),
       base_lo: rate.lo,
       water_ok: waterOk,
       reason: "biological, unit from the formulation type",

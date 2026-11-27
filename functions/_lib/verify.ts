@@ -152,8 +152,10 @@ export function resolveCheck(set: string[], questions: CheckQuestion[], answers:
   const firstOfPair: CheckQuestion[] = [];
   const rest: CheckQuestion[] = [];
   const seenPair = new Set<string>();
-  for (const q of uniq) (seenPair.has(pairOf(q)) ? rest : firstOfPair).push(q), seenPair.add(pairOf(q));
-  const ask = [...firstOfPair, ...rest].slice(0, MAX_ASK);
+  // A second question on the same pair (the first one reversed) is dropped, not just moved back.
+  for (const q of uniq) if (!seenPair.has(pairOf(q))) firstOfPair.push(q), seenPair.add(pairOf(q));
+  void rest;
+  const ask = firstOfPair.slice(0, MAX_ASK);
   return { status: ask.length ? "ask" : "unsure", id: null, alive, open: ask };
 }
 

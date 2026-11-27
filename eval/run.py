@@ -74,6 +74,8 @@ def post(url: str, body: dict, headers: dict | None = None, timeout: int = 120) 
     except urllib.error.HTTPError as e:
         raw = e.read().decode(errors="replace")
         code = e.code
+    except (TimeoutError, urllib.error.URLError, ConnectionError, OSError) as e:
+        return 0, f"network error: {e}"   # retried like a 503; the call still counts
     try:
         return code, json.loads(raw)
     except ValueError:
@@ -155,7 +157,7 @@ class Runner:
             self.log({"kind": "baseline_error", "file": item["file"], "http": code, "body": body, "attempt": attempt + 1})
             if code == 429 and is_daily_quota(t):
                 raise QuotaExhausted(t[:400])
-            if code not in (429, 500, 503, 504):
+            if code not in (0, 429, 500, 503, 504):
                 return {"http": code, "text": None, "raw": body, "attempts": attempt + 1}
             time.sleep(min(90, 15 * 2 ** attempt))
         return {"http": code, "text": None, "raw": body, "attempts": 4}
@@ -185,8 +187,18 @@ def main():
     if out.exists():
         for line in out.read_text().splitlines():
             r = json.loads(line)
-            if r.get("kind") == "end":
-                prior_calls += r.get("gemini_calls_this_invocation", 0)
+            # Count calls from the records themselves, so a crashed invocation is still counted.
+            k = r.get("kind")
+            if k == "pairu":
+                body = r["diagnose"].get("body") if isinstance(r["diagnose"].get("body"), dict) else {}
+                if r["diagnose"].get("http") == 200 and not body.get("cached"):
+                    prior_calls += 2 if body.get("model") not in (None, "gemini-3.1-flash-lite") else 1
+            elif k == "pairu_error":
+                prior_calls += 2 if r.get("http") == 502 else 1
+            elif k in ("baseline", "baseline_error"):
+                prior_calls += 1
+            elif k == "uncounted_calls":
+                prior_calls += r["n"]
             if r.get("kind") == "pairu":
                 done_p.add(r["file"])
             if r.get("kind") == "baseline" and r.get("http") == 200:

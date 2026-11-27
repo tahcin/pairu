@@ -442,7 +442,14 @@ function Film({ onWeak }: { onWeak: () => void }) {
               </p>
               {labels?.crops.map((l) => (
                 <span key={l.crop.id} className="lab" style={{ top: l.y, height: l.h, left: l.x, width: l.w }}>
-                  <span className="cn">{l.crop.en}</span>
+                  <span className="cn">
+                    {l.crop.en}
+                    {l.h >= 40 && (
+                      <span className="te" lang="te">
+                        {l.crop.te}
+                      </span>
+                    )}
+                  </span>
                   <span className="mono">{fmt(l.crop.count)}</span>
                 </span>
               ))}

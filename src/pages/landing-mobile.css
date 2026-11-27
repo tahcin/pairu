@@ -427,6 +427,12 @@ html.mf-page body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.c-crops .lab .te {
+  display: block;
+  margin-top: 6px;
+  font-weight: 500;
+  color: var(--ink-3);
+}
 .c-crops .lab .mono,
 .ms-strips .lab .mono {
   color: var(--ink-3);

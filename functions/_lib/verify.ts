@@ -6,13 +6,14 @@
 // cannot settle go to the farmer. No Claude here: Gemini only.
 import type { Candidate, Disease, Env, Question } from "./types";
 import { kvGetJSON, kvPutJSON, sha256 } from "./util";
+import { MODEL_ORDER, firstThatWorks, generateJson } from "./models";
 
 export const DECIDE_V2 = 0.9;   // first look decides on its own at or above this (chosen on half the test set)
 export const VERIFY_MIN = 0.4;  // below this the first look is too unsure to check; we say so
 export const VERIFY_MAX_DISEASES = 4;
-export const VERIFY_PRIMARY = "gemini-3.5-flash-lite";
-export const VERIFY_FALLBACK = "gemini-3.1-flash-lite";
-const TIMEOUT_MS = 12000;
+export const VERIFY_PRIMARY = MODEL_ORDER[0];
+export const VERIFY_FALLBACK = MODEL_ORDER[1];
+// Per-model timeouts are in models.ts.
 
 export type Answer = "yes" | "no" | "cannot_tell";
 
@@ -146,19 +147,7 @@ async function callGemini(env: Env, model: string, prompt: string, imageB64: str
     },
     required: ["answers"],
   };
-  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },
-    body: JSON.stringify({
-      contents: [{ role: "user", parts: [{ inline_data: { mime_type: "image/jpeg", data: imageB64 } }, { text: prompt }] }],
-      generationConfig: { responseMimeType: "application/json", responseSchema: schema },
-    }),
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  });
-  if (!res.ok) throw new Error(`${model} ${res.status}: ${(await res.text()).slice(0, 300)}`);
-  const body = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
-  const text = body.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
-  const parsed = JSON.parse(text) as { answers?: { id: string; answer: Answer }[] };
+  const parsed = await generateJson<{ answers?: { id: string; answer: Answer }[] }>(env, model, prompt, imageB64, schema);
   const out: Record<string, Answer> = {};
   for (const a of parsed.answers || []) if (ids.includes(a.id) && !(a.id in out)) out[a.id] = a.answer;
   return out;
@@ -167,15 +156,9 @@ async function callGemini(env: Env, model: string, prompt: string, imageB64: str
 export async function runCheck(env: Env, crop: string, imageB64: string, questions: CheckQuestion[]): Promise<{ answers: Record<string, Answer>; model: string }> {
   const prompt = verifyPrompt(crop, questions);
   const ids = questions.map((q) => q.id);
-  const errors: string[] = [];
-  for (const model of [VERIFY_PRIMARY, VERIFY_FALLBACK]) {
-    try {
-      return { answers: await callGemini(env, model, prompt, imageB64, ids), model };
-    } catch (e) {
-      errors.push(String(e));
-    }
-  }
-  throw new Error(errors.join(" | "));
+  // Same order and quota handling as the first look (models.ts).
+  const r = await firstThatWorks(env, (model) => callGemini(env, model, prompt, imageB64, ids));
+  return { answers: r.value, model: r.model };
 }
 
 export interface SecondLook {

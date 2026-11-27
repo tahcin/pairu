@@ -1,10 +1,12 @@
 // Vision step: show the model the photo and the closed list of diseases we hold for the crop, and
 // get back strict JSON. Gemini free tier first (two models), Claude Haiku only as a last resort.
 import Anthropic from "@anthropic-ai/sdk";
+import { MODEL_ORDER, firstThatWorks, generateJson } from "./models";
 import type { Crop, Disease, Env } from "./types";
 
-export const PRIMARY = "gemini-3.1-flash-lite";
-export const SECONDARY = "gemini-3.5-flash-lite";
+// Model order lives in models.ts: gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemma-4-31b-it.
+export const PRIMARY = MODEL_ORDER[0];
+export const SECONDARY = MODEL_ORDER[1];
 export const LAST_RESORT = "claude-haiku-5-5";
 
 // A slow model call falls back to the next model instead of hanging.
@@ -164,14 +166,13 @@ export async function runVision(
   ids: string[],
   cropIds: string[],
 ): Promise<{ out: VisionOut; model: string; errors: string[] }> {
-  const errors: string[] = [];
   const schema = geminiSchema(ids, cropIds);
-  for (const model of [PRIMARY, SECONDARY]) {
-    try {
-      return { out: await callGemini(env, model, prompt, imageB64, schema), model, errors };
-    } catch (e) {
-      errors.push(String(e));
-    }
+  let errors: string[] = [];
+  try {
+    const r = await firstThatWorks(env, (model) => generateJson<VisionOut>(env, model, prompt, imageB64, schema));
+    return { out: r.value, model: r.model, errors: r.errors };
+  } catch (e) {
+    errors = (e as { errors?: string[] }).errors || [String(e)];
   }
   if (await claudeAllowed(env)) {
     try {

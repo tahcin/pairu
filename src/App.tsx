@@ -148,7 +148,7 @@ function Farmer() {
     go("working");
     try {
       const d = await api.describe(crop, keys, lang);
-      setDx(d);
+      setDx(trimQuestions(d));
       setAnswers({});
       setQIndex(0);
       if (d.status === "decided") await decideWith(d.candidates[0].id, "describe", d);
@@ -186,7 +186,7 @@ function Farmer() {
     go("working");
     try {
       const d = await api.diagnose(crop, photo.base64, note, lang);
-      setDx(d);
+      setDx(trimQuestions(d));
       // Start the translated advice right away for the likely answers, so it is ready (and cached
       // on the server) by the time the farmer reaches the card.
       if (lang !== "en" && d.status !== "unsure")
@@ -445,6 +445,22 @@ function Farmer() {
       </main>
     </div>
   );
+}
+
+// At most two follow-up questions, never the same one twice, tell-apart questions before sign
+// checks. The server does this too; this also covers diagnoses cached before that change.
+function trimQuestions(d: Diagnosis): Diagnosis {
+  const seen = new Set<string>();
+  const qs = [...(d.questions || [])]
+    .sort((a, b) => Number((a as { kind?: string }).kind === "confirm") - Number((b as { kind?: string }).kind === "confirm"))
+    .filter((q) => {
+      const k = ((q as { question_en?: string }).question_en || q.question).trim().toLowerCase();
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    })
+    .slice(0, 2);
+  return { ...d, questions: qs };
 }
 
 // Links for judges at the foot of the crop screen, labelled in the farmer's language (the pages

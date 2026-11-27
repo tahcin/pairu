@@ -44,6 +44,8 @@ export interface Treatment {
   highly_hazardous: boolean;
   restricted: string | null;
   note: string;
+  ipm_recommended?: boolean;
+  avoid?: boolean;
   source: { file?: string; page?: number; url?: string };
 }
 export interface Advice {
@@ -59,6 +61,7 @@ export interface Advice {
   symptoms: string[];
   favourable_conditions: string;
   organic: { text: string; source: { title: string; url: string } | null }[];
+  avoid?: { text: string; source: { title: string; url: string } | null }[];
   bio_products: Treatment[];
   chemicals: Treatment[];
   banned_removed: number;

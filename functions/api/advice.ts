@@ -29,6 +29,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     ...card.organic.map((o) => o.text),
     ...card.prevention,
     ...card.practices,
+    ...card.avoid.map((x) => x.text),
   ];
   let tr: string[];
   try {
@@ -46,6 +47,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     organic: card.organic.map((o) => ({ ...o, text: tr[i++] })),
     prevention: card.prevention.map(() => tr[i++]),
     practices: card.practices.map(() => tr[i++]),
+    avoid: card.avoid.map((x) => ({ ...x, text: tr[i++] })),
   };
   await kvPutJSON(env.PAIRU_CACHE, key, out, 30);
   return json({ ...out, translated: true, cached: false });

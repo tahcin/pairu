@@ -26,6 +26,8 @@ export interface Treatment {
   highly_hazardous: boolean;
   restricted: string | null;
   note: string;
+  ipm_recommended: boolean;
+  avoid: boolean;
   source: RegisteredUse["source"];
 }
 
@@ -44,6 +46,7 @@ export interface AdviceCard {
   organic: { text: string; source: { title: string; url: string } | null }[];
   bio_products: Treatment[];
   chemicals: Treatment[];
+  avoid: { text: string; source: { title: string; url: string } | null }[];
   banned_removed: number;
   prevention: string[];
   practices: string[];
@@ -96,6 +99,8 @@ export function checkBan(
   banned: Map<string, Banned>,
 ): { drop: boolean; flag: string | null } {
   let flag: string | null = null;
+  // A combination product is dropped when ANY of its actives is banned (names and aliases from
+  // banned.json). The label is not text-matched: "Meptyl Dinocap" is not the banned dinocap.
   for (const a of actives) {
     const b = banned.get(norm(a));
     if (!b) continue;
@@ -121,6 +126,9 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     banned.set(norm(b.active), b);
     for (const a of b.aka || []) banned.set(norm(a), b);
   }
+  // Optional KB fields from the government IPM (AESA) packages.
+  const recommended = new Set((d.recommended_actives || []).map((r) => norm(r.active)));
+  const avoidSet = new Set((d.avoid || []).flatMap((x) => [...(x.actives || []), ...(x.active ? [x.active] : [])]).map(norm));
   const hazard = new Map(Object.entries(data.hazard).map(([k, v]) => [norm(k), v.who_class]));
   const bio: Treatment[] = [];
   const chem: Treatment[] = [];
@@ -165,6 +173,8 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
       highly_hazardous: worst === "Ia" || worst === "Ib",
       restricted,
       note: u.note_raw || "",
+      ipm_recommended: actives.some((a) => recommended.has(norm(a))),
+      avoid: actives.some((a) => avoidSet.has(norm(a))),
       source: u.source,
     };
     (t.bio ? bio : chem).push(t);
@@ -175,7 +185,9 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
   // A missing WHO class is unknown, not safe, so it sorts after class II.
   const who = (t: Treatment) => (t.who_class ? WHO_ORDER[t.who_class] ?? 3 : 3);
   const key = (t: Treatment) => [
+    Number(t.avoid),
     Number(t.highly_hazardous || t.restricted !== null),
+    Number(!t.ipm_recommended),
     Number(!t.dose_per_acre),
     who(t),
     Number(t.waiting_days == null),
@@ -187,6 +199,7 @@ export function treatmentsFor(d: Disease, data: Data): { bio: Treatment[]; chem:
     return 0;
   };
   chem.sort(cmp);
+  bio.sort((a, b) => Number(b.ipm_recommended) - Number(a.ipm_recommended));
   return { bio, chem, bannedRemoved };
 }
 
@@ -207,6 +220,10 @@ export function buildCard(d: Disease, data: Data, lang: string): AdviceCard {
     organic: (d.organic_bio || []).map((o) => ({
       text: o.text,
       source: typeof o.source === "number" && d.sources[o.source] ? d.sources[o.source] : null,
+    })),
+    avoid: (d.avoid || []).map((x) => ({
+      text: x.text,
+      source: typeof x.source === "number" ? d.sources[x.source] || null : x.source && typeof x.source === "object" ? x.source : null,
     })),
     bio_products: bio,
     chemicals: chem,

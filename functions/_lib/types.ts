@@ -37,6 +37,8 @@ export interface Disease {
   organic_bio: { text: string; source?: number | null }[];
   cibrc_targets: string[];
   sources: Source[];
+  avoid?: { text: string; source?: number | Source | null; active?: string; actives?: string[] }[];
+  recommended_actives?: { active: string; source?: number | Source | null }[];
 }
 
 export interface Crop {

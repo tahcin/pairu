@@ -230,6 +230,26 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
           {a.chemicals.length > 0 && <Products lang={lang} title={L("chemicals")} note={L("chemicalsNote")} items={a.chemicals} />}
           {a.bio_products.length === 0 && a.chemicals.length === 0 && <p className="notice">{L("noApproved")}</p>}
           {a.bio_products.length > 0 && a.chemicals.length === 0 && <p className="body">{L("noChemicals")}</p>}
+          {a.avoid && a.avoid.length > 0 && (
+            <div className="avoid">
+              <h3>
+                <Warn size={18} />
+                {L("avoidTitle")}
+              </h3>
+              <ul className="list plain">
+                {a.avoid.map((x, i) => (
+                  <li key={i}>
+                    {pending ? <Bar w={80} /> : x.text}
+                    {x.source && (
+                      <a className="src-link" href={x.source.url} target="_blank" rel="noopener">
+                        {L("source")}: {x.source.title}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <p className="muted small">
             {L("bannedLeftOut")} {L("legalNote")}
           </p>
@@ -359,7 +379,9 @@ export function AdviceView({ lang, advice: a, photo, cropName, by, confidence, s
 function Products({ lang, title, note, items }: { lang: Lang; title: string; note?: string; items: Treatment[] }) {
   const L = (k: Key) => t(lang, k);
   const [all, setAll] = useState(false);
-  const shown = all ? items : items.slice(0, SHOW_FIRST);
+  // Products the KB says to avoid for this problem stay hidden unless the farmer asks for all.
+  const preferred = items.filter((p) => !p.avoid);
+  const shown = all ? items : preferred.slice(0, SHOW_FIRST);
   return (
     <>
       <h3>{title}</h3>
@@ -371,6 +393,8 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
               <strong>{p.product}</strong>
               {p.highly_hazardous && <span className="badge danger">WHO {p.who_class}</span>}
             </div>
+            {p.ipm_recommended && <p className="ipm">{L("ipmRecommended")}</p>}
+            {p.avoid && <p className="restricted">{L("avoidTitle")}</p>}
             {p.highly_hazardous && (
               <p className="hazard">
                 <Warn size={18} />
@@ -453,9 +477,9 @@ function Products({ lang, title, note, items }: { lang: Lang; title: string; not
           </li>
         ))}
       </ul>
-      {items.length > SHOW_FIRST && (
+      {(all ? items.length > preferred.slice(0, SHOW_FIRST).length : items.length > shown.length) && (
         <button className="btn ghost small" onClick={() => setAll(!all)}>
-          {all ? L("showLess") : `${L("showMore")} (${items.length - SHOW_FIRST})`}
+          {all ? L("showLess") : `${L("showMore")} (${items.length - shown.length})`}
         </button>
       )}
     </>

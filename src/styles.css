@@ -934,3 +934,21 @@ td {
   text-align: left;
   cursor: pointer;
 }
+.ipm {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 650;
+}
+.avoid {
+  margin-top: 14px;
+  padding: 4px 12px 10px;
+  border-radius: 10px;
+  background: var(--red-soft);
+}
+.avoid h3 {
+  color: var(--red);
+}

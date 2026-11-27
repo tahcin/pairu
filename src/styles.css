@@ -902,3 +902,19 @@ td {
     animation: none;
   }
 }
+.intro {
+  display: grid;
+  gap: 4px;
+  margin: 4px 0 18px;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+}
+.intro p {
+  margin: 0;
+}
+.sample span {
+  font-size: 14px;
+  line-height: 1.3;
+}

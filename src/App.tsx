@@ -128,6 +128,10 @@ function Farmer() {
     try {
       const d = await api.diagnose(crop, photo.base64, note, lang);
       setDx(d);
+      // Start the translated advice right away for the likely answers, so it is ready (and cached
+      // on the server) by the time the farmer reaches the card.
+      if (lang !== "en" && d.status !== "unsure")
+        for (const c of d.candidates.slice(0, d.status === "ask" ? 2 : 1)) api.advice(c.id, lang).catch(() => undefined);
       setAnswers({});
       setQIndex(0);
       if (d.status === "decided") await decideWith(d.candidates[0].id, "model", d);
@@ -185,6 +189,11 @@ function Farmer() {
       <main className="main">
         {step === "lang" && (
           <section>
+            <div className="intro" lang="te">
+              <p lang="te">{t("te", "tagline")}</p>
+              <p lang="hi">{t("hi", "tagline")}</p>
+              <p lang="en">{t("en", "tagline")}</p>
+            </div>
             <h1 className="title center">భాష · भाषा · Language</h1>
             <div className="lang-grid">
               {LANGUAGES.map((l, i) => (
@@ -548,15 +557,17 @@ function PhotoStep(props: {
 interface Sample {
   file: string;
   crop: string;
+  key: Key;
 }
 // Real labelled photos that are not in the evaluation test set. Sources and licences are on /about.
 export const SAMPLES: Sample[] = [
-  { file: "tomato_early_blight.jpg", crop: "tomato" },
-  { file: "tomato_septoria.jpg", crop: "tomato" },
-  { file: "tomato_healthy.jpg", crop: "tomato" },
-  { file: "potato_early_blight.jpg", crop: "potato" },
-  { file: "rice_blast.jpg", crop: "paddy" },
-  { file: "rice_brownspot.jpg", crop: "paddy" },
+  { file: "tomato_early_blight.jpg", crop: "tomato", key: "s_tomato_early_blight" },
+  { file: "tomato_septoria.jpg", crop: "tomato", key: "s_tomato_septoria" },
+  { file: "tomato_healthy.jpg", crop: "tomato", key: "s_tomato_healthy" },
+  { file: "potato_early_blight.jpg", crop: "potato", key: "s_potato_early_blight" },
+  { file: "rice_brownspot.jpg", crop: "paddy", key: "s_rice_brownspot" },
+  // The blurry field photo goes last: it shows the honest "not sure" path.
+  { file: "rice_blast.jpg", crop: "paddy", key: "s_rice_blast" },
 ];
 
 function SampleSheet({ lang, onPick, onClose }: { lang: Lang; onPick: (s: Sample) => void; onClose: () => void }) {
@@ -574,7 +585,7 @@ function SampleSheet({ lang, onPick, onClose }: { lang: Lang; onPick: (s: Sample
           {SAMPLES.map((s) => (
             <button key={s.file} className="sample" onClick={() => onPick(s)}>
               <img src={`/samples/${s.file}`} alt="" loading="lazy" />
-              <span>{t(lang, `crop_${s.crop}` as Key)}</span>
+              <span>{t(lang, s.key)}</span>
             </button>
           ))}
         </div>

@@ -1,5 +1,5 @@
 {
-  "tagline": "Take a photo of a sick leaf and hear the answer in your own language",
+  "tagline": "Photograph a leaf and learn the disease and the government-approved medicine in your language",
   "chooseLanguage": "Choose your language",
   "whichCrop": "Which crop is sick?",
   "dontKnowCrop": "Other or not sure",
@@ -108,5 +108,11 @@
   "perHectareShort": "Per hectare",
   "perLitre": "Per litre of spray water",
   "seedDose": "For seed treatment, as printed",
-  "checkLabelDose": "We could not check this dose against the government data. Read the dose on the product label before use."
+  "checkLabelDose": "We could not check this dose against the government data. Read the dose on the product label before use.",
+  "s_tomato_early_blight": "Tomato, dark spots with rings",
+  "s_tomato_septoria": "Tomato, many small spots",
+  "s_tomato_healthy": "Tomato, healthy leaf",
+  "s_potato_early_blight": "Potato, dark brown spots",
+  "s_rice_brownspot": "Paddy, small brown spots",
+  "s_rice_blast": "Paddy, blurry photo (shows the not-sure path)"
 }

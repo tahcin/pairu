@@ -61,7 +61,8 @@ export default function App() {
   useEffect(() => {
     const on = () => {
       setPath(location.pathname);
-      window.scrollTo(0, 0);
+      // The landing film keeps its place when the visitor comes back from the app it opened.
+      if (!(window as unknown as { __pairuKeepScroll?: boolean }).__pairuKeepScroll) window.scrollTo(0, 0);
     };
     window.addEventListener("popstate", on);
     return () => window.removeEventListener("popstate", on);
